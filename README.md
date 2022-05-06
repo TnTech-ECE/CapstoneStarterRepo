@@ -1,5 +1,6 @@
 # {Name of the Project} - Your project should have a catchy and functional name
 
+The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
 ## Executive Summary
 
@@ -36,3 +37,9 @@ Tell who the faculty supervisor was for the project
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+
+
+
+## Repo Organization
+
+Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
