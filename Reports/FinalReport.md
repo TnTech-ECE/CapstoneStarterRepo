@@ -1,29 +1,7 @@
 
 # Final Deliverables
 
-
-## Expectations for Improvements - due by the final presentation
-Before the presentation, each team must have completed the agreed upon project improvements (including any necessary updates to the schematics, specs, and analysis). The team must conduct appropriate, statistically significant followup experiments. 
-
-These improvements are a requirement and they must be informed by the experimentation results. However, the specific improvements must be tailored to the team. 
-
-Completion of the improvements and the experimentation counts for 20% of the final report grade (late completion is not accepted).
-
-
-### Extra credit for Improvements
-Teams may also negotiate for extra credit improvements. These improvements have the same deadlines as the general improvements. The value of the the extra credit is at the discretion of the supervisor based on the merit of the improvement. 
-
-The extra credit may not exceed 10% of the sum of the grade weights of the design phase 2 document, functional prototype, and experimentation. Currently this is $0.15*34 = 5.1$ . Equal distribution of the extra credit is awarded for the design, prototype, and experimentation ie. $5.1/3 = 1.7$ points per completion of appropriate improvements.
-
-To meet this expectation, it is not necessary that the improvements function perfectly, but rather that the team made a decision informed by experimentation to move toward a design that works as desired, implemented this improved design, and experimented with it.
-
-
-
-## Final Report Document - due 3 days after the final presentation
-
-The final report must be in IEEE conference format (as expected with all previous documents).
-
-Completion of final report document will count for 20% of the final report grade. Full credit will be given if the document is submitted on the due date. For each day late, a 20% deduction will be applied. 
+The outline of the final report is given below.
 
 
 **Introduction:**
@@ -58,21 +36,9 @@ Completion of final report document will count for 20% of the final report grade
 
 **Literature Review:**
 
-· Relevant literature either in the chronological order or evolution of new ideas
+· Currently available solutions on the market or in the research literature
 
-		This can be copied and updated from the proposal and phase 1. 
-
-· Critical analysis on the literature – shortcomings (if any) 
-
-		discuss what you intend to do different than what you found in the lit.
-
-· Position/justify your work in the current state-of-the-art setting 
-
-		discuss what you intend to do different than what you found in the lit.
-
-· Engineering standards – copy and update
-
-		This can be copied from the proposal and phase 1.
+· Engineering standards
 
 **Methodology:**
 
