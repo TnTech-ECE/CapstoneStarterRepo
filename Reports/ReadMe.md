@@ -15,3 +15,5 @@ Each of the above are clickable and link to the expectations and requirements fo
 Isaac Newton is quoted as having said that if he "saw further than others", it was because "he stood on the backs of giants" which came before him. Likewise, current teams benefit from the experience of those teams which came before. 
 
 Each of the capstone team projects in [this](https://github.com/TnTech-ECE) directory have successfully completed capstone. Peruse them to find examples of how they met these expectations. 
+
+Any past projects that provide significant help or inspiration must be cited as a source.
