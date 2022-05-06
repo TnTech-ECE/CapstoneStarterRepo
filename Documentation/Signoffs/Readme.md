@@ -15,3 +15,7 @@ A complete and relevant analysis of the design showing that it **should** meet t
 ## BOM
 
 A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem.
+
+## Revisions
+
+Each time that a signoff document is updated in response to faculty comments, the extended description must filled in for the commit describing what was changed. 
