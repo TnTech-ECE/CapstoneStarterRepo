@@ -1,5 +1,13 @@
 # What should be in the documentation folder
 
+
+## Signoffs
+
+An important part of engineering is analysis. Designs must be analyzed to show that the subsystem is **likely** to function (sometimes things still don't work). This reduces the overall risk that a client or firm will have wasted money on a solution that was destined to fail. For information about what must be included in each signof file, refer to the readme file in the signoff directory. 
+
+A signoff must be completed and approved for each subsystem before the components for the subsystem may be ordered. Each of the signoff documents should be an appropriately named markdown file in the signoff directory. 
+
+
 ## Final set of prints (final design artifacts)
 
 All schematics and artifacts should be in an appropriate file type. 
