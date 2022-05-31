@@ -1,4 +1,4 @@
-Each signoff markdown file must give satisfy the following:
+Each signoff markdown file must satisfy the following:
 
 ## Specifications
 
