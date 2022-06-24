@@ -1,7 +1,7 @@
 
 ## Expectations for faculty supervisors
 
-Faculty supervisors are so named because they play a role similar to the engineering supervisor will play in industry. Engineering supervisors are available for questions during uncertainty or lack of direction, they provide helpful criticism of work (both to the engineer and the management team), and they will sign off on the work of the junior engineer before their designs are released for build.
+Faculty supervisors are so named because they play a role similar to many engineering supervisors in industry. Engineering supervisors are available for questions during uncertainty or lack of direction, they provide helpful criticism of work (both to the engineer and the management team), and they will sign off on the work of the junior engineer before their designs are released for build.
 
 The business unit manager is left to worry about the time line of projects, if the engineer is showing up to work, if they are following policies, etc. Importantly, the engineering supervisor isn't the manager of the junior engineer. The engineering supervisor is a senior engineer with expertise in the area that can be a resource for the current project and facilitate the development and assessment of the junior engineer(s). 
 
