@@ -21,7 +21,7 @@ More often, teams will have great ambition that exceeds what is realistically po
 
 During the conceptual design phase, the team will begin to decompose the project into subsystems and identify areas of risk (subsystems in which they have lower confidence).  The team will also begin to construct a timeline of how to proceed with the project. 
 
-The faculty mentor should evaluate whether the system is well defined. That is, has the team developed a concept and plan for the coming design that the faculty mentor can easily understand what the team intends to do and that what they intend *could* meet the objective?
+The faculty mentor should evaluate whether the planned system is well defined and appropriate. With well defined and appropriate meaning the team has developed a concept and plan for the coming design which is easily understood by the mentor and that what they intend *could* (in the opinion of the mentor) meet the objective.
 
 #### Detail Design and Signoff 
 
