@@ -22,22 +22,27 @@ Required format:
 Every constructed system of the project must have a complete (buildable) 3d model schematic.
 
 
-### Electrical Schematics
+### Wiring Schematics
 
 Required software: 
-- autocad for wiring schematics
-- kicad for PCB design
+- autocad or autocad electrical
 
 For wiring schematics, use autocad or autocad electrical. All the source files must be included in the github repo along with pdf versions of all schematics. File (Documentation/Electrical/Schematics/Sources)
 
 Every electrical system must have a complete (buildable) pdf circuit schematic. File (Documentation/Electrical/Schematics)
 
+Autocad is freely available to students with versions for mac, windows, and linux.
 
 #### PCB files
+
+Required Software:
+- kicad 
 
 KiCad should be used for all PCB design. All source files must be deposited in the repo. File (Documentation/Electrical/PCB/Sources)
 
 Along with the source files, a complete set of gerber files for each PCB must also be included in the repo. These should be included in a folder called gerber files. File (Documentation/Electrical/PCB)
+
+kiCad is a free and open source software.
 
 
 ## Final BOM
