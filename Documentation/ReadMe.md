@@ -14,6 +14,9 @@ All schematics and artifacts should be in an appropriate file type.
 
 ### 3D Models
 
+Required format: 
+- .stl
+
 3D models should be stored in the proper file type to facilitate editing, viewing, and printing. The best filetype for this is .stl, so all 3d models should be pushed to the repo as stl files. Stl files can be converted to solidworks models or autocad 3d models as necessary, can be 3d printed easily, and are 3d viewable natively in github. File (Documentation/3D Models)
 
 Every constructed system of the project must have a complete (buildable) 3d model schematic.
@@ -21,14 +24,18 @@ Every constructed system of the project must have a complete (buildable) 3d mode
 
 ### Electrical Schematics
 
-There are many softwares that facilitate electrical schematic layout and design. kiCad is a great option, however, it is fine to use a simple 2D line software like autocad. Regardless of which software the team chooses to use, all the source files must be included in the repo along with pdf versions of the schematics. File (Documentation/Electrical/Schematics/Sources)
+Required software: 
+- autocad for wiring schematics
+- kicad for PCB design
+
+For wiring schematics, use autocad or autocad electrical. All the source files must be included in the github repo along with pdf versions of all schematics. File (Documentation/Electrical/Schematics/Sources)
 
 Every electrical system must have a complete (buildable) pdf circuit schematic. File (Documentation/Electrical/Schematics)
 
 
 #### PCB files
 
-The comments regarding electrical design apply here as well. kiCad is a great option and works well with the kiCad schematics. However, any software chosen by the team to design the necessary PCBs will be acceptable. All source files should be included in the repo. File (Documentation/Electrical/PCB/Sources)
+KiCad should be used for all PCB design. All source files must be deposited in the repo. File (Documentation/Electrical/PCB/Sources)
 
 Along with the source files, a complete set of gerber files for each PCB must also be included in the repo. These should be included in a folder called gerber files. File (Documentation/Electrical/PCB)
 
