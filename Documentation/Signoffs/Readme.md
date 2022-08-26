@@ -1,11 +1,21 @@
 ## How to submit a signoff or update a signoff:
 
-1. Create the signoff markdown and enter the information or (if updating an existing file) simply make the desired edits.
+### Submitting Signoff
+1. Create the signoff markdown file 
 2. At the bottom of the page select "create a new branch for this commit and start a pull request"
 3. Submit the changes 
-4. Fill out the pull request so that the faculty supervisor will know what you are addressing in this update to the signoff request
-5. Submit the pull request
-6. Wait for faculty supervisor feedback
+4. Name the pull request branch "name-signoff-subsystem name"
+5. The comment should be "requesting signoff for name of subsystem"
+6. Submit the pull request
+7. Wait for faculty supervisor feedback on the pull request
+
+### Updating Signoff
+
+1. Edit the signoff markdown file 
+2. Add a description of how you have addressed the feedback from the faculty supervisor
+3. At the bottom of the page select "commit directly to"
+4. Submit the changes 
+
 
 
 Each signoff markdown file must contain the following sections and information:
