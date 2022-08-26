@@ -1,3 +1,13 @@
+## How to submit a signoff or update a signoff:
+
+1. Create the signoff markdown and enter the information or (if updating an existing file) simply make the desired edits.
+2. At the bottom of the page select "create a new branch for this commit and start a pull request"
+3. Submit the changes 
+4. Fill out the pull request so that the faculty supervisor will know what you are addressing in this update to the signoff request
+5. Submit the pull request
+6. Wait for faculty supervisor feedback
+
+
 Each signoff markdown file must contain the following sections and information:
 
 ## Big picture
