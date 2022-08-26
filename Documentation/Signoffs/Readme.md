@@ -1,4 +1,8 @@
-Each signoff markdown file must satisfy the following:
+Each signoff markdown file must contain the following sections and information:
+
+## Big picture
+
+You must explain clearly what role the subsystem will play.
 
 ## Specifications
 
@@ -18,4 +22,4 @@ A complete list of all components needed for the design must be given with the c
 
 ## Revisions
 
-Each time that a signoff document is updated in response to faculty comments, the extended description must filled in for the commit describing what was changed. 
+Each time that a signoff document is updated in response to faculty comments, the extended description must be filled in for the commit describing what was changed. 
