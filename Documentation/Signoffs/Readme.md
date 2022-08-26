@@ -17,7 +17,6 @@
 4. Submit the changes 
 
 
-
 Each signoff markdown file must contain the following sections and information:
 
 ## Big picture
