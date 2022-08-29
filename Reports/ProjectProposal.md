@@ -83,7 +83,7 @@ The background information provides context and detail which helps to answer que
 
 
 
-##### A Quick Example
+##### A Quick Example: Including background information
 
 Oil drills don't go straight down because as they go past layers of rock the drill may follow a path of least resistance, so it is necessary to monitor the direction of the drill (This piece of background helps the reader to understand why a drill telemetry system is needed). Monitoring the direction is made difficult by the fact that the rock through which the drill passes is often magnetic, thus preventing magnetic sensing of direction (The more relevant background that is included, the more clearly the problem can be defined). Worse, the drill will generate significant heat (over 150C) at the tip which is where the telemetry system must be located. The drill will also produce continuous vibration that may interfere with the electronics. Therefore, typical electronics wouldn't be suited to the environment.
 
