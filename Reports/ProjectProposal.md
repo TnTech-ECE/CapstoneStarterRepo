@@ -104,10 +104,11 @@ As an example, the specifications for the oil drill telemetry system were that t
 All of the specifications given are very fuzzy. It is the engineer's job to take a fuzzy specification and distill it into something more useful. For instance, through background research it can be determined that drill tips are built to be space efficient to limit the diameter of the hole that must be drilled. Therefore, the size of the drill tip storage compartment is very limited. In the target drill the compartment is 1 inch wide. 
 
 Verbal spec: fit in the tip of the target drill (fuzzy)
-Formulating the spec using background info: the system must be less than 1 inch in diameter such that it fits in a 1 inch cylinder (measureable)
+Formulating the spec using background info: the system shall be less than 1 inch in diameter such that it fits in a 1 inch cylinder (measureable)
 
 So, using background information, engineers are able to formulate fuzzy, verbal specifications into precise constraints.
 
+For further information about this refer to Chapter 4.1 and 4.2 of the Nasa Systems Engineering Handbook. 4.1 deals with eliciting stakeholder expectations. The next section (4.2) deals with constructing "shall" statements (like the one above) and building technical requirements from the stakeholder expectations.
 
 ##### Other sources of constraints: Standards
 
@@ -131,6 +132,9 @@ Design should always be done in a manner that considers potential unintended con
 ##### A little more about constraints
 
 Constraints (regardless of their origin) must be unambiguous and impose measureable requirements on the design. At times, conforming to the constraints can be difficult. However, they are beneficial in that they provide clear expectations. When considering what makes an engineering project a success, the most important factor is whether or not the specifications and constraints were met.
+
+
+
 
 #### Survey of Solutions
 
@@ -164,9 +168,11 @@ Further, each team should consider how these unknowns could affect the solution.
 
 The last component to formulating an image of the solution is to explain how the constraints (the things required for success) will be evaluated. It is insufficient that the original design was intended to produce a system which is capable of meeting the constraints. A method for experimentally validating that the constraints are met must be employed. As with any experiment, the experimental design (what you intend to do and how you intend to do it) must be statistically informed (getting the desired result once does not prove much). 
 
-Each team is to explain the experiments that would be appropriate to prove success and why they are appropriate.
+In the Nasa Systems Engineering Handbook, this is discussed in section 4.2. They refer to the measures of success as measures of effectiveness (MOE).
 
-As a note, would it be unethical to claim that a solution met specifications without any validation?
+Each team is to explain the experiments that are to be employed to establish success and why they are appropriate. 
+
+As a note, would it be ethical to claim that a solution met specifications without any validation?
 
 #### Broader Implications, Ethics, and Responsibility as Engineers
 
