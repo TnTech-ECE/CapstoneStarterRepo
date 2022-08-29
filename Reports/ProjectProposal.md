@@ -115,6 +115,9 @@ The stakeholders are not the only source of constraints for the project. Many wi
 
 As an example of a standard which would impose a constraint, if Wi-Fi is to be used, there are specific standards that govern the operational frequency of the protocol. The engineering world is full of standards and it is the responsibility of the engineer to seek them out and adhere to them. Therefore, each team must search out all standards which apply to the project and ensure that the design conforms to the standard. 
 
+Every industry and project type has many types of standards. These range from the most obvious (the national electric code) to the obscure (ISO 18646:2016 - locomotion for wheeled industrial robots). It is the responsibility of the engineer to become aware of the applicable standards and to constrain the project appropriately so that standards are met.
+
+
 ##### Other sources of constraints: Externalities
 
 It is obviously important to consider the direct/intended implications of the work to be completed. ie. How would a better oil drill telemetry system affect the drilling industry? But it is also important to consider the externalities. That is the impact that the engineering, manufacturing, or final product may have on public health, safety, welfare, as well as global, cultural, social, environmental, and economic factors.
@@ -125,21 +128,23 @@ As an example, perhaps there are two sensing devices that could be used to detec
 
 Design should always be done in a manner that considers potential unintended consequences and is constrained to minimize the potential risks.
 
-##### A little more about constraints and specifications
+##### A little more about constraints
 
-Constraints and specifications must be unambiguous and impose measureable requirements on the design. At times, conforming to the specs and constraints can be difficult. However, they are beneficial in that they provide clear expectations. When considering what makes an engineering project a success, the most important factor is whether or not the specifications and constraints were met.
+Constraints (regardless of their origin) must be unambiguous and impose measureable requirements on the design. At times, conforming to the constraints can be difficult. However, they are beneficial in that they provide clear expectations. When considering what makes an engineering project a success, the most important factor is whether or not the specifications and constraints were met.
 
 #### Survey of Solutions
 
 As a part of the proposal each team should research what is already available in the research literature, on the market, and in the industry. Then those findings should be curated and presented. The information should not be presented idiosyncratically. Rather, you should make sense of it and present it in a digestible manner utilizing subsections as appropriate.
 
-Other solutions to similar problems often are a great source of information about what sort of background information and standards apply. If a project were to seek to build an RFID reader, it would be helpful to look at the list of standards with which existing RFID readers comply. Further, reading a few research papers on RFID systems would yield helpful insight into the background information. However, it is required that any information which is not common knowledge (taught in the ECE department) be cited.
+Other solutions to similar problems often are a great source of information about what sort of background information and standards apply. If a project were to seek to build an RFID reader, it would be helpful to look at the list of standards with which existing RFID readers comply. Further, reading a few research papers on RFID systems would yield helpful insight into the background information and the associated challenges. 
+
+Remember, it is required that any information which is not common knowledge (taught in an ECE course) be cited. 
 
 #### Summarizing the Problem
 
 In this subsection you should draw on the information already given in the background, specs and constraints, and the survey of existing solutions to summarize why the objective is important, non-trivial, and distinct.
 
-Often what makes a project different from other available solutions is the specifications. Even though a commercial solution may exist, it may be too costly. And it may be a specification that the total cost be kept below a certain number. Similiarly, the function of existing solutions may not meet the stakeholder specifications.
+Often what makes a project different from other available solutions is the set of specifications. Even though a commercial solution may exist, it may be too costly. And it may be a specification that the total cost be kept below a certain number. Similiarly, the function of existing solutions may not meet the stakeholder specifications.
 
 ### Looking Down the Path Toward Solution
 
@@ -157,7 +162,7 @@ Further, each team should consider how these unknowns could affect the solution.
 
 #### The Measures of Success
 
-The last component to formulating an image of the solution is to explain how the constraints and specifications (the things required for success) will be evaluated. It is insufficient that the original design was intended to produce a system which is capable of functioning at 150C. A method for experimentally validating that the constraints and specifications are met must be employed. As with any experiment, the experimental design (what you intend to do and how you intend to do it) must be statistically informed (getting the desired result once does not prove much). 
+The last component to formulating an image of the solution is to explain how the constraints (the things required for success) will be evaluated. It is insufficient that the original design was intended to produce a system which is capable of meeting the constraints. A method for experimentally validating that the constraints are met must be employed. As with any experiment, the experimental design (what you intend to do and how you intend to do it) must be statistically informed (getting the desired result once does not prove much). 
 
 Each team is to explain the experiments that would be appropriate to prove success and why they are appropriate.
 
@@ -189,44 +194,44 @@ If it becomes apparent that it is not possible to meet the dates, it will be nec
 
 ### Rubric
 
-Was the project proposal written without grammatical errors? (-1 per or -5 max) 
+Was the project proposal written without grammatical errors? (TA) (-1 per or -5 max) 
 
-Was first person perspective used where not appropriate? (-1 per or -5 max) 
+Was first person perspective used where not appropriate? (TA) (-1 per or -5 max) 
 
-Was the project proposal submitted late? (-4 per week) 
+Was the project proposal submitted late? (TA) (-4 per week) 
 
-Was a proposal submitted? (+10)
+Was a proposal submitted? (TA) (+10)
 
-Was the project proposal submitted in IEEE format? (+7) 
+Was the project proposal submitted in IEEE format? (TA) (+7) 
 
-Was the project proposal submitted as a pdf? (+5) 
+Was the project proposal submitted as a pdf? (TA) (+5) 
 
-Does this proposal clearly present the elevator pitch of the project (persuasive summary) in the introduction? (+8 max) 
+Does this proposal clearly present the elevator pitch of the project (persuasive summary) in the introduction? (coordinator) (+8 max) 
 
-Does this proposal clearly state the objective/problem? (+7 max) 
+Does this proposal clearly state the objective/problem? (supervisor) (+7 max) 
 
-Does this proposal sufficiently discuss the background information necessary to understand any and all objectives, specifications, constraints, context, desired outcomes, and measures of success? (+10 max)
+Does this proposal sufficiently discuss the background information necessary to understand any and all objectives, specifications, constraints, context, desired outcomes, and measures of success? (supervisor) (+10 max)
 
-Does this proposal clearly and sufficiently consider the specifications and constraints arising from stakeholders, standards, and broader considerations? (+10 max) 
+Does this proposal clearly formulate and consider all constraints arising from stakeholders, standards, and broader considerations? (supervisor) (+10 max) 
 
-Does the proposal specifically identify the objective and consider whether the problem/objective is already solved by some other solution? (+7 max) 
+Does the proposal significantly discuss existing solutions and relevant literature? (supervisor) (+7 max) 
 
-Is the formulated problem summarized? (+3 max) 
+Is the formulated problem summarized well? (coordinator) (+3 max) 
 
-Does the proposal consider unknowns and sources of risk and how to address them? (+5 max) 
+Does the proposal consider unknowns and sources of risk and how to address them? (coordinator) (+5 max) 
 
-Does the proposal consider the broader implications? (+7 max)
+Does the proposal consider the broader implications? (coordinator) (+7 max)
 
-Does the proposal develop appropriate measures of success that are justified based on the specifications? (+7 max)
+Does the proposal develop appropriate measures of success that are justified based on the constraints? (supervisor) (+7 max)
 
-Is the feasibility of the project considered (Resources, personnel, and timeline)? (+7 max) 
+Is the feasibility of the project considered (Resources, personnel, and timeline)? (coordinator) (+7 max) 
 
-Does the project proposal work together to establish that the project (objective, background, desired outcomes, measures of success, required resources, timeline, feasibility, and broader impacts) is worth undertaking and that you are the right person/group to undertake the project? (+7 max) 
+Does the project proposal work together to establish that the project (objective, background, desired outcomes, measures of success, required resources, timeline, feasibility, and broader impacts) is worth undertaking and that they are the right group to undertake the project? (supervisor) (+7 max) 
 
 
 ### Revision
 
-The environment in this class is intentionally geared to be similar to industry experience, though not identical. So, a grade has been calculated but it is not finalized. Rather, you are to address the issues that are identified and re-submit to regain up to 50% of the lost points. Mark added information by writing the text in a different color.
+The environment in this class is intentionally geared to be similar to industry experience, though not identical. So, a grade will be calculated. You are to address the issues that are identified and re-submit to regain **up to** 50% of the lost points. Changes to the document must be in a different color otherwise they will not be counted toward the improvements.
 
 ### Feedback in ilearn
 
