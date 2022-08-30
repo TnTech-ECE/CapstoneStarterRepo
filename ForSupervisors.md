@@ -74,6 +74,6 @@ When the students have completed the design and have built the minimally functio
 Judging the prototype acceptibility is highly subjective. The purpose of this milestone is to have a waypoint between build start and complete functionality. Students are to negotiate before hand with the supervisor regarding what is acceptable for the prototype.
 
 #### Experimentation
-Students must conduct statistically significant (ie. N>1 and N appropriate to the context) experimentation to show that measures the attainment of all the design specs. It is not necessary that all specs are met. Rather, the team must measure them to identify what worked and what didn't (and why) and to identify areas of necessary improvement. 
+Students must conduct statistically significant (ie. N>1 and N appropriate to the context) experimentation to measure the attainment of all the design constraints. It is not necessary that all constraints are met at this point. Rather, the team must measure them to identify what worked and what didn't (and why) and to identify areas of necessary improvement. 
 
 When experimentation is complete, the list of improvements should be developed in conjunction with the supervisor. The team must negotiate with the supervisor to identify the necessary improvements. 
