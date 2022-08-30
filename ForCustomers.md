@@ -4,7 +4,7 @@ The customer for a capstone project is the party who brings the expectations reg
 
 As two bounding examples regarding the level of expectations that a customer may propose as a project:
 
-The IEEE Southeast Convention robotics competition imposes the measures by which success if judged, operational environment, acceptable technologies, interface parameters, physical size constraints, powering constraints, et al. So, this level of specification represents an upper bound. 
+The IEEE Southeast Convention robotics competition imposes the measures by which success is judged, operational environment, acceptable technologies, interface parameters, physical size constraints, powering constraints, et al. So, this level of specification represents an upper bound. 
 
 The lower bound would be a fuzzy description of the objective ie. an autonomous robot to inspect typical crawl spaces. 
 
