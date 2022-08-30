@@ -23,6 +23,10 @@ During the conceptual design phase, the team will begin to decompose the project
 
 The faculty mentor should evaluate whether the planned system is well defined and appropriate. With well defined and appropriate meaning the team has developed a concept and plan for the coming design which is easily understood by the mentor and that what they intend *could* (in the opinion of the mentor) meet the objective.
 
+#### Project Proposal
+
+The faculty supervisor provides key feedback (outlined in the grading rubric for the proposal) on the project proposal. The faculty supervisor is a stakeholder in the project with expectations that the project will be completely designed to a third party buildable state within the time given. It is important to encourage the students to adjust the scope to be feasible, interesting to them as a team, and meet the "customer" expectations.
+
 #### Detail Design and Signoff 
 
 During the detail design phase of the project, team members will begin working on producing schematics for each of the subsystems that were described in the conceptual design. For each of the subsystems, the team must write a signoff document and submit it to their faculty supervisor. 
