@@ -2,7 +2,7 @@
 
 The customer for a capstone project is the party who brings the expectations regarding the objectives. They may also give additional constraints. The customer may contribute as much or as little technical input as they desire. 
 
-As two bounding examples regarding the level of expectations that a customer may impose:
+As two bounding examples regarding the level of expectations that a customer may propose as a project:
 
 The IEEE Southeast Convention robotics competition imposes the measures by which success if judged, operational environment, acceptable technologies, interface parameters, physical size constraints, powering constraints, et al. So, this level of specification represents an upper bound. 
 
