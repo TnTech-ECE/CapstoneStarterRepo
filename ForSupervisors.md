@@ -13,9 +13,9 @@ Faculty members take on the engineering supervisor role for the capstone team. T
 
 Each project starts with the team writing a detailed project proposal. The project proposal contains many things and asks the students to think and write about many things. However, for the faculty supervisor, the most important thing to focus on is the scope of the project. Is the scope appropriate? The faculty supervisor should provide input to the team regarding the scope and help them to adjust appropriately. 
 
-Some teams will attempt to "low ball" the scope. That is, they try to set the expectation low so that meeting the project objectives is easy. In this case, the faculty supervisor should provide feedback to the team that the scope is not significant enough. The faulty mentor and the instructor can work with the team to improve the scope by adding objectives to the scope. 
+Some teams will attempt to "low ball" the scope. That is, they try to set the expectation low so that meeting the project objectives is easy. In this case, it is the coordinator's role to ensure that capstone projects meet an acceptable level of complexity (Num of major subsystems > Num of team members and project includes both hardware and software). 
 
-More often, teams will have great ambition that exceeds what is realistically possible. This problem often coincides with a vague project. ie. solve world hunger. Here, the faculty mentor should push the team to think about the project more critically to arrive at a well defined project with an appropriate scope. 
+More often, teams will have great ambition that exceeds what is realistically possible. This problem often coincides with a vague project. ie. solve world hunger. Here, it is the role of the faculty supervisor to push the team to think about the project more critically to arrive at a well defined project with an appropriate scope. 
 
 #### Conceptual Design
 
