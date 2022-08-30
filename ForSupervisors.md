@@ -25,7 +25,7 @@ The faculty mentor should evaluate whether the planned system is well defined an
 
 #### Project Proposal
 
-The faculty supervisor provides key feedback (outlined in the grading rubric for the proposal) on the project proposal. The faculty supervisor is a stakeholder in the project with expectations that the project will be completely designed to a third party buildable state within the time given. It is important to encourage the students to adjust the scope to be feasible, interesting to them as a team, and meet the "customer" expectations.
+The faculty supervisor provides key feedback (outlined in the grading rubric for the proposal) on the project proposal. The faculty supervisor is a stakeholder in the project with expectations that the project will be completely designed to a third party buildable state within the time given. It is important to encourage the students to adjust the scope to be feasible, interesting to them as a team, and meet the "customer" expectations. Further, it is important to suggest ideas, methods, technologies, considerations (like potential unintentional consequences, legal, or ethical concerns) based on the supervisor's experience. 
 
 #### Detail Design and Signoff 
 
