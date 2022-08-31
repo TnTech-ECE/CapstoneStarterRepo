@@ -206,6 +206,8 @@ Was first person perspective used where not appropriate? (TA) (-1 per or -5 max)
 
 Was the project proposal submitted late? (TA) (-4 per week) 
 
+Are claims made or information included that is not appropriately supported by citation? (TA) (-2 per or -8 max)
+
 Was a proposal submitted? (TA) (+10)
 
 Was the project proposal submitted in IEEE format? (TA) (+7) 
