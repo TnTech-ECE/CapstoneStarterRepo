@@ -204,7 +204,7 @@ Was the project proposal written without grammatical errors? (TA) (-1 per or -5 
 
 Was first person perspective used where not appropriate? (TA) (-1 per or -5 max) 
 
-Was the project proposal submitted late? (TA) (-4 per week) 
+Was the project proposal submitted late? (TA) (-4 per day) 
 
 Are claims made or information included that is not appropriately supported by citation? (TA) (-2 per or -8 max)
 
