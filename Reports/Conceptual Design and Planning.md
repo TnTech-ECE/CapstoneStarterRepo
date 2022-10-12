@@ -80,10 +80,10 @@ The result should be a complete view of a well defined system that delegates all
 In conceptual design, the goal is to decompose the objective into individual, atomic pieces. The sum of which will accomplish the overarching goal and meet all constraints. During conceptual design, do not attempt to identify **how** to do something, but rather be very specific about **what** will be done. Each block in the diagram will represent a subsystem that performs a specific task (a **what**). 
 
 ##### The example
-Subsystem A in the block diagram (not shown) is a system to measure the ambient temperature (input is temperature between 100 to 220 C) inside the toaster and communicate the temperature (output is encoded temperature with at least 2.2 degree C accuracy and 0.5 degrees of precision) to the temperature control system. 
+Subsystem A in the block diagram (not shown) is a system to measure the ambient temperature (input is temperature between 109 to 167 C) inside the toaster and communicate the temperature (output is encoded temperature with at least 2.2 degree C accuracy and 0.5 degrees of precision) to the temperature control system. 
 
 Description of subsystem and interface constraints:
-The input range constraint arises from the fact that anything below 110C would indicate that the toaster heating element is not working and would not initiate the Maillard reaction necessary to begin toasting bread (1,3). 220C is above the maximum temperature for carmelization in bread (2). So, toasting must happen whithin this range of temperatures and measuring temperatures outside this range is out of scope. 
+The input range constraint arises from the fact that anything below 110C would not initiate the Maillard reaction necessary to begin toasting bread (1,3). 167 is above the maximum temperature for carmelization in bread (2). So, toasting must happen whithin this range of temperatures and measuring temperatures outside this range is out of scope. 
 
 Justification:
 The precision of the encoding of the output comes from "shall have 10 toasting levels". Given 10 levels which are spread across the temp range 110 to 166 C, each level occupies 5.6 degrees. Encoding the temperature in steps of at least .5 degrees C will guarantee that each level has at least 10 corresponding temperature steps. Further, the uncertainty based on the accuracy is 2.2 degrees C. Thus, if the median temperature step is held between the levels this results in target tempt + 2.8 degrees (the median step) +- 2.2 degrees (the accuracy in a k type thermocouple) +- 0.5 degrees (precision), the possible real temp is guaranteed to be between target temp + 5.5 (in the target range) and target temp + 0.1 (in the target range).
@@ -91,7 +91,7 @@ The precision of the encoding of the output comes from "shall have 10 toasting l
 The communication protocol between subsystem A and the temperature control system is undefined and the speed of communication is undefined. These will be determined during detail design as these are determined by **how** we choose to implement these systems. 
 
 Analytical Verification:
-To analytically verify the constraints are met, a model of the system using the datasheets of components selected and the designed electrical circuitry will be made. The input to the model will be swept from 110C to 220C at steps of 0.25 degrees celcius and the output of the model at each step will be recorded in an excel table. If the encoded output is within 2.2 degrees C +- 0.5 C of the input then the model suggests that the system will meet the requirements.
+To analytically verify the constraints are met, a model of the system using the datasheets of components selected and the designed electrical circuitry will be made. The input to the model will be swept from 110C to 166C at steps of 0.25 degrees celcius and the output of the model at each step will be recorded in an excel table. If the encoded output is within 2.2 degrees C +- 0.5 C of the input then the model suggests that the system will meet the requirements.
 
 ##### A few notes about the example
 
