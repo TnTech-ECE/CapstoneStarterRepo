@@ -45,7 +45,7 @@ In this case, the goal of the introduction section is not to persuade. Rather, i
 
 #### Restating the Fully Formulated Problem
 
-The fully formulated problem is the overall objective and scope complete with the set of shall statements. This was part of the project proposal. However, it may be that the scope has changed. So, state the fully formulated problem in the introduction of the conceptual design and planning document. For each of the constraints, explain the origin of the constraint (customer specification, standards, ethical concern, broader implication concern, etc). The project **must** include 1 or more constraints originating from each of the following: broader impacts, ethical considerations, and engineering standards. 
+The fully formulated problem is the overall objective and scope complete with the set of shall statements. This was part of the project proposal. However, it may be that the scope has changed. So, state the fully formulated problem in the introduction of the conceptual design and planning document. For each of the constraints, explain the origin of the constraint (customer specification, standards, ethical concern, broader implication concern, etc). The project **must** include 1 or more constraints (shall statements) originating from each of the following: broader impacts, ethical considerations, and engineering standards. 
 
 
 ### Background
@@ -55,7 +55,7 @@ Background information may be needed. If significant background information must
 
 ### Ethical, Professional, and Standards Considerations
 
-In the project proposal, each team was required to consider what the broader impacts of the project may be to the culture, society, environment, public health, public safety, and economy. They were also required to consider the standards organizations which would inform the design. Here, the updated ethical, professional, and standards considerations must be discussed. Further, each team must include a complete discussion regarding how these broader considerations have been used to inform your design (what constraints, specifications, or practices etc. are in place due to the consideration of these).
+In the project proposal, each team was required to consider what the broader impacts of the project may be to the culture, society, environment, public health, public safety, and economy. They were also required to consider the standards organizations which would inform the design. Here, each team must include a complete discussion regarding how these broader considerations have been used to inform your design (what constraints, specifications, or practices etc. are in place due to the consideration of these and how the constraints address these).
 
 
 ### Expectations for the Draft
