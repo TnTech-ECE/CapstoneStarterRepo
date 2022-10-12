@@ -3,6 +3,13 @@
 This document should not be thought of as an outline. Rather, this document explains the goal and specific things that the reader should understand. Armed with these expectations, each team is expected to design an appropriate document to accomplish the goal and appropriately educate their stakeholders. 
 
 
+### Big Picture Goal of the document
+
+The goal of the conceptual design and planning document is to leave the reader understanding the (1) fully formulated problem, (2) fully decomposed conceptual solution, (3) the constraints and where they arise from, (4) how the constraints will be analytically (not experimentally) validated, and (5) a detail design schedule (with an explanation of why it is optimal). 
+
+The above is NOT an outline. It is the goal of the document. Consider all the requirements given herein and devise an outline that will accomplish the requirements.
+
+
 ### Conceptual Design and Design Planning Objectives
 
 The general purpose of conceptual design and planning is to identify a concept and process that will:
@@ -17,12 +24,6 @@ The general purpose of conceptual design and planning is to identify a concept a
 	1. Address critical unknowns early
 	2. If system $A$ places a constraint on system $B$, *in general* system $A$ should be designed first
 
-
-### Big Picture Goal
-
-The goal of the conceptual design and planning document is to leave the reader understanding the (1) fully formulated problem, (2) fully decomposed conceptual solution, (3) the constraints and where they arise from, (4) how the constraints will be analytically (not experimentally) validated, and (5) a detail design schedule (with an explanation of why it is optimal). 
-
-The above is NOT an outline. It is the goal of the document. Consider all the requirements given herein and devise an outline that will accomplish the requirements.
 
 ### General requirements for the document
 
@@ -73,6 +74,30 @@ The result should be a complete view of a well defined system that delegates all
 
 
 
+### Example conceptual design documentation for an atomic subsystem
+
+##### About the example
+In conceptual design, the goal is to decompose the objective into individual, atomic pieces. The sum of which will accomplish the overarching goal and meet all constraints. During conceptual design, do not attempt to identify **how** to do something, but rather be very specific about **what** will be done. Each block in the diagram will represent a subsystem that performs a specific task (a **what**). 
+
+##### The example
+Subsystem A in the block diagram (not shown) is a system to measure the ambient temperature (input is temperature between 100 to 220 C) inside the toaster and communicate the temperature (output is encoded temperature with at least 2.2 degree C accuracy and 0.5 degrees of precision) to the temperature control system. 
+
+Description of subsystem and interface constraints:
+The input range constraint arises from the fact that anything below 110C would indicate that the toaster heating element is not working and would not initiate the Maillard reaction necessary to begin toasting bread (1,3). 220C is above the maximum temperature for carmelization in bread (2). So, toasting must happen whithin this range of temperatures and measuring temperatures outside this range is out of scope. 
+
+Justification:
+The precision of the encoding of the output comes from "shall have 10 toasting levels". Given 10 levels which are spread across the temp range 110 to 166 C, each level occupies 5.6 degrees. Encoding the temperature in steps of at least .5 degrees C will guarantee that each level has at least 10 corresponding temperature steps. Further, the uncertainty based on the accuracy is 2.2 degrees C. Thus, if the median temperature step is held between the levels this results in target tempt + 2.8 degrees (the median step) +- 2.2 degrees (the accuracy in a k type thermocouple) +- 0.5 degrees (precision), the possible real temp is guaranteed to be between target temp + 5.5 (in the target range) and target temp + 0.1 (in the target range).
+
+The communication protocol between subsystem A and the temperature control system is undefined and the speed of communication is undefined. These will be determined during detail design as these are determined by **how** we choose to implement these systems. 
+
+Analytical Verification:
+To analytically verify the constraints are met, a model of the system using the datasheets of components selected and the designed electrical circuitry will be made. The input to the model will be swept from 110C to 220C at steps of 0.25 degrees celcius and the output of the model at each step will be recorded in an excel table. If the encoded output is within 2.2 degrees C +- 0.5 C of the input then the model suggests that the system will meet the requirements.
+
+##### A few notes about the example
+
+Notice that all constraints for the relevant subsystem are discussed, and the origin of each constraint is given with appropriate citation. Notice that a method of analytical verification is given. Finally, notice that the sections for this subsystem are clearly marked. These meet item 3 and 4 from the general document expectations above. 
+
+
 ### Rubric
 
 Was the document written without grammatical errors? (-1 per or -5 max) (TA)
@@ -114,3 +139,12 @@ Are the next steps clearly explained (this may be via the gantt chart)? (TA)
 Does the gantt chart map logically from the conceptual design? (supervisor)
 
 Are all sources cited appropriately? (TA)
+
+
+## Sources
+
+1. Maillard, Louis Camille. "Action des acides amines sur les sucres: formation des melanoidines par voie methodique." CR Acad Sci 154 (1912): 66-68.
+
+2. https://www.scienceofcooking.com/caramelization.htm
+
+3. https://www.scienceofcooking.com/maillard_reaction.htm
