@@ -38,7 +38,9 @@ Tell who the faculty supervisor was for the project
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
+### Recognitions
 
+Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
 
 ## Repo Organization
 
