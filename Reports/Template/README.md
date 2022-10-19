@@ -4,8 +4,8 @@ Example Poster
 
 
 <p align="center">
-<a href="https://raw.githubusercontent.com/anishathalye/gemini/assets/poster-gemini.pdf">
-<img src="https://raw.githubusercontent.com/anishathalye/gemini/assets/poster-gemini-small.png">
+<a href="https://github.com/TnTech-ECE/CapstoneStarterRepo/blob/main/Reports/Template/poster.pdf">
+<img src="https://github.com/TnTech-ECE/CapstoneStarterRepo/blob/main/Reports/Template/poster.jpg">
 </a>
 </p>
 
