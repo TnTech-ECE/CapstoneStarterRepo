@@ -1,3 +1,16 @@
+# This template is built on Gemini
+
+Example Poster 
+
+
+<p align="center">
+<a href="https://raw.githubusercontent.com/anishathalye/gemini/assets/poster-gemini.pdf">
+<img src="https://raw.githubusercontent.com/anishathalye/gemini/assets/poster-gemini-small.png">
+</a>
+</p>
+
+
+
 # Gemini
 
 Gemini is a modern LaTeX [beamerposter] theme.
