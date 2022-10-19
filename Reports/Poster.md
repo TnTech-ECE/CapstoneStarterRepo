@@ -18,4 +18,4 @@ The college of engineering has poster templates available via the library websit
 
 ## Overleaf/Latex instructions
 
-You may instead choose to use overleaf to make the poster. A template is included [here](). Upload this template to overleaf and customize as necessary. The template is already the appropriate size.
+You may instead choose to use overleaf to make the poster. A template is included [here](Template). Upload this template to overleaf and customize as necessary. The template is already the appropriate size.
