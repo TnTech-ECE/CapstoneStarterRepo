@@ -68,7 +68,7 @@ The draft should show very significant progress toward completion of the design 
 
 Block diagrams are a great way to provide a big picture understanding of a system and the relationships of the individual components. In general, block diagrams borrow from visual modeling languages like the universal modeling language (UML). Each of the blocks represent sub-systems and each of the connections represent that the two (or more) blocks connected have a relationship. Typically, the relationship in a system diagram is that of input to output. 
 
-Each sub-system should be represented by a single block. For each block in the sus-system there should be a short explanation of the functional expectations for that block and the associated constraints. For each of the connections, there should be a short description of the expectations for that relationship including what is being represented by the relationship (power, analog signal, serial comm, wireless comm, etc) and the constraints. 
+Each sub-system should be represented by a single block. For each block in the sub-system there should be a short explanation of the functional expectations for that block and the associated constraints. For each of the connections, there should be a short description of the expectations for that relationship including what is being represented by the relationship (power, analog signal, serial comm, wireless comm, etc) and the constraints. 
 
 The result should be a complete view of a well defined system that delegates all atomic responsibilities necessary to accomplish the project scope to sub-systems and their interactions.
 
