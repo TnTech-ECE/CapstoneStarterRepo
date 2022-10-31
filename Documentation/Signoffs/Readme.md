@@ -16,10 +16,11 @@
 3. At the bottom of the page select "commit directly to"
 4. Submit the changes 
 
+# Required sections
 
 Each signoff markdown file must contain the following sections and information:
 
-## Required Format and Sections of the signoff request
+## Function of the Subsystem
 
 You must explain clearly what role the subsystem will play in the first section. This should clearly explain what the system is expected to do (ie. its atomic purpose from the conceptual design).
 
@@ -29,7 +30,7 @@ The second section should contain the constraints for the subsystem. The reasoni
 
 Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
 
-## Buildable jpeg schematic 
+## Buildable schematic 
 
 The third section should show the buildable schematic directly embedded in the markdown file as a jpeg image. If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
 
