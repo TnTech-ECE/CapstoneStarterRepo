@@ -29,11 +29,13 @@ The second section should contain the constraints for the subsystem. The reasoni
 
 Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
 
-## Buildable pdf schematic 
+## Buildable jpeg schematic 
 
-The third section should show the buildable schematic directly embedded in the markdown file as an image (pdf files can't be embedded, but they can be converted with high resolution to jpg). If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
+The third section should show the buildable schematic directly embedded in the markdown file as a jpeg image. If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
 
 The schematic must be appropriate to the design. ie. 3d model for a physical system or wiring schematic for a circuit. Further, the schematic(s) must contain every detail necessary for the design to be built by someone who has no knowledge of the design. Every relevant component value and measurement must be given.
+
+The actual design artifacts (3d model, Cad files, gerber files, etc) must be uploaded to the documentation folder in the appropriate location.
 
 ## Analysis
 
