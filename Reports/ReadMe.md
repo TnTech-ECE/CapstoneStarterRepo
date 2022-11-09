@@ -3,7 +3,7 @@
 In this folder the final verion of each of the following should be found:
 
 1. [The project proposal](https://github.com/TnTech-ECE/StarterRepo/blob/364141e6634a5ea8218900e1664af58cee2d57e7/Reports/ProjectProposal.md)
-2. [Design Phase 1 document](https://github.com/TnTech-ECE/StarterRepo/blob/8979e1445f6a24c35b43196b08c25d6c5497d1a5/Reports/DesignPhase1.md)
+2. [Conceptual Design and Planning](https://github.com/TnTech-ECE/StarterRepo/blob/8979e1445f6a24c35b43196b08c25d6c5497d1a5/Reports/DesignPhase1.md)
 3. [Well formatted pdf compilation of all experimentation results](https://github.com/TnTech-ECE/StarterRepo/blob/8c52b24812a0130119ad4b1cb5233517b6caae10/Reports/Experimentation.md)
 4. [Final Report](https://github.com/TnTech-ECE/StarterRepo/blob/2ec7fa8f6471a12fe058d78877ed54082690cfc5/Reports/FinalReport.md)
 5. [Lessons Learned](https://github.com/TnTech-ECE/CapstoneStarterRepo/blob/main/Reports/Lessons%20Learned.md)
