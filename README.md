@@ -1,10 +1,10 @@
-# {Name of the Project} - Your project should have a catchy and functional name
+# Active Noise Cancellation with Wall Transmission Detection
 
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
+An active noise solution for classrooms with capabilities of measuring the sound vibrations through walls, windows, or  other solid objects
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+Construction noise has increased through out Tennessee Technological University as it expands. Even though the expansion of our alma mater is a generally good thing, the added noise distracts students during times of instruction. The team is actively working on a solution to outside noise through active noise control methods.
 
 
 ## Capabilities
@@ -30,13 +30,27 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 
+Jalene Joyce
+   ----
+Dylan Mitchell
+   ----
+Carson Pope
+   ----
+Caleb Turney
+   ----
+Jared Vega
+   ----
 ### Faculty Supervisor
 
 Tell who the faculty supervisor was for the project
 
+Prof. Jesse Roberts
+   ----
+
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+    Students and Faculty of Brown Hall.
 
 ### Recognitions
 
