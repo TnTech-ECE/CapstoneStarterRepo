@@ -10,3 +10,6 @@ This document should be used as an ongoing documentation of the following:
 
 Create a section addressing each of the above questions. 
 
+## Acquired Skills
+
+Each team member should discuss the new knowledge or skills they acquired throughout capstone.
