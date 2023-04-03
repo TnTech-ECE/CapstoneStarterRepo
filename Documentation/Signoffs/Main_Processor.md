@@ -16,6 +16,9 @@
 3. At the bottom of the page select "commit directly to"
 4. Submit the changes 
 
+Making tables for constraints and BOM will use Excel to Markdown here:
+https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
+
 # Required sections
 
 Each signoff markdown file must contain the following sections and information:
@@ -45,26 +48,3 @@ A complete and relevant analysis of the design showing that it **should** meet t
 ## BOM
 
 A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table.
-## --------------------------------------
-# Main Processor
-## Subsytem Function
-
-## Constraints
-| No. | Specifications and Constraints | Origin                  |
-| --- | ------------------------------ | ----------------------- |
-| 1   | Shall                          | Supervisor: Mr. Roberts |
-| 2   | Shalln't                       | Derived Constraint      |
-| 3   | Shall                          | Ethics                  |
-| 4   | Shall                          | Ethics                  |
-
-## Schematic
-
-## Analysis
-
-## Bill of Materials (BOM)
-| Name of Item               | Description           | Subsytem              | Manufacturer/Part#                       | Quantity | Price      | Total     |
-| -------------------------- | --------------------- | --------------------- | ---------------------------------------- | -------- | ---------- | --------- |
-| Name of item               | Description           | Subsystem             | Manufacturer/Part#                       | Quantity | Price      | Total     |
-| Eversame 2 in 1 USB Tester | Voltmeter             | Identification System | Eversame                                 | 2        | $22.99     | $45.98    |
-| Siemens Memory Card        | SIMATIC memory card   | Identification System | Allied Electronics / 6ES7-954-8LC03-0AA0 | 1        | $90.96     | $90.96    |
-|                            |                       |                       | Components                               | 8        | Total Cost | $1,006.90 |
