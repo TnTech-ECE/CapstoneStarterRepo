@@ -45,8 +45,12 @@ The schematic must be appropriate to the design. ie. 3d model for a physical sys
 The actual design artifacts (3d model, Cad files, gerber files, etc) must be uploaded to the documentation folder in the appropriate location.
 
 ## Analysis
+#Input Processing
 
-A complete and relevant analysis of the design showing that it **should** meet the constraints and perform the desired function must be given. This analysis must be comprehensive and well explained so that it is convincing to the faculty supervisor. If the signoff request is not convincing either because the requirements and constraints are insufficient, unjustified, or not appropriately shown to be met by the design, then approval will not be given. Without approval, the components for the subsystem aren't allowed to be ordered. 
+#Input/Output Delay Lines
+
+#180 Degree Phase Shift
+ 
 
 ## BOM
 
