@@ -11,11 +11,12 @@ https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signo
 
 # Required sections
 
-<img width="728" alt="Screen Shot 2023-04-04 at 3 25 34 PM" src="https://user-images.githubusercontent.com/123997954/229912228-53e792c0-7cce-496a-ace8-6fa46197ea0d.png">
 
 Each signoff markdown file must contain the following sections and information:
 
 ## Function of the Subsystem
+
+<img width="728" alt="Screen Shot 2023-04-04 at 3 25 34 PM" src="https://user-images.githubusercontent.com/123997954/229912228-53e792c0-7cce-496a-ace8-6fa46197ea0d.png">
 
 You must explain clearly what role the subsystem will play in the first section. This should clearly explain what the system is expected to do (ie. its atomic purpose from the conceptual design).
 
