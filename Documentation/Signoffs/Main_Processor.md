@@ -1,6 +1,8 @@
 # Processing Subsystem
 
 
+
+
 Making tables for constraints and BOM will use Excel to Markdown here:
 https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
@@ -8,6 +10,8 @@ Example Signoff that was shown in class can be found here:
 https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
 
 # Required sections
+
+<img width="728" alt="Screen Shot 2023-04-04 at 3 25 34 PM" src="https://user-images.githubusercontent.com/123997954/229912228-53e792c0-7cce-496a-ace8-6fa46197ea0d.png">
 
 Each signoff markdown file must contain the following sections and information:
 
