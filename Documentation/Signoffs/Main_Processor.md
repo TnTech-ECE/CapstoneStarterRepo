@@ -48,11 +48,12 @@ The actual design artifacts (3d model, Cad files, gerber files, etc) must be upl
 
 ### Input Processing
 
-Input
+The Processing subsystem is going to receive digital values from the input and error subsystems. Processing of these values will be done through various adaptive agorithms and control filters.
 
-### Input/Output Delay Lines
+### Input/Output Delay Line
+The Input Delay line wil receive the converted digital signals from the input subsytem. These values will be temporarily stored in an array so that the there is enough data to properly convolute the signals. The size of the array is going to depend on the length of the filter in the input subsystem.
 
-Delay Lines
+The erroy delay line is going to have similar functionality to the input delay line but it will be receiving data from the acoustic residual noise of the room after output, rather than values from the input subsystem. 
 
 ### 180 Degree Phase Shift
 
