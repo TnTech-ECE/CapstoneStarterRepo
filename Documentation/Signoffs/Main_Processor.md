@@ -45,6 +45,9 @@ The actual design artifacts (3d model, Cad files, gerber files, etc) must be upl
 
 ## Analysis
 
+![image](https://user-images.githubusercontent.com/123997954/229912784-1174c224-1c0f-4fb9-8a78-3f503ecb81d3.png)
+
+
 ### Input Processing
 
 The Processing subsystem is going to receive digital values from the input and error subsystems. Processing of these values will be done through various adaptive agorithms and control filters.
