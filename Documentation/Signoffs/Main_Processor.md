@@ -35,6 +35,15 @@ You must explain clearly what role the subsystem will play in the first section.
 The second section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
 
 Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
+| No. | Specifications and Constraints                     | Origin          |
+| --- | -------------------------------------------------- | --------------- |
+| 1   | Shall be powered from wall outlet                  | Specification   |
+| 2   | Shall process and output information within 1.4 ms | Specification   |
+| 3   | Shall process sounds at a rate of at least 40 kHz  | Specification   |
+| 4   | Shall keep track of outputs reaching 80+ dB        | Greater Impacts |
+| 5   | Shall minimize storage of classroom noise          | Ethics          |
+| 6   | Shall have a safe power toggle                     | IEC 60950-1     |
+| 7   | Shall not reach 60°C (140°F)                       | Safety          |
 
 ## Buildable schematic 
 
