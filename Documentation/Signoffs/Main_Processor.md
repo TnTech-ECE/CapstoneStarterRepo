@@ -1,20 +1,5 @@
-## How to submit a signoff or update a signoff:
+#Processing Subsystem
 
-### Submitting Signoff
-1. Create the signoff markdown file 
-2. At the bottom of the page select "create a new branch for this commit and start a pull request"
-3. Submit the changes 
-4. Name the pull request branch "name-signoff-subsystem name"
-5. The comment should be "requesting signoff for name of subsystem"
-6. Submit the pull request
-7. Wait for faculty supervisor feedback on the pull request
-
-### Updating Signoff
-
-1. Edit the signoff markdown file 
-2. Add a description of how you have addressed the feedback from the faculty supervisor
-3. At the bottom of the page select "commit directly to"
-4. Submit the changes 
 
 Making tables for constraints and BOM will use Excel to Markdown here:
 https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
