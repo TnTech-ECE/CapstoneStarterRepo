@@ -45,11 +45,11 @@ The schematic must be appropriate to the design. ie. 3d model for a physical sys
 The actual design artifacts (3d model, Cad files, gerber files, etc) must be uploaded to the documentation folder in the appropriate location.
 
 ## Analysis
-# Input Processing
+### Input Processing
 
-# Input/Output Delay Lines
+### Input/Output Delay Lines
 
-# 180 Degree Phase Shift
+### 180 Degree Phase Shift
  
 
 ## BOM
