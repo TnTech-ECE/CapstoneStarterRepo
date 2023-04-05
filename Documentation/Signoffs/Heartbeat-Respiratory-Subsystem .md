@@ -67,6 +67,9 @@ Specs and Constraints table for signoff:
   </tr>
 </table>
 
+<img width="413" alt="MR60BHA1_Schematic" src="https://user-images.githubusercontent.com/79685126/229979992-dfe48e9a-f9e2-4ee6-8646-932cdf7bfd75.PNG">
+Wiring Schematic
+
 
 Analysis:
 
@@ -79,7 +82,6 @@ MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW wave emiss
 For the MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW, the specific weight of the component is not specified in the datasheet, but the size of the component is specified. The dimensions of the component are 30 x 35 mm, so it will be assumed that the component is light in weight due to its small size [4]. This conforms with the weight limit set by DARPA.
 
 Here is a link to a video showing the radar being simulated and tested for accuracy on a stationary individual.
-
 
 
 
