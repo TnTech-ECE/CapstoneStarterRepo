@@ -70,6 +70,6 @@ Phase Shift
  
 
 ## BOM
-| DEVICE            | QTY | Price ($) |
-| ----------------- | --- | --------- |
-| ADZS-BF706-EZMINI | 1   | 88.31     |
+| DEVICE            | Quantity | Price Per Unit | Total Price |
+| ----------------- | -------- | -------------- | ----------- |
+| ADZS-BF706-EZMINI | 1        | $88.31         | $88.31      |
