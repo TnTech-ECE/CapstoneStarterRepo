@@ -37,6 +37,8 @@ Each subsystem must have at least one constraint arising from standards, ethics,
 
 ## Buildable schematic 
 
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/DSPBOARD.png)
+
 The third section should show the buildable schematic directly embedded in the markdown file as a jpeg image. If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
 
 The schematic must be appropriate to the design. ie. 3d model for a physical system or wiring schematic for a circuit. Further, the schematic(s) must contain every detail necessary for the design to be built by someone who has no knowledge of the design. Every relevant component value and measurement must be given.
