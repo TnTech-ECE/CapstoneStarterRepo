@@ -20,7 +20,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 ## Buildable schematic 
 
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/DSPBOARD.png)
-The above image is a schematic of the BF706 processor, the schematic focuses on the most important aspects of this device with respect to the overall design goal. The schematics shows STEREO input and output  ports along with a micro USB input and the subsystems that will connected to this device.  
+The above image is a schematic of the BF706 processor, the schematic focuses on the most important aspects of this device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will connected to this device.  
 ## Analysis
 
 #### Psuedo Code Flow Chart
