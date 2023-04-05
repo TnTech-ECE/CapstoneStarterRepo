@@ -9,6 +9,9 @@ https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 Example Signoff that was shown in class can be found here:
 https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
 
+Cheat Sheet for Markdown:
+https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
+
 # Required sections
 
 
