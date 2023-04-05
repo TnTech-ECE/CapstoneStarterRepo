@@ -95,4 +95,4 @@ The digital output is then converted back to an analog stereo signal. Both chann
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| ADSP-BF706-EZMINI | 1        | $88.31         | $88.31      |
+| ADZS-BF706-EZMINI | 1        | $88.31         | $88.31      |
