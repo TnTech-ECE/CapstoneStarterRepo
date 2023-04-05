@@ -61,7 +61,7 @@ The Processing subsystem is going to receive digital values from the input and e
 ### Input/Output Delay Line
 The Input Delay line wil receive the converted digital signals from the input subsytem. These values will be temporarily stored in an array so that the there is enough data to properly convolute the signals. The size of the array is going to depend on the length of the filter in the input subsystem.
 
-The erroy delay line is going to have similar functionality to the input delay line but it will be receiving data from the acoustic residual noise of the room after output, rather than values from the input subsystem. 
+The error delay line is going to have similar functionality to the input delay line but it will be receiving data from the acoustic residual noise of the room after output, rather than values from the input subsystem. 
 
 ### 180 Degree Phase Shift
 
