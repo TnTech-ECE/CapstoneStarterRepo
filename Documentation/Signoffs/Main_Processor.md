@@ -2,20 +2,8 @@
 
 
 
-
-Making tables for constraints and BOM will use Excel to Markdown here:
-https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
-
-Example Signoff that was shown in class can be found here:
-https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
-
-Cheat Sheet for Markdown:
-https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#tex
-
 # Required sections
 
-
-Each signoff markdown file must contain the following sections and information:
 
 ## Function of the Subsystem
 
@@ -25,9 +13,6 @@ You must explain clearly what role the subsystem will play in the first section.
 
 ## Constraints
 
-The second section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
-
-Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
 | No. | Specifications and Constraints                     | Origin          |
 | --- | -------------------------------------------------- | --------------- |
 | 1   | Shall be powered from wall outlet                  | Specification   |
@@ -96,4 +81,4 @@ The digital output is then converted back to an analog stereo signal. Both chann
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| ADZS-BF706-EZMINI | 1        | $88.31         | $88.31      |
+| ADSP-BF706-EZMINI | 1        | $88.31         | $88.31      |
