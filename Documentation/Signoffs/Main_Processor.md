@@ -73,15 +73,15 @@ The USB interface is directly connected to the Blackfin processor and it's SRAM 
 
 The system has the ADSP-BF706 Blackfin processor on board. This processor has a clock speed of 400 MHz, and a multiply-accumulate (MAC) instruction per second speed of 800 million at max clock speed. The ADSP-BF706 has 64 kB usable SRAM internally plus an additional 1 MB of SRAM. The filtered-X least mean squares algorithm being used requires $IJ(K+1)L+JKM+Imax(L,M+1)+K$ words of memory. I is the number of inputs signals, J is the number of output signals, and K is the number of error signals. L is the control filter length and M is the length of the estimated Plant FIR Filter being recieved from the USB interface. Allowing L and M being roughly equal, we can find the maximum size of filters we can use using the internal memory. I,J, and K will be set to 1.
 
-64 kB/4 Bytes = 16000 32-bit words = $1(1+1) + M + M + 1 + 1 = 4 + 2 M $
+$$64 \text{kB} /4 \text{Bytes} = 16000 \text{ 32-bit words } = 1(1+1) + M + M + 1 + 1 = 4 + 2 M $$
 
-$ M = 7998 $ samples $= L$ 
+$$ M = 7998 \text{ samples } = L $$ 
 
 7998 samples per filter allow us to have approximately 167 ms for our acoustic response. The number of MAC instructions needed by the algorithm is solved by $ IJK(L+M)+K $ MACs per filter update. Using L equal to M equal to our max storage gets:
 
-$ 1(2 * 7998) + 1 = 15997 $ MACs
+$$ 1(2 \times 7998) + 1 = 15997 \text{ MACs } $$
 
-$15997$ MACs/Coefficent Update$ * \frac{1 s,800 Million MACs} = 19.96 \mu s $
+$$15997 \text{ MACs/Coefficent Update } \times \frac{1 s}{800 \text{Million MACs}} = 19.96 \mu s $$
 
 19.96 microseconds is below the 20.83 microseconds before the next sample input. This means the system could do an update in real time. Adding extra time for memory instructions, the system could still run close to real time, and below the max delay of 1.4 ms.
 
