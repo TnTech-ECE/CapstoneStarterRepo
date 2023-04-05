@@ -70,5 +70,6 @@ Phase Shift
  
 
 ## BOM
-
-A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table.a
+| DEVICE            | QTY | Price ($) |
+| ----------------- | --- | --------- |
+| ADZS-BF706-EZMINI | 1   | 88.31     |
