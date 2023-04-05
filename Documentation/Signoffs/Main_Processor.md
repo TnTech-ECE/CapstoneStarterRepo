@@ -1,10 +1,5 @@
 # Processing Subsystem
 
-
-
-# Required sections
-
-
 ## Function of the Subsystem
 
 <img width="728" alt="Screen Shot 2023-04-04 at 3 25 34 PM" src="https://user-images.githubusercontent.com/123997954/229912228-53e792c0-7cce-496a-ace8-6fa46197ea0d.png">
