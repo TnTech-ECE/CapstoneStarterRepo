@@ -10,7 +10,7 @@ Example Signoff that was shown in class can be found here:
 https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
 
 Cheat Sheet for Markdown:
-https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Signoffs/Power%20Subsystem.md
+https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#tex
 
 # Required sections
 
