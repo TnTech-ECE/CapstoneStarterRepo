@@ -80,7 +80,7 @@ $$ M = 7998  samples = L $$
 
 $$ 1(2 * 7998) + 1 = 15997 $$ MACs
 
-$$ 15997 MACs/Coefficent Update * \fract{1 s,800 Million MACs} = 19.96 \mu s $$
+$$ 15997 MACs/Coefficent Update * \frac{1 s,800 Million MACs} = 19.96 \mu s $$
 
 19.96 microseconds is below the 20.83 microseconds before the next sample input. This means the system could do an update in real time. Adding extra time for memory instructions, the system could still run close to real time, and below the max delay of 1.4 ms.
 
@@ -95,4 +95,4 @@ The digital output is then converted back to an analog stereo signal. Both chann
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| ADZS-BF706-EZMINI | 1        | $88.31         | $88.31      |
+| ADSP-BF706-EZMINI | 1        | $88.31         | $88.31      |
