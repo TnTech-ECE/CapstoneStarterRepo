@@ -25,4 +25,4 @@ You may instead choose to use overleaf to make the poster. A template is include
 
 [University Logos](https://www.tntech.edu/ocm/marketingtoolkit/logos.php)
 
-[Poster Template (INCORRECT SIZE for ECE)](https://www.cae.tntech.edu/Members/renfro/posters/standard-poster-44x34.ppt/view)
+[Poster Template (INCORRECT SIZE for ECE)](https://www.cae.tntech.edu/Members/renfro/posters/standard-poster-44x34.ppt)
