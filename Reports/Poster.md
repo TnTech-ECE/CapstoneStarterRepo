@@ -23,4 +23,4 @@ You may instead choose to use overleaf to make the poster. A template is include
 
 ## Other poster resources
 
-https://www.tntech.edu/ocm/marketingtoolkit/logos.php[Logos]
+[https://www.tntech.edu/ocm/marketingtoolkit/logos.php](Logos)
