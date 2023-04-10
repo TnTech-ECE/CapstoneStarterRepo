@@ -19,3 +19,8 @@ The college of engineering has poster templates available via the library websit
 ## Overleaf/Latex instructions
 
 You may instead choose to use overleaf to make the poster. A template is included [here](https://github.com/TnTech-ECE/CapstoneStarterRepo/tree/main/Reports/Poster%20Template). Upload this template to overleaf and customize as necessary. The template is already the appropriate size.
+
+
+## Other poster resources
+
+https://www.tntech.edu/ocm/marketingtoolkit/logos.php[Logos]
