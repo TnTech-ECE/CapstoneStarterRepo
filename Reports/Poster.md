@@ -37,11 +37,12 @@ The poster should capture your entire project. At a minimum that would include:
 1. The problem 
 2. Necessary constraints (things that an observer needs to know - not every detail)
 3. The solution (show off your design and artifacts)
-4. The most relevant experimental results regarding your solutions success (in an appropriate format ie. graph, table, or figure) - do not include every detail
-5. Pictures of the system are good to include
-6. Cad models are good to include
-7. Budgets are good to include
-8. Team pictures are good to include
+4. The most relevant or interesting analysis results from the signoffs
+5. The most relevant experimental results regarding your solutions success (in an appropriate format ie. graph, table, or figure) - do not include every detail
+6. Pictures of the system are good to include
+7. Cad models are good to include
+8. Budgets are good to include
+9. Team pictures are good to include
 
 Each team has the opportunity to put their own identity into the poster and it will hang in the hall for a year. So, be sure to represent yourselves well. Remember to look at past posters for ideas about what to include and how to style the poster.
 
