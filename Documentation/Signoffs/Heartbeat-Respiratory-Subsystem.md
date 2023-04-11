@@ -66,9 +66,14 @@ Specs and Constraints table for signoff:
   </tr>
 </table>
 
-<img width="413" alt="MR60BHA1_Schematic" src="https://user-images.githubusercontent.com/79685126/229979992-dfe48e9a-f9e2-4ee6-8646-932cdf7bfd75.PNG">
-Wiring Schematic
+<img width="645" alt="Heartbeat_Respiratory_Diagram_new" src="https://user-images.githubusercontent.com/123419455/231278499-d7205942-5ca0-4afa-a70c-6371a5994ff6.png">
+Figure 1: Pictured above is the Buildable Wiring Schematic
 
+<img width="624" alt="Jetson Nano Module" src="https://user-images.githubusercontent.com/123419455/231278530-c31598c8-3fec-422d-8ff8-a1e563d86ed8.png">
+Figure 2: Pictured above is the Jetson Nano Module that the MR60BHA1 is connected to
+
+<img width="445" alt="Image of MR60BHA1" src="https://user-images.githubusercontent.com/123419455/231278580-e9f1b73f-ed2f-4a88-8443-1d1be2cb46f2.png">
+Figure 3: Pictured above is an image of the MR60BHA1
 
 Analysis:
 
