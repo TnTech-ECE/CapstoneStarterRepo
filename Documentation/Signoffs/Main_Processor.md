@@ -2,24 +2,26 @@
 
 ## Function of the Subsystem
 
-<img width="728" alt="Screen Shot 2023-04-04 at 3 25 34 PM" src="https://user-images.githubusercontent.com/123997954/229912228-53e792c0-7cce-496a-ace8-6fa46197ea0d.png">
 The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system.
 
 ## Constraints
 
-| No. | Specifications and Constraints                     | Origin          |
-| --- | -------------------------------------------------- | --------------- |
-| 1   | Shall be powered from wall outlet                  | Specification   |
-| 2   | Shall process and output information within 1.4 ms | Specification   |
-| 3   | Shall process sounds at a rate of at least 40 kHz  | Specification   |
-| 4   | Shall keep track of outputs reaching 80+ dB        | Greater Impacts |
-| 5   | Shall minimize storage of classroom noise          | Ethics          |
-| 6   | Shall have a safe power toggle                     | IEC 60950-1     |
-| 7   | Shall not reach 60°C (140°F)                       | Safety          |
+| No. | Constraints                                                           | Origin            |
+| --- | --------------------------------------------------------------------- | ----------------- |
+| 1   | Max power draw of 2.5 Watts from onboard USB connection port          | Device Constraint |
+| 2   | Shall process and output with a max delay of 20.83 $\mu s$            | Spec Constraint   |
+| 3   | Shall have a sample rate of 48 kHz                                    | Device Constraint |
+| 4   | Shall have at least 16-bit ADC and DAC                                | Spec Constraint   |
+| 5   | Maximum of 2 input signal sources                                     | Device Constraint |
+| 6   | Maximum of 2 output signals                                           | Device Constraint |
+| 7   | Shall receive serial data from a general purpose computer             | Design Constraint |
+| 8   | Maximum of 1064 kB of usable internal memory                          | Device Constraint |
+| 9   | Shall not store audio data for more than 200 ms                       | Ethics Constraint |
+| 10  | Shall turn off if the system reaches 60°C (140°F)                     | Safety Constraint |
 
 ## Buildable schematic 
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/DSPBOARD.png)
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/66765be4ab018f4d5479051bf008aac47a2c0ad8/Documentation/Images/DSPBOARD_REV1.png)
 The above image is a schematic of the BF706 processor, the schematic focuses on the most important aspects of this device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will connected to this device.  
 ## Analysis
 
@@ -50,7 +52,7 @@ $$64 \text{kB} /4 \text{Bytes} = 16000 \text{ 32-bit words } = 1(1+1) + M + M + 
 
 $$ M = 7998 \text{ samples } = L $$ 
 
-7998 samples per filter allow us to have approximately 167 ms for our acoustic response. The number of MAC instructions needed by the algorithm is solved by $ IJK(L+M)+K $ MACs per filter update. Using L equal to M equal to our max storage gets:
+7998 samples per filter allow us to have approximately 167 ms for our acoustic response. The number of MAC instructions needed by the algorithm is solved by $IJK(L+M)+K$ MACs per filter update. Using L equal to M equal to our max storage gets:
 
 $$ 1(2 \times 7998) + 1 = 15997 \text{ MACs } $$
 
