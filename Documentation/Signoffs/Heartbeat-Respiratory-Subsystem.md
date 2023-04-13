@@ -6,65 +6,14 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 
 ## Specs and Constraints Table			
 
-
-<table>
-  <tr>
-   <td>Description
-   </td>
-   <td>Constraint
-   </td>
-   <td>Source of Constraint
-   </td>
-  </tr>
-  <tr>
-   <td>Heartbeat analysis
-   </td>
-   <td>Must sense frequencies from 0.45 Hz to 2.92 Hz
-   </td>
-   <td>From Conceptual Design, from Heartbeat/Respiratory System section
-   </td>
-  </tr>
-  <tr>
-   <td>Respiratory sensor
-   </td>
-   <td>Must sense frequencies from 0.13 Hz to 0.42 Hz
-   </td>
-   <td>From Conceptual Design, from Heartbeat/Respiratory System section
-   </td>
-  </tr>
-  <tr>
-   <td>Heartbeat detection
-   </td>
-   <td>Must sense frequencies from 0.45 Hz to 2.92 Hz
-   </td>
-   <td>From Conceptual Design, from Heartbeat/Respiratory System section
-   </td>
-  </tr>
-  <tr>
-   <td>Distance
-   </td>
-   <td>Must detect and measure heartbeat and breath rate from at least 1 meter away
-   </td>
-   <td>From DARPA constraints
-   </td>
-  </tr>
-  <tr>
-   <td>Weight
-   </td>
-   <td>When combined with other subsystems as well as reference drone, must weigh below 20 lbs in total
-   </td>
-   <td>From DARPA constraints
-   </td>
-  </tr>
-  <tr>
-   <td>Safety
-   </td>
-   <td>Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe.
-   </td>
-   <td>From World Health Organization (WHO)
-   </td>
-  </tr>
-</table>
+| Description | Constraint | Source |
+|-------------|------------|--------|
+| Heartbeat analysis | Must sense frequencies from 0.45 Hz to 2.92 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
+| Respiratory sensor | Must sense frequencies from 0.13 Hz to 0.42 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
+| Heartbeat detection | Must sense frequencies from 0.45 Hz to 2.92 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
+| Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
+| Weight | When combined with other subsystems as well as reference drone, must weigh below 20 lbs in total | From DARPA constraints |
+| Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
 
 ## Buildable Schematic
 <img width="645" alt="Heartbeat_Respiratory_Diagram_new" src="https://user-images.githubusercontent.com/123419455/231278499-d7205942-5ca0-4afa-a70c-6371a5994ff6.png">
@@ -86,11 +35,8 @@ MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW wave emiss
 
 For the MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW, the specific weight of the component is not specified in the datasheet, but the size of the component is specified. The dimensions of the component are 30 x 35 mm, so it will be assumed that the component is light in weight due to its small size [4]. This conforms with the weight limit set by DARPA.
 
-Here is a link to a video showing the radar being simulated and tested for accuracy on a stationary individual.
-
-
-
-: [https://youtu.be/J1JDgFs_4iw](https://youtu.be/J1JDgFs_4iw) 
+Here is a link to a video showing the radar being simulated and tested for accuracy on a stationary individual:
+[https://youtu.be/J1JDgFs_4iw](https://youtu.be/J1JDgFs_4iw) 
 
 This link was found on the website referenced in source [2].
 
