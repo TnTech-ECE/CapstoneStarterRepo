@@ -1,10 +1,10 @@
-Heartbeat/Respiratory Subsystem 
+# Heartbeat/Respiratory Subsystem 
 
-Subsystem Function:
+## Subsystem Function
 
 The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an algorithm that will output specific heart rate and respiratory rates and send them to be further analized.
 
-Specs and Constraints table for signoff:			
+## Specs and Constraints Table			
 
 
 <table>
@@ -66,6 +66,7 @@ Specs and Constraints table for signoff:
   </tr>
 </table>
 
+## Buildable Schematic
 <img width="645" alt="Heartbeat_Respiratory_Diagram_new" src="https://user-images.githubusercontent.com/123419455/231278499-d7205942-5ca0-4afa-a70c-6371a5994ff6.png">
 Figure 1: Pictured above is the Buildable Wiring Schematic
 
@@ -75,7 +76,7 @@ Figure 2: Pictured above is the Jetson Nano Module that the MR60BHA1 is connecte
 <img width="445" alt="Image of MR60BHA1" src="https://user-images.githubusercontent.com/123419455/231278580-e9f1b73f-ed2f-4a88-8443-1d1be2cb46f2.png">
 Figure 3: Pictured above is an image of the MR60BHA1
 
-Analysis:
+## Analysis
 
 The radar that will be used to accomplish this subsystems function is the Speed MR60BHA1 60GHz mmWave Module. This radar sensor was built for the task of vital detection with the ability to measure heart in the range of 60-100 bpm and respiratory rate of up to 25 times per minute. As specified by the product description the typical accuracy of the breath rate is 90% and the accuracy of the heart rate is 95%. The sensor also allows for secondary development using UART communication protocol. It adheres to constraints as follows.
 
@@ -93,13 +94,13 @@ Here is a link to a video showing the radar being simulated and tested for accur
 
 This link was found on the website referenced in source [2].
 
-BOM:
+## BOM
 
 
 
 *  MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW - $45.00
 
-Sources: 
+## Sources 
 
 [1] “Radiation: Radar,” _World Health Organization_. [Online]. Available: https://www.who.int/news-room/questions-and-answers/item/radiation-radar#:~:text=Exposure%20to%20RF%20fields%20above,dangerous%20amounts%20of%20radio%20frequencies%3F. [Accessed: 28-Mar-2023]. 
 
