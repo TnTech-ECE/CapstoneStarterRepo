@@ -1,0 +1,14 @@
+# Power Subsystem
+
+## Functionality
+This subsystem is responsible for powering all necessary devices that are present as part of the total sensing system.
+
+## Constraints
+
+## Buildable Schematic
+
+## Analysis
+
+## BOM
+
+## Sources
