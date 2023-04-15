@@ -18,8 +18,12 @@ The goal of the output subsystem is to take the analog signal received from the 
 According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 
 
-## 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.    |Origin: Device constraints and human biology|
+### 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.    |Origin: Device constraints and human biology|
 The frequency range that the human ear can hear is generally in the range of 20Hz-20Khz, this range is subject to to change with age but this is the minimum and maximum. With this in mind it would be ideal for the speaker to able to output at a frequency range that covers most of the values that the human ear can perceive. This also means that the audio amplifier should be able to take in and output this range of frequencies. Therefore a constraint is set that ensures the speaker and audio amplifier can output at a range of 100Hz-17Khz, this range allows a bit more adaptability to the design but covers an appropiate range of necessary sounds that the device will encounter. 
+
+### The speaker shall have a minimum input impedence 4Ω |Origin: audio amplifier specifications|
+When it comes to speaker, there is a built in input impedence that the device has. The lower the impedence the higher the current draw since there is less resistance. This also means the lower the impedence the less voltage that is required. The audio amplifier used in this design in specified to be able to drive a 4-8Ω load. If a amplifier tries to drive a speaker with a impedence that is lower than what is rated to be capable of, there is a high chance that the amplifier will overheat.[ref] Therefore, the speaker that will be used will have a minimum input impedence of 4Ω. This allows for a wider range of speakers and amplifiers to be used and ensures that a safe design choice is made, since speakers with imoedences above the rated amplifier impedence can be used with minimal issues.
+
 
 ## Buildable schematic 
 
