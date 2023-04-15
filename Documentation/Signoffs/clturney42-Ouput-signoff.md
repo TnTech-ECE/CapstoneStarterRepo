@@ -21,8 +21,10 @@ According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-
 ### 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.    |Origin: Device constraints and human biology|
 The frequency range that the human ear can hear is generally in the range of 20Hz-20Khz, this range is subject to to change with age but this is the minimum and maximum. With this in mind it would be ideal for the speaker to able to output at a frequency range that covers most of the values that the human ear can perceive. This also means that the audio amplifier should be able to take in and output this range of frequencies. Therefore a constraint is set that ensures the speaker and audio amplifier can output at a range of 100Hz-17Khz, this range allows a bit more adaptability to the design but covers an appropiate range of necessary sounds that the device will encounter. 
 
-### The speaker shall have a minimum input impedence 4Ω |Origin: audio amplifier specifications|
+### 3) The speaker shall have a minimum input impedence 4Ω |Origin: audio amplifier specifications|
 When it comes to speaker, there is a built in input impedence that the device has. The lower the impedence the higher the current draw since there is less resistance. This also means the lower the impedence the less voltage that is required. The audio amplifier used in this design in specified to be able to drive a 4-8Ω load. If a amplifier tries to drive a speaker with a impedence that is lower than what is rated to be capable of, there is a high chance that the amplifier will overheat.[ref] Therefore, the speaker that will be used will have a minimum input impedence of 4Ω. This allows for a wider range of speakers and amplifiers to be used and ensures that a safe design choice is made, since speakers with imoedences above the rated amplifier impedence can be used with minimal issues.
+
+### 
 
 
 ## Buildable schematic 
@@ -35,6 +37,14 @@ The above schematic is taken directly from digilents pmod AMP2 product page. Thi
 
 For the purpose of the buildable schematic the pmod will be condensed to a single block with just its ports. 
 ## Analysis
+### Explanation of Components
+
+#### pmod AMP2 - IC-SSM2377
+
+The IC-SSM2377 chip is a filterless class-D audio amplifier. A class-D audio amplifier has the highest efficiency among amplifier classes with low distortion. Clear sound is imperative to noise cancellation therefore the best class of amplifier should be used. The SSM2377 is capable of delivering 2.5W of power to a load between 4-8Ω. It is capable of up to a 92% efficiency ratio and has very low total harmonic distortion meaning the sound is very clear. It also has a signal-to-noise ration of 101 which means the signal will come through with little to no distortion from background noise. This chip is implemented through the pmod AMP2 from Digilent, INC. The pmod AMP2 takes the signal and amplifies it and drives it to a monophonic output using the SSM377 chip. It has the capability to switch betwen a gain of 6 dB and 12 dB allowing for more adaptability and accuracy in the outputted signal.
+
+
+
 
 #### Psuedo Code Flow Chart
 
