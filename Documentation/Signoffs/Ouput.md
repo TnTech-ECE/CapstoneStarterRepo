@@ -5,23 +5,17 @@
 
 ## Function of the Subsystem
 
-The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system.
+The goal of the output subsystem is to take the analog signal received from the processor, amplify the signal through a audio power amplifier, and drive it to the speaker so that it can be emitted. The power amplifier will need to amplify the analog signal to an appropiate level for the speaker to be able to output it into the room. The speaker and amplifier must have internal impedences that are compatible and the speaker needs to be able to have an efficiency and sound pressure level to adequately cover a certain portion of the room. 
+
 
 ## Constraints
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   | Max power draw of 2.5 Watts from onboard USB connection port          | Device Constraint |
-| 2   | Shall process and output with a max delay of 20.83 $\mu s$            | Spec Constraint   |
-| 3   | Shall have a sample rate of 48 kHz                                    | Device Constraint |
-| 4   | Shall have at least 16-bit ADC and DAC                                | Spec Constraint   |
-| 5   | Maximum of 2 input signal sources                                     | Device Constraint |
-| 6   | Maximum of 2 output signals                                           | Device Constraint |
-| 7   | Shall receive serial data from a general purpose computer             | Design Constraint |
-| 8   | Maximum of 1064 kB of usable internal memory                          | Device Constraint |
-| 9   | Shall not store audio data for more than 200 ms                       | Ethics Constraint |
-| 10  | Shall turn off if the system reaches 60°C (140°F)                     | Safety Constraint |
+| 1   | The power amplifier          | Device Constraint |
 
+### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
+The Pmod AMP2 is capable of driving a 4 &OMEGA
 ## Buildable schematic 
 
 
