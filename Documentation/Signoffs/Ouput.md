@@ -15,9 +15,13 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 1   | The power amplifier          | Device Constraint |
 
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
-According to the SSM2377 datasheet [ref], The Pmod AMP2 is capable of driving a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
+According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 ## Buildable schematic 
 
+<img width="820" alt="Screen Shot 2023-04-15 at 4 09 37 PM" src="https://user-images.githubusercontent.com/123997954/232253257-362a0e5e-6b52-43da-aee9-0ffa3ed7d06a.png">
+### **Figure: Digilent pmod AMP2 schematic[2]
+
+The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the reistors and capacitors used. This audio amplifer makes use of the IC-SSM2377 amplifier chip. 
 
 The above image is a schematic of the BF706 processor, the schematic focuses on the most important aspects of this device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will connected to this device.  
 ## Analysis
@@ -38,9 +42,9 @@ The digital output is then converted back to an analog stereo signal. Both chann
 
 ## References
 
-1] Analog Devices, "Blackfin ADSP-BF70x Ultralow Power, Low Cost DSP Evaluation Platform ADSP-BF706 EZ-KIT Mini" ADSP-BF706 EZ-KIT Mini, 2015, https://www.analog.com/media/en/news-marketing-collateral/product-highlight/Blackfin-ADSP-BF706_MINI.pdf (accessed Apr. 4, 2023).
+[1] Analog Devices, "Filterless, High Efficiency, Mono 2.5 W Class-D Audio Amplifier" SSM2377 datasheet, 2011, https://www.analog.com/media/en/technical-documentation/data-sheets/SSM2377.pdf (accessed April 15th, 2023).
 
-[2] Analog Devices, "Blackfin+ Core Embedded Processor" Blackfin, Blackfin+, and the Blackfin logo are registered trademarks of Analog Devices, Inc. Blackfin+ Core Embedded Processor ADSP-BF700/701/702/703/704/705/706/707, February 2019.
+[2] “PMODAMP2™ reference manual - digilent,” pmodAMP2, 12-Dec-2011. [Online]. Available: https://digilent.com/reference/_media/reference/pmod/pmodamp2/pmodamp2_rm.pdf. [Accessed: 15-Apr-2023]. 
 
 [3] Analog Devices. "SigmaDSP Stereo, Low Power, 96 kHz, 24-Bit Audio Codec with Integrated PLL" ADAU1761 Datasheet, 2009-2018.
 
