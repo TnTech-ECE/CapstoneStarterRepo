@@ -19,7 +19,8 @@ According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-
 ## Buildable schematic 
 
 <img width="820" alt="Screen Shot 2023-04-15 at 4 09 37 PM" src="https://user-images.githubusercontent.com/123997954/232253257-362a0e5e-6b52-43da-aee9-0ffa3ed7d06a.png">
-### Figure: Digilent pmod AMP2 schematic[2]
+
+### **Figure: Digilent pmod AMP2 schematic[2]**
 
 The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the reistors and capacitors used. This audio amplifer makes use of the IC-SSM2377 amplifier chip. 
 
