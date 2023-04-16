@@ -41,7 +41,7 @@ The above schematic is taken directly from digilents pmod AMP2 product page. Thi
 
 For the purpose of the buildable schematic the pmod will be condensed to a single block with just its ports.
 
-Screen Shot 2023-04-16 at 4.56.03 PM<img width="678" alt="image" src="https://user-images.githubusercontent.com/123997954/232344786-31dc2d4d-c3bf-4c9f-93e2-5f7757014fa8.png">
+<img width="678" alt="Screen Shot 2023-04-16 at 4 56 03 PM" src="https://user-images.githubusercontent.com/123997954/232345262-ff429d1d-7f6d-4138-8613-c1b8cb05caa5.png">
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
