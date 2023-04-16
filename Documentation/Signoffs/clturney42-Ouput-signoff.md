@@ -29,7 +29,8 @@ The processing portion of the system is going to process a signal and convert it
 Sound pressure level(SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through. Speakers with an SPL of 84 decibels or lower are considered poor and inefficent while speakers with an efficiency of 92 or higher are considered clear and loud. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropiate SPL to cover a portion of the room is a 90 dB SPL. 
 
 
-
+### 6) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts |Origin: Amplifier specifications and power insurance|
+Due to the amplifer being able to supply a continuous power of 1.4 - 2.5W, an appropiate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are sligh fluctuations in the system.
 
 ## Buildable schematic 
 
@@ -44,7 +45,6 @@ For the purpose of the buildable schematic the pmod will be condensed to a singl
 <img width="678" alt="Screen Shot 2023-04-16 at 4 56 03 PM" src="https://user-images.githubusercontent.com/123997954/232345262-ff429d1d-7f6d-4138-8613-c1b8cb05caa5.png">
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
-
 
 The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain, and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the pwoer and ground cables from the speaker can be connected.
 
@@ -61,9 +61,9 @@ This chip is implemented through the pmod AMP2 from Digilent, INC. The pmod AMP2
 
 A speaker with the proper characteristics must be chosen to interface properly with the audio amplifier. The pmod AMP2 can supply up to 2.5 watts of power to the speaker, so it’s ideal for the speaker to have a maximum power rating of 2 watts to ensure that the amplifier is able to properly supply the speaker, even in the case that the amplifier power output fluctuates. As outlined in the constraints, the speaker should also be able to output at a minimum frequency range of 100Hz-17Khz to account for the range that the human ear is capable of hearing. To account for the size of the room and need to disperse audio over a relatively wide range, the speaker must have a sufficient sound pressure level (SPL) to adequately cover a portion of the room. Due to the amplifier being able to drive a load impedance of 4-8Ω, a speaker must be chosen that has an input impedance of 4Ω or greater. It is unclear what SPL should be used without having measured the ambient sound pressure of the room. So, it is important to know the range of values in which the speaker must be able to operate.
 
-###
+#### Further connections
 
-
+Due to the speakers that fall within the specified range not having built in stereo jack cables, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
 
 
 
