@@ -60,9 +60,7 @@ A speaker with the proper characteristics must be chosen to interface properly w
 
 
 
-### Output 
 
-The digital output is then converted back to an analog stereo signal. Both channels of the system are equal and will be sent to a 2 speaker array. 
 
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
