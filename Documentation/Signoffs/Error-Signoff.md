@@ -13,7 +13,13 @@ Using an electret microphone will allow the microphone to work without power, bu
 
 ## Buildable Schematic
 <img src="https://user-images.githubusercontent.com/123997954/229912784-1174c224-1c0f-4fb9-8a78-3f503ecb81d3.png" width="60%" height="60%">
+
 ![alt text](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega42-Error-Signoff/Documentation/Images/Error/OVC3868_Pins.jpg?raw=true)
+
+<img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="Alt text" title="Optional title">
+
+<img src="/path/to/img.jpg" alt="Alt text" title="Optional title">
+
 ## Analysis
 
 Include math of frequency modulation here
