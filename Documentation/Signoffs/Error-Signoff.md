@@ -25,6 +25,7 @@ Include math of frequency modulation here
 | DEVICE                                       | Quantity | Price Per Unit | Total Price |
 |----------------------------------------------|----------|----------------|-------------|
 | TSA5000 - Bluetooth 5.0 Audio Transmitter[2] | 1        | $21.95         | $21.95      |
+| Simple Microphone [4] | 1 | $8.99 | 8.99|
 
 ## References
 [1] “Operation of Wireless Microphones.” Www.fcc.gov, 15 Oct. 2019, www.fcc.gov/consumers/guides/operation-wireless-microphones. Accessed 16 Apr. 2023.
@@ -33,6 +34,7 @@ Include math of frequency modulation here
 
 [3] https://tinkersphere.com/audio/3639-bluetooth-audio-transmitter-receiver.html
 
+[4] https://www.amazon.com/Phone-Microphone-Headphone-Jack-Detachable/dp/B07SNSY64C/ref=sr_1_2?crid=2MBJ9LDPPDAEA&keywords=microphone+jack&qid=1681674869&sprefix=microphone+jack%2Caps%2C90&sr=8-2
 
 2 and 3 are options for the transmitter
 ### Ignore
