@@ -61,6 +61,8 @@ This chip is implemented through the pmod AMP2 from Digilent, INC. The pmod AMP2
 
 A speaker with the proper characteristics must be chosen to interface properly with the audio amplifier. The pmod AMP2 can supply up to 2.5 watts of power to the speaker, so it’s ideal for the speaker to have a maximum power rating of 2 watts to ensure that the amplifier is able to properly supply the speaker, even in the case that the amplifier power output fluctuates. As outlined in the constraints, the speaker should also be able to output at a minimum frequency range of 100Hz-17Khz to account for the range that the human ear is capable of hearing. To account for the size of the room and need to disperse audio over a relatively wide range, the speaker must have a sufficient sound pressure level (SPL) to adequately cover a portion of the room. Due to the amplifier being able to drive a load impedance of 4-8Ω, a speaker must be chosen that has an input impedance of 4Ω or greater. It is unclear what SPL should be used without having measured the ambient sound pressure of the room. So, it is important to know the range of values in which the speaker must be able to operate.
 
+###
+
 
 
 
