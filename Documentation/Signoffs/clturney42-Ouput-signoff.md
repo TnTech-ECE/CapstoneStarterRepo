@@ -72,7 +72,7 @@ Due to the speakers that fall within the specified range not having built in ste
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
 | Pmod AMP2: Audio Amplifier   | 1              | $9.99        | $9.99     |
-| Speaker Selection | ?     | $1.200-$6.100   |?   |
+| Speaker Selection | ?     | $1.20-$6.10  |?   |
 ## References
 
 [1] Analog Devices, "Filterless, High Efficiency, Mono 2.5 W Class-D Audio Amplifier" SSM2377 datasheet, 2011, https://www.analog.com/media/en/technical-documentation/data-sheets/SSM2377.pdf (accessed April 15th, 2023).
