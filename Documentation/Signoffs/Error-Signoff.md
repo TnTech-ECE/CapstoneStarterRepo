@@ -28,8 +28,11 @@ Include math of frequency modulation here
 
 ## References
 [1] “Operation of Wireless Microphones.” Www.fcc.gov, 15 Oct. 2019, www.fcc.gov/consumers/guides/operation-wireless-microphones. Accessed 16 Apr. 2023.
+
 [2] https://www.tinyosshop.com/index.php?route=product/product&path=158&product_id=1090
+
 [3] https://tinkersphere.com/audio/3639-bluetooth-audio-transmitter-receiver.html
+
 
 2 and 3 are options for the transmitter
 ### Ignore
