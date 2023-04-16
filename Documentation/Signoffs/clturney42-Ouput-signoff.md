@@ -1,4 +1,4 @@
-# Processing Subsystem
+# Output Subsystem
 
 <p align="center">
 <img width="1018" alt="Screen Shot 2023-04-16 at 6 12 58 PM" src="https://user-images.githubusercontent.com/123997954/232348587-a962e40f-7dd1-43ec-834e-d62ea83feeec.png">
@@ -9,30 +9,30 @@
 
 ## Function of the Subsystem
 
-The goal of the output subsystem is to take the analog signal received from the processor, amplify the signal through a audio power amplifier, and drive it to the speaker so that it can be emitted. The power amplifier will need to amplify the analog signal to an appropiate level for the speaker to be able to output it into the room. The speaker and amplifier must have internal impedances that are compatible and the speaker needs to be able to have an efficiency and sound pressure level to adequately cover a certain portion of the room. 
+The goal of the output subsystem is to take the analog signal received from the processor, amplify the signal through an audio power amplifier, and drive it to the speaker so that it can be emitted. The power amplifier will need to amplify the analog signal to an appropriate level for the speaker to be able to output it into the room. The speaker and amplifier must have internal impedances that are compatible, and the speaker needs to be able to have an efficiency and sound pressure level to adequately cover a certain portion of the room. 
 
 
 ## Constraints
 
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
-According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
+According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 
 
 ### 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.    |Origin: Device constraints and human biology|
-The frequency range that the human ear can hear is generally in the range of 20Hz-20Khz, this range is subject to to change with age but this is the minimum and maximum. With this in mind it would be ideal for the speaker to able to output at a frequency range that covers most of the values that the human ear can perceive. This also means that the audio amplifier should be able to take in and output this range of frequencies. Therefore a constraint is set that ensures the speaker and audio amplifier can output at a range of 100Hz-17Khz, this range allows a bit more adaptability to the design but covers an appropiate range of necessary sounds that the device will encounter. 
+The frequency range that the human ear can hear is generally in the range of 20Hz-20Khz, this range is subject to change with age, but this is the minimum and maximum. With this in mind it would be ideal for the speaker to able to output at a frequency range that covers most of the values that the human ear can perceive. This also means that the audio amplifier should be able to take in and output this range of frequencies. Therefore, a constraint is set that ensures the speaker and audio amplifier can output at a range of 100Hz-17Khz, this range allows a bit more adaptability to the design but covers an appropriate range of necessary sounds that the device will encounter. 
 
 ### 3) The speaker shall have a minimum input impedance 4Ω |Origin: audio amplifier specifications|
-When it comes to speaker, there is a built in input impedance that the device has. The lower the impedance the higher the current draw since there is less resistance. This also means the lower the impedance the less voltage that is required. The audio amplifier used in this design in specified to be able to drive a 4-8Ω load [1][3]. If an amplifier tries to drive a speaker with a impedance that is lower than what is rated to be capable of, there is a high chance that the amplifier will overheat.[ref] Therefore, the speaker that will be used will have a minimum input impedance of 4Ω. This allows for a wider range of speakers and amplifiers to be used and ensures that a safe design choice is made, since speakers with imoedences above the rated amplifier impedance can be used with minimal issues.
+When it comes to speaker, there is a built-in input impedance that the device has. The lower the impedance the higher the current draw since there is less resistance. This also means the lower the impedance the less voltage that is required. The audio amplifier used in this design in specified to be able to drive a 4-8Ω load [1][3]. If an amplifier tries to drive a speaker with a impedance that is lower than what is rated to be capable of, there is a high chance that the amplifier will overheat. [ref] Therefore, the speaker that will be used will have a minimum input impedance of 4Ω. This allows for a wider range of speakers and amplifiers to be used and ensures that a safe design choice is made, since speakers with impedances above the rated amplifier impedance can be used with minimal issues.
 
 ### 4) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system. |Origin: Conceptual design and to fulfill goal of system|
-The processing portion of the system is going to process a signal and convert it to analog to be sent to the output. To properly make use of this analog input the output subsystem must be able to take in this analog signal and after amplifying it, output it as an acoustic sound wave that will attenuate noise. With this in mind, the output system is being designed in a way that allows the amplifier to take in an analog input and properly interface with the speaker to emit and appropiate output.
+The processing portion of the system is going to process a signal and convert it to analog to be sent to the output. To properly make use of this analog input the output subsystem must be able to take in this analog signal and after amplifying it, output it as an acoustic sound wave that will attenuate noise. With this in mind, the output system is being designed in a way that allows the amplifier to take in an analog input and properly interface with the speaker to emit and appropriate output.
 
 ### 5) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB. |Origin: Constraints of room and device constraints|
-Sound pressure level(SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through [5]. Speakers with an SPL of 84 decibels or lower are considered poor and inefficent while speakers with an efficiency of 92 or higher are considered clear and loud. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropiate SPL to cover a portion of the room is a 90 dB SPL. 
+Sound pressure level (SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through [5]. Speakers with an SPL of 84 decibels or lower are considered poor and inefficient while speakers with an efficiency of 92 or higher are considered clear and loud. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropriate SPL to cover a portion of the room is a 90 dB SPL. 
 
 
 ### 6) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts |Origin: Amplifier specifications and power insurance|
-Due to the amplifer being able to supply a continuous power of 1.4 - 2.5W [1], an appropiate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are sligh fluctuations in the system.
+Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], an appropriate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are slight fluctuations in the system.
 
 ## Buildable schematic 
 
@@ -40,7 +40,7 @@ Due to the amplifer being able to supply a continuous power of 1.4 - 2.5W [1], a
 
 ### **Figure 2: Digilent pmod AMP2 schematic[2]**
 
-The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the reistors and capacitors used. This audio amplifer makes use of the IC-SSM2377 amplifier chip. 
+The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the resistors and capacitors used. This audio amplifier makes use of the IC-SSM2377 amplifier chip. 
 
 For the purpose of the buildable schematic the pmod will be condensed to a single block with just its ports.
 
@@ -48,14 +48,14 @@ For the purpose of the buildable schematic the pmod will be condensed to a singl
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
-The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain, and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the pwoer and ground cables from the speaker can be connected.
+The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the power and ground cables from the speaker can be connected.
 
 ## Analysis
 ### Explanation of Components
 
 #### pmod AMP2 - IC-SSM2377
 
-The IC-SSM2377 chip is a filterless class-D audio amplifier[1]. A class-D audio amplifier has the highest efficiency among amplifier classes with low distortion. Clear sound is imperative to noise cancellation therefore the best class of amplifier should be used. The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω. It is capable of up to a 92% efficiency ratio and has very low total harmonic distortion meaning the sound is very clear. It also has a signal-to-noise ration of 101 which means the signal will come through with little to no distortion from background noise. This chip also has pop-and-click suppression, often when the output level and voltage of an amplifier quickly changes or shuts off, audible pops can be heard from the speaker. This is the result of voltage transients, but this suppression feature in the IC chips allows for a quitter activation and deactivation of the chip when shutdown or activated. The SSM2377 also makes use of 3 level delta-sigma modulation, which helps to achieve higher transmission efficiency by transmitting the changes in samples rather than the samples themselves. 
+The IC-SSM2377 chip is a filterless class-D audio amplifier [1]. A class-D audio amplifier has the highest efficiency among amplifier classes with low distortion. Clear sound is imperative to noise cancellation therefore the best class of amplifier should be used. The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω. It is capable of up to a 92% efficiency ratio and has very low total harmonic distortion meaning the sound is very clear. It also has a signal-to-noise ration of 101 which means the signal will come through with little to no distortion from background noise. This chip also has pop-and-click suppression, often when the output level and voltage of an amplifier quickly changes or shuts off, audible pops can be heard from the speaker. This is the result of voltage transients, but this suppression feature in the IC chips allows for a quitter activation and deactivation of the chip when shutdown or activated. The SSM2377 also makes use of 3 level delta-sigma modulation, which helps to achieve higher transmission efficiency by transmitting the changes in samples rather than the samples themselves. 
 
 This chip is implemented through the pmod AMP2 from Digilent, INC. [3]. The pmod AMP2 takes the signal and amplifies it and drives it to a monophonic output using the SSM2377 chip. The pmod AMP2 already has built in resistors, capacitors, and inductors that satisfy the SSM2377 specifications for input capacitors and power supply decoupling. It has the capability to switch between a gain of 6 dB and 12 dB allowing for more adaptability and accuracy in the outputted signal. The pmod also has a shutdown pin that allows the amplifier to be shutdown with very little power draw. According to the pmod’s reference manual as long the incoming data has a sample rate of at least 16 kHz. One of the constraints of this design is for the minimum sampling rate of analog-to-digital and digital-to-analog conversion be 40 kHz, meaning there will be no problem with the data sent to the pmod AMP2.
 
@@ -67,9 +67,9 @@ A speaker with the proper characteristics must be chosen to interface properly w
 
 Due to the speakers that fall within the specified range not having built in stereo jack cables, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
 
-#### More information on componenets
+#### More information on components
 
-Instead of pulse width modulation the SSM2377 makes use of Σ-Δ modulation. Σ-Δ modulation comes with many benefits that most class-d amplifiers do not have. Σ-Δ modulation oversamples signals samples past the Nyquist rate, allowing for much higher resolution and antialiasing. Through Σ-Δ modulation there are less random and sharp peaks in harmonics, allowing for a more consistent and clear signal to flow. With many pieces of electrical equipment, they emit what is called electromagnetic interface, which are electromagnetic emissions that can cause disturbances in other devices, Σ-Δ modulation reduces the amplitude of these emissions resulting in an overall decrease in EMI emission. The last significant benefit of Σ-Δ modulation is it eliminates the need for oscillator synchronization [1][7].
+Instead of pulse width modulation the SSM2377 makes use of Σ-Δ modulation. Σ-Δ modulation comes with many benefits that most class-d amplifiers do not have. Σ-Δ modulation oversamples signals samples past the Nyquist rate, allowing for much higher resolution and antialiasing. Through Σ-Δ modulation there are less random and sharp peaks in harmonics, allowing for a more consistent and clearer signal to flow. With many pieces of electrical equipment, they emit what is called electromagnetic interface, which are electromagnetic emissions that can cause disturbances in other devices, Σ-Δ modulation reduces the amplitude of these emissions resulting in an overall decrease in EMI emission. The last significant benefit of Σ-Δ modulation is it eliminates the need for oscillator synchronization [1][7].
   
 These components will allow the small input signal from the processor to be amplified to an appropriate volume with little distortion. Then this signal can be outputted into the room, causing a destructive interference with the noise from outside and effectively attenuating noise.
 
@@ -94,6 +94,7 @@ These components will allow the small input signal from the processor to be ampl
 
 [6] P. Brant, “Speaker Impedance Matching: Ohms &amp; Speakers explained,” Speaker Impedance Matching: Ohms &amp; Speakers Explained, 21-Feb-2023. [Online]. Available: https://www.the-home-cinema-guide.com/speaker-impedance-matching.html. [Accessed: 16-Apr-2023]. 
  
-[7] “Benefits of delta-sigma analog-to-digital conversion,” NI, 04-Apr-2023. [Online]. Available: https://www.ni.com/en-us/shop/data-acquisition/benefits-of-delta-sigma-analog-to-digital-conversion.html. [Accessed: 16-Apr-2023]. 
+[7] “Benefits of delta-sigma analog-to-digital conversion,” NI, 04-Apr-2023. [Online]. Available: https://www.ni.com/en-us/shop/data-acquisition/benefits-of-delta-sigma-analog-to-digital-conversion.html. [Accessed: 16-Apr-2023].
+
 
 
