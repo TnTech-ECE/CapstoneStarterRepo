@@ -14,7 +14,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | --- | --------------------------------------------------------------------- | ----------------- |
 | 1   | The power amplifier          | Device Constraint |
 
-## Analysis
+
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
 According to the SSM2377 datasheet [1], The Pmod AMP2 is capable of driving a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 
