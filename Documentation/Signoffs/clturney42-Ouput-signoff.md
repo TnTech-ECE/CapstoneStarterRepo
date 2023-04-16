@@ -5,7 +5,7 @@
 
 ## Function of the Subsystem
 
-The goal of the output subsystem is to take the analog signal received from the processor, amplify the signal through a audio power amplifier, and drive it to the speaker so that it can be emitted. The power amplifier will need to amplify the analog signal to an appropiate level for the speaker to be able to output it into the room. The speaker and amplifier must have internal impedences that are compatible and the speaker needs to be able to have an efficiency and sound pressure level to adequately cover a certain portion of the room. 
+The goal of the output subsystem is to take the analog signal received from the processor, amplify the signal through a audio power amplifier, and drive it to the speaker so that it can be emitted. The power amplifier will need to amplify the analog signal to an appropiate level for the speaker to be able to output it into the room. The speaker and amplifier must have internal impedances that are compatible and the speaker needs to be able to have an efficiency and sound pressure level to adequately cover a certain portion of the room. 
 
 
 ## Constraints
@@ -44,6 +44,13 @@ The above schematic is taken directly from digilents pmod AMP2 product page. Thi
 
 For the purpose of the buildable schematic the pmod will be condensed to a single block with just its ports.
 
+Screen Shot 2023-04-16 at 4.56.03 PM<img width="678" alt="image" src="https://user-images.githubusercontent.com/123997954/232344786-31dc2d4d-c3bf-4c9f-93e2-5f7757014fa8.png">
+
+### **Figure: pmodAMP2 connected to speaker with appropriate specifications**
+
+
+The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain, and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the pwoer and ground cables from the speaker can be connected.
+
 ## Analysis
 ### Explanation of Components
 
@@ -55,7 +62,7 @@ This chip is implemented through the pmod AMP2 from Digilent, INC. The pmod AMP2
 
 #### Output Speaker
 
-A speaker with the proper characteristics must be chosen to interface properly with the audio amplifier. The pmod AMP2 can supply up to 2.5 watts of power to the speaker, so it’s ideal for the speaker to have a maximum power rating of 2 watts to ensure that the amplifier is able to properly supply the speaker, even in the case that the amplifier power output fluctuates. As outlined in the constraints, the speaker should also be able to output at a minimum frequency range of 100Hz-17Khz to account for the range that the human ear is capable of hearing. To account for the size of the room and need to disperse audio over a relatively wide range, the speaker must have a sufficient sound pressure level(SPL) to adequately cover a portion of the room. It is unclear what SPL should be used without having measured the ambient sound pressure of the room. So, it is important to know the range of values in which the speaker must be able to operate.
+A speaker with the proper characteristics must be chosen to interface properly with the audio amplifier. The pmod AMP2 can supply up to 2.5 watts of power to the speaker, so it’s ideal for the speaker to have a maximum power rating of 2 watts to ensure that the amplifier is able to properly supply the speaker, even in the case that the amplifier power output fluctuates. As outlined in the constraints, the speaker should also be able to output at a minimum frequency range of 100Hz-17Khz to account for the range that the human ear is capable of hearing. To account for the size of the room and need to disperse audio over a relatively wide range, the speaker must have a sufficient sound pressure level (SPL) to adequately cover a portion of the room. Due to the amplifier being able to drive a load impedance of 4-8Ω, a speaker must be chosen that has an input impedance of 4Ω or greater. It is unclear what SPL should be used without having measured the ambient sound pressure of the room. So, it is important to know the range of values in which the speaker must be able to operate.
 
 
 
