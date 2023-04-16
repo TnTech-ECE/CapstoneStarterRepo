@@ -70,14 +70,16 @@ Due to the speakers that fall within the specified range not having built in ste
 #### More information on componenets
 
 Instead of pulse width modulation the SSM2377 makes use of Σ-Δ modulation. Σ-Δ modulation comes with many benefits that most class-d amplifiers do not have. Σ-Δ modulation oversamples signals samples past the Nyquist rate, allowing for much higher resolution and antialiasing. Through Σ-Δ modulation there are less random and sharp peaks in harmonics, allowing for a more consistent and clear signal to flow. With many pieces of electrical equipment, they emit what is called electromagnetic interface, which are electromagnetic emissions that can cause disturbances in other devices, Σ-Δ modulation reduces the amplitude of these emissions resulting in an overall decrease in EMI emission. The last significant benefit of Σ-Δ modulation is it eliminates the need for oscillator synchronization [1][7].
+  
+These components will allow the small input signal from the processor to be amplified to an appropriate volume with little distortion. Then this signal can be outputted into the room, causing a destructive interference with the noise from outside and effectively attenuating noise.
 
 
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
 | Pmod AMP2: Audio Amplifier   | 1              | $9.99        | $9.99     |
-| Speaker Selection | ?     | $1.20-$6.10  |?   |
-
+| Speaker Selection | 1     | $1.20-$6.10  | $1.20-$6.10  |
+|3.5mm male plug to bare wire| 1| $3.59 | $3.59|
 ## References
 
 [1] Analog Devices, "Filterless, High Efficiency, Mono 2.5 W Class-D Audio Amplifier" SSM2377 datasheet, 2011, https://www.analog.com/media/en/technical-documentation/data-sheets/SSM2377.pdf (accessed April 15th, 2023).
