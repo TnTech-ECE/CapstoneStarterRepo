@@ -27,6 +27,8 @@ When it comes to speaker, there is a built in input impedence that the device ha
 
 ### 4) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system. |Origin: Conceptual design and to fulfill goal of system|
 
+### 5) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB.
+
 
 
 
