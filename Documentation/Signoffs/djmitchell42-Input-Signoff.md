@@ -19,6 +19,8 @@ For the processing system to properly analyze the output signal from the input s
 
 ![image](https://user-images.githubusercontent.com/123108478/232346714-6ca250ec-df65-4506-99bc-fc4f5bf4eb51.png)
 
+The buildable schematic above utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The attack time is the time it takes for the AGC to reduce the gain after the gain exceeds the set gain. THe release time is the time it takes for the gain to fall to normal levels after the output signal has gone below the threshold level and the hold time is done [1]. 
+
 
 
 
