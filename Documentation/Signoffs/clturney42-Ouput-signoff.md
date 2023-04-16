@@ -58,7 +58,7 @@ The digital output is then converted back to an analog stereo signal. Both chann
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| ADSP-BF706-EZMINI | 1        | $88.31         | $88.31      |
+| Pmod AMP2: Audio Amplifier | 1        | $9.99        | $9.99     |
 
 ## References
 
