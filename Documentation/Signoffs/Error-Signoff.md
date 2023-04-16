@@ -25,6 +25,7 @@ Include math of frequency modulation here
 | DEVICE                                       | Quantity | Price Per Unit | Total Price |
 |----------------------------------------------|----------|----------------|-------------|
 | TSA5000 - Bluetooth 5.0 Audio Transmitter[2] | 1        | $21.95         | $21.95      |
+| XS3868 Bluetooth [5]| 1|x |x |
 | Simple Microphone [4] | 1 | $8.99 | 8.99|
 
 ## References
@@ -36,6 +37,7 @@ Include math of frequency modulation here
 
 [4] https://www.amazon.com/Phone-Microphone-Headphone-Jack-Detachable/dp/B07SNSY64C/ref=sr_1_2?crid=2MBJ9LDPPDAEA&keywords=microphone+jack&qid=1681674869&sprefix=microphone+jack%2Caps%2C90&sr=8-2
 
+[5] https://www.amazon.com/Bluetooth-Backplane-Adapter-OVC3860-Voltage/dp/B09W367VDC
 2 and 3 are options for the transmitter
 ### Ignore
 OPA1692—SoundPlus™ Low-Power, Low-Noise, High-Performance Dual Bipolar-Input Audio Op Amp
