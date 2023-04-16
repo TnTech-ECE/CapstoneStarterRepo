@@ -12,13 +12,9 @@ Bluetooth is commonly used to wirelessly transmit signals. These kinds of transm
 Using an electret microphone will allow the microphone to work without power, but the transmitter requires power to operate at the lengths the main device will be operating at. The main processor requires an error signal to properly calculate its outputs, so without an error signal, the main device cannot function properly.
 
 ## Buildable Schematic
-<img src="https://user-images.githubusercontent.com/123997954/229912784-1174c224-1c0f-4fb9-8a78-3f503ecb81d3.png" width="60%" height="60%">
 
-![alt text](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega42-Error-Signoff/Documentation/Images/Error/OVC3868_Pins.jpg?raw=true)
 
-<img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="Alt text" title="Optional title">
-
-<img src="/path/to/img.jpg" alt="Alt text" title="Optional title">
+<img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="OVC3868 Pinout" width="60%" height="60%" title ="test">
 
 ## Analysis
 
