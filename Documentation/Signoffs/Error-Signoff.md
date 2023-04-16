@@ -18,10 +18,11 @@ Using an electret microphone will allow the microphone to work without power, bu
 This implementation of the error unit will use a XS3868 / OVC3860 device to transmit the captured analog signals. This device is a low powered sound processor that can communicate with other Bluetooth devices [5]. It can also communicate with a wirelessly connected module with reprogrammable configurations [6].
 
 <img src="/Documentation/Images/Error/XS3868-WIring-Guide.jpg" alt="CS3868 Wiring Guide" width="60%" height="60%">
-#### Figure 1. Pinout of the OVC3860
+*Figure 1. Pinout of the OVC3860*
 
 <img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="OVC3868 Pinout" width="60%" height="60%">
-#### Figure 2. Wiring diagram of the OVC 3860
+
+*Figure 2. Wiring diagram of the OVC 3860*
 
 The purpose of this design is to provide a discrete method of transmitting information. This wiring diagram shown in Figure 2 shows one method of connecting this device, though many of the shown connections would be uncessary. The only required connections would be the audio pins (16-19) and power (29, 31). Communicating with the device would require connections of the rx and rt (43, 44) pins.  
 ## Analysis
