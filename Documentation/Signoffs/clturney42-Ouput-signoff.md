@@ -25,7 +25,8 @@ The frequency range that the human ear can hear is generally in the range of 20H
 ### 3) The speaker shall have a minimum input impedence 4Ω |Origin: audio amplifier specifications|
 When it comes to speaker, there is a built in input impedence that the device has. The lower the impedence the higher the current draw since there is less resistance. This also means the lower the impedence the less voltage that is required. The audio amplifier used in this design in specified to be able to drive a 4-8Ω load. If a amplifier tries to drive a speaker with a impedence that is lower than what is rated to be capable of, there is a high chance that the amplifier will overheat.[ref] Therefore, the speaker that will be used will have a minimum input impedence of 4Ω. This allows for a wider range of speakers and amplifiers to be used and ensures that a safe design choice is made, since speakers with imoedences above the rated amplifier impedence can be used with minimal issues.
 
-### 4) System shall have a primary output speaker that generates acoustic sounds based on its input from the system. |
+### 4) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system. |Origin: Conceptual design and to fulfill goal of system|
+
 
 
 
