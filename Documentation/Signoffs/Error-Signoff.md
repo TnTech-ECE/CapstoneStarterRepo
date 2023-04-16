@@ -14,7 +14,10 @@ Using an electret microphone will allow the microphone to work without power, bu
 ## Buildable Schematic
 
 
-<img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="OVC3868 Pinout" width="60%" height="60%" title ="test">
+<img src="/Documentation/Images/Error/OVC3868_Pins.jpg" alt="OVC3868 Pinout" width="60%" height="60%">
+
+<img src="/Documentation/Images/Error/XS3868-WIring-Guide.jpg" alt="CS3868 Wiring Guide" width="60%" height="60%">
+
 
 ## Analysis
 
