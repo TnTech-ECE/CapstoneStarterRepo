@@ -23,6 +23,11 @@ The buildable schematic above utilizes the pins on the Adafruit Technologies AGC
 
 # Analysis
 
+#### Component Details
+The overall Adafruit Technologies AGC Electret Microphone Amplifier is broken into two main subsystems, the electret microphone and the pre-amplifier.
+
+##### CMA-4544PF-W
+
 
 
 
