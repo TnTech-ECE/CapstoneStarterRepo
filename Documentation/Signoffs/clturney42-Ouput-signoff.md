@@ -1,6 +1,7 @@
 # Processing Subsystem
 
 <img width="570" alt="Screen Shot 2023-04-13 at 9 01 43 AM" src="https://user-images.githubusercontent.com/123997954/231783367-d7562533-fe29-4052-abbc-71808ca306b7.png">
+
 #### **Figure 1: Output subsystem**
 
 
@@ -39,7 +40,7 @@ Sound pressure level(SPL) is characterized as the difference between the pressur
 
 <img width="820" alt="Screen Shot 2023-04-15 at 4 09 37 PM" src="https://user-images.githubusercontent.com/123997954/232253257-362a0e5e-6b52-43da-aee9-0ffa3ed7d06a.png">
 
-### **Figure: Digilent pmod AMP2 schematic[2]**
+### **Figure 2: Digilent pmod AMP2 schematic[2]**
 
 The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the reistors and capacitors used. This audio amplifer makes use of the IC-SSM2377 amplifier chip. 
 
@@ -47,7 +48,7 @@ For the purpose of the buildable schematic the pmod will be condensed to a singl
 
 Screen Shot 2023-04-16 at 4.56.03 PM<img width="678" alt="image" src="https://user-images.githubusercontent.com/123997954/232344786-31dc2d4d-c3bf-4c9f-93e2-5f7757014fa8.png">
 
-### **Figure: pmodAMP2 connected to speaker with appropriate specifications**
+### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
 
 The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain, and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the pwoer and ground cables from the speaker can be connected.
