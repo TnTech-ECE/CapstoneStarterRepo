@@ -12,19 +12,29 @@ Bluetooth is commonly used to wirelessly transmit signals. These kinds of transm
 Using an electret microphone will allow the microphone to work without power, but the transmitter requires power to operate at the lengths the main device will be operating at. The main processor requires an error signal to properly calculate its outputs, so without an error signal, the main device cannot function properly.
 
 ## Buildable Schematic
-OPA1692—SoundPlus™ Low-Power, Low-Noise, High-Performance Dual Bipolar-Input Audio Op Amp
-https://www.ti.com/lit/ds/symlink/opa1692.pdf?ts=1681613780693&ref_url=https%253A%252F%252Fwww.ti.com%252Fsolution%252Fprofessional-microphones-wireless-systems%253Fvariantid%253D34929%2526subsystemid%253D18462
 
-
-LMX2694-EP
-found here: https://www.ti.com/rf-microwave/rf-plls-synthesizers/products.html
-https://www.ti.com/lit/ds/symlink/lmx2694-ep.pdf?ts=1681614207711&ref_url=https%253A%252F%252Fwww.ti.com%252Frf-microwave%252Frf-plls-synthesizers%252Fproducts.html
 
 Or simply, a cheap but full audio adaptor
 https://www.instructables.com/BluFi-Portable-Bluetooth-Audio-Adapter/
-## Analysis
 
+This looks to be a working audio transmitter
+https://www.tinyosshop.com/index.php?route=product/product&path=158&product_id=1090
+## Analysis
+Include math of frequency modulation here
 ## BOM
+| DEVICE                                       | Quantity | Price Per Unit | Total Price |
+|----------------------------------------------|----------|----------------|-------------|
+| TSA5000 - Bluetooth 5.0 Audio Transmitter[2] | 1        | $21.95         | $21.95      |
 
 ## References
 [1] “Operation of Wireless Microphones.” Www.fcc.gov, 15 Oct. 2019, www.fcc.gov/consumers/guides/operation-wireless-microphones. Accessed 16 Apr. 2023.
+[2] https://www.tinyosshop.com/index.php?route=product/product&path=158&product_id=1090
+[3] https://tinkersphere.com/audio/3639-bluetooth-audio-transmitter-receiver.html
+
+2 and 3 are options for the transmitter
+### Ignore
+OPA1692—SoundPlus™ Low-Power, Low-Noise, High-Performance Dual Bipolar-Input Audio Op Amp
+https://www.ti.com/lit/ds/symlink/opa1692.pdf?ts=1681613780693&ref_url=https%253A%252F%252Fwww.ti.com%252Fsolution%252Fprofessional-microphones-wireless-systems%253Fvariantid%253D34929%2526subsystemid%253D18462
+LMX2694-EP
+found here: https://www.ti.com/rf-microwave/rf-plls-synthesizers/products.html
+https://www.ti.com/lit/ds/symlink/lmx2694-ep.pdf?ts=1681614207711&ref_url=https%253A%252F%252Fwww.ti.com%252Frf-microwave%252Frf-plls-synthesizers%252Fproducts.html
