@@ -1,8 +1,7 @@
 # Processing Subsystem
 
 <img width="570" alt="Screen Shot 2023-04-13 at 9 01 43 AM" src="https://user-images.githubusercontent.com/123997954/231783367-d7562533-fe29-4052-abbc-71808ca306b7.png">
-
-#### **Figure1: Output subsystem**
+#### **Figure 1: Output subsystem**
 
 
 ## Function of the Subsystem
