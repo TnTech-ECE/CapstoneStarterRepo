@@ -1,7 +1,7 @@
 # Processing Subsystem
 
 <p align="center">
-<img width="879" alt="Screen Shot 2023-04-16 at 6 07 12 PM" src="https://user-images.githubusercontent.com/123997954/232348323-4028940f-bf9e-4eba-a5ad-005d11bdde7d.png">
+<img width="1018" alt="Screen Shot 2023-04-16 at 6 12 58 PM" src="https://user-images.githubusercontent.com/123997954/232348587-a962e40f-7dd1-43ec-834e-d62ea83feeec.png">
 <p>
   
 #### **Figure 1: Output subsystem**
