@@ -67,7 +67,9 @@ A speaker with the proper characteristics must be chosen to interface properly w
 
 Due to the speakers that fall within the specified range not having built in stereo jack cables, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
 
+#### More information on componenets
 
+Instead of pulse width modulation the SSM2377 makes use of Σ-Δ modulation. Σ-Δ modulation comes with many benefits that most class-d amplifiers do not have. Σ-Δ modulation oversamples signals samples past the Nyquist rate, allowing for much higher resolution and antialiasing. Through Σ-Δ modulation there are less random and sharp peaks in harmonics, allowing for a more consistent and clear signal to flow. With many pieces of electrical equipment, they emit what is called electromagnetic interface, which are electromagnetic emissions that can cause disturbances in other devices, Σ-Δ modulation reduces the amplitude of these emissions resulting in an overall decrease in EMI emission. The last significant benefit of Σ-Δ modulation is it eliminates the need for oscillator synchronization [1][7].
 
 
 ## BOM
@@ -89,4 +91,7 @@ Due to the speakers that fall within the specified range not having built in ste
 [5] K. Koehler, “Understanding sound pressure level (SPL) and the decibel scale,” Pro Tool Reviews, 09-Sep-2021. [Online]. Available: https://www.protoolreviews.com/understanding-sound-pressure-level-spl-decibel-scale-db/. [Accessed: 16-Apr-2023]. 
 
 [6] P. Brant, “Speaker Impedance Matching: Ohms &amp; Speakers explained,” Speaker Impedance Matching: Ohms &amp; Speakers Explained, 21-Feb-2023. [Online]. Available: https://www.the-home-cinema-guide.com/speaker-impedance-matching.html. [Accessed: 16-Apr-2023]. 
+ 
+[7] “Benefits of delta-sigma analog-to-digital conversion,” NI, 04-Apr-2023. [Online]. Available: https://www.ni.com/en-us/shop/data-acquisition/benefits-of-delta-sigma-analog-to-digital-conversion.html. [Accessed: 16-Apr-2023]. 
+
 
