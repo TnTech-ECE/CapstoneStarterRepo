@@ -12,7 +12,8 @@ Bluetooth is commonly used to wirelessly transmit signals. These kinds of transm
 Using an electret microphone will allow the microphone to work without power, but the transmitter requires power to operate at the lengths the main device will be operating at. The main processor requires an error signal to properly calculate its outputs, so without an error signal, the main device cannot function properly.
 
 ## Buildable Schematic
-
+<img src="https://user-images.githubusercontent.com/123997954/229912784-1174c224-1c0f-4fb9-8a78-3f503ecb81d3.png" width="60%" height="60%">
+![Image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega42-Error-Signoff/Documentation/Images/Error/OVC3868_Pins.jpg?raw=true)
 ## Analysis
 
 Include math of frequency modulation here
@@ -22,6 +23,7 @@ Include math of frequency modulation here
 |----------------------------------------------|----------|----------------|-------------|
 | OVC3860 Bluetooth Transmitter [2] [3] | 1 | $7.55 | $7.55 | 
 | Simple Microphone [4] | 1 | $8.99 | 8.99|
+
 References 2 and 3 are options for the transmitter. 3 Shows a simplified version while 2 has the chip uncased.
 
 ## References
