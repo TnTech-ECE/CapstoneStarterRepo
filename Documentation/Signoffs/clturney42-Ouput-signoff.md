@@ -28,6 +28,7 @@ When it comes to speaker, there is a built in input impedence that the device ha
 ### 4) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system. |Origin: Conceptual design and to fulfill goal of system|
 
 ### 5) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB.
+Sound pressure level(SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through. Speakers with an SPL of 84 decibels or lower are considered poor and inefficent while speakers with an efficiency of 92 or higher are considered clear and loud. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropiate SPL to cover a portion of the room is a 90 dB SPL.
 
 
 
