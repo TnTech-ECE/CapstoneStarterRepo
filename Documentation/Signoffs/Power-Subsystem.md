@@ -12,6 +12,7 @@ This subsystem is responsible for powering all necessary devices that are presen
 | Powering the Jetson Nano | The Jetson Nano requires a power supply of 5 V and maximum of 4.4 A continuous via a 2.1 mm DC barrel jack. The Jetson Nano has a maximum voltage rating of 5.5 V and a maximum current rating of 5 A | This constraint originates from the computing subsystem required for data processing and to operate the on-board sensors. The specifications come from the Jetson Nano datasheets [2][3] |
 
 ## Buildable Schematic
+![Power_Subsystem_Schematic](https://user-images.githubusercontent.com/123699820/232390707-38ce0e9c-4d03-48a6-b87e-5cde5ba63efa.png)
 
 ## Analysis
 - The system must operate at full functionality for 15 to 60 minutes. The NP-F750 7.4 V 5600 mAh is estimated to power the Jetson Nano with a 4 A draw for approximatley one and a half hour which overshoots our constraint in a good way because the 15 to 60 minute run-time comes from Darpa and their testing simulations for the challenge, so it is better that our system operate for a longer duration. The sensors will use the power connections on the Jetson. The power consumption will have to be tested as the load is increased on the Jetson. Also, the team expects efficiency losses with the coupling of the battery and the buck converter/regulator.
