@@ -36,8 +36,8 @@ The audio captured from a microphone will be inputted into the device. From ther
 ## BOM
 | DEVICE                                       | Quantity | Price Per Unit | Total Price |
 |----------------------------------------------|----------|----------------|-------------|
-| OVC3860 Bluetooth Transmitter [2] [3] | 1 | $7.55 | $7.55 | 
-| Simple Microphone [4] | 1 | $8.99 | 8.99|
+| OVC3860 Bluetooth Transmitter [2] [3]        | 1        | $7.55          | $7.55       |
+| Simple Microphone [4]                        | 1        | $8.99          | 8.99|       |
 
 References 2 and 3 are options for the transmitter. 3 Shows a simplified version while 2 has the chip uncased.
 
@@ -53,16 +53,3 @@ References 2 and 3 are options for the transmitter. 3 Shows a simplified version
 [5] https://content.instructables.com/FVN/SC1H/IX0PX2PK/FVNSC1HIX0PX2PK.pdf
 
 [6] https://content.instructables.com/F0N/J517/IX0PX1I4/F0NJ517IX0PX1I4.pdf
-
-### Ignore
-OPA1692—SoundPlus™ Low-Power, Low-Noise, High-Performance Dual Bipolar-Input Audio Op Amp
-https://www.ti.com/lit/ds/symlink/opa1692.pdf?ts=1681613780693&ref_url=https%253A%252F%252Fwww.ti.com%252Fsolution%252Fprofessional-microphones-wireless-systems%253Fvariantid%253D34929%2526subsystemid%253D18462
-
-LMX2694-EP
-found here: https://www.ti.com/rf-microwave/rf-plls-synthesizers/products.html
-https://www.ti.com/lit/ds/symlink/lmx2694-ep.pdf?ts=1681614207711&ref_url=https%253A%252F%252Fwww.ti.com%252Frf-microwave%252Frf-plls-synthesizers%252Fproducts.html
-
-
-[2] https://www.tinyosshop.com/index.php?route=product/product&path=158&product_id=1090
-
-[3] https://tinkersphere.com/audio/3639-bluetooth-audio-transmitter-receiver.html
