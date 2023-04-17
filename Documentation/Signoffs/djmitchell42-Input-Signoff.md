@@ -31,9 +31,11 @@ The CMA-4544PF-W is the electret microphone used in the overall microphone ampli
 
 ###### MAX9814 (Microphone Amplifier chip)
 The MAX9814 microphone amplifier is a cheap, high grade microphone amplifier which features automatic gain control (AGC) and a low-noise microphone bias.
-The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is around 60 dB which means the output signal has a low noise value. The amplifier has three preset gains which are controlled by the user. The maximum gain preset (60 dB) is the default value and requires no connections. The second highest preset gain, (50 dB) is set by connecting the gain pin to ground. The lowest preset (40 dB) is set by connecting the gain pin to VDD. The advantage of utilizing an amplifier with automatic gain control is the advantage of clipping.
+The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is around 60 dB which means the output signal has a low noise value. The amplifier has three preset gains which are controlled by the user. The maximum gain preset (60 dB) is the default value and requires no connections. The second highest preset gain, (50 dB) is set by connecting the gain pin to ground. The lowest preset (40 dB) is set by connecting the gain pin to VDD. The advantage of utilizing an amplifier with automatic gain control is the advantage of minimal to no clipping occuring on the output signal and not having to readjust the gain consistently.
 
 # References
+
+
 
 
 
