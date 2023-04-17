@@ -1,59 +1,115 @@
-# Heartbeat/Respiratory Subsystem 
+## Heartbeat/Respiratory Subsystem ##
 
-## Subsystem Function
+**Subsystem Function:**
 
-The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an algorithm that will output specific heart rate and respiratory rates and send them to be further analized.
+The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an amplifier/filter and then be converted to a digital signal that is sent to a computing system to be put through a processing algorithm,
 
-## Specs and Constraints Table			
-
-| Description | Constraint | Source |
-|-------------|------------|--------|
-| Heartbeat analysis | Must sense frequencies from 0.45 Hz to 2.92 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
-| Respiratory sensor | Must sense frequencies from 0.13 Hz to 0.42 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
-| Heartbeat detection | Must sense frequencies from 0.45 Hz to 2.92 Hz | From Conceptual Design, from Heartbeat/Respiratory System section |
-| Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
-| Weight | When combined with other subsystems as well as reference drone, must weigh below 20 lbs in total | From DARPA constraints |
-| Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
-
-## Buildable Schematic
-<img width="645" alt="Heartbeat_Respiratory_Diagram_new" src="https://user-images.githubusercontent.com/123419455/231278499-d7205942-5ca0-4afa-a70c-6371a5994ff6.png">
-Figure 1: Pictured above is the Buildable Wiring Schematic
-
-<img width="624" alt="Jetson Nano Module" src="https://user-images.githubusercontent.com/123419455/231278530-c31598c8-3fec-422d-8ff8-a1e563d86ed8.png">
-Figure 2: Pictured above is the Jetson Nano Module that the MR60BHA1 is connected to
-
-<img width="445" alt="Image of MR60BHA1" src="https://user-images.githubusercontent.com/123419455/231278580-e9f1b73f-ed2f-4a88-8443-1d1be2cb46f2.png">
-Figure 3: Pictured above is an image of the MR60BHA1
-
-## Analysis
-
-The radar that will be used to accomplish this subsystems function is the Speed MR60BHA1 60GHz mmWave Module. This radar sensor was built for the task of vital detection with the ability to measure heart in the range of 60-100 bpm and respiratory rate of up to 25 times per minute. As specified by the product description the typical accuracy of the breath rate is 90% and the accuracy of the heart rate is 95%. The sensor also allows for secondary development using UART communication protocol. It adheres to constraints as follows.
-
-MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW must be placed at a maximum distance of 2 meters away from the person’s body in order for the detection of a presence of a heartbeat and respiratory rate as shown in the datasheet [2].
-
-MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW wave emission of 10 dBm found in the powerpoint, which is safe for human tissue and also complies with the safety of the radar specified by DARPA [3].
-
-For the MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW, the specific weight of the component is not specified in the datasheet, but the size of the component is specified. The dimensions of the component are 30 x 35 mm, so it will be assumed that the component is light in weight due to its small size [4]. This conforms with the weight limit set by DARPA.
-
-Here is a link to a video showing the radar being simulated and tested for accuracy on a stationary individual:
-[https://youtu.be/J1JDgFs_4iw](https://youtu.be/J1JDgFs_4iw) 
-
-This link was found on the website referenced in source [2].
-
-## BOM
+**Specs and Constraints** 			
 
 
+<table>
+  <tr>
+   <td>Description
+   </td>
+   <td>Constraint
+   </td>
+   <td>Source of Constraint
+   </td>
+  </tr>
+  <tr>
+   <td>Heartbeat analysis
+   </td>
+   <td>Must sense frequencies from 0.45 Hz to 2.92 Hz
+   </td>
+   <td>From Conceptual Design, from Heartbeat/Respiratory System section
+   </td>
+  </tr>
+  <tr>
+   <td>Respiratory sensor
+   </td>
+   <td>Must sense frequencies from 0.13 Hz to 0.50 Hz
+   </td>
+   <td>From Conceptual Design, from Heartbeat/Respiratory System section
+   </td>
+  </tr>
+  <tr>
+   <td>Distance
+   </td>
+   <td>Must detect and measure heartbeat and breath rate from at least 1 meter away
+   </td>
+   <td>From DARPA constraints
+   </td>
+  </tr>
+  <tr>
+   <td>Weight
+   </td>
+   <td>The drone specfiied in conceptual design had a max load of 2.7 kg. Seeing as 4 subsystems will be attached to the drone. The max weight must not exceed 675g.
+   </td>
+   <td>From DARPA constraints/ Conceptual design
+   </td>
+  </tr>
+  <tr>
+   <td>Safety
+   </td>
+   <td>Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe.
+   </td>
+   <td>From World Health Organization (WHO)
+   </td>
+  </tr>
+</table>
 
-*  MR60BHA1 60GHz mmWave Module - Respiratory Heartbeat Detection | FMCW - $45.00
 
-## Sources 
+**Wiring Schematics**
+
+
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](images/image1.png "image_tooltip")
+
+
+Figure1. Wire Diagram for the total subsystem
+
+
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](images/image2.png "image_tooltip")
+
+
+Figure 2. Circuit schematic for active pass band amplifier
+
+**Analysis:**
+
+The amplifier/filter circuit is designed to have a passband frequency range of 0.13 Hz and 3.183 Hz as stated by [2}. This range encompasses the respiratory frequencies of 0.13 Hz and 0.50 Hz as well as the heartrate frequencies of 0.45 Hz and 2.92 Hz. This allows for high frequency noise to be taken out and the correct range of data to be converted to a digital signal and further processed by the main computing system
+
+As stated by the NJR4262J datasheet states the typical radiated power to be 16 dBm or 40 mW. This allows for the sensor to function well over the 1 meter limit set by the constraint above. The exact valuation depends on the specific environemnt the radar will be functioning in, but as a comparison a radar with a 20 dBm radiated power (which happens to be the NJR4262J’s max power range) can reach 1 km range. 
+
+Once again as stated by the datasheets the NJR4262J weighs a max 7g, the USB-6008 weighs 84 g with connectors, and the two circuits are approximately 5g each. This brings the approx total to 101g which is well below the limit set by the weight constraint. This will allow some weight to be transferred to the more heavy subsystems such as the computing system.
+
+WHO sets the power density safety limit at 1000 W/m^2 for radars over 10 GHz. With the  NJR4262J being a 24 GHz radar this would mean its power density must be under this value.  The datasheet sets the max radiated power of the radar at 100 mW, the unit is also 25 X 25 X 7.3 mm dimensions. This would put the power density at 160 W/m^2 .which is below the safety limit presents and confirms to the final constraint listed above.
+
+  
+
+**BOM:**
+
+
+
+*  NJR4262 New Japan Radio Co, 24 GHz Doppler Sesnor Module - $34.07
+* USB-6008 National Instruments DAQ Device - $123.45
+* 33uF Capacitors X 4 - From Lab Kit
+* 40k resistors X2 - From Lab Kit
+* 1k resistors X2 - From Lab Kit
+* Op-Amp X2 - From lab Kit
+
+Sources: 
 
 [1] “Radiation: Radar,” _World Health Organization_. [Online]. Available: https://www.who.int/news-room/questions-and-answers/item/radiation-radar#:~:text=Exposure%20to%20RF%20fields%20above,dangerous%20amounts%20of%20radio%20frequencies%3F. [Accessed: 28-Mar-2023]. 
 
-[2] Anonymous, “MR60BHA1 60GHz mmWave module - Respiratory Heartbeat detection: FMCW: Sync sense: Privacy protect,” _60GHz mmWave Radar Module - Respiratory Heartbeat Detection | FMCW | Sync Sense | Privacy Protect - Seeed Studio_, 07-Dec-2022. [Online]. Available: https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html. [Accessed: 04-Apr-2023]. 
+[2] Y. Iwata, H. T. Thanh, G. Sun, and K. Ishibashi, “High accuracy heartbeat detection from CW-Doppler radar using singular value decomposition and matched filter,” _Sensors (Basel, Switzerland)_, 21-May-2021. [Online]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8196719/. [Accessed: 17-Apr-2023]. 
 
-[3] Seeed Studio, SEEED MMWAVE RADAR SENSOR, Powerpoint Slides, https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx
+[3] “K-band Doppler Sensor Module - Mouser Electronics.” [Online]. Available: https://www.mouser.com/datasheet/2/294/NJR4262_rev00-02-1710760.pdf. [Accessed: 17-Apr-2023]. 
 
-[4] Anonymous, “MR60BHA1 60GHz mmWave module - Respiratory Heartbeat detection: FMCW: Sync sense: Privacy protect,” _60GHz mmWave Radar Module - Respiratory Heartbeat Detection | FMCW | Sync Sense | Privacy Protect - Seeed Studio_, 07-Dec-2022. [Online]. Available: https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html. [Accessed: 04-Apr-2023]. 
-
-[5] “60GHz mmwave module - respiratory heartbeat detection sensor user ...” [Online]. Available: https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60BHA1_user_manual-V1.9.pdf. [Accessed: 04-Apr-2023]. 
+[4] “Product documentation,” _NI_. [Online]. Available: https://www.ni.com/docs/en-US/bundle/usb-6008-specs/page/specs.html. [Accessed: 17-Apr-2023]. 
