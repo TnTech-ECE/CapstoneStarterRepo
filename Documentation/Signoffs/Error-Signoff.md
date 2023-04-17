@@ -2,7 +2,7 @@ Reference link: https://www.ti.com/solution/professional-microphones-wireless-sy
 
 
 # Error Subsystem
-
+<img src="/Documentation/Images/Error/High_Level.png" alt="High Level Design">
 ## Function of the Subsystem
 The goal of this subsystem is to input the acoustic audio from the room, amplify the audio to a workable signal, modulate the signal to a radio frequency, and broadcast the signal to the Bluetooth receiver subsystem.
 ## Constraints
