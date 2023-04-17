@@ -34,7 +34,7 @@ For the processing system to properly analyze the output signal from the input s
   #### Figure 4: Planned connections utilized from pins on Adafruit AGC Electret Microphone Amplifier-MAX9814
   
 
-The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor [1]. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
+The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor [5]. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
 
 # Analysis
 
@@ -57,6 +57,8 @@ The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is
 [3] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects, 05-Apr-2020. [Online]. Available: https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023]. 
 
 [4] Maxim Integrated, “Available microphone amplifier with AGC and low-noise microphone bias.” [Online]. Available: https://www.digchip.com/datasheets/download_datasheet.php?id=8775171&part-number=MAX9814. [Accessed: 16-Apr-2023]. 
+
+[5] L. Ada, “Adafruit AGC Electret microphone amplifier - MAX9814,” Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/wiring-and-test. [Accessed: 16-Apr-2023]. 
 
 
 
