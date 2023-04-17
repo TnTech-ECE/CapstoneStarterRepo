@@ -50,6 +50,8 @@ The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is
 
 # References
 
+[1] L. Ada, “Adafruit AGC Electret microphone amplifier - MAX9814,” Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814. [Accessed: 16-Apr-2023].
+
 
 
 
