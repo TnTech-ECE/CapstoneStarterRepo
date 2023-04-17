@@ -22,19 +22,19 @@ For the processing system to properly analyze the output signal from the input s
   
 ![image](https://user-images.githubusercontent.com/123108478/232359889-b2b7f047-32e9-4aba-99f2-36e5ba85748f.png)
    
-  #### Figure 2: Photo of AGC Electret Microphone Amplifier
+  #### Figure 2: Photo of Adafruit AGC Electret Microphone Amplifier-MAX9814
 
 ![image](https://user-images.githubusercontent.com/123108478/232359445-cb8b72b6-c50f-4567-9de9-7850d93c130d.png)
 
-  #### Figure 3: Schematic of AGC Electret Microphone Amplifier
+  #### Figure 3: Schematic of Adafruit AGC Electret Microphone Amplifier-MAX9814
   
 
 ![image](https://user-images.githubusercontent.com/123108478/232346714-6ca250ec-df65-4506-99bc-fc4f5bf4eb51.png)
 
-  #### Figure 4: Planned connections utilized from pins on AGC Electret Microphone Amplifier
+  #### Figure 4: Planned connections utilized from pins on Adafruit AGC Electret Microphone Amplifier-MAX9814
   
 
-The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
+The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor [1]. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
 
 # Analysis
 
@@ -42,7 +42,7 @@ The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologi
 The overall Adafruit Technologies AGC Electret Microphone Amplifier is broken into two main components, the electret microphone and the pre-amplifier.
 
 ##### CMA-4544PF-W (Electret Microphone)
-The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 V dc to 10 V dc. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application. 
+The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 V dc to 10 V dc. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application [2].
 
 ##### MAX9814 (Microphone Amplifier chip)
 The MAX9814 microphone amplifier from Maxim Integrated [4], is a cheap, high grade microphone amplifier which features automatic gain control (AGC) and a low-noise microphone bias.
