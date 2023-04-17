@@ -63,20 +63,19 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![image](https://user-images.githubusercontent.com/79685126/232392017-0a4a7bd3-628c-4b52-a798-83140ca588d0.png)
 
 
-![alt_text](images/image1.png "image_tooltip")
 
 
 Figure1. Wire Diagram for the total subsystem
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![image](https://user-images.githubusercontent.com/79685126/232392095-e65df046-e09a-4af8-b261-0b63a7cdc06c.png)
 
 
-![alt_text](images/image2.png "image_tooltip")
+
 
 
 Figure 2. Circuit schematic for active pass band amplifier
