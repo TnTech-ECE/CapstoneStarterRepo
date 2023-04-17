@@ -9,11 +9,11 @@ The goal of the input subsystem is to accurately take in the noise input from th
 
 #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [Origin: Input subsystem functionality requirement]
 
-The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc.
+The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[3]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc[2].
 
 #### 2.) The input microphone shall be able to measure input frequencies from 100 Hz to 17 kHz. [Origin: Device Constraints and Human Biology]
 
-The frequencies a human can hear are in the range of 20 Hz – 20 kHz. Most humans, however, cannot hear 20 kHz; therefore, a more appropriate constraint is 100 Hz to 17 kHz. This covers most human hearing. The electret microphone CMA-4544PF-W from CUI Inc. exceeds these expectations by providing the ideal frequency range of 20 Hz – 20 kHz.
+The frequencies a human can hear are in the range of 20 Hz – 20 kHz. Most humans, however, cannot hear 20 kHz; therefore, a more appropriate constraint is 100 Hz to 17 kHz. This covers most human hearing. The electret microphone CMA-4544PF-W from CUI Inc [2]. exceeds these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [2].
 #### 3.) The output signal should not experience large clipping. [Origin: Device Constraints]
 
 For the processing system to properly analyze the output signal from the input subsystem, there must be minimal clipping in the output signal. The Automatic gain control functionality in the amplifier utilized in the input subsystem fixes this issue. The amplifier used is the MAX9814 amplifier from maxim integrated. The output voltage is preset to a certain value based on the gain, whenever the system experiences a gain that is larger than the preset value, the AGC in the MAX9814 will then reduce the gain back to the preset value in an appropriate amount of time to prevent excessive clipping.
@@ -34,7 +34,7 @@ For the processing system to properly analyze the output signal from the input s
   #### Figure 4: Planned connections utilized from pins on AGC Electret Microphone Amplifier
   
 
-The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
+The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
 
 # Analysis
 
@@ -50,7 +50,11 @@ The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is
 
 # References
 
-[1] L. Ada, “Adafruit AGC Electret microphone amplifier - MAX9814,” Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814. [Accessed: 16-Apr-2023].
+[1] L. Ada, “Adafruit AGC Electret microphone amplifier - MAX9814,” Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814. [Accessed: 16-Apr-2023]. 
+
+[2] Alldatasheet.com, “CMA-4544PF-W Datasheet(PDF) - CUI Inc.,” ALLDATASHEET.COM - Electronic Parts Datasheet Search. [Online]. Available: https://www.alldatasheet.com/datasheet-pdf/pdf/238630/CUI/CMA-4544PF-W.html. [Accessed: 16-Apr-2023]. 
+
+[3] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects, 05-Apr-2020. [Online]. Available: https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023]. 
 
 
 
