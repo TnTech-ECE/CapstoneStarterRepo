@@ -19,17 +19,22 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz. Most huma
 For the processing system to properly analyze the output signal from the input subsystem, there must be minimal clipping in the output signal. The Automatic gain control functionality in the amplifier utilized in the input subsystem fixes this issue. The amplifier used is the MAX9814 amplifier from maxim integrated. The output voltage is preset to a certain value based on the gain, whenever the system experiences a gain that is larger than the preset value, the AGC in the MAX9814 will then reduce the gain back to the preset value in an appropriate amount of time to prevent excessive clipping.
 
 # Buildable Schematic
+  
+![image](https://user-images.githubusercontent.com/123108478/232359889-b2b7f047-32e9-4aba-99f2-36e5ba85748f.png)
+   
+  #### Figure 2: Photo of AGC Electret Microphone Amplifier
+
 ![image](https://user-images.githubusercontent.com/123108478/232359445-cb8b72b6-c50f-4567-9de9-7850d93c130d.png)
 
-  #### Figure 2: Schematic of AGC Electret Microphone Amplifier
+  #### Figure 3: Schematic of AGC Electret Microphone Amplifier
   
 
 ![image](https://user-images.githubusercontent.com/123108478/232346714-6ca250ec-df65-4506-99bc-fc4f5bf4eb51.png)
 
-  #### Figure 3: Planned connections utilized from pins on AGC Electret Microphone Amplifier
+  #### Figure 4: Planned connections utilized from pins on AGC Electret Microphone Amplifier
   
 
-The buildable schematic above utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
+The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
 
 # Analysis
 
