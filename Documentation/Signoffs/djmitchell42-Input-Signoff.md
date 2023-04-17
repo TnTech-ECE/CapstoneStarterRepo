@@ -26,8 +26,14 @@ The buildable schematic above utilizes the pins on the Adafruit Technologies AGC
 #### Component Details
 The overall Adafruit Technologies AGC Electret Microphone Amplifier is broken into two main components, the electret microphone and the pre-amplifier.
 
-##### CMA-4544PF-W
-The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 V dc to 10 V dc 
+##### CMA-4544PF-W (Electret Microphone)
+The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 V dc to 10 V dc. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application. 
+
+###### MAX9814 (Microphone Amplifier chip)
+The MAX9814 microphone amplifier is a cheap, high grade microphone amplifier which features automatic gain control (AGC) and a low-noise microphone bias.
+
+
+# References
 
 
 
