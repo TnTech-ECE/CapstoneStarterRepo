@@ -16,6 +16,11 @@ The goal is to build a compelling and interesting presentation which includes th
 8. The budget
 9. Demonstration (video or live demonstration of your project)
 
+Teams should include some information throughout their presentation that allows the audience to understand the design process as it was followed by the team. 
+
+Teams should include some information about how broader considerations relating to public health, safety, and welfare were considered. 
+
+Teams should include some information about how broader considerations relating to global, cultural, social, environmental, and economic factors were considered.
 
 ### Creativity
 
