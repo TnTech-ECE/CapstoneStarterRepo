@@ -27,6 +27,7 @@ The buildable schematic above utilizes the pins on the Adafruit Technologies AGC
 The overall Adafruit Technologies AGC Electret Microphone Amplifier is broken into two main components, the electret microphone and the pre-amplifier.
 
 ##### CMA-4544PF-W
+The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 V dc to 10 V dc 
 
 
 
