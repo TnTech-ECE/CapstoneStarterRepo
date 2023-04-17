@@ -34,7 +34,7 @@ For the processing system to properly analyze the output signal from the input s
   #### Figure 4: Planned connections utilized from pins on Adafruit AGC Electret Microphone Amplifier-MAX9814
   
 
-The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor [5]. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart.
+The buildable schematic in Figure 4 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the processing subsystem and decoupled through a 1 uF to 100 uF capacitor. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5V DC signal, to allow it to be easily powered by a conventional wall-wart [5].
 
 # Analysis
 
