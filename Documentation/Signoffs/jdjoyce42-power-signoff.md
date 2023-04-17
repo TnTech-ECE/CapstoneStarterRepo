@@ -21,7 +21,9 @@ Standard IEC 60950-1 deals with wired and battery powered devices below 600 V. T
 
 ## Buildable schematic 
 <img width="499" alt="Screen Shot 2023-04-16 at 6 13 06 PM" src="https://user-images.githubusercontent.com/123600399/232348604-822c1af6-c6a6-4e7a-9731-5389d5561697.png">
+
 ### **Figure 1: Full-Wave Bridge Rectifier Transformer**
+
 The above figure is a visual representaion of a general Full-wave bridge rectifier. This is essentially what is inside devices such as wall warts and is also what is built on breadboards to conver AC voltage to DC voltage.
 
 
