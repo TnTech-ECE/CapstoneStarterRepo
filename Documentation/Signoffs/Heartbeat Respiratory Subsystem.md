@@ -7,56 +7,13 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 ## Specs and Constraints			
 
 
-<table>
-  <tr>
-   <td>Description
-   </td>
-   <td>Constraint
-   </td>
-   <td>Source of Constraint
-   </td>
-  </tr>
-  <tr>
-   <td>Heartbeat analysis
-   </td>
-   <td>Must sense frequencies from 0.45 Hz to 2.92 Hz
-   </td>
-   <td>From Conceptual Design, from Heartbeat/Respiratory System section
-   </td>
-  </tr>
-  <tr>
-   <td>Respiratory sensor
-   </td>
-   <td>Must sense frequencies from 0.13 Hz to 0.50 Hz
-   </td>
-   <td>From Conceptual Design, from Heartbeat/Respiratory System section
-   </td>
-  </tr>
-  <tr>
-   <td>Distance
-   </td>
-   <td>Must detect and measure heartbeat and breath rate from at least 1 meter away
-   </td>
-   <td>From DARPA constraints
-   </td>
-  </tr>
-  <tr>
-   <td>Weight
-   </td>
-   <td>The drone specfiied in conceptual design had a max load of 2.7 kg. Seeing as 4 subsystems will be attached to the drone. The max weight must not exceed 675g.
-   </td>
-   <td>From DARPA constraints/ Conceptual design
-   </td>
-  </tr>
-  <tr>
-   <td>Safety
-   </td>
-   <td>Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe.
-   </td>
-   <td>From World Health Organization (WHO)
-   </td>
-  </tr>
-</table>
+| Description | Constraint | Source of Constraint |
+|-------------|------------|----------------------|
+| Heartbeat analysis | Must sense Beats per minute from 27 to 200 bpm (or frequencies from 0.45 Hz to 3.33 Hz) | From Conceptual Design, from Heartbeat/Respiratory System section |
+| Respiratory sensor | Must sense breaths per minute from 7.8 to 30 bpm (or frequencies from 0.13 Hz to 0.50 Hz) | From Conceptual Design, from Heartbeat/Respiratory System section |
+| Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
+| Weight | Entire system must weigh less than 6 pounds, this subsystem should weight 1.5 lbs or less | From DARPA constraints/ Conceptual design |
+| Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
 
 
 ## Wiring Schematics
