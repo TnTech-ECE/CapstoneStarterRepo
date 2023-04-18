@@ -1,10 +1,10 @@
 ## Heartbeat/Respiratory Subsystem ##
 
-**Subsystem Function:**
+# Subsystem Function
 
 The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an amplifier/filter and then be converted to a digital signal that is sent to a computing system to be put through a processing algorithm,
 
-**Specs and Constraints** 			
+# Specs and Constraints			
 
 
 <table>
@@ -59,7 +59,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 </table>
 
 
-**Wiring Schematics**
+# Wiring Schematics
 
 
 
@@ -80,7 +80,7 @@ Figure1. Wire Diagram for the total subsystem
 
 Figure 2. Circuit schematic for active pass band amplifier
 
-**Analysis:**
+# Analysis
 
 The amplifier/filter circuit is designed to have a passband frequency range of 0.13 Hz and 3.183 Hz as stated by [2}. This range encompasses the respiratory frequencies of 0.13 Hz and 0.50 Hz as well as the heartrate frequencies of 0.45 Hz and 2.92 Hz. This allows for high frequency noise to be taken out and the correct range of data to be converted to a digital signal and further processed by the main computing system
 
@@ -92,7 +92,7 @@ WHO sets the power density safety limit at 1000 W/m^2 for radars over 10 GHz. Wi
 
   
 
-**BOM:**
+# BOM
 
 
 
@@ -103,7 +103,7 @@ WHO sets the power density safety limit at 1000 W/m^2 for radars over 10 GHz. Wi
 * 1k resistors X2 - From Lab Kit
 * Op-Amp X2 - From lab Kit
 
-Sources: 
+# Sources 
 
 [1] “Radiation: Radar,” _World Health Organization_. [Online]. Available: https://www.who.int/news-room/questions-and-answers/item/radiation-radar#:~:text=Exposure%20to%20RF%20fields%20above,dangerous%20amounts%20of%20radio%20frequencies%3F. [Accessed: 28-Mar-2023]. 
 
