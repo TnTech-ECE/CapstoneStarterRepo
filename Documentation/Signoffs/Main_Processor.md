@@ -19,7 +19,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 | 4   | Shall have at least 16-bit ADC and DAC                                | Design Constraint |
 | 5   | Minimum of 2 input signal sources                                     | Design Constraint |
 | 6   | Minimum of 1 output signal source                                     | Design Constraint |
-| 7   | Shall receive serial data from a general purpose computer             | Design Constraint |
+| 7   | Shall connect to and communicate FIR filter coefficients with an Arduino Uno BT | Design Constraint |
 | 8   | Shall hold at least 2 seconds of samples per input signal             | Design Constraint |
 | 9   | Shall not store audio data after processing                           | Ethics Constraint |
 
@@ -35,7 +35,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 
 <sup>6</sup> In order to cancel the targeted sound, an acoustic response has to be played through a speaker that is the anti-noise. In order to output the processed data to the speaker, at least one output port has to be included on the board.
 
-<sup>7</sup> Each window will require at least one DSP board in order to allow speedy calculations. Since the machine learning aspect of the adapting algorithm is computationally expensive, this subsystem will receive the ML processed data from a general purpose computer using a serial data interface. This will allow the DSP board to focus on the time dependent task of filtering and negating the input sound. 
+<sup>7</sup> Each window will require at least one DSP board in order to allow speedy calculations. Since the machine learning aspect of the adapting algorithm is computationally expensive, this subsystem will receive the ML processed data from an arduino uno BT. The arduino uno BT will have the function of connecting the DSP board to external peripherals through bluetooth. This will allow the DSP board to focus on the time dependent task of filtering and negating the input sound.
 
 <sup>8</sup> The system operates using digital filters. These filters require arrays of previous samples in order to account for the acoustical impulse response of the room. Approximate impulse responses of the room were simulated which showed the majority of the impulse responses power should have decayed by 2 seconds. 
 
@@ -70,6 +70,9 @@ $$192001 \text{ MACs/Coefficent Update } \times \frac{1 s}{800 \text{Million MAC
 240 microseconds is below the 1.4 milliseconds before the next sample input<sup>2</sup>. This means the system could do an update in real time. Adding extra time for memory instructions, the system could still run close to real time, and below the max delay of 1.4 ms.
 
 The digital output is then converted back to an analog stereo signal<sup>6</sup>. This allows two channels of output. Both channels of the system will be equal and will be sent to an array of speakers. 
+
+#### Arduino Connectivity
+The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an arduino uno<sup>7</sup>. The board has an input port that directly corresponds to each output port of the arduino uno. It is able to directly stack on top of the uno using arduino shield pins. 
 
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
