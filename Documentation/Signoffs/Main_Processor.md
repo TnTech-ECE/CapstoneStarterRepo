@@ -43,7 +43,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 
 ## Buildable schematic
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/66765be4ab018f4d5479051bf008aac47a2c0ad8/Documentation/Images/DSPBOARD_REV1.png)
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/DSPBOARD_REV2.png?raw=true)
 The above image is a schematic of the ADSP-BF706 EZ-KIT Mini, the schematic focuses on the most important aspects of ths device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will be connected to this device.  
 
 ## Analysis
