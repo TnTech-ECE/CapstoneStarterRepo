@@ -103,8 +103,8 @@ As an example, the specifications for the oil drill telemetry system were that t
 
 All of the specifications given are very fuzzy. It is the engineer's job to take a fuzzy specification and distill it into something more useful. For instance, through background research it can be determined that drill tips are built to be space efficient to limit the diameter of the hole that must be drilled. Therefore, the size of the drill tip storage compartment is very limited. In the target drill the compartment is 1 inch wide. 
 
-Verbal spec: fit in the tip of the target drill (fuzzy)
-Formulating the spec using background info: the system shall be less than 1 inch in diameter such that it fits in a 1 inch cylinder (measureable)
+- Verbal spec: fit in the tip of the target drill (fuzzy)
+- Formulating the spec using background info: the system shall be less than 1 inch in diameter such that it fits in a 1 inch cylinder (measureable)
 
 So, using background information, engineers are able to formulate fuzzy, verbal specifications into precise constraints.
 
