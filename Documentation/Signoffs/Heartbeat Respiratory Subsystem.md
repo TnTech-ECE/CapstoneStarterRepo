@@ -2,7 +2,7 @@
 
 ## Subsystem Function
 
-The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an amplifier/filter and then be converted to a digital signal that is sent to a computing system to be put through a processing algorithm,
+The purpose of this subsystem is to measure the presence of a heartbeat as well as measure the respiratory rate of a person contactlessly. This subsystem will be composed of a singular radar that will perform both of these actions. The measuring of a person’s presence of a heartbeat as well as respiratory rate will be done by measuring the rise and fall rates of a person’s chest to measure the respiratory rate, and the rise and fall rates of the area around the heart to measure the presence of a heartbeat. A series of signals will be sent and received to measure these changes. The raw data will be put through an amplifier/filter and then be converted to a digital signal that is sent to a computing system to be put through a processing algorithm.
 
 ## Specs and Constraints			
 
@@ -23,7 +23,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 ![image](https://user-images.githubusercontent.com/79685126/232992358-859ff652-7a55-444c-bf29-dbeecf625869.png)
 
 
-Figure1. Wire Diagram for the total subsystem
+Figure 1. Wire Diagram for the total subsystem
 
 
 
@@ -32,7 +32,7 @@ Figure1. Wire Diagram for the total subsystem
 
 Figure 2. Circuit schematic for active amplifier
 
-## Analysis:
+## Analysis
 
 1+2.) The 24 GHz doppler  radar functions by transmitting a signal described by the equation T(t) = Acos[2pift + theta(t)] This then hits the target and returns the function listed below.
 
@@ -91,7 +91,7 @@ In both cases taking out the harmonics there is a clear peak at the respective c
 
   
 
-## BOM:
+## BOM
 
 
 
@@ -101,7 +101,7 @@ In both cases taking out the harmonics there is a clear peak at the respective c
 * 60k resistors X2 - $1.08
 * Op-Amp X2 -$1.50
 
-## Sources: 
+## Sources
 
 [1] “Radiation: Radar,” _World Health Organization_. [Online]. Available: https://www.who.int/news-room/questions-and-answers/item/radiation-radar#:~:text=Exposure%20to%20RF%20fields%20above,dangerous%20amounts%20of%20radio%20frequencies%3F. [Accessed: 28-Mar-2023]. 
 
