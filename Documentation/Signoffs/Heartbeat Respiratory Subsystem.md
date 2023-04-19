@@ -20,38 +20,28 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.jpg "image_tooltip")
+![image](https://user-images.githubusercontent.com/79685126/232992358-859ff652-7a55-444c-bf29-dbeecf625869.png)
 
 
 Figure1. Wire Diagram for the total subsystem
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![image](https://user-images.githubusercontent.com/79685126/232992308-61d8f565-3325-4c40-90d2-4f7287ad85ea.png)
 
 
-![alt_text](images/image2.png "image_tooltip")
+Figure 2. Circuit schematic for active amplifier
 
+## Analysis:
 
-Figure 2. Circuit schematic for active pass band amplifier
-
-**Analysis:**
-
-1+2.) The 24 GHz doppler  radar functions by transmitting a signal described by the equation T(t) = 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-. This then hits the target and reutrns the function listed below.
+1+2.) The 24 GHz doppler  radar functions by transmitting a signal described by the equation T(t) = Acos[2pift + theta(t)] This then hits the target and returns the function listed below.
 
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image3.png "image_tooltip")
+
+![image](https://user-images.githubusercontent.com/79685126/232992094-7dc2fd16-dcfb-4401-b63e-387e4b1426c4.png)
  
 
 *Equation taken from [2]
@@ -60,30 +50,14 @@ As shown by the datasheet and the pin layout of the NJR4262J this signal is put 
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+![image](https://user-images.githubusercontent.com/79685126/232992034-c7c31b9a-62aa-4ef4-9b9b-e762a4baa5fc.png)
 
 *Equation taken from [2]
 
-In these equations the As stand for amplitude, the different 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- are for phase constants and phase shifts, the 
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- is the carrier wavelength, the d is the distance from the target, but most importantly x(t) correlates to the displacement in the human body surface [2]. This can be broken up into x(t) = xheart + xresp + everything else. To retrieve this information from the I/Q data the following equation can be used 
+In these equations the As stand for amplitude, the different thetas are for phase constants and phase shifts, the lambda  is the carrier wavelength, the d is the distance from the target, but most importantly x(t) correlates to the displacement in the human body surface [2]. This can be broken up into x(t) = xheart + xresp + everything else. To retrieve this information from the I/Q data the following equation can be used 
 
 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/79685126/232991977-168c1a8c-fe42-40b3-9996-3786fdd53ab8.png)
 
 
 *Equation taken from [2]
@@ -96,10 +70,7 @@ As a proof of concept [2] [4] took a similar approach to the algorithm above and
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/79685126/232992160-1acdf0c3-772d-450e-9b55-3a3c6de23a00.png)
 
 
          
@@ -107,11 +78,7 @@ As a proof of concept [2] [4] took a similar approach to the algorithm above and
 While [4] got data 
 
 
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
+![image](https://user-images.githubusercontent.com/79685126/232992232-1fabe42b-6ea8-4639-9490-3359897e9b34.png)
 
 
 In both cases taking out the harmonics there is a clear peak at the respective chest movement values and frequencies that match a heart beat rate and respiratory rate.
