@@ -22,6 +22,8 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 4   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                | Conceptual design and to fulfill goal of system |
 | 5   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB                                     | Constraints of room and device constraints |
 | 6   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                                     | Amplifier specifications and power insurance |
+| 7 | Output system shall extend a maximum of 0.5 meters from the wall | | Ethics and system delay |
+| 8 | Output system shall have a maximum delay of 1.4ms | Device specifications and goal of system |
 
   
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
@@ -44,6 +46,8 @@ Sound pressure level (SPL) is characterized as the difference between the pressu
 ### 6) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts |Origin: Amplifier specifications and power insurance|
 Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], an appropriate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are slight fluctuations in the system.
 
+### 7) Output system shall extend a maximum of 0.5 meters from the wall |Origin: Ethics and system delay|
+### 8) Output system shall have a maximum delay of 1.4ms |Origin: Device specifications and goal of system|
 ## Buildable schematic 
 
 <img width="678" alt="Screen Shot 2023-04-16 at 4 56 03 PM" src="https://user-images.githubusercontent.com/123997954/232345262-ff429d1d-7f6d-4138-8613-c1b8cb05caa5.png">
