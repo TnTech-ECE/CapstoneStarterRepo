@@ -50,7 +50,7 @@ The above image is a schematic of the ADSP-BF706 EZ-KIT Mini, the schematic focu
 ## Analysis
 
 #### Input
-The system will receive two analog signals through the stereo jack<sup>5</sup>. The two channels will be separated and wired to the measured input and error input subsystems [9][10]. These signals are then sent to the ADAU1761 SigmaDSP low power stereo audio codec which features 24-bit stereo audio ADC and DAC<sup>4</sup>. Each channel has it's own dedicated ADC and DAC allowing the signals to remain separate [11]. The rated signal to noise ratio is >98 dB SNR. The system also samples at 48 kHz<sup>3</sup>.The digital samples are then sent to the respective delay line. As each sample is received, the oldest sample in the processor is erased<sup>9</sup>.
+The system will receive two analog signals through the stereo jack<sup>5</sup>. The two channels will be separated and wired to the measured input and error input subsystems [9][10]. These signals are then sent to the ADAU1761 SigmaDSP low power stereo audio codec which features 24-bit stereo audio ADC and DAC<sup>4</sup>. Each channel has it's own dedicated ADC and DAC allowing the signals to remain separate [3]. The rated signal to noise ratio is >98 dB SNR. The system also samples at 48 kHz<sup>3</sup>.The digital samples are then sent to the respective delay line. As each sample is received, the oldest sample in the processor is erased<sup>9</sup>.
 
 
 
@@ -58,21 +58,18 @@ The system will receive two analog signals through the stereo jack<sup>5</sup>. 
 The system has to be powered through a USB port connection. The system can be powered from wall power through a USB charger<sup>1</sup>. USB 2.0 interfaces run off of 5 volts and have a max current draw of 500 mA, for a max power draw of 2.5 Watts. To power the device through the USB connected to the processor, the jumper J2 needs to connect the 5V pin to the 706 pin. Since the board also needs to use the USB port in order to install the designed software, the system will have to be programmed using it's One Time Programmable (OTP) memory as to allow the system to boot without being connected directly to a computer. 
 
 #### Speed and Memory
-The system has the ADSP-BF706 Blackfin processor on board. This processor has a clock speed of 400 MHz, and a multiply-accumulate (MAC) instruction per second speed of 800 million at max clock speed. The ADSP-BF706 has 64 kB usable SRAM internally plus an additional 1 MB of SRAM. The ADSP-BF706 allows both 16-bit and 32-bit MAC instructions. The filtered-X least mean squares algorithm being used requires $IJ(K+1)L+JKM+Imax(L,M+1)+K$ words of memory. I is the number of inputs signals, J is the number of output signals, and K is the number of error signals. L is the control filter length and M is the length of the estimated Plant FIR Filter being recieved from the USB interface. Allowing L and M being roughly equal, we can find the maximum size of filters we can use using the internal memory. I,J, and K will be set to 1.
 
-$$1064 \text{kB} /2 \text{Bytes} = 532000 \text{ 16-bit words } = 1(1+1) + M + M + 1 + 1 = 4 + 2 M $$
+The main processing subsystem contains the ADSP-BF706 Blackfin DSP, which has an internal clock speed of 400 MHz. The multiply-accumulate (MAC) instruction is an integral part of digital signal processing. This instruction multiplies two operands and adds the result to a a running sum. These sets of actions can be used for the convolution of two time signals. The Blackfin architecture allows 16-bit and/or 32-bit MACs to be implemented in a single clock cycle, making it an ideal hardware for digital filtering. The BF706 can perform 800 million MACs per second at default clock speed [2]. 
 
-$$ M = 265998 \text{ samples } = L $$ 
+The filtered-x LMS algorithm requires the current and previous samples for both the input and error signals. These samples are stored in arrays called delay lines. The size of these delay lines are determined by the acoustic impulse response of the room (that is the acoustical response of the room including reflections and diffusion). There are 96000 samples in 2 seconds at 48 kHz. Using 16-bit samples, this is equivalent to 187.5 kiB per delay line. 
 
-265998 samples per filter allow us to have approximately 5.54 s for our acoustic response<sup>9</sup>. The number of MAC instructions needed by the algorithm is solved by $IJK(L+M)+K$ MACs per filter update. The 2 second minimum for the impulse response equates to 96000 samples. Using L equal to M equal to our minimum needed amount of samples gets:
+An estimation of the number of MAC instructions needed per update by the filtered-x LMS algorithm can be found by the equation $IJK(L+M)+K$. I is the number of input channels, J is the number of output channels, and K is the number of error channels. In this case, all of the previous values are equal to 1. L and M are the control filter length and the length of the estimated acoustic impulse response respectively. Using an overestimation of L equal to M, the algorithm will approximately require 192001 MAC innstructions. At 800 millions MACs per second, this is equivalent to 240 microseconds of delay due to math operations.
 
-$$ 1(2 \times 96000) + 1 = 192001 \text{ MACs } $$
+A memory fetch clock cycle is 5 ns on the Blackfin. Assuming the same lengths of filters, memory fetching will cause approximately 960 microseconds of delay. This is assuming a memory fetch per filter coefficient. Implementing a circular buffer, where the write address of the incoming samples loops through the delay line, will bring the number of write instructions down to 1, one for the input sample as every other memory element will stay the same. The write delay is also 5 ns.
 
-$$192001 \text{ MACs/Coefficent Update } \times \frac{1 s}{800 \text{Million MACs}} = 240 \mu s $$
+The delay for the ADC converter is shown to be 50 nanoseconds [3]. The delay for the DAC converter is shown to be 10 nanoseconds for setup and hold.
 
-240 microseconds is below the 1.4 milliseconds before the next sample input<sup>2</sup>. This means the system could do an update in real time. Adding extra time for memory instructions, the system could still run close to real time, and below the max delay of 1.4 ms.
-
-The digital output is then converted back to an analog stereo signal<sup>6</sup>. This allows two channels of output. Both channels of the system will be equal and will be sent to an array of speakers. 
+The overestimated total delay of the system will then be 240 $\mu s$ + 960 $\mu s$ + 50 $ns$ + 10 $ns$ + 5 $ns$ = 1.2 $ms$ which is below the 1.4 ms constraint<sup>2</sup>.
 
 #### Bluetooth Connection Subsystem Connectivity {Will update when referenced Subsystem is complete}
 The Blackfin ADSP-BF70x EZ-KIT Mini is built for direct connectivity to an arduino uno or related board. The board has a corresponding through-hole for input/output port of an arduino uno or related board. It is able to directly stack on top using 0.1" header pins. This will allow the main processing subsystem to communicate via SPI with the bluetooth connection subsystem<sup>7</sup>.
@@ -88,7 +85,7 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is built for direct connectivity to an ardui
 
 [2] Analog Devices, "Blackfin+ Core Embedded Processor" Blackfin, Blackfin+, and the Blackfin logo are registered trademarks of Analog Devices, Inc. Blackfin+ Core Embedded Processor ADSP-BF700/701/702/703/704/705/706/707, February 2019.
 
-[3] Analog Devices. "SigmaDSP Stereo, Low Power, 96 kHz, 24-Bit Audio Codec with Integrated PLL" ADAU1761 Datasheet, 2009-2018.
+[3] “ADAU1761,” Datasheet and Product Info | Analog Devices, 17-Sep-2010. [Online]. Available: https://www.analog.com/en/products/adau1761.html. [Accessed: 19-Apr-2023]. 
 
 [4] “Room Impulse Response Simulation with Stochastic Ray Tracing - MATLAB & Simulink,” www.mathworks.com. https://www.mathworks.com/help/audio/ug/room-impulse-response-simulation-with-stochastic-ray-tracing.html (accessed Apr. 15, 2023).
 
@@ -103,5 +100,3 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is built for direct connectivity to an ardui
 [9] [Link to Error Subsystem {Broken Link until other signoffs are done}](/Documentation/Signoffs/)
 
 [10] [Link to Input Subsytem {Broken Link until other signoffs are done}](/Documentation/Signoffs/)
-
-[11] “ADAU1761,” Datasheet and Product Info | Analog Devices, 17-Sep-2010. [Online]. Available: https://www.analog.com/en/products/adau1761.html. [Accessed: 19-Apr-2023]. 
