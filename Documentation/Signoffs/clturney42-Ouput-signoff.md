@@ -22,7 +22,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 4   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                | Conceptual design and to fulfill goal of system |
 | 5   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB                                     | Constraints of room and device constraints |
 | 6   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                                     | Amplifier specifications and power insurance |
-| 7 | Output system shall extend a maximum of 0.5 meters from the wall | | Ethics and system delay |
+| 7 | Output system shall extend a maximum of 0.5 meters from the wall | Ethics and system delay |
 | 8 | Output system shall have a maximum delay of 1.4ms | Device specifications and goal of system |
 
   
