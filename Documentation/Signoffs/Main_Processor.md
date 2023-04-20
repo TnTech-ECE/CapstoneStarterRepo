@@ -74,8 +74,8 @@ $$192001 \text{ MACs/Coefficent Update } \times \frac{1 s}{800 \text{Million MAC
 
 The digital output is then converted back to an analog stereo signal<sup>6</sup>. This allows two channels of output. Both channels of the system will be equal and will be sent to an array of speakers. 
 
-#### Arduino Connectivity
-The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an arduino uno<sup>7</sup>. The board has an input port that directly corresponds to each output port of the arduino uno. It is able to directly stack on top of the uno using arduino shield pins. 
+#### Bluetooth Connection Subsystem Connectivity {Will update when referenced Subsystem is complete}
+The Blackfin ADSP-BF70x EZ-KIT Mini is built for direct connectivity to an arduino uno or related board. The board has a corresponding through-hole for input/output port of an arduino uno or related board. It is able to directly stack on top using 0.1" header pins. This will allow the main processing subsystem to communicate via SPI with the bluetooth connection subsystem<sup>7</sup>.
 
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
