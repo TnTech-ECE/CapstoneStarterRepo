@@ -3,11 +3,11 @@
 ## Function of the Subsystem
 
 ##### Pseudo-Code Flowchart
-<img src="https://user-images.githubusercontent.com/123997954/229912784-1174c224-1c0f-4fb9-8a78-3f503ecb81d3.png" width="60%" height="60%">
+<img src="/Documentation/Images/MainSubsystemFlow.png" width="60%" height="60%">
 
 The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system. The room will be sliced into sections of noise cancelling like the image below where the cyan represents an area of noise control..
 
-<img src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/AreaOfEffect.png" width="60%" height="60%">
+<img src="/Documentation/Images/AreaOfEffect.png" width="60%" height="60%">
 
 ## Constraints
 
@@ -43,7 +43,8 @@ The goal of this subsystem is to process the input signal, and output an appropr
 
 ## Buildable schematic
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/jmvega52-patch-1/Documentation/Images/DSPBOARD_REV2.png?raw=true)
+![image](/Documentation/Images/DSPBOARD_REV3.png)
+
 The above image is a schematic of the ADSP-BF706 EZ-KIT Mini, the schematic focuses on the most important aspects of ths device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will be connected to this device.  
 
 ## Analysis
