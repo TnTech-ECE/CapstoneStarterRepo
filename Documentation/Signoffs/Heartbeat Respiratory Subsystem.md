@@ -10,7 +10,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 | Description | Constraint | Source of Constraint |
 |-------------|------------|----------------------|
 | Heartbeat analysis | Must sense Beats per minute from 30 to 210 bpm (or frequencies from 0.5 Hz to 3.5 Hz)| From Conceptual Design, from Heartbeat/Respiratory System section[5][6]|
-| Respiratory sensor |Must sense breaths per minute from 1 to 70bpm (or frequencies from 0.017 Hz to  1.17 Hz) | From Conceptual Design, from Heartbeat/Respiratory System section analyzed from START model[7] |
+| Respiratory sensor |Must sense breaths per minute from 1 to 70bpm (or frequencies from 0.017 Hz to  1.17 Hz) | From Conceptual Design, from Heartbeat/Respiratory System section analyzed from START model |
 | Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
 | Weight | Entire system must weigh less than 6 pounds, this subsystem should weight 1.5 lbs or less | From DARPA constraints/ Conceptual design |
 | Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
@@ -44,7 +44,7 @@ Figure 4. Thermal noise analysis graph from circuit shown in figure 2
 
 ## Analysis
 
-1+2.) The 24 GHz doppler  radar functions by transmitting a signal described by the equation T(t) = Acos[2pift + theta(t)] This then hits the target and returns the function listed below.
+1+2.) The 24 GHz doppler  radar functions by transmitting a signal described by the equation T(t) = Acos[2pift + theta(t)] This then hits the target and returns the function listed below:
 
 
 
@@ -56,7 +56,7 @@ Figure 4. Thermal noise analysis graph from circuit shown in figure 2
 
 *Equation taken from [2]
 
-As shown by the datasheet and the pin layout of the NJR4262J this signal is put through a mixer to separate in-phase signal (I(t)) and the quadrature phase signal (Q(t)) as shown below
+As shown by the datasheet and the pin layout of the NJR4262J this signal is put through a mixer to separate in-phase signal (I(t)) and the quadrature phase signal (Q(t)) as shown below:
 
 
 
@@ -64,7 +64,7 @@ As shown by the datasheet and the pin layout of the NJR4262J this signal is put 
 
 *Equation taken from [2]
 
-In these equations the As stand for amplitude, the different thetas are for phase constants and phase shifts, the lambda  is the carrier wavelength, the d is the distance from the target, but most importantly x(t) correlates to the displacement in the human body surface [2]. This can be broken up into x(t) = xheart + xresp + everything else. To retrieve this information from the I/Q data the following equation can be used 
+In these equations the As stand for amplitude, the different thetas are for phase constants and phase shifts, the lambda  is the carrier wavelength, the d is the distance from the target, but most importantly x(t) correlates to the displacement in the human body surface [2]. This can be broken up into x(t) = xheart + xresp + everything else. To retrieve this information from the I/Q data the following equation can be used:
 
 
 ![image](https://user-images.githubusercontent.com/79685126/232991977-168c1a8c-fe42-40b3-9996-3786fdd53ab8.png)
@@ -76,7 +76,7 @@ With this information the line of thinking for the algorithm to retrieve the hea
 
 With the heartbeat and respiratory rate data retrieved, a matched filter can then be used to maximize the signal-to-noise ratio separating the heartbeat and respiratory peaks from the noise. Once this signal is achieved the Fast Fourier Transform can be taken (FFT) to get the magnitude and frequencies found in the signal. The chest moves between 0.2-0.5 mm due to the heart beat while between 2 - 12.6 mm due to respiratory rate. This discrepancy in displacement will help differentiate the heartbeat data versus the respiratory data. The peaks can then be retrieved matching the respective frequency range and magnitude values for chest movement matching respiratory and heart rate values listed in constraints. 
 
-As a proof of concept [2] [4] took a similar approach to the algorithm above and [2] got simulated data as follows
+As a proof of concept [2] [4] took a similar approach to the algorithm above and [2] got simulated data as follows:
 
 
 
@@ -85,7 +85,7 @@ As a proof of concept [2] [4] took a similar approach to the algorithm above and
 
          
 
-While [4] got data 
+While [4] got data:
 
 
 ![image](https://user-images.githubusercontent.com/79685126/232992232-1fabe42b-6ea8-4639-9490-3359897e9b34.png)
@@ -93,11 +93,11 @@ While [4] got data
 
 In both cases taking out the harmonics there is a clear peak at the respective chest movement values and frequencies that match a heart beat rate and respiratory rate.
 
-The above graphs show a respiratory peak at 0.2 Hz and heartbeat peak at around 1.4 Hz, these peaks do in fact fall between the range stated in the constraints, but it is also possible to achieve frequency displacement values at the 0.017 Hz and the 3.5 Hz edges. Working backwards a displacement signal to match the low and high range can be structured as a sinusoidal wave with the respective frequencies and displacement amplitudes of the heartbeat or respiratory movements, Arcos(2pift). So the lower range would be Arcos(0.1068t) and upper range Ahcos(22t). Plugging these into the x(t) equation you would get x(t) = Arcos(0.1068t) +  Ahcos(22t). Plugging into x(t) arctan equation and taking the tangent of both sides and graphing the result you get a graph like the one below. 
+The above graphs show a respiratory peak at 0.2 Hz and heartbeat peak at around 1.4 Hz, these peaks do in fact fall between the range stated in the constraints, but it is also possible to achieve frequency displacement values at the 0.017 Hz and the 3.5 Hz edges. Working backwards a displacement signal to match the low and high range can be structured as a sinusoidal wave with the respective frequencies and displacement amplitudes of the heartbeat or respiratory movements, Arcos(2pift). So the lower range would be Arcos(0.1068t) and upper range Ahcos(22t). Plugging these into the x(t) equation you would get x(t) = Arcos(0.1068t) +  Ahcos(22t). Plugging into x(t) arctan equation and taking the tangent of both sides and graphing the result you get a graph like the one below: 
 
 ![image](https://user-images.githubusercontent.com/79685126/233289253-08e63076-ad1f-45a5-8405-61afeca7cd7a.png)
 
-Figure 5 Graph of modulated signal (Amplitude vs Time)
+Figure 5. Graph of modulated signal (Amplitude vs Time)
 
 This represents a modulated signal which is exactly what would be outputted by the Q(t) divided by I(t) signals. Although the exact numbers are not used, it is clear that along with other frequencies between this range and even others outside the range will be incorporated by the modulated signal found in the O(t)/I(t) signal data that can then be demodulated and filtered to retrieve the exact values of the individuals heartbeat and respiratory rate as stated by the proposed algorithm above.
 
@@ -120,7 +120,7 @@ The rate at which a human can breathe depends on multiple factors including age,
 
 *  NJR4262 New Japan Radio Co, 24 GHz Doppler Sensor Module - $34.07
 * High Precision AD HAT Board Waveshare ADC Module - $47.99
-* 40k resistors X2 - $1,08
+* 40k resistors X2 - $1.08
 * 60k resistors X2 - $1.08
 * Op-Amp X2 -$1.50
 
