@@ -99,7 +99,7 @@ The above graphs show a respiratory peak at 0.2 Hz and heartbeat peak at around 
 
 Figure 5 Graph of modulated signal (Amplitude vs Time)
 
-This represents a modulated signal which is exactly what would be outputted by the Q(t) divided by I(t) signals. Although the exact numbers are not used, it is clear that along with other frequencies between this range and even others outside the range will be incorporated by the modulated signal found in the O(t)/I(t) signal data that can then be demodulated and filtered to retrieve the exact values of the individuals heartbeat and respiratory rate.
+This represents a modulated signal which is exactly what would be outputted by the Q(t) divided by I(t) signals. Although the exact numbers are not used, it is clear that along with other frequencies between this range and even others outside the range will be incorporated by the modulated signal found in the O(t)/I(t) signal data that can then be demodulated and filtered to retrieve the exact values of the individuals heartbeat and respiratory rate as stated by the proposed algorithm above.
 
 3.) As stated by the NJR4262J datasheet states the typical radiated power to be 16 dBm or 40 mW. This allows for the sensor to function well over the 1 meter limit set by the constraint above. The exact valuation depends on the specific environment the radar will be functioning in, but as a comparison a radar with a 20 dBm radiated power (which happens to be the NJR4262J’s max power range) can reach 1 km range. 
 
