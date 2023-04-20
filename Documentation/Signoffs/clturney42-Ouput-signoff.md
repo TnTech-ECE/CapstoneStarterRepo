@@ -36,14 +36,6 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 
 ## Buildable schematic 
 
-<img width="820" alt="Screen Shot 2023-04-15 at 4 09 37 PM" src="https://user-images.githubusercontent.com/123997954/232253257-362a0e5e-6b52-43da-aee9-0ffa3ed7d06a.png">
-
-### **Figure 2: Digilent pmod AMP2 schematic[2]**
-
-The above schematic is taken directly from digilents pmod AMP2 product page. This schematic shows the various values for the resistors and capacitors used. This audio amplifier makes use of the IC-SSM2377 amplifier chip. 
-
-For the purpose of the buildable schematic the pmod will be condensed to a single block with just its ports.
-
 <img width="678" alt="Screen Shot 2023-04-16 at 4 56 03 PM" src="https://user-images.githubusercontent.com/123997954/232345262-ff429d1d-7f6d-4138-8613-c1b8cb05caa5.png">
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
