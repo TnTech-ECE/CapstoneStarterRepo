@@ -13,7 +13,19 @@ The goal of the output subsystem is to take the analog signal received from the 
 
 
 ## Constraints
-
+  
+| No. | Constraints                                                           | Origin            |
+| --- | --------------------------------------------------------------------- | ----------------- |
+| 1   | The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.          | Device specifications |
+| 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.                   | Origin: Device constraints and human biology |
+| 3   | Shall have a sample rate of at least 40 kHz                           | Design Constraint |
+| 4   | Shall have at least 16-bit ADC and DAC                                | Design Constraint |
+| 5   | Minimum of 2 input signal sources                                     | Design Constraint |
+| 6   | Minimum of 1 output signal source                                     | Design Constraint |
+| 7   | Shall connect to and communicate FIR filter coefficients with the bluetooth connection subsystem | Design Constraint |
+| 8   | Shall hold at least 2 seconds of samples per input signal             | Design Constraint |
+| 9   | Shall not store audio data after processing                           | Ethics Constraint |
+  
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
 According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 
