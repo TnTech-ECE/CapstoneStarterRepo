@@ -100,8 +100,8 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an ardui
 
 [8] [Link to Simulation Results](/Documentation/Images/Main-Processor/Simulation-Results/)
 
-[9] [Link to Error Subsystem "Wait till they are done"](/Documentation/Signoffs/)
+[9] [Link to Error Subsystem {Broken Link until other signoffs are done}](/Documentation/Signoffs/)
 
-[10] [Link to Input Subsytem "Wait till they are done"](/Documentation/Signoffs/)
+[10] [Link to Input Subsytem {Broken Link until other signoffs are done}](/Documentation/Signoffs/)
 
 [11] “ADAU1761,” Datasheet and Product Info | Analog Devices, 17-Sep-2010. [Online]. Available: https://www.analog.com/en/products/adau1761.html. [Accessed: 19-Apr-2023]. 
