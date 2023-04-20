@@ -3,11 +3,11 @@
 ## Function of the Subsystem
 
 ##### Pseudo-Code Flowchart
-<img src="/Documentation/Images/MainSubsystemFlow.png" width="60%" height="60%">
+<img src="/Documentation/Images/Main-Processor/Conceptual/MainSubsystemFlow.png" width="60%" height="60%">
 
 The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system. The room will be sliced into sections of noise cancelling like the image below where the cyan represents an area of noise control..
 
-<img src="/Documentation/Images/AreaOfEffect.png" width="60%" height="60%">
+<img src="/Documentation/Images/Main-Processor/Conceptual/AreaOfEffect.png" width="60%" height="60%">
 
 ## Constraints
 
