@@ -5,7 +5,7 @@
 ##### Pseudo-Code Flowchart
 <img src="/Documentation/Images/Main-Processor/Conceptual/MainSubsystemFlow.png" width="60%" height="60%">
 
-The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system. The room will be sliced into sections of noise cancelling like the image below where the cyan represents an area of noise control..
+The goal of this subsystem is to process the input signal, and output an appropriate response to the ambient noise present in the room. The processing subsystem consists of an ADC converter which will take the input and convert it into digital samples which will be analyzed and processed by the adaptive filter algorithms. The output will then be converted using a DAC converter and outputted to the other parts of the system. The room will be sliced into sections of noise cancelling like the image below where the cyan represents an area of noise control. In total, there will be 2 main processing subsystems which will account for the 2 outermost windows in Brown 314. 
 
 <img src="/Documentation/Images/Main-Processor/Conceptual/AreaOfEffect.png" width="60%" height="60%">
 
@@ -80,7 +80,7 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an ardui
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| ADSP-BF706-EZMINI | 3        | $88.31         | $264.93     |
+| ADSP-BF706-EZMINI | 2        | $88.31         | $176.62     |
 
 ## References
 
