@@ -14,7 +14,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 | Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
 | Weight | Entire system must weigh less than 6 pounds, this subsystem should weight 1.5 lbs or less | From DARPA constraints/ Conceptual design |
 | Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
-| Operational Amplifier | Radar input signal amplitude  must be increased by a gain of 6 in order to match the input range of the AD HAT board ADC module | From further analysis of the radar and computing subsystems. |
+| Operational Amplifier | Radar input signal amplitude  must be increased by a gain of 6 in order to match the input range of the AD HATboard ADC module. Output voltage shall be limited to either -2.5 V to 2.5 V peak-to-peak or 0 V to 5 V peak-to-peak. Output current shall be limited to a maximum of 10 mA. | From further analysis of the radar and computing subsystems. |
 
 ## Wiring Schematics
 
