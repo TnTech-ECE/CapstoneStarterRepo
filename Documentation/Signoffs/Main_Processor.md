@@ -50,7 +50,9 @@ The above image is a schematic of the ADSP-BF706 EZ-KIT Mini, the schematic focu
 ## Analysis
 
 #### Input
-The system will receive two analog signals through the stereo jack<sup>5</sup>. These signals are then sent to the ADAU1761 SigmaDSP low power stereo audio codec which features 24-bit stereo audio ADC and DAC<sup>4</sup>. The rated signal to noise ratio is >98 dB SNR. The system also samples at 48 kHz<sup>3</sup>.The digital samples are then sent to the respective delay line. As each sample is received, the oldest sample in the processor is erased<sup>9</sup>.
+The system will receive two analog signals through the stereo jack<sup>5</sup>. The two channels will be separated and wired to the measured input and error input subsystems [9][10]. These signals are then sent to the ADAU1761 SigmaDSP low power stereo audio codec which features 24-bit stereo audio ADC and DAC<sup>4</sup>. Each channel has it's own dedicated ADC and DAC allowing the signals to remain separate [11]. The rated signal to noise ratio is >98 dB SNR. The system also samples at 48 kHz<sup>3</sup>.The digital samples are then sent to the respective delay line. As each sample is received, the oldest sample in the processor is erased<sup>9</sup>.
+
+
 
 #### Power
 The system has to be powered through a USB port connection. This will both power and send the data to the processor during boot. The system can be powered from wall power through a USB charger<sup>1</sup>. USB 2.0 interfaces run off of 5 volts and have a max current draw of 500 mA, for a max power draw of 2.5 Watts. To power the device through the USB connected to the processor, the jumper J2 needs to connect the 5V pin to the 706 pin. Since the board also needs to use the USB port in order to install the designed software, the system will have to be programmed using it's One Time Programmable (OTP) memory as to allow the system to boot without being connected directly to a computer. 
@@ -97,3 +99,9 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an ardui
 [7] S. C. Douglas, “Fast implementations of the filtered-x LMS and LMS algorithms for multichannel active noise control,” IEEE Transactions on Speech and Audio Processing, vol. 7, no. 4, pp. 454–465, 1999. 
 
 [8] [Link to Simulation Results](/Documentation/Images/Main-Processor/Simulation-Results/)
+
+[9] [Link to Error Subsystem "Wait till they are done"](/Documentation/Signoffs/)
+
+[10] [Link to Input Subsytem "Wait till they are done"](/Documentation/Signoffs/)
+
+[11] “ADAU1761,” Datasheet and Product Info | Analog Devices, 17-Sep-2010. [Online]. Available: https://www.analog.com/en/products/adau1761.html. [Accessed: 19-Apr-2023]. 
