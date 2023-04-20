@@ -37,7 +37,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 
 <sup>7</sup> Each window will require at least one DSP board in order to allow speedy calculations. Since the machine learning aspect of the adapting algorithm is computationally expensive, this subsystem will receive the ML processed data from the bluetooth connection subsystem. The bluetooth connection subsystem will have the function of connecting the DSP board to external peripherals through bluetooth. This will allow the DSP board to focus on the time dependent task of filtering and negating the input sound.
 
-<sup>8</sup> The system operates using digital filters. These filters require arrays of previous samples in order to account for the acoustical impulse response of the room. Approximate impulse responses of the room were simulated which showed the majority of the impulse responses power should have decayed by 2 seconds. 
+<sup>8</sup> The system operates using digital filters. These filters require arrays of previous samples in order to account for the acoustical impulse response of the room. Approximate impulse responses of the room were simulated which showed the majority of the impulse responses power should have decayed by 2 seconds [8]. 
 
 <sup>9</sup> In order to create a system that does not invade the privacy of the students and teachers in the room, the system will not store any sound data after it is used in processing. This will prevent the system from possibly storing private conversations that could be breached.
 
@@ -95,3 +95,5 @@ The Blackfin ADSP-BF70x EZ-KIT Mini is build for direct connectivity to an ardui
 ‌[6] [“Understanding microphone sensitivity,” Understanding Microphone Sensitivity | Analog Devices. [Online]. Available: https://www.analog.com/en/analog-dialogue/articles/understanding-microphone-sensitivity.html. [Accessed: 17-Apr-2023]. 
 
 [7] S. C. Douglas, “Fast implementations of the filtered-x LMS and LMS algorithms for multichannel active noise control,” IEEE Transactions on Speech and Audio Processing, vol. 7, no. 4, pp. 454–465, 1999. 
+
+[8] [Link to Simulation Results](/Documentation/Images/Main-Processor/Simulation-Results/)
