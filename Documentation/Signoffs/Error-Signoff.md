@@ -4,21 +4,25 @@ Reference link: https://www.ti.com/solution/professional-microphones-wireless-sy
 # Error Subsystem
 <img src="/Documentation/Images/Error/High_Level.png" alt="High Level Design">
 
-*High-Level Design*
+*Figure 1. High-Level Design*
 
 ## Function of the Subsystem
-The goal of this subsystem is to input the acoustic audio from the room, amplify the audio to a workable signal, modulate the signal to a radio frequency, and broadcast the signal to the Bluetooth receiver subsystem.
+The goal of this subsystem is to input the acoustic audio from the room, amplify the audio to a workable signal, and broadcast the signal to the main processor subsystem.
 ## Constraints
-### The transmitted signal shall operate on Bluetooth frequencies (2.4 GHz). Origin: Bluetooth subsystem requirements
-The Bluetooth subsytem is designed to accept frequencies operating at Bluetooth frequencies, so the transmission must match that.
-Bluetooth is commonly used to wirelessly transmit signals. These kinds of transmissions typically work in a point-to-point manner at a low-power cost. Also, the FCC is subject to change what frequencies wireless microphones are allowed the transmit at [1]. For these reasons, Bluetooth is ideal for long-term use. 
+| No. | Constraints                                                                 | Origin                    |
+|-----|-----------------------------------------------------------------------------|---------------------------|
+| 1   | Microphone shall be placed within the noise control area                    | Design Requirement        |
+| 2   | Microphone shall be able to measure input frequencies from 100 Hz to 17 kHz | Design Constraint         |
+| 3   | Shall output a signal's high values within  1.8 V to 3.65 V                 | Main Processor Constraint |
 
-### The transmitter must be powered with a wall outlet. Origin: Device requirements
-Using an electret microphone will allow the microphone to work without power, but the transmitter requires power to operate at the lengths the main device will be operating at. The main processor requires an error signal to properly calculate its outputs, so without an error signal, the main device cannot function properly.
+<sup>1</sup> The premise of this subsystem is to collect information of the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overal goal to make the design discrete, it can still be placed close to the speaker.
+
+<sup>2</sup> Because the goal of the device is to limit noise heard by humans, the range of 100 Hz to 17 kHz is necessary to cover the majority of human hearing that the system will operate in. 
+
+<sup>3</sup> The main processor will be using an ADC (ADAU1761 SigmaDSP) who's I/O works within 1.8 V to 3.65 V. In order to achieve these values, the pre-amp must be configured such that the highest voltage value allowable is within that range. This will allow the main processor to correctly understand the error subsystem's output.
+ microphones are allowed the transmit at [1]. For these reasons, Bluetooth is ideal for long-term use. 
 
 ## Buildable Schematic
-
-This implementation of the error unit will use a XS3868 / OVC3860 device to transmit the captured analog signals. This device is a low powered sound processor that can communicate with other Bluetooth devices [5]. It can also communicate with a wirelessly connected module with reprogrammable configurations [6].
 
 <img src="/Documentation/Images/Error/XS3868-WIring-Guide.jpg" alt="CS3868 Wiring Guide" width="60%" height="60%">
 
@@ -33,23 +37,18 @@ The purpose of this design is to provide a discrete method of transmitting infor
 
 The audio captured from a microphone will be inputted into the device. From there, it will be able to convert the information from analog to digital and transmit the information to the Bluetooth receiver. 
 
+The output threshold that activates AGC is adjustable
+through the use of an external resistive divider. Once
+the divider is set, AGC reduces the gain to match the
+output voltage to the voltage set at the TH input.
+
 ## BOM
 | DEVICE                                       | Quantity | Price Per Unit | Total Price |
 |----------------------------------------------|----------|----------------|-------------|
-| OVC3860 Bluetooth Transmitter [2] [3]        | 1        | $7.55          | $7.55       |
-| Simple Microphone [4]                        | 1        | $8.99          | 8.99|       |
+| CMA-4544PF-W Electret Microphone [1]         | 2        | $7.95          | $15.90      |
 
-References 2 and 3 are options for the transmitter. 3 Shows a simplified version while 2 has the chip uncased.
 
 ## References
-[1] “Operation of Wireless Microphones.” Www.fcc.gov, 15 Oct. 2019, www.fcc.gov/consumers/guides/operation-wireless-microphones. Accessed 16 Apr. 2023.
+[1] https://www.adafruit.com/product/1713
 
-[2] https://soldered.com/product/bluetooth-audio-module-ovc3860/
-
-[3] https://www.amazon.com/Bluetooth-Backplane-Adapter-OVC3860-Voltage/dp/B09W367VDC
-
-[4] https://www.amazon.com/Phone-Microphone-Headphone-Jack-Detachable/dp/B07SNSY64C/ref=sr_1_2?crid=2MBJ9LDPPDAEA&keywords=microphone+jack&qid=1681674869&sprefix=microphone+jack%2Caps%2C90&sr=8-2
-
-[5] https://content.instructables.com/FVN/SC1H/IX0PX2PK/FVNSC1HIX0PX2PK.pdf
-
-[6] https://content.instructables.com/F0N/J517/IX0PX1I4/F0NJ517IX0PX1I4.pdf
+[2] https://cdn-shop.adafruit.com/datasheets/MAX9814.pdf
