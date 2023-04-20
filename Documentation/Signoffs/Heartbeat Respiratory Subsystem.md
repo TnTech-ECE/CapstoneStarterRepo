@@ -27,14 +27,18 @@ Figure 1. Wire Diagram for the total subsystem
 
 
 
-![image](https://user-images.githubusercontent.com/79685126/232992308-61d8f565-3325-4c40-90d2-4f7287ad85ea.png)
+![image](https://user-images.githubusercontent.com/79685126/233289068-06772f22-8bf4-4a77-83a4-da422c036b58.png)
 
 
 Figure 2. Circuit schematic for active amplifier
 
 
+![image](https://user-images.githubusercontent.com/79685126/233289124-e88ab610-8b39-4b31-928a-7a92d553eca2.png)
+
 Figure 3. Simulation results from circuit shown in figure 2
 
+
+![image](https://user-images.githubusercontent.com/79685126/233289169-b6192618-92b9-49e3-bc13-69d04c99f68c.png)
 
 Figure 4. Thermal noise analysis graph from circuit shown in figure 2
 
@@ -91,11 +95,11 @@ In both cases taking out the harmonics there is a clear peak at the respective c
 
 The above graphs show a respiratory peak at 0.2 Hz and heartbeat peak at around 1.4 Hz, these peaks do in fact fall between the range stated in the constraints, but it is also possible to achieve frequency displacement values at the 0.017 Hz and the 3.5 Hz edges. Working backwards a displacement signal to match the low and high range can be structured as a sinusoidal wave with the respective frequencies and displacement amplitudes of the heartbeat or respiratory movements, Arcos(2pift). So the lower range would be Arcos(0.1068t) and upper range Ahcos(22t). Plugging these into the x(t) equation you would get x(t) = Arcos(0.1068t) +  Ahcos(22t). Plugging into x(t) arctan equation and taking the tangent of both sides and graphing the result you get a graph like the one below. 
 
+![image](https://user-images.githubusercontent.com/79685126/233289253-08e63076-ad1f-45a5-8405-61afeca7cd7a.png)
 
+Figure 5 Graph of modulated signal (Amplitude vs Time)
 
-Figure 5 Graph of modulated signal
-
-This represents a modulated signal which is exactly what would be outputted by the Q(t) divided by I(t) signals. Although the exact numbers are not used, it is clear that along with other frequencies between this range and even others outside the range will be incorporated by the modulated signal found in the O(t)/I(t) signal data that can then be modulated and filtered to retrieve the exact values of the individuals heartbeat and respiratory rate.
+This represents a modulated signal which is exactly what would be outputted by the Q(t) divided by I(t) signals. Although the exact numbers are not used, it is clear that along with other frequencies between this range and even others outside the range will be incorporated by the modulated signal found in the O(t)/I(t) signal data that can then be demodulated and filtered to retrieve the exact values of the individuals heartbeat and respiratory rate.
 
 3.) As stated by the NJR4262J datasheet states the typical radiated power to be 16 dBm or 40 mW. This allows for the sensor to function well over the 1 meter limit set by the constraint above. The exact valuation depends on the specific environment the radar will be functioning in, but as a comparison a radar with a 20 dBm radiated power (which happens to be the NJR4262J’s max power range) can reach 1 km range. 
 
@@ -133,3 +137,4 @@ The rate at which a human can breathe depends on multiple factors including age,
 [5]DiGiacinto, Jessica. “Normal Heart Rate: Range, When It's Dangerous, and More.” _Healthline_, Healthline Media, 7 Jan. 2022, https://www.healthline.com/health/dangerous-heart-rate#maximum-heart-rate. 
 
 [6]“Low Heart Rate: What It Is and When to Worry.” _Cleveland Clinic_, 17 Mar. 2023, https://health.clevelandclinic.org/is-a-slow-heart-rate-good-or-bad-for-you/#:~:text=Doctors%20consider%20a%20heart%20rate%20below%2060%20beats,below%2060%20even%20when%20you%E2%80%99re%20awake%20and%20active. 
+
