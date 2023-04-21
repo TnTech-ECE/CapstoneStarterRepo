@@ -26,8 +26,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 Figure 1. Wire Diagram for the total subsystem
 
 
-
-![image](https://user-images.githubusercontent.com/79685126/233289068-06772f22-8bf4-4a77-83a4-da422c036b58.png)
+![image](https://user-images.githubusercontent.com/79685126/233561981-93cf1e05-d0cd-404e-a7c9-d0cd66774b79.png)
 
 
 Figure 2. Circuit schematic for active amplifier
@@ -38,7 +37,8 @@ Figure 2. Circuit schematic for active amplifier
 Figure 3. Simulation results from circuit shown in figure 2
 
 
-![image](https://user-images.githubusercontent.com/79685126/233289169-b6192618-92b9-49e3-bc13-69d04c99f68c.png)
+![image](https://user-images.githubusercontent.com/79685126/233561945-83ee2f3c-6468-4ec2-8b62-213f93e063a3.png)
+
 
 Figure 4. Current output of circuit
 
