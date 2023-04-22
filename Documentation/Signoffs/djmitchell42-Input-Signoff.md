@@ -65,6 +65,7 @@ The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is
 [4] Maxim Integrated, “Available microphone amplifier with AGC and low-noise microphone bias.” [Online]. Available: https://www.digchip.com/datasheets/download_datasheet.php?id=8775171&part-number=MAX9814. [Accessed: 16-Apr-2023]. 
 
 [5] L. Ada, “Adafruit AGC Electret microphone amplifier - MAX9814,” Adafruit Learning System. [Online]. Available: https://learn.adafruit.com/adafruit-agc-electret-microphone-amplifier-max9814/wiring-and-test. [Accessed: 16-Apr-2023]. 
+[6] “Aluminum electrolytic capacitors UKL low leakage current - nichicon.co.jp.” [Online]. Available:      https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-ukl.pdf. [Accessed: 22-Apr-2023]. 
 
 
 
