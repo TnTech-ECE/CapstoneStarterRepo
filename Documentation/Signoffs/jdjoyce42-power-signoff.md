@@ -10,21 +10,35 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 ## Constraints
 
-### 1) Standard IEC 60950-1 deals with wired and battery powered devices below 600 V
-Standard IEC 60950-1 deals with wired and battery powered devices below 600 V. This device will make use of wall power so this standard will be followed to eliminate harm from electric shock, fire, and mechanical instability.
+| No. | Constraints                                                           | Origin            |
+| --- | --------------------------------------------------------------------- | ----------------- |
+| 1   | System shall convert wall AC Voltage to 5V DC Voltage         | Design Constraint |
+| 2   | Shall be able to supply 5V DC and 500mA of current to main processor subsystem                   | Design Constraint |
+| 3   | Shall be able to supply 5V DC and 3mA of current to Error subsystem                           | Design Constraint |
+| 4   | Shall be able to supply 5V DC and 3mA of current to Input subsystem                                 | Design Constraint |
+| 5   | Shall be able to supply 5V DC and 100mA of current to Output subsystem                                      | Design Constraint |
+| 6   | Shall meet the IEC 60950-1 Standard                                   | Design Constraint |
 
 
-### 2) OSHA standard 1910.304-30
- This provides an in depth guide for safety and regulation of wired power. Whether this be from a battery or through the wall these standards include safe regulations to follow and implement. This system will be dealing with power from a wall outlet so it is important that these standards are followed.
+<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. If this is not met it could damage something or cause it to just not work.
+
+<sup>2</sup> The main processor subsystem requires 5V DC and 500mA of current in order for it to be functional. In order for the main system be
+
+<sup>3</sup> The Error subsystem requires 5V DC and 3mA of current in order for it to be functional.This will allow the system to read errors efficiently.
+
+<sup>4</sup> The Input Subsystem requires 5V DC and 3mA of current in order for it to be functional. This will allow the system to be able to receive inputs.
+
+
+<sup>5</sup>  The Output subsystem requires 5V DC and 100mA of current in order for it to be functional. This will allow the sytem to produce a output.
+
+
+<sup>6</sup> This standard that the subsystem will follow will allow the group to procede with testing and powering the system without the harm from electric shock, fire, and mechanical instability.
+
 
 
 
 ## Buildable schematic 
-<img width="499" alt="Screen Shot 2023-04-16 at 6 13 06 PM" src="https://user-images.githubusercontent.com/123600399/232348604-822c1af6-c6a6-4e7a-9731-5389d5561697.png">
 
-### **Figure 1: Full-Wave Bridge Rectifier Transformer**
-
-The above figure is a visual representaion of a general Full-wave bridge rectifier. This is essentially what is inside devices such as wall warts and is also what is built on breadboards to conver AC voltage to DC voltage.
 
 
 
@@ -51,8 +65,7 @@ The two wires are going to the power supply rail that will be designed to supply
 
 ## References
 
-[1] Last Minute Engineers, “The full-wave bridge rectifier,” Last Minute Engineers, 15-May-2022. [Online]. Available: https://lastminuteengineers.com/the-full-wave-bridge-rectifier/. [Accessed: 16-Apr-2023].
 
-[2] Sweetwater, “Wall wart,” inSync, 10-Jun-1998. [Online]. Available: https://www.sweetwater.com/insync/wall-wart/. [Accessed: 16-Apr-2023]. 
+[1] Sweetwater, “Wall wart,” inSync, 10-Jun-1998. [Online]. Available: https://www.sweetwater.com/insync/wall-wart/. [Accessed: 16-Apr-2023]. 
 
-[3] “Wall Mount Power Supply, 100-240VAC to 5VDC @ 2.5A, tinned leads,” Sealevel, 21-Dec-2022. [Online]. Available: https://www.sealevel.com/product/5-vdc-12-5w-psu/. [Accessed: 16-Apr-2023]. 
+[2] “Wall Mount Power Supply, 100-240VAC to 5VDC @ 2.5A, tinned leads,” Sealevel, 21-Dec-2022. [Online]. Available: https://www.sealevel.com/product/5-vdc-12-5w-psu/. [Accessed: 16-Apr-2023]. 
