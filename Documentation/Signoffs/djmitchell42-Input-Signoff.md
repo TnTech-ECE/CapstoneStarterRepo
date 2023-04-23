@@ -9,8 +9,8 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
 | 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
-| 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.                   | Device constraints and human biology |
-| 3   | The speaker shall have a minimum input impedance 4Ω                           | audio amplifier specifications |
+| 2   | The input microphone shall be able to measure input frequencies from 100 Hz to 17 kHz.                 | Device constraints and human biology |
+| 3   | The output signal should not experience large clipping.                          | Device Constraints |
 | 4   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                | Conceptual design and to fulfill goal of system |
 | 5   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB                                     | Constraints of room and device constraints |
 | 6   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                                     | Amplifier specifications and power insurance |
