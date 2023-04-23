@@ -48,7 +48,7 @@ F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
 
 The 
 #### Lower Cutoff Frequency
-The lower cutoff frequency, defined by F<sup>CL</sup>, requires two equations to evaluate.
+The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
 ```math
 C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
 ```
@@ -58,7 +58,7 @@ C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
 C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
 ```
 
-R<sup>out</sup> relates to the load it will be connected to. Since R<sup>out</sup> will be going into a GPIO as an input, R<sup>out</sup> will effectively be high impedence making C<sup>out</sup> a very small value and insignificant for this circuit.
+R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
 
 20 nF gives roughly 60 Hz lower cutoff. 
 
