@@ -29,7 +29,7 @@ For the processing system to properly analyze the output signal from the input s
 
 #### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
 
-In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The VDD pin which drives the MAX9814 amplifier has a VDD range of 
+In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The VDD pin which drives the MAX9814 amplifier has a VDD range of 2.7 VDC - 5.5 VDC [4]. This will allow the input subsystem to be easily powered 
 
 # Buildable Schematic
   
