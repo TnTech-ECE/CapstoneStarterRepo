@@ -38,12 +38,17 @@ According to the manufacturors of the CMC-2742PBJ-A electret mircophone can oper
 The output threshold that activates the automatic gain control (AGC) is adjustable through the use of an external resistive divider. Once the divider is set, AGC reduces the gain to match the output voltage to the voltage set at the TH input.
 
 I'll have to do the math and formatting later, assuming this gets approved: 
+
 Upper Cut-off Frequency = 1/( 2pi*40E3*(C1,2 + 100E-12))
+
 100 pF gives 20kHz upper cutoff
 
 Lower Cut-off Frequency = Fcl
+
 Cin = 1 / (2pi * Fcl * 100E3)
+
 Cout = 1/ (2pi * Fcl * Rout)
+
 20 nF gives roughly 60 Hz lower cutoff. 
 
 ## BOM
