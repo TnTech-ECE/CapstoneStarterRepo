@@ -27,6 +27,8 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz. Most huma
 
 For the processing system to properly analyze the output signal from the input subsystem, there must be minimal clipping in the output signal. The Automatic gain control functionality in the amplifier utilized in the input subsystem fixes this issue. The amplifier used is the MAX9814 amplifier from Maxim Integrated [4]. The output voltage is preset to a certain value based on the gain, whenever the system experiences a gain that is larger than the preset value, the AGC in the MAX9814 will then reduce the gain back to the preset value in an appropriate amount of time to prevent excessive clipping [4].
 
+#### 4.) System must be powered by standard wall outlets -. [Origin: System Requirements]
+
 # Buildable Schematic
   
 
