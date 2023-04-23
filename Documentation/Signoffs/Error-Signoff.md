@@ -26,6 +26,13 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
  
 ## Analysis
 
+### Component Details
+** Table of component vbalues **
+- R<sub>pos</sub and R<sub>neg</pos>
+ - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
+- C_{in+} and C_{in-}
+ -  
+
 ### Power
 To keep the error subsystem consistently powered, it will use the power subsytem to connect to Vdd and GND. The requirements of the CMA-4544PF-W need 2.7 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 4.86 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
 
@@ -35,24 +42,20 @@ According to the manufacturors of the CMC-2742PBJ-A electret mircophone can oper
 
 
 ### Output
-The output threshold that activates the automatic gain control (AGC) is adjustable through the use of an external resistive divider. Once the divider is set, AGC reduces the gain to match the output voltage to the voltage set at the TH input.
-
-I'll have to do the math and formatting later, assuming this gets approved: 
 
 #### Higher Cutoff Frequency
 The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
 ``` math
 F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
 ```
-100 pF capacitors gives roughly 20kHz upper cutoff frequency.
+100 pF capacitors give about 19.9 kHz upper cutoff frequency.
 
-The 
 #### Lower Cutoff Frequency
 The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
 ```math
 C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
 ```
-20 nF gives roughly 80 Hz lower cutoff. 
+20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency. 
 
 ```math
 C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
