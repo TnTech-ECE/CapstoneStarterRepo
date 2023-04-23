@@ -40,9 +40,9 @@ The output threshold that activates the automatic gain control (AGC) is adjustab
 I'll have to do the math and formatting later, assuming this gets approved: 
 
 Upper Cut-off Frequency = 1/( 2pi*40E3*(C1,2 + 100E-12))
-
-$ 1/(2*π * 40*10^(3)*(C_1,2 + 100*10^(-12)))$
-
+``` math
+ 1/(2*π * 40*10^(3)*(C_1,2 + 100*10^(-12)))
+```
 100 pF gives 20kHz upper cutoff
 
 Lower Cut-off Frequency = Fcl
