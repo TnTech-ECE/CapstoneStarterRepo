@@ -59,7 +59,7 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
     ```
     -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
 - C3, Cs, Cb
-    - Specified by the manufacturors 
+    - Specified by the manufacturors.
 - C1, C2
     - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
     ```math
