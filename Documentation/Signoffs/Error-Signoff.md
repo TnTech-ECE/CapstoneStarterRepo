@@ -86,25 +86,12 @@ The typical voltage output would be found with the equation: $$20 log(x) = -42$$
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
 |------------------------------------------------------|----------|----------------|-------------|
 | CMC-2742PBJ-A Electret Microphone [1]                | 2        | $7.95          | $15.90      |
-| TS472 Pre-amp [2]                | 2        | $          | $      |
-| Capacitor                | 9        | $          | $      |
-| Resistor                 | 4        | $          | $      |
+| TS472 Pre-amp [2]                                    | 2        | $1.38          | $2.76       |
+| Capacitor                                            | 7        | $0.1           | $0.7        |
+| Resistor                                             | 4        | $0.06          | $0.24       |
 
 
 ## References
 [1] https://www.digikey.com/en/products/detail/cui-devices/CMC-2742PBJ-A/1869986 (Microphone)
 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
-
-```math
-C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
-```
-
-
-```math
-C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
-```
-
-``` math
-F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
-```
