@@ -44,9 +44,9 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ### Component Details
 ** Table of component values **
 - R<sub>pos</sub and R<sub>neg</pos>
- - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
+    - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
- -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
+    -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
 ```math
 C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
 ```
@@ -56,9 +56,9 @@ C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
 C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
 ```
 - C3, Cs, Cb
- - Specified by the manufacturors 
+    - Specified by the manufacturors 
 - C1, C2
- - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
+    - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
 ``` math
 F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
 ```
