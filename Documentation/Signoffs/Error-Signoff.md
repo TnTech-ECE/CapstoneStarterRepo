@@ -48,9 +48,13 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
-    ```math C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ ```
+    ```math 
+    C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
+    ```
     -  20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency, which stays within constraint 2. 
-    ```math  C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}```
+    ```math  
+    C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
+    ```
     -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
 - C3, Cs, Cb
     - Specified by the manufacturors 
