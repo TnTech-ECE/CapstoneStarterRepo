@@ -27,16 +27,16 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 | Component | Value | Unit |
 |-----------|-------|------|
-| R_{pos}   | 50    | kΩ   |
-| R_{neg}   | 50    | kΩ   |
-| C_{in+}   | 20    | nF   |
-| C_{in-}   | 20    | nF   |
+| R<sub>pos</sub>   | 50    | kΩ   |
+| R<sub>neg</sub>   | 50    | kΩ   |
+| C<sub>in+</sub>   | 20    | nF   |
+| C<subin-</sub>   | 20    | nF   |
 | C3        | 1     | µF   |
 | Cs        | 1     | µF   |
 | C1        | 100   | pF   |
 | C2        | 100   | pF   |
-| C_{out+}  | ~     |      |
-| C_{out-}  | ~     |      |
+| C<sub>out+</sub>  | ~     |      |
+| C<sub>out-</sub>  | ~     |      |
 | Cb        | 1     | µF   |
 
 ## Analysis
@@ -45,7 +45,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ** Table of component vbalues **
 - R<sub>pos</sub and R<sub>neg</pos>
  - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
-- C_{in+} and C_{in-}
+- C<sub>in+</sub> and C>sub>in-</sub>
  -  
 
 ### Power
