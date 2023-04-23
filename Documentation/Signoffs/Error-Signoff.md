@@ -42,8 +42,8 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Analysis
 
 ### Component Details
-** Table of component values **
-- R<sub>pos</sub and R<sub>neg</pos>
+
+- R<sub>pos</sub> and R<sub>neg</pos>
     - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
