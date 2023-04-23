@@ -21,6 +21,8 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 
 ## Buildable Schematic
+The image below is a buildable schematic using the TS472 Preamplifier and CMC-2742PBJ-A electret microphone.
+
 <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="75%" height="75%">
 
 
@@ -37,6 +39,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 | C<sub>out+</sub>  | ~     |      |
 | C<sub>out-</sub>  | ~     |      |
 | Cb                | 1     | µF   |
+| Vcc               | 5     | V    |
 
 ## Analysis
 
@@ -63,7 +66,8 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
     F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
     ```
     - 100 pF capacitors give about 19.9 kHz upper cutoff frequency, which stays within constraint 2. 
-
+- Vcc
+    - Within typical operating conditions defined by the manufacturor.     
 
 
 
