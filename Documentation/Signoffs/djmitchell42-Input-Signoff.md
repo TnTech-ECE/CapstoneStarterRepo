@@ -8,7 +8,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 # Constraints
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   | The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.          | Device specifications |
+| 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
 | 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.                   | Device constraints and human biology |
 | 3   | The speaker shall have a minimum input impedance 4Ω                           | audio amplifier specifications |
 | 4   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                | Conceptual design and to fulfill goal of system |
@@ -18,7 +18,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 8 | Output system shall have a maximum delay of 1.4ms | Device specifications and goal of system |
 
 
-#### 1.)	Input microphone shall measure acoustic vibrations through the medium. [Origin: Input subsystem functionality requirement]
+ 	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
 The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[3]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc. [2].
 
