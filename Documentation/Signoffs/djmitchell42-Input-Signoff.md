@@ -34,7 +34,8 @@ In order to make powering the system less difficult, the team has decided using 
 # Buildable Schematic
   
 
-![image](https://user-images.githubusercontent.com/123108478/232346714-6ca250ec-df65-4506-99bc-fc4f5bf4eb51.png)
+![image](https://user-images.githubusercontent.com/123108478/233858831-4fdc520f-1512-4737-b4ba-90fc9c4a7494.png)
+
 
   #### Figure 2: Planned connections utilized from pins on Adafruit AGC Electret Microphone Amplifier-MAX9814
   
