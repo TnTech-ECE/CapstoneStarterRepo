@@ -25,28 +25,46 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Buildable Schematic
 
 
-| Component | Value | Unit |
-|-----------|-------|------|
+| Component         | Value | Unit |
+|-------------------|-------|------|
 | R<sub>pos</sub>   | 50    | kΩ   |
 | R<sub>neg</sub>   | 50    | kΩ   |
 | C<sub>in+</sub>   | 20    | nF   |
-| C<subin-</sub>   | 20    | nF   |
-| C3        | 1     | µF   |
-| Cs        | 1     | µF   |
-| C1        | 100   | pF   |
-| C2        | 100   | pF   |
+| C<sub>in-</sub>   | 20    | nF   |
+| C3                | 1     | µF   |
+| Cs                | 1     | µF   |
+| C1                | 100   | pF   |
+| C2                | 100   | pF   |
 | C<sub>out+</sub>  | ~     |      |
 | C<sub>out-</sub>  | ~     |      |
-| Cb        | 1     | µF   |
+| Cb                | 1     | µF   |
 
 ## Analysis
 
 ### Component Details
-** Table of component vbalues **
+** Table of component values **
 - R<sub>pos</sub and R<sub>neg</pos>
  - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
-- C<sub>in+</sub> and C>sub>in-</sub>
- -  
+- C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
+ -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
+```math
+C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
+```
+20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency. 
+
+```math
+C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
+```
+- C3, Cs, Cb
+ - Specified by the manufacturors 
+- C1, C2
+ - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
+``` math
+F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
+```
+100 pF capacitors give about 19.9 kHz upper cutoff frequency. 
+R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
+
 
 ### Power
 To keep the error subsystem consistently powered, it will use the power subsytem to connect to Vdd and GND. The requirements of the CMA-4544PF-W need 2.7 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 4.86 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
@@ -59,24 +77,9 @@ According to the manufacturors of the CMC-2742PBJ-A electret mircophone can oper
 ### Output
 
 #### Higher Cutoff Frequency
-The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
-``` math
-F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
-```
-100 pF capacitors give about 19.9 kHz upper cutoff frequency.
+
 
 #### Lower Cutoff Frequency
-The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
-```math
-C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
-```
-20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency. 
-
-```math
-C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
-```
-
-R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
 
 20 nF gives roughly 60 Hz lower cutoff. 
 
