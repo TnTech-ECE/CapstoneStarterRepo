@@ -6,6 +6,17 @@
 
 The goal of the input subsystem is to accurately take in the noise input from the wall and transmit it to the processing subsystem.
 # Constraints
+| No. | Constraints                                                           | Origin            |
+| --- | --------------------------------------------------------------------- | ----------------- |
+| 1   | The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.          | Device specifications |
+| 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.                   | Device constraints and human biology |
+| 3   | The speaker shall have a minimum input impedance 4Ω                           | audio amplifier specifications |
+| 4   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                | Conceptual design and to fulfill goal of system |
+| 5   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB                                     | Constraints of room and device constraints |
+| 6   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                                     | Amplifier specifications and power insurance |
+| 7 | Output system shall extend a maximum of 0.5 meters from the wall | Ethics and system delay |
+| 8 | Output system shall have a maximum delay of 1.4ms | Device specifications and goal of system |
+
 
 #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [Origin: Input subsystem functionality requirement]
 
