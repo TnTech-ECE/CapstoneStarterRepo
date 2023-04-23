@@ -39,17 +39,26 @@ The output threshold that activates the automatic gain control (AGC) is adjustab
 
 I'll have to do the math and formatting later, assuming this gets approved: 
 
-Upper Cut-off Frequency = 1/( 2pi*40E3*(C1,2 + 100E-12))
+#### Higher Cutoff Frequency
+The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
 ``` math
- 1/(2*π * 40*10^(3)*(C_1,2 + 100*10^(-12)))
+F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
 ```
-100 pF gives 20kHz upper cutoff
+100 pF capacitors gives roughly 20kHz upper cutoff frequency.
 
-Lower Cut-off Frequency = Fcl
+The 
+#### Lower Cutoff Frequency
+The lower cutoff frequency, defined by F<sup>CL</sup>, requires two equations to evaluate.
+```math
+C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
+```
+20 nF gives roughly 80 Hz lower cutoff. 
 
-Cin = 1 / (2pi * Fcl * 100E3)
+```math
+C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
+```
 
-Cout = 1/ (2pi * Fcl * Rout)
+R<sup>out</sup> relates to the load it will be connected to. Since R<sup>out</sup> will be going into a GPIO as an input, R<sup>out</sup> will effectively be high impedence making C<sup>out</sup> a very small value and insignificant for this circuit.
 
 20 nF gives roughly 60 Hz lower cutoff. 
 
