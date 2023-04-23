@@ -73,7 +73,7 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
 
 
 ### Power
-To keep the error subsystem consistently powered, it will use the power subsytem to connect to Vdd and GND. The requirements of the CMA-4544PF-W need 2.7 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 4.86 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
+To keep the error subsystem consistently powered, it will use the power subsytem to connect to Vdd and GND. The requirements of the TS472 needs 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
 
 ### Input
 The system will receive a single input from the omnidirectional electret microphone and amplify it to with a variable gain of 0-40 dB in 10 db increments.
