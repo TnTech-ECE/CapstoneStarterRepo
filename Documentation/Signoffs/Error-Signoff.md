@@ -45,25 +45,22 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 - R<sub>pos</sub> and R<sub>neg</pos>
     - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
+
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
-```math
-C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
-```
-20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency. 
-
-```math
-C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
-```
+    -  $C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$
+    -  20 nF capacitor for C<sub>in</sub> give roughly 79.6 Hz lower cutoff frequency, which stays within constraint 2. 
+    -  $C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}$
+    -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
 - C3, Cs, Cb
     - Specified by the manufacturors 
 - C1, C2
     - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
-``` math
-F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
-```
-100 pF capacitors give about 19.9 kHz upper cutoff frequency. 
-R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedence making C<sub>out</sub> a very small value and insignificant for this circuit.
+    - $F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}$
+    - 100 pF capacitors give about 19.9 kHz upper cutoff frequency, which stays within constraint 2. 
+
+
+
 
 
 ### Power
@@ -96,3 +93,16 @@ According to the manufacturors of the CMC-2742PBJ-A electret mircophone can oper
 [1] https://www.digikey.com/en/products/detail/cui-devices/CMC-2742PBJ-A/1869986 (Microphone)
 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
+
+```math
+C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}
+```
+
+
+```math
+C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
+```
+
+``` math
+F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
+```
