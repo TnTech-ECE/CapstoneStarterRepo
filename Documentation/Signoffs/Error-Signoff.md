@@ -23,7 +23,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 <sup>3</sup> The main processor will be using an ADC (ADAU1761 SigmaDSP) who's I/O works within 1.8 V to 3.65 V. In order to achieve these values, the pre-amp must be configured such that the highest voltage value allowable is within that range. This will allow the main processor to correctly understand the error subsystem's output.
 
 ## Buildable Schematic
-<img src="Active-Noise-Control-With-Wall-Transmission-Detection/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="60%" height="60%">
+<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="60%" height="60%">
 
 
 | Component         | Value | Unit |
