@@ -14,13 +14,11 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 |-----|-----------------------------------------------------------------------------|---------------------------|
 | 1   | Microphone shall be placed within the noise control area                    | Design Requirement        |
 | 2   | Microphone shall be able to measure input frequencies from 100 Hz to 17 kHz | Design Constraint         |
-| 3   | Shall output a signal's high values within  1.8 V to 3.65 V                 | Main Processor Constraint |
 
 <sup>1</sup> The premise of this subsystem is to collect information of the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overal goal to make the design discrete, it can still be placed close to the speaker.
 
 <sup>2</sup> Because the goal of the device is to limit noise heard by humans, the range of 100 Hz to 17 kHz is necessary to cover the majority of human hearing that the system will operate in.  
 
-<sup>3</sup> The main processor will be using an ADC (ADAU1761 SigmaDSP) who's I/O works within 1.8 V to 3.65 V. In order to achieve these values, the pre-amp must be configured such that the highest voltage value allowable is within that range. This will allow the main processor to correctly understand the error subsystem's output.
 
 ## Buildable Schematic
 <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="75%" height="75%">
