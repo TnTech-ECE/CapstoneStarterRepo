@@ -79,13 +79,8 @@ According to the manufacturors of the CMC-2742PBJ-A electret mircophone can oper
 
 
 ### Output
-
-#### Higher Cutoff Frequency
-
-
-#### Lower Cutoff Frequency
-
-20 nF gives roughly 60 Hz lower cutoff. 
+The CMC-2742PBJ-A microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+The typical voltage output would be found with the equation $$20 log(x) = -42$$ where x equates to 7.97 mV. The minimum and maximum sensitivities are -45 dB and -39 dB which equate to 5.62 mV and 11.2 mV respectively. Using the maximum gain of 40 dB that the TS472 can achieve, we can expect the outputs to be within 0.562 V and 0.112 V. This will be put into the left side of the STEREO_IN defined in the main processor.  
 
 ## BOM
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
