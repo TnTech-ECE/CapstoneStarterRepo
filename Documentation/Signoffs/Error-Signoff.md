@@ -23,6 +23,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 <sup>3</sup> The main processor will be using an ADC (ADAU1761 SigmaDSP) who's I/O works within 1.8 V to 3.65 V. In order to achieve these values, the pre-amp must be configured such that the highest voltage value allowable is within that range. This will allow the main processor to correctly understand the error subsystem's output.
 
 ## Buildable Schematic
+<img src="Active-Noise-Control-With-Wall-Transmission-Detection/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="60%" height="60%">
 
 
 | Component         | Value | Unit |
@@ -60,7 +61,9 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
     - Specified by the manufacturors 
 - C1, C2
     - The Higher Cutoff Frequency is defined from the manufacturors using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
-    - $F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}$
+    ```math
+    F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
+    ```
     - 100 pF capacitors give about 19.9 kHz upper cutoff frequency, which stays within constraint 2. 
 
 
