@@ -83,7 +83,7 @@ Due to the speakers that fall within the specified range not having built in ste
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
 | Pmod AMP2: Audio Amplifier   | 1              | $9.99       | $9.99     |
-| OWS-5716TA-4C     | 1        | $3.78          | $3.78       |
+| OWS-5716TA-4C Speaker    | 1        | $3.78          | $3.78       |
 |3.5mm male plug to bare wire  | 1              | $3.59       | $3.59     |
 
 ## References
