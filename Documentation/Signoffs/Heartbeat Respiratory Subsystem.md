@@ -31,8 +31,7 @@ Figure 1. Wire Diagram for the total subsystem
 
 Figure 2. Circuit schematic for active amplifier
 
-
-![image](https://user-images.githubusercontent.com/79685126/233289124-e88ab610-8b39-4b31-928a-7a92d553eca2.png)
+![Noise](https://user-images.githubusercontent.com/123600489/233882469-8f5008a5-a848-43a9-b23d-65feedce9893.jpg)
 
 Figure 3. Simulation results from circuit shown in figure 2
 
