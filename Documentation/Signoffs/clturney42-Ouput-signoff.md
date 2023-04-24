@@ -58,13 +58,12 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the power and ground cables from the speaker can be connected.
 
 ## Analysis
-### Explanation of Components
 
-#### pmod AMP2 - IC-SSM2377
+#### pmod AMP2 - IC-SSM2377 [3][1]
 
-The IC-SSM2377 chip is a filterless class-D audio amplifier [1]. A class-D audio amplifier has the highest efficiency among amplifier classes with low distortion. Clear sound is imperative to noise cancellation therefore the best class of amplifier should be used. The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω. It is capable of up to a 92% efficiency ratio and has very low total harmonic distortion meaning the sound is very clear. It also has a signal-to-noise ration of 101 which means the signal will come through with little to no distortion from background noise. This chip also has pop-and-click suppression, often when the output level and voltage of an amplifier quickly changes or shuts off, audible pops can be heard from the speaker. This is the result of voltage transients, but this suppression feature in the IC chips allows for a quitter activation and deactivation of the chip when shutdown or activated. The SSM2377 also makes use of 3 level delta-sigma modulation, which helps to achieve higher transmission efficiency by transmitting the changes in samples rather than the samples themselves. 
+ The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω.  
 
-**According to the pmod’s reference manual as long the incoming data has a sample rate of at least 16 kHz. One of the constraints of this design is for the minimum sampling rate of analog-to-digital and digital-to-analog conversion be 40 kHz, meaning there will be no problem with the data sent to the pmod AMP2.**
+**According to the pmod’s reference manual as long the incoming data has a sample rate of at least 16 kHz, the amplifier will be able to handle incoming data. One of the constraints of this design is for the minimum sampling rate of analog-to-digital and digital-to-analog conversion be 40 kHz, meaning there will be no problem with the data sent to the pmod AMP2.**
 
 #### Output Speaker
 
