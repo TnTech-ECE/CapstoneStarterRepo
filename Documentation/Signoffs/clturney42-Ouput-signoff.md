@@ -76,7 +76,7 @@ To fulfill each of these conditions, the OWS-5716TA-4C speaker has been chosen. 
 
 #### Further connections
 
-Due to the speakers that fall within the specified range not having built in stereo jack cables, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
+Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
 
 
 
