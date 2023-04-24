@@ -50,6 +50,8 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 To satisfy the ethical constraints of movement impedence and reduce delay as much as possible in the system, the speaker will extend a maximum of 0.5 meters from the wall. This distance will likely be less but this constraint is set to make sure that the speaker is never in the way of individuals within the room. This distance constraint is also necessary due to the delay associated with the speed of sound and distance of the speaker from the sound source. The speaker cannot have too much delay else the anti-noise will not be in sync with outside noise.
   
 ### 8) Output system shall have a maximum delay of ?? |Origin: Device specifications and goal of system|
+  
+
 ## Buildable schematic 
 
 <img width="1041" alt="Screen Shot 2023-04-24 at 4 18 06 PM" src="https://user-images.githubusercontent.com/123997954/234119103-fb11acdf-1e73-4771-b829-b34daec56d0b.png">
@@ -80,10 +82,10 @@ Due to the speakers that fall within the specified range not having built in ste
 
 
 ## BOM
-| DEVICE            | Quantity | Price Per Unit | Total Price |
+| DEVICE                         | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
 | Pmod AMP2: Audio Amplifier   | 1              | $9.99       | $9.99     |
-| OWS-5716TA-4C Speaker    | 1        | $3.78          | $3.78       |
+| OWS-5716TA-4C Speaker        | 1        | $3.78          | $3.78       |
 |3.5mm male plug to bare wire  | 1              | $3.59       | $3.59     |
 
 ## References
