@@ -56,8 +56,8 @@ The operating voltage (VDD) of the amplifier is 3.3 V dc to 5.5 V dc. The SNR is
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
-| Adafruit AGC Electret Microphone Amplifier MAX9814 | 2        | $7.95          | $15.90  | $16.27  |
-| Nichion Electrolytic Capacitor ( 1 uF)             | 1        | $0.37          | $0.37   |
+| Adafruit AGC Electret Microphone Amplifier MAX9814 | 2        | $7.95          | $15.90  | $16.64  |
+| Nichion Electrolytic Capacitor ( 1 uF)             | 2        | $0.74          | $0.74   |
 
 
 # References
