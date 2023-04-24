@@ -50,7 +50,8 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 ### 8) Output system shall have a maximum delay of 1.4ms |Origin: Device specifications and goal of system|
 ## Buildable schematic 
 
-<img width="678" alt="Screen Shot 2023-04-16 at 4 56 03 PM" src="https://user-images.githubusercontent.com/123997954/232345262-ff429d1d-7f6d-4138-8613-c1b8cb05caa5.png">
+<img width="1033" alt="Screen Shot 2023-04-24 at 3 25 53 PM" src="https://user-images.githubusercontent.com/123997954/234108774-1d8e2b08-e2fc-4628-8fe8-8a6270463427.png">
+
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
