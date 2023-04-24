@@ -38,7 +38,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 
 ## Buildable schematic 
-<img width="797" alt="Screen Shot 2023-04-23 at 5 49 00 PM" src="https://user-images.githubusercontent.com/123600399/233870336-950baad6-e783-4222-9fe7-68052d97cee2.png">
+<img width="965" alt="Screen Shot 2023-04-24 at 5 25 58 PM" src="https://user-images.githubusercontent.com/123600399/234129961-edd41715-b2dc-486b-a249-67669e363180.png">
 This above image is the schematic showing how the TR154 will be set up and imlemented into our system.
 
 
