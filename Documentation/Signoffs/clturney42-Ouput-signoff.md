@@ -47,11 +47,12 @@ Sound pressure level (SPL) is characterized as the difference between the pressu
 Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], an appropriate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are slight fluctuations in the system.
 
 ### 7) Output system shall extend a maximum of 0.5 meters from the wall |Origin: Ethics and system delay|
+To satisfy the ethical constraints of movement impedence and reduce delay as much as possible in the system, the speaker will extend a maximum of 0.5 meters from the wall. This distance will likely be less but this constraint is set to make sure that the speaker is never in the way of individuals within the room. This distance constraint is also necessary due to the delay associated with the speed of sound and distance of the speaker from the sound source. The speaker cannot have too much delay else the anti-noise will not be in sync with outside noise.
+  
 ### 8) Output system shall have a maximum delay of 1.4ms |Origin: Device specifications and goal of system|
 ## Buildable schematic 
 
 <img width="1041" alt="Screen Shot 2023-04-24 at 4 18 06 PM" src="https://user-images.githubusercontent.com/123997954/234119103-fb11acdf-1e73-4771-b829-b34daec56d0b.png">
-
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
