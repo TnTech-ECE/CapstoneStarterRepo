@@ -23,7 +23,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 5   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB                                     | Constraints of room and device constraints |
 | 6   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                                     | Amplifier specifications and power insurance |
 | 7 | Output system shall extend a maximum of 0.5 meters from the wall | Ethics and system delay |
-| 8 | Output system shall have a maximum delay of 1.4ms | Device specifications and goal of system |
+| 8 | Output system shall have a maximum delay of ?? | Device specifications and goal of system |
 
   
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
@@ -49,7 +49,7 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 ### 7) Output system shall extend a maximum of 0.5 meters from the wall |Origin: Ethics and system delay|
 To satisfy the ethical constraints of movement impedence and reduce delay as much as possible in the system, the speaker will extend a maximum of 0.5 meters from the wall. This distance will likely be less but this constraint is set to make sure that the speaker is never in the way of individuals within the room. This distance constraint is also necessary due to the delay associated with the speed of sound and distance of the speaker from the sound source. The speaker cannot have too much delay else the anti-noise will not be in sync with outside noise.
   
-### 8) Output system shall have a maximum delay of 1.4ms |Origin: Device specifications and goal of system|
+### 8) Output system shall have a maximum delay of ?? |Origin: Device specifications and goal of system|
 ## Buildable schematic 
 
 <img width="1041" alt="Screen Shot 2023-04-24 at 4 18 06 PM" src="https://user-images.githubusercontent.com/123997954/234119103-fb11acdf-1e73-4771-b829-b34daec56d0b.png">
