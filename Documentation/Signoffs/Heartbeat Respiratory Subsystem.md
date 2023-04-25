@@ -116,14 +116,14 @@ The rate at which a human can breathe depends on multiple factors including age,
 ## BOM
 
 
-| Name of Device | Cost |
-|----------------|------|
-| NJR4262 New Japan Radio Co, 24 GHz Doppler Sensor Module | $34.07 |
-| High Precision AD HAT Board Waveshare ADC Module | $47.99 |
-| 40 kΩ resistors X2 | $1.08 |
-| 60 kΩ resistors X2 | $1.08 |
-| Op-Amp X2 | $1.50 |
-|Total | $85.72 |
+| Name of item | Description | Part Number | Manufacturer | Quantity | Price | Total |
+|--------------|-------------|-------------|--------------|----------|-------|-------|
+| NJR4262 New Japan Radio Co, 24 GHz Doppler Sensor Module | | | | 1 | $34.07 | $34.07 |
+| High Precision AD HAT Board Waveshare ADC Module | | | | 1 | $47.99 | $47.99 |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |
+|Total |  |  |  |  |  |
 
 ## Sources
 
