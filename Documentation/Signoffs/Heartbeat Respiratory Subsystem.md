@@ -119,7 +119,7 @@ The rate at which a human can breathe depends on multiple factors including age,
 | Name of item | Description | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-------------|--------------|----------|-------|-------|
 | K-Band Doppler Sensor Module | 24 GHz Doppler Sensor Module | NJR4262 | JRC | 1 | $34.07 | $34.07 |
-| High Precision AD HAT | High Precision AD HAT Board Waveshare ADC Module | ADS1263 | Texas Instruments | 1 | $47.99 | $47.99 |
+| High Precision AD HAT | High Precision AD HAT Board Waveshare ADC Module | ADS1263 | Texas Instruments | 1 | $48.99 | $48.99 |
 |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |
