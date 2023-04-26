@@ -1,9 +1,10 @@
+
 # Output Subsystem
 
 <p align="center">
 <img width="1018" alt="Screen Shot 2023-04-16 at 6 12 58 PM" src="https://user-images.githubusercontent.com/123997954/232348587-a962e40f-7dd1-43ec-834e-d62ea83feeec.png">
 <p>
-  
+
 #### **Figure 1: Output subsystem**
 
 
@@ -63,8 +64,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 ## Analysis
 
 ### Fulfilling Constraints 
+> 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.
+  
+  The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm2377[1], the amplifier can operate off a single supply voltage from 2.5 - 5.5 Volts. This means as long as the power supply supplies this voltage range the amplifier will be able to function properly.
+ 
 
- <sub> 1)  The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm </sub>
   
   
   
