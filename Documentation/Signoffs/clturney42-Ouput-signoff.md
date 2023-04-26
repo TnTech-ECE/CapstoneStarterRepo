@@ -62,7 +62,26 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 ## Analysis
 
+### Fulfilling Constraints 
 
+### 1) ### The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 #### pmod AMP2 - IC-SSM2377 [3][1]
 
 The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω.  
