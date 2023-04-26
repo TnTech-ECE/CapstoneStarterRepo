@@ -84,6 +84,9 @@ As explained in the constraints section, the range that a human ear can hear is 
   
   Sound pressure level (SPL) is the described as the average average variation in atmospheric pressure caused by a sound and is measured in decibels. SPL directly correlates to how loud a speaker is and how effective the speaker is in distributing noise across an area. An SPL lower than 84 dB is considered poor and above 92 dB is considered pretty good. A good middle ground for this range that provides flexibility but also ensures efficiency is an SPL value of 90 dB. According the data sheet of the OWS-5716TA-4C, the speaker has an SPL value of 112.5 dB. This is well over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
 
+> 6) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts 
+  
+  As explained in the constraint, a good rule of thumb for pairing a speaker with an amplifier is that the audio amplifier should have a sufficiently higher output power than the speaker that it is driving. This is to account for the power fluctuations and decay that may come with distribution of power across the circuit. The SSM2377 will output 2.5 watts of power, so an appropiate input power for the speaker would be 2 watts or below, giving 0.5 watts of leeway for the power the amplifier must supply. The inclusion of a minimum of 1 watt of power is to ensure that a speaker is chosen that has sufficient power to be used to cancel noise within the room. The OWS-5716TA-4C speaker has an input power requirement of 2 watts meaning this constraint is satisfied.
   
   
   
