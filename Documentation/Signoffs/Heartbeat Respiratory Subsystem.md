@@ -14,7 +14,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 | Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
 | Weight | Entire system must weigh less than 6 pounds, this subsystem should weight 1.5 lbs or less | From DARPA constraints/ Conceptual design |
 | Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
-| Operational Amplifier | Radar input signal amplitude  must be increased by a gain of 6 in order to match the input range of the AD HATboard ADC module. Output voltage shall be limited to either -2.5 V to 2.5 V peak-to-peak or 0 V to 5 V peak-to-peak. Output current shall be limited to a maximum of 10 mA. | From further analysis of the radar and computing subsystems. |
+| Operational Amplifier | Circuit must be able to filter out high frequencies with a corner frequency of around 19kHz while at least also amplifying the signals between 0.017Hz - 3.5Hz by a gain 0f 6. The corner frequency comes from satisfying nyquist value for a sample frequency of 38.4kHz as specified by the ADC datasheet. The gain of 6 comes from a 0.8 Vp-p input voltage of the radar as specified by the datasheet which needs to reach no more then 5 Vp-p output voltage as specified by the ADC datasheet. The frequency minimum comes from the total bandwidth needed by heartbeat and respiratory rate frequencies. | From further analysis of the radar and computing subsystems. |
 
 ## Wiring Schematics
 
@@ -26,20 +26,11 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 Figure 1. Wire Diagram for the total subsystem
 
 
-![image](https://user-images.githubusercontent.com/79685126/233561981-93cf1e05-d0cd-404e-a7c9-d0cd66774b79.png)
 
 
 Figure 2. Circuit schematic for active amplifier
 
-![Noise](https://user-images.githubusercontent.com/123600489/233882469-8f5008a5-a848-43a9-b23d-65feedce9893.jpg)
 
-Figure 3. Simulation results from circuit shown in figure 2
-
-
-![image](https://user-images.githubusercontent.com/79685126/233561945-83ee2f3c-6468-4ec2-8b62-213f93e063a3.png)
-
-
-Figure 4. Current output of circuit
 
 ## Analysis
 
@@ -106,7 +97,24 @@ This represents a modulated signal which is exactly what would be outputted by t
 
 5.) WHO sets the power density safety limit at 1000 W/m^2 for radars over 10 GHz. With the  NJR4262J being a 24 GHz radar this would mean its power density must be under this value.  The datasheet sets the max radiated power of the radar at 100 mW. The unit’s dimensions are also 25 X 25 X 7.3 millimeters. This would put the power density at 160 W/m^2  ,which falls below the safety limit and confirms the final constraint listed above.
 
-6.) In figure 3, it shows the simulation results of the operational amplifier circuit shown in figure 2 that must have a gain of 6 in order to take the 0.4 V amplitude from the output of the radar and to raise it to 2.4 V amplitude so the radar can be compatible with the analog to digital converter; since the analog to digital converter has a max input peak-to-peak voltage -2.5 V to 2.5 V, raising the voltage from the radar is a necessity. The current output from the operational amplifier circuit must also be regulated in order for the circuit to be compatible with the analog to digital converter. For the analog to digital converter, the maximum input current that it can take is 10 mA and a minimum input current of -10 mA. The current output of the operational amplifier circuit has a max current output of approximately 2.4 mA, and a minimum current output of -2.4 mA. This allows the circuit to be safely attached to the analog to digital converter since the maximum and minimum output currents fall within the input voltage range of the analog to digital converter. Noise can be simulated by the white function seen in the circuit, but the op amp manuals also dictate a noise change of micro volts which is not enough to put the signal out of the ADC input range. 
+6.)  The amplifying circuit will also double as a pre-filter for the system. The ADC used for this subsystem can only sample at rate of 38.4 kHz (samples per sec), using nyquists principle that sampling frequency must be at least double the bandwidth (fs  >= 2B) to get an accurate conversion, the highest frequency that can be accurately converted is 19.4 kHz. The radar outputs many different frequencies due to displacement in the measured area as well as the 24GHz radar frequency. Due to the limitations of the ADC only frequencies under 19.4 kHz can be accurately represented meaning everything above becomes unusable and just noise. To take out all these high frequencies a low pass filter can be used, such as the one in figure 2. Using standard resistor and capacitor values the corner frequency of figure 2 is 19.41 kHz. 
+
+The transfer function of figure 2 comes out to be H(s) = (0.00252s +1800)/(1.3776e-12s^2 +0.02711s +3000). The figure below plots the frequency response of the above transfer function.
+
+
+
+As detailed by the plot all the unusable high frequencies are filtered out leaving the data for frequencies needed with the respective gain of about 15.5 dB which corresponds to a gain of 5.96. 
+
+The input of the ADC can accept voltages of max 5 Vp-p. This means the input signal, which has a 0.8 V p-p, also needs to be amplified around a factor of 6 to optimize the ADC range. As detailed by the frequency response this is met by a wide range of frequencies, but more importantly as detailed by the constraint it needs to amplify at least 0.017 Hz - 3.5 Hz as these are the frequencies that will be used by the algorithm.  Below is the LTSpice simulation of the lower bound 0.017 Hz signal  
+
+
+
+While the next simulation looks at the upper bound of 3.5 Hz signal.
+
+
+
+In both cases the gain is met while also staying under the 5 Vp-p limitation set by the ADC. The needed frequencies are amplified while unuseful high frequencies are also filtered out as specified by the constraint.
+
 
 The range that a human heart can beat varies depending on the age, and other factors, of the person. A quick good way to estimate the maximum heart rate is to subtract the age by 220. The literature reviewed for this makes this estimation valid down to 10 year olds, so 210 bpm will be the maximum heart rate measured [5]. For the lower bound, typically anything below 60 is considered a low heart rate and could be dangerous. According to the literature reviewed, heart rates can reach down to 40 when sleeping as an extreme low, so 30 bpm will be the minimum heart rate measured [6]. 30bpm will give a 10 bpm buffer from the lowest heart rates possible by a human, this will ensure that we capture all low end heart rates.
 
@@ -119,11 +127,14 @@ The rate at which a human can breathe depends on multiple factors including age,
 | Name of item | Description | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-------------|--------------|----------|-------|-------|
 | K-Band Doppler Sensor Module | 24 GHz Doppler Sensor Module | NJR4262J | JRC | 1 | $34.07 | $34.07 |
-| High Precision AD HAT | High Precision AD HAT Board Waveshare ADC Module | ADS1263 | Texas Instruments | 1 | $47.99 | $47.99 |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
-|Total |  |  |  |  |  |
+| High Precision AD HAT | High Precision AD HAT Board Waveshare ADC Module | ADS1263 | Waveshare | 1 | $47.99 | $47.99 |
+| Op Amp | Perscision Amplifier | OP07CSZ | Texas Instruments | 1 | $2.31 | $2.31 |
+| Resistor | 1k Ohm 5% 1/4W axial resistor | CF14JT1k00 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
+| Resistor | 3k Ohm 5% 1/4W axial resistor | CF14JT3k00 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
+| Resistor | 15k Ohm 5% 1/4W axial resistor | CF14JT15k0 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
+| Capacitor | Mica 56 pF 5% 500V Radial | CD15ED560JO3F | Cornell Dubilier Electronics (CDE) | 1 | $2.61 | $2.61 |
+| Capacitor | Mica 8200 pF 5% 500V Radial | CD30FD822JO3F | Cornell Dubilier Electronics (CDE) | 1 | $19.94 | $19.94 |
+|Total |  |  |  |  |  | $104.91 |
 
 ## Sources
 
