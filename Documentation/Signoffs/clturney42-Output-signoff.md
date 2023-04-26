@@ -70,7 +70,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.
   
-As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range. The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
+<> As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range. The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
 
 > 3) The speaker shall have a minimum input impedance 4Ω 
   
@@ -88,7 +88,9 @@ As explained in the constraints section, the range that a human ear can hear is 
   
   As explained in the constraint, a good rule of thumb for pairing a speaker with an amplifier is that the audio amplifier should have a sufficiently higher output power than the speaker that it is driving. This is to account for the power fluctuations and decay that may come with distribution of power across the circuit. The SSM2377 will output 2.5 watts of power, so an appropiate input power for the speaker would be 2 watts or below, giving 0.5 watts of leeway for the power the amplifier must supply. The inclusion of a minimum of 1 watt of power is to ensure that a speaker is chosen that has sufficient power to be used to cancel noise within the room. The OWS-5716TA-4C speaker has an input power requirement of 2 watts meaning this constraint is satisfied.
   
+> 7) Output system shall extend a maximum of 0.5 meters from the wall
   
+  To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. 
   
   
   
