@@ -62,6 +62,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 ## Analysis
 
+
 #### pmod AMP2 - IC-SSM2377 [3][1]
 
 The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω.  
