@@ -66,11 +66,23 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 ### Fulfilling Constraints 
 > 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.
   
-  The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm2377[1], the amplifier can operate off a single supply voltage from 2.5 - 5.5 Volts. This means as long as the power supply supplies this voltage range the amplifier will be able to function properly.
+  The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the SSM2377[1], the amplifier can operate off a single supply voltage from 2.5 - 5.5 Volts. This means as long as the power supply supplies this voltage range the amplifier will be able to function properly.
 
 > 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.
   
-As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range. The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz and the pmod AMP2 has an operating range of 20Hz-20Khz. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
+As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range. The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
+
+> 3) The speaker shall have a minimum input impedance 4Ω 
+  
+  When it comes to pairing an audio amplifier with a speaker, the amplifier must be capable of driving the speaker at a specific Ohm impedence [6]. If the impedence is lower than what the amplifier is capable of driving, there is a chance it will overheat and stop working. The impedence can be higher than the rated Ohms since more impedence means less current. The SSM2377 amplifier is capable of driving a 4Ω load from a 5V power supply, and the OWS-5716TA-4C speaker has an input impedence of 4Ω, meaning the system will easily be able to drive the speaker.
+  
+> 4) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system
+  
+  Although this constraint is obvious and self-explanatory, it is important to emphasize that the speaker must produce sound from the input from the processor. If no sound is being produced by the speaker that means there is no noise being cancelled, and the system will not work. The speaker and amplifier have had their specifications matched so in theory sound should be outputted. Further verification will be done during physical testing of the device.
+  
+> 5) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB
+  
+  Sound pressure level (SPL) is the described as the average average variation in atmospheric pressure caused by a sound and is measured in decibels. SPL directly correlates to how loud a speaker is and how effective the speaker is in distributing noise across an area. An SPL lower than 84 dB is considered poor and above 92 dB is considered pretty good. A good middle ground for this range that provides flexibility but also ensures efficiency is an SPL value of 90 dB. According the data sheet of the OWS-5716TA-4C, the speaker has an SPL value of 112.5 dB. This is well over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
 
   
   
