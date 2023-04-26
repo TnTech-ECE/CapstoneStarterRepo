@@ -71,7 +71,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.
   
-[//]: # "As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range." The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
+[//]: # (As explained in the constraints section), the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range." The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
 
 > 3) The speaker shall have a minimum input impedance 4Ω 
   
