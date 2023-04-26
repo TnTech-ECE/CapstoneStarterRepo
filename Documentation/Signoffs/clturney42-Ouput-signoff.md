@@ -67,9 +67,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 > 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.
   
   The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm2377[1], the amplifier can operate off a single supply voltage from 2.5 - 5.5 Volts. This means as long as the power supply supplies this voltage range the amplifier will be able to function properly.
- 
 
+> 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz.
   
+As explained in the constraints section, the range that a human ear can hear is 20Hz-20Khz. With this in mind it is imperative that the amplifier and speaker are able to output at a substantial portion of this range. The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz and the pmod AMP2 has an operating range of 20Hz-20Khz. Both of these specifications fit the constraint and will allow the output system to account for the wide range of potential sounds that will come through the wall.
+
   
   
   
