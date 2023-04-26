@@ -26,6 +26,7 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 Figure 1. Wire Diagram for the total subsystem
 
 
+![image](https://user-images.githubusercontent.com/79685126/234519111-189afd09-00df-4cc7-b563-734cd291191e.png)
 
 
 Figure 2. Circuit schematic for active amplifier
@@ -101,17 +102,17 @@ This represents a modulated signal which is exactly what would be outputted by t
 
 The transfer function of figure 2 comes out to be H(s) = (0.00252s +1800)/(1.3776e-12s^2 +0.02711s +3000). The figure below plots the frequency response of the above transfer function.
 
-
+![image](https://user-images.githubusercontent.com/79685126/234519148-3ac49142-b0cc-4e85-b27b-6cdffc2cf717.png)
 
 As detailed by the plot all the unusable high frequencies are filtered out leaving the data for frequencies needed with the respective gain of about 15.5 dB which corresponds to a gain of 5.96. 
 
 The input of the ADC can accept voltages of max 5 Vp-p. This means the input signal, which has a 0.8 V p-p, also needs to be amplified around a factor of 6 to optimize the ADC range. As detailed by the frequency response this is met by a wide range of frequencies, but more importantly as detailed by the constraint it needs to amplify at least 0.017 Hz - 3.5 Hz as these are the frequencies that will be used by the algorithm.  Below is the LTSpice simulation of the lower bound 0.017 Hz signal  
 
-
+![image](https://user-images.githubusercontent.com/79685126/234519214-ca810c4c-f3a8-4d6b-bc71-800a6f7643a3.png)
 
 While the next simulation looks at the upper bound of 3.5 Hz signal.
 
-
+![image](https://user-images.githubusercontent.com/79685126/234519257-796e4e99-cad9-4774-9077-e7306fd7ebd5.png)
 
 In both cases the gain is met while also staying under the 5 Vp-p limitation set by the ADC. The needed frequencies are amplified while unuseful high frequencies are also filtered out as specified by the constraint.
 
