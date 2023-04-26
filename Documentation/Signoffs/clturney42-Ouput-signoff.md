@@ -64,7 +64,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 ### Fulfilling Constraints 
 
-### 1) ### The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm
+###{ 1) } The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the ssm
   
   
   
