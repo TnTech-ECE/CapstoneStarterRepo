@@ -6,7 +6,9 @@ Triage is the practice of categorizing injured victims by a priority level to re
 ## Executive Summary
 
 During a disaster, speed and efficiency are vital to saving lives. The current method of triage begins with the search for all injured people throughout the devastated area; once the injured people are located, triage is performed on the injured victims. The problem with this current triage process is that the time spent searching for injured people can mean the difference between life and death for those victims. Currently, there is no method available that can scan a large area for disaster victims and can also evaluate their medical condition quickly and effectively. That is why DARPA has issued a challenge called the DARPA Triage Challenge, or the DTC. 
+
 The purpose of the DTC is to provide another way to assist medical responders in evaluating the condition of victims of a disaster, quickly and efficiently utilizing uncrewed aircraft vehicles, or UAVs, otherwise known as drones. For our capstone project, the goal is to develop the sensing system that will eventually be attached to a drone that DARPA requires for their challenge [1]. 
+
 The sensing goals for this project will be to measure the presence of heartbeat, measure breathing rate, use a camera as well as a night vision camera to locate victims as well as determine whether they are able to walk, and to use a speaker and microphone to test if a victim can follow commands. All these components will be used to evaluate the medical state of a person that has fallen victim to a disaster to fulfill the challenges that DARPA has issued [1].
 
 
@@ -66,6 +68,7 @@ Algorithmic software will be created directly based off the START Method [2] and
 
 ## Sources
 
-[1] [1]	DARPA Triage Challenge. [Online]. Available: https://triagechallenge.darpa.mil/. [Accessed: 14-Feb-2023].
-[2] [2]	“Start adult triage algorithm,” CHEMM. [Online]. Available: https://chemm.hhs.gov/startadult.htm. [Accessed: 14-Feb-2023].
+[1] DARPA Triage Challenge. [Online]. Available: https://triagechallenge.darpa.mil/. [Accessed: 14-Feb-2023].
+
+[2] “Start adult triage algorithm,” CHEMM. [Online]. Available: https://chemm.hhs.gov/startadult.htm. [Accessed: 14-Feb-2023].
 
