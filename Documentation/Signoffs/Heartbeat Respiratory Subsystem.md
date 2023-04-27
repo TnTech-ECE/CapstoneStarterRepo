@@ -100,7 +100,12 @@ This represents a modulated signal which is exactly what would be outputted by t
 
 5.) WHO sets the power density safety limit at 1000 W/m^2 for radars over 10 GHz. With the  NJR4262J being a 24 GHz radar this would mean its power density must be under this value.  The datasheet sets the max radiated power of the radar at 100 mW. The unit’s dimensions are also 25 X 25 X 7.3 millimeters. This would put the power density at 160 W/m^2  ,which falls below the safety limit and confirms the final constraint listed above.
 
-6.)  The amplifying circuit will also double as a pre-filter for the system. The ADC used for this subsystem can only sample at rate of 38.4 kHz (samples per sec), using nyquists principle that sampling frequency must be at least double the bandwidth (fs  >= 2B) to get an accurate conversion, the highest frequency that can be accurately converted is 19.4 kHz. The radar outputs many different frequencies due to displacement in the measured area as well as the 24GHz radar frequency. Due to the limitations of the ADC only frequencies under 19.4 kHz can be accurately represented meaning everything above becomes unusable and just noise. To take out all these high frequencies a low pass filter can be used, such as the one in figure 2. Using standard resistor and capacitor values the corner frequency of figure 2 is 19.41 kHz. 
+6.) The CW-Doppler Radar such as the NJR4262 functions like the diagram below
+
+
+
+The local oscillator (LO) creates the frequency needed for transmission, this signal is mixed with the received radar signal (circle with an x) and also phase shifted and put through another mixer with the received signal in order to down convert the signal. These mixers demodulate the signal allowing for both BI(t) and BQ(t) to be at much lower frequencies. This is further evidenced by the equations in part 5. The R(t) signal as well as the T(t) signal have a “2pif” part in them. The f represents the carrier frequency, in NJR4262 radars case 24GHz. This part is no longer part of the BI(t) and BQ(t) equations, rather the frequency is controlled by x(t) which is the displacement frequency information. This means the input to an amplifier circuit is much lower frequencies than the 24 GHz carrier, and the input data can also be filtered to retrieve a smaller range of frequencies that incorporate the data needed for heartbeat and respiratory rate detection.   
+The amplifying circuit will also double as a pre-filter for the system. The ADC used for this subsystem can only sample at rate of 38.4 kHz (samples per sec), using nyquists principle that sampling frequency must be at least double the bandwidth (fs  >= 2B) to get an accurate conversion, the highest frequency that can be accurately converted is 19.4 kHz. The radar outputs many different frequencies due to displacement in the measured area. Due to the limitations of the ADC only frequencies under 19.4 kHz can be accurately represented meaning everything above becomes unusable and just noise. To take out all these high frequencies a low pass filter can be used, such as the one in figure 2. Using standard resistor and capacitor values the corner frequency of figure 2 is 19.41 kHz. 
 
 The transfer function of figure 2 comes out to be H(s) = (0.00252s +1800)/(1.3776e-12s^2 +0.02711s +3000). The figure below plots the frequency response of the above transfer function.
 
@@ -133,13 +138,13 @@ The rate at which a human can breathe depends on multiple factors including age,
 |--------------|-------------|-------------|--------------|----------|-------|-------|
 | K-Band Doppler Sensor Module | 24 GHz Doppler Sensor Module | NJR4262J | JRC | 1 | $34.07 | $34.07 |
 | High Precision AD HAT | High Precision AD HAT Board Waveshare ADC Module | ADS1263 | Waveshare | 1 | $47.99 | $47.99 |
-| Op Amp | Perscision Amplifier | OP07CSZ | Texas Instruments | 1 | $2.31 | $2.31 |
-| Resistor | 1k Ohm 5% 1/4W axial resistor | CF14JT1k00 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
-| Resistor | 3k Ohm 5% 1/4W axial resistor | CF14JT3k00 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
-| Resistor | 15k Ohm 5% 1/4W axial resistor | CF14JT15k0 | STackpole Electronics Inc | 1 | $0.10 | $0.10 |
-| Capacitor | Mica 56 pF 5% 500V Radial | CD15ED560JO3F | Cornell Dubilier Electronics (CDE) | 1 | $2.61 | $2.61 |
-| Capacitor | Mica 8200 pF 5% 500V Radial | CD30FD822JO3F | Cornell Dubilier Electronics (CDE) | 1 | $19.94 | $19.94 |
-|Total |  |  |  |  |  | $104.91 |
+| Op Amp | Perscision Amplifier | OP07CSZ | Texas Instruments | 2 | $2.31 | $4.62 |
+| Resistor | 1k Ohm 5% 1/4W axial resistor | CF14JT1k00 | STackpole Electronics Inc | 2 | $0.10 | $0.20 |
+| Resistor | 3k Ohm 5% 1/4W axial resistor | CF14JT3k00 | STackpole Electronics Inc | 2 | $0.10 | $0.20 |
+| Resistor | 15k Ohm 5% 1/4W axial resistor | CF14JT15k0 | STackpole Electronics Inc | 2 | $0.10 | $0.20 |
+| Capacitor | Mica 56 pF 5% 500V Radial | CD15ED560JO3F | Cornell Dubilier Electronics (CDE) | 2 | $2.61 | $5.22 |
+| Capacitor | Mica 8200 pF 5% 500V Radial | CD30FD822JO3F | Cornell Dubilier Electronics (CDE) | 2 | $19.94 | $39.88 |
+|Total |  |  |  |  |  | $132.38 |
 
 ## Sources
 
