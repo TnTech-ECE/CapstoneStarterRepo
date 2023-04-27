@@ -14,7 +14,8 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 | Distance | Must detect and measure heartbeat and breath rate from at least 1 meter away | From DARPA constraints |
 | Weight | Entire system must weigh less than 6 pounds, this subsystem should weight 1.5 lbs or less | From DARPA constraints/ Conceptual design |
 | Safety | Radar must not emit at a frequency over 10 GHz with a power density of 1000 W/m^2 in order to keep the radar skin and eye safe. | From World Health Organization (WHO) |
-| Operational Amplifier | Circuit must be able to filter out high frequencies with a corner frequency of around 19kHz while at least also amplifying the signals between 0.017Hz - 3.5Hz by a gain 0f 6. The corner frequency comes from satisfying nyquist value for a sample frequency of 38.4kHz as specified by the ADC datasheet. The gain of 6 comes from a 0.8 Vp-p input voltage of the radar as specified by the datasheet which needs to reach no more then 5 Vp-p output voltage as specified by the ADC datasheet. The frequency minimum comes from the total bandwidth needed by heartbeat and respiratory rate frequencies. | From further analysis of the radar and computing subsystems. |
+| Operational Amplifier Circuit (Input) | Circuit must be able to filter out high frequencies with a corner frequency of around 19kHz while at least also amplifying the signals between 0.017Hz - 3.5Hz by a gain of 6. The corner frequency comes from satisfying nyquist value for a sample frequency of 38.4kHz as specified by the ADC datasheet.| From further analysis of the radar and computing subsystems. |
+| Operational Amplifier Circuit (Output) | The gain of 6 comes from a 0.8 Vp-p input voltage of the radar as specified by the datasheet which needs to reach no more then 5 Vp-p output voltage as specified by the ADC datasheet. The frequency minimum of 0.017 Hz comes from the total bandwidth needed by heartbeat and respiratory rate frequencies. | From further analysis of the radar and computing subsystems. |
 
 ## Wiring Schematics
 
@@ -26,10 +27,17 @@ The purpose of this subsystem is to measure the presence of a heartbeat as well 
 Figure 1. Wire Diagram for the total subsystem
 
 
+
 ![image](https://user-images.githubusercontent.com/79685126/234519111-189afd09-00df-4cc7-b563-734cd291191e.png)
 
 
-Figure 2. Circuit schematic for active amplifier
+Figure 2. LTspice simulation for active amplifier
+
+
+
+![Opamp](https://user-images.githubusercontent.com/123600489/234730931-13940bd6-ed75-4804-ab09-045ba9871d29.png)
+
+Figure 3. Operational amplifier circuit diagram
 
 
 
