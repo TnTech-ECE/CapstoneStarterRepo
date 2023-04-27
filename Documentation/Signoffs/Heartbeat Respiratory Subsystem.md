@@ -28,16 +28,9 @@ Figure 1. Wire Diagram for the total subsystem
 
 
 
-![image](https://user-images.githubusercontent.com/79685126/234519111-189afd09-00df-4cc7-b563-734cd291191e.png)
-
-
-Figure 2. LTspice simulation for active amplifier
-
-
-
 ![Opamp](https://user-images.githubusercontent.com/123600489/234730931-13940bd6-ed75-4804-ab09-045ba9871d29.png)
 
-Figure 3. Operational amplifier circuit diagram
+Figure 2. Operational amplifier circuit diagram
 
 
 
