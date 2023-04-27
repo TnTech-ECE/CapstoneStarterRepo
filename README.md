@@ -62,4 +62,10 @@ Signoffs as well as other documentation are organized in this folder.
 
 ### Software
 
-Algorithmic software will be created directly based off the START Method [] and will be organized in this folder.
+Algorithmic software will be created directly based off the START Method [2] and will be organized in this folder.
+
+## Sources
+
+[1] [1]	DARPA Triage Challenge. [Online]. Available: https://triagechallenge.darpa.mil/. [Accessed: 14-Feb-2023].
+[2] [2]	“Start adult triage algorithm,” CHEMM. [Online]. Available: https://chemm.hhs.gov/startadult.htm. [Accessed: 14-Feb-2023].
+
