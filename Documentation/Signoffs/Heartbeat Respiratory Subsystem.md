@@ -144,9 +144,7 @@ The rate at which a human can breathe depends on multiple factors including age,
 | Resistor | 15k Ohm 5% 1/4W axial resistor | CF14JT15k0 | STackpole Electronics Inc | 2 | $0.10 | $0.20 |
 | Capacitor | Mica 56 pF 5% 500V Radial | CD15ED560JO3F | Cornell Dubilier Electronics (CDE) | 2 | $2.61 | $5.22 |
 | Capacitor | Mica 8200 pF 5% 500V Radial | CD30FD822JO3F | Cornell Dubilier Electronics (CDE) | 2 | $19.94 | $39.88 |
-| PCB Board | 50 Pcs Double Sided PCB Board Prototype Kit | DLB01 | SINGARE | 1 | $13.97 | $13.97 |
-| Solder | MAIYUM 63-37 Tin Lead Rosin Core Solder Wire for Electrical Soldering (0.8 mm 100g) | 43188-464408 | MAIYUM | 1 | $11.59 | $11.59 |
-|Total |  |  |  |  |  | $157.94 |
+|Total |  |  |  |  |  | $132.38 |
 
 ## Sources
 
