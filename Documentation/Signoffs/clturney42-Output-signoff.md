@@ -100,7 +100,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
   To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. In the design of the mount subsystem, which will account for speaker mounting, this constraint will be taken into account and met.
   
-  >9) Output system shall have a maximum delay of ??
+> 9) Output system shall have a maximum delay of ??
   
   
   
@@ -115,17 +115,9 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
   
   
-#### pmod AMP2 - IC-SSM2377 [3][1]
 
-The SSM2377 can deliver 2.5W of power to a load of 4Ω, and around 1.4W of power to a load of 8Ω.  
 
-According to the pmod’s reference manual as long the incoming data has a sample rate of at least 16 kHz, the amplifier will be able to handle incoming data. One of the constraints of this design is for the minimum sampling rate of analog-to-digital and digital-to-analog conversion be 40 kHz, meaning there will be no problem with the data sent to the pmod AMP2.
 
-#### Output Speaker
-
-[6]The pmod AMP2 can supply up to 2.5 watts of power to the speaker, so it’s ideal for the speaker to have a maximum power rating of 2 watts to ensure that the amplifier is able to properly supply the speaker, even in the case that the amplifier power output fluctuates.** **As outlined in the constraints, the speaker should also be able to output at a minimum frequency range of 100Hz-17Khz to account for the range that the human ear is capable of hearing.  Due to the amplifier being able to drive a load impedance of 4-8Ω, a speaker must be chosen that has an input impedance of 4Ω or greater.
-
-To fulfill each of these conditions, the OWS-5716TA-4C speaker has been chosen. According to the 5716TA datasheet[8], the speaker has a 4Ω impedence and an input power of 2 watts. This satisfies constraints 3 and 6. The sound pressure level/ sensitivity of the 5716TA is 112.5 dBA and the frequency range in which it operates is 100 Hz - 20 KHz, which is well above the sufficient amount outlined in constraints 5 and 2. This speaker well satisfies the constraints conditions needed for the speaker to be able to efficiently pair with the power amplifier and emit sound at a level sufficient for the room.
 
 #### Further connections
 
