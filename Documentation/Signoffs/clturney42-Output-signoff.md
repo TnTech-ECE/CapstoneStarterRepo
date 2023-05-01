@@ -26,8 +26,8 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 6   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB               | Constraints of room and device constraints |
 | 7   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                     | Amplifier specifications and power insurance |
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
-| 9| Output system shall have a maximum delay of ??                                                           | Device specifications and goal of system |
-
+| 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
+|10| Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom  | Ethics and Device constraints|
   
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
 According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
@@ -54,7 +54,13 @@ Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], 
 ### 8) Output system shall extend a maximum of 0.5 meters from the wall |Origin: Ethics and system delay|
 To satisfy the ethical constraints of movement impedence and reduce delay as much as possible in the system, the speaker will extend a maximum of 0.5 meters from the wall. This distance will likely be less but this constraint is set to make sure that the speaker is never in the way of individuals within the room. This distance constraint is also necessary due to the delay associated with the speed of sound and distance of the speaker from the sound source. The speaker cannot have too much delay else the anti-noise will not be in sync with outside noise.
   
-### 9) Output system shall have a maximum delay of ?? |Origin: Device specifications and goal of system|
+### 9) Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound |Origin: Device specifications and goal of system|
+  
+An ideal noise cancellation device would have no delay however, that is impossible to do when the signal is being processed and traveling through different hardware. With this in mind, the delay of the device needs to be set so that there is as minimal as possible disparity between the inputted signal and outputted noise. This can be verified and changed based on the distance the speaker is positioned from the wall.
+  
+### 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
+
+The speaker will be mounted to the wall in some way, the design for the mount will be done in a different subsystem but will be done in such a way that does not include drilling holes into or damaging the wall. This will likely be done with command strips or double sided tape since the speaker being used is not very heavy. 
   
 
 ## Buildable schematic 
@@ -100,25 +106,14 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
   To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. In the design of the mount subsystem, which will account for speaker mounting, this constraint will be taken into account and met.
   
-> 9) Output system shall have a maximum delay of ??
+> 9) Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound
   
+  Time delay of speaker sound can be found by dividing distance by speed of sound, which is 343 m/s. Testing will need to be done to see how close the speaker needs to be to the wall so that the delay is small enough to not affect the perceived sound. Factors such as how fast the speed travels through the wall and the time that the signal travels through the circuit will need to be taken into consideration. 
   
+> 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
   
+  The design for the mount will be created in a different subsystem, but according to the datasheet for the OWS-5716TA-4C, the net weight is only 84 grams. This means it is light enough to easily be mounted by command strips or double sided tape if need be. The best methodology for this will be decided in the design of the mount. And this constraint will be fulfilled. 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
 #### Further connections
 
 Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
