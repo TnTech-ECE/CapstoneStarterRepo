@@ -100,15 +100,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 7) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts 
   
-  The OWS-5716TA-4C speaker has an input power requirement of 2 watts meaning this constraint is satisfied.
+  The OWS-5716TA-4C speaker has an input power requirement of 2 watts meaning that the the 2.5 watts of power that the SSM2377 is able to deliver will be sufficient in power the speaker.
   
 > 8) Output system shall extend a maximum of 0.5 meters from the wall
   
-  To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. In the design of the mount subsystem, which will account for speaker mounting, this constraint will be taken into account and met.
-  
-> 9) Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound
-  
-  Time delay of speaker sound can be found by dividing distance by speed of sound, which is 343 m/s. Testing will need to be done to see how close the speaker needs to be to the wall so that the delay is small enough to not affect the perceived sound. Factors such as how fast the speed travels through the wall and the time that the signal travels through the circuit will need to be taken into consideration. 
+  To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. 
   
 > 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
   
