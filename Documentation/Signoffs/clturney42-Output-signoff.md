@@ -27,7 +27,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 7   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                     | Amplifier specifications and power insurance |
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
-|10| Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom  | Ethics and Device constraints|
+|10| Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom (**CURRENTLY IN WORKS**) | Ethics and Device constraints|
   
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
 According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
@@ -60,7 +60,7 @@ An ideal noise cancellation device would have no delay however, that is impossib
   
 ### 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
 
-The speaker will be mounted to the wall in some way, the design for the mount will be done in a different subsystem but will be done in such a way that does not include drilling holes into or damaging the wall. This will likely be done with command strips or double sided tape since the speaker being used is not very heavy. 
+(**UNFINISHED**)
   
 
 ## Buildable schematic 
@@ -112,7 +112,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
 > 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
   
-  The design for the mount will be created in a different subsystem, but according to the datasheet for the OWS-5716TA-4C, the net weight is only 84 grams. This means it is light enough to easily be mounted by command strips or double sided tape if need be. The best methodology for this will be decided in the design of the mount. And this constraint will be fulfilled. 
+  (**UNFINISHED**)
   
 #### Further connections
 
