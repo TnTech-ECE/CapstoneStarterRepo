@@ -57,55 +57,34 @@ We would like to thank **Dr. Jeffrey Austen** for advice and guidance during the
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
-
-### Reports
+### [Reports](/Reports)
 
 In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
 
-[Project Proposal](/Reports/Project%20Proposal/Project_ProposalV2.pdf)
+The [Project Proposal](/Reports/Project%20Proposal/Project_ProposalV2.pdf) report addresses key questions about the project. It states exactly what the problem is and what the solution plans to achieve. 
 
-Write what this is
+The [Conceptual Design and Planning](/Reports/Conceptual%20Design/Conceptual_DesignV2.pdf) report provides all specifications and constraints the project must follow. This includes standards and regulations that must be followed.
 
-[Conceptual Design and Planning](/Reports/Conceptual%20Design/Conceptual_DesignV2.pdf)
+The [Experimentation](/Reports/Experimentation) report shows [finish later]
 
-Write what this is
+The [Poster](/Reports/Poster) is [finish later]
 
-[Experimentation](/Reports/Experimentation)
+The [Final Report](/Reports/Final%20Report) includes [finish later]
 
-Write what this is
+The [Lessons Learned](/Reports/Lessons%20Learned/Lessons%20Learned.md) files shows all lessons learned throughout the process. It includes lessons in both team communication, project management, and technical knowledge.
 
-[Poster](/Reports/Poster)
-
-Write what this is
-
-[Final Report](/Reports/Final%20Report)
-
-Write what this is
-
-[Lessons Learned](/Reports/Lessons%20Learned)
-
-Write what this is
-
-### Documentation
+### [Documentation](/Documentation)
 
 In the documentaion section information regarding the documentation that is required and how it should be organized is given.
 
-[Signoffs](/Documentation/Signoffs)
+All documentation is included in the above folder. Folders for the files including schematics and images are included in their respective folders. All files related to a specific signoff are then in a subfolder labeled appropriately.
 
-Write what this is
+Documentation include all schematics, images, models, and designs used in the project. 
 
-[Meeting Minutes](/Documentation/Meeting%20Minutes)
+The [Signoffs](/Documentation/Signoffs) folder houses all approved detail designs. These designs are for each subsystem and shows all constraints. The signoffs should convince the reader that all constraints are met as well as reference all other relevant documentation in their respective folders. These signoffs should also reference any software in which is relevant.
 
-Write what this is
+The [Meeting Minutes](/Documentation/Meeting%20Minutes) folder contains dated minutes for all team meetings. This allows the reader to analyze current and previous progress in a time based manner. 
 
-Maybe include all folders, or do a paragraph explaing the other folders are documentation that is referenced in signoffs? Probably first one
+### [Software](/Software)
 
-### Software
-
-In the software directory of the repo information regarding how each team is expected to document software can be found.
-
-[Software](/Software)
-
-Explain the layout
+All software will be located in this directory. For each specific problem or system, a folder will be created that contains all relevant code along with a readme that explains installation, compiling, executing of the code.
