@@ -84,7 +84,7 @@ All documentation is included in the above folder. Folders for the files includi
 
 Documentation include all schematics, images, models, and designs used in the project. 
 
-The [Signoffs](/Documentation/Signoffs) folder houses all approved detail designs. These designs are for each subsystem and shows all constraints. The signoffs should convince the reader that all constraints are met as well as reference all other relevant documentation in their respective folders. These signoffs should also reference any software in which is relevant.
+The [Signoffs](/Documentation/Signoffs) folder houses all approved detail designs. These designs are for each subsystem and shows all constraints. The signoffs should convince the reader that all constraints are met as well as link to all other relevant documentation in their respective folders. These signoffs should also link any software in which is relevant.
 
 The [Meeting Minutes](/Documentation/Meeting%20Minutes) folder contains dated minutes for all team meetings. This allows the reader to analyze current and previous progress in a time based manner. 
 
