@@ -30,7 +30,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 **Jalene Joyce**
 
-**Dylan Mitchell**
+**Dylan Mitchell** is an Electrical Engineering student at Tennessee Technological University with a minor in Mathematics. Dylan's main interests are optoelectronics, telecommunications and microelectronics. Dylan's main focus in the project is the design of the input subsystem, which recieves the noise signal from the wall and sends it to a system for noise cancellation.
 
 **Carson Pope** is a senior Electrical Engineering major at Tennessee Technological University with a minor in Music Performance. Carson has an interest in telecommunications, signal processing, and machine learning. For this project, Carson focused on the design of the signal processor hardware along with the design of the noise cancelling software. Carson also focused on machine learning for better acoustic room response.
 
