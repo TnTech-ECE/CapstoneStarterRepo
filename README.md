@@ -34,7 +34,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 **Carson Pope** is a senior Electrical Engineering major at Tennessee Technological University with a minor in Music Performance. Carson has an interest in telecommunications, signal processing, and machine learning. For this project, Carson focused on the design of the signal processor hardware along with the design of the noise cancelling software. Carson also focused on machine learning for better acoustic room response.
 
-**Caleb Turney**
+**Caleb Turney** is an Electrical Engineering major at Tennessee Technological University. Caleb has an interest in circuit design and physical implementation. His mainrole in this project has been to learn about the different implementations for noise cancelling system as well as designing an ouput system that will properly emit anti-noise.
 
 **Jared Vega** is a senior studying Computer Engineering at Tennessee Technological University. Jared enjoys working with computer hardware and telecommunications. Jared's main goal in this project is to optimize the design of microphone inputs and help program the software. 
 
