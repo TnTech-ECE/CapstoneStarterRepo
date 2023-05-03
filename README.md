@@ -78,8 +78,6 @@ The [Lessons Learned](/Reports/Lessons%20Learned/Lessons%20Learned.md) files sho
 
 ### [Documentation](/Documentation)
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
-
 All documentation is included in the above folder. Folders for the files including schematics and images are included in their respective folders. All files related to a specific signoff are then in a subfolder labeled appropriately.
 
 Documentation include all schematics, images, models, and designs used in the project. 
