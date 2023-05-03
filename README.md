@@ -36,7 +36,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 **Caleb Turney**
 
-**Jared Vega**
+**Jared Vega** is a senior studying Computer Engineering at Tennessee Technological University. Jared enjoys working with computer hardware and telecommunications. Jared's main goal in this project is to optimize the design of microphone inputs and help program the software. 
 
 ### Faculty Supervisor
 
@@ -47,7 +47,8 @@ Below the video link show some well-taken, appropriately sized images of the pro
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
 Students and Faculty of Brown Hall, write paragraph about this group
-    
+Students and Faculty of Brown Hall - The current scope of the project is to create a device that can actively reduce background noise in a single room, meaning that the students and faculty that use Brown Hall 314 for studying, teaching, or homework will be the primary benefactors. In the future, the noise cancelling solution is ecpected to move to different rooms and buildings on the campus to reduce noise in classrooms as needed. 
+
 Schools in general (smaller paragraph)
 
 ### Recognitions
