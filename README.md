@@ -27,12 +27,16 @@ Give a brief bio for each team member and their broad contribution to the projec
 
 Jalene Joyce
 * Write here
+
 Dylan Mitchell
 * Write here
+
 Carson Pope
 * Write here
+
 Caleb Turney
 * Write here
+
 Jared Vega
 * Write here
 
