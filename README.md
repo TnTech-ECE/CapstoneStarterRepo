@@ -52,8 +52,6 @@ Schools in general (smaller paragraph)
 
 ### Recognitions
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
-
 We would like to thank **Jesse Roberts** for his contributions and feedback throughout our capstone experience as our supervisor.
 
 We would like to thank **Dr. Jeffrey Austen** for advice and guidance during the early stages of our capstone. 
@@ -61,8 +59,6 @@ We would like to thank **Dr. Jeffrey Austen** for advice and guidance during the
 ## Repo Organization
 
 ### [Reports](/Reports)
-
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
 
 The [Project Proposal](/Reports/Project%20Proposal/Project_ProposalV2.pdf) report addresses key questions about the project. It states exactly what the problem is and what the solution plans to achieve. 
 
