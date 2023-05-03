@@ -1,21 +1,16 @@
 # Active Noise Cancellation with Wall Transmission Detection
 
-An active noise solution for classrooms with capabilities of measuring the sound vibrations through walls, windows, or  other solid objects
-
 ## Executive Summary
 
-Construction noise has increased through out Tennessee Technological University as it expands. Even though the expansion of our alma mater is a generally good thing, the added noise distracts students during times of instruction. The team is actively working on a solution to outside noise through active noise control methods.
-
+Construction noise has increased throughout Tennessee Technological University as it expands. Even though the expansion of our alma mater is a generally good thing, the added noise distracts students during times of instruction. Our team is working on developing a proof of concept for an active noise cancelling solution to the growing noise pollution problem that uses the vibrations in the outer wall of a room as the input signal. 
 
 ## Capabilities
 
 Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
-
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
 
 ## Project Demonstration & Images
 
@@ -31,30 +26,36 @@ Below the video link show some well-taken, appropriately sized images of the pro
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 
 Jalene Joyce
-   ----
+* Write here
 Dylan Mitchell
-   ----
+* Write here
 Carson Pope
-   ----
+* Write here
 Caleb Turney
-   ----
+* Write here
 Jared Vega
-   ----
+* Write here
+
 ### Faculty Supervisor
 
 Tell who the faculty supervisor was for the project
 
 Prof. Jesse Roberts
-   ----
+* Write surface level information here
 
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
-    Students and Faculty of Brown Hall.
+
+Students and Faculty of Brown Hall, write paragraph about this group
+    
+Schools in general (smaller paragraph)
 
 ### Recognitions
 
 Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+
+Any names?
 
 ## Repo Organization
 
