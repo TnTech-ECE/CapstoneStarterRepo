@@ -8,9 +8,13 @@ Construction noise has increased throughout Tennessee Technological University a
 
 Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
+( Will be done later )
+
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+
+( Will be done later )
 
 ## Project Demonstration & Images
 
@@ -18,12 +22,11 @@ Give a link to a video of the project being demonstrated. The video should be ho
 
 Below the video link show some well-taken, appropriately sized images of the project.
 
+( Will be done later )
 
 ## About Us
 
 ### Team
-
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 
 **Jalene Joyce**
 
