@@ -28,7 +28,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-**Jalene Joyce**
+**Jalene Joyce** is an Electrical Engineering student at Tennessee Technological University with a minor in Mathematics. Jalene's main interest is in power systems. For this project, Jalene's focus is to work on designing the power subsystem and making sure the power supply is safe and efficient.
 
 **Dylan Mitchell** is an Electrical Engineering student at Tennessee Technological University with a minor in Mathematics. Dylan's main interests are optoelectronics, telecommunications and microelectronics. Dylan's main focus in the project is the design of the input subsystem, which recieves the noise signal from the wall and sends it to a system for noise cancellation.
 
