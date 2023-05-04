@@ -44,11 +44,9 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The customers for our project consist of the students and professors of Tennessee Technological Universty who use room 314 in Brown Hall. This project is expected to create a device that can actively reduce background noise in a single room, meaning that the students and faculty that utilize this room for studying, teaching, or homewokr will be the primary benefactors. In the future, noise cancelling soltuion is expected to move to different rooms and buildings on campus to reduce noise in classrooms as needed. The lack of outside interference in a school setting can lead to a positive growth in the education that Universities and professors are providing to students. Its obvious whether its construction happeining right outside the building or people causing unecessary commotion outside the room/building, these can take your focus away from everyones main goal in a classroom. 
 
-Students and Faculty of Brown Hall - The current scope of the project is to create a device that can actively reduce background noise in a single room, meaning that the students and faculty that use Brown Hall 314 for studying, teaching, or homework will be the primary benefactors. In the future, the noise cancelling solution is ecpected to move to different rooms and buildings on the campus to reduce noise in classrooms as needed. 
-
-Schools in general (smaller paragraph)
+Ontop of it being beneficial to Tennessee Tech, the creation of our project can assist any school setting. In due time schools that can afford it can implement the device into their classrooms to increase the success rate of their respective students. All levels of education can look into using our system.
 
 ### Recognitions
 
