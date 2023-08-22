@@ -81,14 +81,14 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz
   
-  The OWS-5716TA-4C speaker has an operating range of 100Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide    range of potential sounds that will come through the wall.
+  The CDS-27204-L1006 speaker has an operating range of 850Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide    range of potential sounds that will come through the wall.
   
   >3) The audio amplifier shall be able to deliver at least 2.0 W of continuous power at its output
   According the data sheet of the SSM2377 amplifier[1], it is about to deliver a continuous power of 2.5 W to a load of 4Ω. The selected speaker has an input impedence of 4Ω and a input power requirement of 2 W, meaning this amplifier well fulfills the constraint required by the speaker. 
 
 > 4) The speaker shall have a minimum input impedance 4Ω 
   
-   The SSM2377 amplifier is capable of driving a 4Ω load from a 5V power supply, and the OWS-5716TA-4C speaker has an input impedence of 4Ω, meaning the system will easily be able to drive the speaker.
+   The SSM2377 amplifier is capable of driving a 4Ω load from a 5V power supply, and the OCDS-27204-L1006 speaker has an input impedence of 4Ω, meaning the system will easily be able to drive the speaker.
   
 > 5) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system
   
@@ -96,11 +96,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
 > 6) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB
   
-   According the data sheet of the OWS-5716TA-4C, the speaker has an SPL value of 112.5 dB. This is well over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
+   According the data sheet of the CDS-27204-L1006, the speaker has an SPL value of 93 dB. This is over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
 
 > 7) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts 
   
-  The OWS-5716TA-4C speaker has an input power requirement of 2 watts meaning that the the 2.5 watts of power that the SSM2377 is able to deliver will be sufficient in power the speaker.
+  The CDS-27204-L1006 speaker has an input power requirement of 2 watts meaning that the the 2.5 watts of power that the SSM2377 is able to deliver will be sufficient in power the speaker.
   
 > 8) Output system shall extend a maximum of 0.5 meters from the wall
   
@@ -121,7 +121,7 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 | DEVICE                       | Quantity | Price Per Unit | Total Price |
 | -----------------            | -------- | -------------- | ----------- |
 | Pmod AMP2: Audio Amplifier   | 1        | $9.99          | $9.99       |
-| OWS-5716TA-4C Speaker        | 1        | $3.78          | $3.78       |
+| CDS-27204-L1006 Speaker        | 1        | $3.78          | $4.41       |
 |3.5mm male plug to bare wire  | 1        | $3.59          | $3.59       |
 
 ## References
@@ -140,7 +140,7 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
  
 [7] “Benefits of delta-sigma analog-to-digital conversion,” NI, 04-Apr-2023. [Online]. Available: https://www.ni.com/en-us/shop/data-acquisition/benefits-of-delta-sigma-analog-to-digital-conversion.html. [Accessed: 16-Apr-2023].
   
-[8] Ole Wolff Electronics Inc, "Preliminary Specification for speaker OWS-5716TA-4C" OWS-5716TA-4C datasheet, 14-July-2022, https://media.digikey.com/pdf/Data%20Sheets/Ole%20Wolff/OWS-5716TA-4C.pdf (accessed April 24th, 2023).
+[8] CUI Devices, "SERIES: CDS-27204-L100 | DESCRIPTION: SPEAKER" CDS-27204-L1006 datasheet, 08-May-2022, https://www.cuidevices.com/product/resource/cds-27204-l100.pdf (accessed August 22nd, 2023).
 
 
 
