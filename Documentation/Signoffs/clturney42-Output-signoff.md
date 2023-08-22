@@ -65,7 +65,8 @@ An ideal noise cancellation device would have no delay however, that is impossib
 
 ## Buildable schematic 
 
-<img width="1041" alt="Screen Shot 2023-04-24 at 4 18 06 PM" src="https://user-images.githubusercontent.com/123997954/234119103-fb11acdf-1e73-4771-b829-b34daec56d0b.png">
+<img width="1330" alt="Screen Shot 2023-08-22 at 3 58 52 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/9ecfb8b7-b702-48b3-a990-c5ef56b50feb">
+
 
 ### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
 
