@@ -22,7 +22,7 @@ The goal of the system is to cancel noise from the outside, in order for this to
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
-The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. [2]. exceeds these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [2].
+The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. [2]. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [2].
 
 #### 3.) The output signal should not experience large clipping. [Origin: Device Constraints]
 
