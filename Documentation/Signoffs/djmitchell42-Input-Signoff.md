@@ -36,6 +36,10 @@ For the processing system to properly analyze the output signal from the input s
 
 In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The VDD pin which drives the MAX9814 amplifier has a VDD range of 2.7 VDC - 5.5 VDC [4]. This will allow the input subsystem to be easily powered.
 
+#### 5.) The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
+
+The input to the processing subsystem is designed to receive a continuous-time analog voltage signal, therefore in order for the processing subsystem to function as needed the output of the input subsystem must be a continuous-time analog voltage signal.
+
 # Buildable Schematic
   
 
