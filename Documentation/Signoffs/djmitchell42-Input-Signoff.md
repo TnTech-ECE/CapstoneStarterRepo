@@ -11,7 +11,11 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
 | 2   | The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz.                 | Device constraints|
 | 3   | The output signal should not experience large clipping.                          | Device Constraints |
-| 4   | System must be powered by standard wall outlets                        | System Requirements |
+| 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
+| 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
+       
+
+
 
 
  
