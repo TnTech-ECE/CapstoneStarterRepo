@@ -13,6 +13,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
 | 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
+| 6   |  The preset gain will be set to 40 dB   | Device Constraints |
        
 
 
