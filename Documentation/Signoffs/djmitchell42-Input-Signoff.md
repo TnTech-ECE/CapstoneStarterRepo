@@ -13,7 +13,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
 | 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
-| 6   |  The preset gain will be set to 40 dB   | Device Constraints |
+| 6   |  The preset gain must be set to 40 dB   | Device Constraints |
        
 
 
@@ -41,7 +41,7 @@ In order to make powering the system less difficult, the team has decided using 
 
 The input to the processing subsystem is designed to receive a continuous-time analog voltage signal, therefore in order for the processing subsystem to function as needed the output of the input subsystem must be a continuous-time analog voltage signal.
 
-#### 6.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
+#### 6.) The preset gain must be set to 40 dB [Origin: Device Constraints]
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB and the MAX9814 amplifier has the capability to be set to a preset gain of 40 dB, therefore this gain will be utilized [4].
 
 
