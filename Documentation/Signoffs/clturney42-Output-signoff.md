@@ -27,7 +27,8 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 7   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                     | Amplifier specifications and power insurance |
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
-|10| Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom (**CURRENTLY IN WORKS**) | Ethics and Device constraints|
+|10| Speaker shall be mounted to the wall, and will not impede movement or damage the classroom  | Ethics and Device constraints|
+
   
 ### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
 According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
@@ -58,9 +59,10 @@ To satisfy the ethical constraints of movement impedence and reduce delay as muc
   
 An ideal noise cancellation device would have no delay however, that is impossible to do when the signal is being processed and traveling through different hardware. With this in mind, the delay of the device needs to be set so that there is as minimal as possible disparity between the inputted signal and outputted noise. This can be verified and changed based on the distance the speaker is positioned from the wall.
   
-### 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
+### 10) Speaker shall be mounted to the wall, and will not impede movement or damage the classroom
 
-(**UNFINISHED**)
+The speaker will be fitted into an enclosure that matches the dimensions of the speaker. This enclosure will then be mounted to the wall in an optimal position for noise cancellation. To fit this constraint, the position in which the speaker is placed will not impede movement or damage the classroom. This can be verified by confirming the placement of the speaker does not block the classroom or damage the walls or windows within the classroom.
+
   
 
 ## Buildable schematic 
@@ -107,9 +109,10 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
   To make sure that the speaker is not in a place that will impede the movement of those within the classroom, a constraint of 0.5 meters from the wall max has been placed. 
   
-> 10) Speaker shall be mounted to the wall in such a way that does not impede movement or damage the classroom
-  
-  (**UNFINISHED**)
+> 10) Speaker shall be mounted to the wall and will not impede movement or damage the classroom
+
+  The speaker will be fitted into an enclosure that will be made with a 3d printer. A front cavity and a rear cavity will be created that match the 27mm x 20mm dimensions of the CDS-27204-L1006 speaker. The rear cavity will be designed to have a depth equal to the diameter of the speaker, which is 20mm. The speakers within their enclosures will then be mounted to the wall using a command strip. The rectangular shape of the enclosure will allow for an easy application of a command strip, and the adhesive of the command strip will allow for simple connection to the mounting subsystem used for the rest of the system. Whether this be on a pcb box or to the window sill or wall. More testing will be done to find the best position for the speaker to be placed on the wall to cancel noise. The command strips will allow much maneuverability and will not damage the wall since there will be no drilling or nails.
+
   
 #### Further connections
 
