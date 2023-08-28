@@ -121,9 +121,9 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 ## BOM
 | DEVICE                       | Quantity | Price Per Unit | Total Price |
 | -----------------            | -------- | -------------- | ----------- |
-| Pmod AMP2: Audio Amplifier   | 1        | $9.99          | $9.99       |
-| CDS-27204-L1006 Speaker        | 1        | $3.78          | $4.41       |
-|3.5mm male plug to bare wire  | 1        | $3.59          | $3.59       |
+| Pmod AMP2: Audio Amplifier   | 2        | $9.99          | $19.98       |
+| CDS-27204-L1006 Speaker        | 2        | $4.11          | $8.22      |
+|3.5mm male plug to bare wire  | 2       | $3.59          | $7.18       |
 
 ## References
 
