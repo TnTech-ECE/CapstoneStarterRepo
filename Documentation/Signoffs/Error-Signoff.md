@@ -10,15 +10,15 @@ Reference link: https://www.ti.com/solution/professional-microphones-wireless-sy
 The goal of this subsystem is to input the acoustic audio from the room, amplify the audio to a workable signal, and broadcast the signal to the main processor subsystem.
 
 ## Constraints
-| No. | Constraints                                                                   | Origin             |
-|-----|-------------------------------------------------------------------------------|--------------------|
-| 1   | Microphone shall be placed within the noise control area                      | Design Requirement |
-| 2   | Microphone shall be able to measure input frequencies from 20 Hz to 20 kHz    | Design Constraint  |
-| 3   | Output signal should not be higher than 3.3 Vpp to prevent clipping.          | Device Constraint  |
-| 4   | System must be powered from a 120 V 60 Hz wall outlet                         | System Requirement |
-| 5   | The primary input sensor shall output a continuous-time analog voltage signal | System Requirement |
-| 6   | The preset gain must match the input subsystem's gain                         | Device Constraint  |
-| 7   | The subsystem delay must be less than or equal to 0.2ms                       | System Requirement |
+| No. | Constraints                                                                    | Origin             |
+|-----|--------------------------------------------------------------------------------|--------------------|
+| 1   | Microphone shall be placed within the noise control area.                      | Design Requirement |
+| 2   | Microphone shall react to input frequencies from 20 Hz to 20 kHz.              | Design Constraint  |
+| 3   | Output signal should not be higher than 3.3 Vpp to prevent clipping.           | Device Constraint  |
+| 4   | System must be powered from a 120 V 60 Hz wall outlet.                         | System Requirement |
+| 5   | The primary input sensor shall output a continuous-time analog voltage signal. | System Requirement |
+| 6   | The preset gain shall match the input subsystem's gain.                        | Device Constraint  |
+| 7   | The subsystem delay shall be less than or equal to 0.2ms.                      | System Requirement |
 
 
 <sup>1</sup> The premise of this subsystem is to collect information of the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overall goal to make the design discrete, it can still be placed close to the speaker.
@@ -68,7 +68,7 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
     ```math 
     C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
     ```
-    -  A 20 nF capacitor for C<sub>in</sub> gives roughly 79.6 Hz lower cutoff frequency, which stays within constraint 2. 
+    -  An 80 nF capacitor for C<sub>in</sub> gives roughly 19.9 Hz lower cutoff frequency, which stays within constraint 2. 
     ```math  
     C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
     ```
@@ -91,7 +91,7 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
 To keep the error subsystem consistently powered, it will use the power subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
 
 ### Input
-The system will receive a single input from the omnidirectional electret microphone and amplify it with a variable gain of 0-40 dB in 10 db increments.
+The system will receive a single input from the omnidirectional electret microphone and amplify it with a variable gain of 0-40 dB in 10 dB increments.
 According to the manufacturers of the CMC-2742PBJ-A electret microphone can operate within 100 Hz to 20 KHz and typically works with a 2 V bias voltage, which matches the bias voltage of the TS472. 
 
 
