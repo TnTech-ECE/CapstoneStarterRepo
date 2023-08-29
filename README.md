@@ -28,7 +28,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent half a year interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
 
 ### Faculty Supervisor
 
