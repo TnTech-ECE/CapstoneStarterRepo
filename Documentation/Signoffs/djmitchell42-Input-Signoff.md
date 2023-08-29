@@ -14,6 +14,8 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
 | 6   |  The preset gain must be set to 40 dB   | Device Constraints |
+| 7   |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
+
        
 
 
