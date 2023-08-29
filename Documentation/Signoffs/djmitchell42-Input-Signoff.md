@@ -46,6 +46,8 @@ The input to the processing subsystem is designed to receive a continuous-time a
 #### 6.) The preset gain must be set to 40 dB [Origin: Device Constraints]
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB and the MAX9814 amplifier has the capability to be set to a preset gain of 40 dB, therefore this gain will be utilized [4].
 
+#### 7.) The overall system delay must be less than or equal to 1.4 ms. [Origin: System Requirements]
+
 
 # Buildable Schematic
   
