@@ -47,7 +47,7 @@ The input to the processing subsystem is designed to receive a continuous-time a
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB and the MAX9814 amplifier has the capability to be set to a preset gain of 40 dB, therefore this gain will be utilized [4].
 
 #### 7.) The overall system delay must be less than or equal to 1.4 ms. [Origin: System Requirements]
-In order for the system to 
+In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system.
 
 
 # Buildable Schematic
