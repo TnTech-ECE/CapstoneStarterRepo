@@ -64,11 +64,11 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
     - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
-    -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires two equations to evaluate.
+    -  The cutoff frequency, defined by F<sub>CL</sub>, requires the equation to evaluate.
     ```math 
     C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
     ```
-    -  20 nF capacitor for C<sub>in</sub> gives roughly 79.6 Hz lower cutoff frequency, which stays within constraint 2. 
+    -  A 20 nF capacitor for C<sub>in</sub> gives roughly 79.6 Hz lower cutoff frequency, which stays within constraint 2. 
     ```math  
     C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
     ```
