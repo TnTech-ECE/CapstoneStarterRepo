@@ -38,7 +38,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Buildable Schematic (Update with KiCad)
 The image below is a buildable schematic using the TS472 Preamplifier and CMC-2742PBJ-A electret microphone.
 
-<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic.png" width="75%" height="75%">
+<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_2.png" width="75%" height="75%">
 
 
 | Component         | Value | Unit |
