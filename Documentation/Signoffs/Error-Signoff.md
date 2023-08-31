@@ -51,6 +51,8 @@ The system will receive a single input from the omnidirectional electret microph
 According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
 - R<sub>1</sub> and R<sub>2</pos>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
+ 
+
 - R<sub>3</sub>
     - 68 Ω sets the gain of the TS472 to 40 dB
 - C<sub>1,2</sub>
