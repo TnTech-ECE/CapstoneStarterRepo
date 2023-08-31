@@ -38,7 +38,7 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The elect
 
 #### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
 
-In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The TS472 very low noise microphone preamplifier from ST microelectronics satisfies this constraint by having a maximum supply voltage rating of 6 V [4], therefore the microphone preamplifier can be driven by a standard 5 VDC input.
+In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal.
 
 #### 5.) The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
 
@@ -67,7 +67,7 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 VDC to 10 VDC. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application [2].
 
 ##### TS472 Very Low Noise Microphone Amplifier
-
+The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W.  The TS472 very low noise microphone preamplifier from ST microelectronics satisfies constraint (4) by having a maximum supply voltage rating of 6 V [4], therefore the microphone preamplifier can be driven by a standard 5 VDC input. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms, this meets constraint (7). This pre-amplifier will output a continuous time voltage signal to the OPA2863-Q1 operational amplifier from Texas Instruments.
 
 
 # Bill of Materials 
@@ -86,6 +86,8 @@ The CMA-4544PF-W is the electret microphone used in the overall microphone ampli
 [3] “Aluminum electrolytic capacitors UKL low leakage current - nichicon.co.jp.” [Online]. Available:          https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-ukl.pdf. [Accessed: 22-Apr-2023]. 
 
 [4] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (accessed Aug. 31, 2023). 
+
+
 
 
 
