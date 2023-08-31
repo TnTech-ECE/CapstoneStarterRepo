@@ -38,36 +38,34 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Buildable Schematic
 The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
 
-<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_3.png" width="75%" height="75%">
+<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_4png" width="75%" height="75%">
 
 *Figure 2. Buildable Schematic*
 
 ## Analysis
-- R<sub>pos</sub> and R<sub>neg</pos>
-    - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
+- R<sub>1</sub> and R<sub>2</pos>
+    - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
-    -  The cutoff frequency, defined by F<sub>CL</sub>, requires the equation to evaluate.
+    -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires the equations to evaluate.
     ```math 
     C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
     ```
-    -  An 80 nF capacitor for C<sub>in</sub> gives roughly 19.9 Hz lower cutoff frequency, which stays within constraint 2. 
+    -  An 80 nF capacitor for C<sub>1,2</sub> gives roughly 20 Hz lower cutoff frequency, which stays within constraint 2. The capacitors
     ```math  
     C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
     ```
-    -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into a GPIO as an input, R<sub>out</sub> will effectively be high impedance making C<sub>out</sub> a very small value and insignificant for this circuit.
-- C3, Cs, Cb
-    - Specified by the manufacturers.
-- C1, C2
-    - The Higher Cutoff Frequency is defined by the manufacturers using the equation below, assuming the circuit is configured as shown in the buildable schematic shown in Figure X.
+    -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into an operational amplifier, R<sub>out</sub> will effectively be high impedance making C<sub>out</sub> a very small value and insignificant for this circuit and not depicted on the buildable schematic.
+- C3, C4, C7
+    - Specified by the manufacturers, they act as decoupling capacitors.
+- C5, C6
+    - The Higher Cutoff Frequency, F_{CH}, is defined by the manufacturers using the equation below.
     ```math
-    F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{1,2}+100*10^{-12})}
+    F_{CH} =  \frac {1} {(2 π *40*10^3 * (C_{5,6}+100*10^{-12})}
     ```
-    - 100 pF capacitors give about 19.9 kHz upper cutoff frequency, which stays within constraint 2. 
+    - 100 pF capacitors for C5 and C6 give about 20 kHz upper cutoff frequency, which stays within constraint 2. 
 - Vcc
-    - Within typical operating conditions defined by the manufacturer.     
-
-
+    - 5 V, this is within typical operating conditions defined by the manufacturer.     
 
 
 ### Power
@@ -75,7 +73,7 @@ To keep the error subsystem consistently powered, it will use the pinouts from t
 
 ### Input 
 The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 40 dB.
-According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a 2 V bias voltage, which matches the bias voltage of the TS472. 
+According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
 
 ### Output
 The CMA-4544PF-W microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
