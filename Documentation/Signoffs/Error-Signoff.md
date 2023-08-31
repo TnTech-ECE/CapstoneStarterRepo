@@ -38,7 +38,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Buildable Schematic
 The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
 
-<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_4.png" width="75%" height="75%">
+<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_5.png" width="75%" height="75%">
 
 *Figure 2. Buildable Schematic*
 
