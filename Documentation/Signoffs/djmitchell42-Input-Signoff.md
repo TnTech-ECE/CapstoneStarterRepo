@@ -25,11 +25,11 @@ The goal of the input subsystem is to accurately take in the noise input from th
  
  #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
-The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[3]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc. [2].
+The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc. [1].
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
-The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. [2]. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [2].
+The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. [2]. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [1].
 
 #### 3.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
 
@@ -37,14 +37,14 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The elect
 
 #### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
 
-In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The VDD pin which drives the MAX9814 amplifier has a VDD range of 2.7 VDC - 5.5 VDC [4]. This will allow the input subsystem to be easily powered.
+In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. 
 
 #### 5.) The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
 
 The input to the processing subsystem is designed to receive a continuous-time analog voltage signal, therefore in order for the processing subsystem to function as needed the output of the input subsystem must be a continuous-time analog voltage signal.
 
 #### 6.) The preset gain must be set to 40 dB [Origin: Device Constraints]
-In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB and the MAX9814 amplifier has the capability to be set to a preset gain of 40 dB, therefore this gain will be utilized [4].
+In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB,
 
 #### 7.) The overall system delay must be less than or equal to 1.4 ms. [Origin: System Requirements]
 In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system.
