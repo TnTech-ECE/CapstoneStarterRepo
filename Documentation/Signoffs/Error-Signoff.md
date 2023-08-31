@@ -45,7 +45,8 @@ The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544P
 ## Analysis
 - R<sub>1</sub> and R<sub>2</pos>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
-
+- R<sub>3</sub>
+    - 68 Ω sets the gain of the TS472 to 40 dB
 - C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires the equations to evaluate.
     ```math 
