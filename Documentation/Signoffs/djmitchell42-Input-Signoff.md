@@ -53,25 +53,19 @@ In order for the system to properly function the targeted sound must be canceled
 # Buildable Schematic
   
 
-![image](https://user-images.githubusercontent.com/123108478/233858831-4fdc520f-1512-4737-b4ba-90fc9c4a7494.png)
 
-
-  #### Figure 2: Planned connections utilized from pins on Adafruit AGC Electret Microphone Amplifier-MAX9814
-  
-
-The buildable schematic in Figure 2 utilizes the pins on the Adafruit Technologies AGC Electret Microphone Amplifier [1]. The first pin is the Attack/Release Ratio, which is the ratio between the attack time and the release time [4]. The output pin will be connected to the channel 1 stereo input and decoupled through a 1 uF capacitor from nichion [6]. An output capacitance range of 1 uF - 100 uF is specified by the manufacturer [1]. The gain pin will be connected to ground to allow for a 50 dB gain. The amplifier will be driven on the VDD pin by a 5 VDC signal, to allow it to be easily powered by a conventional wall-wart [5].
 
 # Analysis
 
 #### Component Details
-The overall Adafruit Technologies AGC Electret Microphone Amplifier is broken into two main components, the electret microphone and the pre-amplifier.
 
 ##### CMA-4544PF-W (Electret Microphone)
 The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 VDC to 10 VDC. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application [2].
 
-##### MAX9814 (Microphone Amplifier chip)
-The MAX9814 microphone amplifier from Maxim Integrated [4], is a cheap, high grade microphone amplifier which features automatic gain control (AGC) and a low-noise microphone bias.
-The operating voltage (VDD) of the amplifier is 3.3 VDC to 5.5 VDC. The SNR is around 60 dB which means the output signal has a low noise value. The amplifier has three preset gains which are controlled by the user. The maximum gain preset (60 dB) is the default value and requires no connections. The second highest preset gain, (50 dB) is set by connecting the gain pin to ground. The lowest preset (40 dB) is set by connecting the gain pin to VDD. The gain will be set to 40 dB to meet constraint 6. The advantage of utilizing an amplifier with automatic gain control is the advantage of minimal to no clipping occuring on the output signal and not having to readjust the gain consistently. The A/R (Attack time to Release time ratio) is able to be set to 1:4000 (default no connection), 1:2000 (connected to VDD) and 1:500 (connected to GND). Attack time is defined as the time it takes for the AGC to reduce the gain after the gain has exceeded the preset level. A shorter attack time is much more advantageous for sudden spikes in gain (impulses) in the system. Release time is defined as the time it takes for the signal to fall below the level-defined preset gain after the hold time has ended. The hold time is the delay before the release time is initiated. A large A/R will lead to higher signal quality while sacrificing speed. A smaller A/R will lead to higher speed at the sacrifice of signal quality. Therefore, for our noise cancellation application using the default setting (1:4000) would be most appropriate since the signal quality will be acceptable and the speed will be relatively high [4]. The maximum supply current (IDD) is 6 mA [4], and the input impedance (Zin) is 100 $k\Omega$ [4]. The output impedance (Zout) is 50 $\Omega$.
+##### TS472 Very Low Noise Microphone Amplifier
+
+
+
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
