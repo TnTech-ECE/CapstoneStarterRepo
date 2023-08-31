@@ -37,7 +37,7 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The elect
 
 #### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
 
-In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The TS472 very low noise microphone preamplifier from ST microelectronics satisfies this constraint by having a maximum supply voltage rating of 6 V, therefore the microphone preamplifier can be driven by a standard 5 VDC input.
+In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal. The TS472 very low noise microphone preamplifier from ST microelectronics satisfies this constraint by having a maximum supply voltage rating of 6 V [4], therefore the microphone preamplifier can be driven by a standard 5 VDC input.
 
 #### 5.) The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
 
