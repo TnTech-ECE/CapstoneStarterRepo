@@ -43,21 +43,23 @@ The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544P
 *Figure 2. Buildable Schematic*
 
 ## Analysis
+### Power
+To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. Connections can be made with soldered wire. 
+
+### Input 
+The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 40 dB.
+According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
 - R<sub>1</sub> and R<sub>2</pos>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 - R<sub>3</sub>
     - 68 Ω sets the gain of the TS472 to 40 dB
-- C<sub>in+</sub>, C<sub>in-</sub>, C<sub>out+</sub>, andC<sub>out-</sub>
+- C<sub>1,2</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires the equations to evaluate.
     ```math 
     C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
     ```
-    -  An 80 nF capacitor for C<sub>1,2</sub> gives roughly 20 Hz lower cutoff frequency, which stays within constraint 2. The capacitors
-    ```math  
-    C_{out} = \frac{1} {2 π*F_{CL}*R_{out}}
-    ```
-    -  R<sub>out</sub> relates to the load it will be connected to. Since R<sub>out</sub> will be going into an operational amplifier, R<sub>out</sub> will effectively be high impedance making C<sub>out</sub> a very small value and insignificant for this circuit and not depicted on the buildable schematic.
-- C3, C4, C7
+    -  An 80 nF capacitor for C<sub>1,2</sub> gives roughly 20 Hz lower cutoff frequency, which stays within constraint 2.
+- C<sub>3,4,7</sub>
     - Specified by the manufacturers, they act as decoupling capacitors.
 - C5, C6
     - The Higher Cutoff Frequency, F_{CH}, is defined by the manufacturers using the equation below.
@@ -66,15 +68,7 @@ The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544P
     ```
     - 100 pF capacitors for C5 and C6 give about 20 kHz upper cutoff frequency, which stays within constraint 2. 
 - Vcc
-    - 5 V, this is within typical operating conditions defined by the manufacturer.     
-
-
-### Power
-To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. Connections can be made with soldered wire. 
-
-### Input 
-The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 40 dB.
-According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
+    - 5 V, this is within typical operating conditions defined by the manufacturer.    
 
 ### Output
 The CMA-4544PF-W microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
