@@ -88,14 +88,14 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
 
 
 ### Power
-To keep the error subsystem consistently powered, it will use the power subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. It also has a shutdown mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
+To keep the error subsystem consistently powered, it will use the power subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. It also has a shutdown/sleep mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
 
-### Input
+### Input (UPDATE)
 The system will receive a single input from the omnidirectional electret microphone and amplify it with a variable gain of 0-40 dB in 10 dB increments.
 According to the manufacturers of the CMC-2742PBJ-A electret microphone can operate within 100 Hz to 20 KHz and typically works with a 2 V bias voltage, which matches the bias voltage of the TS472. 
 
 
-### Output
+### Output (UPDATE)
 The CMC-2742PBJ-A microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -42$$ where x equates to 7.97 mV. The minimum and maximum sensitivities are -45 dB and -39 dB which equate to 5.62 mV and 11.2 mV respectively. Using the maximum gain of 40 dB that the TS472 can achieve, we can expect the outputs to be within 0.562 V and 0.112 V. This will be put into the left side of the STEREO_IN defined in the main processor.  
 
@@ -108,7 +108,7 @@ The typical voltage output would be found with the equation: $$20 log(x) = -42$$
 
 
 ## References
-[1] https://www.digikey.com/en/products/detail/cui-devices/CMC-2742PBJ-A/1869986 (Microphone)
+[1] https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 (CMA-4544PF-W)
 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
 
