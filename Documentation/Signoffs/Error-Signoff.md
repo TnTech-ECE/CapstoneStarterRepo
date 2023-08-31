@@ -35,31 +35,14 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 <sup>7</sup> Given that the maximum processing time of the main processing subsystem is 1.2 ms and the total allowable delay is 1.4 ms, the worst-case delay of this subsystem is 0.2 ms. Staying within these parameters will allow the processor subsystem to use accurate data.
 
-## Buildable Schematic (Update with KiCad)
-The image below is a buildable schematic using the TS472 Preamplifier and CMC-2742PBJ-A electret microphone.
+## Buildable Schematic
+The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
 
 <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_3.png" width="75%" height="75%">
 
-
-| Component         | Value | Unit |
-|-------------------|-------|------|
-| R<sub>pos</sub>   | 50    | kΩ   |
-| R<sub>neg</sub>   | 50    | kΩ   |
-| C<sub>in+</sub>   | 20    | nF   |
-| C<sub>in-</sub>   | 20    | nF   |
-| C3                | 1     | µF   |
-| Cs                | 1     | µF   |
-| C1                | 100   | pF   |
-| C2                | 100   | pF   |
-| C<sub>out+</sub>  | ~     |      |
-| C<sub>out-</sub>  | ~     |      |
-| Cb                | 1     | µF   |
-| Vcc               | 5     | V    |
+*Figure 2. Buildable Schematic*
 
 ## Analysis
-
-### Component Details
-
 - R<sub>pos</sub> and R<sub>neg</pos>
     - Given the microphone will operate at a bias voltage of 2 V and its maximum current consumption is 0.4 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
 
@@ -88,16 +71,18 @@ The image below is a buildable schematic using the TS472 Preamplifier and CMC-27
 
 
 ### Power
-To keep the error subsystem consistently powered, it will use the power subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. It also has a shutdown/sleep mode, bringing the current draw to 1 µA. Connections can be made with soldered wire or a breadboard. 
+To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. Connections can be made with soldered wire. 
 
-### Input (UPDATE)
-The system will receive a single input from the omnidirectional electret microphone and amplify it with a variable gain of 0-40 dB in 10 dB increments.
-According to the manufacturers of the CMC-2742PBJ-A electret microphone can operate within 100 Hz to 20 KHz and typically works with a 2 V bias voltage, which matches the bias voltage of the TS472. 
+### Input 
+The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 40 dB.
+According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a 2 V bias voltage, which matches the bias voltage of the TS472. 
 
-
-### Output (UPDATE)
-The CMC-2742PBJ-A microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+### Output
+The CMA-4544PF-W microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -42$$ where x equates to 7.97 mV. The minimum and maximum sensitivities are -45 dB and -39 dB which equate to 5.62 mV and 11.2 mV respectively. Using the maximum gain of 40 dB that the TS472 can achieve, we can expect the outputs to be within 0.562 V and 0.112 V. This will be put into the left side of the STEREO_IN defined in the main processor.  
+
+### Speed
+According to the TS452 datasheet, the transient response of the component is 20 µs. The slew rate of the OPA2863-Q op-amp is 105 V/µs, which adds about 10 µs to its response, making the total delay from input to output 30 µs, below the 0.2 ms constraint.
 
 ## BOM
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
