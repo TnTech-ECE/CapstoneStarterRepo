@@ -87,6 +87,8 @@ The operating voltage (VDD) of the amplifier is 3.3 VDC to 5.5 VDC. The SNR is a
 
 [3] “Aluminum electrolytic capacitors UKL low leakage current - nichicon.co.jp.” [Online]. Available:          https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-ukl.pdf. [Accessed: 22-Apr-2023]. 
 
+[4] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (accessed Aug. 31, 2023). 
+
 
 
 
