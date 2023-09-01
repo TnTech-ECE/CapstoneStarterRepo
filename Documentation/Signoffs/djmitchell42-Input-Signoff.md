@@ -77,7 +77,8 @@ In order to make sure that the frequency response is correct based on constraint
 ```math 
 C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
 ```
-Where FCL is the desired lower corner frequency and Cin represents the values of C1 and C2 respectively.
+Where FCL is the desired lower corner frequency and Cin represents the values of C1 and C2 respectively, and 100*10^3 represents the 100 $k\Omega$ input impedance which acts like a high-pass filter [4].
+Performing this calculation leads to the required capacitance values for C1 and C2 being 79.5 nF, 80 nF is the closest actual capacitance value to this calculated value so a 80 nF capacitor will be utilized for C1 and C2.
 
 ##### LM741 Circuit in Differential Configuration
 The 
