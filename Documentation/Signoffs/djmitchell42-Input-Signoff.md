@@ -73,7 +73,11 @@ The TS472 microphone amplifier from ST microelectronics will amplify the voltage
 #### TS472 Component calculations
 The various required components that need to be connected to different pins on the TS472 must be calculated.
 (Need to ask about R1,2 calculations i.e. IDSS = 0.5 mA at 3 Vdc Rl = 2.2 kiloohms)
-In order to make sure that the frequency response is correct based on constraint (2) the capacitive elements must be designed to meet a lower cut off frequency of 20 Hz and a higher cut off frequency of 20 KHz. For C1 and C2 shown in the buildable schematic the manufacturer provides a method for calculating them based on the desired lower cutoff frequency the following equation is able to calculate this: 
+In order to make sure that the frequency response is correct based on constraint (2) the capacitive elements must be designed to meet a lower cut off frequency of 20 Hz and a higher cut off frequency of 20 KHz. For C1 and C2 shown in the buildable schematic the manufacturer provides a method for calculating them based on the desired lower cutoff frequency the following equation is able to calculate this:
+```math 
+C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
+```
+Where FCL is the desired lower corner frequency and Cin represents the values of C1 and C2 respectively.
 
 ##### LM741 Circuit in Differential Configuration
 The 
