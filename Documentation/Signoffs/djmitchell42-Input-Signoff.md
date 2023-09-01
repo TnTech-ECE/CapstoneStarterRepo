@@ -71,7 +71,7 @@ The CMA-4544PF-W is the electret microphone used in the overall microphone ampli
 The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin The TS472 very low noise microphone preamplifier from ST microelectronics satisfies constraint (4) by having a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [4], therefore the microphone preamplifier can be driven by a standard 5 VDC input. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms, this meets constraint (7). The TS472 will output a continuous time voltage signal to the LM741 circuit designed in differential configuration so it can accurately recieve the analog signal from the differential outputs on the TS472. The preset gain can be set to 40 dB by connecting 68 $\Omega$, matching the gain of the error subsystem.
 
 #### TS472 Component calculations
-
+The various required components that need to be connected to different pins on the TS472 must be calculated.
 ##### LM741 Circuit in Differential Configuration
 The 
 
