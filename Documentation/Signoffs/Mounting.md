@@ -48,6 +48,7 @@ The mounting subsystem should be designed to ensure that the weighted average no
 The mounting subsystem should be designed such that wires are easily identified and discerned from other conductors, for example the ground wire must be easily found when comparing it to live conductors. The wires must also be insulated and be in a proper location to minimize the probability of electrical shock occuring.
 
 #### 9.) System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. [Origin: IEEE standards]
+The mounting subsystem needs to follow this guide to limit outside noise which could lower the effectiveness of the noise cancellation capability of the overall system.
 
 
 
