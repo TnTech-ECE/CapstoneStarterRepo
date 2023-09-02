@@ -18,7 +18,7 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | 6  |  System shall minimize its visual distraction | System Requirements |
 | 7  |  System shall follow OSHA standard 1910.95 for occupational noise exposure.| OSHA standards |
 | 8  |  System shall follow OSHA standard 1910.304-305 for wiring design and protection | OSHA standards |
-
+| 9  |  System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. | IEEE standards |
 
 
 
