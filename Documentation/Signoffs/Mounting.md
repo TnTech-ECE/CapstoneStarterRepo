@@ -31,8 +31,6 @@ This constraint is needed to ensure safety and minimize difficulty navigating th
 #### 3.) The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
 This is in order to make sure the system is small and compact and does impede movement throughout the classroom.
 
-
-
 #### 4.) System shall have a mount or multiple mounts so that it can be installed in the classroom in an unfrequented area. [Origin: System Requirements]
 This will allow the system to perform its functionality without causing difficulty for students or faculty performing
 their required tasks.
@@ -47,6 +45,7 @@ Classrooms should be distraction free to allow students to learn new information
 The mounting subsystem should be designed to ensure that the weighted average noise does not exceed 85 dB from the overall system to guarantee no hearing loss will occur.
 
 #### 8.) System shall follow OSHA standard 1910.304-305 for wiring design and protection. [Origin: OSHA standards]
+The mounting subsystem should be designed such that wires are easily identified and discerned from other conductors, for example the ground wire must be easily found when comparing it to live conductors. The wires must also be insulated and be in a proper location to minimize the probability of electrical shock occuring.
 
 #### 9.) System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. [Origin: IEEE standards]
 
