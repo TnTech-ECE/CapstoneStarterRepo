@@ -14,6 +14,8 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | 2  |  System shall not impede movement and easy access throughout the room  | System Requirements |
 | 3  |  The speaker output shall not be more than 0.5 m from window or wall being measured | System Requirements |
 | 4  |  System shall have a mount or multiple mounts so that it can be installed in the classroom in an unfrequented area.| System Requirements |
+| 5  |  Shall be easy to remove and setup in a different room | System Requirements |
+| 6  |  System shall minimize its visual distraction | System Requirements |
 
 
 
