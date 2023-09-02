@@ -44,7 +44,7 @@ Other classrooms will experience noise and the ease in which the system can be m
 Classrooms should be distraction free to allow students to learn new information effectively, therefore the system will not be distracting to students or faculty.
 
 #### 7.) System shall follow OSHA standard 1910.95 for occupational noise exposure. [Origin: OSHA standards]
-
+The mounting subsystem should be designed to ensure that the weighted average noise does not exceed 85 dB from the overall system to guarantee no hearing loss will occur.
 
 #### 8.) System shall follow OSHA standard 1910.304-305 for wiring design and protection. [Origin: OSHA standards]
 
