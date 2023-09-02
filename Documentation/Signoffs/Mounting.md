@@ -5,13 +5,11 @@ Each signoff markdown file must contain the following sections and information:
 
 ## Function of the Subsystem
 
-You must explain clearly what role the subsystem will play in the first section. This should clearly explain what the system is expected to do (ie. its atomic purpose from the conceptual design).
+The mounting subsystem is the design for how all of the other subsystems will be mounted to fulfill the constraints outlined in the conceptual design.
 
 ## Constraints
 
-The second section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
 
-Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
 
 ## Buildable schematic 
 
