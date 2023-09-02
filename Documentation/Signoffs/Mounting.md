@@ -29,6 +29,7 @@ This constraint is needed to ensure safety and minimize difficulty navigating th
 
 
 #### 3.) The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
+This is in order to make sure the system is small and compact and does impede movement throughout the classroom.
 
 
 
