@@ -21,8 +21,8 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | 9  |  System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. | IEEE standards |
 
 
- #### 1.)	The overall system delay must be less than or equal to 1.4 ms . [Origin: System Requirements]
-
+#### 1.)	The overall system delay must be less than or equal to 1.4 ms . [Origin: System Requirements]
+The delay of the system must be less than the delay of the sound in order for the noise cancellation to be effective. This constraint is dependent on distance, if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
 #### 2.) System shall not impede movement and easy access throughout the room. [Origin: System Requirements]
 
