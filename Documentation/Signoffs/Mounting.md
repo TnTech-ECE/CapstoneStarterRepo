@@ -12,6 +12,8 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | --- | --------------------------------------------------------------------- | ----------------- |
 | 1  |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
 | 2  |  System shall not impede movement and easy access throughout the room  | System Requirements |
+| 3  |  The speaker output shall not be more than 0.5 m from window or wall being measured | System Requirements |
+
 
 
 
