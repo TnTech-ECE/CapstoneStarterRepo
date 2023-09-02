@@ -11,6 +11,7 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
 | 1  |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
+| 2  |  System shall not impede movement and easy access throughout the room  | System Requirements |
 
 
 
