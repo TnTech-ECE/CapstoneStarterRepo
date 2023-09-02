@@ -16,6 +16,9 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | 4  |  System shall have a mount or multiple mounts so that it can be installed in the classroom in an unfrequented area.| System Requirements |
 | 5  |  Shall be easy to remove and setup in a different room | System Requirements |
 | 6  |  System shall minimize its visual distraction | System Requirements |
+| 7  |  System shall follow OSHA standard 1910.95 for occupational noise exposure.| OSHA standards |
+| 8  |  System shall follow OSHA standard 1910.304-305 for wiring design and protection | OSHA standards |
+
 
 
 
