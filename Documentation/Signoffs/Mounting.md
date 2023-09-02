@@ -25,7 +25,7 @@ The mounting subsystem is the design for how all of the other subsystems will be
 The delay of the system must be less than the delay of the sound in order for the noise cancellation to be effective. This constraint is dependent on distance, if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
 #### 2.) System shall not impede movement and easy access throughout the room. [Origin: System Requirements]
-This constraint is needed to ensure safety and minimize difficulty navigating the classroom during the operation of the system.
+This constraint is needed to ensure safety and minimize difficulty navigating the classroom during the operation of the system. This constraint also will follow The Americans with Disabilities Act allowing for individuals with limited mobility to easily navigate the room.
 
 
 #### 3.) The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
