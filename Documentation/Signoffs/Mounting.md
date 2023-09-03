@@ -85,8 +85,13 @@ The actual design artifacts (3d model, Cad files, gerber files, etc) must be upl
 
 ## Analysis
 
-A complete and relevant analysis of the design showing that it **should** meet the constraints and perform the desired function must be given. This analysis must be comprehensive and well explained so that it is convincing to the faculty supervisor. If the signoff request is not convincing either because the requirements and constraints are insufficient, unjustified, or not appropriately shown to be met by the design, then approval will not be given. Without approval, the components for the subsystem aren't allowed to be ordered. 
+1.) Physical mount details
+
 
 ## BOM
 
 A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table.
+
+## References
+
+https://www.amazon.com/SRIWATANA-Floating-Shelves-Capacity-Weathered/dp/B07Q5RZVVW/ref=sr_1_7?crid=LOGA7RBQSXKH&keywords=large%2Bwall%2Bshelf&qid=1693771539&refinements=p_n_feature_eleven_browse-bin%3A23576958011&rnid=23576923011&s=furniture&sprefix=large%2Bwall%2Bshelf%2Caps%2C169&sr=1-7&th=1 (Amazon shelf)
