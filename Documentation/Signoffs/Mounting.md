@@ -91,6 +91,7 @@ The physical mount that will be utilized is the SRIWATANA floating shelf which c
 
 2.) Command strip details
 
+The command strips that will be used will be the command black picture hanging strip mixed pack which is sold through Amazon. There are 8 pairs of X-large strips in this pack will hold 20 lbs. This will prevent damage to Tennessee Tech property while still allowing the physical mount to installed, which meets constraint (10).
 
 
 
