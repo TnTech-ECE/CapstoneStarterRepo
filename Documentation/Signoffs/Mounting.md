@@ -58,6 +58,7 @@ The mounting subsystem needs to follow this guide to limit outside noise which c
 The mounting subsystem cannot be physically drilled into the wall since this would damage Tennessee Tech property, therefore command strips will be utilized, these command strips are rated for 20 lbs. The system will add weight, therefore to compensate for the additional weight, the weight requirement will be lessened to a maximum amount of 17 lbs for the physical mount to prevent failure.
 #### 11.) The width of the physical mount cannot exceed 49 in. [Origin: Window width measurements ]
 
+The physical mount cannot be wider than the window in order to be fastened to the window. The measured width of the window in Brown 314 is 49 inches (4 feet 1 inch), therefore the selected physical mount must meet this requirement
 
 
 
