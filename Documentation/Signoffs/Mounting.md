@@ -19,6 +19,8 @@ The mounting subsystem is the design for how all of the other subsystems will be
 | 7  |  System shall follow OSHA standard 1910.95 for occupational noise exposure.| OSHA standards |
 | 8  |  System shall follow OSHA standard 1910.304-305 for wiring design and protection | OSHA standards |
 | 9  |  System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. | IEEE standards |
+| 10  |  Overall weight of mounting subsystem cannot exceed 17 lbs.| Weight requirement |
+
 
 
 #### 1.)	The overall system delay must be less than or equal to 1.4 ms . [Origin: System Requirements]
@@ -49,6 +51,10 @@ The mounting subsystem should be designed such that wires are easily identified 
 
 #### 9.) System shall follow the IEEE 518-1982 Guide for the Installation of Electrical Equipment to Minimize Electrical Noise Inputs to Controllers from External Sources. [Origin: IEEE standards]
 The mounting subsystem needs to follow this guide to limit outside noise which could lower the effectiveness of the noise cancellation capability of the overall system.
+
+#### 10.) Overall weight of mounting subsystem cannot exceed 17 lbs. [Origin: Weight requirement ]
+The mounting subsystem cannot be physically drilled into the wall since this was damage Tennessee Tech property, therefore command strips will be utilized, these command strips are rated for 20 lbs. The system will add weight, therefore to compensate for the additional weight, the weight requirement will be lessened to a maximum amount of 17 lbs for the physical mount to prevent failure.
+
 
 
 
