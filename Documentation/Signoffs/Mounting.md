@@ -53,7 +53,7 @@ The mounting subsystem should be designed such that wires are easily identified 
 The mounting subsystem needs to follow this guide to limit outside noise which could lower the effectiveness of the noise cancellation capability of the overall system.
 
 #### 10.) Overall weight of mounting subsystem cannot exceed 17 lbs. [Origin: Weight requirement ]
-The mounting subsystem cannot be physically drilled into the wall since this was damage Tennessee Tech property, therefore command strips will be utilized, these command strips are rated for 20 lbs. The system will add weight, therefore to compensate for the additional weight, the weight requirement will be lessened to a maximum amount of 17 lbs for the physical mount to prevent failure.
+The mounting subsystem cannot be physically drilled into the wall since this would damage Tennessee Tech property, therefore command strips will be utilized, these command strips are rated for 20 lbs. The system will add weight, therefore to compensate for the additional weight, the weight requirement will be lessened to a maximum amount of 17 lbs for the physical mount to prevent failure.
 
 
 
