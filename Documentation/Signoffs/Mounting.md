@@ -87,6 +87,12 @@ The actual design artifacts (3d model, Cad files, gerber files, etc) must be upl
 
 1.) Physical mount details
 
+The physical mount that will be utilized is the SRIWATANA floating shelf which can be purchased from Amazon. The weight of the shelf is 4.6 lbs which meets constraint (10). The width of the shelf is 16.5 in which meets constraint (11). The floating shelf will be mounted to the window by utilizing command strips rated for 20 lbs and the system components will be placed on the shelf. The length of the mount is 11.8 in.
+
+2.) Command strip details
+
+
+
 
 ## BOM
 
