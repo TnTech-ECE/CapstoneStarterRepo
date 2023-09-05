@@ -114,6 +114,10 @@ The command strips that will be used will be the command black picture hanging s
 
 ## References
 
-https://www.amazon.com/SRIWATANA-Floating-Shelves-Capacity-Weathered/dp/B07Q5RZVVW/ref=sr_1_7?crid=LOGA7RBQSXKH&keywords=large%2Bwall%2Bshelf&qid=1693771539&refinements=p_n_feature_eleven_browse-bin%3A23576958011&rnid=23576923011&s=furniture&sprefix=large%2Bwall%2Bshelf%2Caps%2C169&sr=1-7&th=1 (Amazon shelf)
+1. [Amazon Shelf] 
 
-https://www.amazon.com/dp/B09XJDQCG6/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=5bb9cc62e41d7067569bfbdbb3611e78&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=3a3d188f-0701-494f-b07f-4e7c62285293&pd_rd_w=039JW&pd_rd_wg=H5pvQ&qid=1693773858&ref_=sbx_be_s_sparkle_mcd_asin_1_img&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&th=1 (Command Strips)
+2. [Command Strips]
+
+[Amazon Shelf]: https://www.amazon.com/SRIWATANA-Floating-Shelves-Capacity-Weathered/dp/B07Q5RZVVW/ref=sr_1_7?crid=LOGA7RBQSXKH&keywords=large%2Bwall%2Bshelf&qid=1693771539&refinements=p_n_feature_eleven_browse-bin%3A23576958011&rnid=23576923011&s=furniture&sprefix=large%2Bwall%2Bshelf%2Caps%2C169&sr=1-7&th=1
+
+[Command Strips]: https://www.amazon.com/dp/B09XJDQCG6/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=5bb9cc62e41d7067569bfbdbb3611e78&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=3a3d188f-0701-494f-b07f-4e7c62285293&pd_rd_w=039JW&pd_rd_wg=H5pvQ&qid=1693773858&ref_=sbx_be_s_sparkle_mcd_asin_1_img&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&th=1
