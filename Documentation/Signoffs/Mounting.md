@@ -76,7 +76,7 @@ The physical mount cannot be wider than the window in order to be fastened to th
 
 
 ## Buildable schematic 
-<img src="/Documentation/Images/Mounting/Top_Down.png" alt=" Buildable Schematic of mounting system top-down view">
+<img src="/Documentation/Images/Mounting/Top_Down.png" width= "80%" height = "80%" alt=" Buildable Schematic of mounting system top-down view">
 
 *Figure 1. Buildable Schematic of mounting system top-down view*
 
@@ -106,7 +106,9 @@ The command strips that will be used will be the command black picture hanging s
 
 ## BOM
 
-A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table.
+| DEVICE            | Quantity | Price Per Unit | Total Price |
+| ----------------- | -------- | -------------- | ----------- |
+| ADSP-BF706-EZMINI | 1        | $49.33        | $49.33    |
 
 ## References
 
