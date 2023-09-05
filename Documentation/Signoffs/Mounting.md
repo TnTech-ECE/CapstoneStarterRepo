@@ -106,9 +106,11 @@ The command strips that will be used will be the command black picture hanging s
 
 ## BOM
 
-| DEVICE            | Quantity | Price Per Unit | Total Price |
-| ----------------- | -------- | -------------- | ----------- |
-| ADSP-BF706-EZMINI | 1        | $49.33        | $49.33    |
+| DEVICE                                           | Quantity | Price Per Unit | Total Price |
+| -------------------------------------------------| -------- | ---------------| ----------- |
+| SRIWATANA Floating Shelves Wall Mounted Set of 2 | 1        | $49.33         | $49.33      |
+| Command Black Picture Hanging Strip Mixed Pack   | 1        | $9.98          | $9.98       |
+
 
 ## References
 
