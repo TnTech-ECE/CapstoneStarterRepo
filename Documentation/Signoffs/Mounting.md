@@ -76,9 +76,14 @@ The physical mount cannot be wider than the window in order to be fastened to th
 
 
 ## Buildable schematic 
-<img src="/Documentation/Images/Mounting/Buildable_Schematic.png" alt=" Buildable Schematic of mounting system with top-down and side view">
+<img src="/Documentation/Images/Mounting/Top_Down.png" alt=" Buildable Schematic of mounting system top-down view">
 
-*Figure 1. Buildable Schematic of mounting system with top-down and side view*
+*Figure 1. Buildable Schematic of mounting system top-down view*
+
+
+<img src="/Documentation/Images/Mounting/Side_View.png" alt=" Buildable Schematic of mounting system side view">
+
+*Figure 2. Buildable Schematic of mounting system side view*
 
 
 The third section should show the buildable schematic directly embedded in the markdown file as a jpeg image. If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
