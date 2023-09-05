@@ -3,7 +3,7 @@
 ## Function of the Subsystem
 
 ##### Pseudo-Code Flowchart
-<img src="/Documentation/Images/BluetoothCommunication/Conceptual/" width="60%" height="60%">
+<img src="/Documentation/Images/Bluetooth-Communication/Conceptual/ArduinoComm.png" width="60%" height="60%">
 
 The function of this subsystem is to connect the main processor subsystem to the machine learning subsystem wirelessly.
 
