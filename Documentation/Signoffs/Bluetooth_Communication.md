@@ -35,7 +35,7 @@ The function of this subsystem is to connect the main processor subsystem to the
 
 ## Buildable schematic
 
-![image](/Documentation/Images/BluetoothCommunication/Buildable-Schematics/BluetoothCommSchematic.png)  
+![image](/Documentation/Images/Bluetooth-Communication/Buildable-Schematics/BluetoothCommSchematic.png)  
 
 The above image is a schematic of the Arduino Uno WiFi REV2, the schematic focuses on the most important aspects of the device with respect to the overall design goal. The schematic also shows how the system connects to the main processor subsystem and power management subsystem. 
 
