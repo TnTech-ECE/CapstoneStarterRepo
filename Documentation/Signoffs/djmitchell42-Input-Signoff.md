@@ -7,7 +7,7 @@
 The goal of the input subsystem is to accurately take in the noise input from the wall and transmit it to the processing subsystem.
 # Constraints
 | No. | Constraints                                                           | Origin            |
-| --- | --------------------------------------------------------------------- | ----------------- |
+| --- | --------------------------------------------------------------------- | ----------------- | 
 | 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
 | 2   | The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz.                 | Device constraints|
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
