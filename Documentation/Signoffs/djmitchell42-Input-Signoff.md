@@ -86,6 +86,7 @@ The output capacitors (C5 and C6) can be calculated by using the required higher
 Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, therefore the required component value for C5 and C6 is 100 pF.
 
 ##### LM741 Circuit in Differential Configuration
+The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output is the difference between the two inputs. The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [3]. The output voltage from the designed circuit will be an in phase and unity gain version of (OUT+) - (OUT-). 
 
 
 # Bill of Materials 
