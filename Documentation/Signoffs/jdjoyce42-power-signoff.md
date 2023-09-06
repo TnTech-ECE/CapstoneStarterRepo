@@ -17,7 +17,6 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to supply 5V DC and 5.2mA of current to Error subsystem                           | Design Constraint |
 | 4   | Shall be able to supply 5V DC and 5.2mA of current to Input subsystem                                 | Design Constraint |
 | 5   | Shall be able to supply 12V DC and 100mA of current to Output subsystem                                      | Design Constraint |
-| 6   | Shall meet the IEC 60950-1 Standard                                   | Design Constraint |
 
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. The only subsystem that doesnt need 5V DC is the Output subsystem which requires 12V If this is not met it could damage something or cause it to just not work.
