@@ -43,7 +43,7 @@ The goal of this subsystem is to process the input signal, and output an appropr
 
 ## Buildable schematic
 
-![image](/Documentation/Images/Main-Processor/Buildable-Schematics/DSPBOARD_REV3.png)
+![image](/Documentation/Images/Main-Processor/Buildable-Schematics/DSPModel_REV4.png)
 
 The above image is a schematic of the ADSP-BF706 EZ-KIT Mini, the schematic focuses on the most important aspects of ths device with respect to the overall design goal. The schematic shows stereo input and output ports along with a micro USB input and the subsystems that will be connected to this device.  
 
