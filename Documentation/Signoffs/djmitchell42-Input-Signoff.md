@@ -55,7 +55,8 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 
 
 # Buildable Schematic
-![Schematic](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/cc9dcc09-5883-4b78-88fd-e7f5f3cbd2b3)
+Documentation/Images/input/image.png
+<img src="/Documentation/Images/input/image.png" width="75%" height="75%">
 *Figure 1: Buildable Schematic for Input subsystem*
 
 
