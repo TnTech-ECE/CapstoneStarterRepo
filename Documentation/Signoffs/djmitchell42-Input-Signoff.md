@@ -55,8 +55,8 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 
 
 # Buildable Schematic
-Documentation/Images/input/image.png
 <img src="/Documentation/Images/input/image.png" width="75%" height="75%">
+
 *Figure 1: Buildable Schematic for Input subsystem*
 
 
