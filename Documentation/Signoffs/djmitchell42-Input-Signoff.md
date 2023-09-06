@@ -26,11 +26,11 @@ The goal of the input subsystem is to accurately take in the noise input from th
  
  #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
-The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Inc. [1].
+The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1].
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
-The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [1].
+The frequencies a human can hear are in the range of 20 Hz – 20 kHz, therefore the frequency range of the noise cancellation devices should match this range.
 
 #### 3.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
 
@@ -66,7 +66,7 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 #### Component Details
 
 ##### CMA-4544PF-W (Electret Microphone)
-The CMA-4544PF-W is the electret microphone used in the overall microphone amplifier circuit. This microphone has an SNR of 60 dBA with an operating voltage from 3 VDC to 10 VDC. The signal-to-noise ratio is relatively high, meaning there is very little noise in the output signal, which is heavily needed in a noise cancellation application [2].
+The electret microphone CMA-4544PF-W from CUI Devices meets constraint (2) by providing the ideal frequency range of 20 Hz – 20 kHz [1]. The operating supply voltage range for the microphone is 3 VDC to 10 VDC. The microphone will be supplied from the power subsystem with a 5 VDC input.
 
 ##### TS472 Very Low Noise Microphone Amplifier
 The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin The TS472 very low noise microphone preamplifier from ST microelectronics satisfies constraint (4) by having a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [4], therefore the microphone preamplifier can be driven by a standard 5 VDC input. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms, this meets constraint (7). The TS472 will output a continuous time voltage signal to the LM741 circuit designed in differential configuration so it can accurately recieve the analog signal from the differential outputs on the TS472. The preset gain can be set to 40 dB by connecting 68 $\Omega$, matching the gain of the error subsystem.
