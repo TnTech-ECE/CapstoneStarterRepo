@@ -33,7 +33,7 @@ The goal of the system is to cancel noise from the outside, in order for this to
 The frequencies a human can hear are in the range of 20 Hz – 20 kHz, therefore the frequency range of the noise cancellation devices should match this range.
 
 #### 3.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
-
+In order for the processing subsystem to not experience clipping the output signal from the input subsystem should be no greater than 3.3 Vpp due to the supply voltage of 3.3 V on the processing subsystem.
 
 
 #### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
