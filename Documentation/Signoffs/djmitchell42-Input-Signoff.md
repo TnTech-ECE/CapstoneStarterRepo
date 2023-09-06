@@ -30,7 +30,7 @@ The goal of the system is to cancel noise from the outside, in order for this to
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
-The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. [2]. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [1].
+The frequencies a human can hear are in the range of 20 Hz – 20 kHz. The electret microphone CMA-4544PF-W from CUI Inc. meets these expectations by providing the ideal frequency range of 20 Hz – 20 kHz [1].
 
 #### 3.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
 
@@ -101,9 +101,9 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 
 [2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects, 05-Apr-2020. [Online]. Available: https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
-[3] “Aluminum electrolytic capacitors UKL low leakage current - nichicon.co.jp.” [Online]. Available:          https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-ukl.pdf. [Accessed: 22-Apr-2023]. 
-
 [4] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (accessed Aug. 31, 2023). 
+
+[4] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
 
 
 
