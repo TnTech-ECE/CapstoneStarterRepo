@@ -12,7 +12,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   | System shall convert wall AC Voltage to 5V DC Voltage         | Design Constraint |
+| 1   | System shall convert wall AC Voltage to a voltage that can range from 11.4V to 12.6V        | Design Constraint |
 | 2   | Shall be able to supply 5V DC and 100mA of current to main processor subsystem                   | Design Constraint |
 | 3   | Shall be able to supply 5V DC and 5.2mA of current to Error subsystem                           | Design Constraint |
 | 4   | Shall be able to supply 5V DC and 5.2mA of current to Input subsystem                                 | Design Constraint |
