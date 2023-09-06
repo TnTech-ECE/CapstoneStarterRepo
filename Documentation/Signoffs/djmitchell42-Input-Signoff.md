@@ -92,7 +92,7 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
 | STMicroelectronics TS472                           | 2        | $7.95          | $15.90  | $16.64  |
-| Texas Instruments LM741                            | 2        | $0.37          | $0.74   |
+| LM741 Op-Amp                                       | 2        | $2.12          | $4.24   |         |
 
 
 # References
@@ -101,7 +101,7 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 
 [2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects, 05-Apr-2020. [Online]. Available: https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
-[4] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (accessed Aug. 31, 2023). 
+[3] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (accessed Aug. 31, 2023). 
 
 [4] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
 
