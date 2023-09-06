@@ -31,14 +31,14 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 <sup>5</sup> The error subsystem's output will be inserted into the main processing subsystem which requires a continuous analog voltage signal.
 
-<sup>6</sup> The gain from the error and input subsystem need to be the same to simplify the arithmetic from the processing subsystem. The agreed preset gain for this project was 40 dB.
+<sup>6</sup> The gain from the error and input subsystem need to be the same to simplify the arithmetic from the processing subsystem. The agreed preset gain for this project was 20 dB.
 
 <sup>7</sup> Given that the maximum processing time of the main processing subsystem is 1.2 ms and the total allowable delay is 1.4 ms, the worst-case delay of this subsystem is 0.2 ms. Staying within these parameters will allow the processor subsystem to use accurate data.
 
 ## Buildable Schematic
 The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
 
-<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_5.png" width="75%" height="75%">
+    <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_6.png" width="75%" height="75%">
 
 *Figure 2. Buildable Schematic*
 
@@ -47,20 +47,20 @@ The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544P
 To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. The typical power consumption of the op-amp is 50 mW. Connections to each component can be made with soldered wire. 
 
 ### Input 
-The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 40 dB.
+The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 20 dB.
 According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
 - R<sub>1,2</sub>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
  
 - R<sub>3</sub>
-    - 68 Ω sets the gain of the TS472 to 40 dB
+    - 47 kΩ sets the gain of the TS472 to 20 dB
  
 - R<sub>4,5,6,7</sub>
     - The equal resistor values set the op-amp to act as a differential to a single output with a gain of one.
 - C<sub>1,2</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires the equations to evaluate.
     ```math 
-    C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
+    C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$
     ```
     -  An 80 nF capacitor for C<sub>1,2</sub> gives roughly 20 Hz lower cutoff frequency, which stays within constraint 2.
 - C<sub>3,4,7,8,9</sub>
@@ -75,8 +75,17 @@ According to the manufacturers of the CMA-4544PF-W electret microphone can opera
     - 5 V, this is within typical operating conditions defined by the manufacturer.    
 
 ### Output
-The CMA-4544PF-W microphone has a typical sensitivity of -42 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
-The typical voltage output would be found with the equation: $$20 log(x) = -42$$ where x equates to 7.97 mV. The minimum and maximum sensitivities are -45 dB and -39 dB which equate to 5.62 mV and 11.2 mV respectively. Using the maximum gain of 40 dB that the TS472 can achieve, we can expect the outputs to be within 0.562 V and 0.112 V. This will be put into the left side of the STEREO_IN defined in the main processor.  
+The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV. This will be put into the left side of the STEREO_IN defined in the main processor.  
+
+<img src="/Documentation/Images/Error/Diagrams/differential_opAmp_Design.png" width="75%" height="75%">
+
+*Figure 3. Differential to single op-amp design on LTSpice*
+
+<img src="/Documentation/Images/Error/Diagrams/differential_opAmp_Graph.png" width="75%" height="75%">
+
+*Figure 4. LTSpice simulation*
+
 
 ### Speed
 According to the TS452 datasheet, the transient response of the component is 20 µs. The slew rate of the LM741 op-amp is 0.5 V/µs, which adds about 2 µs to its response, making the total delay from input to output 22 µs, below the 0.2 ms constraint.
@@ -95,3 +104,5 @@ According to the TS452 datasheet, the transient response of the component is 20 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
 
 [3] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
+
+[4] https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation (Differential Op Amp Equation)
