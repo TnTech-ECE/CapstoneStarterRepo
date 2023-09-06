@@ -13,7 +13,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
 | 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
-| 6   |  The preset gain must be set to 40 dB   | Device Constraints |
+| 6   |  The preset gain must be set to 20 dB   | Device Constraints |
 | 7   |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
 | 8   |  The input subsystem and error subsystem will utilize the same components for more ease in comparison  | System Requirements |
 
@@ -44,8 +44,8 @@ In order to make powering the system less difficult, the team has decided using 
 
 The input to the processing subsystem is designed to receive a continuous-time analog voltage signal, therefore in order for the processing subsystem to function as needed the output of the input subsystem must be a continuous-time analog voltage signal.
 
-#### 6.) The preset gain must be set to 40 dB [Origin: Device Constraints]
-In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 40 dB, therefore the input subsystem must also have a gain of 40 dB.
+#### 6.) The preset gain must be set to 20 dB [Origin: Device Constraints]
+In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 20 dB, therefore the input subsystem must also have a gain of 20 dB.
 
 #### 7.) The overall system delay must be less than or equal to 1.4 ms. [Origin: System Requirements]
 In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system.
