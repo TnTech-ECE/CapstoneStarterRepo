@@ -103,8 +103,10 @@ The figure above shows the voltage from the OUT+ pin and the output voltage from
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
-| STMicroelectronics TS472                           | 2        | $7.95          | $15.90  | $16.64  |
-| LM741 Op-Amp                                       | 2        | $2.12          | $4.24   |         |
+| STMicroelectronics TS472                           | 2        | $1.70          | $3.40   | $6.40   |
+| LM741 Op-Amp                                       | 2        | $0.75          | $1.50   |         |
+| CMA-4544PF-W Electret Microphone                   | 2        | $0.75          | $1.50   |         |
+
 
 
 # References
