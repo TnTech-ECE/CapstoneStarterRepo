@@ -38,17 +38,17 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 ## Buildable Schematic
 The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
 
-    <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_6.png" width="75%" height="75%">
+<img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_6.png" width="75%" height="75%">
 
 *Figure 2. Buildable Schematic*
 
 ## Analysis
 ### Power
-To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. The typical power consumption of the op-amp is 50 mW. Connections to each component can be made with soldered wire. 
+To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. The typical power consumption of the op-amp is 100 mW. Connections to each component can be made with soldered wire. 
 
 ### Input 
 The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 20 dB.
-According to the manufacturers of the CMA-4544PF-W electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
+According to the manufacturers of the CMA-4544PF-W, the electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
 - R<sub>1,2</sub>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
  
@@ -65,8 +65,8 @@ According to the manufacturers of the CMA-4544PF-W electret microphone can opera
     -  An 80 nF capacitor for C<sub>1,2</sub> gives roughly 20 Hz lower cutoff frequency, which stays within constraint 2.
 - C<sub>3,4,7,8,9</sub>
     - Specified by the manufacturers, they act as decoupling capacitors.
-- C5, C6
-    - The Higher Cutoff Frequency, F_{CH}, is defined by the manufacturers using the equation below.
+- C<sub>5, 6</sub>
+    - The Higher Cutoff Frequency, F<sub>CH</sub>, is defined by the manufacturers using the equation below.
     ```math
     F_{CH} =  \frac {1} {(2 π *40*10^3) * (C_{5,6}+100*10^{-12})}
     ```
@@ -78,14 +78,23 @@ According to the manufacturers of the CMA-4544PF-W electret microphone can opera
 The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV. This will be put into the left side of the STEREO_IN defined in the main processor.  
 
+
+
+
+The LM741 operational amplifier from Texas Instruments [3]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive differential voltage signal and OUT- is the negative differential voltage signal. The output voltage from the designed circuit will be an in-phase and unity gain version of (OUT+) - (OUT-).
+
 <img src="/Documentation/Images/Error/Diagrams/differential_opAmp_Design.png" width="75%" height="75%">
 
 *Figure 3. Differential to single op-amp design on LTSpice*
+
+
+Figure 3 shows an LT Spice version of the design. The OUT-pin is set to a 1 kHz 1 V peak sine wave, while the OUT-pin is set to a 1 kHz 2 V peak sine wave. The output voltage therefore is expected to (OUT+) - (OUT-) 1 V peak at the same frequency. The output voltage should have unity gain and also be in phase with the inputs.
 
 <img src="/Documentation/Images/Error/Diagrams/differential_opAmp_Graph.png" width="75%" height="75%">
 
 *Figure 4. LTSpice simulation*
 
+Figure 4 shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work and in most cases OUT- will be close to zero, therefore the differential amplifier then acts like a unity gain amplifier.
 
 ### Speed
 According to the TS452 datasheet, the transient response of the component is 20 µs. The slew rate of the LM741 op-amp is 0.5 V/µs, which adds about 2 µs to its response, making the total delay from input to output 22 µs, below the 0.2 ms constraint.
@@ -93,13 +102,14 @@ According to the TS452 datasheet, the transient response of the component is 20 
 ## BOM
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
 |------------------------------------------------------|----------|----------------|-------------|
-| CMC-2742PBJ-A Electret Microphone                    | 2        | $7.95          | $15.90      |
-| TS472 Pre-amp                                        | 2        | $1.38          | $2.76       |
-| LM741 Op-Amp                                         | 2        | $2.12          | $4.24       |
+| CMA-4544PF-W Electret Microphone                     | 2        | $0.75          | $1.50       |
+| TS472 Pre-amp                                        | 2        | $1.70          | $3.40       |
+| LM741 Op-Amp                                         | 2        | $0.75          | $1.50       |
+| Total                                                |          |                | $6.40       |
 
 
 ## References
-[1] https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 (CMA-4544PF-W)
+[1] https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 (CMA-4544PF-W Electret Microphone)
 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
 
