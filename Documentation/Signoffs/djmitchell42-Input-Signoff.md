@@ -88,6 +88,14 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 ##### LM741 Circuit in Differential Configuration
 The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output is the difference between the two inputs. The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [3]. The output voltage from the designed circuit will be an in phase and unity gain version of (OUT+) - (OUT-). 
 
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/eea79e97-25b2-4ab5-a34a-39b72bc1b45b)
+
+The figure above shows an LT Spice version of the design. The OUT- pin in this case is set to a 1 kHz 1 V peak sine wave, while the OUT - pin is set to a 1 kHz 2 V peak sine wave. The output voltage therefore is expected to (OUT+) - (OUT-) 1 V peak at the same frequency. The output voltage should have unity gain and also be in phase with the inputs.
+
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/cdcd70a9-bfa2-49b5-b433-d2dd52a4c9ab)
+
+The figure above shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work and in most cases OUT- will be close to zero, therefore the differential amplifier then acts like a unity gain amplifier.
+
 
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
