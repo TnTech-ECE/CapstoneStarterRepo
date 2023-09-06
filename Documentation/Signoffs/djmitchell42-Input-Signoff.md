@@ -91,8 +91,8 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
-| Adafruit AGC Electret Microphone Amplifier MAX9814 | 2        | $7.95          | $15.90  | $16.64  |
-| Nichion Electrolytic Capacitor ( 1 uF)             | 2        | $0.37          | $0.74   |
+| STMicroelectronics TS472                           | 2        | $7.95          | $15.90  | $16.64  |
+| Texas Instruments LM741                            | 2        | $0.37          | $0.74   |
 
 
 # References
