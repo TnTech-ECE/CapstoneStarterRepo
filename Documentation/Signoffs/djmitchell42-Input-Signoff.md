@@ -14,7 +14,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
 | 6   |  The preset gain must be set to 20 dB   | Device Constraints |
-| 7   |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
+| 7   |  The overall system delay must be less than or equal to 0.1 ms  | System Requirements |
 | 8   |  The input subsystem and error subsystem will utilize the same components for more ease in comparison  | System Requirements |
 
        
@@ -47,8 +47,8 @@ The input to the processing subsystem is designed to receive a continuous-time a
 #### 6.) The preset gain must be set to 20 dB [Origin: Device Constraints]
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 20 dB, therefore the input subsystem must also have a gain of 20 dB.
 
-#### 7.) The overall system delay must be less than or equal to 1.4 ms. [Origin: System Requirements]
-In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system.
+#### 7.) The overall system delay must be less than or equal to 0.1 ms. [Origin: System Requirements]
+In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system. This will be split between the error subsystem and input subsystem, therefore the input subsystem has a maximum delay of 0.1 ms.
 
 #### 8.) The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
 In order to ensure discrepancies caused by a different input subsystem does not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
