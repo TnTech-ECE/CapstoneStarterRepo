@@ -92,7 +92,7 @@ The LM741 operational amplifier from Texas Instruments [4]. will be used to take
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/eea79e97-25b2-4ab5-a34a-39b72bc1b45b)
 *Figure 2: LT Spice design for LM741 amplifier*
 
-The figure above shows an LT Spice version of the design. The OUT- pin in this case is set to a 1 kHz 1 V peak sine wave, while the OUT + pin is set to a 1 kHz 2 V peak sine wave. The output voltage therefore is expected to (OUT+) - (OUT-) 1 V peak at the same frequency. The output voltage should have unity gain and also be in phase with the inputs. 
+The figure above shows an LT Spice version of the design. The OUT- pin in this case is set to a 1 kHz 1 V peak sine wave, while the OUT + pin is set to a 1 kHz 2 V peak sine wave. The output voltage therefore is expected to (OUT+) - (OUT-) which would be 1 V peak at the same frequency. The output voltage should have unity gain and also be in phase with the inputs. 
 
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/cdcd70a9-bfa2-49b5-b433-d2dd52a4c9ab)
 *Figure 3: Out+ (red) vs. Vout (blue)*
