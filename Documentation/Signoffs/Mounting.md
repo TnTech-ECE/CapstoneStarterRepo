@@ -1,8 +1,4 @@
 
-# Required sections
-
-Each signoff markdown file must contain the following sections and information:
-
 ## Function of the Subsystem
 
 The mounting subsystem is the design for how all of the other subsystems will be mounted to fulfill the constraints outlined in the conceptual design.
