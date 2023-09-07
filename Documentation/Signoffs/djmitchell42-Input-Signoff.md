@@ -115,12 +115,12 @@ The figure above shows the voltage from the OUT+ pin and the output voltage from
 
 [2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects, 05-Apr-2020. [Online]. Available: https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
-[3] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html (Accessed Aug. 31, 2023). 
+[3] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html [Accessed: 31-Aug-2023]. 
 
-[4] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
+[4] "LM741," Texas Instruments, https://www.ti.com/product/LM741?qgpn=lm741 [Accessed: 31-Aug-2023]
 
-[5] https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation 
-    (Differential Op Amp Equation)
+[5] "How to derive the differential amplifier equation?," Roxy, https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation [Accessed: 5-Sept-2023]
+    
 
 
 
