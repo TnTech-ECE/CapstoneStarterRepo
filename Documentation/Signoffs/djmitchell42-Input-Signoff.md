@@ -1,7 +1,7 @@
 # Input Subsystem
 ![image](https://user-images.githubusercontent.com/123108478/232335159-9e5c57ee-099e-4713-ae00-44db177d7364.png)
 
-  #### Figure 1: Diagram of input subsystem
+*Figure 1: Diagram of input subsystem*
   
 
 The goal of the input subsystem is to accurately take in the noise input from the wall and transmit it to the processing subsystem.
@@ -57,7 +57,7 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 # Buildable Schematic
 <img src="/Documentation/Images/input/image.png" width="75%" height="75%">
 
-*Figure 1: Buildable Schematic for Input subsystem*
+*Figure 2: Buildable Schematic for Input subsystem*
 
 
 
@@ -90,12 +90,12 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$.  The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [4]. The output voltage from the designed circuit will be in phase and unity gain version of (OUT+) - (OUT-). The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem.
 
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/eea79e97-25b2-4ab5-a34a-39b72bc1b45b)
-*Figure 2: LT Spice design for LM741 amplifier*
+*Figure 3: LT Spice design for LM741 amplifier*
 
 The figure above shows an LT Spice version of the design. The OUT- pin in this case is set to a 1 kHz 1 V peak sine wave, while the OUT + pin is set to a 1 kHz 2 V peak sine wave. The output voltage therefore is expected to (OUT+) - (OUT-) which would be 1 V peak at the same frequency. The output voltage should have unity gain and also be in phase with the inputs. 
 
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/cdcd70a9-bfa2-49b5-b433-d2dd52a4c9ab)
-*Figure 3: Out+ (red) vs. Vout (blue)*
+*Figure 4: Out+ (red) vs. Vout (blue)*
 
 The figure above shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work and in most cases OUT- will be close to zero, therefore the differential amplifier then acts like a unity gain amplifier.
 
