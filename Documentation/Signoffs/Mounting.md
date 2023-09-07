@@ -6,7 +6,7 @@ The mounting subsystem will hold the input subsystem, processing subsystem and e
 ## Constraints
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1  |  The overall system delay must be less than or equal to 1.4 ms  | System Requirements |
+| 1  |  The overall system length from input to speaker can be no greater than 1.575 ft  | System Requirements |
 | 2  |  System shall not impede movement and easy access throughout the room  | American Disabilities Act |
 | 3  |  The speaker output shall not be more than 0.5 m from window or wall being measured | System Requirements |
 | 4  |  System shall have a mount or multiple mounts so that it can be installed in the classroom in an unfrequented area.| System Requirements |
@@ -21,7 +21,7 @@ The mounting subsystem will hold the input subsystem, processing subsystem and e
 
 
 
-#### 1.)	The overall system delay must be less than or equal to 1.4 ms . [Origin: System Requirements]
+#### 1.)	The overall system length from input to speaker can be no greater than 1.575 ft. [Origin: System Requirements]
 
 The delay of the system must be less than the delay of the sound in order for the noise cancellation to be effective. This constraint is dependent on distance, if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
