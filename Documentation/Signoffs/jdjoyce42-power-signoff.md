@@ -17,6 +17,8 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to supply 5V DC and 5.2mA of current to Error subsystem                           | Design Constraint |
 | 4   | Shall be able to supply 5V DC and 5.2mA of current to Input subsystem                                 | Design Constraint |
 | 5   | Shall be able to supply 12V DC and 100mA of current to Output subsystem                                      | Design Constraint |
+| 6   | Device shall not reach 40°C (140°F)                                 | Design Constraint |
+| 7   | System shall be powered by standard wall outlet                                 | Design Constraint |
 
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. The only subsystem that doesnt need 5V DC is the Output subsystem which requires 12V If this is not met it could damage something or cause it to just not work.
@@ -30,6 +32,11 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 <sup>5</sup>  The Output subsystem requires 12V DC and 100mA of current in order for it to be functional. This will allow the sytem to produce a output.
 
+
+<sup>6</sup>  The system will not reach 40°C (140°F) in order to avoid fire hazards.
+
+
+<sup>7</sup> The system will be powered by a standard wall outlet in order to avoid the use of batteries and enable it to be used for longer periods of time.
 
 
 
