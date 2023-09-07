@@ -1,7 +1,7 @@
 
 ## Function of the Subsystem
 
-The mounting subsystem will hold the input subsystem, processing subsystem and error subsystem in a unfrequented location.
+The mounting subsystem will hold the input subsystem, processing subsystem and error subsystem in an unfrequented location.
 
 ## Constraints
 | No. | Constraints                                                           | Origin            |
