@@ -19,7 +19,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | No. | Constraints                                                                                           | Origin                               |
 | --- | ------------------------------------------------------------------------------------------------------| ---------------------                |  
 | 1   | The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply  | Device specifications                |
-| 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz  | Device constraints and human biology|
+| 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 1KHz-17KHz  | Device constraints and human biology|
 | 3   | The audio amplifier shall be able to deliver at least 2.0 W of continuous power at its output        | Device constraints and speaker constraints |
 | 4   | The speaker shall have a minimum input impedance 4Ω                                                   | audio amplifier specifications       |
 | 5   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                                                                                                                    | Conceptual design and to fulfill goal of system |
