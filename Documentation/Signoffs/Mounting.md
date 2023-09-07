@@ -1,7 +1,7 @@
 
 ## Function of the Subsystem
 
-The mounting subsystem is the design for how all of the other subsystems will be mounted to fulfill the constraints outlined in the conceptual design.
+The mounting subsystem will hold the input subsystem, processing subsystem and error subsystem in a unfrequented location.
 
 ## Constraints
 | No. | Constraints                                                           | Origin            |
