@@ -26,7 +26,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
  
  #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
-The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium.
+The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium.
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
