@@ -26,7 +26,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
  
  #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
-The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1].
+The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium. The electret microphone can read the sound vibrations through a medium. This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1].
 
 #### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
@@ -66,7 +66,7 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 #### Component Details
 
 ##### CMA-4544PF-W (Electret Microphone)
-The electret microphone CMA-4544PF-W from CUI Devices meets constraint (2) by providing the ideal frequency range of 20 Hz – 20 kHz [1]. The operating supply voltage range for the microphone is 3 VDC to 10 VDC. The microphone will be supplied from the power subsystem with a 5 VDC input. The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium which meets constraint (1). The electret microphone CMA-4544PF-W from CUI Devices meets constraint (2) by providing the ideal frequency range of 20 Hz – 20 kHz [1]. This microphone will accurately measure acoustic vibrations which meets constraint (1). The operating supply voltage range for the microphone is 3 VDC to 10 VDC. The microphone will be supplied from the power subsystem with a 5 VDC input. The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV. This will be put into the right side of the STEREO_IN defined in the main processor.   
 
 ##### TS472 Very Low Noise Microphone Amplifier
