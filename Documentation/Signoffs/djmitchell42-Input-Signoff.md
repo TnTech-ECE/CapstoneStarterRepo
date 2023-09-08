@@ -11,7 +11,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
 | 2   | The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz.                 | Device constraints|
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
-| 4   | System must be powered from a 120 V 60 Hz wall outlet                        | System Requirements |
+| 4   | System must be powered by a 5 VDC signal                     | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
 | 6   |  The preset gain must be set to 20 dB   | Device Constraints |
 | 7   |  The overall system delay must be less than or equal to 0.1 ms  | System Requirements |
@@ -36,7 +36,7 @@ The frequencies a human can hear are in the range of 20 Hz – 20 kHz, therefore
 In order for the processing subsystem to not experience clipping the output signal from the input subsystem should be no greater than 3.3 Vpp due to the supply voltage of 3.3 V on the processing subsystem.
 
 
-#### 4.) System must be powered by standard wall outlets. [Origin: System Requirements]
+#### 4.) System must be powered by a 5 VDC signal. [Origin: System Requirements]
 
 In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal.
 
@@ -62,15 +62,15 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 
 
 # Analysis
-
+The error and input subsystem are nearly identical in design except for mounting therefore this meets constraint (8).
 #### Component Details
 
 ##### CMA-4544PF-W (Electret Microphone)
-This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium which meets constraint (1). The electret microphone CMA-4544PF-W from CUI Devices meets constraint (2) by providing the ideal frequency range of 20 Hz – 20 kHz [1]. This microphone will accurately measure acoustic vibrations which meets constraint (1). The operating supply voltage range for the microphone is 3 VDC to 10 VDC. The microphone will be supplied from the power subsystem with a 5 VDC input. The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium which meets constraint (1). The electret microphone CMA-4544PF-W from CUI Devices meets constraint (2) by providing the ideal frequency range of 20 Hz – 20 kHz [1]. This microphone will accurately measure acoustic vibrations which meets constraint (1). The operating supply voltage range for the microphone is 3 VDC to 10 VDC. The microphone will be supplied from the power subsystem with a 5 VDC input which meets constraint (4). The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV. This will be put into the right side of the STEREO_IN defined in the main processor.   
 
 ##### TS472 Very Low Noise Microphone Amplifier
-The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin The TS472 very low noise microphone preamplifier from ST microelectronics satisfies constraint (4) by having a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [3], therefore the microphone preamplifier can be driven by a standard 5 VDC input. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms, this meets constraint (7). The TS472 will output a continuous time voltage signal to the operational amplifier circuit designed in differential configuration so it can accurately recieve the analog signal from the differential outputs on the TS472 [4]. The preset gain can be set to 20 dB by connecting 47 $k\Omega$, matching the gain of the error subsystem [3]. The maximum supply current for the TS472 is 2.4 mA, at 5 VDC the total output power that will have to be provided by the power subsystem is 12 mW.
+The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin The TS472 very low noise microphone preamplifier from ST microelectronics satisfies constraint (4) by having a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [3], therefore the microphone preamplifier can be driven by a standard -5 VDC input and +5 VDC input which meets constraint (4). The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms, this meets constraint (7). The TS472 will output a continuous time voltage signal to the operational amplifier circuit designed in differential configuration so it can accurately recieve the analog signal from the differential outputs on the TS472 [4]. The preset gain can be set to 20 dB by connecting 47 $k\Omega$, matching the gain of the error subsystem which meets constraint (6), [3]. The maximum supply current for the TS472 is 2.4 mA, at 5 VDC the total output power that will have to be provided by the power subsystem is 12 mW.
 
 #### TS472 Component calculations
 The various required components that need to be connected to different pins on the TS472 must be calculated.
@@ -87,7 +87,7 @@ The output capacitors (C5 and C6) can be calculated by using the required higher
 Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, therefore the required component value for C5 and C6 is 100 pF.
 
 ##### LM741 Circuit in Differential Configuration
-The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$.  The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [4]. The output voltage from the designed circuit will be in phase and unity gain version of (OUT+) - (OUT-). The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem.
+The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$.  The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [4]. The output voltage from the designed circuit will be in phase and unity gain version of (OUT+) - (OUT-). The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem. The differential amplifier will output a continuous time analog voltage signal which meets constraint (5).
 
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/eea79e97-25b2-4ab5-a34a-39b72bc1b45b)
 *Figure 3: LT Spice design for LM741 amplifier*
