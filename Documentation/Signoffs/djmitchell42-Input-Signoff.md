@@ -24,33 +24,33 @@ The goal of the input subsystem is to accurately take in the noise input from th
 
  
  
- #### 1.)	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
+ <sup>1</sup>	Input microphone shall measure acoustic vibrations through the medium. [ Input subsystem functionality requirement]
 
 The goal of the system is to cancel noise from the outside, in order for this to be accomplished, a device must be able to measure the sound vibrations through the physical medium.
 
-#### 2.) The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
+<sup>2</sup> The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz. [Origin: Device Constraints]
 
 The frequencies a human can hear are in the range of 20 Hz – 20 kHz, therefore the frequency range of the noise cancellation devices should match this range.
 
-#### 3.) The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
+<sup>3</sup> The output signal should not be higher than 3.3 Vp-p to prevent clipping. [Origin: Device Constraints]
 In order for the processing subsystem to not experience clipping the output signal from the input subsystem should be no greater than 3.3 Vpp due to the supply voltage of 3.3 V on the processing subsystem.
 
 
-#### 4.) System must be powered by a 5 VDC signal. [Origin: System Requirements]
+<sup>4</sup> System must be powered by a 5 VDC signal. [Origin: System Requirements]
 
 In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal.
 
-#### 5.) The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
+<sup>5</sup> The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
 
 The input to the processing subsystem is designed to receive a continuous-time analog voltage signal, therefore in order for the processing subsystem to function as needed the output of the input subsystem must be a continuous-time analog voltage signal.
 
-#### 6.) The preset gain must be set to 20 dB [Origin: Device Constraints]
+<sup>6</sup> The preset gain must be set to 20 dB [Origin: Device Constraints]
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 20 dB, therefore the input subsystem must also have a gain of 20 dB.
 
-#### 7.) The overall system delay must be less than or equal to 0.1 ms. [Origin: System Requirements]
+<sup>7</sup> The overall system delay must be less than or equal to 0.1 ms. [Origin: System Requirements]
 In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system. This will be split between the error subsystem and input subsystem, therefore the input subsystem has a maximum delay of 0.1 ms.
 
-#### 8.) The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
+<sup>8</sup> The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
 In order to ensure discrepancies caused by a different input subsystem does not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
 
 
