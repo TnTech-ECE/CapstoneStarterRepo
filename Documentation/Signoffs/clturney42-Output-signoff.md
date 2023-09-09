@@ -18,26 +18,26 @@ The goal of the output subsystem is to take the analog signal received from the 
   
 | No. | Constraints                                                                                           | Origin                               |
 | --- | ------------------------------------------------------------------------------------------------------| ---------------------                |  
-| 1   | The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply  | Device specifications                |
+| 1   | The Audio amplifier shall be supplied a minimum of 8.0 V and maximum of 18 V from the power supply  | Device specifications                |
 | 2   | The audio amplifier and speaker shall be able to output at a minimum frequency range of 1KHz-17KHz  | Device constraints and human biology|
-| 3   | The audio amplifier shall be able to deliver at least 2.0 W of continuous power at its output        | Device constraints and speaker constraints |
+| 3   | The audio amplifier shall be able to deliver at least 10.0 W of continuous power at its output        | Device constraints and speaker constraints |
 | 4   | The speaker shall have a minimum input impedance 4Ω                                                   | audio amplifier specifications       |
 | 5   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                                                                                                                    | Conceptual design and to fulfill goal of system |
 | 6   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB               | Constraints of room and device constraints |
-| 7   | Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts                     | Amplifier specifications and power insurance |
+| 7   | Speaker shall have an input power rating maximum of 15 watts                     | Amplifier specifications and power insurance |
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
 |10| Speaker shall be mounted to the wall, and will not impede movement or damage the classroom  | Ethics and Device constraints|
 
   
-### 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply.     |Origin: Device specifications|
-According to the SSM2377 datasheet [1], The Pmod AMP2 can drive a 4-8Ω load as long as it is supplied a voltage range of 2.5-5.5 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
+### 1) The Audio amplifier shall be supplied a minimum of 8.0 V and maximum of 15 V from the power supply.     |Origin: Device specifications|
+According to the AA-AB32231 [1], The audio amplifier can drive a 4Ω load as long as it is supplied a voltage range of 8-18 volts, with the typical amount being 12 volts. With this in mind it is imperative that a constraint is included that ensures a correct amount of power is supplied to the amplifier.
 
 
 ### 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 1KHz-17Khz.    |Origin: Device constraints and human biology|
 The frequency range that the human ear can hear is generally in the range of 20Hz-20Khz, this range is subject to change with age, but this is the minimum and maximum. With this in mind it would be ideal for the speaker to able to output at a frequency range that covers most of the values that the human ear can perceive. This also means that the audio amplifier should be able to take in and output this range of frequencies. Therefore, a constraint is set that ensures the speaker and audio amplifier can output at a range of 1KHz-17Khz, this range allows a bit more adaptability to the design but covers an appropriate range of necessary sounds that the device will encounter. 
   
-### 3) The audio amplifier shall be able to deliver at least 2.0 W of continuous power at its output     |Device constraints and speaker constraints|
+### 3) The audio amplifier shall be able to deliver at least 10.0 W of continuous power at its output     |Device constraints and speaker constraints|
 To properly drive the speaker in which it is outputting to, the audio amplifier needs to be able to supply at least the input rated power of the speaker. To provide the most efficiency there should also be room for error, in the case that the power from the amplifier fluctuates. This constraint will follow closesly with the constraint for the input power of the speaker and is included to ensure enough power to the speaker is supplied.
 
 ### 4) The speaker shall have a minimum input impedance 4Ω |Origin: audio amplifier specifications|
@@ -47,10 +47,10 @@ When it comes to speaker, there is a built-in input impedance that the device ha
 The processing portion of the system is going to process a signal and convert it to analog to be sent to the output. To properly make use of this analog input the output subsystem must be able to take in this analog signal and after amplifying it, output it as an acoustic sound wave that will attenuate noise. With this in mind, the output system is being designed in a way that allows the amplifier to take in an analog input and properly interface with the speaker to emit and appropriate output.
 
 ### 6) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB. |Origin: Constraints of room and device constraints|
-Sound pressure level (SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through [5]. Speakers with an SPL of 84 decibels or lower are considered poor and inefficient while speakers with an efficiency of 92 or higher are considered clear and loud. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropriate SPL to cover a portion of the room is a 90 dB SPL. 
+Sound pressure level (SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through [5]. The sound pressure level of the speaker will need to be higher than the sound that it is trying to cancel in order for it to effecitvely cancel the sound. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropriate SPL to cover a portion of the room is a 90 dB SPL. 
 
-### 7) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts |Origin: Amplifier specifications and power insurance|
-Due to the amplifier being able to supply a continuous power of 1.4 - 2.5W [1], an appropriate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power 1.5-2 times higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 2 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are slight fluctuations in the system. The inclusion of a minimum of 1 watt of power is to ensure that a speaker is chosen that has sufficient power to be used to cancel noise within the room.
+### 7) Speaker shall have an input power rating maximum of 16 watts |Origin: Amplifier specifications and power insurance|
+Due to the amplifier being able to supply a continuous power of 16 W [1], an appropriate speaker must be selected so that the amplifier has enough power to drive it. A good rule of thumb is to have the amplifier used have an output power appropriately higher than the speakers power rating. With this in mind, the speaker that is used should have a power rating of 15 watts or less. This ensures that the amplifier will be able to consistently drive the speaker with enough power, even if there are slight fluctuations in the system. 
 
 ### 8) Output system shall extend a maximum of 0.5 meters from the wall |Origin: Ethics and system delay|
 To satisfy the ethical constraints of movement impedence and reduce delay as much as possible in the system, the speaker will extend a maximum of 0.5 meters from the wall. This distance will likely be less but this constraint is set to make sure that the speaker is never in the way of individuals within the room. This distance constraint is also necessary due to the delay associated with the speed of sound and distance of the speaker from the sound source. The speaker cannot have too much delay else the anti-noise will not be in sync with outside noise.
@@ -59,7 +59,7 @@ To satisfy the ethical constraints of movement impedence and reduce delay as muc
   
 An ideal noise cancellation device would have no delay however, that is impossible to do when the signal is being processed and traveling through different hardware. With this in mind, the delay of the device needs to be set so that there is as minimal as possible disparity between the inputted signal and outputted noise. This can be verified and changed based on the distance the speaker is positioned from the wall.
   
-### 10) Speaker shall be mounted to the wall, and will not impede movement or damage the classroom
+### 10) Speaker shall be mounted, and will not impede movement or damage the classroom
 
 The speaker will be fitted into an enclosure that matches the dimensions of the speaker. This enclosure will then be mounted to the wall in an optimal position for noise cancellation. To fit this constraint, the position in which the speaker is placed will not impede movement or damage the classroom. This can be verified by confirming the placement of the speaker does not block the classroom or damage the walls or windows within the classroom.
 
@@ -70,7 +70,7 @@ The speaker will be fitted into an enclosure that matches the dimensions of the 
 <img width="1330" alt="Screen Shot 2023-08-22 at 3 58 52 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/9ecfb8b7-b702-48b3-a990-c5ef56b50feb">
 
 
-### **Figure 3: pmodAMP2 connected to speaker with appropriate specifications**
+### **Figure 3: Audio Amplifier AA-AB32231 connected to speaker with appropriate specifications**
 
 The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the power and ground cables from the speaker can be connected.
 
@@ -130,9 +130,9 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 
 ## References
 
-[1] Analog Devices, "Filterless, High Efficiency, Mono 2.5 W Class-D Audio Amplifier" SSM2377 datasheet, 2011, https://www.analog.com/media/en/technical-documentation/data-sheets/SSM2377.pdf (accessed April 15th, 2023).
+[1] Sure Electronics, "AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board" AA-AB32231 datasheet, 2011, (https://www.parts-express.com/pedocs/manuals/320-329--aa-ab32231-1-or-2-channel-configurable-16w-amp-board.pdf) (accessed September 9th, 2023).
 
-[2] “pmod AMP2 schematic,” pmodAMP2, 22-Dec-2011. [Online]. Available: https://reference.digilentinc.com/_media/reference/pmod/pmodamp2/pmodamp2_sch.pdf. [Accessed: 15-Apr-2023].  
+[2] “2*10 watt @ 8ohm, D-class Audio Amplifier Board - EUA3110” , AA-AB32231 , 21-June-2011. [Online]. https://www.parts-express.com/pedocs/tech-diagrams/320-329-parts-express-technical-diagram.pdf. [Accessed: 15-Apr-2023].  
 
 [3] “PMODAMP2™ reference manual - digilent,” PmodAMP2™ Reference Manual, 15-Apr-2016. [Online]. Available: https://digilent.com/reference/_media/reference/pmod/pmodamp2/pmodamp2_rm.pdf. [Accessed: 16-Apr-2023]. 
 
