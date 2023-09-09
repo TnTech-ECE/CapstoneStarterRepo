@@ -9,7 +9,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- | 
 | 1   | Input microphone shall measure acoustic vibrations through the medium.          | Input subsystem functionality requirement |
-| 2   | The input microphone shall be able to measure input frequencies from 20 Hz to 20 kHz.                 | Device constraints|
+| 2   | The input system shall be able to measure input frequencies from 20 Hz to 20 kHz.                 | Device constraints|
 | 3   | The output signal should not be higher than 3.3 Vp-p to prevent clipping.                          | Device Constraints |
 | 4   | System must be powered by a 5 VDC signal                     | System Requirements |
 | 5   |  The primary input sensor shall output a continuous-time analog voltage signal   | System Requirements |
@@ -75,17 +75,17 @@ The TS472 microphone amplifier from ST microelectronics will amplify the voltage
 
 #### TS472 Component calculations
 The various required components that need to be connected to different pins on the TS472 must be calculated.
-In order to make sure that the frequency response is correct based on constraint (2) the capacitive elements must be designed to meet a lower cut off frequency of 20 Hz and a higher cut off frequency of 20 KHz. For C1 and C2 shown in the buildable schematic the manufacturer provides a method for calculating them based on the desired lower cutoff frequency the following equation is able to calculate this:
+The capacitive elements must be designed to meet a lower cut off frequency of 20 Hz and a higher cut off frequency of 20 KHz <sup>2</sup>. For C1 and C2 shown in the buildable schematic the manufacturer provides a method for calculating them based on the desired lower cutoff frequency the following equation is able to calculate this:
 ```math 
 C_{in} = \frac{1} {2 π*F_{CL}*100*10^3}$ 
 ```
 Where FCL is the desired lower corner frequency and Cin represents the values of C1 and C2 respectively, and 100*10^3 represents the 100 $k\Omega$ input impedance which acts like a high-pass filter [3].
-Performing this calculation leads to the required capacitance values for C1 and C2 being 79.5 nF, 80 nF is the closest actual component value to this calculated value so a 80 nF capacitor will be utilized for C1 and C2.
+Performing this calculation leads to the required capacitance values for C1 and C2 being 79.5 nF, 80 nF is the closest actual component value to this calculated value so a 80 nF capacitor will be utilized for C1 and C2 <sup>2</sup>.
 The output capacitors (C5 and C6) can be calculated by using the required higher cut off frequency of 20 kHz. Using the following equation provided by the manufacturer:
  ```math
   F_{CH} =  \frac {1} {(2 π *40*10^3) * (C_{5,6}+100*10^{-12})}
  ```
-Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, therefore the required component value for C5 and C6 is 100 pF.
+Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, therefore the required component value for C5 and C6 is 100 pF <sup>2</sup>.
 
 ##### LM741 Circuit in Differential Configuration
 The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential outputs from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$.  The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [4]. The output voltage from the designed circuit will be in phase and unity gain version of (OUT+) - (OUT-). The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem. The differential amplifier will output a continuous time analog voltage signal to the STEREO_IN input of the processing subsystem <sup>5</sup>.
