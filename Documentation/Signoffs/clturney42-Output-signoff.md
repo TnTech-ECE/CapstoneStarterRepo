@@ -78,20 +78,20 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 ### Fulfilling Constraints 
   
-> 1) The Audio amplifier shall be supplied a minimum of 2.5 V and maximum of 5.5 V from the power supply
+> 1) The Audio amplifier shall be supplied a minimum of 8.0 V and maximum of 18.0 V from the power supply
   
-  The design for the power system will ensure that a minimum of 2.5 Volts will be supplied to the system. According to the datasheet for the SSM2377[1], the amplifier can operate off a single supply voltage from 2.5 - 5.5 Volts. 
+  The design for the power system will ensure that a minimum of 8.0 Volts will be supplied to the system. According to the datasheet for the AA-AB32231[1], the amplifier can operate off a single supply voltage from 8.0 - 18.0 Volts. The typical power used is 12 volts and that will be the amount that the amplifier is operated at for this design.
 
-> 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 100Hz-17Khz
+> 2) The audio amplifier and speaker shall be able to output at a minimum frequency range of 1KHz-17Khz
   
-  The CDS-27204-L1006 speaker has an operating range of 850Hz-20Khz [8] and the pmod AMP2 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide    range of potential sounds that will come through the wall.
+  The CSS-10246-304 speaker has an operating range of 110Hz-20Khz [8] and the AA-AB32231 has an operating range of 20Hz-20Khz [3]. Both of these specifications fit the constraint and will allow the output system to account for the wide    range of potential sounds that will come through the wall.
   
-  >3) The audio amplifier shall be able to deliver at least 2.0 W of continuous power at its output
-  According the data sheet of the SSM2377 amplifier[1], it is about to deliver a continuous power of 2.5 W to a load of 4Ω. The selected speaker has an input impedence of 4Ω and a input power requirement of 2 W, meaning this amplifier well fulfills the constraint required by the speaker. 
+  >3) The audio amplifier shall be able to deliver at least 10.0 W of continuous power at its output
+  According the data sheet of the AA-AB32231 amplifier[1], it is able to deliver a continuous power of 16 W mono to a load of 4Ω. The selected speaker has an input impedence of 4Ω and a input power rating of 10 W, with its max being 15 W, meaning this amplifier well fulfills the constraint required by the speaker. 
 
 > 4) The speaker shall have a minimum input impedance 4Ω 
   
-   The SSM2377 amplifier is capable of driving a 4Ω load from a 5V power supply, and the OCDS-27204-L1006 speaker has an input impedence of 4Ω, meaning the system will easily be able to drive the speaker.
+   The AA-AB32231 amplifier is capable of driving a 4Ω load from a 8-18V power supply, and the CSS-10246-304 speaker has an input impedence of 4Ω, meaning the system will easily be able to drive the speaker.
   
 > 5) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system
   
@@ -99,11 +99,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
 > 6) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB
   
-   According the data sheet of the CDS-27204-L1006, the speaker has an SPL value of 93 dB. This is over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
+   According the data sheet of the CSS-10246-304, the speaker has an SPL value of 91 dB when driven with 1 W, and and SPL value of 100 dB when driven with 10 W. This is over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
 
-> 7) Speaker shall have an input power rating minimum of 1 watt and maximum of 2 watts 
+> 7) Speaker shall have an input power rating maximum of 15 watts 
   
-  The CDS-27204-L1006 speaker has an input power requirement of 2 watts meaning that the the 2.5 watts of power that the SSM2377 is able to deliver will be sufficient in power the speaker.
+  The CSS-10246-304 speaker has an input power requirement of 2 watts meaning that the the 2.5 watts of power that the SSM2377 is able to deliver will be sufficient in power the speaker.
   
 > 8) Output system shall extend a maximum of 0.5 meters from the wall
   
@@ -124,8 +124,8 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 ## BOM
 | DEVICE                       | Quantity | Price Per Unit | Total Price |
 | -----------------            | -------- | -------------- | ----------- |
-| Pmod AMP2: Audio Amplifier   | 2        | $9.99          | $19.98       |
-| CDS-27204-L1006 Speaker        | 2        | $4.11          | $8.22      |
+| Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 2        | $16.98          | $33.96      |
+| CSS-10246-304 Speaker        | 2        | $7.91          | $15.82      |
 |3.5mm male plug to bare wire  | 2       | $3.59          | $7.18       |
 
 ## References
