@@ -26,7 +26,7 @@ The function of this subsystem is to connect the main processor subsystem to the
 
 <sup>3</sup> The Bluetooth connection subsystem will have the function of connecting the DSP board to external peripherals. This will allow the DSP board to focus on the time dependent task of filtering and negating the input sound. Thus the Bluetooth Connection subsystem must be able to send and receive the same data as the machine learning subsystem.
 
-<sup>4</sup> By design, the machine learning subsystem receives the sample within a 2 second period, decides on a pre-trained filter, and sends the corresponding filter coefficients back to the main processing subsystem. This is to be accomplished within that 2 second time frame, as the trained filter approximates the next 2 seconds.
+<sup>4</sup> This subsystem is not held by the 1.4 ms time constraint of the main processing subsystem. This is because the adaptive filter is executed locally on the main processing subsystem. The machine learning subsystem receives the samples of the current 2 second period, decides on a pre-trained filter, and sends the corresponding filter coefficients back to the main processing subsystem. In order to get the most up to date filter coefficients from the machine learning subsystem, the bluetooth subsystem must be able to complete a full cycle of data transfer within an audio frame of 2 seconds.
 
 <sup>5</sup> Since the machine learning subsystem is ran on a personal laptop, the system must be in range to communicate. The laptop's location will be restricted to inside our target room.
 
