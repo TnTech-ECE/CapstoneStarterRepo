@@ -28,6 +28,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
 |10| Speaker shall be mounted to the wall, and will not impede movement or damage the classroom  | Ethics and Device constraints|
+|11| Speaker shall have a sound pressure level and efficiency that is sufficient to permeate the room |Derived Contraint from room|
 
   
 ### 1) The Audio amplifier shall be supplied a minimum of 8.0 V and maximum of 15 V from the power supply.     |Origin: Device specifications|
@@ -62,6 +63,10 @@ An ideal noise cancellation device would have no delay however, that is impossib
 ### 10) Speaker shall be mounted, and will not impede movement or damage the classroom
 
 The speaker will be fitted into an enclosure that matches the dimensions of the speaker. This enclosure will then be mounted to the wall in an optimal position for noise cancellation. To fit this constraint, the position in which the speaker is placed will not impede movement or damage the classroom. This can be verified by confirming the placement of the speaker does not block the classroom or damage the walls or windows within the classroom.
+
+### 11) Speaker shall have a sound pressure level and efficiency that is sufficient to permeate the room |Origin: Derived Contraint from room|
+
+In order for the sound emitted from the speaker to properly be able to permeate the room and cancel out sounds at multiple distances, the efficiency and sound pressure level of the speaker must be good enough to stay above a certain level throughout the entire room. The exact specifications that this will entail be gone over more within the analysis.
 
   
 
@@ -113,6 +118,10 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
   The speaker will be fitted into an enclosure that will be made with a 3d printer. A front cavity and a rear cavity will be created that match the 27mm x 20mm dimensions of the CDS-27204-L1006 speaker. The rear cavity will be designed to have a depth equal to the diameter of the speaker, which is 20mm. The speakers within their enclosures will then be mounted to the wall using a command strip. The rectangular shape of the enclosure will allow for an easy application of a command strip, and the adhesive of the command strip will allow for simple connection to the mounting subsystem used for the rest of the system. Whether this be on a pcb box or to the window sill or wall. More testing will be done to find the best position for the speaker to be placed on the wall to cancel noise. The command strips will allow much maneuverability and will not damage the wall since there will be no drilling or nails.
 
+> 11) Speaker shall have a sound pressure level and efficiency that is sufficient to permeate the room
+
+  
+
   
 #### Further connections
 
@@ -124,9 +133,9 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 ## BOM
 | DEVICE                       | Quantity | Price Per Unit | Total Price |
 | -----------------            | -------- | -------------- | ----------- |
-| Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 2        | $16.98          | $33.96      |
-| CSS-10246-304 Speaker        | 2        | $7.91          | $15.82      |
-|3.5mm male plug to bare wire  | 2       | $3.59          | $7.18       |
+| Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 1        | $16.98          | $16.98     |
+| CSS-10246-304 Speaker        | 1        | $7.91          | $7.91      |
+|3.5mm male plug to bare wire  | 1       | $3.59          | $3.59      |
 
 ## References
 
