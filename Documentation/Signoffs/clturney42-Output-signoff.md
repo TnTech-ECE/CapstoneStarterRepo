@@ -120,6 +120,10 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 11) Speaker shall have a sound pressure level and efficiency that is sufficient to permeate the room
 
+  To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher, with this being higher if you are directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
+
+It is important to measure the efficiency of a speaker as well, to ensure the even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528.
+
   
 
   
