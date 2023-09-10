@@ -135,11 +135,6 @@ It is important to measure the efficiency of a speaker as well, to ensure the ev
 As seen from the table, the speaker is able to maintain a relatively good SPL across the bounds of the classroom. Taking into account the walls/windows of the classroom and the distance from construction as well, the noise should stay well within the bounds of what the speaker can handle and emit. This means that theoretically, the speaker is strong enough to cancel out the desired noise across an appropriate distance when supplied with sufficient power from the amp. Quality of sound coverage will not be the same in each area of the classroom, and with more speakers means better coverage, but with the current design positive effects should be seen from multiple areas of the classroom.
 
   
-#### Further connections
-
-Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wire cable must be used. The voltage and ground cables from the speaker will be connected to their respective wires on the aux cable, then the aux cable will be connected to the 3.5mm stereo jack on the pmod AMP2. This will allow a proper flow and connection between the amplifier circuit and the output speaker.
-
-
 
 
 ## BOM
