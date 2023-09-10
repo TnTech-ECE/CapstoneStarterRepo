@@ -128,8 +128,11 @@ It is important to measure the efficiency of a speaker as well, to ensure the ev
 | -----------------          | --------          | --------------            | 
 | 10 W                       | 0.5 m             | 97 dB |
 | | 1 m | 91 dB |
+| | 2 m | 85 dB |
+| | 4 m | 79 dB |
+| | 8 m | 73 dB |
 
-  
+As seen from the table, the speaker is able to maintain a relatively good SPL across the bounds of the classroom. Taking into account the walls/windows of the classroom and the distance from construction as well, the noise should stay well within the bounds of what the speaker can handle and emit. This means that theoretically, the speaker is strong enough to cancel out the desired noise across an appropriate distance when supplied with sufficient power from the amp. Quality of sound coverage will not be the same in each area of the classroom, and with more speakers means better coverage, but with the current design positive effects should be seen from multiple areas of the classroom.
 
   
 #### Further connections
