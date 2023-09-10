@@ -124,9 +124,9 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 It is important to measure the efficiency of a speaker as well, to ensure the even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528. The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of thumb with sound pressure level (SPL) is whenever the wattage supplied is doubled the SPL increases by 3 dB and whenever the distance is doubled the SPL decreases by 6. If we take the SPL of the speaker to be 97 dBA at 10 watts at 0.5 meters, then the SPL distrubuted over distance looks like this.
 
-##
-|Power | Distance (meters) | Sound Pressure Level (dB) |
 
+|Power | Distance (meters) | Sound Pressure Level (dB) |
+|Test| one| two|
 
   
 
