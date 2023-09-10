@@ -17,11 +17,11 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 | 3   | Output signal should not be higher than 3.3 Vpp to prevent clipping.           | Device Constraint  |
 | 4   | System must be powered from a 120 V 60 Hz wall outlet.                         | System Requirement |
 | 5   | The primary input sensor shall output a continuous-time analog voltage signal. | System Requirement |
-| 6   | The preset gain shall match the input subsystem's gain.                        | Device Constraint  |
+| 6   | The subsystem's gain shall match the input subsystem's gain.                   | Device Constraint  |
 | 7   | The subsystem delay shall be less than or equal to 0.2ms.                      | System Requirement |
 
 
-<sup>1</sup> The premise of this subsystem is to collect information of the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overall goal to make the design discrete, it can still be placed close to the speaker.
+<sup>1</sup> The premise of this subsystem is to collect information on the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overall goal to make the design discrete, it can still be placed close to the speaker.
 
 <sup>2</sup> Because the goal of the device is to limit noise heard by humans, the range of 20 Hz to 20 kHz is necessary to cover the majority of human hearing that the system will operate in.  
 
@@ -31,7 +31,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 <sup>5</sup> The error subsystem's output will be inserted into the main processing subsystem which requires a continuous analog voltage signal.
 
-<sup>6</sup> The gain from the error and input subsystem need to be the same to simplify the arithmetic from the processing subsystem. The agreed preset gain for this project was 20 dB.
+<sup>6</sup> The gain from the error and input subsystem must be the same to simplify the arithmetic from the processing subsystem. The agreed preset gain for this project was 20 dB.
 
 <sup>7</sup> Given that the maximum processing time of the main processing subsystem is 1.2 ms and the total allowable delay is 1.4 ms, the worst-case delay of this subsystem is 0.2 ms. Staying within these parameters will allow the processor subsystem to use accurate data.
 
@@ -44,7 +44,7 @@ The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544P
 
 ## Analysis
 ### Power
-To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected range of power will be 3.96 mW - 9.9 mW. The typical power consumption of the op-amp is 100 mW. Connections to each component can be made with soldered wire. 
+To keep the error subsystem consistently powered, it will use the pinouts from the main processor subsystem to connect to Vdd and GND. The requirements of the TS472 need 2.2 V to 5.5 V at 1.8 mA, meaning the expected power range will be 3.96 mW - 9.9 mW. The typical power consumption of the op-amp is 100 mW. Connections to each component can be made with soldered wire. 
 
 ### Input 
 The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 20 dB.
@@ -76,8 +76,7 @@ According to the manufacturers of the CMA-4544PF-W, the electret microphone can 
 
 ### Output
 The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
-The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV. This will be put into the left side of the STEREO_IN defined in the main processor.  
-
+The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV.    
 
 
 
@@ -94,18 +93,18 @@ Figure 3 shows an LT Spice version of the design. The OUT-pin is set to a 1 kHz 
 
 *Figure 4. LTSpice simulation*
 
-Figure 4 shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work and in most cases OUT- will be close to zero, therefore the differential amplifier then acts like a unity gain amplifier.
+Figure 4 shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work and in most cases OUT- will be the negative of the noninverting input, doubling the amplitude. The TS472 output within 50.1 mV and 79.4 mV will be doubled and input into the left side of the STEREO_IN defined in the main processor, within constraint 3.  
 
 ### Speed
-According to the TS452 datasheet, the transient response of the component is 20 µs. The slew rate of the LM741 op-amp is 0.5 V/µs, which adds about 2 µs to its response, making the total delay from input to output 22 µs, below the 0.2 ms constraint.
+According to the TS452 datasheet, the transient response of the component is 20 µs. The slew rate of the LM741 op-amp is 0.5 V/µs, which adds about 2 µs to its response. The microphone will be placed within 0.034 m of the speaker, adding 1 ms  making the total delay from the subsystem's input to output 22 µs, within constraint 7.
 
 ## BOM
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
 |------------------------------------------------------|----------|----------------|-------------|
-| CMA-4544PF-W Electret Microphone                     | 2        | $0.75          | $1.50       |
-| TS472 Pre-amp                                        | 2        | $1.70          | $3.40       |
-| LM741 Op-Amp                                         | 2        | $0.75          | $1.50       |
-| Total                                                |          |                | $6.40       |
+| CMA-4544PF-W Electret Microphone                     | 1        | $0.75          | $0.75       |
+| TS472 Pre-amp                                        | 1        | $1.70          | $1.70       |
+| LM741 Op-Amp                                         | 1        | $0.75          | $0.75       |
+| Total                                                |          |                | $3.20       |
 
 
 ## References
@@ -115,4 +114,4 @@ According to the TS452 datasheet, the transient response of the component is 20 
 
 [3] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
 
-[4] https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation (Differential Op Amp Equation)
+[4] https://www.st.com/resource/en/application_note/dm00133498-signal-conditioning-differential-to-single-ended-amplification-stmicroelectronics.pdf (Differential Op Amp Equation)
