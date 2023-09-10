@@ -153,9 +153,9 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 
 [1] Sure Electronics, "AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board" AA-AB32231 datasheet, 2011, (https://www.parts-express.com/pedocs/manuals/320-329--aa-ab32231-1-or-2-channel-configurable-16w-amp-board.pdf) (accessed September 9th, 2023).
 
-[2] “2*10 watt @ 8ohm, D-class Audio Amplifier Board - EUA3110” , AA-AB32231 , 21-June-2011. [Online]. https://www.parts-express.com/pedocs/tech-diagrams/320-329-parts-express-technical-diagram.pdf. [Accessed: 15-Apr-2023].  
+[2] “2*10 watt @ 8ohm, D-class Audio Amplifier Board - EUA3110” , AA-AB32231 , 21-June-2011. [Online]. https://www.parts-express.com/pedocs/tech-diagrams/320-329-parts-express-technical-diagram.pdf. [Accessed: 09-Sep-2023].  
 
-[3] “PMODAMP2™ reference manual - digilent,” PmodAMP2™ Reference Manual, 15-Apr-2016. [Online]. Available: https://digilent.com/reference/_media/reference/pmod/pmodamp2/pmodamp2_rm.pdf. [Accessed: 16-Apr-2023]. 
+[3] “Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board” AA-AB32231 Product Webpage, [Online]. Available: https://www.parts-express.com/Sure-AA-AB32231-2x8W-at-4-Ohm-TPA3110-Class-D-Audio-Amplifier-Board-Only-320-329?quantity=1. [Accessed: 10-Sep-2023]. 
 
 [4] “Digilent Pmod™ interface specification,” Digilent Pmod™ Interface Specification, 28-Oct-2020. [Online]. Available: https://digilent.com/reference/_media/reference/pmod/pmod-interface-specification-1_3_1.pdf. [Accessed: 16-Apr-2023]. 
 
