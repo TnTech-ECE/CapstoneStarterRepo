@@ -72,7 +72,7 @@ In order for the sound emitted from the speaker to properly be able to permeate 
 
 ## Buildable schematic 
 
-<img width="1245" alt="Screen Shot 2023-09-10 at 1 04 28 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/837a9713-fb8e-45db-985b-db79008cef3a">
+<img width="1287" alt="Screen Shot 2023-09-10 at 1 13 08 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/9382a2a9-fe0b-4a97-b8be-2d37acaadc13">
 
 
 ### **Figure 3: Audio Amplifier AA-AB32231 connected to speaker with appropriate specifications**
