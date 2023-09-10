@@ -23,7 +23,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 3   | The audio amplifier shall be able to deliver at least 10.0 W of continuous power at its output        | Device constraints and speaker constraints |
 | 4   | The speaker shall have a minimum input impedance 4Ω                                                   | audio amplifier specifications       |
 | 5   | System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system                                                                                                                                    | Conceptual design and to fulfill goal of system |
-| 6   | Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB               | Constraints of room and device constraints |
+| 6   | Speaker shall be capable of outputting at a sound pressure level of at least 90 dB               | Constraints of room and device constraints |
 | 7   | Speaker shall have an input power rating maximum of 15 watts                     | Amplifier specifications and power insurance |
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
@@ -47,7 +47,7 @@ When it comes to speaker, there is a built-in input impedance that the device ha
 ### 5) System shall have a primary output speaker that generates acoustic sounds based on its analog input from the system. |Origin: Conceptual design and to fulfill goal of system|
 The processing portion of the system is going to process a signal and convert it to analog to be sent to the output. To properly make use of this analog input the output subsystem must be able to take in this analog signal and after amplifying it, output it as an acoustic sound wave that will attenuate noise. With this in mind, the output system is being designed in a way that allows the amplifier to take in an analog input and properly interface with the speaker to emit and appropriate output.
 
-### 6) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB. |Origin: Constraints of room and device constraints|
+### 6) Speaker shall be capable of outputting at a sound pressure level of at least 90 dB. |Origin: Constraints of room and device constraints|
 Sound pressure level (SPL) is characterized as the difference between the pressure of a sound wave and the ambient pressure of the air that it is traveling through [5]. The sound pressure level of the speaker will need to be higher than the sound that it is trying to cancel in order for it to effecitvely cancel the sound. With this in mind, a good middle ground that allows for a wide range of speakers that can output at an appropriate SPL to cover a portion of the room is a 90 dB SPL. 
 
 ### 7) Speaker shall have an input power rating maximum of 16 watts |Origin: Amplifier specifications and power insurance|
@@ -102,9 +102,9 @@ The above image is the buildable schematic for the output subsystem. As shown, t
   
   As explained in the rest of the analysis, The speaker and amplifier have had their specifications matched so in theory sound should be outputted. Further verification will be done during physical testing of the device.
   
-> 6) Speaker shall be capable of outputting at a sound pressure efficiency of at least 90 dB
+> 6) Speaker shall be capable of outputting at a sound pressure level of at least 90 dB
   
-   According the data sheet of the CSS-10246-304, the speaker has an SPL value of 91 dB when driven with 1 W, and and SPL value of 100 dB when driven with 10 W. This is over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
+   According the data sheet of the CSS-10246-304, the speaker has an SPL value of 91 dB when driven with 1 W, and and SPL value of up to 100 dB when driven with 10 W. This is over the derived constraint and will provide an excellent sound level that will sufficiently permeate the room.
 
 > 7) Speaker shall have an input power rating maximum of 15 watts 
   
@@ -120,9 +120,11 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 11) Speaker shall have a sound pressure level and efficiency that is sufficient to permeate the room
 
-  To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher, with this being higher if you are directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
+  To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher when directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
 
-It is important to measure the efficiency of a speaker as well, to ensure the even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528.
+It is important to measure the efficiency of a speaker as well, to ensure the even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528. The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of thumb with sound pressure level (SPL) is whenever the wattage supplied is doubled the SPL increases by 3 dB and whenever the distance is doubled the SPL decreases by 6. If we take the SPL of the speaker to be 97 dBA at 10 watts at 0.5 meters, then the SPL distrubuted over distance looks like this.
+
+|Power | Distance (meters) | Sound Pressure Level (dB) |
 
   
 
