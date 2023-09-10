@@ -128,6 +128,9 @@ It is important to measure the efficiency of a speaker as well, to ensure the ev
 |Power | Distance (meters) | Sound Pressure Level (dB) |
 |Test| one| two|
 
+| DEVICE                       | Quantity | Price Per Unit | Total Price |
+| -----------------            | -------- | -------------- | ----------- |
+
   
 
   
