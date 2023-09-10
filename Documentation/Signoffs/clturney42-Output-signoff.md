@@ -157,7 +157,7 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
 
 [3] “Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board” AA-AB32231 Product Webpage, [Online]. Available: https://www.parts-express.com/Sure-AA-AB32231-2x8W-at-4-Ohm-TPA3110-Class-D-Audio-Amplifier-Board-Only-320-329?quantity=1. [Accessed: 10-Sep-2023]. 
 
-[4] “Digilent Pmod™ interface specification,” Digilent Pmod™ Interface Specification, 28-Oct-2020. [Online]. Available: https://digilent.com/reference/_media/reference/pmod/pmod-interface-specification-1_3_1.pdf. [Accessed: 16-Apr-2023]. 
+[4] CUI Devices. (n.d.). CSS-10246-304. CSS-10246-304 | Standard (41 mm~205 mm) | Speakers. https://www.cuidevices.com/product/audio/speakers/standard-(41-mm~205-mm)/css-10246-304 
 
 [5] K. Koehler, “Understanding sound pressure level (SPL) and the decibel scale,” Pro Tool Reviews, 09-Sep-2021. [Online]. Available: https://www.protoolreviews.com/understanding-sound-pressure-level-spl-decibel-scale-db/. [Accessed: 16-Apr-2023]. 
 
@@ -165,7 +165,9 @@ Due to the speakers not having a built in stereo jack cable, a 3.5mm to bare wir
  
 [7] “Benefits of delta-sigma analog-to-digital conversion,” NI, 04-Apr-2023. [Online]. Available: https://www.ni.com/en-us/shop/data-acquisition/benefits-of-delta-sigma-analog-to-digital-conversion.html. [Accessed: 16-Apr-2023].
   
-[8] CUI Devices, "SERIES: CDS-27204-L100 | DESCRIPTION: SPEAKER" CDS-27204-L1006 datasheet, 08-May-2022, https://www.cuidevices.com/product/resource/cds-27204-l100.pdf (accessed August 22nd, 2023).
+[8] CUI Devices, "SERIES: CSS-10246-304 | DESCRIPTION: SPEAKER" CSS-10246-304 datasheet, 08-May-2022, https://www.cuidevices.com/product/resource/css-10246-304.pdf (accessed September 10th, 2023).
+
+[9] Longman, J., &amp; LongmanHello, J. (2023, April 4). Speaker sensitivity explained. AudioReputation. https://www.audioreputation.com/speaker-sensitivity-explained/ 
 
 
 
