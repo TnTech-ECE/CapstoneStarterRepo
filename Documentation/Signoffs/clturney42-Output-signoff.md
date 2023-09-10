@@ -77,7 +77,7 @@ In order for the sound emitted from the speaker to properly be able to permeate 
 
 ### **Figure 3: Audio Amplifier AA-AB32231 connected to speaker with appropriate specifications**
 
-The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem will be connected to the output of the processing and receive an analog voltage signal. Connecting the gain pin to Vcc results in a 6 dB gain and connecting gain to ground results in a 12 dB gain. The shutdown pin will be connected to Vcc, resulting in a logical 1, meaning the shutdown feature will not be active. Vcc will be connected to the incoming power supply which will be supplying a power level between 2.5-5.5 Watts. The stereo 1/8" output J1 will be connected to 3.5mm male plug to bare wire aux cable so that the power and ground cables from the speaker can be connected.
+The above image is the buildable schematic for the output subsystem. As shown, the input of the subsystem J8 will be connected to the output of the processing and receive an analog voltage signal. The amplifier can be powered either through the J1 terminal block or the J3 DC power adapter socket with a supply of 8-18V. To run the amplifier in mono mode the speaker will be connected to J5 and J7 with OUT2 +/- short circuited to as the postive speaker output and OUT1 +/- short circuited as the negative speaker output. 
 
 ## Analysis
 
