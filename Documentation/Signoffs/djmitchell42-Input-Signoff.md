@@ -90,7 +90,7 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 ##### LM741 Circuit in Differential Configuration
 The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential outputs from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$. The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [3]. The input voltages OUT+ and OUT- will be the same amplitude but OUT- is the negative of OUT+. The equation for the output voltage of this amplifier will be (OUT+)-(OUT-) = (OUT+) - (-OUT+) = 2*(OUT+), OUT- and OUT+ will not be exactly the same amplitude but this is a very good approximation of the expected result. The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem. The differential amplifier will output a continuous time analog voltage signal to the STEREO_IN input of the processing subsystem <sup>5</sup>.
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/eea79e97-25b2-4ab5-a34a-39b72bc1b45b)
+
 *Figure 3: LT Spice design for LM741 amplifier*
 
 The figure above shows an LT Spice simulation of the design. The OUT- pin in this case is set to a 1 kHz 70 mV peak sine wave, while the OUT + pin is set to a 1 kHz 70 mV peak sine wave. The output voltage is expected to be 2*(OUT+) which would be 140 mV peak at the same frequency. 
@@ -99,7 +99,7 @@ The figure above shows an LT Spice simulation of the design. The OUT- pin in thi
 
 *Figure 4: OUT+ (blue) OUT- (red) Vout (Green)*
 
-The figure above shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work as in every case the OUT + and OUT - voltages will be the same amplitude but opposite sign, therefore the differential amplifier acts like a summing amplifier.
+The figure above shows the voltage from the OUT+ pin and OUT- pin along with the output voltage from the differential amplifier. The output voltage as expected is 140 mV peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase while the OUT- voltage is 180 degrees out of phase with Vout and OUT+ as expected. Typical input voltage values were used to illustrate how the differential amplifier will work as in every case the OUT + and OUT - voltages will be the same amplitude but opposite sign, therefore the differential amplifier acts like a summing amplifier.
 
 
 # Bill of Materials 
