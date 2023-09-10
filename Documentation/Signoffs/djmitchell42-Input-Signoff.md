@@ -95,7 +95,7 @@ The LM741 operational amplifier from Texas Instruments [4]. will be used to take
 
 The figure above shows an LT Spice simulation of the design. The OUT- pin in this case is set to a 1 kHz 70 mV peak sine wave, while the OUT + pin is set to a 1 kHz 70 mV peak sine wave. The output voltage is expected to be 2*(OUT+) which would be 140 mV peak at the same frequency. 
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123108478/cdcd70a9-bfa2-49b5-b433-d2dd52a4c9ab)
+<img src="/Documentation/Images/input/image.png" width="75%" height="75%">
 *Figure 4: Out+ (red) vs. Vout (blue)*
 
 The figure above shows the voltage from the OUT+ pin and the output voltage from the differential amplifier. The output voltage as expected is 1 V peak at 1 kHz. The OUT+ voltage and the output voltage are also in phase. The example values were used to illustrate how the differential amplifier will work as in every case the OUT + and OUT - voltages will be the same amplitude but opposite sign, therefore the differential amplifier acts like a summing amplifier.
