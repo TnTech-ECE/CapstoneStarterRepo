@@ -142,7 +142,7 @@ As seen from the table, the speaker is able to maintain a relatively good SPL ac
 | -----------------            | -------- | -------------- | ----------- |
 | Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 1        | $16.98          | $16.98     |
 | CSS-10246-304 Speaker        | 1        | $7.91          | $7.91      |
-|3.5mm male plug to bare wire  | 1       | $3.59          | $3.59      |
+
 
 ## References
 
