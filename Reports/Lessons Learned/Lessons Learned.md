@@ -10,3 +10,5 @@ This document should be used as an ongoing documentation of the following:
 
 Create a section addressing each of the above questions. 
 
+Unanticipated problems -
+Arduino Uno Wifi Rev2's SPI bus does not connect to the same pins as Arduino R3 despite pinout on website saying so. This is according to full schematic and several forums.
