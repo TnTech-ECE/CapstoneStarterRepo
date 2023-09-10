@@ -90,6 +90,7 @@ Solving for C5 and C6 leads to a capacitance value of roughly 100 pF at 20 kHz, 
 ##### LM741 Circuit in Differential Configuration
 The LM741 operational amplifier from Texas Instruments [4]. will be used to take the differential outputs from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ [5]. R1 and Rf will be 1 $k\Omega$ to allow the gain (Rf/R1) to be equal to 1, the other required resistances in the circuit will also be equal to 1 $k\Omega$. The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive voltage signal and OUT- is the negative voltage signal [3]. The input voltages OUT+ and OUT- will be the same amplitude but OUT- is the negative of OUT+. The equation for the output voltage of this amplifier will be (OUT+)-(OUT-) = (OUT+) - (-OUT+) = 2*(OUT+), OUT- and OUT+ will not be exactly the same amplitude but this is a very good approximation of the expected result. The maximum power consumption is 100 mW [4], which can be supplied by the power subsystem. The differential amplifier will output a continuous time analog voltage signal to the STEREO_IN input of the processing subsystem <sup>5</sup>.
 
+<img src="/Documentation/Images/input/Differential_Amplifier.png" width="100%" height="100%">
 
 *Figure 3: LT Spice design for LM741 amplifier*
 
