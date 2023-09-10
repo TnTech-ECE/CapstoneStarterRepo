@@ -94,7 +94,7 @@ The LM741 operational amplifier from Texas Instruments [4]. will be used to take
 
 *Figure 3: LT Spice design for LM741 amplifier*
 
-The figure above shows an LT Spice simulation of the design. The OUT- pin in this case is set to a 1 kHz 70 mV peak sine wave, while the OUT + pin is set to a 1 kHz 70 mV peak sine wave. The output voltage is expected to be 2*(OUT+) which would be 140 mV peak at the same frequency. 
+The figure above shows an LT Spice simulation of the design. The OUT- pin in this case is set to a 1 kHz 70 mV peak sine wave, while the OUT + pin is set to a 1 kHz 70 mV peak sine wave. The output voltage is expected to be 2*(OUT+) which would be 140 mV peak at the same frequency and in phase with OUT+. 
 
 <img src="/Documentation/Images/input/Output_of_amplifier.png" width="100%" height="100%">
 
