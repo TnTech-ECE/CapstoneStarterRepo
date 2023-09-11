@@ -5,7 +5,7 @@
  
 ## Function of the Subsystem
 
-The purpose of this subsystem is to take the voltage supplied from a wall outlet and make it usable for the project. Every component of our project requires our circuit to be DC. So we have reviewed ways to implement this as efficiently as possible. It is more efficient for us to use a wall wart for our project. Wall warts have seen widespread use in the last ten or so years due to their low cost, ease of manufacture, versatility, and sonic improvements; equipment with external power supplies are usually quieter (all other things being equal) than equipment with internal supplies.We have looked into building our own circuit on a breadboard and just connecting it to the rest of the project, but that causes us to not meet the constraint of it looking clean and not distracting as opposed to simply having a wall wart. The wall wart is essentially doing what is shown in Figure 1. The device will take in the AC current from the wall and convert it to DC so it can work properly with the rest of our devices.
+The purpose of this subsystem is to take the voltage supplied from a wall outlet and make it usable for the project. This will be done by supplying each subsystem with their respective DC voltagaes.
 
 
 ## Constraints
@@ -17,8 +17,9 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to supply 5V DC and 5.2mA of current to Error subsystem                           | Design Constraint |
 | 4   | Shall be able to supply 5V DC and 5.2mA of current to Input subsystem                                 | Design Constraint |
 | 5   | Shall be able to supply 12V DC and 100mA of current to Output subsystem                                      | Design Constraint |
-| 6   | Device shall not reach 40°C (140°F)                                 | Design Constraint |
-| 7   | System shall be powered by standard wall outlet                                 | Design Constraint |
+| 6   | System shall be powered by a standard wall outlet                                 | Design Constraint |
+| 7   | System shall follow OSHA standard 1910.304 - 305                                 | Design Constraint |
+| 8   |  System shall follow Standard IEC 60950-1                                | Design Constraint |
 
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. The only subsystem that doesnt need 5V DC is the Output subsystem which requires 12V If this is not met it could damage something or cause it to just not work.
@@ -33,10 +34,13 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 <sup>5</sup>  The Output subsystem requires 12V DC and 100mA of current in order for it to be functional. This will allow the sytem to produce a output.
 
 
-<sup>6</sup>  The system will not reach 40°C (140°F) in order to avoid fire hazards.
+<sup>6</sup>  The system will be powered by a standard wall outlet in order to avoid the use of batteries and enable it to be used for longer periods of time.
 
 
-<sup>7</sup> The system will be powered by a standard wall outlet in order to avoid the use of batteries and enable it to be used for longer periods of time.
+<sup>7</sup>  The system shall follow OSHA standard 1910.304 - 305 which  provides a in depth guide for  safety and regulation of wired power.
+
+
+<sup>8</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery powered devices below 600V. This will assist in elminating harm form electric shock, fire, and mechanical instability.
 
 
 
@@ -48,14 +52,21 @@ This above image is the schematic showing how the TR154 will be set up and imlem
 
 
 ## Analysis
-### Explanation of Components
 
-#### Chanzon
+### Power
+how much wattage it needs, and why i chose this wall wart. The system will require about___ Watts for power. This system will utilize a wall wart in order to supply the DC power required.
 
 The Chanzon 12V 1.5A wall mount (wall wart style) has a power supply rating for 100-240VAC input and 12 Volts VDC output at 1.5A. The cable is 6 feet long and has a dotted line on it to signify the negative connection within it. The center of the plug of this device is where the positive connection is located (center positive). This cable meets all the requirements of the group in terms of a proper power supply.
 
-### LM2596
-The LM2596 is a buck converter that will be used to take the voltage from the wall wart and step it down to a voltage that the subsystems will need. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A.
+### Input
+
+The input for this subsystem is the 100-240 VAC coming from the wall outlet.
+
+### Output
+
+This system will provide the correct power to each subsystem for the project. It will be connected to a power rail then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, Input, and Error. These three subsystems require 5V DC. The output subsystem requires 12V so it wont need to be connected to the buck converter.
+
+The buck converter in use will be the LM2596. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A.
 
 #### Further connections
 
