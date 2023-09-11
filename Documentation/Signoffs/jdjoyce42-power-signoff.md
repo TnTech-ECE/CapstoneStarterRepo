@@ -54,7 +54,7 @@ This above image is the schematic showing how the TR154 will be set up and imlem
 ## Analysis
 
 ### Power
-how much wattage it needs, and why i chose this wall wart. The system will require about___ Watts for power. This system will utilize a wall wart in order to supply the DC power required.
+how much wattage it needs, and why i chose this wall wart. The system will require about 18 Watts for power. This system will utilize a wall wart in order to supply the DC power required.
 
 The Chanzon 12V 1.5A wall mount (wall wart style) has a power supply rating for 100-240VAC input and 12 Volts VDC output at 1.5A. The cable is 6 feet long and has a dotted line on it to signify the negative connection within it. The center of the plug of this device is where the positive connection is located (center positive). This cable meets all the requirements of the group in terms of a proper power supply.
 
