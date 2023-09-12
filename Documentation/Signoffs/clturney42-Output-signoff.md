@@ -66,7 +66,7 @@ The speaker will be fitted into an enclosure that matches the dimensions of the 
 
 ### 11) Speaker shall have a sound pressure level and efficiency that is sufficient to cancel out various noises|Origin: Derived Contraint from room|
 
-In order for the sound emitted from the speaker to properly be able to permeate the room and cancel out sounds at multiple distances, the efficiency and sound pressure level of the speaker must be good enough to stay above a certain level throughout the entire room. The exact specifications that this will entail be gone over more within the analysis.
+In order for the sound emitted from the speaker to properly be able to permeate the room and cancel out sounds at multiple distances, the efficiency and sound pressure level of the speaker must be good enough to cancel out construction noises from outside and  stay above a certain level throughout the entire room. The exact specifications that this will entail be gone over more within the analysis.
 
   
 
