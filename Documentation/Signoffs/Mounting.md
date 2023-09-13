@@ -16,29 +16,29 @@ The mounting subsystem will hold the input subsystem, processing subsystem and e
 
 
 
-#### 1.)	The overall system length from input to speaker can be no greater than 1.575 ft. [Origin: System Requirements]
+<sup>1</sup>	The overall system length from input to speaker can be no greater than 1.575 ft. [Origin: System Requirements]
 
 The delay of the system must be less than the delay of the sound in order for the noise cancellation to be effective. This constraint is dependent on distance, if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
-#### 2.) System shall not impede movement and easy access throughout the room. [Origin: Americans Disabilities Act]
+<sup>2</sup> System shall not impede movement and easy access throughout the room. [Origin: Americans Disabilities Act]
 
 This constraint is needed to ensure safety and minimize difficulty in navigating the classroom during the operation of the system. This constraint also will follow the American Disabilities Act allowing for individuals with limited mobility to easily navigate the room.
 
 
-#### 3.) The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
+<sup>3</sup> The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
 
 This is in order to make sure the system is small and compact and does impede movement throughout the classroom.
 
-#### 4.) System shall be mounted in the classroom in an unfrequented area. [Origin: System Requirements]
+<sup>4</sup> System shall be mounted in the classroom in an unfrequented area. [Origin: System Requirements]
 
 This will allow the system to perform its functionality without causing difficulty for students or faculty performing
 their required tasks.
 
-#### 5.)  System shall minimize its visual distraction [Origin: Stakeholder Survey]
+<sup>5</sup> System shall minimize its visual distraction [Origin: Stakeholder Survey]
 
 Classrooms should be distraction-free to allow students to learn new information effectively, therefore the system will not be distracting to students or faculty.
 
-#### 6.) The width of the physical mount cannot exceed 49 in. [Origin: Window width measurements ]
+<sup>6</sup> The width of the physical mount cannot exceed 49 in. [Origin: Window width measurements ]
 
 The physical mount cannot be wider than the window in order to be fastened to the window. The measured width of the window in Brown 314 is 49 inches (4 feet 1 inch), therefore the selected physical mount must meet this requirement.
 
@@ -60,7 +60,8 @@ The physical mount cannot be wider than the window in order to be fastened to th
 ## Analysis
 
 1.) 3D printed shelf
-The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall. This meets  
+The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall. This meets 
+constraint <sup>1</sup>.
 
 2.) Command strip details
 
