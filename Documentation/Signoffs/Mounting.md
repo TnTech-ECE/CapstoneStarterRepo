@@ -59,9 +59,7 @@ The physical mount cannot be wider than the window in order to be fastened to th
 
 ## Analysis
 
-1.) Physical mount details
-
-The physical mount that will be utilized is the SRIWATANA floating shelf which can be purchased from Amazon. The weight of the shelf is 4.6 lbs which meets constraint (10). The width of the shelf is 16.5 in which meets constraint (11). The floating shelf will be mounted to the window by utilizing command strips rated for 20 lbs and the system components will be placed on the shelf. The length of the mount is 11.8 in.
+1.) 
 
 2.) Command strip details
 
@@ -72,17 +70,11 @@ The command strips that will be used will be the command black picture hanging s
 ## BOM
 
 | DEVICE                                           | Quantity | Price Per Unit | Total Price |
-| -------------------------------------------------| -------- | ---------------| ----------- |
-| SRIWATANA Floating Shelves Wall Mounted Set of 2 | 1        | $49.33         | $49.33      |
+| -------------------------------------------------| -------- | ---------------| ----------- |    |
 | Command Black Picture Hanging Strip Mixed Pack   | 1        | $9.98          | $9.98       |
 
 
 ## References
-
-1. [Amazon Shelf] 
-
-2. [Command Strips]
-
-[Amazon Shelf]: https://www.amazon.com/SRIWATANA-Floating-Shelves-Capacity-Weathered/dp/B07Q5RZVVW/ref=sr_1_7?crid=LOGA7RBQSXKH&keywords=large%2Bwall%2Bshelf&qid=1693771539&refinements=p_n_feature_eleven_browse-bin%3A23576958011&rnid=23576923011&s=furniture&sprefix=large%2Bwall%2Bshelf%2Caps%2C169&sr=1-7&th=1
+1. [Command Strips]
 
 [Command Strips]: https://www.amazon.com/dp/B09XJDQCG6/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=5bb9cc62e41d7067569bfbdbb3611e78&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=3a3d188f-0701-494f-b07f-4e7c62285293&pd_rd_w=039JW&pd_rd_wg=H5pvQ&qid=1693773858&ref_=sbx_be_s_sparkle_mcd_asin_1_img&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&th=1
