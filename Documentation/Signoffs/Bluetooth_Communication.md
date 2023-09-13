@@ -47,11 +47,12 @@ The above image is a schematic of the Arduino UNO R4 WiFi, the schematic focuses
 ## Analysis
 
 #### Power
-The system can be powered through a USB connection or through the onboard barrel jack connector[1] <sup>1</sup>. The recommended input voltage and current rating for the external power supply are 6-24 V. The subsystem will use the included AC/DC adapter as its power supply. Since the board needs to use the USB port in order to install the designed software, the subsystem will have to be programmed before being connected to the system's power supply to allow the subsystem to boot without being connected directly to a computer. 
+The system can be powered through a USB connection or through the onboard barrel jack connector[1]. The recommended input voltage for the external power supply is 6-24 V. The subsystem will use the included AC/DC adapter as its power supply. This adapter can be plugged into standard 120V 60Hz power<sup>1</sup>. Since the board needs to use the USB port in order to install the designed software, the subsystem will have to be programmed before being connected to the system's power supply to allow the subsystem to boot without being connected directly to a computer. 
 
-#### Bluetooth Capabilities
+#### Bluetooth Speed
 The Arduino UNO R4 WiFi is able to transmit and receive in WiFi and Bluetooth 5 LE<sup>2</sup>. This is accomplished through the ESP32-S3-MINI[3]. Bluetooth 5.0 LE includes a PHY called LE 2M. This can support 2 Mb/s (2,000,000 bits per second). At the application layer, a data rate of up to approximately 1.4 Mb/s (1,400,000 bits per second) is possible[5]. Assuming the 2 second delay lines of 187.5 kiB [6], each send will be sending 187.5 kiB (or 1,536,000 bits). Therefore, Bluetooth 5 LE  will be able to send a full delay line in 1.10 seconds (1.536 Mb / 1.4 Mbps), and receive the filter index bits (also 187.5 kiB) in 1.10 seconds for a total of 2.20 seconds<sup>4</sup>.
 
+#### Bluetooth Range
 Since the subsystem is able to communicate wirelessly, the physical extent of the system resides at the window preventing any obstruction of pathways<sup>9</sup>. The room's dimensions are 34x24x11 feet. A worst case scenario (lower corner to opposite upper corner) is a distance of 43.05 ft (13.122 meters). The ESP32-S3-MINI has a typical Bluetooth transmit power of 0 dBm (but can be set higher) and a typical receiver sensitivity of -92 dBm. Using Bluetooth's range estimation calculator[10], the ESP32-S3-MINI has an estimated range in an office setting of 14 to 18 meters meters, which is greater than 13.122 meters<sup>5</sup>.
 
 #### Main Processor Subsystem Connectivity
