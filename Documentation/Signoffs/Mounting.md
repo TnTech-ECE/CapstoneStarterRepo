@@ -53,7 +53,7 @@ The physical mount cannot be wider than the window in order to be fastened to th
 *Figure 1. Buildable Schematic of mounting system side view*
 
 
-<img src="/Documentation/Images/Mounting/Side_View.png" alt=" Buildable Schematic of mounting system side view">
+<img src="/Documentation/Images/Mounting/front_view_mounting.png" alt=" Buildable Schematic of mounting system front view">
 
 *Figure 2. Buildable Schematic of mounting system side view*
 
