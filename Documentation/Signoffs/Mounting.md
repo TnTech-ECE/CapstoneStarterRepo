@@ -55,11 +55,11 @@ Classrooms should be distraction-free to allow students to learn new information
 ## Analysis
 
 1.) 3D printed shelf
-The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>.
+The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>. There are 14 holes in the design which are placed to allow for discrete wiring <sup>5</sup>. 
 
 2.) Command strip details
 
-The command strips that will be used will be the command black picture hanging strip mixed pack which is sold through Amazon. There are 8 pairs of X-large strips in this pack which will hold 20 lbs. This will prevent damage to Tennessee Tech property while still allowing the physical mount to installed, which meets constraint (10).
+The command strips that will be used will be the command black picture hanging strip mixed pack which is sold through Amazon. There are 8 pairs of X-large strips in this pack which will hold 20 lbs. This will prevent damage to Tennessee Tech property while still allowing the physical mount to installed, which meets constraint (10). 
 
 
 
