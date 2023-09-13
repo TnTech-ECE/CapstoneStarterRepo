@@ -11,7 +11,6 @@ The mounting subsystem will hold the input subsystem, processing subsystem and e
 | 3  |  The speaker output shall not be more than 0.5 m from window or wall being measured | System Requirements |
 | 4  |  System shall be mounted in the classroom in an unfrequented area.| System Requirements |
 | 5  |  System shall minimize its visual distraction | Stakeholder survey |
-| 6  |  The width of the physical mount cannot exceed 49 in.| Window width measurements |
 
 
 
@@ -37,10 +36,6 @@ their required tasks.
 <sup>5</sup> System shall minimize its visual distraction [Origin: Stakeholder Survey]
 
 Classrooms should be distraction-free to allow students to learn new information effectively, therefore the system will not be distracting to students or faculty.
-
-<sup>6</sup> The width of the physical mount cannot exceed 49 in. [Origin: Window width measurements ]
-
-The physical mount cannot be wider than the window in order to be fastened to the window. The measured width of the window in Brown 314 is 49 inches (4 feet 1 inch), therefore the selected physical mount must meet this requirement.
 
 
 
