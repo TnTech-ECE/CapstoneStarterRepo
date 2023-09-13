@@ -55,7 +55,7 @@ Classrooms should be distraction-free to allow students to learn new information
 ## Analysis
 
 1.) 3D printed shelf
-The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall <sup>1</sup>.
+The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>.
 
 2.) Command strip details
 
