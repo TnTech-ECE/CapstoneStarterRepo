@@ -59,7 +59,8 @@ The physical mount cannot be wider than the window in order to be fastened to th
 
 ## Analysis
 
-1.) 
+1.) 3D printed shelf
+The shelf that will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall. This meets  
 
 2.) Command strip details
 
