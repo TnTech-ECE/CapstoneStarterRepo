@@ -55,6 +55,7 @@ Classrooms should be distraction-free to allow students to learn new information
 ## Analysis
 
 1.) 3D printed box
+
 The box  will be 3D printed by the team will be 10 in length, 10 in width and 5 in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>. There are 14 holes in the design which are placed to allow for discrete wiring <sup>5</sup>. 
 There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left hand side will contain the input subsystem and on the right hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes on the box. The speaker will be placed in the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>.
 
