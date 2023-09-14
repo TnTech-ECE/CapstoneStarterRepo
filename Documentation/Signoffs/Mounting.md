@@ -45,7 +45,7 @@ Classrooms should be distraction-free to allow students to learn new information
 ## Buildable schematic 
 <img src="/Documentation/Images/Mounting/sideview_mounting.png" width= "80%" height = "80%" alt=" Buildable Schematic of mounting system top-down view">
 
-*Figure 1. Buildable Schematic of mounting system side view*
+*Figure 1.  Mounting system side view*
 
 
 <img src="/Documentation/Images/Mounting/front_view_mounting.png" width = "100%" height = "100%" alt=" Buildable Schematic of mounting system front view">
