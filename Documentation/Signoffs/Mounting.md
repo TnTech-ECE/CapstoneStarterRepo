@@ -17,7 +17,7 @@ The mounting subsystem will hold the input subsystem, processing subsystem, erro
 
 <sup>1</sup>	The overall system length from input to speaker can be no greater than 1.575 ft. [Origin: System Requirements]
 
-The delay of the system must be less than the delay of the sound in order for the noise cancellation to be effective. This constraint is dependent on distance, if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
+The delay of the system must be less than the delay of the sound for the noise cancellation to be effective. This constraint is dependent on distance if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms), this equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
 <sup>2</sup> System shall not impede movement and easy access throughout the room. [Origin: Americans Disabilities Act]
 
@@ -26,7 +26,7 @@ This constraint is needed to ensure safety and minimize difficulty in navigating
 
 <sup>3</sup> The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
 
-This is in order to make sure the system is small and compact and does impede movement throughout the classroom.
+This is to make sure the system is small and compact and does impede movement throughout the classroom.
 
 <sup>4</sup> System shall be mounted in the classroom in an unfrequented area. [Origin: System Requirements]
 
@@ -56,8 +56,8 @@ Classrooms should be distraction-free to allow students to learn new information
 
 1.) 3D printed box
 
-The box  will be 3D printed by the team and will be 10 inches in length, 10 inches in width and 5 inches in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>. There are 14 holes in the design which are placed to allow for discrete wiring <sup>5</sup>. 
-There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left hand side will contain the input subsystem and on the right hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes on the box. The speaker will be placed in the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>.
+The box  will be 3D printed by the team and will be 10 inches in length, 10 inches in width, and 5 inches in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>. There are 14 holes in the design which are placed to allow for discrete wiring <sup>5</sup>. 
+There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>.
 
 2.) Command strip details
 
