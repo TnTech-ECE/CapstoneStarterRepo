@@ -93,6 +93,6 @@ The command strips that will be used will be the command black picture hanging s
 [Command Strips]: https://www.amazon.com/dp/B09XJDQCG6/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=5bb9cc62e41d7067569bfbdbb3611e78&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=3a3d188f-0701-494f-b07f-4e7c62285293&pd_rd_w=039JW&pd_rd_wg=H5pvQ&qid=1693773858&ref_=sbx_be_s_sparkle_mcd_asin_1_img&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&th=1
 
 2. [Stress Analysis]
-https://cdn.discordapp.com/attachments/1069111379656724490/1152037040771321916/Mounting.ipt_Stress_Analysis_Report_9_14_2023.html
+[Stress Analysis]: https://cdn.discordapp.com/attachments/1069111379656724490/1152037040771321916/Mounting.ipt_Stress_Analysis_Report_9_14_2023.html
 
 
