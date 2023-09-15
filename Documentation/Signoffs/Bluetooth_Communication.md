@@ -40,7 +40,7 @@ This subsystem is not held by the 1.4 ms time constraint of the main processing 
 
 ## Buildable schematic
 
-![image](/Documentation/Images/Bluetooth-Communication/Buildable-Schematics/BluetoothCommSchematic.png)  
+![image](/Documentation/Images/Bluetooth-Communication/Buildable-Schematics/BluetoothComm_Schem_Rev2.PNG)  
 
 The above image is a schematic of the Arduino UNO R4 WiFi, the schematic focuses on the most important aspects of the device with respect to the overall design goal. The schematic also shows how the system connects to the main processor subsystem and power management subsystem. 
 
