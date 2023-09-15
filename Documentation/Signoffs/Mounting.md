@@ -47,12 +47,12 @@ Classrooms should be distraction-free to allow students to learn new information
 
 *Figure 1.  Mounting system side view*
 
-The figure above shows a side view of the box that will utilized for the mounting system.
 
 <img src="/Documentation/Images/Mounting/Mounting_Front_View.png" width = "40%" height = "40%" alt=" Buildable Schematic of mounting system front view">
 
 *Figure 2. Buildable Schematic of mounting system front view*
 
+The figure above shows a side view of the box that will utilized for the mounting system.
 The figure above shows a front view of the mounting system
 
 
@@ -73,12 +73,13 @@ There will be a sliding door attached from the bottom while mounted on the wall 
 
 <img src="/Documentation/Images/Mounting/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
 
-*Figure 3. Buildable Schematic of mounting subsystem with system connections*
+*Figure 3. Buildable Schematic of the mounting subsystem with system connections*
 
+The above figure depicts how each individual component will be physically placed in the room. This shows how the box mount is placed up above the desks in the room and high enough to be out of the way. It also shows what the mount will look like with its sliding door covering the inside, minimizing distractions. The post connected to the error microphone will be attached to the window sill with tape. The necessary wired connections can also be made using the internal and external holes through the box mount. The shown connections include from input subsystem to the input microphone, the error subsystem to the error microphone, and the output subsystem to the speaker. The wires will be taped flush and parallel to the wall to minimize the space taken up. 
 
 There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>. 
 
-A stress analysis was performed on the 3D design in order to make sure that the box will withstand a large amount of force [2]. The box will be placed in the room with the following connections as outlined in Figure 3. Figure 3 shows the wall to the left of the window where the box will be fastened using command strips, the input subsystem will be on the lefthand side of the box and the output will be wired to processing through the bottom of the shelf. The input mic will be fastened to the window and wired to the input subsystem through one of the sideview holes. The output speaker will be wired from the output section of the box through one of the sideview holes as well. The error mic will be placed in front of the output speaker and will be wired back into processing through the sideview hole. 
+A stress analysis was performed on the 3D design in order to make sure that the box would withstand a large amount of force [2]. The box will be placed in the room with the following connections as outlined in Figure 3. Figure 3 shows the wall to the left of the window where the box will be fastened using command strips, the input subsystem will be on the left hand side of the box and the output will be wired to processing through the bottom of the shelf. The input mic will be fastened to the window and wired to the input subsystem through one of the side view holes. The output speaker will be wired from the output section of the box through one of the side view holes as well. The error mic will be placed in front of the output speaker and will be wired back into processing through the side view hole. 
 
 2.) Command strip details
 
