@@ -47,10 +47,13 @@ Classrooms should be distraction-free to allow students to learn new information
 
 *Figure 1.  Mounting system side view*
 
+The figure above shows a side view of the box that will utilized for the mounting system.
 
 <img src="/Documentation/Images/Mounting/Mounting_Front_View.png" width = "40%" height = "40%" alt=" Buildable Schematic of mounting system front view">
 
-*Figure 2. Buildable Schematic of mounting system side view*
+*Figure 2. Buildable Schematic of mounting system front view*
+
+The figure above shows a front view of the mounting system
 
 
 
