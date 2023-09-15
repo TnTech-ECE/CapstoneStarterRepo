@@ -57,7 +57,7 @@ Classrooms should be distraction-free to allow students to learn new information
 1.) 3D printed box
 
 The box  will be 3D printed by the team and will be 10 inches in length, 10 inches in width, and 5 inches in depth which will mounted to the wall <sup>2</sup> <sup>4</sup>. There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction <sup>5</sup>. There are 14 holes in the design which are placed to allow for discrete wiring <sup>5</sup>. 
-There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>. A stress analysis was performed on the 3D design in order to make sure that the box will withstand a large amount of force.
+There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>. A stress analysis was performed on the 3D design in order to make sure that the box will withstand a large amount of force [2].
 
 2.) Command strip details
 
@@ -76,3 +76,8 @@ The command strips that will be used will be the command black picture hanging s
 1. [Command Strips]
 
 [Command Strips]: https://www.amazon.com/dp/B09XJDQCG6/ref=redir_mobile_desktop?_encoding=UTF8&aaxitk=5bb9cc62e41d7067569bfbdbb3611e78&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&hsa_cr_id=0&pd_rd_plhdr=t&pd_rd_r=3a3d188f-0701-494f-b07f-4e7c62285293&pd_rd_w=039JW&pd_rd_wg=H5pvQ&qid=1693773858&ref_=sbx_be_s_sparkle_mcd_asin_1_img&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&th=1
+
+2. [Stress Analysis]
+https://cdn.discordapp.com/attachments/1069111379656724490/1152037040771321916/Mounting.ipt_Stress_Analysis_Report_9_14_2023.html
+
+
