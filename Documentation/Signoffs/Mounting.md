@@ -52,6 +52,11 @@ Classrooms should be distraction-free to allow students to learn new information
 
 *Figure 2. Buildable Schematic of mounting system side view*
 
+*Figure 3. Buildable Schematic of mounting subsystem with system connections*
+
+
+
+
 ## Analysis
 
 1.) 3D printed box
