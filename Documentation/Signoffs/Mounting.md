@@ -48,12 +48,12 @@ Classrooms should be distraction-free to allow students to learn new information
 *Figure 1.  Mounting system side view*
 
 
-<img src="/Documentation/Images/Mounting/front_view_mounting.png" width = "40%" height = "40%" alt=" Buildable Schematic of mounting system front view">
+<img src="/Documentation/Images/Mounting/Mounting_Front_View.png" width = "40%" height = "40%" alt=" Buildable Schematic of mounting system front view">
 
 *Figure 2. Buildable Schematic of mounting system side view*
 
 
-<img src="/Documentation/Images/Mounting_Front_View.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
+<img src="/Documentation/Images/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
 
 *Figure 3. Buildable Schematic of mounting subsystem with system connections*
 
