@@ -70,11 +70,13 @@ The above figure depicts how each individual component will be physically placed
 
 Figure 2 shows each individual subsystem along with the corresponding shelf that the subsystem is on. There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>. 
 
-A stress analysis was performed on the 3D design in order to make sure that the box would withstand a large amount of force [2]. The box will be placed in the room with the following connections as outlined in Figure 3. Figure 3 shows the wall to the left of the window where the box will be fastened using command strips, the input subsystem will be on the left hand side of the box and the output will be wired to processing through the bottom of the shelf. The input mic will be fastened to the window and wired to the input subsystem through one of the side view holes. The output speaker will be wired from the output section of the box through one of the side view holes as well. The error mic will be placed in front of the output speaker and will be wired back into processing through the side view hole. 
+The box will be placed in the room with the following connections as outlined in Figure 3. Figure 3 shows the wall to the left of the window where the box will be fastened using command strips. 
 
 2.) Command strip details
 
 The command strips that will be used will be the command black picture hanging strip mixed pack which is sold through Amazon. There are 8 pairs of X-large strips in this pack which will hold 20 lbs.
+
+A stress analysis was performed on the 3D design in order to make sure that the box would withstand a total force under 20 pounds [2].
 
 
 
