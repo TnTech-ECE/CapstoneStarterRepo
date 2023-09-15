@@ -53,9 +53,7 @@ Classrooms should be distraction-free to allow students to learn new information
 *Figure 2. Buildable Schematic of mounting system side view*
 
 
-<img src="/Documentation/Images/Mounting/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
 
-*Figure 3. Buildable Schematic of mounting subsystem with system connections*
 
 
 
@@ -69,6 +67,11 @@ Classrooms should be distraction-free to allow students to learn new information
 The box will be 3D printed by the team and will be 10 inches in length, 10 inches in width, and 5 inches in depth which will mounted to the wall. The purpose of wall mounting is to keep the sensitive subsystems out of reach during normal use as it will not require input from users. This also ensures that the entire system will either be attached to the wall or on the window sill, minimizing the movement restrictions placed on the room to unfrequented areas. The wall shelf design helps follow constraints <sup>2</sup> and <sup>4</sup>.
 
 There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction. There are 14 holes in the design - 8 on the side walls and 6 inside the box - which are placed to allow for discrete wiring <sup>5</sup>. 
+
+<img src="/Documentation/Images/Mounting/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
+
+*Figure 3. Buildable Schematic of mounting subsystem with system connections*
+
 
 There are four individual shelves inside the box which will contain all the required subsystems for system functionality. The top shelf on the left-hand side will contain the input subsystem and on the right-hand side will contain the error subsystem. The second shelf from the top will contain the speaker preamplifier, and the third shelf from the top will contain the processing subsystem. The power subsystem will be on the bottom shelf. The box will connected to the wall using command strips and the input mic will be connected to the window and wired to the input pre-amplifier using the holes in the box. The speaker will be placed on the windowsill to ensure the distance between the measurement point is less than the requirement <sup>3</sup>. 
 
