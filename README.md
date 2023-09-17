@@ -1,20 +1,18 @@
-# {Name of the Project} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
+# SECON 2024 Hardware Competition Robot
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+The goal of this project is to design and build an autonomous robot to compete in the 2024 IEEE Southeast Convention Student Hardware Competition. The theme od the competition is a rocket launch, and the course and objectives reflect this. The robot will navigate a course and collect and deposit objectrs in certain places in under a three minute time limit. The team consists of five electrical engineers and four mechanical engineers.
 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+This version of the project is capable of nothing, as it is just a project proposal at this stage.
 
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+There are no salient outcomes at this time.
 
 
 ## Project Demonstration & Images
@@ -28,15 +26,37 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+The team members are as follows:
+
+#### Electrical Engineers
+
+Callie Battenfield
+
+Caz Bilbrey
+
+Liam Counasse
+
+Adrin Jackson
+
+Conor Orr
+
+#### Mechanical Engineers
+
+Colby Adams
+
+James Howell
+
+Steve Jordan
+
+Zachary Wisti
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+The faculty supervisor for this project is Mr Jesse Roberts. 
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The stakeholders for this project are the ECE and ME Departments at Tennessee Technological University. They are who the robot will be representing at the 2024 SECON Competition.
 
 ### Recognitions
 
@@ -47,14 +67,14 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
 
 
-### Reports
+### [Reports](https://github.com/cebttu/CapstoneTeam1/blob/main/Reports)
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+In the reports section of this repository the various reports for this project can be found. At this time it only includes the project proposal.
 
-### Documentation
+### [Documentation](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation)
 
 In the documentaion section information regarding the documentation that is required and how it should be organized is given.
 
-### Software
+### [Software](https://github.com/cebttu/CapstoneTeam1/tree/main/Software)
 
 In the software directory of the repo information regarding how each team is expected to document software can be found.
