@@ -12,11 +12,11 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 | No. | Constraints                                                           | Origin            |
 | --- | --------------------------------------------------------------------- | ----------------- |
-| 1   | System shall convert wall AC Voltage to a voltage that can range from 11.4V to 12.6V        | Design Constraint |
-| 2   | Shall be able to supply 5V DC and 100mA of current to main processor subsystem                   | Design Constraint |
-| 3   | Shall be able to supply 5V DC and 5.2mA of current to Error subsystem                           | Design Constraint |
-| 4   | Shall be able to supply 5V DC and 5.2mA of current to Input subsystem                                 | Design Constraint |
-| 5   | Shall be able to supply 12V DC and 100mA of current to Output subsystem                                      | Design Constraint |
+| 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V        | Design Constraint |
+| 2   | Shall be able to supply 5V DC and 100mA of current to Main processor subsystem                   | Design Constraint |
+| 3   | Shall be able to supply 5V DC and 8.5mA of current to Error subsystem                           | Design Constraint |
+| 4   | Shall be able to supply 5V DC and 8.5mA of current to Input subsystem                                 | Design Constraint |
+| 5   | Shall be able to supply 12V DC and 1.3A of current to Output subsystem                                      | Design Constraint |
 | 6   | System shall be powered by a standard wall outlet                                 | Design Constraint |
 | 7   | System shall follow OSHA standard 1910.304 - 305                                 | Design Constraint |
 | 8   |  System shall follow Standard IEC 60950-1                                | Design Constraint |
@@ -26,12 +26,12 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 <sup>2</sup> The main processor subsystem requires 5V DC and 100mA of current in order for it to be functional. In order for the main system be
 
-<sup>3</sup> The Error subsystem requires 5V DC and 5.2mA of current in order for it to be functional.This will allow the system to read errors efficiently.
+<sup>3</sup> The Error subsystem requires 5V DC and 8.5mA of current in order for it to be functional.This will allow the system to read errors efficiently.
 
-<sup>4</sup> The Input Subsystem requires 5V DC and 5.2mA of current in order for it to be functional. This will allow the system to be able to receive inputs.
+<sup>4</sup> The Input Subsystem requires 5V DC and 8.5mA of current in order for it to be functional. This will allow the system to be able to receive inputs.
 
 
-<sup>5</sup>  The Output subsystem requires 12V DC and 100mA of current in order for it to be functional. This will allow the sytem to produce a output.
+<sup>5</sup>  The Output subsystem requires 12V DC and 3A of current in order for it to be functional. This will allow the sytem to produce a output.
 
 
 <sup>6</sup>  The system will be powered by a standard wall outlet in order to avoid the use of batteries and enable it to be used for longer periods of time.
@@ -46,15 +46,51 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 
 ## Buildable schematic 
-<img width="965" alt="Screen Shot 2023-04-24 at 5 25 58 PM" src="https://user-images.githubusercontent.com/123600399/234129961-edd41715-b2dc-486b-a249-67669e363180.png">
-This above image is the schematic showing how the TR154 will be set up and imlemented into our system.
 
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123600399/818abf47-3dd7-4111-a9a9-87ca63c83764)
+
+*Figure 1. The above image is the schematic showing how the subsystem will provide power to the whole project.*
+The Error and Input will be wired by using jumper wires. 
+The Main processor will be wired by using a USB 2.0 micro.
 
 
 ## Analysis
+| DEVICE            | Maximum Required Voltage | Maximum Required Current |
+| ----------------- | -------- | -------------- | 
+| Main Processor   | 5              | 100mA        | 
+| Error   | 5              | 8.5mA       | 
+| Input   | 5              | 8.5mA       | 
+| Output   | 5              | 1.33mA       | 
 
+The below equations show the amount of power required to operate.
+~~~math
+P_{Main Processor} = VI = (5V)(500mA) = 2.5W
+~~~
+~~~math
+P_{Error} = VI = (5V)(8.5mA) = 0.0425W
+~~~
+~~~math
+P_{Input} = VI = (5V)(8.5mA) = 0.0425W
+~~~
+~~~math
+P_{Output} = VI =(12V)(1.33A) = 15.96W
+~~~
+The below equation shows the total amount of power needed from the buck converter for the Main processor, Input, and Error subsystems.
+~~~math
+P_{Buck Conveter Total} = (2.5W) + 2(8.5mA) = 2.585W
+~~~
+The below equattion shows the power needed for the output subsystem.
+~~~math
+P_{Output Total} = 15.96W
+~~~
+The following equation shows the amount of power being delivered from the buck converter in order to supply 5V DC.
+~~~math
+P_{Buck Conveter} = (5V)(3A) = 15W
+~~~
+
+The efficiency of the buck converter is 92% so the power loss between input and outputs will be about percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.
 ### Power
-how much wattage it needs, and why i chose this wall wart. The system will require about 18 Watts for power. This system will utilize a wall wart in order to supply the DC power required.
+The system will require about 18 Watts for power. This system will utilize a wall wart in order to supply the DC power required.
 
 The Chanzon 12V 1.5A wall mount (wall wart style) has a power supply rating for 100-240VAC input and 12 Volts VDC output at 1.5A. The cable is 6 feet long and has a dotted line on it to signify the negative connection within it. The center of the plug of this device is where the positive connection is located (center positive). This cable meets all the requirements of the group in terms of a proper power supply.
 
@@ -64,7 +100,7 @@ The input for this subsystem is the 100-240 VAC coming from the wall outlet.
 
 ### Output
 
-This system will provide the correct power to each subsystem for the project. It will be connected to a power rail then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, Input, and Error. These three subsystems require 5V DC. The output subsystem requires 12V so it wont need to be connected to the buck converter.
+This system will provide the correct power to each subsystem for the project. It will be connected to a power rail then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, Input, and Error. These three subsystems require 5V DC. The output subsystem requires 12V so it wont need to be connected to the buck converter, instead it will recieve power from a separate wall wart.
 
 The buck converter in use will be the LM2596. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A.
 
@@ -76,9 +112,9 @@ THe end of the wallwart has a plug that will be removed to reveal the two wire c
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| Chanzon   | 1              | $11.99        | 11.99     |
-| LM2596   | 1              | $5.49        | 5.49     |
-
+| Chanzon   | 2              | $11.99        | $11.99     |
+| LM2596   | 1              | $5.49        | $5.49     |
+| PS-SP11111   | 1              | $19.98        | $19.98     |
 
 ## References
 
@@ -88,3 +124,7 @@ THe end of the wallwart has a plug that will be removed to reveal the two wire c
 [2] Amazon.com: Chanzon 12V 1.5a UL listed 18w AC DC switching power supply ... (n.d.-b). https://www.amazon.com/Chanzon-Switching-100-240V-Transformer-Security/dp/B07G12L4SC 
 
 [3] Amazon.com: #10Gtek# Buck Converter step Down Module LM2596 DC to DC ... (n.d.-a). https://www.amazon.com/10Gtek-Voltage-Regulator-Converter-Step-Down/dp/B09LCNVB22 
+
+[4] Home. Parts Express. (n.d.). https://www.parts-express.com/Sure-PS-SP11111-12-VDC-3A-Power-Adapter-320-312?quantity=1 
+
+[5] LM2596S adjustable DC-DC step-down module. ProtoSupplies. (2023, March 19). https://protosupplies.com/product/lm2596s-adjustable-dc-dc-step-down-module/ 
