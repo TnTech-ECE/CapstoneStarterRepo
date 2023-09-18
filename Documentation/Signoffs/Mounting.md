@@ -17,7 +17,7 @@ The mounting subsystem will hold the input, output, error, power and processing 
 
 <sup>1</sup>	The overall system length from input to speaker can be no greater than 1.575 ft. [Origin: System Requirements]
 
-The delay of the system must be less than the delay of the sound for the noise cancellation to be effective. This constraint is dependent on distance: if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the error microphone is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms). This equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
+The delay of the system must be less than the delay of the sound for the noise cancellation to be effective. This constraint is dependent on distance: if the velocity of sound in air is used (343 m/s), then the maximum distance from the input microphone to the output speaker is given by the following equation: d = v*t where d is the maximum distance, v is the velocity of sound and t is the maximum delay (1.4 ms). This equates to a distance of 0.4802 m or 1.575 ft, therefore the total length of the system can be no greater than 1.575 ft for correct operation.
 
 <sup>2</sup> System shall not impede movement and easy access throughout the room. [Origin: American Disabilities Act]
 
