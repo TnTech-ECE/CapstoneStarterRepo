@@ -39,6 +39,7 @@ Liam Counasse
 Adrin Jackson
 
 Conor Orr
+I am involved in multiple campus organizations. I am a practical problem solver and love getting my hands dirty.
 
 #### Mechanical Engineers
 
@@ -49,6 +50,7 @@ James Howell
 Steve Jordan
 
 Zachary Wisti
+I am the president of the TTU Formula SAE team. I welcome challenges and like to face them head on.
 
 ### Faculty Supervisor
 
