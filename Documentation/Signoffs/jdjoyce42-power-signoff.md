@@ -22,7 +22,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 8   |  System shall follow Standard IEC 60950-1                                | Design Constraint |
 
 
-<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. The only subsystem that doesnt need 5V DC is the Output subsystem which requires 12V If this is not met it could damage something or cause it to just not work.
+<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC in order for each device to be functional. The only subsystem that doesnt need 5V DC is the Output subsystem which requires 12V.
 
 <sup>2</sup> The main processor subsystem requires 5V DC and 100mA of current in order for it to be functional. In order for the main system be
 
