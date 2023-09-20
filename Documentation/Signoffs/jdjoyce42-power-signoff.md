@@ -1,7 +1,4 @@
 # Power Subsystem
-
-
-  
  
 ## Function of the Subsystem
 
@@ -13,34 +10,29 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | No. | Constraints                                                                         | Origin            |
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
-| 2   | Shall supply 5V DC and 100mA of current to Main processor subsystem                 | Design Constraint |
+| 2   | Shall supply the required voltage and current to all of the devices that need to be powered in the system  | Design Constraint |
+
+
 | 3   | Shall  supply 5V DC and 8.5mA of current to Error subsystem                         | Design Constraint |
 | 4   | Shall  supply 5V DC and 8.5mA of current to Input subsystem                         | Design Constraint |
 | 5   | Shall supply 12V DC and 1.3A of current to Output subsystem                         | Design Constraint |
+
 | 6   | System shall be powered by a standard wall outlet                                   | Design Constraint |
-| 7   | System shall follow OSHA standard 1910.304 - 305                                    | Design Constraint |
-| 8   | System shall follow Standard IEC 60950-1                                            | Design Constraint |
+| 7   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
+| 8   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
 
 
-<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. The only subsystem that doesn't need 5V DC is the Output subsystem which requires 12 V.
+<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
-<sup>2</sup> The main processor subsystem requires 5V DC and 100mA of current in order for it to be functional. For the main system to be
-
-<sup>3</sup> The Error subsystem requires 5V DC and 8.5mA of current in order for it to be functional.This will allow the system to read errors efficiently.
-
-<sup>4</sup> The Input Subsystem requires 5V DC and 8.5mA of current in order for it to be functional. This will allow the system to be able to receive inputs.
+<sup>2</sup> In order for all the subsystems to be powered, the power subsystem must be able to individually supply all the needed power to each subsystem. 
 
 
-<sup>5</sup>  The Output subsystem requires 12V DC and 3A of current in order for it to be functional. This will allow the system to produce an output.
+<sup>3</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
 
 
-<sup>6</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
+<sup>4</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power.
 
-
-<sup>7</sup>  The system shall follow OSHA standard 1910.304 - 305 which  provides an in-depth guide for the safety and regulation of wired power.
-
-
-<sup>8</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
+<sup>5</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
 
 
 
@@ -50,6 +42,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 ![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123600399/818abf47-3dd7-4111-a9a9-87ca63c83764)
 
 *Figure 1. Power Subsystem buildable schematic.*
+
 The Error and Input will be wired by using jumper wires. 
 The Main processor will be wired by using a USB 2.0 micro.
 
@@ -57,10 +50,14 @@ The Main processor will be wired by using a USB 2.0 micro.
 ## Analysis
 | DEVICE            | Maximum Required Voltage | Maximum Required Current |
 | ----------------- | ------------------------ | ------------------------ | 
-| Main Processor    | 5                        | 100mA                    | 
-| Input             | 5                        | 8.5mA                    | 
-| Error             | 5                        | 8.5mA                    | 
-| Output            | 5                        | 1.33mA                   | 
+| Main Processor    | 5 V                      | 100 mA                   | 
+| Input             | 5 V                      | 8.5 mA                   | 
+| Error             | 5 V                      | 8.5 mA                   | 
+| Output            | 12 V                     | xxxx mA                  | 
+
+The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are the devices that need power in the input and error subsystems respectively. The TS472 microphone preamplifier must be driven with a 5 VDC signal at a maximum supply current of 2.4 mA [6]. The CMA-4544PF-W
+
+
 
 The below equations show the amount of power required to operate.
 ~~~math
@@ -129,10 +126,11 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 
 [5] LM2596S adjustable DC-DC step-down module. ProtoSupplies. (2023, March 19). https://protosupplies.com/product/lm2596s-adjustable-dc-dc-step-down-module/ 
 
-[6]  [Link to Main Proccessor Subsystem](/Documentation/Signoffs/Main_Processor.md)
 
-[7] [Link to the Input Subsystem {Broken Link until signoff is done}] (/Documentation/Signoffs/)
 
-[8] [Link to the Error Subsystem {Broken Link until signoff is done}] (/Documentation/Signoffs/)
 
-[9] [Link to the Output Subsystem {Broken Link until signoff is done}] (/Documentation/Signoffs/)
+[6] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html [Accessed: 31-Aug-2023].
+
+[7] "LM741," Texas Instruments, https://www.ti.com/product/LM741?qgpn=lm741 [Accessed: 31-Aug-2023]
+
+[8] “CMA-4544PF-W: Digi-Key Electronics,” Digikey, https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 [Accessed: 9-Sept-2023].
