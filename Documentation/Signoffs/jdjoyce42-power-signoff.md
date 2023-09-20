@@ -11,22 +11,24 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
 | 2   | Shall be capable of supplying a minimum of 28 Watts of power  | Design Constraint |
-| 3   | System shall be powered by a standard wall outlet                                   | Design Constraint |
-| 4   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
-| 5   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
+| 3   | Shall be able to step down power supply voltage to 5 volts | Design Constrain |
+| 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
+| 5   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
+| 6   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
 
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
 <sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 28 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
 
+<sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 Volts so it is necessary to provide a constraint that ensures the supply is capable of this. 
 
-<sup>3</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
+<sup>4</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
 
 
-<sup>4</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power.
+<sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power.
 
-<sup>5</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
+<sup>6/sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
 
 
 
