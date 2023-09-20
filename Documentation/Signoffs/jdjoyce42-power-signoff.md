@@ -92,7 +92,9 @@ Adding this to the previously calculated total yields 18.7518 W.
 
 
 ### Fulfilling Constraints
+ 
 
+   The wall wart that is being used is a AC to DC power adapter, this will allow power from the wall to be pulled and used appropiately for the subsystems in the device <sup>1</sup>.
    The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 W encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 W [2]. Therefore this system can be powered by this supply alone <sup>2</sup>.
 
    The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
