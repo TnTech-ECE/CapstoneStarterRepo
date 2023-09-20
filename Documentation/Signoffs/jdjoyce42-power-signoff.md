@@ -47,12 +47,12 @@ The Main processor will be wired by using a USB 2.0 micro.
 | Main Processor    | 5 V                      | 100 mA                   | 
 | Input             | 5 V                      | 8.5 mA                   | 
 | Error             | 5 V                      | 8.5 mA                   | 
-| Output            | 12 V                     | xxxx mA                  | 
+| Output            | 12 V                     | 1.33 A                   | 
 
 The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are devices that need power in the input and error subsystems respectively. 
 
 Main Processor
-- 
+- (temp placeholder)
 
 Input and Error
 - The TS472 microphone preamplifier must be driven with a 5 VDC signal at a maximum supply current of 2.4 mA [6].
@@ -69,14 +69,9 @@ The below equations show the amount of power required to operate.
 P_{Main Processor} = VI = (5V)(500mA) = 2.5W
 ~~~
 ~~~math
-P_{Error} = VI = (5V)(8.5mA) = 0.0425W
-~~~
-~~~math
-P_{Input} = VI = (5V)(8.5mA) = 0.0425W
-~~~
-~~~math
 P_{Output} = VI =(12V)(1.33A) = 15.96W
 ~~~
+
 The below equation shows the total amount of power needed from the buck converter for the Main processor, Input, and Error subsystems.
 ~~~math
 P_{Buck Conveter Total} = (2.5W) + 2(8.5mA) = 2.585W
@@ -102,7 +97,7 @@ The input for this subsystem is the 100-240 VAC coming from the wall outlet.
 
 ### Output
 
-This system will provide the correct power to each subsystem for the project. It will be connected to a power rail and then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, Input, and Error. These three subsystems require 5V DC. The output subsystem requires 12V so it won't need to be connected to the buck converter, instead, it will receive power from a separate wall wart.
+This system will provide the correct power to each subsystem for the project. It will be connected to a power rail and then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, input, and error. These three subsystems require 5V DC. The output subsystem requires 12V so it will receive power from a separate wall wart.
 
 The buck converter in use will be the LM2596. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A.
 
