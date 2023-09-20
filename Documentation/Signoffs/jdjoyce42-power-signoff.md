@@ -35,7 +35,8 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 ## Buildable schematic 
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123600399/818abf47-3dd7-4111-a9a9-87ca63c83764)
+![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/b080a62f-e3b4-448b-8399-2f3279b2c822)
+
 
 *Figure 1. Power Subsystem buildable schematic.*
 
