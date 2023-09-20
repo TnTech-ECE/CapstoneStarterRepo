@@ -10,7 +10,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | No. | Constraints                                                                         | Origin            |
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to DC voltage | Design Constraint |
-| 2   | Shall be capable of supplying a minimum of 29 Watts of power                        | Design Constraint |
+| 2   | Shall be capable of supplying a minimum of 29 W                       | Design Constraint |
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall be grounded and not have live wire exposed                                    | OSHA and IEC Safety Standards  |
@@ -55,7 +55,7 @@ The Main processor will be wired by using a USB 2.0 micro.
 The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are devices that need power in the input and error subsystems respectively. 
 
 Main Processor
-The main processor is rated to run at 5 V and 500 mA, this means that the total power consumed would be 
+The main processor is rated to run at 5 VDC and 500 mA, this means that the total power consumed would be 
 ~~~math
 P_{Main Processor} = VI = (5V)(500mA) = 2.5W
 ~~~
@@ -72,7 +72,7 @@ P_{input/output} =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
 
 Output
 
-The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231 [9], the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, so the output power is
+The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231 [9], the audio amplifier will operate on 12 VDC and 1.3 A, so the output power is:
 ~~~math
 P_{Output} = VI =(12V)(1.33A) = 15.96W
 ~~~
@@ -85,7 +85,7 @@ Adding all the power draws together:
 P_{Total} = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
 ~~~
 
-The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. The total output power required by the systems the buck converter will feed is 2.585 W. Multiplying this by 8% equals 0.2068W.
+The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. The total output power required by the systems the buck converter will feed is 2.585 W. Multiplying this by 8% equals 0.2068 W.
 
 Adding this to the previously calculated total yields 18.7518 W.
 
