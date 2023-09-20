@@ -62,13 +62,31 @@ Input and Error
 Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is $$P=VI=5 V*8.5 mA = 42.5 mW$$
 
 Output
-- The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4].
+
+The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231, the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, with a power of approximately 15.96 Watts [9]. 
+
+Total Power
+
+Adding all the power draws together: 
+~~~math
+P_Total = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
+~~~
 
 
+<!-- - The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4]. -->
 
 
+### Fulfilling Constraints
 
+> 2) Shall be capable of supplying a minimum of 28 Watts of power
 
+    ~~~math 
+    (18.545)(1.5) = 27.8175 W
+    ~~~
+
+    
+     
+    
 The below equations show the amount of power required to operate.
 ~~~math
 P_{Main Processor} = VI = (5V)(500mA) = 2.5W
@@ -144,4 +162,6 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 
 [9] Sure Electronics, "AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board" AA-AB32231 datasheet, 2011, (https://www.parts-express.com/pedocs/manuals/320-329--aa-ab32231-1-or-2-channel-configurable-16w-amp-board.pdf) (accessed September 9th, 2023).
 
-[10] Installation, C. H. (2023, August 25). How do you balance performance, reliability, and cost when installing a power supply?. How to Install a Power Supply: Tips on Wattage, Efficiency, and Quality. https://www.linkedin.com/advice/0/how-do-you-balance-performance-reliability 
+[10] Installation, C. H. (2023, August 25). How do you balance performance, reliability, and cost when installing a power supply?. How to Install a Power Supply: Tips on Wattage, Efficiency, and Quality. https://www.linkedin.com/advice/0/how-do-you-balance-performance-reliability
+
+
