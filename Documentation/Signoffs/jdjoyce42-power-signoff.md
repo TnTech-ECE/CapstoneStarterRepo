@@ -99,7 +99,7 @@ Adding this to the previously calculated total yields 18.7518 W.
     
      
     
-The below equations show the amount of power required to operate.
+<!-- The below equations show the amount of power required to operate.
 ~~~math
 P_{Main Processor} = VI = (5V)(500mA) = 2.5W
 ~~~
@@ -119,6 +119,7 @@ The following equation shows the amount of power being delivered from the buck c
 ~~~math
 P_{Buck Conveter} = (5V)(3A) = 15W
 ~~~
+-->
 
 
 
