@@ -95,7 +95,7 @@ Adding this to the previously calculated total yields 18.7518 W.
 
    The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 W encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 W [2]. Therefore this system can be powered by this supply alone <sup>2</sup>.
 
-   The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>3</sup>.
+   The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
    The subsystem components and wires will be enclosed in the mounting device. The power cable will run along the wall and the exposed wiring portion will take place inside of the mounting subsystem. This will help to reduce the chance that any wires are disconnected or damaged and eliminate the chance of accidentally getting hurt by the device. <sup>5</sup>.
 
