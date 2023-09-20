@@ -64,6 +64,9 @@ Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA
 Output
 - The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4].
 
+The combined power requirements will be used to successfully power each subsystem <sub>2</sub>. Our maximum output power  
+
+
 The below equations show the amount of power required to operate.
 ~~~math
 P_{Main Processor} = VI = (5V)(500mA) = 2.5W
