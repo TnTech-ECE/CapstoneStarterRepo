@@ -63,7 +63,7 @@ Input and Error
 
 Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is 
 ~~~math
-P_input/outpu =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
+P_{input/output} =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
 ~~~
 
 Output
@@ -78,7 +78,7 @@ Total Power
 
 Adding all the power draws together: 
 ~~~math
-P_Total = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
+P_{Total} = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
 ~~~
 
 
