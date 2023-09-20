@@ -122,12 +122,13 @@ The following equation shows the amount of power being delivered from the buck c
 ~~~math
 P_{Buck Conveter} = (5V)(3A) = 15W
 ~~~
--->
 
 
 
 
-The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.
+
+The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.--->
+
 ### Power
 The system will require about 18 Watts of power. This system will utilize a wall wart to supply the DC power required.
 
