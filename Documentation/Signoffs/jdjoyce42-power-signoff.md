@@ -54,7 +54,10 @@ The Main processor will be wired by using a USB 2.0 micro.
 The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are devices that need power in the input and error subsystems respectively. 
 
 Main Processor
-- (temp placeholder)
+The main processor is rated to run at 5 V and 500 mA, this means that the total power consumed would be 
+~~~math
+P_{Main Processor} = VI = (5V)(500mA) = 2.5W
+~~~
 
 Input and Error
 - The TS472 microphone preamplifier must be driven with a 5 VDC signal at a maximum supply current of 2.4 mA [6].
