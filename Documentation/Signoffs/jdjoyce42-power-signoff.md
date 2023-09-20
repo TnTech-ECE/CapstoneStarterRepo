@@ -64,7 +64,9 @@ Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA
 Output
 - The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4].
 
-The combined power requirements will be used to successfully power each subsystem <sub>2</sub>. Our maximum output power  
+
+
+
 
 
 The below equations show the amount of power required to operate.
@@ -87,6 +89,9 @@ The following equation shows the amount of power being delivered from the buck c
 ~~~math
 P_{Buck Conveter} = (5V)(3A) = 15W
 ~~~
+
+
+
 
 The efficiency of the buck converter is 92% so the power loss between input and outputs will be about percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.
 ### Power
@@ -112,7 +117,7 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 ## BOM
 | DEVICE            | Quantity | Price Per Unit | Total Price |
 | ----------------- | -------- | -------------- | ----------- |
-| Chanzon           | 2        | $11.99         | $11.99      |
+| Chanzon           | 1        | $11.99         | $11.99      |
 | LM2596            | 1        | $5.49          | $5.49       |
 | PS-SP11111        | 1        | $19.98         | $19.98      |
 
