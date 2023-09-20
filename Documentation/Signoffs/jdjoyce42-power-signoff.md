@@ -10,7 +10,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | No. | Constraints                                                                         | Origin            |
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
-| 2   | Shall be capable of supplying a minimum of 28 Watts of power  | Design Constraint |
+| 2   | Shall be capable of supplying a minimum of 29 Watts of power  | Design Constraint |
 | 3   | Shall be able to step down power supply voltage to 5 volts | Design Constrain |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
@@ -19,7 +19,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
-<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 28 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
+<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 29 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
 
 <sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 Volts so it is necessary to provide a constraint that ensures the supply is capable of this. 
 
@@ -68,11 +68,11 @@ P_{input/output} =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
 
 Output
 
-The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231, the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, so the output power is
+The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231 [9], the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, so the output power is
 ~~~math
 P_{Output} = VI =(12V)(1.33A) = 15.96W
 ~~~
-[9]. 
+
 
 Total Power
 
@@ -81,16 +81,19 @@ Adding all the power draws together:
 P_{Total} = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
 ~~~
 
+The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. The total output power required by the systems the buck converter will feed is 2.585 W. Multiplying this by 8% equals 0.2068W.
+
+Adding this to the previously calculated total yields 18.7518 W.
 
 <!-- - The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4]. -->
 
 
 ### Fulfilling Constraints
 
-> 2) Shall be capable of supplying a minimum of 28 Watts of power
+> 2) Shall be capable of supplying a minimum of 29 Watts of power
 
    
-   The total power draw is 18.545 W, so (18.545)(1.5) = 27.8175 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 Watts encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 Watts of power [2]. This is well over the constraint of 28 Watts set to ensure reliability, meaning this constraint is fulfilled.
+   The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 Watts encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 Watts of power [2]. This is well over the constraint of 29 Watts set to ensure reliability, meaning this constraint is fulfilled.
     
 
     
@@ -120,7 +123,7 @@ P_{Buck Conveter} = (5V)(3A) = 15W
 
 
 
-The efficiency of the buck converter is 92% so the power loss between input and outputs will be about percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.
+The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. Taking the total output power (2.585W) and multiplying it by 8% equals 0.2068W. This means that the minimum power that the wall wart needs to supply is 2.585 ± 0.2068 W. The wall wart supplies 18 watts and the buck converter supplies 15 watts. This is well over the power requirement so there won't be any problems with power.
 ### Power
 The system will require about 18 Watts of power. This system will utilize a wall wart to supply the DC power required.
 
