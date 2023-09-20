@@ -101,7 +101,7 @@ Adding this to the previously calculated total yields 18.7518 W.
 
    The LM2596 buck converter has a potentiometer that can adjust the output voltage. According to the datasheet for the LM2596 IC chip [10], it takes a voltage input between 3.2 VDC - 46 VDC and outputs 1.25 VDC - 35 VDC. In this design, a 12 VDC input from the Chanzon wall-wort will be converted to 5 VDC. These values fit within the specified range for the chip meaning it will be capable of stepping down from 12 VDC to 5 VDC <sup>3</sup>.
 
-   The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
+   The entire system will be powered with 12 VDC 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
    The subsystem components and wires will be enclosed in the mounting device. The power cable will run along the wall and the exposed wiring portion will take place inside of the mounting subsystem. This will help to reduce the chance that any wires are disconnected or damaged and eliminate the chance of accidentally getting hurt by the device. <sup>5</sup>.
 
