@@ -1,15 +1,16 @@
 
 ## Function of the Subsystem
 
-The mounting subsystem will hold the input, output, error, power and processing subsystems in an unfrequented location.
+The mounting subsystem will hold the input, output, error, power, and processing subsystems in an unfrequented location.
 
 ## Constraints
-| No. | Constraints                                                           | Origin            |
-| --- | --------------------------------------------------------------------- | ----------------- |
-| 1  |  System shall not impede movement and easy access throughout the room  | American Disabilities Act |
-| 2 |  The speaker output shall not be more than 0.5 m from window or wall being measured | System Requirements |
-| 3 |  System shall be mounted in the classroom in an unfrequented area.| System Requirements |
-| 4 |  System shall minimize its visual distraction | Stakeholder survey |
+| No. | Constraints                                                                                             | Origin            |
+| --- | ------------------------------------------------------------------------------------------------------- | ----------------- |
+| 1  |  System shall not impede movement and easy access throughout the room                                    | American Disabilities Act |
+| 2 |  The speaker output shall not be more than 0.5 m from the window or wall being measured                   | System Requirements |
+| 3 |  System shall be mounted in the classroom in an unfrequented area.                                        | System Requirements |
+| 4 |  System shall minimize its visual distraction                                                             | Stakeholder survey |
+| 5 | System shall have space within its confines to fit the input, error, output, processing, and power subsystems | System Requirements |
 
 
 
@@ -20,7 +21,7 @@ The mounting subsystem will hold the input, output, error, power and processing 
 This constraint is needed to ensure safety and minimize difficulty in navigating the classroom during the operation of the system. This constraint also will follow the American Disabilities Act allowing for individuals with limited mobility to easily navigate the room.
 
 
-<sup>2</sup> The speaker output shall not be more than 0.5 m from window or wall being measured. [Origin: System Requirements]
+<sup>2</sup> The speaker output shall not be more than 0.5 m from the window or wall being measured. [Origin: System Requirements]
 
 This is to make sure the system is small and compact and does impede movement throughout the classroom while also meeting the delay requirements.
 
@@ -28,12 +29,13 @@ This is to make sure the system is small and compact and does impede movement th
 
 This will allow the system to perform its functionality without causing difficulty for students or faculty performing their required tasks.
 
-<sup>4</sup> System shall minimize its visual distraction [Origin: Stakeholder Survey]
+<sup>4</sup> System shall minimize its visual distraction. [Origin: Stakeholder Survey]
 
 Classrooms should be distraction-free to allow students to learn new information effectively, therefore the system will not be distracting to students or faculty.
 
+<sup>5</sup> System shall have space within its confines to fit the input, error, output, processing, and power subsystems. [Origin: System Requirements]
 
-
+This constraint defines the minimum available volume the mounting subsystem must have. This is the root purpose of the mounting subsystem: to create a safe and unoccupied space for each subsystem to function as expected.
 
 ## Buildable schematic 
 <img src="/Documentation/Images/Mounting/sideview_mounting.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
@@ -54,7 +56,18 @@ The figures above show a side and front view of the mounting box that will utili
 
 1.) 3D printed box
 
-The box will be 3D printed by the team and will be 10 inches in length, 10 inches in width, and 5 inches in depth which will be mounted to the wall. The purpose of wall mounting is to keep the sensitive subsystems out of reach during normal use as it will not require input from users. This also ensures that the entire system will either be attached to the wall or on the window sill, minimizing the movement restrictions placed on the room to unfrequented areas. The wall shelf design helps follow constraints <sup>1</sup> and <sup>3</sup>.
+The box will be 3D printed by the team and will be 6 inches in length, 8 inches in width, and 5 inches in depth which will be mounted to the wall. The purpose of wall mounting is to keep the sensitive subsystems out of reach during normal use as it will not require input from users. This also ensures that the entire system will either be attached to the wall or on the window sill, minimizing the movement restrictions placed on the room to unfrequented areas. The wall shelf design helps follow constraints <sup>1</sup> and <sup>3</sup>.
+
+| Subsystem  | Length (in) | Width (in) | Height (in) |
+| ---------- | ----------- | ---------- | ----------- |
+| Error      | xxx         | xxx        | xxx         |
+| Input      | xxx         | xxx        | xxx         |
+| Output     | xxx         | xxx        | xxx         |
+| Processing | xxx         | xxx        | xxx         |
+| Power      | xxx         | xxx        | xxx         |
+
+
+The volume of each shelf is defined as: 9.9 in x 4.9 in x 1.9 in = 92.169 in<sup>3</sup>. The input and error subsystems share this volume, with each having 4.9 in x 4.8 in x 1.9 in = 44.688 in<sup>3</sup> respectively. Using the table above, 
 
 There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction. There are 14 holes in the design - 8 on the side walls and 6 inside the box - which are placed to allow for discrete wiring <sup>5</sup>. 
 
