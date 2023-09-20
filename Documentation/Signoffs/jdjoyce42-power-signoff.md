@@ -99,6 +99,8 @@ Adding this to the previously calculated total yields 18.7518 W.
    
    The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 W encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 W [2]. Therefore this system can be powered by this supply alone <sup>2</sup>.
 
+   The LM2596 buck converter has a potentiometer that can adjust the output voltage. According to the datasheet for the LM2596 IC chip [10], it takes a voltage input between 3.2 V - 46 V and outputs 1.25 V - 35 V. In this design, a 12 VDC input from the Chanzon wall-wort will be converted to 5 VDC. These values fit within the specified range for the chip meaning it will be capable of stepping down from 12 V to 5 V <sup>3</sup>.
+
    The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
    The subsystem components and wires will be enclosed in the mounting device. The power cable will run along the wall and the exposed wiring portion will take place inside of the mounting subsystem. This will help to reduce the chance that any wires are disconnected or damaged and eliminate the chance of accidentally getting hurt by the device. <sup>5</sup>.
@@ -183,4 +185,4 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 
 [9] Installation, C. H. (2023, August 25). How do you balance performance, reliability, and cost when installing a power supply?. How to Install a Power Supply: Tips on Wattage, Efficiency, and Quality. https://www.linkedin.com/advice/0/how-do-you-balance-performance-reliability
 
-
+[10] ONSEMI. (n.d.). LM2596 - 3.0 A, step-down switching regulator . LM2596 Datasheet. https://www.onsemi.com/pdf/datasheet/lm2596-d.pdf 
