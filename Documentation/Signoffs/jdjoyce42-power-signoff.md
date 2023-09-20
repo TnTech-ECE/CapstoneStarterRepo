@@ -46,10 +46,10 @@ The Main processor will be wired by using a USB 2.0 micro.
 ## Analysis
 | DEVICE            | Maximum Required Voltage | Maximum Required Current |
 | ----------------- | ------------------------ | ------------------------ | 
-| Main Processor    | 5 V                      | 100 mA                   | 
-| Input             | 5 V                      | 8.5 mA                   | 
-| Error             | 5 V                      | 8.5 mA                   | 
-| Output            | 12 V                     | 1.33 A                   | 
+| Main Processor    | 5 VDC                      | 100 mA                   | 
+| Input             | 5 VDC                      | 8.5 mA                   | 
+| Error             | 5 VDC                     | 8.5 mA                   | 
+| Output            | 12 VDC                    | 1.33 A                   | 
 
 The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are devices that need power in the input and error subsystems respectively. 
 
