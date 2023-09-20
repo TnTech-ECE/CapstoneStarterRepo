@@ -99,7 +99,7 @@ Adding this to the previously calculated total yields 18.7518 W.
    
    The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 W encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 W [2]. Therefore this system can be powered by this supply alone <sup>2</sup>.
 
-   The LM2596 buck converter has a potentiometer that can adjust the output voltage. According to the datasheet for the LM2596 IC chip [10], it takes a voltage input between 3.2 V - 46 V and outputs 1.25 V - 35 V. In this design, a 12 VDC input from the Chanzon wall-wort will be converted to 5 VDC. These values fit within the specified range for the chip meaning it will be capable of stepping down from 12 V to 5 V <sup>3</sup>.
+   The LM2596 buck converter has a potentiometer that can adjust the output voltage. According to the datasheet for the LM2596 IC chip [10], it takes a voltage input between 3.2 VDC - 46 VDC and outputs 1.25 VDC - 35 VDC. In this design, a 12 VDC input from the Chanzon wall-wort will be converted to 5 VDC. These values fit within the specified range for the chip meaning it will be capable of stepping down from 12 VDC to 5 VDC <sup>3</sup>.
 
    The entire system will be powered with 12 V 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
