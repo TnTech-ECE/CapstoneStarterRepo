@@ -80,9 +80,9 @@ P_Total = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
 
 > 2) Shall be capable of supplying a minimum of 28 Watts of power
 
-    ~~~math 
-    (18.545)(1.5) = 27.8175 W
-    ~~~
+   
+   The total power draw is 18.545 W, so (18.545)(1.5) = 27.8175 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 Watts encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 Watts of power [2]. This is well over the constraint of 28 Watts set to ensure reliability, meaning this constraint is fulfilled.
+    
 
     
      
