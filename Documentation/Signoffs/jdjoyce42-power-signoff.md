@@ -10,18 +10,18 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | No. | Constraints                                                                         | Origin            |
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
-| 2   | Shall be capable of supplying a minimum of 29 Watts of power  | Design Constraint |
-| 3   | Shall be able to step down power supply voltage to 5 volts | Design Constrain |
+| 2   | Shall be capable of supplying a minimum of 29 Watts of power                        | Design Constraint |
+| 3   | Shall be able to step down power supply voltage to 5 V                              | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
 | 6   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
 
 
-<sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
+<sup>1</sup> The system will need to convert 120 VAC to 5 VDC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
-<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 29 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
+<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system [10]. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 29 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
 
-<sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 Volts so it is necessary to provide a constraint that ensures the supply is capable of this. 
+<sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 VDC so it is necessary to provide a constraint that ensures the supply is capable of this. 
 
 <sup>4</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
 
@@ -61,7 +61,7 @@ Input and Error
 - The LM741 operational amplifier will be driven with a +5 VDC signal and a -5 VDC signal at a maximum supply current of 2.8 mA [7].
 - The CMA-4544PF-W electret microphone will be driven with a 5 VDC signal at a maximum supply current of 0.5 mA [8]. 
 
-Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is 
+Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power for both input and error combined is:
 ~~~math
 P_{input/output} =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
 ~~~
