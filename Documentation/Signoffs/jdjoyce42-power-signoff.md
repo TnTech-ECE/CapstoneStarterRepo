@@ -55,8 +55,17 @@ The Main processor will be wired by using a USB 2.0 micro.
 | Error             | 5 V                      | 8.5 mA                   | 
 | Output            | 12 V                     | xxxx mA                  | 
 
-The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are the devices that need power in the input and error subsystems respectively. The TS472 microphone preamplifier must be driven with a 5 VDC signal at a maximum supply current of 2.4 mA [6]. The CMA-4544PF-W
+The above table describes the maximum required supply voltage and supply current for each subsystem. The input and error subsystems require an identical amount of power to function. There are the devices that need power in the input and error subsystems respectively. 
 
+Main Processor
+
+
+Input and Error
+- The TS472 microphone preamplifier must be driven with a 5 VDC signal at a maximum supply current of 2.4 mA [6].
+- The LM741 operational amplifier will be driven with a +5 VDC signal and a -5 VDC signal at a maximum supply current of 2.8 mA[7].
+- The CMA-4544PF-W electret microphone will be driven with a 5 VDC signal at a maximum supply current of 0.5 mA [8]. 
+
+Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is $$P=VI=5 V*8.5 mA = 42.5 mW$$
 
 
 The below equations show the amount of power required to operate.
