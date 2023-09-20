@@ -13,7 +13,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 2   | Shall be capable of supplying a minimum of 29 Watts of power                        | Design Constraint |
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
-| 5   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
+| 5   | System shall be grounded and not have live wire expose                                    | OSHA Safety Standard  |
 | 6   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
 
 
@@ -26,7 +26,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 <sup>4</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
 
 
-<sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power.
+<sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power. To keep everyone safe from the device, live wire and componenents will not be exposed. This is to eliminate the chance of accidental shock or damage from touching the device while active.
 
 <sup>6</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
 
