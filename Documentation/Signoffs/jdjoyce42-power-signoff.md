@@ -28,7 +28,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 <sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power.
 
-<sup>6/sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
+<sup>6</sup>  The system shall follow IEC standard 60950-1 which deals with wired and battery-powered devices below 600V. This will assist in eliminating harm from electric shock, fire, and mechanical instability.
 
 
 
@@ -61,11 +61,18 @@ Input and Error
 - The LM741 operational amplifier will be driven with a +5 VDC signal and a -5 VDC signal at a maximum supply current of 2.8 mA [7].
 - The CMA-4544PF-W electret microphone will be driven with a 5 VDC signal at a maximum supply current of 0.5 mA [8]. 
 
-Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is $$P=VI=5 V*8.5 mA = 42.5 mW$$
+Therefore, the total supply current will be 2.4 mA + 2(2.8 mA) + 0.5 mA = 8.5 mA. Since the LM741 requires two supply pins, the maximum supply current must be doubled. The total output power is 
+~~~math
+P_input/outpu =2(VI) = 2(5 V * 8.5 mA) = 2(42.5 mW) = 85 mW
+~~~
 
 Output
 
-The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231, the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, with a power of approximately 15.96 Watts [9]. 
+The output subsystem consists of an audio amplifier (AA-AB32231) and a speaker. According to the data sheet for the AA-AB32231, the audio amplifier will operate on 12 Volts of power and 1.3 Amps of current, so the output power is
+~~~math
+P_{Output} = VI =(12V)(1.33A) = 15.96W
+~~~
+[9]. 
 
 Total Power
 
