@@ -11,7 +11,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
 | 2   | Shall be capable of supplying a minimum of 29 Watts of power                        | Design Constraint |
-| 3   | Shall be able to step down power supply voltage to 5 V                              | Design Constraints |
+| 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
 | 6   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
