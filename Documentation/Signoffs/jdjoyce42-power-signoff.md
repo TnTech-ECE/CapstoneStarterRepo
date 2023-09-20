@@ -90,10 +90,7 @@ Adding this to the previously calculated total yields 18.7518 W.
 
 ### Fulfilling Constraints
 
-> 2) Shall be capable of supplying a minimum of 29 Watts of power
-
-   
-   The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 Watts encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 Watts of power [2]. This is well over the constraint of 29 Watts set to ensure reliability, meaning this constraint is fulfilled.
+   The total estimated power draw is 18.7518 W, so (18.7518)(1.5) = 28.1277 W. This 1.5x calculation ensures that there is sufficient power for the system, and 28 W encompasses that value. The Chanzon 12 V 3 A power supply is capable of delivering 36 W [2]. Therefore this subsystem can be powered by this supply alone <sup>2</sup>.
     
 
     
