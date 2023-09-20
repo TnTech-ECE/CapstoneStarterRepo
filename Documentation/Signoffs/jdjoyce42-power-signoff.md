@@ -9,7 +9,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 | No. | Constraints                                                                         | Origin            |
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
-| 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
+| 1   | System shall convert wall AC Voltage to DC voltage | Design Constraint |
 | 2   | Shall be capable of supplying a minimum of 29 Watts of power                        | Design Constraint |
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
@@ -17,7 +17,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 
 
-<sup>1</sup> The system will need to convert 120 VAC to 5 VDC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
+<sup>1</sup> The system will need to convert VAC to VDC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
 <sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system [10]. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 29 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
 
