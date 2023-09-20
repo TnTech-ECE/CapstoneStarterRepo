@@ -11,15 +11,9 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | --- | ----------------------------------------------------------------------------------- | ----------------- |
 | 1   | System shall convert wall AC Voltage to a voltage that can range from 4.4V to 5.6V  | Design Constraint |
 | 2   | Shall supply the required voltage and current to all of the devices that need to be powered in the system  | Design Constraint |
-
-
-| 3   | Shall  supply 5V DC and 8.5mA of current to Error subsystem                         | Design Constraint |
-| 4   | Shall  supply 5V DC and 8.5mA of current to Input subsystem                         | Design Constraint |
-| 5   | Shall supply 12V DC and 1.3A of current to Output subsystem                         | Design Constraint |
-
-| 6   | System shall be powered by a standard wall outlet                                   | Design Constraint |
-| 7   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
-| 8   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
+| 3   | System shall be powered by a standard wall outlet                                   | Design Constraint |
+| 4   | System shall follow OSHA standard 1910.304 - 305                                    | OSHA Standard     |
+| 5   | System shall follow Standard IEC 60950-1                                            | IEC Standard      |
 
 
 <sup>1</sup> The system will need to convert 110 to 120 AC Voltage to 5V DC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
