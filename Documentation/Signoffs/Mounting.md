@@ -56,9 +56,9 @@ The figures above show a side and front view of the mounting box that will utili
 
 1.) 3D printed box
 
-The box will be 3D printed by the team and will be 6 inches in length, 8 inches in width, and 5 inches in depth which will be mounted to the wall. The purpose of wall mounting is to keep the sensitive subsystems out of reach during normal use as it will not require input from users. This also ensures that the entire system will either be attached to the wall or on the window sill, minimizing the movement restrictions placed on the room to unfrequented areas. The wall shelf design helps follow constraints <sup>1</sup> and <sup>3</sup>.
+The box will be 3D printed by the team and will be 6 inches in length, 5 inches in depth, and 8 inches in height which will be mounted to the wall. The purpose of wall mounting is to keep the sensitive subsystems out of reach during normal use as it will not require input from users. This also ensures that the entire system will either be attached to the wall or on the window sill, minimizing the movement restrictions placed on the room to unfrequented areas. The wall shelf design helps follow constraints <sup>1</sup> and <sup>3</sup>.
 
-| Subsystem  | Length (in) | Width (in) | Height (in) |
+| Subsystem  | Length (in) | Depth (in) | Height (in) |
 | ---------- | ----------- | ---------- | ----------- |
 | Error      | xxx         | xxx        | xxx         |
 | Input      | xxx         | xxx        | xxx         |
@@ -67,7 +67,11 @@ The box will be 3D printed by the team and will be 6 inches in length, 8 inches 
 | Power      | xxx         | xxx        | xxx         |
 
 
-The volume of each shelf is defined as: 9.9 in x 4.9 in x 1.9 in = 92.169 in<sup>3</sup>. The input and error subsystems share this volume, with each having 4.9 in x 4.8 in x 1.9 in = 44.688 in<sup>3</sup> respectively. Using the table above, 
+The volume of each shelf is defined as (L x D x H): 
+$$5.9 in * 4.9 in * 1.9 in = 54.9 in^3$$ 
+The input and error subsystems share this volume, with each respectively defined as: 
+$$2.9 in * 4.8 in * 1.9 in = 26.4 in^3$$
+The table above shows the dimensions of each subsystem; each subsystem will fit in its designated shelves, following constraint <sup>5</sup>.
 
 There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction. There are 14 holes in the design - 8 on the side walls and 6 inside the box - which are placed to allow for discrete wiring <sup>5</sup>. 
 
