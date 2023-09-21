@@ -33,6 +33,7 @@ The team members are as follows:
 Callie Battenfield
 
 Caz Bilbrey
+I have been working for Merrick and Company for over 2 years. I plan to move to Oak Ridge Tennessee  to continue my work in glovebox design.
 
 Liam Counasse
 
@@ -44,10 +45,12 @@ I am involved in multiple campus organizations. I am a practical problem solver 
 #### Mechanical Engineers
 
 Colby Adams
+I am a senior mechanical engineering major with a mechatronic concentration. Over last summer I had an internship at JR Automation in Nashville working on the mechanical side of their projects.
 
 James Howell
 
 Steve Jordan
+I worked on an internship at Aisin Automotive Casting Tennessee last summer where I researched and presented an Industrial Parts Washer Station to save $36,000 yearly in short stops. I plan to move to Knoxville Tennessee to work in design/consulting.
 
 Zachary Wisti
 I am the president of the TTU Formula SAE team. I welcome challenges and like to face them head on.
