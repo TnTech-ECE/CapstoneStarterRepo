@@ -60,12 +60,13 @@ The box will be 3D printed by the team and will be 6 inches in length, 5 inches 
 
 | Subsystem  | Length (in) | Depth (in) | Height (in) |
 | ---------- | ----------- | ---------- | ----------- |
-| Error      | xxx         | xxx        | xxx         |
-| Input      | xxx         | xxx        | xxx         |
-| Output     | xxx         | xxx        | xxx         |
-| Processing | xxx         | xxx        | xxx         |
-| Power      | xxx         | xxx        | xxx         |
+| Error      | 2.5         | 2.5        | 1           |
+| Input      | 2.5         | 2.5        | 1           |
+| Output     | 2.85        | 2.15       | 1           |
+| Processing | 4           | 2          | 2.5         |
+| Power      | 4           | 4          | 1           |
 
+*Note: The subsystem's measurements will be no larger than those listed above*
 
 The volume of each shelf is defined as (L x D x H): 
 $$5.9 in * 4.9 in * 1.9 in = 54.9 in^3$$ 
