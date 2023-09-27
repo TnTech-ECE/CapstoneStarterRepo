@@ -30,12 +30,13 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 |            |                    |     18.545 W              |
 
 The table above shows the determined power draws of each associated system.
+
 <sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 VDC so it is necessary to provide a constraint that ensures the supply is capable of this. 
 
 <sup>4</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
 
 
-<sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power, and IEC 60950-1 which deal with wired and battery powered devices below 600V. To keep everyone safe from the device, live wire and componenents will not be exposed. This is to eliminate the chance of accidental shock or fire damage from incorrect implementation of the device. 
+<sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power, and IEC 60950-1 which deal with wired and battery powered devices below 600V. To keep everyone safe from the device, hazardous wires and componenents will not be exposed. This is to eliminate the chance of accidental shock or fire damage from incorrect implementation of the device. 
 
 
 
