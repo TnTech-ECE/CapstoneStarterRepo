@@ -76,9 +76,13 @@ The table above shows the dimensions of each subsystem; each subsystem will fit 
 
 There will be a sliding door attached from the bottom while mounted on the wall to minimize visual distraction. There are 14 holes in the design - 8 on the side walls and 6 inside the box - which are placed to allow for discrete wiring <sup>5</sup>. 
 
-<img src="/Documentation/Images/Mounting/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic of mounting system top-down view">
+<img src="/Documentation/Images/Mounting/Mounting_Connection_Schematic.png" width= "40%" height = "40%" alt=" Buildable Schematic enlarged to show connections">
 
-*Figure 3. Buildable Schematic of the mounting subsystem with system connections*
+*Figure 3. Schematic of the mounting subsystem with system connections, enlarged to show detail*
+
+<img src="/Documentation/Images/Mounting/Mounting_To_Scale.png"  width= "40%" height = "40%" alt="To scale Buildable Schematic">
+
+*Figure 4. To scale buildable schematic (Exact speaker position and quantities may change depending on exact requirements)*
 
 The above figure depicts how each individual component will be physically placed in the room. This shows how the box mount is placed up above the desks in the room and high enough to be out of the way <sup>5</sup>. It also shows what the mount will look like with its sliding door covering the inside, minimizing distractions <sup>3 4</sup>. The post connected to the error microphone will be attached to the window sill with tape. The necessary wired connections can also be made using the internal and external holes through the box mount. The shown connections include from input subsystem to the input microphone, the error subsystem to the error microphone, and the output subsystem to the speaker. The wires will be taped flush and parallel to the wall to minimize the space utilized.
 
