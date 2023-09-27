@@ -13,14 +13,23 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 2   | Shall be capable of supplying a minimum of 29 W                       | Design Constraint |
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
-| 5   | System shall be grounded and not have live wire exposed                                    | OSHA and IEC Safety Standards  |
+| 5   | System shall be grounded and not have easily assessable hazardous wires exposed                                    | OSHA and IEC Safety Standards  |
 
 
 
 <sup>1</sup> The system will need to convert VAC to VDC for each device to be functional. A small margin of error is expected due to unideal power supply ripple and other nonlinear effects.
 
-<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system [9]. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 29 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
+<sup>2</sup> A good rule of thumb when it comes to power supply is to supply at least 1.2x the max power consumption of the system [9]. This helps account for any fluctuations that might happen in the power draw. To make this number even safer, a constraint of a 28 Watt minimum has been placed on the device. This is equal to 1.5x the max power draw total calculated from all of the systems. Ensuring enough power is constantly available.
 
+| DEVICE            | Power |Total Power |
+| ----------------- | ------------------------ | ------------------------ | 
+| Main Processor    | 2.5 W                    |                    | 
+| Input             | 42.5 mW                     |                    | 
+| Error             | 42.5 mW                    |                    | 
+| Output            | 15.96 W                    |                   | 
+|            |                    |     18.545 W              |
+
+The table above shows the determined power draws of each associated system.
 <sup>3</sup> Due to each subsystem requiring different levels of power, the power supply must be capable of stepping down its voltage so that the proper amount is supplied to each subsystem. The majority of the subsystems will operate on 5 VDC so it is necessary to provide a constraint that ensures the supply is capable of this. 
 
 <sup>4</sup>  The system will be powered by a standard wall outlet to avoid the use of batteries and enable it to be used for longer periods.
@@ -35,7 +44,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 
 ## Buildable schematic 
 
-![image](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/b080a62f-e3b4-448b-8399-2f3279b2c822)
+<img src = "/Documentation/Images/Power/Buildable_Schematic.png" width = "60%" height = "60%">
 
 
 *Figure 1. Power Subsystem buildable schematic.*
@@ -152,7 +161,7 @@ The buck converter in use will be the LM2596 [10][3]. It can be set to out volta
 
 #### Further connections
 
-The end of the wallwart has a plug that will be removed to reveal the two-wire connection. The two wires are going to the power supply rail designed to supply the voltage across the entire system. They will be connected to their respective components with the negative wire being grounded and the positive being used to power each subsystem through the power supply rail. 
+The end of the wallwart has a plug that will be removed to reveal the two-wire connection. The two wires are going to the power supply rail on a soldered breadboard designed to supply the voltage across the entire system. The breadboard is 2"x4" and will have designated columns for each voltagae required. The first column will be for the output and provide 12V DC, the second column will provide 5V DC for the main processor, and input and error will have the last column requiring 10V and 5V DC. They will be connected with the negative wire being grounded and the positive being used to power each subsystem. 
 
 
 ## BOM
@@ -160,7 +169,7 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 | ----------------- | -------- | -------------- | ----------- |
 | Chanzon           | 1        | $11.99         | $11.99      |
 | LM2596            | 1        | $5.49          | $5.49       |
-
+| SchmalzTech Double Sided ENIG Protoboard            | 1        | $4.49          | $4.49       |
 
 ## References
 
@@ -186,3 +195,5 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 [9] Installation, C. H. (2023, August 25). How do you balance performance, reliability, and cost when installing a power supply?. How to Install a Power Supply: Tips on Wattage, Efficiency, and Quality. https://www.linkedin.com/advice/0/how-do-you-balance-performance-reliability
 
 [10] ONSEMI. (n.d.). LM2596 - 3.0 A, step-down switching regulator . LM2596 Datasheet. https://www.onsemi.com/pdf/datasheet/lm2596-d.pdf 
+
+[11] Schmalztech double sided Enig protoboard, solderable breadboard ... (n.d.). https://www.amazon.com/SchmalzTech-Protoboard-Solderable-Breadboard-Electronic/dp/B0C3YYG6CV 
