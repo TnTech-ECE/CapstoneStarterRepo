@@ -114,6 +114,7 @@ Adding this to the previously calculated total yields 18.7518 W.
    The entire system will be powered with 12 VDC 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
    The subsystem components and wires will be enclosed in the mounting device. The power cable will run along the wall and the exposed wiring portion will take place inside of the mounting subsystem. This will help to reduce the chance that any wires are disconnected or damaged and eliminate the chance of accidentally getting hurt by the device. <sup>5</sup>.
+   The output ripple voltage is in the range of 50 mV - 400 mV depending on the load applied [4].
 
     
      
@@ -158,7 +159,7 @@ The input for this subsystem is the 100-240 VAC coming from the wall outlet.
 
 This system will provide the correct power to each subsystem for the project. It will be connected to a power rail and then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, input, and error. These three subsystems require 5V DC. The output subsystem requires 12V so it will receive power from a separate wall wart.
 
-The buck converter in use will be the LM2596 [10][3]. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A. The output ripple is roughly 50 - 400 mV and varies depending on the load applied [4].
+The buck converter in use will be the LM2596 [10][3]. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A. 
 
 #### Further connections
 
