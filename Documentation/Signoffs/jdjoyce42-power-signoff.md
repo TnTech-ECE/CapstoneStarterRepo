@@ -158,7 +158,7 @@ The input for this subsystem is the 100-240 VAC coming from the wall outlet.
 
 This system will provide the correct power to each subsystem for the project. It will be connected to a power rail and then use a buck converter to step down the voltage provided by the wall wart to match the voltage required for the following subsystems: main processor, input, and error. These three subsystems require 5V DC. The output subsystem requires 12V so it will receive power from a separate wall wart.
 
-The buck converter in use will be the LM2596 [10][3]. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A.-->
+The buck converter in use will be the LM2596 [10][3]. It can be set to out voltages from a range of 1.25V - 35V. The maximum output current it can provide is 3A. The output ripple is roughly 50 - 400 mV and varies depending on the load applied [4].
 
 #### Further connections
 
@@ -198,3 +198,5 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 [10] ONSEMI. (n.d.). LM2596 - 3.0 A, step-down switching regulator . LM2596 Datasheet. https://www.onsemi.com/pdf/datasheet/lm2596-d.pdf 
 
 [11] Schmalztech double sided Enig protoboard, solderable breadboard ... (n.d.). https://www.amazon.com/SchmalzTech-Protoboard-Solderable-Breadboard-Electronic/dp/B0C3YYG6CV 
+
+[12] https://www.ti.com/lit/ds/symlink/lm2596.pdf?ts=1696038261274&ref_url=https%253A%252F%252Fwww.google.com%252F
