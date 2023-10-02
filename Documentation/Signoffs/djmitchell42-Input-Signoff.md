@@ -16,7 +16,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 6   |  The preset gain must be set to 20 dB   | Device Constraints |
 | 7   |  The overall system delay must be less than or equal to 0.1 ms  | System Requirements |
 | 8   |  The input subsystem and error subsystem will utilize the same components for more ease in comparison  | System Requirements |
-| 9   |  The input microphone should be able to measure input sounds with an SPL of 110 dB or higher  | Construction Noise Data |
+| 9   |  The input microphone shall have a maximum SPL rating of 110 dB or higher  | Construction Noise Data |
 
        
 
@@ -39,7 +39,7 @@ In order for the processing subsystem to not experience clipping the output sign
 
 <sup>4</sup> System must be powered by a 5 VDC signal. [Origin: System Requirements]
 
-In order to make powering the system less difficult, the team has decided using a standard wall-wart which converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal.
+In order to make powering the system less difficult, the team has decided using a standard wall-wart that converts 120 VAC to 5 VDC would be appropriate for this application. The system overall will be powered by the same 5 VDC signal.
 
 <sup>5</sup> The primary input sensor must output a continuous-time voltage signal. [Origin: System Requirements]
 
@@ -49,14 +49,14 @@ The input to the processing subsystem is designed to receive a continuous-time a
 In order for the input subsystem to properly be compared with the data from the error mic the gain on both devices should have the same preset, for the error mic subsystem the maximum gain possible is 20 dB, therefore the input subsystem must also have a gain of 20 dB.
 
 <sup>7</sup> The overall system delay must be less than or equal to 0.1 ms. [Origin: System Requirements]
-In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst case scenario to process, which leaves 0.2 ms for the rest of the system. This will be split between the error subsystem and input subsystem, therefore the input subsystem has a maximum delay of 0.1 ms.
+In order for the system to properly function the targeted sound must be canceled within the maximum possible delay time. If the speaker is assumed to be 0.5 m away and the velocity of sound is assumed to be 343 m/s the maximum delay that the system can have is 1.4 ms. The processing subsystem takes a total of 1.2 ms in the worst-case scenario to process, which leaves 0.2 ms for the rest of the system. This will be split between the error subsystem and the input subsystem, therefore the input subsystem has a maximum delay of 0.1 ms.
 
 <sup>8</sup> The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
-In order to ensure discrepancies caused by a different input subsystem does not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
+In order to ensure discrepancies caused by a different input subsystem do not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
 
-<sup>9</sup> The input microphone should be able to measure input sounds with an SPL of 110 dB or higher  [Origin: Construction Noise Data]
+<sup>9</sup> The input microphone shall have a maximum SPL rating of 110 dB or higher  [Origin: Construction Noise Data]
 
-In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would recieve is 110 dB from an impact pile driver [6]. 
+In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would receive is 110 dB from an impact pile driver [6]. 
 
 
 
