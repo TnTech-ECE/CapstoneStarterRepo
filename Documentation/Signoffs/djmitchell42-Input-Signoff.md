@@ -56,7 +56,7 @@ In order to ensure discrepancies caused by a different input subsystem does not 
 
 <sup>9</sup> The input microphone should be able to measure input sounds with an SPL of 110 dB or higher  [Origin: Construction Noise Data]
 
-In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would recieve is 110 dB from an impact pile driver [7]. 
+In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would recieve is 110 dB from an impact pile driver [6]. 
 
 
 
