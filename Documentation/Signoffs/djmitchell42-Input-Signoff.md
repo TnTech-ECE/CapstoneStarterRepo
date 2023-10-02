@@ -16,7 +16,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 6   |  The preset gain must be set to 20 dB   | Device Constraints |
 | 7   |  The overall system delay must be less than or equal to 0.1 ms  | System Requirements |
 | 8   |  The input subsystem and error subsystem will utilize the same components for more ease in comparison  | System Requirements |
-| 9   |  The input microphone shall have a maximum SPL rating of 110 dB or higher  | Construction Noise Data |
+| 9   |  The input microphone shall have a maximum SPL rating of 110 dB or higher  | NRC Construction Noise Data |
 
        
 
@@ -54,7 +54,7 @@ In order for the system to properly function the targeted sound must be canceled
 <sup>8</sup> The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
 In order to ensure discrepancies caused by a different input subsystem do not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
 
-<sup>9</sup> The input microphone shall have a maximum SPL rating of 110 dB or higher  [Origin: Construction Noise Data]
+<sup>9</sup> The input microphone shall have a maximum SPL rating of 110 dB or higher  [Origin: NRC Construction Noise Data]
 
 In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would receive is 110 dBA from an impact pile driver, dBA is a frequency weighted scale or A weighted scale that more closely resembles human hearing [6]. This is assuming impact devices are commonly used during construction at Tennessee Technological University. The construction noise will likely never reach a level this high, however for extra safety the system must have an SPL rating for extremely loud devices since 110 dB is equivalent to an extremely loud sound [6].
 
