@@ -19,6 +19,7 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 | 5   | The primary input sensor shall output a continuous-time analog voltage signal. | System Requirement |
 | 6   | The subsystem's gain shall match the input subsystem's gain.                   | Device Constraint  |
 | 7   | The subsystem delay shall be less than or equal to 0.2ms.                      | System Requirement |
+| 8   | The microphone shall have a maximum SPL rating of 110 dB or higher             | Construction Noise Data |
 
 
 <sup>1</sup> The premise of this subsystem is to collect information on the noise from the wall and the speaker for the main processor. This means that the placement would be most effective past the speaker where the noise and speaker would meet. Because this will be wired together and there is an overall goal to make the design discrete, it can still be placed close to the speaker.
@@ -35,8 +36,10 @@ The goal of this subsystem is to input the acoustic audio from the room, amplify
 
 <sup>7</sup> Given that the maximum processing time of the main processing subsystem is 1.2 ms and the total allowable delay is 1.4 ms, the worst-case delay of this subsystem is 0.2 ms. Staying within these parameters will allow the processor subsystem to use accurate data.
 
+<sup>8</sup> In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier, a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would receive is 110 dB from an impact pile driver [5].
+
 ## Buildable Schematic
-The image below is a buildable schematic using the TS472 Preamplifier, CMA-4544PF-W electret microphone, and OPA2863-Q1 operational amplifier.
+The image below is a buildable schematic using the TS472 Preamplifier, POM-5038P electret microphone, and OPA2863-Q1 operational amplifier.
 
 <img src="/Documentation/Images/Error/Diagrams/Buildable_Schematic_6.png" width="75%" height="75%">
 
@@ -48,7 +51,7 @@ To keep the error subsystem consistently powered, it will use the pinouts from t
 
 ### Input 
 The system will receive a single input from the omnidirectional electret microphone and amplify it with a constant gain of 20 dB.
-According to the manufacturers of the CMA-4544PF-W, the electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. 
+According to the manufacturers of the POM-5038P, the electret microphone can operate within 20 Hz to 20 KHz and typically works with a max 10 V bias voltage, which will be supplied by the 5 Vdc from VCC. Below are the passive component details:
 - R<sub>1,2</sub>
     - Given the microphone will operate at a bias voltage of 5 V and its maximum current consumption is 0.5 mA, the minimum total resistance would need to be 5 kΩ. The chosen value for each polarizing resistor will keep the microphone at a safe value.
  
@@ -56,7 +59,7 @@ According to the manufacturers of the CMA-4544PF-W, the electret microphone can 
     - 47 kΩ sets the gain of the TS472 to 20 dB
  
 - R<sub>4,5,6,7</sub>
-    - The equal resistor values set the op-amp to act as a differential to a single output with a gain of one.
+    - The equal resistor values set the op-amp as a differential to a single output with a gain of one.
 - C<sub>1,2</sub>
     -  The lower cutoff frequency, defined by F<sub>CL</sub>, requires the equations to evaluate.
     ```math 
@@ -75,9 +78,9 @@ According to the manufacturers of the CMA-4544PF-W, the electret microphone can 
     - 5 V, this is within typical operating conditions defined by the manufacturer.    
 
 ### Output
-The CMA-4544PF-W microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
-The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 50.1 mV and 79.4 mV.    
-
+The microphone has a typical sensitivity of -38 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+The typical voltage output would be found with the equation: $$20 log(x) = -38$$ where x equates to 12.59 mV. The minimum and maximum sensitivities are -41 dB and -35 dB which equate to 8.91 mV and 17.78 mV respectively. Using the gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 
+89.1 mV and 177.8 mV <sup>3</sup>. The POM-5038-C3310-R has a maximum SPL of 120 dB <sup>9</sup>.
 
 
 The LM741 operational amplifier from Texas Instruments [3]. will be used to take the differential output from the TS472 and output a unity gain signal that will be sent to the processing system. An operational amplifier can be configured in a differential topology where the output voltage is represented by the following equation: $$V_{out} = \frac{R_{f}} {R_{1}}(V_{2}-V_{1})$$ The two input voltages will be OUT+ and OUT- from the TS472 chip respectively, where OUT+ is the positive differential voltage signal and OUT- is the negative differential voltage signal. The output voltage from the designed circuit will be an in-phase and unity gain version of (OUT+) - (OUT-).
@@ -101,17 +104,19 @@ According to the TS452 datasheet, the transient response of the component is 20 
 ## BOM
 | DEVICE                                               | Quantity | Price Per Unit | Total Price |
 |------------------------------------------------------|----------|----------------|-------------|
-| CMA-4544PF-W Electret Microphone                     | 1        | $0.75          | $0.75       |
+| POM-5038P-C3310-R Electret Microphone                | 2        | $1.56          | $3.40       |
 | TS472 Pre-amp                                        | 1        | $1.70          | $1.70       |
 | LM741 Op-Amp                                         | 1        | $0.75          | $0.75       |
-| Total                                                |          |                | $3.20       |
+| Total                                                |          |                | $5.85       |
 
 
 ## References
-[1] https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 (CMA-4544PF-W Electret Microphone)
+[1] https://www.digikey.com/en/products/detail/pui-audio-inc/POM-5038P-C3310-R/9673319 (POM-5038P-C3310-R Electret Microphone)
 
 [2] https://www.st.com/en/audio-ics/ts472.html (Pre-amp + Datasheet)
 
 [3] https://www.ti.com/product/LM741?qgpn=lm741 (Op-Amp)
 
 [4] https://www.st.com/resource/en/application_note/dm00133498-signal-conditioning-differential-to-single-ended-amplification-stmicroelectronics.pdf (Differential Op Amp Equation)
+
+[5]  https://www.nrc.gov/docs/ML1225/ML12250A723.pdf (Construction Noise Impact Assessment)
