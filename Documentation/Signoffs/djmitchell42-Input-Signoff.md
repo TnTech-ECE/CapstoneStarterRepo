@@ -130,9 +130,7 @@ The figure above shows the voltage from the OUT+ pin and OUT- pin along with the
 
 [5] "How to derive the differential amplifier equation?," Roxy, https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation [Accessed: 5-Sept-2023]
 
-[6] https://www.sciencedirect.com/topics/engineering/sound-pressure-level
-
-[7] https://www.nrc.gov/docs/ML1225/ML12250A723.pdf
+[6] 7.0 Construction Noise Impact Assessment. - NRC.  [Online]. Available: https://www.nrc.gov/docs/ML1225/ML12250A723.pdf. [Accessed: 01-Oct-2023] 
     
 
 
