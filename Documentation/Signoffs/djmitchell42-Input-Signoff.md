@@ -68,7 +68,7 @@ In order to prevent the microphone output from distorting or clipping before it 
 
 
 # Analysis
-The error and input subsystem are nearly identical in design except for mounting therefore this meets constraint (8).
+The error and input subsystem are nearly identical in design except for mounting <sup>8</sup>.
 #### Component Details
 
 ##### POM-5038P-C3310-R (Electret Microphone)
