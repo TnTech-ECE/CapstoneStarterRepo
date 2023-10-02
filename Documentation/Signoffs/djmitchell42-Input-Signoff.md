@@ -16,6 +16,7 @@ The goal of the input subsystem is to accurately take in the noise input from th
 | 6   |  The preset gain must be set to 20 dB   | Device Constraints |
 | 7   |  The overall system delay must be less than or equal to 0.1 ms  | System Requirements |
 | 8   |  The input subsystem and error subsystem will utilize the same components for more ease in comparison  | System Requirements |
+| 9   |  The input microphone should be able to measure input sounds with an SPL of 110 dB or higher  | Construction Noise Data |
 
        
 
@@ -53,6 +54,11 @@ In order for the system to properly function the targeted sound must be canceled
 <sup>8</sup> The input subsystem and error subsystem will utilize the same components for more ease in comparison. [Origin: System Requirements]
 In order to ensure discrepancies caused by a different input subsystem does not occur between the input and error subsystems, it has been decided to utilize the same electrical design for the input subsystem that is used in the error subsystem.
 
+<sup>9</sup> The input microphone should be able to measure input sounds with an SPL of 110 dB or higher  [Origin: Construction Noise Data]
+
+In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would recieve is 110 dB from an impact pile driver [7]. 
+
+
 
 # Buildable Schematic
 <img src="/Documentation/Images/input/image.png" width="75%" height="75%">
@@ -68,7 +74,7 @@ The error and input subsystem are nearly identical in design except for mounting
 ##### CMA-4544PF-W (Electret Microphone)
 This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium<sup>1</sup>. The microphone provides the ideal frequency range of 20 Hz – 20 kHz <sup>2</sup>. The operating supply voltage range for the microphone is 3 VDC to 10 VDC.<sup>4</sup> The microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
 The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 
-50.1 mV and 79.4 mV <sup>3</sup>. The 20 dB values will be input into the main proce This will be put into the right side of the STEREO_IN defined in the main processor. This however is assuming the noise is a low value. If the noise is of higher amplitude such as construction noise for example a higher SPL will occur and the new amplitudes must be calculated based on the on the corresponsing SPL increase. Typically when microphone sensitivity is measured an industry standard SPL is used with a value of 94 dB SPL which corresponds to (1V/1 Pa). SPL is defined using the following equation: $$SPL = 20log(P/Po)$$ where P is the current pressure in pascals and Po is the realative pressure which is usually defined as: $$20 µPa$$. The typical sensitivity of the CMA-4544PF-W microphone is -44 dB. In order to calculate expected output voltage levels due to construction noise expected values for different components must be found. The maximum possible noise that could be produced due to a discrete piece of construction equipment is 110 dB for a pile driver at a distance of 50 ft. This value can then be scaled using the following equation: $$Lmax = Construction Lmax at 50 feet - 25*log(D/Do)$$ where Lmax is the SPL for a given distance, Construction Lmax at 50 feet is the measured value at 50 feet from the source, D is the scaled distance and Do is the reference distance of 50 feet. If we assume the distance is closer at D = 20 ft, the corresponding Lmax would be: $$Lmax = 110dB - 25log(20 ft/ 50 ft) = 120 dB$$. Therefore for the purposes of this application we can say that that 120 dB is the maximum SPL the microphone will experience [7].
+50.1 mV and 79.4 mV <sup>3</sup>. The 20 dB values will be input into the main proce This will be put into the right side of the STEREO_IN defined in the main processor. 
 
 ##### TS472 Very Low Noise Microphone Amplifier
 The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin [3]. The microphone preamplifier has a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [3], therefore the microphone preamplifier can be driven by a standard -5 VDC input and +5 VDC input <sup>4</sup>. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms <sup>7</sup>. The preset gain can be set to 20 dB by connecting 47 $k\Omega$ [3], this gain matches the gain of the error subsystem <sup>6</sup>. The maximum supply current for the TS472 is 2.4 mA, at 5 VDC the total output power that will have to be provided by the power subsystem is 12 mW.
@@ -114,7 +120,7 @@ The figure above shows the voltage from the OUT+ pin and OUT- pin along with the
 
 # References
 
-[1] “CMA-4544PF-W: Digi-Key Electronics,” Digikey, https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 [Accessed: 9-Sept-2023]. 
+[1] 
 
 [2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects. https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
