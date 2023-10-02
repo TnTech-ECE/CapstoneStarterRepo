@@ -71,10 +71,10 @@ In order to prevent the microphone output from distorting or clipping before it 
 The error and input subsystem are nearly identical in design except for mounting therefore this meets constraint (8).
 #### Component Details
 
-##### CMA-4544PF-W (Electret Microphone)
-This input system will utilize the CMA-4544PF-W electret microphone from CUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium<sup>1</sup>. The microphone provides the ideal frequency range of 20 Hz – 20 kHz <sup>2</sup>. The operating supply voltage range for the microphone is 3 VDC to 10 VDC.<sup>4</sup> The microphone has a typical sensitivity of -44 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
-The typical voltage output would be found with the equation: $$20 log(x) = -44$$ where x equates to 6.31 mV. The minimum and maximum sensitivities are -46 dB and -42 dB which equate to 5.01 mV and 7.94 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 
-50.1 mV and 79.4 mV <sup>3</sup>. The 20 dB values will be input into the main proce This will be put into the right side of the STEREO_IN defined in the main processor. 
+##### POM-5038P-C3310-R (Electret Microphone)
+This input system will utilize the POM-5038P-C3310-R electret microphone from PUI Devices sold through Digi-Key. [1]. The electret microphone utilizes a diaphragm, capacitor, and JFET to generate a varying voltage which is then output to a pre-amplifier[2]. This microphone can be used to measure the acoustic vibrations through the medium<sup>1</sup>. The microphone provides the ideal frequency range of 20 Hz – 20 kHz <sup>2</sup>. The operating supply voltage range for the microphone is 1 VDC to 10 VDC.<sup>4</sup> The microphone has a typical sensitivity of -38 dB at conditions defined by: Frequency = 1 kHz, 1 Pa, 0 dB = 1 V/Pa.
+The typical voltage output would be found with the equation: $$20 log(x) = -38$$ where x equates to 12.59 mV. The minimum and maximum sensitivities are -41 dB and -35 dB which equate to 8.91 mV and 17.78 mV respectively. Using the maximum gain of 20 dB that the TS472 can achieve, we can expect the outputs to be within 
+89.1 mV and 177.8 mV <sup>3</sup>. The POM-5038-C3310-R has a maximum SPL of 120 dB <sup>9</sup>.
 
 ##### TS472 Very Low Noise Microphone Amplifier
 The TS472 microphone amplifier from ST microelectronics will amplify the voltage signal produced from the CMA-4544PF-W. The output of this amplifier is differential and consists of an OUT+ pin and an OUT- pin [3]. The microphone preamplifier has a maximum supply voltage rating of 6 V while having a maximum current draw of 2.4 mA [3], therefore the microphone preamplifier can be driven by a standard -5 VDC input and +5 VDC input <sup>4</sup>. The overall delay of the TS472 is 20 us, with the total alloted delay amount being 0.1 ms <sup>7</sup>. The preset gain can be set to 20 dB by connecting 47 $k\Omega$ [3], this gain matches the gain of the error subsystem <sup>6</sup>. The maximum supply current for the TS472 is 2.4 mA, at 5 VDC the total output power that will have to be provided by the power subsystem is 12 mW.
@@ -120,7 +120,7 @@ The figure above shows the voltage from the OUT+ pin and OUT- pin along with the
 
 # References
 
-[1] 
+[1] “POM-5038P-C3310-R: PUI Devices,” Digi.  [Online]. Available: https://www.digikey.com/en/products/detail/pui-audio-inc/POM-5038P-C3310-R/9673319. [Accessed: 01-Oct-2023] 
 
 [2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects. https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
