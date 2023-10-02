@@ -56,7 +56,7 @@ In order to ensure discrepancies caused by a different input subsystem do not oc
 
 <sup>9</sup> The input microphone shall have a maximum SPL rating of 110 dB or higher  [Origin: NRC Construction Noise Data]
 
-In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would receive is 110 dBA from an impact pile driver, dBA is a frequency weighted scale or A weighted scale that more closely resembles human hearing [6]. This is assuming impact devices are commonly used during construction at Tennessee Technological University. The construction noise will likely never reach a level this high, however for extra safety the system must have an SPL rating for extremely loud devices since 110 dB is equivalent to an extremely loud sound [6].
+In order to prevent the microphone output from distorting or clipping before it is sent to the preamplifier a specified maximum SPL (sound pressure level in dB) must be found. Assuming the construction noise is at least 50 ft away from the source, the maximum SPL that the microphone would receive is 110 dBA from an impact pile driver, dBA is a frequency weighted scale or A weighted scale that more closely resembles human hearing [6]. This is assuming impact devices are commonly used during construction at Tennessee Technological University. The construction noise will likely never reach a level this high, however for extra compensation the system must have an SPL rating for extremely loud devices since 110 dB is equivalent to an extremely loud sound [6].
 
 
 
