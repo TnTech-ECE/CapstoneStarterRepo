@@ -112,9 +112,9 @@ The figure above shows the voltage from the OUT+ pin and OUT- pin along with the
 # Bill of Materials 
 | DEVICE                                             | Quantity | Price Per Unit |  Price  | Total   |
 |----------------------------------------------------|----------|----------------|---------|---------|
-| STMicroelectronics TS472                           | 2        | $1.70          | $3.40   | $6.40   |
+| STMicroelectronics TS472                           | 2        | $1.70          | $3.40   | $8.02   |
 | LM741 Op-Amp                                       | 2        | $0.75          | $1.50   |         |
-| CMA-4544PF-W Electret Microphone                   | 2        | $0.75          | $1.50   |         |
+| POM-5038P-C3310-R Electret Microphone              | 2        | $1.56          | $3.12   |         |
 
 
 
@@ -122,15 +122,15 @@ The figure above shows the voltage from the OUT+ pin and OUT- pin along with the
 
 [1] “POM-5038P-C3310-R: PUI Devices,” Digi.  [Online]. Available: https://www.digikey.com/en/products/detail/pui-audio-inc/POM-5038P-C3310-R/9673319. [Accessed: 01-Oct-2023] 
 
-[2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects. https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
+[2] Swagatam, “How electret microphones work - full tutorial and Diagram,” Homemade Circuit Projects. [Online] https://www.homemade-circuits.com/how-electret-microphone-works/. [Accessed: 16-Apr-2023].  
 
 [3] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html [Accessed: 31-Aug-2023]. 
 
 [4] "LM741," Texas Instruments, https://www.ti.com/product/LM741?qgpn=lm741 [Accessed: 31-Aug-2023]
 
-[5] "How to derive the differential amplifier equation?," Roxy, https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation [Accessed: 5-Sept-2023]
+[5] "How to derive the differential amplifier equation?," Roxy. [Online] https://electronics.stackexchange.com/questions/537367/how-to-derive-the-differential-amplifier-equation [Accessed: 5-Sept-2023]
 
-[6] 7.0 Construction Noise Impact Assessment. - NRC.  [Online]. Available: https://www.nrc.gov/docs/ML1225/ML12250A723.pdf. [Accessed: 01-Oct-2023] 
+[6] "7.0 Construction Noise Impact Assessment",NRC.  [Online]. Available: https://www.nrc.gov/docs/ML1225/ML12250A723.pdf. [Accessed: 01-Oct-2023] 
     
 
 
