@@ -95,9 +95,8 @@ Adding all the power draws together:
 P_{Total} = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
 ~~~
 
-The efficiency of the buck converter is 92% so the power loss between input and outputs will be about 8% percent. The total output power required by the systems the buck converter will feed is 2.585 W. Multiplying this by 8% equals 0.2068 W.
 
-Adding this to the previously calculated total yields 18.7518 W.
+
 
 <!-- - The output will be powered with a 120 VAC to 12 VDC wall-wort called the PS-SP11111 from Parts Express [4]. The recommended supply voltage is 12 VDC with a maximum power dissipation of 16 W [3]. The PS-SP11111 that will be used produces an output voltage of 12 V at a maximum input current of 3 A which equates to 36 W of maximum output power [4]. -->
 
