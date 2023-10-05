@@ -203,3 +203,5 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 [11] Schmalztech double sided Enig protoboard, solderable breadboard ... (n.d.). https://www.amazon.com/SchmalzTech-Protoboard-Solderable-Breadboard-Electronic/dp/B0C3YYG6CV 
 
 [12] https://www.ti.com/lit/ds/symlink/lm2596.pdf?ts=1696038261274&ref_url=https%253A%252F%252Fwww.google.com%252F
+
+[13] https://www.mouser.com/datasheet/2/609/1529fb-3123515.pdf
