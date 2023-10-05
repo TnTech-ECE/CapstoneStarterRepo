@@ -14,6 +14,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall be grounded and not have easily accessible hazardous wires exposed                                    | OSHA 1910.304 - 305 and IEC 60950-1 Safety Standards  |
+| 6   | System shall utilize LDO(s) (Low Drop out Regulator) to filter out ripple voltage                                 | System Functionality Requirement |
 
 
 
@@ -37,6 +38,8 @@ The table above shows the determined power draws of each associated system.
 
 
 <sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power, and IEC 60950-1 which deal with wired and battery powered devices below 600V. To keep everyone safe from the device, hazardous wires and componenents will not be exposed. This is to eliminate the chance of accidental shock or fire damage from incorrect implementation of the device. 
+
+<sup>6</sup>  In order to make sure that the systems are powered by a nearly completely DC signal the ripple voltage from the power bus must be minimized. A low drop out regulator (LDO) completes this task by filtering out 
 
 
 
