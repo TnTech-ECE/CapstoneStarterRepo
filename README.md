@@ -1,4 +1,4 @@
-# {Name of the Project} - Your project should have a catchy and functional name
+# {Parking Lot Monitoring System: Ground Based Solution} - Your project should have a catchy and functional name
 
 The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
@@ -28,13 +28,15 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent half a year interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
+Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent eight months interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Mr. Jesse Roberts - ECE Department
 
 ### Stakeholders
+
+The primary customer for this project is the Naval Surface Warfare Center Dahlgren Division in Dahlgren, VA, that is under the command of the Naval Sea Systems Command (NAVSEA). One major stakeholder that will be affected by the project are commuter students.
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
