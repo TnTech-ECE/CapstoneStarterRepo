@@ -14,7 +14,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall be grounded and not have easily accessible hazardous wires exposed                                    | OSHA 1910.304 - 305 and IEC 60950-1 Safety Standards  |
-| 6   | System shall utilize LDO(s) (Low Drop out Regulator) to filter out ripple voltage                                 | System Functionality Requirement |
+| 6   | System shall utilize LDO(s) (Low Drop out Regulator) to filter out ripple voltage of at least 400 mV                                 | System Functionality Requirement |
 
 
 
@@ -39,7 +39,7 @@ The table above shows the determined power draws of each associated system.
 
 <sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power, and IEC 60950-1 which deal with wired and battery powered devices below 600V. To keep everyone safe from the device, hazardous wires and componenents will not be exposed. This is to eliminate the chance of accidental shock or fire damage from incorrect implementation of the device. 
 
-<sup>6</sup>  In order to make sure that the systems are powered by a nearly completely DC signal the ripple voltage from the power bus must be minimized. A low drop out regulator (LDO) completes this task by filtering the majority of the ripple voltage.
+<sup>6</sup>  In order to make sure that the systems are powered by a nearly completely DC signal the ripple voltage on the power bus must be minimized. A low drop out regulator (LDO) completes this task by filtering out the majority of the ripple voltage.  The output ripple voltage of the buck converter used is in the range of 50 mV - 400 mV depending on the load applied [4]. Therefore the LDO must be able to filter out at least 400 mV of ripple in order for the bus to supply practically pure DC voltage.
 
 
 
@@ -116,7 +116,6 @@ P_{Total} = 15.96 W + 42.5 mW + 42.5 mW + 2.5 W = 18.545 W
    The entire system will be powered with 12 VDC 3 A 36 W wall wart. By using wall instead of battery power the system will be able to last longer and have a more reliable source of power. <sup>4</sup>.
 
    The subsystem components and wires will be enclosed in the mounting device. The power cable will run along the wall and the exposed wiring portion will take place inside of the mounting subsystem. This will help to reduce the chance that any wires are disconnected or damaged and eliminate the chance of accidentally getting hurt by the device. <sup>5</sup>.
-   The output ripple voltage is in the range of 50 mV - 400 mV depending on the load applied [4].
 
     
      
@@ -165,7 +164,7 @@ The buck converter in use will be the LM2596 [10][3]. It can be set to out volta
 
 #### Further connections
 
-The end of the wallwart has a plug that will be removed to reveal the two-wire connection. The two wires are going to the power supply rail on a soldered breadboard designed to supply the voltage across the entire system. The breadboard is 2"x4" and will have designated columns for each voltagae required. The first column will be for the output and provide 12V DC, the second column will provide 5V DC for the main processor, and input and error will have the last column requiring 10V and 5V DC. They will be connected with the negative wire being grounded and the positive being used to power each subsystem. 
+The end of the wallwart has a plug that will be removed to reveal the two-wire connection. The two wires are going to the power supply rail on a soldered breadboard designed to supply the voltage across the entire system. The breadboard is 2"x4" and will have designated columns for each voltage required. The first column will be for the output and provide 12V DC, the second column will provide 5V DC for the main processor, and input and error will have the last column requiring 10V and 5V DC. They will be connected with the negative wire being grounded and the positive being used to power each subsystem. The system with have an LDO placed in series with the output of each buck converter utilized. The LDO that will be used is the 
 
 
 ## BOM
