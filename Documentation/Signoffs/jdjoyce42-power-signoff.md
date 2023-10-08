@@ -14,7 +14,7 @@ The purpose of this subsystem is to take the voltage supplied from a wall outlet
 | 3   | Shall be able to step down power supply voltage to 5 VDC                            | Design Constraints |
 | 4   | System shall be powered by a standard wall outlet                                   | Design Constraint |
 | 5   | System shall be grounded and not have easily accessible hazardous wires exposed                                    | OSHA 1910.304 - 305 and IEC 60950-1 Safety Standards  |
-| 6   | System shall utilize LDO(s) (Low Drop out Regulator) to filter out ripple voltage of at least 400 mV                                 | System Functionality Requirement |
+| 6   | System shall be able to operate on a maximum input ripple voltage of 400 mV                              | System Functionality Requirement |
 
 
 
@@ -39,7 +39,7 @@ The table above shows the determined power draws of each associated system.
 
 <sup>5</sup>  The system shall follow OSHA standard 1910.304 - 305 which provides an in-depth guide for the safety and regulation of wired power, and IEC 60950-1 which deal with wired and battery powered devices below 600V. To keep everyone safe from the device, hazardous wires and componenents will not be exposed. This is to eliminate the chance of accidental shock or fire damage from incorrect implementation of the device. 
 
-<sup>6</sup>  In order to make sure that the systems are powered by a nearly completely DC signal the ripple voltage on the power bus must be minimized. A low drop out regulator (LDO) completes this task by filtering out the majority of the ripple voltage.  The output ripple voltage of the buck converter used is in the range of 50 mV - 400 mV depending on the load applied [4]. Therefore the LDO must be able to filter out at least 400 mV of ripple in order for the bus to supply practically pure DC voltage.
+<sup>6</sup>  Ripple voltage will be present on the bus. The output ripple voltage of the buck converter used is in the range of 50 mV - 400 mV depending on the load applied [4]. The systems powered must have a large immunity to ripple voltage and be able to filter down a ripple voltage of 400 mV to acceptable levels. A measure of the ability of a particular IC to filter out and reject supply ripple is PSRR (Power supply rejection ratio) or SVRR (Supply voltage rejection ratio). The equation for PSSR is as follows: $PSSR = 20log(Ripple Input/ Ripple Output)$ where ripple input is the input ripple from the supply source and the ripple output is what is observed by the IC after compensation is made [14].
 
 
 
@@ -204,3 +204,5 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 [12] https://www.ti.com/lit/ds/symlink/lm2596.pdf?ts=1696038261274&ref_url=https%253A%252F%252Fwww.google.com%252F
 
 [13] https://www.mouser.com/datasheet/2/609/1529fb-3123515.pdf
+
+[14] https://www.ti.com/lit/an/slyt202/slyt202.pdf
