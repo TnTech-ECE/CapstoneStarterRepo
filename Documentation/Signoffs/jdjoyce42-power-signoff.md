@@ -168,7 +168,7 @@ The end of the wallwart has a plug that will be removed to reveal the two-wire c
 
 #### Ripple considerations
 
-For each device that is powered using the 5 VDC or - 5VDC signal from the buck converter stage the PSRR or SVRR must be analyzed to ensure ripple is minimized. For the LM741 the minimum SVRR is 86 dB [6]. Assuming the input ripple is the maximum value that could be seen from the buck converter (400 mV) the expected output ripple voltage can be calculated using the following equation: $86 = 20log(0.4 V/Vripple)$ where Vripple is the ripple that is seen by the LM741. Solving this equation for V ripple yields a ripple voltage of 20.05 µV, this is a very small ripple voltage and can be considered negligible <sup>6</sup>.
+For each device that is powered using the 5 VDC or - 5VDC signal from the buck converter stage the PSRR or SVRR must be analyzed to ensure ripple is minimized. For the LM741 the minimum SVRR is 86 dB [6]. Assuming the input ripple is the maximum value that could be seen from the buck converter (400 mV) the expected output ripple voltage can be calculated using the following equation: $86 = 20log(0.4 V/Vripple)$ where Vripple is the ripple that is seen by the LM741. Solving this equation for Vripple yields a ripple voltage of 20.05 µV, this is a very small ripple voltage and can be considered negligible since the output voltage would only swing up or down by 20.05 µV <sup>6</sup>.
 
 
 ## BOM
