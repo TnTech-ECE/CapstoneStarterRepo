@@ -28,7 +28,15 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent eight months interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
+Abdulrahman Alrudayan is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems and digital design.  The main focus for Abdulrahman is designing the main power system that will distribute power to the entire system through the use of buck converters, step down transformers, etc.
+
+Khalifah Altamimi is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and digital design.  The main focus for Khalifah is designing the backup power system that will provide power to allow the system to continue working when a power outage has occurred on campus.  When the system is not being used, it will be charging and stay charged until backup power is needed for the system.
+
+Brady Beecham is a senior Computer Engineering major at Tennessee Technological University.  His interests
+
+Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent eight months interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).  The main focus for Michael Sisk is designing the ground-based sensor, which involves using inductive loops to detect the presence of vehicles.
+
+
 
 ### Faculty Supervisor
 
