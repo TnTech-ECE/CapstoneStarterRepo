@@ -120,7 +120,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
 > 11) Speakers shall maintain a minimum of 90 dB SPL across the entire window
 
-  To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from ]9]. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher when directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
+  To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from ]9]. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher when directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. Most of the noise that will be dealt with have a low frequency, ranging from around 50 Hz to 2000 Hz[]. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
 
 It is important to measure the efficiency and radiation/directivity pattern of a speaker as well, to ensure that even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The CSS-10246-304 speaker has a size of 102mm x 102mm x 46mm (L x W x H). When finding the radiation pattern of a speaker, or the way in which it emits sound at different frequencies, it is important to take into account the size and material of the speaker, as well as the the frequency of incoming sound [10]. Due to the datasheet of the CSS-10246-304 not including a polar plot or off-axis frequency response graph, a different speaker with a similar size and frequency response was used to estimate the directivity of the CSS-10246-304. The R 10 S TE - 4 Ohm speaker.
 
@@ -130,14 +130,19 @@ It is important to measure the efficiency and radiation/directivity pattern of a
 
 <img width="1085" alt="Screen Shot 2023-10-12 at 4 02 59 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/3bf981f6-2464-40c9-b0f8-d17be4943c42">
 
-### **Figure 4 & 5: Frequency response of R 10 S TE - 4 Ohm speaker (Top)[], Frequency response of CSS-10246-304 speaker (Bottom)**
+### **Figure 4 & 5: Frequency response of R 10 S TE - 4 Ohm speaker (Top)[11], Frequency response of CSS-10246-304 speaker (Bottom)**
 
-As shown in figures 4 and 5, the frequency responses are similar between the two speakers, maintaining similar SPL values in the 100-2000 Hz range. The R 10 S TE - 4 Ohm speaker datasheet [] includes a polar plot that shows how the speakers sound is maintained at different angles off the speakers axis and at different frequencies. 
+As shown in figures 4 and 5, the frequency responses are similar between the two speakers, maintaining similar SPL values in the 100-2000 Hz range. The R 10 S TE - 4 Ohm speaker datasheet [11] includes a polar plot that shows how the speakers sound is maintained at different angles off the speakers axis and at different frequencies. 
 
 <img width="682" alt="Screen Shot 2023-10-12 at 4 12 28 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/6045916b-59c4-40df-b312-afb76a787449">
 
 ### **Figure 6: Radiation/Directivity pattern of R 10 S TE - 4 Ohm speaker**
 
+Figure 6 shows that while the frequency of the sound is less than 2000 Hz, the speaker will at most lose approximately 2.5 dB of sound when the sound is received at around a 90 degree angle from the speaker. Using this directivity pattern and applying it to the CSS-10246-304 helps to get an understanding of how many speakers will be sufficient to cover the window. 
+
+The window that the device will be on has been measure to do be 5.33 ft by 4.00 ft, or 1.62 m by 1.21 m, this means that the approzimate square footage of the window and the area that will need to be covered is 21.32 square ft.
+
+As shown in figure X, if the window is separated into four quadrants and 1 speaker is placed in the center of each quadrant, the approximate distance that will be covered by a single speaker before overlapping with another speaker is 0.5055 meters. 
 
 <!--- The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528.-->
 The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of thumb with sound pressure level (SPL) is whenever the wattage supplied is doubled the SPL increases by 3 dB and whenever the distance is doubled the SPL decreases by 6 [9]. If we take the SPL of the speaker to be 97 dBA at 10 watts at 0.5 meters, then the SPL distrubuted over distance looks like this.
@@ -150,16 +155,18 @@ The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of
 | | 4 m | 79 dB |
 | | 8 m | 73 dB |
 
-As seen from the table, the speaker is able to maintain a relatively good SPL across the bounds of the classroom. Taking into account the walls/windows of the classroom and the distance from construction as well, the noise should stay well within the bounds of what the speaker can handle and emit. This means that theoretically, the speaker is strong enough to cancel out the desired noise across an appropriate distance when supplied with sufficient power from the amp. Quality of sound coverage will not be the same in each area of the classroom, and with more speakers means better coverage, but with the current design positive effects should be seen from multiple areas of the classroom.
+<!-- As seen from the table, the speaker is able to maintain a relatively good SPL across the bounds of the classroom. Taking into account the walls/windows of the classroom and the distance from construction as well, the noise should stay well within the bounds of what the speaker can handle and emit. This means that theoretically, the speaker is strong enough to cancel out the desired noise across an appropriate distance when supplied with sufficient power from the amp. Quality of sound coverage will not be the same in each area of the classroom, and with more speakers means better coverage, but with the current design positive effects should be seen from multiple areas of the classroom.
+-->
 
+As seen from the table , at a distance of 0.5 meters the speaker will have an SPL of around 97 dB. If we take the the information provided by the polar plot in figure 6, we can take the worst case scenario and assume a loss of about 2.5 dB at around 85 degrees of the speakers axis. Using 85-90 degrees as the main angle for calculating the window coverage we can find what SPL the speakers will have at each portion of the window. Using the diagram in figure X, we see that each speaker will need to cover a maximum of approximately 0.5055 meters in each direction from its axis. At 0.5055 meters the CSS-10246-304 is capable of delivering a SPL of 97 dB, if we take into account the directivity of the speaker at around an 85 degree angle then we will subtract 2.5 dB from this value for a total of 94.5 dB. This means that at each portion of the window, assuming the incoming sound is uniform, the speakers will maintain a SPL value of 94.5 dB. This is more than the constraint of a minimum of 90 dB which means that this constraint is fulfilled and the speakers will be capable of covering the volume of sound incoming through the window. 
   
 
 
 ## BOM
 | DEVICE                       | Quantity | Price Per Unit | Total Price |
 | -----------------            | -------- | -------------- | ----------- |
-| Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 1        | $16.98          | $16.98     |
-| CSS-10246-304 Speaker        | 1        | $7.91          | $7.91      |
+| Sure Electronics AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board    | 2       | $16.98          | $33.96    |
+| CSS-10246-304 Speaker        | 4        | $7.91          | $31.64     |
 
 
 ## References
@@ -183,6 +190,8 @@ As seen from the table, the speaker is able to maintain a relatively good SPL ac
 [9] Longman, J., &amp; LongmanHello, J. (2023, April 4). Speaker sensitivity explained. AudioReputation. https://www.audioreputation.com/speaker-sensitivity-explained/ 
 
 [10] 7. sound radiation and measurement, http://msp.ucsd.edu/syllabi/170.13f/course-notes/node7.html#:~:text=The%20dependence%20of%20the%20strength,that%20was%20worked%20out%20here (accessed Oct. 12, 2023). 
+
+[11] “Breitband-Systeme / Fullrange systems r 10 s TE - 4 ohm - visaton,” R 10 S TE - 4 Ohm Datasheet, https://www.visaton.de/sites/default/files/dd_product/r10ste_4.pdf (accessed Oct. 12, 2023). 
 
 
 
