@@ -9,7 +9,6 @@ The following constraints are derived from formulated shall statements that the 
 		<ul>
 		<li>This constraint is applicable to the line following subsystem because the system must still produce valid data no matter what slope the robot faces.
 		</ul>
-	
 	<li>C10: The robot shall turn 360 degrees left and right and move forwards and backwards based on sensor inputs.</li>
 	<li>C11: The robot shall have a navigation system that controls movement.</li>
 		<ul>
