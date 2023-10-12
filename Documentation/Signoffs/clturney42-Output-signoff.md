@@ -122,7 +122,7 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
   To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from ]9]. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher when directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
 
-It is important to measure the efficiency and radiation/directivity pattern of a speaker as well, to ensure that even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The CSS-10246-304 speaker has a size of 102mm x 102mm x 46mm (L x W x H). When finding the radiation pattern of a speaker, or the way in which it emits sound at different frequencies, it is important to take into account the size and material of the speaker, as well as the the frequency of incoming sound [10]. Due to the datasheet of the CSS-10246-304 not including a polar plot or off-axis frequency response graph, a different speaker with a similar size and frequency response was used to estimate the directivity of the CSS-10246-304. 
+It is important to measure the efficiency and radiation/directivity pattern of a speaker as well, to ensure that even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The CSS-10246-304 speaker has a size of 102mm x 102mm x 46mm (L x W x H). When finding the radiation pattern of a speaker, or the way in which it emits sound at different frequencies, it is important to take into account the size and material of the speaker, as well as the the frequency of incoming sound [10]. Due to the datasheet of the CSS-10246-304 not including a polar plot or off-axis frequency response graph, a different speaker with a similar size and frequency response was used to estimate the directivity of the CSS-10246-304. The R 10 S TE - 4 Ohm speaker.
 
 
 <img width="1235" alt="Screen Shot 2023-10-12 at 4 02 39 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/4ca0cb7e-0b95-4c09-9b73-8c51227b7545">
@@ -130,6 +130,13 @@ It is important to measure the efficiency and radiation/directivity pattern of a
 
 <img width="1085" alt="Screen Shot 2023-10-12 at 4 02 59 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/3bf981f6-2464-40c9-b0f8-d17be4943c42">
 
+### **Figure 4 & 5: Frequency response of R 10 S TE - 4 Ohm speaker (Top)[], Frequency response of CSS-10246-304 speaker (Bottom)**
+
+As shown in figures 4 and 5, the frequency responses are similar between the two speakers, maintaining similar SPL values in the 100-2000 Hz range. The R 10 S TE - 4 Ohm speaker datasheet [] includes a polar plot that shows how the speakers sound is maintained at different angles off the speakers axis and at different frequencies. 
+
+<img width="682" alt="Screen Shot 2023-10-12 at 4 12 28 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/6045916b-59c4-40df-b312-afb76a787449">
+
+### **Figure 6: Radiation/Directivity pattern of R 10 S TE - 4 Ohm speaker**
 
 
 <!--- The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528.-->
