@@ -28,7 +28,7 @@ The goal of the output subsystem is to take the analog signal received from the 
 | 8 | Output system shall extend a maximum of 0.5 meters from the wall                                        | Ethics and system delay              |
 | 9| Output system shall be positioned close enough to wall to reduce delay enough to eliminate echo in sound                                                           | Device specifications and goal of system |
 |10| Speaker shall be mounted to the wall, and will not impede movement or damage the classroom  | Ethics and Device constraints|
-|11| Speaker shall have a base sound pressure level above 90 so that it can effectively cancel out louder noises such as construction |Derived Contraint from room|
+|11| Speakers shall maintain a minimum of 90 dB SPL across the entire window |Derived Contraint from window|
 
   
 ### 1) The Audio amplifier shall be supplied a minimum of 8.0 V and maximum of 15 V from the power supply.     |Origin: Device specifications|
@@ -64,9 +64,9 @@ An ideal noise cancellation device would have no delay however, that is impossib
 
 The speaker will be fitted into an enclosure that matches the dimensions of the speaker. This enclosure will then be mounted to the wall in an optimal position for noise cancellation. To fit this constraint, the position in which the speaker is placed will not impede movement or damage the classroom. This can be verified by confirming the placement of the speaker does not block the classroom or damage the walls or windows within the classroom.
 
-### 11) Speaker shall have a base sound pressure level above 90 so that it can effectively cancel out louder noises such as construction |Origin: Derived Contraint from room|
+### 11) Speakers shall maintain a minimum of 90 dB SPL across the entire window |Origin: Derived Contraint from window|
 
-In order for the sound emitted from the speaker to properly permeate the room and cancel out various levels of sound, the efficiency and sound pressure level of the speaker must be good enough to cancel out construction noises from outside and stay above a certain level throughout the entire room. The exact specifications that this will entail be gone over more within the analysis.
+The sound that we are trying to cancel will be coming in through the classroom window, therefore, we want a speaker arrangement that will be sufficient in covering the entire window and maintaining a minimum sound pressure level at every point. To ensure that this constraint is fulfilled, the radiation/directivity pattern of the speaker must be analyzed and the speakers must be placed in a way that ensures maximum coverage and sound pressure level before overlap. Due to the nature of the sound that we are convering, construction noises, maintaining a sound pressure level and coverage minimum of 90 dB across the entire window will be sufficient.
 
   
 
@@ -118,11 +118,22 @@ The above image is the buildable schematic for the output subsystem. As shown, t
 
   The speaker will be fitted into an enclosure that will be made with a 3d printer. A front cavity and a rear cavity will be created that match the 102mm x 102mm x 46mm dimensions of the CSS-10246-304 speaker. The rear cavity will be designed to have a depth equal to the diameter of the speaker, which is 102mm. The speakers within their enclosures will then be mounted to the wall using a command strip. The rectangular shape of the enclosure will allow for an easy application of a command strip, and the adhesive of the command strip will allow for simple connection to the mounting subsystem used for the rest of the system. Whether this be on a pcb box or to the window sill or wall. More testing will be done to find the best position for the speaker to be placed on the wall to cancel noise. The command strips will allow much maneuverability and will not damage the wall since there will be no drilling or nails.
 
-> 11) Speaker shall have a base sound pressure level above 90 so that it can effectively cancel out louder noises such as construction
+> 11) Speakers shall maintain a minimum of 90 dB SPL across the entire window
 
   To effectively cancel out the noise in a room, it is important to have a speaker that has an effective enough sound pressure level. This means that the sound pressure level of the emitted noise should be equal to or higher than the sound pressure level of the sound where the signal originated from ]9]. Most noises such as conversation or light rainfall will range less than 60 dB while sounds such as constuction noise can range 80 dB or higher when directly next to the source. Distance of course will decrease this sound pressure level and materials such as the window and the wall of the classroom will decrease it as well. The CSS-10246-304 speaker is capable of emitting a 100 dB sound pressure level when supplied with 10 W of power, which means it will be very sufficient in cancelling out loud noises like contruction or quieter noises as well. 
 
-It is important to measure the efficiency of a speaker as well, to ensure that even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528. The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of thumb with sound pressure level (SPL) is whenever the wattage supplied is doubled the SPL increases by 3 dB and whenever the distance is doubled the SPL decreases by 6 [9]. If we take the SPL of the speaker to be 97 dBA at 10 watts at 0.5 meters, then the SPL distrubuted over distance looks like this.
+It is important to measure the efficiency and radiation/directivity pattern of a speaker as well, to ensure that even with distance the speaker will still maintain a sound pressure level capable of cancelling the desired noise. The CSS-10246-304 speaker has a size of 102mm x 102mm x 46mm (L x W x H). When finding the radiation pattern of a speaker, or the way in which it emits sound at different frequencies, it is important to take into account the size and material of the speaker, as well as the the frequency of incoming sound [10]. Due to the datasheet of the CSS-10246-304 not including a polar plot or off-axis frequency response graph, a different speaker with a similar size and frequency response was used to estimate the directivity of the CSS-10246-304. 
+
+
+<img width="1235" alt="Screen Shot 2023-10-12 at 4 02 39 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/4ca0cb7e-0b95-4c09-9b73-8c51227b7545">
+
+
+<img width="1085" alt="Screen Shot 2023-10-12 at 4 02 59 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/3bf981f6-2464-40c9-b0f8-d17be4943c42">
+
+
+
+<!--- The parameters of the room Brown 314 are 34 x 24 x 11 (in feet). In meters this is 10.3632 x 7.3152 x 3.3528.-->
+The CSS-10246-304 speaker has an efficiency of 10 W / 0.5 m. The general rule of thumb with sound pressure level (SPL) is whenever the wattage supplied is doubled the SPL increases by 3 dB and whenever the distance is doubled the SPL decreases by 6 [9]. If we take the SPL of the speaker to be 97 dBA at 10 watts at 0.5 meters, then the SPL distrubuted over distance looks like this.
 
 | Power (W)                  | Distance (Meters) | Sound Pressure Level (dB) | 
 | -----------------          | --------          | --------------            | 
@@ -163,6 +174,8 @@ As seen from the table, the speaker is able to maintain a relatively good SPL ac
 [8] CUI Devices, "SERIES: CSS-10246-304 | DESCRIPTION: SPEAKER" CSS-10246-304 datasheet, 08-May-2022, https://www.cuidevices.com/product/resource/css-10246-304.pdf (accessed September 10th, 2023).
 
 [9] Longman, J., &amp; LongmanHello, J. (2023, April 4). Speaker sensitivity explained. AudioReputation. https://www.audioreputation.com/speaker-sensitivity-explained/ 
+
+[10] 7. sound radiation and measurement, http://msp.ucsd.edu/syllabi/170.13f/course-notes/node7.html#:~:text=The%20dependence%20of%20the%20strength,that%20was%20worked%20out%20here (accessed Oct. 12, 2023). 
 
 
 
