@@ -31,6 +31,7 @@ The team members are as follows:
 #### Electrical Engineers
 
 Callie Battenfield
+I am a CmpE and EE double major. I am also TTU's IEEE chapter's secretary.
 
 Caz Bilbrey
 I have been working for Merrick and Company for over 2 years. I plan to move to Oak Ridge Tennessee  to continue my work in glovebox design.
