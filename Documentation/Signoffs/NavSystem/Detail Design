@@ -5,3 +5,8 @@ The navigation system will use 2 infrared avoidance sensors to detect the yellow
 
 #Constraints
 The navigation system is constrained in the following ways. It must have two sensors in order to detect each side of the line and navigate properly. The sensors must adhere to IEC 61920 and be classified according to this standard as IR receivers. This means they have an operating wavelength of 750nm to 1mm and does not exceed this boundary. This will be controlled by using the datasheet for any purchased parts for the navigation system.
+
+#Buildable Schematic
+The circuit diagram below shows how the sensors are designed and wired. The second image shows the finalized circuit construction of the sensor. 
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Circuit%20Diagram.jpeg)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Sensor.jpeg)
