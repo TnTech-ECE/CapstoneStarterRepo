@@ -37,7 +37,7 @@ The schematic of the system is shown above. There will be two reflectance sensor
 
 ### Sensor Schematics
 ![Alt text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensor_Connections.png)
-![Alt text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Pololu_QTR_8RC.png]
+![Alt text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Pololu_QTR_8RC.png)
 The sensor is created with LEDs and phototransistors. The LEDs emit a light, and the phototransistor receives the reflection off of the surface.
     Different color combinations of line and arena floor will generate different voltage readings. 
 
