@@ -23,3 +23,8 @@ The schematics from Digital are shown below detailing the operation and analysis
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Straight.jpg)
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Right.jpg)
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Left.jpg)
+
+@@
+|  Item  |  Description  | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
+|--------|---------------|-----------|-------------|--------------|----------|-------|-------------|
+| IR Sensor | Sensor for the lines and navigation system | Navigation | EK1254x5 | Gikfun | 1 | 9.88 | 9.88 |
