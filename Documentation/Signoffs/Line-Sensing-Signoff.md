@@ -42,7 +42,15 @@ The schematic of the system is shown above. There will be two reflectance sensor
 </p>
 The sensor is created with LEDs and phototransistors. The LEDs emit a light, and the phototransistor receives the reflection off of the surface.
     Different color combinations of line and arena floor will generate different voltage readings. 
-
+	
+The code for the project will be discussed in detail in the microcontroller signoff. On a high level,
+    the code will read sensor data in at a determined sampling rate (around 100 Hz, disccussed in analysis). 
+	The data will then run a 
+<p align = "center">
+<img src = "<p align = "center">
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Pololu_QTR_8RC.png?raw=true"alt="Line Sensing Software"/>
+</p>?raw=true"alt="Pololu QTR-8RC"/>
+</p>
 ## Analysis
 According to the datasheet, each LED will draw 20-25 mA of current resulting in an overal current draw of 100 mA for the entire sensor. This condition is for the highest sampling rate of 1 kHz. If the sampling rate is lowered, the supply current needed is lowered as well.
     For the scope of this project, 100 Hz should be sufficient in keeping the robot on the line. This lowers the total consumption to 10 mA and the individual LED consumption down to 1.25 mA. The sensor can operate on 3.3 V or 5 V. The weight of the sensor should not have an effect on the integrity of the system as it weighs just over 3 grams. The sensor is most accurate when it is 0.125" (3 mm) away from the surface it is sensing. The maximum sensing distance is 0.375" (9.5 mm).
