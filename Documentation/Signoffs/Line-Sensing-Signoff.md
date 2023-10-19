@@ -47,7 +47,7 @@ The sensor is created with LEDs and phototransistors. The LEDs emit a light, and
 	
 The code for the project will be discussed in detail in the microcontroller signoff. On a high level,
     the code will read sensor data in at a determined sampling rate (around 100 Hz, disccussed in analysis). 
-	A generalized code block diagram is shown below.
+	A generalized code block diagram is shown below. The sensor has Arduino libraries for customer download to help with implementation.
 <p align = "center">
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Software_Flowchart.png?raw=true"alt="Code Block Diagram"/>
 </p>
@@ -64,7 +64,12 @@ Pololu gives an oscilographic representation of the sensor working
 The example is when the one of the sensor modules detects a black line on a surface. The yellow curve is the sensor reading and the blue curve is the digital input to the microcontroller.
 	Pololu states that meaningful results are available within 1 ms. This latency is more than within the bounds of this project.
 
+As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
+
 ## BOM
 | Item | Quantity | Price/Item | Total Price | 
 |-|-|-|-| 
 | QTR-8RC | 1 | $9.95 | $9.95| 
+
+## References
+Pololu QTR-8RC information: https://www.pololu.com/product/961/ (Accessed on 10/19/2023)
