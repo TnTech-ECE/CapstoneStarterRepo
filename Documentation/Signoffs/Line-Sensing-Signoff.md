@@ -36,7 +36,9 @@ The schematic of the system is shown above. There will be two reflectance sensor
 	outputs will be read by an Arduino Mega. The digital pins 22-28, 30 will be used to conserve analog and PWM pins for future sensor implementation.
 
 ### Sensor Schematics
-![Alt text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensor_Schematic.jpg)
+<p align = "center">
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensor_Schematic.jpg?raw=true"alt="Sensor Schematic"/>
+</p>
 <p align = "center">
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Pololu_QTR_8RC.png?raw=true"alt="Pololu QTR-8RC"/>
 </p>
@@ -49,14 +51,16 @@ The code for the project will be discussed in detail in the microcontroller sign
 <p align = "center">
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Software_Flowchart.png?raw=true"alt="Code Block Diagram"/>
 </p>
+
 ## Analysis
 According to the datasheet, each LED will draw 20-25 mA of current resulting in an overal current draw of 100 mA for the entire sensor. This condition is for the highest sampling rate of 1 kHz. If the sampling rate is lowered, the supply current needed is lowered as well.
     For the scope of this project, 100 Hz should be sufficient in keeping the robot on the line. This lowers the total consumption to 10 mA and the individual LED consumption down to 1.25 mA. The sensor can operate on 3.3 V or 5 V. The weight of the sensor should not have an effect on the integrity of the system as it weighs just over 3 grams. The sensor is most accurate when it is 0.125" (3 mm) away from the surface it is sensing. The maximum sensing distance is 0.375" (9.5 mm).
 	
 Pololu gives an oscilographic representation of the sensor working
 <p align = "center">
-<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Software_Flowchart.png?raw=true"alt="Sensor Osciloscope"/>
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Oscilograph.png?raw=true"alt="Sensor Osciloscope"/>
 </p>
+
 ## BOM
 | Item | Quantity | Price/Item | Total Price | 
 |-|-|-|-| 
