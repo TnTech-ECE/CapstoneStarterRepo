@@ -61,6 +61,9 @@ Pololu gives an oscilographic representation of the sensor working
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Oscilograph.png?raw=true"alt="Sensor Osciloscope"/>
 </p>
 
+The example is when the one of the sensor modules detects a black line on a surface. The yellow curve is the sensor reading and the blue curve is the digital input to the microcontroller.
+	Pololu states that meaningful results are available within 1 ms. This latency is more than within the bounds of this project.
+
 ## BOM
 | Item | Quantity | Price/Item | Total Price | 
 |-|-|-|-| 
