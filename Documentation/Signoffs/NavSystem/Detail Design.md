@@ -12,22 +12,23 @@ The navigation system will use an array of infrared avoidance sensors to detect 
 
 The image below shows the sensor array that will be used in the construction of the navigation system. 
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Array.jpg)
 
-The image below shows the connections of the sensor array to the rest of the robot. It outlines how the digital bits will be transfered to the main controller.
+The sensor array will be connected to the main controller in order to recieve power and transmit the I2C data from the sensor to the main controller. It needs between 25mA and 180mA to operate, depending on the distance from the surfacce it will be sensing. This sensor array will be operating at 100mA to ensure it can sense the surface without the sensor dragging on the ground during the robot's traversal of the course. The image below shows how the IR sensor array will be connected to the power supply for the robot.
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Power%20Connection.png)
 
 ## Analysis
 
-The schematics from Digital are shown below detailing the operation and analysis of the sensor system, showing all four possible combinations of the two inputs and what signals they will send to the main controller.
+The control system for the navigation subsystem is shown below. This sytem is stable due to all the poles being in the left hand plane. This is shown in the second image below.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Cross.jpg)
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Straight.jpg)
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Right.jpg)
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Analysis-Left.jpg)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Control%20Block.png)
+
+![Alt text]()
+
+## BOM
 
 @@
 |  Item  |  Description  | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |--------|---------------|-----------|-------------|--------------|----------|-------|-------------|
-| IR Sensor | Sensor for the lines and navigation system | Navigation | SEN-13582 | Sparkfun | 1 | 34.50 | 9.88 |
+| IR Sensor | Sensor for the lines and navigation system | Navigation | SEN-13582 | Sparkfun | 1 | 34.50 | 34.50 |
