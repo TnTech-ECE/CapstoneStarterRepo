@@ -22,7 +22,7 @@ The sensor array will be connected to the main controller in order to recieve po
 
 The control system for the navigation subsystem is shown below. This sytem is stable due to all the poles being in the left hand plane. This is shown in the second image below.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Control%20Block.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Control%20Block%202.png)
 
 ![Alt text]()
 
