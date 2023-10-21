@@ -18,11 +18,6 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
-# Analysis
-
-
-
-
 | DIP SWITCH    |                                                                           |
 |---------------|---------------------------------------------------------------------------|
 | Switch Label  | Use                                                                       |
@@ -50,6 +45,13 @@ of the number of cars in a specific lot.
 | 7           | .04% ∆L/L   |
 | 8           | .03% ∆L/L   |
 | 9           | .02% ∆L/L   |
+
+# Analysis
+
+
+
+
+
 
 
 # BOM
