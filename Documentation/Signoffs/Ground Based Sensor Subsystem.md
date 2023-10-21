@@ -23,7 +23,7 @@ of the number of cars in a specific lot.
 
 
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 1 Heading 2</th></tr>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity </th></tr>
 <tr><td>
   
 | Switch Label  | Use                                                                       |
@@ -41,9 +41,8 @@ of the number of cars in a specific lot.
 
 </td><td>
 
-| Sensitivity |             |
-|-------------|-------------|
 | Setting     | Sensitivity |
+|-------------|-------------|
 | 0           | .48% ∆L/L   |
 | 1           | .32% ∆L/L   |
 | 2           | .24% ∆L/L   |
