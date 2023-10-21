@@ -37,6 +37,20 @@ of the number of cars in a specific lot.
 | 9. EXT. 0     | Time Extension after Vehicle leaves Loop                                  |
 | 10. 2 SEC DLY | Time added after vehicle arrives in loop but before Output A is activated |
 
+| Sensitivity |             |
+|-------------|-------------|
+| Setting     | Sensitivity |
+| 0           | .48% ∆L/L   |
+| 1           | .32% ∆L/L   |
+| 2           | .24% ∆L/L   |
+| 3           | .16% ∆L/L   |
+| 4           | .12% ∆L/L   |
+| 5           | .08% ∆L/L   |
+| 6           | .06% ∆L/L   |
+| 7           | .04% ∆L/L   |
+| 8           | .03% ∆L/L   |
+| 9           | .02% ∆L/L   |
+
 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
