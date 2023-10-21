@@ -21,6 +21,23 @@ of the number of cars in a specific lot.
 # Analysis
 
 
+
+
+| DIP SWITCH    |                                                                           |
+|---------------|---------------------------------------------------------------------------|
+| Switch Label  | Use                                                                       |
+| 1. FREQ 0     | Frequency Setting                                                         |
+| 2. FREQ 1     | Frequency Setting                                                         |
+| 3. FAIL MEM   | For Loop Failure for Output A                                             |
+| 4. EXT PRES   | Extends Presence for Vehicles Parked on Loop                              |
+| 5. RLY CNTL 1 | Output B Selection                                                        |
+| 6. RLY CNTL 0 | Output B Selection                                                        |
+| 7. BOOST      | Increases sensitivity of channel after initial detection                  |
+| 8. EXT. 1     | Time Extension after Vehicle leaves Loop                                  |
+| 9. EXT. 0     | Time Extension after Vehicle leaves Loop                                  |
+| 10. 2 SEC DLY | Time added after vehicle arrives in loop but before Output A is activated |
+
+
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
