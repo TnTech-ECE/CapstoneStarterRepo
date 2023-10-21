@@ -6,6 +6,10 @@ that have specified entrances/exits.  By using lots that have this constraint, i
 of the number of cars in a specific lot.
 
 # Constraints
+| No. | Constraints | Origin |
+| --- | ----------- | ------ |
+| 1.  | Subsystem shall detect vehicles entering and exiting a parking lot. |  System Requirements |
+| 2.  | 
 
 # Buildable Schematic
 
