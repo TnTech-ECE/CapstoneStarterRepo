@@ -34,7 +34,7 @@ of the number of cars in a specific lot.
 
 
 
-</table>
+<table>
 <tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
 <tr><td>
   
