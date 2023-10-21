@@ -26,7 +26,8 @@ of the number of cars in a specific lot.
 <tr><th>Table 1: DIP Switch </th><th>Table 1 Heading 2</th></tr>
 <tr><td>
   
-
+| DIP SWITCH    |                                                                           |
+|---------------|---------------------------------------------------------------------------|
 | Switch Label  | Use                                                                       |
 | 1. FREQ 0     | Frequency Setting                                                         |
 | 2. FREQ 1     | Frequency Setting                                                         |
