@@ -12,6 +12,6 @@ of the number of cars in a specific lot.
 # Analysis
 
 # BOM
-| First Header | Second Header |
-| ------------ | ------------- |
+| Part | Part Number | Quantity | Price Per Unit | Total Price |
+| ------------ | ------------- | --------- | -------- | ---------- |
 | Content Cell | Content Cell  |
