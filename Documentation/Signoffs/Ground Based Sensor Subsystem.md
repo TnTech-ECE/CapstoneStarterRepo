@@ -32,11 +32,16 @@ of the number of cars in a specific lot.
 | 9. EXT. 0     | Time Extension after Vehicle leaves Loop                                  |
 | 10. 2 SEC DLY | Time added after vehicle arrives in loop but before Output A is activated |
 
-| Sensitivity |             |---------------| LED         |            |
-|-------------|-------------|---------------|-------------|------------|
-| Setting     | Sensitivity |---------------| Name        | Use        |
-| 0           | .48% ∆L/L   |---------------| Green LED1  | Power LED  |
-| 1           | .32% ∆L/L   |---------------| Red LED2    | Detect LED |
+
+
+<table>
+<tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
+<tr><td>
+| Sensitivity |             |
+|-------------|-------------|
+| Setting     | Sensitivity |
+| 0           | .48% ∆L/L   |
+| 1           | .32% ∆L/L   |
 | 2           | .24% ∆L/L   |
 | 3           | .16% ∆L/L   |
 | 4           | .12% ∆L/L   |
@@ -45,6 +50,14 @@ of the number of cars in a specific lot.
 | 7           | .04% ∆L/L   |
 | 8           | .03% ∆L/L   |
 | 9           | .02% ∆L/L   |
+
+</td><td>
+| LED         |            |
+|-------------|------------|
+| Name        | Use        |
+| Green LED1  | Power LED  |
+| Red LED2    | Detect LED |
+</td></tr> </table>
 
 # Analysis
 
