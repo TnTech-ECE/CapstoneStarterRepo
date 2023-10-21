@@ -18,6 +18,14 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
+
+
+
+
+<table>
+<tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
+<tr><td>
+  
 | DIP SWITCH    |                                                                           |
 |---------------|---------------------------------------------------------------------------|
 | Switch Label  | Use                                                                       |
@@ -32,12 +40,8 @@ of the number of cars in a specific lot.
 | 9. EXT. 0     | Time Extension after Vehicle leaves Loop                                  |
 | 10. 2 SEC DLY | Time added after vehicle arrives in loop but before Output A is activated |
 
+</td><td>
 
-
-<table>
-<tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
-<tr><td>
-  
 | Sensitivity |             |
 |-------------|-------------|
 | Setting     | Sensitivity |
@@ -51,14 +55,6 @@ of the number of cars in a specific lot.
 | 7           | .04% ∆L/L   |
 | 8           | .03% ∆L/L   |
 | 9           | .02% ∆L/L   |
-
-</td><td>
-
-| LED         |            |
-|-------------|------------|
-| Name        | Use        |
-| Green LED1  | Power LED  |
-| Red LED2    | Detect LED |
 
 </td></tr> </table>
 
