@@ -37,6 +37,7 @@ of the number of cars in a specific lot.
 <table>
 <tr><th>Table 1 Heading 1 </th><th>Table 1 Heading 2</th></tr>
 <tr><td>
+  
 | Sensitivity |             |
 |-------------|-------------|
 | Setting     | Sensitivity |
@@ -52,11 +53,13 @@ of the number of cars in a specific lot.
 | 9           | .02% ∆L/L   |
 
 </td><td>
+
 | LED         |            |
 |-------------|------------|
 | Name        | Use        |
 | Green LED1  | Power LED  |
 | Red LED2    | Detect LED |
+
 </td></tr> </table>
 
 # Analysis
