@@ -86,6 +86,44 @@ of the number of cars in a specific lot.
 
 </td></tr> </table>
 
+<table>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th></tr>Table 3: DIP Switch Selection</th></tr>
+<tr><td>
+
+| LED         |            |
+|-------------|------------|
+| Name        | Use        |
+| Green LED1  | Power LED  |
+| Red LED2    | Detect LED |
+
+</td><td>
+
+| Green LED1           |                                                                                                                                    |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| State                | Explanation                                                                                                                        |
+| Off                  | Voltage applied to detector is less than 7.75 V. LED will be off                                                                   |
+| Low Voltage          | Voltage applied to detector is less than proper operation of 10.25 V.  LED will blink for 50 msec. once every 2 seconds.           |
+| Reset in Fail-Safe   | At start of reset event, LED turns off for 500 msec., on for 500 msec., off for 500 msec. and then display normal state.           |
+| Reset in Fail-Secure | At start of reset event, LED turns off for 500 msec., on for 500 msec., off for 500 msec. and then display normal state.           |
+| Open Loop            | When detector senses loop is open or inductance is too high, LED turns on for 500 msec. and off 500 msec. until fault is resolved. |
+| Shorted Loop         | When detector senses loop is shorted or inductance is too low, LED turns on for 100 msec and off 100 msec. until fault is resolved |
+| Large Change Fault   | When detector sensors loop is experiencing a large inductance change (greater than 30%), LED turns off for 100 msec., on for 100   |
+|                      | msec.,  and then stay on for 500 msec. It will repeat this sequence until the fault is resolved.                                   |
+| Prior Fault          | The detector has the ability to remember prior faults that have occurred from power interruption or reset of a function. The       |
+|                      | LED will turn on for 1850 msec., off for 50 msec., on for 50 msec. off for 50 msec., and then repeat the sequence until power      |
+|                      | is cycled or the detector has reset.                                                                                               |
+| Normal               | LED is always on when the detector is in the normal state of operation.                                                            |
+
+</td><td>
+
+| RED LED2             |
+|----------------------|
+| (Will not be used as |
+| it is for Output A   |
+| only)                |
+
+</td></tr> </table>
+
 # Analysis
 
 
