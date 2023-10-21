@@ -11,9 +11,8 @@ of the number of cars in a specific lot.
 | 1.  | Subsystem shall detect vehicles entering and exiting a parking lot. | System Requirements |
 | 2.  | Sensor shall function between 20 kHz and 100 kHz frequencies.       | System Requirements |
 
-1. The system will need to detect vehicles that are in the detection area of the loop for determining whether a vehicle is entering a lot or exiting a lot.  For the parking lot in the Engineering Quad on the campus
-   of Tennessee Tech University, there are two entrances/exits to access the parking lot.  This will require two loops at each entrance/exit with a Diablo DSP-15 Vehicle Detector controlling each loop.  One loop will be near the road that is in front of Brown Hall and the
-   other loop will be at the exit of the parking lot for the entrance/exit.  These two loops will be
+1. The system will need to detect vehicles that are in the detection area of the loop for determining whether a vehicle is entering a lot or exiting a lot.  For the parking lot in the Engineering Quad on the campus of Tennessee Tech University, there are two entrances/exits to access the parking lot.  This will require two loops at each entrance/exit with a Diablo DSP-15 Vehicle Detector controlling each loop.  This will require two Diablo DSP-15 Detectors for each entrance/exit.  One loop will be near the road that is in front of Brown Hall and the other loop will be at the exit of the parking lot for the entrance/exit.  The output of each loop will be connected to a microcontroller that is part of the Data Transmission subsystem.
+2. The system will need to function between 20 kHz and 100 kHz frequencies to avoid negatively affecting other electronic devices within the detection area of the loop.  With the entrances/exits being located between buildings, people will be walking through the detection area of the loop with their electronic devices such as cell phones, laptops, etc.  
 
 # Buildable Schematic
 
