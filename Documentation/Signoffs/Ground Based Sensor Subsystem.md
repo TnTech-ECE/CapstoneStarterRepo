@@ -52,27 +52,37 @@ of the number of cars in a specific lot.
 
 </td><td>
 
-| DIP Switch |     | Frequency Rating           |
-|------------|-----|----------------------------|
-| 1          | 2   |                            |
-| OFF        | OFF | High                       |
-| OFF        | ON  | Medium High                |
-| ON         | OFF | Medium Low                 |
-| ON         | ON  | Low                        |
-|            |     |                            |
-| DIP Switch |     | Output B Mode of Operation |
-| 5          | 6   |                            |
-| OFF        | OFF | True Presence              |
-| OFF        | ON  | Pulse on Entry             |
-| ON         | OFF | Pulse on Exit              |
-| ON         | ON  | Fail                       |
-|            |     |                            |
-| DIP Switch |     | Output A Extension Time    |
-| 5          | 6   |                            |
-| OFF        | OFF | 0 seconds                  |
-| OFF        | ON  | 2 seconds                  |
-| ON         | OFF | 5 seconds                  |
-| ON         | ON  | 10 seconds                 |
+| DIP Switch |                       | Frequency Rating           |
+|------------|-----------------------|----------------------------|
+| 1          | 2                     |                            |
+| OFF        | OFF                   | High                       |
+| OFF        | ON                    | Medium High                |
+| ON         | OFF                   | Medium Low                 |
+| ON         | ON                    | Low                        |
+|            |                       |                            |
+| DIP Switch |                       | Output B Mode of Operation |
+| 5          | 6                     |                            |
+| OFF        | OFF                   | True Presence              |
+| OFF        | ON                    | Pulse on Entry             |
+| ON         | OFF                   | Pulse on Exit              |
+| ON         | ON                    | Fail                       |
+|            |                       |                            |
+| DIP Switch | Operation             |                            |
+| 7          |                       |                            |
+| OFF        | Sensitivity Boost Off |                            |
+| ON         | Sensitivity Boost ON  |                            |
+|            |                       |                            |
+| DIP Switch |                       | Output A Extension Time    |
+| 8          | 9                     |                            |
+| OFF        | OFF                   | 0 seconds                  |
+| OFF        | ON                    | 2 seconds                  |
+| ON         | OFF                   | 5 seconds                  |
+| ON         | ON                    | 10 seconds                 |
+|            |                       |                            |
+| DIP Switch | Operation             |                            |
+| 10         |                       |                            |
+| OFF        | 2 sec. delay disabled |                            |
+| ON         | 2 sec. delay enabled  |                            |
 
 </td></tr> </table>
 
