@@ -12,3 +12,5 @@ of the number of cars in a specific lot.
 # Analysis
 
 # BOM
+| First Header | Second Header |
+| Content Cell | Content Cell |
