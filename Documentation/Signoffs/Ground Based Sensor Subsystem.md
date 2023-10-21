@@ -18,12 +18,8 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
-
-
-
-
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity </th></tr>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th></tr>Table 3: DIP Switch Selection</th></tr>
 <tr><td>
   
 | Switch Label  | Use                                                                       |
@@ -53,6 +49,30 @@ of the number of cars in a specific lot.
 | 7           | .04% ∆L/L   |
 | 8           | .03% ∆L/L   |
 | 9           | .02% ∆L/L   |
+
+</td><td>
+
+| DIP Switch |     | Frequency Rating           |
+|------------|-----|----------------------------|
+| 1          | 2   |                            |
+| OFF        | OFF | High                       |
+| OFF        | ON  | Medium High                |
+| ON         | OFF | Medium Low                 |
+| ON         | ON  | Low                        |
+|            |     |                            |
+| DIP Switch |     | Output B Mode of Operation |
+| 5          | 6   |                            |
+| OFF        | OFF | True Presence              |
+| OFF        | ON  | Pulse on Entry             |
+| ON         | OFF | Pulse on Exit              |
+| ON         | ON  | Fail                       |
+|            |     |                            |
+| DIP Switch |     | Output A Extension Time    |
+| 5          | 6   |                            |
+| OFF        | OFF | 0 seconds                  |
+| OFF        | ON  | 2 seconds                  |
+| ON         | OFF | 5 seconds                  |
+| ON         | ON  | 10 seconds                 |
 
 </td></tr> </table>
 
