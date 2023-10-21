@@ -1,4 +1,4 @@
-# Functions of the Subsystem
+# Ground-Based Sensor Subsystem
 
 The ground based sensor subsystem is to sense vehicles passing above the sensor, allowing for the system to keep a count of the
 number of cars that are in a specified parking lot on the campus of Tennessee Tech.  This system will be placed at parking lots
