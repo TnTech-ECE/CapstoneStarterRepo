@@ -18,6 +18,7 @@ of the number of cars in a specific lot.
 # Buildable Schematic
 
 ![Inductive Loop Sensor](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/b3bcd9b6-e894-4930-9a9d-33e58dc76d72)
+*Figure 1. Inductive Loop Sensor*
 
 
 
