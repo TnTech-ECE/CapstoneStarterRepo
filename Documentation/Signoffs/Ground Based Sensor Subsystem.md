@@ -17,7 +17,7 @@ of the number of cars in a specific lot.
 # Buildable Schematic
 
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th></tr>Table 3: DIP Switch Selection</th></tr>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th><th>Table 3: DIP Switch Selection</th></tr>
 <tr><td>
   
 | Switch Label  | Use                                                                       |
