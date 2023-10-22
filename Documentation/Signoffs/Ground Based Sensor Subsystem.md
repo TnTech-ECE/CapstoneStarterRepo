@@ -85,7 +85,7 @@ of the number of cars in a specific lot.
 </td></tr> </table>
 
 <table>
-<tr><th>Table 1: LED </th><th>Table 2: Green LED</th></tr>Table 3: Red LED</th></tr>
+<tr><th>Table 1: LED </th><th>Table 2: Green LED</th><th>Table 3: Red LED</th></tr>
 <tr><td>
 
 | Name        | Use        |
