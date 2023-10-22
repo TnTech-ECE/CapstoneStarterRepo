@@ -16,7 +16,7 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
-
+![image info](E:\Michael's Folder\Tennessee Technological University\Classes\Fall 2023 Semester\ECE 4961 - Capstone Design 1\KiCad Files\Inductive Loop Sensor.jpg)
 
 
 
