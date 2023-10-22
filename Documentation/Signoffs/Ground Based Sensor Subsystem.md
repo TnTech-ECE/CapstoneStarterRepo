@@ -87,20 +87,18 @@ of the number of cars in a specific lot.
 </td></tr> </table>
 
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th></tr>Table 3: DIP Switch Selection</th></tr>
+<tr><th>Table 1: LED </th><th>Table 2: Green LED</th></tr>Table 3: Red LED</th></tr>
 <tr><td>
 
-| LED         |            |
-|-------------|------------|
 | Name        | Use        |
+|-------------|------------|
 | Green LED1  | Power LED  |
 | Red LED2    | Detect LED |
 
 </td><td>
 
-| Green LED1           |                                                                                                                                    |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | State                | Explanation                                                                                                                        |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | Off                  | Voltage applied to detector is less than 7.75 V. LED will be off                                                                   |
 | Low Voltage          | Voltage applied to detector is less than proper operation of 10.25 V.  LED will blink for 50 msec. once every 2 seconds.           |
 | Reset in Fail-Safe   | At start of reset event, LED turns off for 500 msec., on for 500 msec., off for 500 msec. and then display normal state.           |
