@@ -134,4 +134,4 @@ of the number of cars in a specific lot.
 | Diablo Controls Inc. DSP-15 Vehicle Detector | DSP-15-T | 4 | $85.69 | $342.76 |
 
 # References
-1. “Chapter 2, Traffic Detector Handbook: Third edition-volume I,” FHWA, https://www.fhwa.dot.gov/publications/research/operations/its/06108/02.cfm (accessed Oct. 21, 2023). 
+1. “Chapter 2, Traffic Detector Handbook: Third edition-volume I,” FHWA, https://www.fhwa.dot.gov/publications/research/operations/its/06108/02a.cfm (accessed Oct. 22, 2023).  
