@@ -19,6 +19,13 @@ of the number of cars in a specific lot.
 ![Inductive Loop Sensor](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/b3bcd9b6-e894-4930-9a9d-33e58dc76d72)
 *Figure 1. Inductive Loop Sensor*
 
+![DSP-15 Vehicle Detector 1](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/fc92ad28-9006-4e59-bab0-3a26158a1364)
+*Figure 2. Diablo DSP-15 Vehicle Detector 1*
+
+![DSP-15 Vehicle Detector 2](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/b12bb8c3-8caa-413e-a4b9-6271cb82a5b5)
+*Figure 3. Diablo DSP-15 Vehicle Detector 2*
+
+
 
 
 # Analysis
