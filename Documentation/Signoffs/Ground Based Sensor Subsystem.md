@@ -17,6 +17,7 @@ of the number of cars in a specific lot.
 # Buildable Schematic
 
 ![Inductive Loop Sensor](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/1915837b-649b-414a-b374-d49a5c1f0bef)
+
 *Figure 1. Inductive Loop Sensor*
 
 ![DSP-15 Vehicle Detector 1](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/fc92ad28-9006-4e59-bab0-3a26158a1364)
