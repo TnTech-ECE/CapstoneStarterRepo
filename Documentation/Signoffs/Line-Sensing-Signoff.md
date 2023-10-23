@@ -38,9 +38,11 @@ The schematic of the system is shown above. There will be two reflectance sensor
 	before the smaller module. This means that the robot will be centered in reference to the line before moving backwards. As a result, the smaller module
 	will be inately centered, allowing for less precision.
 	
-![ALT text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/2021_SECON_Board.png)
+<p align = "center">
+<img scr = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/2021_SECON_Board.png?raw=true"alt="2021 Board Layout"/>
+</p>
 	
-	The last IEEE SECON Hardware competition arena with a line was in 2021. The line was black with the arena floor being white. The line was 16" in width. The black
+The last IEEE SECON Hardware competition arena with a line was in 2021. The line was black with the arena floor being white. The line was 16" in width. The black
 	line also had a smaller white line in the middle, acting like the middle line separating two lanes on a road.
 	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. The sensor set has the capabilities to keep the robot on the black line. If being
 	centered on the line is important, the robot can sense the smaller white strip.
