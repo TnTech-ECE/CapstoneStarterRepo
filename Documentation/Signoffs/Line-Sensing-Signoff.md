@@ -85,6 +85,20 @@ The example is when the one of the sensor modules detects a black line on a surf
 	Pololu states that meaningful results are available within 1 ms. The 1 ms added with the 100 hz sampling means data is read into the sensor microcontroller ever 11 ms. As stated above,
 	the small latency will beneficial to the master control so that direction changes can be started before the next sensor reading. 
 
+Sampling rate calculations:
+
+Max robot speed: 2 ft/s 
+
+Max distance per sample at 100 Hz: 2 ft/s x 0.011 s = 0.022 ft => 0.264 in
+
+Max distance per sample at 500 Hz: 2 ft/s x 0.003 s = 0.006 ft => 0.072 in
+
+Max distance per sample at 1000 Hz: 2 ft/s x 0.002 s = 0.004 ft => 0.024 in
+
+Therefore, the sensor microcontroller will receive an update every 0.264 inches at maximum speed with the proposed sampling frequency
+
+If the robot does not react well with the lower sampling rate, a higher sampling rate can be used with the tradeoff of increased current draw.
+
 As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
 
 ## Robot Attachment
