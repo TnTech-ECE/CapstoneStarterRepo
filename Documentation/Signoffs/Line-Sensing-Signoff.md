@@ -45,7 +45,7 @@ The schematic of the system is shown above. There will be two reflectance sensor
 The last IEEE SECON Hardware competition arena with a line was in 2021. A small white line of 1" was used.
 	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. Because the width of the module is larger
 	than the line, it will be accurate in reading the white color vs the adjacent black color.
-	The sensors will be powered by a 5 v regulated source coming from the power distribution subsystem. The sensor
+	The sensors will be powered by a 5 V regulated source coming from the power distribution subsystem. The sensor
 	outputs will be read by an Arduino Mega. The digital pins 22-28, 30 will be used to conserve analog and PWM pins for future sensor implementation.
 
 ### Sensor Schematics
@@ -86,6 +86,10 @@ The example is when the one of the sensor modules detects a black line on a surf
 	the small latency will beneficial to the master control so that direction changes can be started before the next sensor reading. 
 
 As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
+
+## Robot Attachment
+The sensor will be mounted on the robot by a 3-D printed mold. The mold will hold the sensor in place and allow it to raise/lower in height to meet the reading height requirements.
+	A more detailed design and explanation of the sensor attachment will be included in a chassis signoff.
 
 ## BOM
 | Item | Quantity | Price/Item | Total Price | 
