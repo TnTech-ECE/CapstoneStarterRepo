@@ -42,10 +42,9 @@ The schematic of the system is shown above. There will be two reflectance sensor
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/2021_SECON_Board.png?raw=true"alt="Secon Board"/>
 </p>
 
-The last IEEE SECON Hardware competition arena with a line was in 2021. The line was black with the arena floor being white. The line was 16" in width. The black
-	line also had a smaller white line in the middle, acting like the middle line separating two lanes on a road.
-	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. The sensor set has the capabilities to keep the robot on the black line. If being
-	centered on the line is important, the robot can sense the smaller white strip.
+The last IEEE SECON Hardware competition arena with a line was in 2021. A small white line of 1" was used.
+	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. Because the width of the module is larger
+	than the line, it will be accurate in reading the white color vs the adjacent black color.
 	The sensors will be powered by a 5 v regulated source coming from the power distribution subsystem. The sensor
 	outputs will be read by an Arduino Mega. The digital pins 22-28, 30 will be used to conserve analog and PWM pins for future sensor implementation.
 
