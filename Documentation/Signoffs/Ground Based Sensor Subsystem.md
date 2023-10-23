@@ -25,6 +25,7 @@ of the number of cars in a specific lot.
 *Figure 2. Diablo DSP-15 Vehicle Detector 1*
 
 ![DSP-15 Vehicle Detector 2](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/b12bb8c3-8caa-413e-a4b9-6271cb82a5b5)
+
 *Figure 3. Diablo DSP-15 Vehicle Detector 2*
 
 
