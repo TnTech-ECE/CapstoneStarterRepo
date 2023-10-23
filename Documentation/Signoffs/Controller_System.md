@@ -1,6 +1,6 @@
 # Controller System
 ## Function of the system
-The goal of the system is to implement the process necessary for generating the hydrogen and oxygen gases. The system consists of a pre-made electrolytic cell, a pulse inverter, a rectifier, and permanent magnets. The pulse inverter will be the power source of the system, and the rectifier will be used on the output of the pulse inverter to ensure that the polarity of the input power is consistent. The magnets will be used to boost the system's efficiency.
+The goal of the system is to read the sensor values, compute the efficiency of the electrolyzer and output the rating to a display. The subsystem consists of a microcontroller that will perform the calculations, an energy metering IC to determine how much power the electrolyzer is using, and a flow rate sensor to determine gas content. The sensor readings and efficiency rating will then be output to a serial terminal where it can be viewed.
 
 ## Constraints
 | No. | Constraints                                                                                   | Origin            |
