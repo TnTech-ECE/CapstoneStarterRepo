@@ -39,12 +39,9 @@ The schematic of the system is shown above. There will be two reflectance sensor
 	will be inately centered, allowing for less precision.
 	
 <p align = "center">
-<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Separated_Sensor.png?raw=true"alt="Separated Sensors"/>
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/2021_SECON_Board.png?raw=true"alt="Secon Board"/>
 </p>
 
-When the sensor is broken into two separate modules, a 100 ohm resistor must be included to maintain accuracy. 
-
-![ALT text](https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/2021_SECON_Board.png)
 The last IEEE SECON Hardware competition arena with a line was in 2021. The line was black with the arena floor being white. The line was 16" in width. The black
 	line also had a smaller white line in the middle, acting like the middle line separating two lanes on a road.
 	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. The sensor set has the capabilities to keep the robot on the black line. If being
@@ -59,6 +56,11 @@ The last IEEE SECON Hardware competition arena with a line was in 2021. The line
 <p align = "center">
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Pololu_QTR_8RC.png?raw=true"alt="Pololu QTR-8RC"/>
 </p>
+<p align = "center">
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Separated_Sensor.png?raw=true"alt="Separated Sensors"/>
+</p>
+
+When the sensor is broken into two separate modules, a 100 ohm resistor must be included to maintain accuracy. 
 The sensor is created with LEDs and phototransistors. The LEDs emit a light, and the phototransistor receives the reflection off of the surface.
     Different color combinations of line and arena floor will generate different voltage readings. 
 	
