@@ -94,4 +94,5 @@ As stated above, analysis and implementation description of code will be discuss
 
 ## References
 Pololu QTR-8RC information: https://www.pololu.com/product/961/ (Accessed on 10/19/2023)
+
 2021 IEEE SECON Board Layout: https://attend.ieee.org/southeastcon-2022/wp-content/uploads/sites/309/2022_SoutheastCon_HardwareRules.pdf
