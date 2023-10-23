@@ -5,29 +5,12 @@ The goal of the system is to read the sensor values, compute the efficiency of t
 ## Constraints
 | No. | Constraints                                                                                   | Origin            |
 | --- | --------------------------------------------------------------------------------------------- | ----------------- |
-| 1   | The material of the electrolytic cell housing shall not be reactive with Potassium Hydroxide. | Design Constraint |
-| 2   | The material of the electrolytic cell should be transparent or translucent.                   | Design Constraint |
-| 3   | The cell must be large enough to house all the necessary sensors.                             | Design Constraint | **********************
-| 4   | The system shall include a pulse generator and permanent magnets to boost efficiency.         | Design Constraint |
-| 5   | The pulse generator’s output should be rectified.                                             | Design Constraint |
-| n   | "Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being." | Standards, Ethics, Socioeconomic Well-Being | ***************
-
-<sup>1</sup>
-The material of the cell not being reactive with Potassium Hydroxide is essential both for functionality and safety, given that Potassium Hydroxide will be part of the solution housed in the cell.
-
-<sup>2</sup>
-This is a preference decided by the team.
-
-<sup>3</sup>
-This is essential for the project's functionality overall. The cell, more specifically, must be large enough to house a pressure sensor and a water level sensor in order to ensure functionality and safety of operation.
-
-<sup>4</sup>
-The pulse generator will be the system's power source, and its frequency and amplitude will be manipulated for optimizing efficiency. The magnets will theoretically serve to bias the ions in the solution toward the electrodes in order to increase interaction and boost efficiency.
-
-<sup>5</sup>
-The rectification of the pulse generator's output, while not essential to the function of the system as it is being designed, is prefered as it makes possible future development more approachable. The direct purpose of the rectification is that it keeps the location of hydrogen and oxygen gas generation seperate so that, in the future, the gases can more easily be isolated from one another.
-
-
+| 1   | Constraint 1                                                                                  | ???? |
+| 2   | Constraint 2                                                                                  | ???? |
+| 3   | Constraint 3                                                                                  | ???? | 
+| 4   | Constraint 4                                                                                  | ???? |
+| 5   | Constraint 5                                                                                  | ???? |
+| n   | "Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well-being." | Standards, Ethics, Socioeconomic Well-Being | ***************
 
 
 ## Buildable Schematic
