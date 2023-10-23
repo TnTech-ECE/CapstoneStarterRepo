@@ -1,12 +1,17 @@
 ## Function of the Subsystem
 
 The Navigation System serves as the central control hub, responsible for directing the robot as it traverses its predefined course.
-The navigation system will use an array of infrared avoidance sensors to detect the yellow line. These sensors output low on black and dark colors, and high on white and light colors. The array will output digital bits 
+The navigation system will use an array of infrared sensors to detect the yellow line. These sensors output low on black and dark colors, and high on white and light colors. The array will output digital bits in an I2C format
 
 ## Constraints
 
-- IEC 61920 meaning the array has an operating wavelength of 750nm to 1mm and does not exceed this boundary. This will be controlled by using the datasheet for any purchased parts for the navigation system.
-- The array must have sensors spaced apart closer than the width of the yellow line.
+| Constraint | Detail | Adherance |
+|------------|--------|-----------|
+| IEC 61920 | The array has an operating wavelength of 750nm to 1mm and does not exceed this boundary | This will be controlled by using the datasheet for any purchased parts for the navigation system |
+| Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line | The array purchased will have the correct spacing |
+| Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | The main controller will access the array to give input to the drive train |
+| Color Sensing | The array must detect the yellow line against the black background | The array will output a low signal on the yellow line and a high signal on the black. The main controller will look at where the low signals are in order for the drive train to make any neccessary adjustments |
+
 
 ## Buildable Schematic
 
