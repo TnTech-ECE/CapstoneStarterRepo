@@ -30,9 +30,18 @@ The line following subsystem will provide the master control with usable data to
 The schematic of the system is shown above. There will be two reflectance sensor arrays used. 
     The Pololu QTR-8RC module has a perforation in the board that allows for two of the eight sensors to be broken
 	off. This leaves one reflectance sensor array with two LED emitters and receivers and one reflectance sensor array with six LED emitters
-	receivers. The array with two emitters and receivers will be used at the back of the robot for reversing. Because reversing is most likely done
-	in small intervals, the smaller module will suffice. The array with six LED emitter/receiver pairs will be used at the head of the robot for 
-	forward movement about the line. The sensors will be powered by a 5 v regulated source coming from the power distribution subsystem. The sensor
+	receivers. 
+	The array with six LED emitter/receiver pairs will be used at the head of the robot for 
+	forward movement about the line.
+	The array with two emitters and receivers will be used at the back of the robot for reversing. Because reversing is most likely done
+	in small intervals, the smaller module will suffice. Reversing will never be the first robot movement, so the front sensor set will be active
+	before the smaller module. This means that the robot will be centered in reference to the line before moving backwards. As a result, the smaller module
+	will be inately centered, allowing for less precision.
+	The last IEEE SECON Hardware competition arena with a line was in 2021. The line was black with the arena floor being white. The line was 16" in width. The black
+	line also had a smaller white line in the middle, acting like the middle line separating two lanes on a road.
+	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. The sensor set has the capabilities to keep the robot on the black line. If being
+	centered on the line is important, the robot can sense the smaller white strip.
+	The sensors will be powered by a 5 v regulated source coming from the power distribution subsystem. The sensor
 	outputs will be read by an Arduino Mega. The digital pins 22-28, 30 will be used to conserve analog and PWM pins for future sensor implementation.
 
 ### Sensor Schematics
@@ -54,7 +63,9 @@ The code for the project will be discussed in detail in the microcontroller sign
 
 ## Analysis
 According to the datasheet, each LED will draw 20-25 mA of current resulting in an overal current draw of 100 mA for the entire sensor. This condition is for the highest sampling rate of 1 kHz. If the sampling rate is lowered, the supply current needed is lowered as well.
-    For the scope of this project, 100 Hz should be sufficient in keeping the robot on the line. This lowers the total consumption to 10 mA and the individual LED consumption down to 1.25 mA. The sensor can operate on 3.3 V or 5 V. The weight of the sensor should not have an effect on the integrity of the system as it weighs just over 3 grams. The sensor is most accurate when it is 0.125" (3 mm) away from the surface it is sensing. The maximum sensing distance is 0.375" (9.5 mm).
+    For the scope of this project, 100 Hz should be sufficient in keeping the robot on the line.
+	Pololu recommends this value for their 3pi robot that has line-sensing capabilities. Sampling every 10 ms should allow the master control enough time to change direction, but fast enough to produce a fluent maneuver.
+	This lowers the total consumption to 10 mA and the individual LED consumption down to 1.25 mA. The sensor can operate on 3.3 V or 5 V. The weight of the sensor should not have an effect on the integrity of the system as it weighs just over 3 grams. The sensor is most accurate when it is 0.125" (3 mm) away from the surface it is sensing. The maximum sensing distance is 0.375" (9.5 mm).
 	
 Pololu gives an oscilographic representation of the sensor working
 <p align = "center">
@@ -62,7 +73,8 @@ Pololu gives an oscilographic representation of the sensor working
 </p>
 
 The example is when the one of the sensor modules detects a black line on a surface. The yellow curve is the sensor reading and the blue curve is the digital input to the microcontroller.
-	Pololu states that meaningful results are available within 1 ms. This latency is more than within the bounds of this project.
+	Pololu states that meaningful results are available within 1 ms. The 1 ms added with the 100 hz sampling means data is read into the sensor microcontroller ever 11 ms. As stated above,
+	the small latency will beneficial to the master control so that direction changes can be started before the next sensor reading. 
 
 As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
 
@@ -73,3 +85,4 @@ As stated above, analysis and implementation description of code will be discuss
 
 ## References
 Pololu QTR-8RC information: https://www.pololu.com/product/961/ (Accessed on 10/19/2023)
+2021 IEEE SECON Board Layout: https://attend.ieee.org/southeastcon-2022/wp-content/uploads/sites/309/2022_SoutheastCon_HardwareRules.pdf
