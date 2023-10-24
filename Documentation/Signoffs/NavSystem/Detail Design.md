@@ -7,10 +7,10 @@ The navigation system will use an array of infrared sensors to detect the yellow
 
 | Constraint | Detail | Adherance |
 |------------|--------|-----------|
-| IEC 61920 | The array has an operating wavelength of 750nm to 1mm and does not exceed this boundary | This will be controlled by using the datasheet for any purchased parts for the navigation system |
-| Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line | The array purchased will have the correct spacing |
-| Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | The main controller will access the array to give input to the drive train |
-| Color Sensing | The array must detect the yellow line against the black background | The array will output a low signal on the yellow line and a high signal on the black. The main controller will look at where the low signals are in order for the drive train to make any neccessary adjustments |
+| 1. IEC 61920 | The array has an operating wavelength of 750nm to 1mm and does not exceed this boundary | This will be controlled by using the datasheet for any purchased parts for the navigation system |
+| 2. Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line | The array purchased will have the correct spacing |
+| 3.Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | The main controller will access the array to give input to the drive train |
+| 4.Color Sensing | The array must detect the yellow line against the black background | The array will output a low signal on the yellow line and a high signal on the black. The main controller will look at where the low signals are in order for the drive train to make any neccessary adjustments |
 
 
 ## Buildable Schematic
