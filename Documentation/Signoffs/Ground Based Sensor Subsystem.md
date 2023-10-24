@@ -28,11 +28,6 @@ of the number of cars in a specific lot.
 
 *Figure 3. Inductive Loop Sensor 2*
 
-
-
-
-# Analysis
-
 <table>
 <tr><th>Table 1: DIP Switch </th><th>Table 2: DIP Switch Selection (Ch.1) </th><th> Table 3: DIP Switch Selection (Ch.2) </th><th> Table 4: DIP Switch Selection (Operation) </th></tr>
 <tr><td>
@@ -165,6 +160,11 @@ of the number of cars in a specific lot.
 | Occupancy    | When channel is occupied by a vehicle, the LED will dim itself and LED will be flashing at a very fast rate that will be seen as a LED flickering.                                                                                                                                                                        |
 
 </td></tr> </table>
+
+
+
+# Analysis
+
 
 
 
