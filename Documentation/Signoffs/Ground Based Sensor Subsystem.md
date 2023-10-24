@@ -179,7 +179,7 @@ The Diablo DSP-21 Vehicle Detector is capable of detecting vehicles through an i
 For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H.  This size works well for the entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
 
 ```math
-L = (P/4) * (N + N<sup>2</sup>)
+L = (P/4) * (N + (N<sup>2</sup>))
 ```
 
 
