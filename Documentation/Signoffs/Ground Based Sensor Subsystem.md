@@ -16,7 +16,7 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
-![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/c04cf1f7-6f9c-4be5-a27d-6077e82437be)
+
 
 
 *Figure 1. Diablo DSP-21 Vehicle Detector with 11 Pin Harness*
@@ -176,15 +176,20 @@ The Diablo DSP-21 Vehicle Detector is capable of detecting vehicles through an i
 
 ## Inductive Loop Detection Range
 
-For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H.  This size works well for the entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
+For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H with a detection height of 3.2 ft (approximately 38" height) .  This size works well for the entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
 
 ```math
-L = (P/4) * (N + N^2)
+L = (P/4) * (N + N^2);
 ```
+where L = Loop Inductance in &mu;H
+      P = Perimeter of loop in ft.
+      N = Number of turns in the loop
 
+For the lead-in loop inductance, the base value of 0.22 &mu;H/ft is used.  After calculating both the loop inductance value (100 &mu;H) and lead-in inductance value (5.5 &mu;H), the ratio is 18.2:1 which is greater than the ratio value of 2:1.  
 
+## 11 Pin Harness
 
-
+For the detector to work with the inductive loops, the detector will use an 11 Pin Harness to connect the output pins from the back side of the detector to the necessary connections.  This system will use a 15 VDC, 50 mA power supply with the positive connected to Pin 1 and negative to Pin 2.  Loop 1 (Channel 1) will be connected to Pins 7 and 8 while Loop 2 (Channel 2) will be connected to Pins 9 and 10 according to both the schematic drawing and the user manual of the Diablo DSP-21 Vehicle Detector.  To detect when a vehicle is present over one or both of the loops, the common pins of both Channels 1 and 2 will be connected, in parallel, to the 3V3 pin of the ESP32 MCU.  The normally open contact for Channel 1 will be connected to Pin VP of the ESP32 Microcontroller to detect a closed contact when Loop 1 detects a vehicle and the normally open contact for Channel 2 will be connected to Pin VN of the ESP32 Microcontroller to detect a closed contact when Loop 2 detects a vehicle.  To securely connect the harness connections to pins of the ESP32 Microcontroller, it will require specific connection ends to the wires to properly fit while also alerting the MCU of when a vehicle is present in either one or both of the loops.
 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
