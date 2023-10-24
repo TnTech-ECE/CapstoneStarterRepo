@@ -67,7 +67,7 @@ The sensor is created with LEDs and phototransistors. The LEDs emit a light, and
     Different color combinations of line and arena floor will generate different voltage readings. 
 	
 The code for the project will be discussed in detail in the microcontroller signoff. On a high level,
-    the code will read sensor data in at a determined sampling rate (around 100 Hz, disccussed in analysis). 
+    the code will read sensor data in at a determined sampling rate (around 100 Hz, disccussed in analysis), filter the data, then report the data to the master control.
 	A generalized code block diagram is shown below. The sensor has Arduino libraries for customer download to help with implementation.
 <p align = "center">
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Software_Flowchart.png?raw=true"alt="Code Block Diagram"/>
