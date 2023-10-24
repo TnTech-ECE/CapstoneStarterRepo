@@ -59,6 +59,8 @@ The last IEEE SECON Hardware competition arena with a line was in 2021. A small 
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Separated_Sensor.png?raw=true"alt="Separated Sensors"/>
 </p>
 
+**The schematics and images above are produced by the supplier**
+
 When the sensor is broken into two separate modules, a 100 ohm resistor must be included to maintain accuracy. 
 The sensor is created with LEDs and phototransistors. The LEDs emit a light, and the phototransistor receives the reflection off of the surface.
     Different color combinations of line and arena floor will generate different voltage readings. 
@@ -76,9 +78,9 @@ According to the datasheet, each LED will draw 20-25 mA of current resulting in 
 	Pololu recommends this value for their 3pi robot that has line-sensing capabilities. Sampling every 10 ms should allow the master control enough time to change direction, but fast enough to produce a fluent maneuver.
 	This lowers the total consumption to 10 mA and the individual LED consumption down to 1.25 mA. The sensor can operate on 3.3 V or 5 V. The weight of the sensor should not have an effect on the integrity of the system as it weighs just over 3 grams. The sensor is most accurate when it is 0.125" (3 mm) away from the surface it is sensing. The maximum sensing distance is 0.375" (9.5 mm).
 	
-Pololu gives an oscilographic representation of the sensor working
+Pololu gives an oscillographic representation of the sensor working
 <p align = "center">
-<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Oscilograph.png?raw=true"alt="Sensor Osciloscope"/>
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Sensing_Oscillograph.png?raw=true"alt="Sensor Oscilloscope"/>
 </p>
 
 The example is when the one of the sensor modules detects a black line on a surface. The yellow curve is the sensor reading and the blue curve is the digital input to the microcontroller.
@@ -95,11 +97,9 @@ Max distance per sample at 500 Hz: 2 ft/s x 0.003 s = 0.006 ft => 0.072 in
 
 Max distance per sample at 1000 Hz: 2 ft/s x 0.002 s = 0.004 ft => 0.024 in
 
-Therefore, the sensor microcontroller will receive an update every 0.264 inches at maximum speed with the proposed sampling frequency
-
-If the robot does not react well with the lower sampling rate, a higher sampling rate can be used with the tradeoff of increased current draw.
-
-As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
+Therefore, the sensor microcontroller will receive an update every 0.264 inches at maximum speed with the proposed sampling frequency.
+	If the robot does not react well with the lower sampling rate, a higher sampling rate can be used with the tradeoff of increased current draw.
+	As stated above, analysis and implementation description of code will be discussed in the microcontroller signoff.
 
 ## Robot Attachment
 The sensor will be mounted on the robot by a 3-D printed mold. The mold will hold the sensor in place and allow it to raise/lower in height to meet the reading height requirements.
@@ -111,6 +111,6 @@ The sensor will be mounted on the robot by a 3-D printed mold. The mold will hol
 | QTR-8RC | 1 | $9.95 | $9.95| 
 
 ## References
-Pololu QTR-8RC information: https://www.pololu.com/product/961/ (Accessed on 10/19/2023)
+Pololu QTR-8RC information: https://www.pololu.com/product/961/ (Accessed on 10/19/2023).
 
-2021 IEEE SECON Board Layout: https://attend.ieee.org/southeastcon-2022/wp-content/uploads/sites/309/2022_SoutheastCon_HardwareRules.pdf
+2021 IEEE SECON Board Layout: https://attend.ieee.org/southeastcon-2022/wp-content/uploads/sites/309/2022_SoutheastCon_HardwareRules.pdf.
