@@ -168,7 +168,9 @@ of the number of cars in a specific lot.
 
 ## Power
 
-The Diablo DSP-21 Vehicle Detector will be powered through the 11 Pin Harness connection found in Figure 1.  The 
+The Diablo DSP-21 Vehicle Detector will be powered through the 11 Pin Harness connection found in Figure 1.  The recommended input voltage and current for the detector is 10.5 VDC to 35 VDC with 25 mA to 120 mA [2].  Since the loops are connected directly to the vehicle detector unit, the loops will receive the necessary power through the detector.  The power through the loops will depend on the selections made using the on-board DIP switch with the provided table in both the user manual and the tables found under the Buildable Schematics section.
+
+
 
 
 
@@ -180,4 +182,5 @@ The Diablo DSP-21 Vehicle Detector will be powered through the 11 Pin Harness co
 | Diablo 11 Pin Harness | CBL-005 | 2 | $10.92 | $21.84 |
 
 # References
-1. “Chapter 2, Traffic Detector Handbook: Third edition-volume I,” FHWA, https://www.fhwa.dot.gov/publications/research/operations/its/06108/02a.cfm (accessed Oct. 22, 2023).  
+1. “Chapter 2, Traffic Detector Handbook: Third edition-volume I,” FHWA, https://www.fhwa.dot.gov/publications/research/operations/its/06108/02a.cfm (accessed Oct. 22, 2023).
+2. DSP 21 directional counting detector - diablocontrols.com, https://diablocontrols.com/wp-content/uploads/dsp21-man-f-5dbb54cf335d3.pdf (accessed Oct. 24, 2023). 
