@@ -168,7 +168,7 @@ of the number of cars in a specific lot.
 
 ## Power
 
-The subsystem will be powered through the 11 Pin Harness connection found in Figure 1.  The recommended input voltage and current for the detector is 10.5 VDC to 35 VDC with 25 mA to 120 mA(^2).  Since the loops are connected directly to the vehicle detector unit, the loops will receive the necessary power through the detector.  The power through the loops will depend on the selections made using the on-board DIP switch with the provided table in both the user manual and the tables found under the Buildable Schematics section.
+The subsystem will be powered through the 11 Pin Harness connection found in Figure 1.  The recommended input voltage and current for the detector is 10.5 VDC to 35 VDC with 25 mA to 120 mA^2^.  Since the loops are connected directly to the vehicle detector unit, the loops will receive the necessary power through the detector.  The power through the loops will depend on the selections made using the on-board DIP switch with the provided table in both the user manual and the tables found under the Buildable Schematics section.
 
 ## Vehicle Detection
 
