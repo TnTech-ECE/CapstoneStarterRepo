@@ -34,7 +34,7 @@ of the number of cars in a specific lot.
 # Analysis
 
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 2: Sensitivity</th><th>Table 3: DIP Switch Selection</th></tr>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: DIP Switch Selection</th></tr>
 <tr><td>
   
 | Switch Label | Use                   |
@@ -51,21 +51,6 @@ of the number of cars in a specific lot.
 | 3            | Fail Type             |
 | 2            | Mode Selection (High) |
 | 1            | Mode Selection (Low)  |
-
-</td><td>
-
-| Setting     | Sensitivity |
-|-------------|-------------|
-| 0           | .48% ∆L/L   |
-| 1           | .32% ∆L/L   |
-| 2           | .24% ∆L/L   |
-| 3           | .16% ∆L/L   |
-| 4           | .12% ∆L/L   |
-| 5           | .08% ∆L/L   |
-| 6           | .06% ∆L/L   |
-| 7           | .04% ∆L/L   |
-| 8           | .03% ∆L/L   |
-| 9           | .02% ∆L/L   |
 
 </td><td>
 
