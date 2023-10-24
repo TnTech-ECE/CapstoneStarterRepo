@@ -59,7 +59,7 @@ The last IEEE SECON Hardware competition arena with a line was in 2021. A small 
 <img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Separated_Sensor.png?raw=true"alt="Separated Sensors"/>
 </p>
 
-**The schematics and images above are produced by the supplier**
+_**The schematics and images above are produced by the supplier**_
 
 When the sensor is broken into two separate modules, a 100 ohm resistor must be included to maintain accuracy. 
 The sensor is created with LEDs and phototransistors. The LEDs emit a light, and the phototransistor receives the reflection off of the surface.
