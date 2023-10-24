@@ -32,7 +32,9 @@ Abdulrahman Alrudayan is a senior Electrical Engineering major at Tennessee Tech
 
 Khalifah Altamimi is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and digital design.  The main focus for Khalifah is designing the backup power system that will provide power to allow the system to continue working when a power outage has occurred on campus.  When the system is not being used, it will be charging and stay charged until backup power is needed for the system.
 
-Brady Beecham is a senior Computer Engineering major at Tennessee Technological University.  His interests
+Brady Beecham is a senior Computer Engineering major at Tennessee Technological University.  His interests include
+
+Kyle Plant is a senior Computer Engineering major at Tennessee Technological University.  His interests include
 
 Michael Sisk is a senior Electrical Engineering major at Tennessee Technological University.  His interests include power systems, robotics, and automation.  He has spent eight months interning at Jack Daniels Distillery in Lynchburg, TN as an engineering maintenance intern.  He is also currently serving as the Engineering Joint Council (EJC) Representative for the student chapter of the Institute of Electrical and Electronics Engineers (IEEE).  The main focus for Michael Sisk is designing the ground-based sensor, which involves using inductive loops to detect the presence of vehicles.
 
@@ -44,11 +46,17 @@ Mr. Jesse Roberts - ECE Department
 
 ### Stakeholders
 
-The primary customer for this project is the Naval Surface Warfare Center Dahlgren Division in Dahlgren, VA, that is under the command of the Naval Sea Systems Command (NAVSEA). One major stakeholder that will be affected by the project are commuter students.
+The primary customer for this project is the Naval Surface Warfare Center Dahlgren Division in Dahlgren, VA, that is under the command of the Naval Sea Systems Command (NAVSEA). 
+
+One major stakeholder that will be affected by the project are commuter students.  Commuter students will use this system heavily as they must find parking in a timely manner in specific parking lots in order to be on time for class or extracurricular events on campus.
+
+Another stakeholder that will be affected by the project are campus visitors.  For visitors that have come to Tennessee Tech University numerous times or for first time visitors, it will be extremely useful in locating parking lots that have availability to allow them more time to complete business they have on campus and not have to spend a significant amount of time finding places to park on campus.
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
 ### Recognitions
+
+Since this project is a continuation from the 2022-23 academic year, this team wants to recognize the previous Parking Lot Monitoring System team and their members: Kester Nucum, Aaron Wilhite, Gabriel Laboy, Genevieve Schreiber, and Reggie Garza.  This team consisted of three computer engineering students and two electrical engineering students.  With their knowledge and collaboration with the CSC team, they were successful in creating a server, sign, and cameras to detect and count the number of vehicles in a specified parking lot.  Due to their work, this team of three electrical engineering students and two computer engineering students was able to create a ground-based solution to assist the current camera system in detecting vehicles entering and leaving a parking lot and display the number of available spots.
 
 Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
 
