@@ -16,7 +16,7 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
-![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/ab7b4354-cb69-407d-871e-cfeb582bdda1)
+
 
 *Figure 1. Diablo DSP-21 Vehicle Detector with 11 Pin Harness*
 
@@ -165,7 +165,9 @@ of the number of cars in a specific lot.
 
 # Analysis
 
+## Power
 
+The Diablo DSP-21 Vehicle Detector will be powered through the 11 Pin Harness connection found in Figure 1.  The 
 
 
 
