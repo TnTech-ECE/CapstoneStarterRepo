@@ -16,6 +16,7 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
+![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/6271e60c-188e-4550-a5a0-9ff182f9266d)
 
 
 
