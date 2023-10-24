@@ -16,17 +16,17 @@ of the number of cars in a specific lot.
 
 # Buildable Schematic
 
+![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/ab7b4354-cb69-407d-871e-cfeb582bdda1)
 
+*Figure 1. Diablo DSP-21 Vehicle Detector with 11 Pin Harness*
 
-*Figure 1. Inductive Loop Sensor*
+![Inductive Loop Sensor 1](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/59442aa9-2150-4ff3-840f-0d66d5555b7b)
 
+*Figure 2. Inductive Loop Sensor 1*
 
+![Inductive Loop Sensor 2](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/98be6172-899d-4e54-b7ec-4ad343396091)
 
-*Figure 2. Diablo DSP-15 Vehicle Detector 1*
-
-
-
-*Figure 3. Diablo DSP-15 Vehicle Detector 2*
+*Figure 3. Inductive Loop Sensor 2*
 
 
 
