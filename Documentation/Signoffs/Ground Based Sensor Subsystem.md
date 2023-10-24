@@ -34,7 +34,7 @@ of the number of cars in a specific lot.
 # Analysis
 
 <table>
-<tr><th>Table 1: DIP Switch </th><th>Table 2: DIP Switch Selection</th></tr>
+<tr><th>Table 1: DIP Switch </th><th>Table 2: DIP Switch Selection (Ch.1) </th><th> Table 3: DIP Switch Selection (Ch.2) </th><th> Table 4: DIP Switch Selection (Operation) </th></tr>
 <tr><td>
   
 | Switch Label | Use                   |
@@ -54,61 +54,70 @@ of the number of cars in a specific lot.
 
 </td><td>
 
-| DIP Switch                                              | Frequency Rating (Channel 1)       |                                   |       |                              |
-|---------------------------------------------------------|------------------------------------|-----------------------------------|-------|------------------------------|
-| 12                                                      |                                    |                                   |       |                              |
-| OFF                                                     | Highest Loop Frequency Possible    |                                   |       |                              |
-| ON                                                      | Lowest Loop Frequency Possible     |                                   |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch                                              |                                    | Sensitivity Setting for Channel 1 | ∆L/L  | Counting Modes 1 and 3       |
-| 11                                                      | 10                                 |                                   |       |                              |
-| OFF                                                     | OFF                                | Low Sensitivity                   | 0.50% | Normal Vehicle Count Mode    |
-| OFF                                                     | ON                                 | Medium Low Sensitivity            | 0.10% | Large Vehicle Count Mode     |
-| ON                                                      | OFF                                | Medium High Sensitivity           | 0.05% | Unused (same as normal mode) |
-| ON                                                      | ON                                 | High Sensitivity                  | 0.02% | Test Mode                    |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch 9 (Channel 1)                                | OFF                                | ON                                |       |                              |
-| Detector Operating Mode                                 |                                    |                                   |       |                              |
-| Mode 0 - Two Individual Channels with Pulse or Presence | Presence                           | Pulse on Entry                    |       |                              |
-| Mode 1- Two Individual Channels with Count or Presence  | Presence                           | Count                             |       |                              |
-| Mode 2- Two Paired Channels with Directional Logic      | Presence                           | Pulse on Entry                    |       |                              |
-| Mode 3- Two Paired Channels with Directional Counting   | Count                              | Count                             |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch                                              | Frequency Rating (Channel 2)       |                                   |       |                              |
-| 8                                                       |                                    |                                   |       |                              |
-| OFF                                                     | Highest Loop Frequency Possible    |                                   |       |                              |
-| ON                                                      | Lowest Loop Frequency Possible     |                                   |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch                                              |                                    | Sensitivity Setting for Channel 2 | ∆L/L  | Counting Modes 1 and 3       |
-| 7                                                       | 6                                  |                                   |       |                              |
-| OFF                                                     | OFF                                | Low Sensitivity                   | 0.50% | Normal Vehicle Count Mode    |
-| OFF                                                     | ON                                 | Medium Low Sensitivity            | 0.10% | Large Vehicle Count Mode     |
-| ON                                                      | OFF                                | Medium High Sensitivity           | 0.05% | Unused (same as normal mode) |
-| ON                                                      | ON                                 | High Sensitivity                  | 0.02% | Test Mode                    |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch 5 (Channel 2)                                | OFF                                | ON                                |       |                              |
-| Detector Operating Mode                                 |                                    |                                   |       |                              |
-| Mode 0 - Two Individual Channels with Pulse or Presence | Presence                           | Pulse on Entry                    |       |                              |
-| Mode 1- Two Individual Channels with Count or Presence  | Presence                           | Count                             |       |                              |
-| Mode 2- Two Paired Channels with Directional Logic      | Presence                           | Pulse on Entry                    |       |                              |
-| Mode 3- Two Paired Channels with Directional Counting   | Count                              | Count                             |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch                                              | Sensitivity Boost                  |                                   |       |                              |
-| 4                                                       |                                    |                                   |       |                              |
-| OFF                                                     | Used for entire detection          |                                   |       |                              |
-| ON                                                      | 2 seconds                          |                                   |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switch                                              | Fail Type (Only for Presence Mode) |                                   |       |                              |
-| 3                                                       |                                    |                                   |       |                              |
-| OFF                                                     | Fail Safe Mode is selected         |                                   |       |                              |
-| ON                                                      | Fail Secure Mode is selected       |                                   |       |                              |
-|                                                         |                                    |                                   |       |                              |
-| DIP Switchs 2 and 1 (Channels 1 and 2)                  |                                    |                                   |       |                              |
-| Detector Operating Mode                                 | Switch 2                           | Switch 1                          |       |                              |
-| Mode 0 - Two Individual Channels with Pulse or Presence | OFF                                | OFF                               |       |                              |
-| Mode 1- Two Individual Channels with Count or Presence  | OFF                                | ON                                |       |                              |
-| Mode 2- Two Paired Channels with Directional Logic      | ON                                 | OFF                               |       |                              |
-| Mode 3- Two Paired Channels with Directional Counting   | ON                                 | ON                                |       |                              |
+| Channel 1                                               |                                 |                                   |       |                              |
+|---------------------------------------------------------|---------------------------------|-----------------------------------|-------|------------------------------|
+| DIP Switch                                              | Frequency Rating (Channel 1)    |                                   |       |                              |
+| 12                                                      |                                 |                                   |       |                              |
+| OFF                                                     | Highest Loop Frequency Possible |                                   |       |                              |
+| ON                                                      | Lowest Loop Frequency Possible  |                                   |       |                              |
+|                                                         |                                 |                                   |       |                              |
+| DIP Switch                                              |                                 | Sensitivity Setting for Channel 1 | ∆L/L  | Counting Modes 1 and 3       |
+| 11                                                      | 10                              |                                   |       |                              |
+| OFF                                                     | OFF                             | Low Sensitivity                   | 0.50% | Normal Vehicle Count Mode    |
+| OFF                                                     | ON                              | Medium Low Sensitivity            | 0.10% | Large Vehicle Count Mode     |
+| ON                                                      | OFF                             | Medium High Sensitivity           | 0.05% | Unused (same as normal mode) |
+| ON                                                      | ON                              | High Sensitivity                  | 0.02% | Test Mode                    |
+|                                                         |                                 |                                   |       |                              |
+| DIP Switch 9 (Channel 1)                                | OFF                             | ON                                |       |                              |
+| Detector Operating Mode                                 |                                 |                                   |       |                              |
+| Mode 0 - Two Individual Channels with Pulse or Presence | Presence                        | Pulse on Entry                    |       |                              |
+| Mode 1- Two Individual Channels with Count or Presence  | Presence                        | Count                             |       |                              |
+| Mode 2- Two Paired Channels with Directional Logic      | Presence                        | Pulse on Entry                    |       |                              |
+| Mode 3- Two Paired Channels with Directional Counting   | Count                           | Count                             |       |                              |
+
+</td><td>
+
+| Channel 2                                               |                                 |                                   |       |                              |
+|---------------------------------------------------------|---------------------------------|-----------------------------------|-------|------------------------------|
+| DIP Switch                                              | Frequency Rating (Channel 2)    |                                   |       |                              |
+| 8                                                       |                                 |                                   |       |                              |
+| OFF                                                     | Highest Loop Frequency Possible |                                   |       |                              |
+| ON                                                      | Lowest Loop Frequency Possible  |                                   |       |                              |
+|                                                         |                                 |                                   |       |                              |
+| DIP Switch                                              |                                 | Sensitivity Setting for Channel 2 | ∆L/L  | Counting Modes 1 and 3       |
+| 7                                                       | 6                               |                                   |       |                              |
+| OFF                                                     | OFF                             | Low Sensitivity                   | 0.50% | Normal Vehicle Count Mode    |
+| OFF                                                     | ON                              | Medium Low Sensitivity            | 0.10% | Large Vehicle Count Mode     |
+| ON                                                      | OFF                             | Medium High Sensitivity           | 0.05% | Unused (same as normal mode) |
+| ON                                                      | ON                              | High Sensitivity                  | 0.02% | Test Mode                    |
+|                                                         |                                 |                                   |       |                              |
+| DIP Switch 5 (Channel 2)                                | OFF                             | ON                                |       |                              |
+| Detector Operating Mode                                 |                                 |                                   |       |                              |
+| Mode 0 - Two Individual Channels with Pulse or Presence | Presence                        | Pulse on Entry                    |       |                              |
+| Mode 1- Two Individual Channels with Count or Presence  | Presence                        | Count                             |       |                              |
+| Mode 2- Two Paired Channels with Directional Logic      | Presence                        | Pulse on Entry                    |       |                              |
+| Mode 3- Two Paired Channels with Directional Counting   | Count                           | Count                             |       |                              |
+
+</td><td>
+
+| Detector Operation                                      |                                    |          |
+|---------------------------------------------------------|------------------------------------|----------|
+| DIP Switch                                              | Sensitivity Boost                  |          |
+| 4                                                       |                                    |          |
+| OFF                                                     | Used for entire detection          |          |
+| ON                                                      | 2 seconds                          |          |
+|                                                         |                                    |          |
+| DIP Switch                                              | Fail Type (Only for Presence Mode) |          |
+| 3                                                       |                                    |          |
+| OFF                                                     | Fail Safe Mode is selected         |          |
+| ON                                                      | Fail Secure Mode is selected       |          |
+|                                                         |                                    |          |
+| DIP Switchs 2 and 1 (Channels 1 and 2)                  |                                    |          |
+| Detector Operating Mode                                 | Switch 2                           | Switch 1 |
+| Mode 0 - Two Individual Channels with Pulse or Presence | OFF                                | OFF      |
+| Mode 1- Two Individual Channels with Count or Presence  | OFF                                | ON       |
+| Mode 2- Two Paired Channels with Directional Logic      | ON                                 | OFF      |
+| Mode 3- Two Paired Channels with Directional Counting   | ON                                 | ON       |
 
 </td></tr> </table>
 
