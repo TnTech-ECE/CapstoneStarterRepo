@@ -172,7 +172,13 @@ The subsystem will be powered through the 11 Pin Harness connection found in Fig
 
 ## Vehicle Detection
 
-The Diablo DSP-21 Vehicle Detector is capable of detecting vehicles through an inductive loop by sending pulses through the loop.  The pulse output has a 300 millisecond (ms) period ± 10 ms with 150 ms ± 10 ms on and 150 ms ± 10 ms off before the next pulse is sent through the loops.  The response time
+The Diablo DSP-21 Vehicle Detector is capable of detecting vehicles through an inductive loop by sending pulses through the loop.  The pulse output has a 300 millisecond (ms) period ± 10 ms with 150 ms ± 10 ms on and 150 ms ± 10 ms off before the next pulse is sent through the loops.  The response time for the detector is 150 ms ± 25 ms and can hold a vehicle for up to one hour in the loop and still detect the vehicle<sup>2</sup>.
+
+## Inductive Loop Detection Range
+
+For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H.  This size works well for the entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
+
+$L = (P/4) x (N + NmA<sup>2</sup>)$
 
 
 
