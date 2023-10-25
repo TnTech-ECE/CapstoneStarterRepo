@@ -203,6 +203,7 @@ For the detector to work with the inductive loops, the detector will use an 11 P
 | Wire Connections | N/A | N/A | $0.00 | $0.00 |<sup>*</sup>
 
 <sup>*</sup> These parts will be provided by the Department of Electrical and Computer Engineering at Tennessee Technological University.
+
 Note: The prices listed above do not include sales tax or shipping costs.
 
 # References
