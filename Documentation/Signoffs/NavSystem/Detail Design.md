@@ -23,6 +23,14 @@ The sensor array will be connected to the main controller in order to recieve po
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Power%20Connection.png)
 
+The following image shows how the sensor array is connected to the main controller. The main controller in this schematic is a stand in, as the precise controller has not yet been designed.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20to%20MC%20Connections.png)
+
+The following is a 3D model of where the sensor package will go on the robot. The sensor array is shown as the purple block on the underside of the robot chassis. The main controller is shown as the blue block, and the power system is the green block. The red wires are the main voltage supply, supplying 5 Volts to the sensor array, and the black wires are the ground connections. The yellow wire is the I2C data cable and the pink wire is the I2C clock data. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Nav%20Sys.png)
+
 ## Analysis
 
 The control system for the navigation subsystem is shown below. This sytem is stable due to all the poles being in the left hand plane. This is shown in the second image below. (I am still working on the analysis)
