@@ -3,7 +3,9 @@
 
 The goal of the system is to read the sensor values, compute the efficiency of the electrolyzer and output the rating to a display. The subsystem consists of a microcontroller that will perform the calculations, an energy metering IC to determine how much power the electrolyzer is using, and a flow rate sensor to determine gas content. The sensor readings and efficiency rating will then be output to a serial terminal where it can be viewed.
 ##### Psuedo Code Flowchart
-<img src="/Documentation/Images/Controller_System/Conceptual/PseudoCodeFlowchart.PNG" width="60%" height="60%">
+<img src="/Documentation/Images/Controller_System/Conceptual/PseudoCodeFlowchart.PNG" width="40%" height="40%">
+
+
 ## Constraints
 | No. | Constraints                                                                                   | Origin            |
 | --- | --------------------------------------------------------------------------------------------- | ----------------- |
