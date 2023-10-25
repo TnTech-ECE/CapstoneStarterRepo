@@ -199,6 +199,11 @@ For the detector to work with the inductive loops, the detector will use an 11 P
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Diablo Controls Inc. DSP-21 Vehicle Detector | DSP-21-LV | 2 | $104.95 | $209.90 |
 | Diablo 11 Pin Harness | CBL-005 | 2 | $10.92 | $21.84 |
+| Wire | 14 AWG | 280 ft. | $0.00 | $0.00 |<sup>*</sup>
+| Wire Connections | N/A | N/A | $0.00 | $0.00 |<sup>*</sup>
+
+<sup>*</sup> These parts will be provided by the Department of Electrical and Computer Engineering at Tennessee Technological University.
+Note: The prices listed above do not include sales tax or shipping costs.
 
 # References
 1. “Chapter 2, Traffic Detector Handbook: Third edition-volume I,” FHWA, https://www.fhwa.dot.gov/publications/research/operations/its/06108/02a.cfm (accessed Oct. 22, 2023). 
