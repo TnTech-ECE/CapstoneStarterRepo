@@ -193,13 +193,7 @@ For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop
 ```math
 L = (P/4) * (N + N^2);
 ```
-where
-
-      L = Loop Inductance in &mu;H
-
-      P = Perimeter of loop in ft.
-      
-      N = Number of turns in the loop
+where L = Loop Inductance in &mu;H, P = Perimeter of loop in ft., and N = Number of turns in the loop
 
 For the lead-in loop inductance, the base value of 0.22 &mu;H/ft is used.  After calculating both the loop inductance value (100 &mu;H) and lead-in inductance value (5.5 &mu;H), the ratio is 18.2:1 which is greater than the ratio value of 2:1.  
 
