@@ -193,7 +193,9 @@ For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop
 ```math
 L = (P/4) * (N + N^2);
 ```
-where L = Loop Inductance in &mu;H
+where
+
+      L = Loop Inductance in &mu;H
 
       P = Perimeter of loop in ft.
       
