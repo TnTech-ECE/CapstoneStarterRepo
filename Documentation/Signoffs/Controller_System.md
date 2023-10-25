@@ -9,13 +9,20 @@ The goal of the system is to read the sensor values, compute the efficiency of t
 ## Constraints
 | No. | Constraints                                                                                   | Origin            |
 | --- | --------------------------------------------------------------------------------------------- | ----------------- |
-| 1   | Constraint 1                                                                                  | ???? |
-| 2   | Constraint 2                                                                                  | ???? |
-| 3   | Constraint 3                                                                                  | ???? | 
-| 4   | Constraint 4                                                                                  | ???? |
+| 1   | Shall accurately measure the electrical efficiency of the electrolyzer                        | Design Constraint |
+| 2   | Shall use sensors to measure gas output and electrical input                                  | Design Constraint |
+| 3   | Shall output efficiency rating and sensor readings to a serial port                           | Design Constraint | 
+| 4   | How often should it update efficiency??  every 5 seconds?                                     | Design Constraint |
 | 5   | Constraint 5                                                                                  | ???? |
 | n   | "Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well-being." | Standards, Ethics, Socioeconomic Well-Being | 
 
+<sup>1</sup> Success of the subsystem requires that it is able to compute an efficiency rating of the electrolyzer. The computations are there to confirm if the methods of increasing the efficiency of electrolysis are successful.
+
+<sup>2</sup> To be able to compute an efficiency rating there will need to be a way to measure the energy input and output of the electrolyzer.
+
+<sup>3</sup> For a user to view the efficiency rating and necessary sensor data there must be a way to view it. Using the serial port on a microcontroller the information can be viewed through an external device that can use a serial terminal.
+
+<sup>4</sup>
 
 ## Buildable Schematic
 
@@ -27,6 +34,6 @@ The goal of the system is to read the sensor values, compute the efficiency of t
 ## BOM
 | Device | Quantity | Price per Unit | Total Cost |
 | ------ | -------- | -------------- | ---------- |
-| Microcontroller | 1 | ????? |
+| Microcontroller | 1 | ????? | ????? |
 | Flowrate Sensor | 1 | ????? | ?????? | ?????? |
 | Energy Metering IC ADE9153A | 1 | ???? | ????? |
