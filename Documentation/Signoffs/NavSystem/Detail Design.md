@@ -11,7 +11,7 @@ The navigation system will use an array of infrared sensors to detect the yellow
 | 2. Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line | The array purchased will have the correct spacing |
 | 3. Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | The main controller will access the array to give input to the drive train |
 | 4. Color Sensing | The array must detect the yellow line against the black background | The array will output a low signal on the yellow line and a high signal on the black. The main controller will look at where the low signals are in order for the drive train to make any neccessary adjustments |
-
+| 5. Height From Ground | The array must be within 1 inch from the line it is detecting | The array will be mounted to the underside of the front of the robot chassis. |
 
 ## Buildable Schematic
 
