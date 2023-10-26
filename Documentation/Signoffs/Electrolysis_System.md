@@ -41,7 +41,7 @@ While the pressure capacity of the cell being ordered is unknown, 15 PSI was cho
 
 
 ## Analysis
-The electrolysis water machine
+The electrolysis water machine is sufficient in size for proper functionality. With one, efficiency testing can be done by using optimization (pulse inverter and Neodymium magnets) and using no optimization for comparison. The magnets selected are sufficient, as there are lots of them which allows for better manipulation of the magnetism used on the system. The pulse inverter being used is highly customizable, meaning that amplitude and frequency can be manipulated for doing proper testing and optimization for efficiency. The rectifier selected for the inverter's output is sufficient, being rated for a maximum of 50A and 1 kV, both larger than the current and voltage that the rectifier is anticipated to be exposed to.
 
 
 ## BOM
@@ -50,5 +50,5 @@ The electrolysis water machine
 | Electrolysis Water Machine with Spray-Gun             | 1        | $93.99         | $93.99     |
 | TRYMAG Small Magnets 150Pcs, 12x2mm Neodymium Magnets | 1        | $16.19         | $16.19     |
 | Pulse Inverter                                        | 1        | NA             | NA         |
-| STMicroelectronics PB5010-E3/45                       | 3        | $3.85          | #11.55     |
+| STMicroelectronics PB5010-E3/45                       | 3        | $3.85          | $11.55     |
 | Total                                                 |          |                | NA         |
