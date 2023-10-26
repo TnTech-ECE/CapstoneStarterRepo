@@ -9,9 +9,9 @@ The role of the system is to implement the process necessary for generating the 
 | 2   | The material of the electrolytic cell should be transparent or translucent.                   | Design Constraint                    |
 | 3   | The system shall include a pulse generator and permanent magnets to boost efficiency.         | Design Constraint                    |
 | 4   | The pulse generator’s output should be rectified.                                             | Design Constraint                    |
-| 5   | The electrolysis cell shall have no permanent storage of gases.                               | OSHA Standards 1910.103 and 1910.104 | ***************
+| 5   | The electrolysis cell shall have no permanent storage of gases.                               | OSHA Standards 1910.103 and 1910.104 |
 | 6   | Pulse inverter must be able to be shut off within two clock cycles by the safety system.      | Design Constraint                    |
-| 7   | Safety system must shut off the system when the cell's pressure is at __ of its capacity.     | Design Constraint                    |
+| 7   | Safety system must shut off the system when the cell's pressure is at 15 PSI.                 | Design Constraint                    |
 
 
 <sup>1</sup>
@@ -33,21 +33,22 @@ Hydrogen and oxygen gas will not be stored in the cell as pressurized storage of
 This will prevent any excessive delays that may be a safety concern.
 
 <sup>7</sup>
+While the pressure capacity of the cell being ordered is unknown, 15 PSI was chosen as a limit given the expectation that pressure should not increase by any substantial amount. With this, the system will be shut off when pressure starts to build,  with 15 PSI being chosen as a safe limit where any fault in the system will not be a safety concern, regardless of the cell's capacity.
 
 
 ## Buildable Schematic
-
+![image](/Documentation/Images/Controller_System/Conceptual/Electrolysis_System.jpg)
 
 
 ## Analysis
-
+The electrolysis water machine
 
 
 ## BOM
 | Device                                                | Quantity | Price per Unit | Total Cost |
 | ----------------------------------------------------- | -------- | -------------- | ---------- |
-| Electrolysis Water Machine with Spray-Gun             | 1        | $93.99         | $93.99 |
-| Electrolysis Water Machine                            | 1        | $80.00         | $80.00 |
-| TRYMAG Small Magnets 150Pcs, 12x2mm Neodymium Magnets | 1        | $16.19         | $16.19 |
-| Pulse Inverter                                        | 1        | ?????  | ?????? |
-| STMicroelectronics STPS80H100CWLY                     | 4        | $5.20          | $20.80 |
+| Electrolysis Water Machine with Spray-Gun             | 1        | $93.99         | $93.99     |
+| TRYMAG Small Magnets 150Pcs, 12x2mm Neodymium Magnets | 1        | $16.19         | $16.19     |
+| Pulse Inverter                                        | 1        | NA             | NA         |
+| STMicroelectronics PB5010-E3/45                       | 3        | $3.85          | #11.55     |
+| Total                                                 |          |                | NA         |
