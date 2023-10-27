@@ -47,7 +47,17 @@ The sensors will be powered by a 5 V regulated source coming from the power dist
 
 The last IEEE SECON Hardware competition arena with a line was in 2021. A small white line of 1" was used.
 	The Pololu QTR-8RC module spans 2.95" without the separation of the 6 RC and 2 RC modules. Because the width of the module is larger
+<<<<<<< Updated upstream
 	than the line, it will be accurate in reading the white color vs the adjacent black color. If the sensor was not larger than the line, there would be no differentiation of the line and the background, as the sensor would only receiver the color of the line. When the robot went off center and the background color was received, it would result in the robot making a zig-zag movement rather than going in a continuous direction. 
+=======
+	than the line, it will be accurate in reading the white color vs the adjacent black color. If the sensor was not larger than the line, there would be no differentiation of the line and the background, as the sensor would only receiver the color of the line. When the robot went off center and the background color was received, it would result in the robot making a zig-zag movement rather than going in a continuous direction. An example of this is shown below:
+
+<p align = "center">
+<img src = "https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Images/Line-Following/Line_Example.png?raw=true"alt="Sensor Schematic"/>
+</p>
+
+If the sensor cannot detect the line in reference to the background (meaning the line is bigger than the sensor), then there will never be a continuous movement after the robot gets off center or the line curves. The sensor readings will cause the robot to go back and forth from one side of the line to the other.
+>>>>>>> Stashed changes
 
 ### Sensor Schematics
 <p align = "center">
