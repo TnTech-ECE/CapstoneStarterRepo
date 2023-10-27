@@ -5,13 +5,14 @@ The navigation system will use an array of infrared sensors to detect the yellow
 
 ## Constraints
 
-| Constraint | Detail | Adherance |
-|------------|--------|-----------|
-| 1. IEC 61920 | The array has an operating wavelength of 750nm to 1mm and does not exceed this boundary | This will be controlled by using the datasheet for any purchased parts for the navigation system |
-| 2. Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line | The array purchased will have the correct spacing |
-| 3. Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | The main controller will access the array to give input to the drive train |
-| 4. Color Sensing | The array must detect the yellow line against the black background | The array will output a low signal on the yellow line and a high signal on the black. The main controller will look at where the low signals are in order for the drive train to make any neccessary adjustments |
-| 5. Height From Ground | The array must be within 1 inch from the line it is detecting | The array will be mounted to the underside of the front of the robot chassis. |
+| Constraint | Detail | Origin |
+|------------|--------|--------|
+| 1. IEC 61920 | The array has an operating wavelength of 1mm to 50um and does not exceed this boundary | IEC 61920 |
+| 2. Array Spacing | The array must have sensors spaced apart closer than the width of the yellow line in order for the 2 central sensors to detect the line when centered | Sensor Specifications |
+| 3. Sampling Rate | The array must be accessed at a rate of at least 20Hz in order for the robot to keep on the line | Sensor Specifications |
+| 4. Color Sensing | The array must detect the yellow line against the black background | Competition Specifications |
+| 5. Height From Ground | The array must be within 1/2 inch from the line it is detecting | Sensor Specifications |
+| 6. Perpindicular Line Sensing | The array must be able to detect the white line at the start of the crater | Competition Specifications |
 
 ## Buildable Schematic
 
@@ -33,15 +34,34 @@ The following is a 3D model of where the sensor package will go on the robot. Th
 
 ## Analysis
 
-The control system for the navigation subsystem is shown below. This sytem is stable due to all the poles being in the left hand plane. This is shown in the second image below. (I am still working on the analysis)
+Constraint 1 Solution: 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Control%20Block%202.png)
+The array must have an operating wavelength between 1mm and 50um. The sensor used in this design has an adjustable operating wavelength that averages 940nm. This can be seen on page 3 of the datasheet.
 
-![Alt text]()
+Constraint 2 Solution:
+
+The sensor array must have two sensors detecting the yellow line when it is centered. The yellow line is 1 inch in width and the array has sensors spaced 1/2 inch apart. This ensures that the center two sensors are detecting the yellow line simultaneously when the robot is centered on the line. This allows for the main controller to know when the robot has shifted off center and is able to make adjustments accordingly.
+
+Constraint 3 Solution:
+
+The senor must be smapled at a frewuency of at least 20Hz. The sensor array has a sampling frequency of 4kHz, ensurring that when the micro controller accesses it it will have refreshed and have new information avaliable. This can be seen on the installation guide provided with the sensor array.
+
+Constraint 4 Solution:
+
+The array must be able to read the yellow line on a black background. The array outputs a high signal on dark colors and a low signal on light colors. This allows for the sensor to output a low signal from the sensors that see the line and a high signal from those that do not. The micro controller can read this information to determine the robot's position above the line.
+
+Constraint 5 Solution:
+
+The array must be within 1/2 inch of the yellow line. In order for the sensor array to read the line it must be within 1/4 to 3/4 inches from the line it is detecting. Mounting the sensor array on th eunderside of the robot and ensuring the chassis has a mounting point with only a 1/2 inch of clearance allows for this constraint to be met. As shown in the figure below, the sensor array will be mounted 1/2 inch above the surface of the board.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Front.png)
+
+Constraint 6 Solution:
+
+The array must be able to detect the white perpidicular line at the start and end of the crater. This is accomplished becaues the entire array will output a low signal on the white colored line. Having all the sensors output low will signal the main controller that a white line has been reached.
 
 ## BOM
 
-@@
 |  Item  |  Description  | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |--------|---------------|-----------|-------------|--------------|----------|-------|-------------|
 | IR Sensor | Sensor for the lines and navigation system | Navigation | SEN-13582 | Sparkfun | 1 | 34.50 | 34.50 |
