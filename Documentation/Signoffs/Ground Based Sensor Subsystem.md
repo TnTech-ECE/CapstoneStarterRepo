@@ -1,6 +1,6 @@
 # Ground-Based Sensor Subsystem
 
-The purpose of the ground based sensor subsystem is to be able to detect a car/pickup truck's presence at a designated entrance/exit of a parking lot and determine whether the car/pickup truck (vehicle) is entering a parking lot or leaving a parking lot.  This subsystem will use inductive loops as the sensory method for vehicles and their movement through a designated entrance/exit in a parking lot.  By using inductive loops instead of cameras for detecting vehicles at entrances/exits, parking lots, such as the gravel parking lot near the Marc L. Burnett Student Recreation and Fitness Center, that do not have the infrastructure necessary to support cameras are able to be monitored to determine if there is parking availability.
+The purpose of the ground based sensor subsystem is to be able to detect a car/pickup truck's presence at a designated entrance/exit of a parking lot and determine whether the car/pickup truck (vehicle) is entering a parking lot or leaving a parking lot.  By using inductive loops instead of cameras for detecting vehicles at entrances/exits, parking lots that do not have the infrastructure necessary to support cameras are able to be monitored to determine if there is parking availability.
 # Constraints
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
