@@ -54,7 +54,6 @@ The last IEEE SECON Hardware competition arena with a line was in 2021. A small 
 </p>
 
 If the sensor cannot detect the line in reference to the background (meaning the line is bigger than the sensor), then there will never be a continuous movement after the robot gets off center or the line curves. The sensor readings will cause the robot to go back and forth from one side of the line to the other.
->>>>>>> Stashed changes
 
 ### Sensor Schematics
 <p align = "center">
