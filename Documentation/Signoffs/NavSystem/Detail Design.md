@@ -20,13 +20,32 @@ The image below shows the sensor array that will be used in the construction of 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Array.jpg)
 
-The sensor array will be connected to the main controller in order to recieve power and transmit the I2C data from the sensor to the main controller. It needs between 25mA and 180mA to operate, depending on the distance from the surfacce it will be sensing. This sensor array will be operating at 100mA to ensure it can sense the surface without the sensor dragging on the ground during the robot's traversal of the course. The image below shows how the IR sensor array will be connected to the power supply for the robot.
+The following shows a numbered image of the sensor array. It is followed by a description of each number and its function.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20Power%20Connection.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor_Overview_numbers.png)
 
-The following image shows how the sensor array is connected to the main controller. The main controller in this schematic is a stand in, as the precise controller has not yet been designed.
+| Number | Name | Description |
+|--------|------|-------------|
+| 1. | IR Brightness Control and Indicator | The potentiometer controls the strength of the IR LEDs, and the IR PWR LED shows that strength as a brightness level. The brighter the LED the more IR is emitted. |
+| 2. | Polarity Marking | Shows the polarity of the movement of the line across the sensor. |
+| 3. | Robot Vision Indicators | Light up when the IR sensors are outputting high. |
+| 4. | Digital Interface | Has 4 pins. 5 Volts in, ground, I2C data out, I2C Clock in. These are connected directly to the main controller. |
+| 5. | I2C Pull Option Jumper | Defaulted to 3.3 V pull-up, can be changhed to 5V if needed |
+| 6. | Mounting Holes | General Purpose mounting holes |
+| 7. | IR Transducers | These emit and detect IR radiation |
+| 8. | I2C Address Selsection | Jumpers to be set in accordance with the following table to set the desired outpur address. |
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20to%20MC%20Connections.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/I2C%20Address%20Table.png)
+
+
+
+The sensor array will be connected to the main controller in order to recieve power and transmit the I2C data from the sensor to the main controller. It needs between 25mA and 180mA to operate, depending on the distance from the surfacce it will be sensing. This sensor array will be operating at 100mA to ensure it can sense the surface without the sensor dragging on the ground during the robot's traversal of the course. The image below shows how the IR sensor array will be connected to the power supply for the robot. The following image shows how the sensor array is connected to the main controller. The main controller in this schematic is a stand in, as the precise controller has not yet been designed.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20to%20MC%20Connections%202.png)
+
+The following shows the connection of the sensor array to a potential controller. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Array%20Connections.jpg)
 
 The following is a 3D model of where the sensor package will go on the robot. The sensor array is shown as the purple block on the underside of the robot chassis. The main controller is shown as the blue block, and the power system is the green block. The red wires are the main voltage supply, supplying 5 Volts to the sensor array, and the black wires are the ground connections. The yellow wire is the I2C data cable and the pink wire is the I2C clock data. 
 
