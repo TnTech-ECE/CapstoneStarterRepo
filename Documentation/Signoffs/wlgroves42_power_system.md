@@ -107,32 +107,3 @@ For the TS472 the PSSR observed at a supply voltage of 5 V and a bus ripple of 2
 ## References
 
 
-[1] Sweetwater, “Wall wart,” inSync, 10-Jun-1998. [Online]. Available: https://www.sweetwater.com/insync/wall-wart/. [Accessed: 16-Apr-2023]. 
-
-[2] Amazon.com: Chanzon 12V 1.5a UL listed 18w AC DC switching power supply ... (n.d.-b). https://www.amazon.com/Chanzon-Switching-100-240V-Transformer-Security/dp/B07G12L4SC 
-
-[3] Amazon.com: #10Gtek# Buck Converter Step Down Module LM2596 DC to DC ... (n.d.-a). https://www.amazon.com/10Gtek-Voltage-Regulator-Converter-Step-Down/dp/B09LCNVB22 
-
-[4] LM2596S adjustable DC-DC step-down module. ProtoSupplies. (2023, March 19). https://protosupplies.com/product/lm2596s-adjustable-dc-dc-step-down-module/ 
-
-
-
-[5] “TS472,” STMicroelectronics, https://www.st.com/en/audio-ics/ts472.html [Accessed: 31-Aug-2023].
-
-[6] "LM741," Texas Instruments, https://www.ti.com/product/LM741?qgpn=lm741 [Accessed: 31-Aug-2023]
-
-[7] “CMA-4544PF-W: Digi-Key Electronics,” Digikey, https://www.digikey.com/en/products/detail/cui-devices/CMA-4544PF-W/1869981 [Accessed: 9-Sept-2023].
-
-[8] Sure Electronics, "AA-AB32231 2x8W 1x16W at 4 Ohm TPA3110 Class D Audio Amplifier Board" AA-AB32231 datasheet, 2011, (https://www.parts-express.com/pedocs/manuals/320-329--aa-ab32231-1-or-2-channel-configurable-16w-amp-board.pdf) (accessed September 9th, 2023).
-
-[9] Installation, C. H. (2023, August 25). How do you balance performance, reliability, and cost when installing a power supply?. How to Install a Power Supply: Tips on Wattage, Efficiency, and Quality. https://www.linkedin.com/advice/0/how-do-you-balance-performance-reliability
-
-[10] ONSEMI. (n.d.). LM2596 - 3.0 A, step-down switching regulator . LM2596 Datasheet. https://www.onsemi.com/pdf/datasheet/lm2596-d.pdf 
-
-[11] Schmalztech double sided Enig protoboard, solderable breadboard ... (n.d.). https://www.amazon.com/SchmalzTech-Protoboard-Solderable-Breadboard-Electronic/dp/B0C3YYG6CV 
-
-[12] https://www.ti.com/lit/ds/symlink/lm2596.pdf?ts=1696038261274&ref_url=https%253A%252F%252Fwww.google.com%252F
-
-[13] https://www.mouser.com/datasheet/2/609/1529fb-3123515.pdf
-
-[14] https://www.ti.com/lit/an/slyt202/slyt202.pdf
