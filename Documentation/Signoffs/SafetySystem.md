@@ -20,7 +20,7 @@ In order to avoid any sort of explosion or uncontrolled fire, pressure and tempe
 Failure of the safety system can be minimized by creating redundancies in the system. Redundancies will be created by including 2 relay contacts for each componant in the safety system.
 
 <sup>4</sup>
-Halting gas production when there is no flame present wnsures that there is no gas lingering in the system. This eleminates any hazard when the machine is not being used.
+Halting gas production when there is no flame present ensures that there is no gas lingering in the system. This eleminates any hazard when the machine is not being used.
 
 ## Buildable Schematic
 
