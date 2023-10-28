@@ -173,6 +173,25 @@ The purpose of the ground based sensor subsystem is to be able to detect a car/p
 
 </td></tr> </table>
 
+<table>
+<tr><th>Table 1: Pin Connections for Diablo DSP-21 Vehicle Detector</th></tr>
+
+| Pin | Function                      |
+|-----|-------------------------------|
+| 1   | VDC+                          |
+| 2   | VDC Common                    |
+| 3   | Channel 2 Relay Common        |
+| 4   | Earth Ground                  |
+| 5   | Channel 1 Relay Common        |
+| 6   | Channel 1 Relay Normally Open |
+| 7   | Channel 1 Loop                |
+| 8   | Channel 1 Loop                |
+| 9   | Channel 2 Loop                |
+| 10  | Channel 2 Loop                |
+| 11  | Channel 2 Relay Normally Open |
+
+
+</td></tr> </table>
 
 
 # Analysis
@@ -183,11 +202,12 @@ The subsystem will be powered through the 11 Pin Harness connection found in Fig
 
 ## Vehicle Detection
 
-The Diablo DSP-21 Vehicle Detector is capable of detecting vehicles through an inductive loop by sending pulses through the loop.  The pulse output has a 300 millisecond (ms) period ± 10 ms with 150 ms ± 10 ms on and 150 ms ± 10 ms off before the next pulse is sent through the loops.  The response time for the detector is 150 ms ± 25 ms and can hold a vehicle for up to one hour in the loop and still detect the vehicle<sup>6</sup>.
+The Diablo DSP-21 Vehicle Detector, found in Figure 1. Diablo DSP-21 Vehicle Detector with 11 Pin Harness, is displayed with both the front side and back side of the detector unit with the 11 Pin Harness Connection that connects the detector to the loops and other necessary equipment.  The 11 Pin Harness Connection is displayed upside down; however, the pins of the 11 Pin Harness are labeled to where each pin of the detector will be connected.  With two loops being connected to the detector, one for the loop closest to the road between Brown Hall and the Lab Science Commons building and the second loop closest to the Engineering Quad Parking lot between the buildings, they are connected to the pins on the harness that are directly connected to the detector.  The connections to the detector are 
+is capable of detecting vehicles through an inductive loop by sending pulses through the loop.  The pulse output has a 300 millisecond (ms) period ± 10 ms with 150 ms ± 10 ms on and 150 ms ± 10 ms off before the next pulse is sent through the loops.  The response time for the detector is 150 ms ± 25 ms and can hold a vehicle for up to one hour in the loop and still detect the vehicle<sup>6</sup>.
 
 ## Inductive Loop Detection Range
 
-For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H with a detection height of 3.2 ft (approximately 38" height)<sup>7</sup>.  This size works well for the two entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
+For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H with a detection height of 3.2 ft (approximately 38" height)<sup>7</sup>.  This size works well for the two entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  The detection height (detection range) is set to a height of 3.2 ft to ensure all vehicles are detected when entering through the inductive loops.  Though the ground clearance for many vehicles today is less than 2 ft, many vehicle owners (particularly truck owners) tend to increase the ground clearance of their vehicles for by installing lift kits for offroad purposes or other reasons.  To ensure all vehicles, including lifted trucks, are able to be detected when entering/exiting a lot, the detection height of the loop will be set to 3.2 ft using a 4 ft. by 6 ft. loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
 
 ```math
 L = (P/4) * (N + N^2);
