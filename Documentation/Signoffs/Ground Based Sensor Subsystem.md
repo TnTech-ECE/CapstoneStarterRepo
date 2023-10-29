@@ -18,7 +18,7 @@ The purpose of the ground based sensor subsystem is to be able to detect a car/p
 
 # Buildable Schematic
 
-![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/6271e60c-188e-4550-a5a0-9ff182f9266d)
+![DSP-21 Vehicle Detector with 11 Pin Harness](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/9ba1824e-b24a-454e-b036-9b07122beaf1)
 
 
 
