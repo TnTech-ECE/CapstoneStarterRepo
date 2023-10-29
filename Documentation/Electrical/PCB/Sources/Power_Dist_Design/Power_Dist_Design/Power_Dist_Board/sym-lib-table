@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "TPS565201DDCR")(type "KiCad")(uri "${KIPRJMOD}/Component_Lib/TPS565201/TPS565201DDCR.kicad_sym")(options "")(descr ""))
+  (lib (name "RB070MM")(type "KiCad")(uri "${KIPRJMOD}/Component_Lib/RB070MM_30TR/2023-10-29_05-00-17.kicad_sym")(options "")(descr ""))
 )
