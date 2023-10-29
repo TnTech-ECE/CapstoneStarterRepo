@@ -23,7 +23,7 @@ The goal of the system is to read the sensor values, compute the efficiency of t
 <sup>4</sup> In order for the system to be accessible to the most amount of people the interface needs to be able to be easily understood.
 
 ## Buildable Schematic
-
+<img src="/Documentation/Images/Controller_System/Buildable_Schematics/Controller_System_Schematic.png" width="40%" height="40%">
 
 
 ## Analysis
