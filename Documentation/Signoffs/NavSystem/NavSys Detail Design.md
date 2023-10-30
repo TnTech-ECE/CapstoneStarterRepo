@@ -13,6 +13,7 @@ The navigation system will use an array of infrared sensors to detect the yellow
 | 4. Color Sensing | The array must detect the yellow line against the black background | Competition Specifications |
 | 5. Height From Ground | The array must be within 1/2 inch from the line it is detecting | Sensor Specifications |
 | 6. Perpindicular Line Sensing | The array must be able to detect the white line at the start of the crater | Competition Specifications |
+| 7. Placement on Chassis | The array must be in the center of the front of the chassis of the robot | Sensor Specifications |
 
 ## Buildable Schematic
 
@@ -63,7 +64,7 @@ The sensor array must have two sensors detecting the yellow line when it is cent
 
 Constraint 3 Solution:
 
-The senor must be smapled at a frewuency of at least 20Hz. The sensor array has a sampling frequency of 4kHz, ensurring that when the micro controller accesses it it will have refreshed and have new information avaliable. This can be seen on the installation guide provided with the sensor array.
+The senor must be smapled at a frewuency of at least 20Hz. The sensor array has a sampling frequency of 4kHz, ensurring that when the micro controller accesses it it will have refreshed and have new information avaliable. This can be seen on the installation guide provided with the sensor array. The 20 Hz is sufficient because the drive train will not be able to adjust the robots position quicker than that, so the microcontroller is not overloaded with data from the sensor.
 
 Constraint 4 Solution:
 
@@ -78,6 +79,10 @@ The array must be within 1/2 inch of the yellow line. In order for the sensor ar
 Constraint 6 Solution:
 
 The array must be able to detect the white perpidicular line at the start and end of the crater. This is accomplished becaues the entire array will output a low signal on the white colored line. Having all the sensors output low will signal the main controller that a white line has been reached.
+
+Constraint 7 Solution:
+
+The sensor must be in the center of the front of the chassis of the robot. This is to ensure that the robot stays centered over the yellow line whilst moving along the course. This is accomplised by having the sensor array 4 inches from each side of the robot chassis.
 
 ## BOM
 
