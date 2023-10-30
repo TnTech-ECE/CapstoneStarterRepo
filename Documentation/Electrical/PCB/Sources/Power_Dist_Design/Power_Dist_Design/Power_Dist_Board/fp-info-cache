@@ -1,4 +1,4 @@
-20882206717428423
+20883905360709609
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -77328,6 +77328,13 @@ Molex_Screw_Term_0397730002
 0
 2
 2
+Power_Dist
+Pwr_Rail_Conn_Custom
+
+
+0
+41
+1
 Power_Dist
 TPS565201
 
