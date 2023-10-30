@@ -7,8 +7,6 @@ Figure 1: Start Sensor Block Diagram
 
 The Start Sensor System plays a pivotal role in launching the robot's predefined course. It employs an RGB color sensor programmed to identify a green LED, which marks the beginning of the robot's journey. Upon powering the sensor, if it detects the specified green color, it promptly communicates this information to the Main Controller. 
 
-The Main Controller, in response to this input, triggers the Start State, setting the robot in motion to carry out its designated tasks for the duration of the mission. This careful choreography ensures that the robot remains inactive until it detects the crucial green signal, guaranteeing a deliberate and controlled start. 
-
 To ensure operational robustness and mitigate the risk of sensor malfunction, a fail-safe option is in place. This involves a manual button that can be pressed in the event of sensor failure or unexpected issues. This redundancy enhances the robot's reliability and resilience in practical applications.
 
 
