@@ -5,22 +5,23 @@
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Start%20Block%20Diagram.png)
 Figure 1: Start Sensor Block Diagram
 
-The Start Sensor System serves as the critical initiation mechanism for the robot, effectively kickstarting its traversal along the predefined course. This pivotal system harnesses the capabilities of an RGB color sensor, programmed to recognize the presence of a green LED that signals the beginning of the run. When the sensor is powered via the power system and then detects its specific color, it promptly communicates this information to the Main Controller. 
+The Start Sensor System plays a pivotal role in launching the robot's predefined course. It employs an RGB color sensor programmed to identify a green LED, which marks the beginning of the robot's journey. Upon powering the sensor, if it detects the specified green color, it promptly communicates this information to the Main Controller. 
 
-The Main Controller, acting upon this input, will then activate the Start State, setting the robot in motion to fulfill its intended tasks for the rest of the run. This elegant choreography ensures that the robot remains stationary and inert until the requisite green signal is identified. 
+The Main Controller, in response to this input, triggers the Start State, setting the robot in motion to carry out its designated tasks for the duration of the mission. This careful choreography ensures that the robot remains inactive until it detects the crucial green signal, guaranteeing a deliberate and controlled start. 
 
-To safeguard against any potential hiccups or sensor malfunctions, a contingency plan is in place. A fail-safe option has been incorporated: a manual button that can be pressed if the sensor fails to perform as expected. These two input sources are connected via an OR Gate, ensuring that the robot can commence its operation seamlessly either when the RGB sensor detects green light or when the manual button is engaged. This redundancy increases the robot's reliability and resilience in real-world applications.
+To ensure operational robustness and mitigate the risk of sensor malfunction, a fail-safe option is in place. This involves a manual button that can be pressed in the event of sensor failure or unexpected issues. This redundancy enhances the robot's reliability and resilience in practical applications.
+
 
 ## Constraints and Standards
 
 | Number | Constraint Description | Origin |
 |--------|------------------------|--------|
 | 1. | The RGB Sensor shall detect a spectrum of green light from an LED | Competition Specifications |
-| 2. | The RGB Sensor shall consider at least 4.0V as a HIGH signal and anything lower than 4.0V as a LOW signal | Sensor Specifications |
+| 2. | The RGB Sensor will treat any voltage at or above 4.0V as a HIGH signal and anything below 4.0V as a LOW signal. | Sensor Specifications |
 | 3. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
-| 4. | The RGB Sensor shall be located in a height in range of the Green Light LED location | Competition and Sensor Specifications |
-| 5. | The RGB Sensor shall be located in a close in a length range of the Green Light LED location | Competition and Sensor Specifications |
-| 6. | The RGB Sensor shall be located in within a width in range of the Green Light LED location | Competition and Sensor Specifications |
+| 4. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
+| 5. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
+| 6. | The RGB Sensor shall be located in a width range around around 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
 
 ## Buildable Schematic
 
