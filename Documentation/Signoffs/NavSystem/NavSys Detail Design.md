@@ -41,7 +41,7 @@ The following shows a numbered image of the sensor array. It is followed by a de
 
 The sensor array will be connected to the main controller in order to recieve power and transmit the I2C data from the sensor to the main controller. It needs between 25mA and 180mA to operate, depending on the distance from the surfacce it will be sensing. This sensor array will be operating at 100mA to ensure it can sense the surface without the sensor dragging on the ground during the robot's traversal of the course. The image below shows how the IR sensor array will be connected to the power supply for the robot. The following image shows how the sensor array is connected to the main controller. The main controller in this schematic is a stand in, as the precise controller has not yet been designed.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20to%20MC%20Connections%202.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/IR%20to%20MC%20Connections%20KiCad.png)
 
 The following shows the connection of the sensor array to a potential controller. 
 
