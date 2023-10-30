@@ -5,7 +5,7 @@
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Start%20Block%20Diagram.png)
 Figure 1: Start Sensor Block Diagram
 
-The Start Sensor System plays a pivotal role in launching the robot's predefined course. It employs an RGB color sensor programmed to identify a green LED, which marks the beginning of the robot's journey. Upon powering the sensor, if it detects the specified green color, it promptly communicates this information to the Main Controller. 
+The Start Sensor System plays a pivotal role in launching the robot's predefined course. It employs an RGB color sensor programmed to identify a green LED, which marks the beginning of the robot's journey. Upon powering the sensor, if it detects the specified green color, it promptly communicates this information to the Main Controller, triggering the start state.
 
 To ensure operational robustness and mitigate the risk of sensor malfunction, a fail-safe option is in place. This involves a manual button that can be pressed in the event of sensor failure or unexpected issues. This redundancy enhances the robot's reliability and resilience in practical applications.
 
@@ -15,7 +15,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 | Number | Constraint Description | Origin |
 |--------|------------------------|--------|
 | 1. | The RGB Sensor shall detect a spectrum of green light from an LED | Competition Specifications |
-| 2. | The RGB Sensor will treat any voltage at or above 4.0V as a HIGH signal and anything below 4.0V as a LOW signal. | Sensor Specifications |
+| 2. | The RGB Sensor shall have an input of 4V to properly output | Sensor Specifications |
 | 3. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
 | 4. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
 | 5. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
