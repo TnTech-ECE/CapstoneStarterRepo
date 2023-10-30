@@ -23,7 +23,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 
 ## Buildable Schematic
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Wiring%20Diagram.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/StartSensorDiagram.png)
 Figure 2. Wiring Diagram for Start Sensor
 
 The APDS-9960 is a digital RGB, ambient light, proximity, and gesture sensor that operates through I2C communication. 
