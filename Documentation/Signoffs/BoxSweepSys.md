@@ -9,6 +9,7 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 ## Constraints of Subsystem
 | Constraint no. | Description | Origin|
 |----------------|-------------|-------|
+| 1. | The ruler, flexible skirt, and motor controller shall be either recycled parts or shared with another system to lessen the environmental impact of the robot. | Ethical Considerations |
 
 ## Buildable Schematic of Subsystem
 
