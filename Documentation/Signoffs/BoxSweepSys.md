@@ -1,4 +1,4 @@
-# Box Sweep Mechanism Detail Design
+ # Box Sweep Mechanism Detail Design
 ## Functionality of Subsystem
 ![BoxSweepBlock](https://github.com/cebttu/CapstoneTeam1/assets/100803345/013c3d94-bfd4-413d-9479-0ceecd064bfe)
 <br /> Figure 1: Box Sweep Block Diagram
@@ -17,7 +17,9 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 ## BOM of Subsystem 
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
-| Ruler | Will act as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
+| Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
+| Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
+| Motor controller | Controls the DC motor | Box Sweep | pull from push | '' | 1 | Shared with Push Button Subsystem | Shared with Push Button Subsystem |
 
 Servo
 -rotate both ways
