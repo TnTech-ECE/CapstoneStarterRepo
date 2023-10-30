@@ -9,7 +9,9 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 ## Constraints of Subsystem
 | Constraint no. | Description | Origin|
 |----------------|-------------|-------|
-| 1. | The ruler, flexible skirt, and motor controller shall be either recycled parts or shared with another system to lessen the environmental impact of the robot. | Ethical Considerations |
+| 1. | The ruler and flexible skirt shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
+| 2. | The motor driver shall be shared with the Push Button Subsystem to lessen the environmental impact of the robot. | Ethical Considerations |
+
 
 ## Buildable Schematic of Subsystem
 
@@ -19,8 +21,8 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Motor controller | Controls the DC motor | Box Sweep | pull from push | '' | 1 | Shared with Push Button Subsystem | Shared with Push Button Subsystem |
+| Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
+| Motor driver | Controls the DC motor | Box Sweep | L298N | ??? | 1 | Shared with Push Button Subsystem | Shared with Push Button Subsystem |
 
 Servo
 -rotate both ways
