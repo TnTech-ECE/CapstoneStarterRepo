@@ -3,6 +3,14 @@
 ![BoxSweepBlock](https://github.com/cebttu/CapstoneTeam1/assets/100803345/013c3d94-bfd4-413d-9479-0ceecd064bfe)
 <br /> Figure 1: Box Sweep Block Diagram
 
+## Constraints of Subsystem
+
+## Buildable Schematic of Subsystem
+
+## Analysis of Subsystem
+
+## BOM of Subsystem 
+
 Servo
 -rotate both ways
 -slowly
