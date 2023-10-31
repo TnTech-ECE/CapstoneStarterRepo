@@ -32,7 +32,7 @@ The purpose of the ground based sensor subsystem is to be able to detect a car/p
 
 
 
-*Figure 2. Inductive Loop Sensor *
+*Figure 2. Inductive Loop Sensor*
 
 
 ![Engineering Quad Parking Lot](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/7092a0db-ef98-40c4-a551-a04b3f10b1df)
