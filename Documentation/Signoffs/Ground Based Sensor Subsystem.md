@@ -33,14 +33,13 @@ The purpose of the ground based sensor subsystem is to be able to detect a car/p
 
 
 
-
 *Figure 2. Inductive Loop Sensor *
 
 
 ![Engineering Quad Parking Lot](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/7092a0db-ef98-40c4-a551-a04b3f10b1df)
 
 
-*Figure 4. Engineering Quad Parking Lot*
+*Figure 3. Engineering Quad Parking Lot*
 
 
 <table>
@@ -209,10 +208,7 @@ The Diablo DSP-21 Vehicle Detector, found in Figure 1. Diablo DSP-21 Vehicle Det
 
 ## Inductive Loop Detection Range
 
-  For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop, found in Figures 2 and 3, has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  For Figure 2. Inductive Loop Sensor 1, the dimensions of the loop are given.  The length of the loop will be 48 in. long but to avoid damaging the wires at the 90° turns of the rectangle, the loops will be turning at 45° (135°) angles.  This will create a loop that is shaped as an octagon instead of a rectangle.  The length of the wire between the 45° (135°) turns will be 17 in. long.
-
-  
-  This will allow the loop to follow the recommended loop sizes chart (found under References section, Reference #7) that will be a length of 48 in. (4 ft.) by 72 in. (6 ft.).  At the connections of the loop ( labeled as "Pin #7, 8, 9, or 10 of the 11 Pin Harness), the numbers are used to specify exactly where each connection needs to be placed on the 11 Pin Harness for the system to function properly.  To handle the necessary current that will be provided from the detector while also having protection for the copper wire inside the insulation, 14 AWG gauge wire will be the used for the loops.  For each lead-in connection, a range of 17.5 ft. to 34.5 ft of wire will be necessary to ensure that the Diablo DSP-21 is safely located away from the road and sidewalks.  After completing the loops and adding the necessary length of wire for each lead-in connection, the system will need a total of 92.5 ft to 109.5 ft. of wire to detect vehicles through the inductive loops and connect the loops to the detector unit.  For this system to give an accurate number of the available parking spots in the Engineering Quad parking lot, a total of four loops will be needed with two at one entrance/exit and two more at the second entrance/exit.  This parking lot will require a total of 280 ft. of wire to give an accurate number of the amount of available parking spots in the lot.
+  For the loop to work correctly with the Diablo DSP-21 Vehicle Detector, the loop, found in Figure 2, has to fit both the size requirements for the detector while also being a reasonable size to detect vehicles entering the Engineering Quad parking lot.  For Figure 2. Inductive Loop Sensor 1, the dimensions of the loop are given.  The length of the loop will be 48 in. long but to avoid damaging the wires at the 90° turns of the rectangle, the loops will be turning at 45° (135°) angles.  This will create a loop that is shaped as an octagon instead of a rectangle.  The length of the wire between the 45° (135°) turns will be 17 in. long.  This will allow the loop to follow the recommended loop sizes chart (found under References section, Reference #7) that will be a length of 48 in. (4 ft.) by 72 in. (6 ft.).  At the connections of the loop ( labeled as "Pin #7, 8, 9, or 10 of the 11 Pin Harness), the numbers are used to specify exactly where each connection needs to be placed on the 11 Pin Harness for the system to function properly.  To handle the necessary current that will be provided from the detector while also having protection for the copper wire inside the insulation, 14 AWG gauge wire will be the used for the loops.  For each lead-in connection, a range of 17.5 ft. to 34.5 ft of wire will be necessary to ensure that the Diablo DSP-21 is safely located away from the road and sidewalks.  After completing the loops and adding the necessary length of wire for each lead-in connection, the system will need a total of 92.5 ft to 109.5 ft. of wire to detect vehicles through the inductive loops and connect the loops to the detector unit.  For this system to give an accurate number of the available parking spots in the Engineering Quad parking lot, a total of four loops will be needed with two at one entrance/exit and two more at the second entrance/exit.  This parking lot will require a total of 385 ft. of wire (this includes both the single strand wire length of 285 ft. to create the four inductive loops and the jacketed two conductor wire length of 100 ft. for the lead-in connections to the detector) to give an accurate number of the amount of available parking spots in the lot.
 
   According to the Loop Size chart, using a 4 ft. by 6 ft. size inductive loop with 4 turns will provide an inductance value of 100 &mu;H with a detection height of 3.2 ft (approximately 38" height)<sup>7</sup>.  This size works well for the two entrances/exits of the Engineering Quad as it will be wide enough to detect vehicles that pass by it or pass over the loop in both lanes of traffic and long enough to be detected by the loop.  The detection height (detection range) is set to a height of 3.2 ft to ensure all vehicles are detected when entering through the inductive loops.  Though the ground clearance for many vehicles today is less than 2 ft, many vehicle owners (particularly truck owners) tend to increase the ground clearance of their vehicles for by installing lift kits for offroad purposes or other reasons.  To ensure all vehicles, including lifted trucks, are able to be detected when entering/exiting a lot, the detection height of the loop will be set to 3.2 ft using a 4 ft. by 6 ft. loop.  To ensure the detector would work function and count properly, both the loop inductance and lead-in inductance must be greater than or equal to a ratio of 2:1.  To calculate the loop inductance, the loop inductance formula must be used:
 
@@ -232,11 +228,11 @@ For the detector to work with the inductive loops, the detector will use an 11 P
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Diablo Controls Inc. DSP-21 Vehicle Detector | DSP-21-LV | 2 | $104.95 | $209.90 |
 | Diablo 11 Pin Harness | CBL-005 | 2 | $10.92 | $21.84 |
-| Kable Kontrol™ Drop Over Floor Cord Covers - 1 Channel - 60" L | FCC999-60-YELLOW | 32 | $27.99 | $895.68 |
+| 10FT Cord Cover Floor,Flexible Floor Cable Cover,Cord Hider Floor to Organize and Protect Wire,Floor Wire Covers Floor Cord Cover for Cords,for Home and Office (10ft, 5 Channel) | B09YLJS37F | 18 | $21.99 | $395.82 |
 | Unjacketed Wire<sup>*</sup> | 14 AWG | 285 ft. | $0.00 | $0.00 |
 | Wire Connections<sup>*</sup> | N/A | N/A | $0.00 | $0.00 |
 | Jacketed Wire, Two Conductor <sup>*</sup> | 14 AWG | 100 ft. | $0.00 | $0.00 |
-| Total | ----- | ----- | ----- | $1,127.42 |
+| Total | ----- | ----- | ----- | $627.56 |
 
 <sup>*</sup> These parts will be provided by the Department of Electrical and Computer Engineering at Tennessee Technological University.
 
