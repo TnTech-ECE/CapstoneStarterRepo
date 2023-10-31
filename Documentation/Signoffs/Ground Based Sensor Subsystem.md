@@ -28,17 +28,12 @@ The purpose of the ground based sensor subsystem is to be able to detect a car/p
 
 *Figure 1. Diablo DSP-21 Vehicle Detector with 11 Pin Harness*
 
-![Inductive Loop Sensor 1](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/ca2f981d-4199-4dca-9fcd-f613623c9c24)
+![Inductive Loop Sensor with Protection](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/c131ffab-b3a8-43a7-8885-81c752a32298)
 
 
 
-*Figure 2. Inductive Loop Sensor 1*
+*Figure 2. Inductive Loop Sensor *
 
-![Inductive Loop Sensor 2](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/1ad1ecc7-c28b-48e5-bd9c-469fadc493c7)
-
-
-
-*Figure 3. Inductive Loop Sensor 2*
 
 ![Engineering Quad Parking Lot](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/7092a0db-ef98-40c4-a551-a04b3f10b1df)
 
