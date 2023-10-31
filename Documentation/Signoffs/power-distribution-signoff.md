@@ -15,7 +15,7 @@ adaptable for different IEEE competition requirements.
 	+ This constraint is applicable to all subsystems of the robot platform in order to make the robot easily adaptable year to year. This in particular applies to the power distribution system by requiring that power connections should be easy to connect and disconnect.
 - C7:  The robot shall possess a single emergency stop button
 that is accessible and stops all robot movement without removing power to essential processors that is compliant with standard NFPA 79-10 [NFPA79].
-	+ The constraint is required by the IEEE hardware competition rules every year as a safety precaution and is followed by the power distribution system of the robot [IEEE].
+	+ The constraint is required by the IEEE hardware competition rules every year as a safety precaution and is followed by the power distribution system of the robot [IEEE123].
 - C8: The robot shall contain a power bus that is not inhibited by DC motor operation.
 	+ This constraint was made because DC motors can cause interference in the power buses of electronics by supplying a voltage pushing back on their power source, referred to as "back-EMF", inhibiting the function of the power rails for other components. Diode protection is used to prevent this.
 
@@ -42,7 +42,9 @@ Finally, the circuit design has fuses on each of the power rails to protect the 
 
 ## Analysis
 
-To ensure that the first constraint, that the power distribution system can supply adequate power and current to the other subsystems, is met the following analysis was done.
+### Adequate Power Supply
+
+To ensure that the first constraint is met, that the power distribution system can supply adequate power and current to the other subsystems, is met the following analysis was done.
 
 The current requirements were a very large constraint of the subsystem. The current requirements of each power rail are shown below.
 
@@ -57,7 +59,7 @@ The current requirements were a very large constraint of the subsystem. The curr
 \*The Jetson Nano current requirements depend on the supply method chosen. The Micro-USB connection was chosen in this case.
 
 
-#### 3.3 V Rail Current Requirements [sources]
+#### 3.3 V Rail Current Requirements [Compass][Accl]
 | Item | Part Number | Quantity | Max Current Draw (mA) | Item Current (mA) |
 | --- | --- | --- | --- | --- |
 | Compass| LIS3MDL | 1 | 0.27 | 0.27 |
@@ -65,7 +67,7 @@ The current requirements were a very large constraint of the subsystem. The curr
 | Total Current |  |  |  | 0.41 |
 
 
-#### 12 V Rail Current Requirements [sources]
+#### 12 V Rail Current Requirements [motor][driver]
 
 | Item | Part Number | Quantity | Max Current Draw (mA) | Item Current (mA) |
 | --- | --- | --- | --- | --- |
@@ -93,23 +95,49 @@ The layout of the printed circuit board is shown below. The layout is very heavi
 
 ![Power Distribution Printed Circuit Board Layout](./Images/power_dist_layout.png)
 
-To ensure that the power distribution system is "plug and play," the power rail connectors were designed such that most standard connectors will be compatible. The through-hole connectors for the 3.3 V, 5 V, and ground rails are spaced apart by 2.54 mm (0.1 in). This allows for screw terminals, female pin headers, and any other connectors that have a 2.54 mm connector pitch to be compatible. There are 82 through hole connectors for each of the three rails mentioned above 
+### Plug and Play
 
-e stop
+To ensure that the power distribution system is "plug-and-play," satisfying the second constraint, the power rail connectors were designed such that most standard connectors will be compatible. The through-hole connectors for the 3.3 V, 5 V, and ground rails are spaced apart by 2.54 mm (0.1 in) with a hole diameter of 1 mm. This allows for screw terminals, female pin headers, and any other connectors that have a 2.54 mm connector pitch to be compatible. There are 82 through hole connectors for each of the three rails mentioned above with a diameter of 1 mm. This allows for easy power connections that can allow for many components to be quickly connected and unconnected depending on the current power requirements.
 
-diode prot
+For the 12 V power rails there were less connectors put into place due to less components likely to require a 12 V rail in the future. Additionally, the higher current requirements typical of the 12 V rail require a higher-current connection. The screw terminals used for the motor connections allow for up to 10 A of current through them, far more than what would be being pulled by the motors used in any non-failure scenario [screw] [motor].
+
+There are still more than enough screw terminals for the base robot, allowing for additional motors and motor drivers to be driven by future designs through the extra screw terminals. 
+
+These measures taken for all of the power rails of the robot ensure that the power distribution system of the robot is as plug-and-play as possible.
+
+### Emergency Stop Button
+
+Another constraint laid out for this subsystem is that there is an emergency stop button that can be pressed at any time to cease all power supply to the motors but not to the sensors and computational components of the robot. This constraint comes from the IEEE hardware competition rules and the NFPA guidelines on machinery safety precautions [IEEE123] [NFPA79].
+
+To accomplish this a screw terminal was placed in series with the 12 V rail. This screw terminal is meant to be connected to an emergency stop button with each end of the SPST switch being connected to each connection on the two-connection screw terminal block.
+
+A screw terminal was chosen such that it would allow for adequate current to pass through normally, and could effectively stop current when the button is pressed. The IDEC NWAR-27 emergency stop button was chosen for this. This emergency stop button can adequately handle 10 A of current through it, and is a normally-closed button that will open the circuit when the button is pressed [button]. Once the button is pressed and the circuit opened, the button must be reset by pulling the button out again.
+
+This emergency stop button will cut all power from the motors when pressed, but leave the sensors and computers on the robot functional, fulfilling this requirement.
+
+### Diode Protection
+
+
+
+### Allowable Ampacities
+
+The final constraint requires that the circuit board traces fall within the allowable ampacities given by the NFPA standard. The allowable currents, trace widths, and other required values are calculated below using the stated NFPA 79-10 and IPC-2221 standards [NFPA79][IPC].
 
 Aside from the chip itself, the output current is limited by the narrowest trace on the output line from the chip. In the case of this board the narrowest trace bottle-necking the output current is the trace immediately connected to the SW pin because it is limited by the space between the chip's pins. All other traces that the output current passes through are wider than this trace and so can support more current. The maximum possible width of the trace connected to the SW pin is 0.5 mm.
 
-The IPC-2221 standard gives formulas and data to calculate the maximum current of this trace [IPC]. From Figure A and Figure B in Appendix B, the maximum current can be calculated based on the maximum required change in temperature. The maximum acceptable change in temperature can be found by looking at the transition temperature of the PCB laminate material FR4, the temperature at which the laminate will begin to degrade, and is around 110 degrees Celsius [NewCorr]. Because the transition temperature of FR4 is so much lower than the melting point of copper (1083 Celsius), the FR4 transition temperature is the upper bound on trace temperature to limit the current through the trace.
+The IPC-2221 standard gives formulas and data to calculate the maximum current of this trace [IPC]. From Figure A and Figure B in Appendix B, the maximum current can be calculated based on the maximum required change in temperature. The maximum acceptable change in temperature can be found by looking at the transition temperature of the PCB laminate material FR4, the temperature at which the laminate will begin to degrade, and is around 110 degrees Celsius [NewCorr]. Because the transition temperature of FR4 is so much lower than the melting point of copper (1083 Celsius), the FR4 transition temperature is the upper bound on trace temperature to limit the current through the trace [melt].
 
-To find the maximum current of the trace, the cross section needs to be found, which requires the width and thickness of the trace. The width is limited to 0.5 mm. Thickness of PCB copper traces is often given in oz/ft^2, which is the weight in oz of the copper used in a trace if it were rolled into a square-foot area [copper]. To allow for higher current, 2 oz/ft^2 was chosen instead of the default option of 1 oz/ft^2. Using Figure B of Appendix B of the IPC-2221 standard after converting the trace width to inches, the cross section of the trace is about 50 square-mils.
+To find the maximum current of the trace, the cross section needs to be found, which requires the width and thickness of the trace. The width is limited to 0.5 mm. Thickness of PCB copper traces is often given in oz/ft^2, which is the thickness of that weight of copper if it were rolled into a square-foot area [copper]. To allow for higher current, 2 oz/ft^2 was chosen instead of the default option of 1 oz/ft^2. Using Figure B of Appendix B of the IPC-2221 standard after converting the trace width to inches, the cross section of the trace is about 50 square-mils.
 
 To then find the maximum allowable current, Figure A is used [IPC]. Assuming that the trace begins at a room temperature of 25 Celsius and that the maximum allowable temperature is 110 Celsius, this yields a maximum change in temperature of 85 degrees Celsius. Using the graph, this yields a maximum current a little over 6 Amps. For more precise calculations, the FR4 source references earlier provides the formula for calculating max current in equation (1) [NewCorr]. When the aforementioned values are used in this formula, a maximum current of 6.28 A is calculated.
 
 Because this current limit is higher than the output current limit of the voltage regulator chips, the trace will not fail within the normal operating parameters of the voltage regulator. To further prevent failures from occurring in the case of a sudden increase in current, a 6 A fuse is placed on the 3.3 V and 5 V rails near the output from the chip so that the fuse will blow before the trace can sustain any damage.
 
 A similar method is used for calculating the maximum supportable current of the 12 V rail. The narrowest trace of the 12 V rail is 1.25 mm wide. Using Figure B from Appendix B in the IPC-2221 standard document after converting the width to inches, the cross section in square-mils is about 125 square-mils [IPC]. Using the same formula given in the FR4 source document, the maximum current given an 85 degree Celsius change in temperature from room temperature is 11.7 A [NewCorr]. To prevent damage to the conductor, a 10 A fuse is inserted at the beginning of the 12 V rail so that the fuse will blow before the 12 V rail trace can sustain damage.
+
+Finally, the screw terminals used for connecting the motors to the 12 V power rail can supply up to 10 A safely [screw]. This indicates that all parts of the 12 V power supply can support the high amounts of current that may be required of it.
+
+The above calculations ensure that the components and traces used on the printed circuit board are within the acceptable value range. This shows that the fifth and final constraint is met by this design.
 
 ## BOM 
 
@@ -134,3 +162,48 @@ A similar method is used for calculating the maximum supportable current of the 
 
 ## References
 
+[NFPA79] “NFPA 79: Electrical Standard for Industrial Machinery.” [Online]. Available: https://link.nfpa.org/free-access/publications/79/2021
+
+[IEEE1] “IEEE SOUTHEASTCON 2024 STUDENT HARDWARE COMPETITION RULES Version 5.6,” Sep. 2023. [Online]. Available: https://ieeesoutheastcon.org/wp-content/uploads/sites/497/SEC24-HW-Competition V5.6-1.pdf
+
+[IEEE2] “IEEE SoutheastCon 2023 Hardware Competition Rules,”
+Oct. 2022. [Online]. Available: https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/blob/main/Documentation/Background%20DocumentsIEEE%20SoutheastCon%202023%20Hardware%20Competition%20Rules%20v3.0.pdf
+
+[IEEE3] “IEEE SoutheastCon 2022 Hardware Competition Rules,”
+Mar. 2021. [Online]. Available: https://github.com/lchapman42/Control-Sensing-Wireless-Charging-Robot/tree/main/Documentation
+
+[TPS565201] “TPS565201 4.5-V to 17-V Input, 5-A Synchronous Step-Down Voltage Regulator.” Texas Instruments, Sep. 2017. Accessed: Oct. 31, 2023. [Online]. Available: https://www.ti.com/lit/ds/symlink/tps565201.pdf?ts=1698731666929
+
+[NFPAamp] “Using the National Electrical Code® (NEC ®) Ampacity Charts,” May
+2021. [Online]. Available: https://www.nfpa.org/∼/media/Files/Code%
+20or%20topic%20fact%20sheets/NECAmpacityWorkflow.pdf
+
+[QTR-8RC] “Pololu - QTR-8RC Reflectance Sensor Array.” Accessed: Oct. 31, 2023. [Online]. Available: https://www.pololu.com/product/961
+
+[SKU 1010] “Grove - Ultrasonic Distance Sensor.” Accessed: Oct. 31, 2023. [Online]. Available: https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html
+
+[JetsonNano] “Jetson Nano Datasheet.” Nvidia, 2014. Accessed: Oct. 31, 2023. [Online]. Available: https://developer.download.nvidia.com/assets/embedded/secure/jetson/Nano/docs/JetsonNano_DataSheet_DS09366001v1.1.pdf?e_BpiWXSa7FdCNNMUERS1XuHOk9lwmKijVR7Lqo5nsTQqOnZohl7_A4Zg9ZMz9lxl6D-4aex58LQB2d3OlEs-g7Mu5a02EXZxYgwU_7Vtu-b9tGgiqLPXcAONdN0IpmmVgJYJRYoL63dp5wIb7uvGYchxxc5bLfxdyYFNBUTIuZ3y5ZG-9z4YzOx-w6xrg==
+
+[Compass] “LIS3MDL - Digital output magnetic sensor : ultra-low-power, high-performance 3-axis magnetometer - STMicroelectronics.” STMicroelectronics, May 2017. Accessed: Oct. 31, 2023. [Online]. Available: https://www.st.com/en/mems-and-sensors/lis3mdl.html
+
+[Accl] “ADXL345 Datasheet and Product Info | Analog Devices.” Analog Devices. Accessed: Oct. 31, 2023. [Online]. Available: https://www.analog.com/en/products/adxl345.html
+
+[motor] “Pololu - 150:1 Metal Gearmotor 37Dx73L mm 12V with 64 CPR Encoder (Helical Pinion),” Polulu. Accessed: Oct. 31, 2023. [Online]. Available: https://www.pololu.com/product/2828/specs
+
+[driver] “Dual full-bridge driver.” STMicroelectronics. [Online]. Available: https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf
+
+[TPSSPICE] “TPS565201 data sheet, product information and support | TI.com,” Texas Instruments. Accessed: Oct. 31, 2023. [Online]. Available: https://www.ti.com/product/TPS565201
+
+[batteryds] “LIS3MDL - Digital output magnetic sensor : ultra-low-power, high-performance 3-axis magnetometer - STMicroelectronics.” STMicroelectronics, May 2017. Accessed: Oct. 31, 2023. [Online]. Available: https://www.st.com/en/mems-and-sensors/lis3mdl.html
+
+[ESTOP] “TW Series — 22mm NEMA Style Pushbuttons.” IDEC. Accessed: Oct. 31, 2023. [Online]. Available: https://www.mouser.com/datasheet/2/650/idec_TWSeries-1894031.pdf
+
+[Diode] “RB070MM-30 Schottky Barrier Diode.” ROHM Semiconductor, 2017. Accessed: Oct. 31, 2023. [Online]. Available: https://fscdn.rohm.com/en/products/databook/datasheet/discrete/diode/schottky_barrier/rb070mm-30tr-e.pdf
+
+[IPC] “IPC-2221A Generic Standard on Printed Board Design.” IPC, May 2003. [Online]. Available: https://www-eng.lbl.gov/~shuman/NEXT/CURRENT_DESIGN/TP/MATERIALS/IPC-2221A(L).pdf
+
+[NewCorr] J. Adam, “New correlations between electrical current and temperature rise in PCB traces,” in Twentieth Annual IEEE Semiconductor Thermal Measurement and Management Symposium (IEEE Cat. No.04CH37545), San Jose, CA, USA: IEEE, 2004, pp. 292–299. doi: 10.1109/STHERM.2004.1291337.
+
+[Copper] “Fabricating Boards,” MIT. Accessed: Oct. 31, 2023. [Online]. Available: https://pcb.mit.edu/lectures/board_fab/
+
+[melt] “nglos324 - copper,” Princeton. Accessed: Oct. 30, 2023. [Online]. Available: https://www.princeton.edu/~maelabs/mae324/glos324/copper.htm
