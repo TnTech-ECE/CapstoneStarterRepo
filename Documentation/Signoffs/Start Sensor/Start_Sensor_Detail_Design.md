@@ -69,9 +69,11 @@ Figure 5 (above) shows where the Sensor will lay out on the Robot and a rough lo
 
 ## Analysis
 
-Constraint 1 Solution:  The RGB Sensor shall detect the color green because we will set both sensors into a high state, which will allow it to only detect green. The description of how this works is in the Buildable Schematic Section.
+Constraint 1 Solution:  The RGB Sensor is configured to specifically detect the color green by setting both its red and blue sensors to a high state, allowing it to be sensitive to green light. The detailed explanation of how this configuration operates can be found in the Buildable Schematic Section, taking into account the specific characteristics of the LED's green light that it will be reading.
 
-Constraint 2 Solution: The RGB Sensor is supposed to read and output in 3 seconds, if it does not, we will not get the points for that run of the competition. We will then use the push button start to allow our robot to start manually, allowing us to attempt other tasks for points. If we wait much longer than 3 seconds, we possibly lose out on points in other aspects of the competition. 
+Constraint 2 Solution: The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. Failing to meet this time limit could result in us not earning points for that particular run of the competition. To mitigate this risk, we have a contingency plan in place – we can manually initiate the robot's start using the push button. This approach allows us to proceed with other tasks aimed at scoring points.
+
+However, it's essential to emphasize the importance of adhering to the 3-second window. Any delay beyond this limit could potentially cost us points in other aspects of the competition. Therefore, precise timing and efficient sensor operation are key to our overall success in the competition.
 
 Constraint 3 Solution: The RGB Sensor will be located on the back, middle of the robot (Figure 3 & 5). This will ensure that the sensor has a close enough range to read the Green LED. The Green LED is located on the back beginning wall, like how figure 6 conveys. The Sensor shall be placed between 3.7 to 4.3 inches from the ground. This is because the Sensor is best at detecting between 0.0 to 0.8 inches away; however the LED cannot be read by the sensor if it is parallel with the LED due to potential blockage or shadows from the sensor itself. Placing it slightly down will allow more light to flow into the sensor. The B represents the location of the Green LED on the Competition Board. Figure 7 shows us the dimensions of the location of the Green LED so that we may place our RGB sensor appropriately.
 
@@ -81,7 +83,7 @@ Figure 6. Competition Board Layout
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 Figure 7. Exact Height of Start Sensor
 
-Constraint 4 Solution: The RGB sensor must be positioned in close proximity to the Green Light LED, with an optimal placement range of 0.5 inches. This confines the allowable distance to a 1-inch zone, ensuring the sensor captures the widest spectrum of green light for accurate detection.
+Constraint 4 Solution: The RGB sensor must be positioned in close proximity to the Green Light LED, with an optimal placement range of 0.5 inches. This confines the allowable distance to a 1-inch zone, ensuring the sensor captures the widest range of green light for accurate detection.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
 Figure 8. Exact location lengthwise of Start Sensor and green LED
