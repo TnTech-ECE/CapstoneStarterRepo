@@ -77,16 +77,6 @@ The subcircuits for each power rail must be able to supply the required current 
 
 The 3.3 V rail can source an additional 1119% (4.59 A) of the current worst-case current draw, and the 5 V rail can source an additional 134% (2.87 A) of the current worst-case current.
 
-After the chip itself, the output current is limited by the narrowest trace on the output line from the chip. In the case of this board the narrowest trace bottle-necking the output current is the trace immediately connected to the SW pin because it is limited by the space between the chip's pins. All other traces that the output current passes through are wider than this trace and so can support more current. The maximum possible width of the trace connected to the SW pin is 0.5 mm.
-
-The IPC-2221 standard gives formulas and data to calculate the maximum current of this trace [IPC]. From Figure A and Figure B in Appendix B, the maximum current can be calculated based on the maximum required change in temperature. The maximum acceptable change in temperature can be found by looking at the transition temperature of the PCB laminate material FR4, the temperature at which the laminate will begin to degrade, and is around 110 degrees Celsius [NewCorr]. Because the transition temperature of FR4 is so much lower than the melting point of copper (1083 Celsius), the FR4 transition temperature is the upper bound on trace temperature to limit the current through the trace.
-
-To find the maximum current of the trace, the cross section needs to be found, which requires the width and thickness of the trace. The width is limited to 0.5 mm. Thickness of PCB copper traces is often given in oz/ft^2, which is the weight in oz of the copper used in a trace if it were rolled into a square-foot area [copper]. To allow for higher current, 2 oz/ft^2 was chosen instead of the default option of 1 oz/ft^2. Using Figure B of Appendix B of the IPC-2221 standard after converting the trace width to inches, the cross section of the trace is about 50 square-mils.
-
-To then find the maximum allowable current, Figure A is used [IPC]. Assuming that the trace begins at a room temperature of 25 Celsius and that the maximum allowable temperature is 110 Celsius, this yields a maximum change in temperature of 85 degrees Celsius. Using the graph, this yields a maximum current a little over 6 Amps. For more precise calculations, the FR4 source references earlier provides the formula for calculating max current in equation (1) [NewCorr]. When the aforementioned values are used in this formula, a maximum current of 6.28 A is calculated.
-
-Because this current limit is higher than the output current limit of the voltage regulator chips, the trace will not fail within the normal operating parameters of the voltage regulator. To further prevent failures from occurring in the case of a sudden increase in current, a 6 A fuse is placed on the 3.3 V and 5 V rails near the output from the chip so that the fuse will blow before the trace can sustain any damage.
-
 The four images below show the simulated results of the buck-converter subcircuits designed based on the recommended values given in the datasheet of the TPS565201 buck converter chip [TPS565]. The SPICE model used is provided by Texas Instruments on the website for the TPS565201 chip [TPSSPICE].
 
 ![5V Regulation LTSpice Circuit](./Images/5v_reg_ltspice.png)
@@ -103,7 +93,23 @@ The layout of the printed circuit board is shown below. The layout is very heavi
 
 ![Power Distribution Printed Circuit Board Layout](./Images/power_dist_layout.png)
 
+To ensure that the power distribution system is "plug and play," the power rail connectors were designed such that most standard connectors will be compatible. The through-hole connectors for the 3.3 V, 5 V, and ground rails are spaced apart by 2.54 mm (0.1 in). This allows for screw terminals, female pin headers, and any other connectors that have a 2.54 mm connector pitch to be compatible. There are 82 through hole connectors for each of the three rails mentioned above 
 
+e stop
+
+diode prot
+
+Aside from the chip itself, the output current is limited by the narrowest trace on the output line from the chip. In the case of this board the narrowest trace bottle-necking the output current is the trace immediately connected to the SW pin because it is limited by the space between the chip's pins. All other traces that the output current passes through are wider than this trace and so can support more current. The maximum possible width of the trace connected to the SW pin is 0.5 mm.
+
+The IPC-2221 standard gives formulas and data to calculate the maximum current of this trace [IPC]. From Figure A and Figure B in Appendix B, the maximum current can be calculated based on the maximum required change in temperature. The maximum acceptable change in temperature can be found by looking at the transition temperature of the PCB laminate material FR4, the temperature at which the laminate will begin to degrade, and is around 110 degrees Celsius [NewCorr]. Because the transition temperature of FR4 is so much lower than the melting point of copper (1083 Celsius), the FR4 transition temperature is the upper bound on trace temperature to limit the current through the trace.
+
+To find the maximum current of the trace, the cross section needs to be found, which requires the width and thickness of the trace. The width is limited to 0.5 mm. Thickness of PCB copper traces is often given in oz/ft^2, which is the weight in oz of the copper used in a trace if it were rolled into a square-foot area [copper]. To allow for higher current, 2 oz/ft^2 was chosen instead of the default option of 1 oz/ft^2. Using Figure B of Appendix B of the IPC-2221 standard after converting the trace width to inches, the cross section of the trace is about 50 square-mils.
+
+To then find the maximum allowable current, Figure A is used [IPC]. Assuming that the trace begins at a room temperature of 25 Celsius and that the maximum allowable temperature is 110 Celsius, this yields a maximum change in temperature of 85 degrees Celsius. Using the graph, this yields a maximum current a little over 6 Amps. For more precise calculations, the FR4 source references earlier provides the formula for calculating max current in equation (1) [NewCorr]. When the aforementioned values are used in this formula, a maximum current of 6.28 A is calculated.
+
+Because this current limit is higher than the output current limit of the voltage regulator chips, the trace will not fail within the normal operating parameters of the voltage regulator. To further prevent failures from occurring in the case of a sudden increase in current, a 6 A fuse is placed on the 3.3 V and 5 V rails near the output from the chip so that the fuse will blow before the trace can sustain any damage.
+
+A similar method is used for calculating the maximum supportable current of the 12 V rail. The narrowest trace of the 12 V rail is 1.25 mm wide. Using Figure B from Appendix B in the IPC-2221 standard document after converting the width to inches, the cross section in square-mils is about 125 square-mils [IPC]. Using the same formula given in the FR4 source document, the maximum current given an 85 degree Celsius change in temperature from room temperature is 11.7 A [NewCorr]. To prevent damage to the conductor, a 10 A fuse is inserted at the beginning of the 12 V rail so that the fuse will blow before the 12 V rail trace can sustain damage.
 
 ## BOM 
 
