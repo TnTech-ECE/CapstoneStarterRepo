@@ -48,7 +48,7 @@ The following shows the connection of the sensor array to a potential controller
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Array%20Connections.jpg)
 
-The following is a 3D model of where the sensor package will go on the robot. The sensor array is shown as the purple block on the underside of the robot chassis. The main controller is shown as the blue block, and the power system is the green block. The red wires are the main voltage supply, supplying 5 Volts to the sensor array, and the black wires are the ground connections. The yellow wire is the I2C data cable and the pink wire is the I2C clock data. 
+The following is a 3D model of where the sensor package will go on the robot. The sensor array is shown as the purple block on the underside of the robot chassis. The main controller is shown as the blue block, and the power system is the green block. The red wires are the main voltage supply, supplying 5 Volts to the sensor array, and the black wires are the ground connections. The yellow wire is the I2C data cable and the pink wire is the I2C clock data. The sensor array is bolted on to the chassis through the mounting holes on the sensor, as discussed above in number 6.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Nav%20Sys.png)
 
