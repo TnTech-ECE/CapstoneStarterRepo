@@ -85,7 +85,7 @@ To find the maximum current of the trace, the cross section needs to be found, w
 
 To then find the maximum allowable current, Figure A is used [IPC]. Assuming that the trace begins at a room temperature of 25 Celsius and that the maximum allowable temperature is 110 Celsius, this yields a maximum change in temperature of 85 degrees Celsius. Using the graph, this yields a maximum current a little over 6 Amps. For more precise calculations, the FR4 source references earlier provides the formula for calculating max current in equation (1) [NewCorr]. When the aforementioned values are used in this formula, a maximum current of 6.28 A is calculated.
 
-Because this current limit is higher than the output current limit of the voltage regulator chips, the trace will not fail within the normal operating parameters of the voltage regulator. To further prevent failures from occuring in the case of a sudden increase in current, a 6 A fuse is placed on the 3.3 V and 5 V rails near the output from the chip so that the fuse will blow before the trace can sustain any damage.
+Because this current limit is higher than the output current limit of the voltage regulator chips, the trace will not fail within the normal operating parameters of the voltage regulator. To further prevent failures from occurring in the case of a sudden increase in current, a 6 A fuse is placed on the 3.3 V and 5 V rails near the output from the chip so that the fuse will blow before the trace can sustain any damage.
 
 The four images below show the simulated results of the buck-converter subcircuits designed based on the recommended values given in the datasheet of the TPS565201 buck converter chip [TPS565]. The SPICE model used is provided by Texas Instruments on the website for the TPS565201 chip [TPSSPICE].
 
@@ -101,22 +101,30 @@ As can be seen above, the voltage regulator circuits successfully convert a 12.8
 
 The layout of the printed circuit board is shown below. The layout is very heavily based on the recommended layout given in the datasheet of the buck converters and can be found in Figure 30 in the datasheet [TPS565201]. The recommended layout was used to ensure the best possible thermal management and current capacity to avoid failures due to overheating or overcurrent. 
 
+![Power Distribution Printed Circuit Board Layout](./Images/power_dist_layout.png)
+
+
 
 ## BOM 
 
 | Item | Part Number | Quantity | Price/Unit | Item Price |
 | --- | --- | --- | --- | --- |
-| Buck Converter | TPS565201  | 10 | $1.292   | $12.92 |
-| Flyback Diode  | RB070MM    | 10 | $0.277   | $2.77  |
-| LED            | QBLP615    | 20 | $0.289   | $5.78  |
-| 6 Amp Fuse     | QBLP615    | 10 | $0.700   | $7.00  |
-| 10 Amp Fuse    | QBLP615    | 10 | $0.312   | $3.12  |
-| Screw Terminal | 0397730002 | 25 | $1.23880 | $30.97 |
-| Female Headers | 5583       | 5  | $0.95    | $4.75  | 
-| Emergency Stop Button | yyy | 2  | $xxx | $xxx |
-| Printed Circuit Board |  | 5  | $xxx    | $xxx  |
-
-
+| Buck Converter        | TPS565201       | 10 | $1.292   | $12.92 |
+| Flyback Diode         | RB070MM         | 10 | $0.277   | $2.77  |
+| LED                   | QBLP615         | 20 | $0.289   | $5.78  |
+| 6 Amp Fuse            | QBLP615         | 10 | $0.700   | $7.00  |
+| 10 Amp Fuse           | QBLP615         | 10 | $0.312   | $3.12  |
+| Screw Terminal        | 0397730002      | 25 | $1.2388  | $30.97 |
+| Female Headers        | 5583            | 5  | $0.95    | $4.75  |
+| Emergency Stop Button | NWAR-27         | 2  | $5.70    | $11.40 |
+| Printed Circuit Board |                 | 5  | $5.16    | $25.80 |
+| 10 kOhm Resistor      | RMCF1206FT10K0  | 50 | $0.0146  | $0.73  | 
+| 33 kOhm Resistor      | RMCF1206JT33K0  | 20 | $0.0200  | $0.40  |
+| 56 kOhm Resistor      | RMCF1206JT56K0  | 20 | $0.0200  | $0.40  |
+| 0.1 uFarad Capacitor  | CL31B104KBCNNNC | 30 | $0.07800 | $2.34  | 
+| 10 uFarad Capacitor   | RMCF1206JT33K0  | 30 | $0.136   | $4.08  |
+| 22 uFarad Capacitor   | RMCF1206JT56K0  | 30 | $0.25100 | $7.53  |
+| Total                 |                 |    |          | $94.19 |
 
 ## References
 
