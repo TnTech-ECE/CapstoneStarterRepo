@@ -15,11 +15,10 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 | Number | Constraint Description | Origin |
 |--------|------------------------|--------|
 | 1. | The RGB Sensor shall detect a spectrum of green light from an LED | Competition Specifications |
-| 2. | The RGB Sensor shall have an input of 4V to properly output | Sensor Specifications |
-| 3. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
-| 4. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
-| 5. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
-| 6. | The RGB Sensor shall be located in a width range around around 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
+| 2. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
+| 3. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
+| 4. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
+| 5. | The RGB Sensor shall be located in a width range around around 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
 
 ## Buildable Schematic
 
@@ -72,11 +71,9 @@ Figure 5 (above) shows where the Sensor will lay out on the Robot and a rough lo
 
 Constraint 1 Solution:  The RGB Sensor shall detect the color green because we will set both sensors into a high state, which will allow it to only detect green. The description of how this works is in the Buildable Schematic Section.
 
-Constraint 2 Solution: The RGB Sensor shall consider at least 4.0V as a HIGH signal and anything lower than 4.0V as a LOW signal. Per the datasheet for the RGB Sensor, the High-level input voltage is VDD = 2.7 V to 5.5 V and the minimum high-level is 2V and the max high-level is equal to VDD, which shall be 5V. The Low-level input voltage is VDD = 2.7 V to 5.5 V and the minimum low-level is 0V and the max low-level is 0.8V. This means that the RGB sensor’s control pins will be modified by either connecting them to the power provided (5V) or the ground for a high or low signal respectively. 
+Constraint 2 Solution: The RGB Sensor is supposed to read and output in 3 seconds, if it does not, we will not get the points for that run of the competition. We will then use the push button start to allow our robot to start manually, allowing us to attempt other tasks for points. If we wait much longer than 3 seconds, we possibly lose out on points in other aspects of the competition. 
 
-Constraint 3 Solution: The RGB Sensor is supposed to read and output in 3 seconds, if it does not, we will not get the points for that run of the competition. We will then use the push button start to allow our robot to start manually, allowing us to attempt other tasks for points. If we wait much longer than 3 seconds, we possibly lose out on points in other aspects of the competition. 
-
-Constraint 4 Solution: The RGB Sensor will be located on the back, middle of the robot (Figure 3 & 5). This will ensure that the sensor has a close enough range to read the Green LED. The Green LED is located on the back beginning wall, like how figure 6 conveys. The Sensor shall be placed between 3.7 to 4.3 inches from the ground. This is because the Sensor is best at detecting between 0.0 to 0.8 inches away; however the LED cannot be read by the sensor if it is parallel with the LED due to potential blockage or shadows from the sensor itself. Placing it slightly down will allow more light to flow into the sensor. The B represents the location of the Green LED on the Competition Board. Figure 7 shows us the dimensions of the location of the Green LED so that we may place our RGB sensor appropriately.
+Constraint 3 Solution: The RGB Sensor will be located on the back, middle of the robot (Figure 3 & 5). This will ensure that the sensor has a close enough range to read the Green LED. The Green LED is located on the back beginning wall, like how figure 6 conveys. The Sensor shall be placed between 3.7 to 4.3 inches from the ground. This is because the Sensor is best at detecting between 0.0 to 0.8 inches away; however the LED cannot be read by the sensor if it is parallel with the LED due to potential blockage or shadows from the sensor itself. Placing it slightly down will allow more light to flow into the sensor. The B represents the location of the Green LED on the Competition Board. Figure 7 shows us the dimensions of the location of the Green LED so that we may place our RGB sensor appropriately.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram.png)
 Figure 6. Competition Board Layout  
@@ -84,12 +81,12 @@ Figure 6. Competition Board Layout
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 Figure 7. Exact Height of Start Sensor
 
-Constraint 5 Solution: The RGB sensor must be positioned in close proximity to the Green Light LED, with an optimal placement range of 0.5 inches. This confines the allowable distance to a 1-inch zone, ensuring the sensor captures the widest spectrum of green light for accurate detection.
+Constraint 4 Solution: The RGB sensor must be positioned in close proximity to the Green Light LED, with an optimal placement range of 0.5 inches. This confines the allowable distance to a 1-inch zone, ensuring the sensor captures the widest spectrum of green light for accurate detection.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
 Figure 8. Exact location lengthwise of Start Sensor and green LED
 
-Constraint 6 Solution: The RGB Sensor shall be located within a width range of the Green Light LED location. This width range would be around 3 inches from the wall to the middle of the sensor. In figure 6, you can see that the distance from the middle of the sensor to the end of the robot is 1.3 inches or 3.3 cm. This range is to keep it as close as possible to the Green LED so that the sensor may read the light and output like anticipated. 
+Constraint 5 Solution: The RGB Sensor shall be located within a width range of the Green Light LED location. This width range would be around 3 inches from the wall to the middle of the sensor. In figure 6, you can see that the distance from the middle of the sensor to the end of the robot is 1.3 inches or 3.3 cm. This range is to keep it as close as possible to the Green LED so that the sensor may read the light and output like anticipated. 
 
 ## BOM
 
