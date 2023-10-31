@@ -231,7 +231,7 @@ For the detector to work with the inductive loops, the detector will use an 11 P
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Diablo Controls Inc. DSP-21 Vehicle Detector | DSP-21-LV | 2 | $104.95 | $209.90 |
 | Diablo 11 Pin Harness | CBL-005 | 2 | $10.92 | $21.84 |
-| Kable Kontrol™ Drop Over Floor Cord Covers - 1 Channel - 60" L | fcc999-60-yellow | 32 | $27.99 | $895.68 |
+| Kable Kontrol™ Drop Over Floor Cord Covers - 1 Channel - 60" L | FCC999-60-yellow | 32 | $27.99 | $895.68 |
 | Unjacketed Wire<sup>*</sup> | 14 AWG | 285 ft. | $0.00 | $0.00 |
 | Wire Connections<sup>*</sup> | N/A | N/A | $0.00 | $0.00 |
 | Jacketed Wire, Two Conductor <sup>*</sup> | 14 AWG | 100 ft. | $0.00 | $0.00 |
