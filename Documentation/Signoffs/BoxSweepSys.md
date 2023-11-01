@@ -28,4 +28,4 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | SG90 |	DIYables | 1 | $7.49 | $7.49 |
-|------|-------------|-----------|-------------|--------------|----------|-------| $7.49 |
+|||||||| $7.49 |
