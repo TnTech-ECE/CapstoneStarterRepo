@@ -17,8 +17,9 @@ The purpose of the charge controller subsystem is to maximize the power output o
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-| Arduino MCU | ABX00028 | 1 | $13.70 | $13.70 |
+| Arduino Nano | ABX00028 | 1 | $13.70 | $13.70 |
 | Buck-Boost Converter | MAX20040ATPA/VY+ | 1 | $2.48 | $2.48 |
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
 | Current Sensor | ACS712ELCTR-05B-T | 3 | $3.70 | $11.10 |
+| Dual Op Amp | TSB622IST | 1 | $1.54 | $1.54 |
 
