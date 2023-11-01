@@ -69,6 +69,7 @@ Figure 5. Precise location of Start Sensor
 
 Figure 5 (above) shows where the Sensor will lay out on the Robot and a rough location of the button. You can read more about the button location in the analysis section. 
 
+
 ## Analysis
 
 Constraint 1 Solution:  The RGB Sensor is configured to specifically detect the color green by setting both its red and blue sensors to a high state, allowing it to be sensitive to green light. The detailed explanation of how this configuration operates can be found in the Buildable Schematic Section, taking into account the specific characteristics of the LED's green light that it will be reading.
