@@ -14,6 +14,11 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 
 
 ## Buildable Schematic of Subsystem
+![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/49d00ecf-5d38-4079-bfce-1f7548c8ef04)
+<br />Figure 2: Box Sweep Wiring Diagram
+
+
+
 
 ## Analysis of Subsystem
 
@@ -22,16 +27,5 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | MG995 |	Beffkkip | 1 | $7.50 | $14.99 (Comes in Packs of 2) |
-
-Servo
--rotate both ways
--slowly
--hub so not directly on ruler
-
-Sweep
--strong enough to push boxes
--tall enough it wont have boxes 'jump' it
-- long enough that it sweeps boxes against wall
-
--ideas: Ruler, skinny stiff brush, plastic sheet scoop, hook on the end?
+| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | SG90 |	DIYables | 1 | $7.49 | $7.49 |
+|------|-------------|-----------|-------------|--------------|----------|-------| $7.49 |
