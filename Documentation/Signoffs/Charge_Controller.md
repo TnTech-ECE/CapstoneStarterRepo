@@ -13,3 +13,12 @@ The purpose of the charge controller subsystem is to maximize the power output o
 2. The subsystem shall output 12 V at 50 mA with a 10% tolerance to the Power Controller. 50 mA is required to power all of the subsystems. 12 V is used to match the voltage of the backup batteries. 
 3. The subsystem shall prevent the batteries from discharging more than 50% of their maximum capacity. This constraint is to prevent the batteries from deep discharge. Deep discharge prematurly ages the battery. The maximum discharge percentage of 50% has been chosen TODO     To ensure the batteries are able to be used for as long as possible, deep discharge protection is necessary.
 4. The subsystem shall prevent the batteries from charging more than 95% of their maximum capacity. This constraint is to prevent the batteries from overcharging. Overcharging can cause the overheating and long term damage to the batteries. The maximum charge of 95% has been chosen TODO    To ensure the batteries are able to be used for as long as possible, overcharge protection is necessary. 
+
+# BOM
+| Part | Part Number | Quantity | Price Per Unit | Total Price |
+| ------------ | ------------- | --------- | -------- | ---------- |
+| Arduino MCU | ABX00028 | 1 | $13.70 | $13.70 |
+| Buck-Boost Converter | MAX20040ATPA/VY+ | 1 | $2.48 | $2.48 |
+| Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
+| Current Sensor | ACS712ELCTR-05B-T | 3 | $3.70 | $11.10 |
+
