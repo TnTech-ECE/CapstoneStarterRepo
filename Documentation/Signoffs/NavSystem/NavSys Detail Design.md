@@ -52,6 +52,10 @@ The following is a 3D model of where the sensor package will go on the robot. Th
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Nav%20Sys.png)
 
+The following image shows the mounting holes on the robot chassis and the sensor array. This view is from the underside of the robot.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Underside.png)
+
 ## Analysis
 
 Constraint 1 Solution: 
