@@ -22,14 +22,16 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 
 ## Buildable Schematic
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/StartSensorDiagram.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/wiring%20diagram%20for%20Start%20sensor.png)
 Figure 2. Wiring Diagram for Start Sensor
 
 The APDS-9960 is a digital RGB, ambient light, proximity, and gesture sensor that operates through I2C communication. 
 
 VL (Optional Power): Pin 1 can be used to provide optional power to the IR LED used for proximity and gesture sensing. If the PS jumper is not connected, you can supply power to the IR LED through this pin. The voltage can range from 3.0V to 4.5V. 
 
-GND (Ground): Pin 2 connects to the ground of the circuit, providing a common reference point for electrical signals. VCC (Power Supply): Pin 3 is used to power the APDS-9960 sensor board. It requires a voltage supply between 2.4V and 3.6V. 
+GND (Ground): Pin 2 establishes the ground connection for the circuit, serving as a shared reference point for electrical signals, with the added inclusion of a 10k pull-down resistor to ensure that the button remains reliably in the LOW state until it is actively pushed.
+
+VCC (Power Supply): Pin 3 is used to power the APDS-9960 sensor board. It requires a voltage supply between 2.4V and 3.6V. 
 
 SDA (Serial Data Address): Pin 4 is part of the I2C communication interface. It's used to transfer data to and from the sensor when connected to a microcontroller. It is typically connected to the SDA pin on your microcontroller or I2C bus. 
 
@@ -95,5 +97,6 @@ Constraint 5 Solution: The RGB Sensor shall be located within a width range of t
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | RGB Sensor | Sensor to detect green LED | Start Sensor System | APDS-9960 | Avago Technologies | 1 | $7.50 | $7.50 |
+| 10k Resistor| Resistor for Pushbutton | Start Sensor System | Recycled | Recycled | 1 | $0.00 | $0.00 |
 | Push Button (20 pcs) | Failsafe Button | Start Sensoir System | TS-D001, 5mm | CHANZON | 1 pk | $4.99 | $4.99 | 
 | | | | | | | | $12.49 |
