@@ -23,9 +23,13 @@ The SG90 Servo is a servo motor with 180 degrees of movement. This will be the p
 
 Pulse Width Modulation (PWM, orange wire): This pin shall be connected to a GPIO Pin on the main controller. Code within the main controller will send the appropriate pulse to lower the arm from 90 degrees to 180 degrees once the start signal is received by the main controller.
 <br />
+<br />
 Vcc (red wire): This pin will be connected to the 5V output of the main controller to power the SG90 Servo. The SG90 requires a voltage between 4.8V - 6V to be properly powered. This also allows the main controller to control if the servo is powered or not.
 <br />
+<br />
 Ground (GND, brown wire): This pin shall be connected to the ground pin on the main controller that will ultimately be connected to the ground of the power system. This shall properly ground the servo. 
+<br />
+<br />
 
 (3D Model - at least include start signal and estimated tracks)
 (Explanation of the 3D Model)
