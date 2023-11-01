@@ -43,5 +43,5 @@ Ground (GND, brown wire): This pin shall be connected to the ground pin on the m
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | SG90 |	DIYables | 1 | $7.49 | $7.49 |
-|||||||| $7.49 |
+| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | SG90 |	DIYables | 1 | Recycled | Recycled |
+|||||||| $0.00 |
