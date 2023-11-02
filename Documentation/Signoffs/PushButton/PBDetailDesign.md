@@ -38,4 +38,8 @@ The truth table below shows the signals we want to send to change direction of t
 
 ## Model of the electrical inductance and internal motor resistance for the DC motor
 
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Electrical_LT.png)
 
+## Model of mechanical circuit output conversion from electrical domain model from the DC motor
+
+![Alt text](
