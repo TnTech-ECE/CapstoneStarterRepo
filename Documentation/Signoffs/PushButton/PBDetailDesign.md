@@ -165,3 +165,8 @@ To get the drive gear to fit without coming off the dc motor shaft, the borehole
 | Motor shield/driver | Controls the direction and speed of the geared dc motor | Push button  | L298N | N/A (Recycled) | 1 | $0.00  | $0.00 |
 | PLA | Used for printing gears | Push button  | N/A | N/A | 1.7 cu in. | $0.00 | $0.00 |
 |  |  |  |  |  |  |  | $22.96  |
+
+
+**DC Motor dimension:**
+
+![Alt text]()
