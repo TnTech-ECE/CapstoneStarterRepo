@@ -27,3 +27,11 @@ The direction control ports are IN1 and IN2, which controls motor 1 and IN3 and 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N_2.png)
 
 The truth table below shows the signals we want to send to change direction of the motor. This will be useful to us for when we want to reset the arm with the paint roller on it to pull in back into its original position. 
+
+## L298N Truth Table
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N%20TT.png)
+
+## Control block diagram for pushbutton system 
+
+![Alt text](
