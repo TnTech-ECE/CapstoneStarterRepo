@@ -34,4 +34,8 @@ The truth table below shows the signals we want to send to change direction of t
 
 ## Control block diagram for pushbutton system 
 
-![Alt text](
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Control%20Block%20Diagram.png)
+
+## Model of the electrical inductance and internal motor resistance for the DC motor
+
+
