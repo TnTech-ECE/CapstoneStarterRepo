@@ -150,4 +150,18 @@ The bevel gear teeth will have a pressure angle of 20 degrees because this will 
 
 **Depiction of pressure angles for gears**
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Depiction_pressure_angle.png)
+
+**Constraint Solution 8:**
+
+To get the drive gear to fit without coming off the dc motor shaft, the borehole diameter needs to be slightly larger than the shaft diameter without being so much larger it comes off or causes slippage. An AGME standard is that the inner diameter of the borehole must be no larger than 0.001 in. if it will be housing the shaft of the motor. Since our dimensions of the gears are metric and in mm, our housing diameter of the drive gear will be no larger than 0.02mm. To do this select the drive gear and click on the “object” tab on the right panel and then scroll down to the option called “borehole” then select “round subtract” to cut out the center diameter of the gear and enter 1.51mm into the radius parameter of the borehole selection. This radius gives us a diameter of 3.02mm which is within the 0.0254 mm maximum clearance from the AGME standard, for our 3mm shaft. We will not need to do this for our driven gear because there will be no shaft going into the borehole.
+
+## BOM
+
+| Item | Description | Subsystem | Part Number | Manufacturer | QTY. | Price | Total Price |
+|------|-------------|-----------|-------------|--------------|------|-------|-------------|
+| Geared DC motor | Used to turn the shaft | Push button  | 6V-100RPM-150i | Greartisan | 1 | $11.99  | $11.99 |
+| Paint roller | Used to compress button | Push button  | N/A | Mister Rui | 1 pk | $10.97  | $10.97 |
+| Motor shield/driver | Controls the direction and speed of the geared dc motor | Push button  | L298N | N/A (Recycled) | 1 | $0.00  | $0.00 |
+| PLA | Used for printing gears | Push button  | N/A | N/A | 1.7 cu in. | $0.00 | $0.00 |
+|  |  |  |  |  |  |  | $22.96  |
