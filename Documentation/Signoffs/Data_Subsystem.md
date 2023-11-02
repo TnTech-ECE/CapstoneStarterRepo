@@ -24,7 +24,7 @@ The data subsystem is responsible for the collection, transmission, and storage 
 <em>Figure 2. ESP32 Block Diagram</em>
 
 <img width="1488" alt="Network Block Diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/6d3b6970-f1ab-40bd-b1b9-77c46b6871d3">
-<em>Network Block Diagram</em>
+<em>Figure 3. Network Block Diagram</em>
 
 
 
@@ -33,6 +33,18 @@ The data subsystem is responsible for the collection, transmission, and storage 
 Data will be collected via the ESP WROOM 32E microcontrollers. For each vehicle detector, there will be one MCU. Each MCU will be connected to the two output relays of the vehicle detector. The 3.3V source pin of the MCU will be connected to the common terminals of each relay, and the normally open terminals of the relays will be connected to separate GPIO pins on the MCU. These pins will be GPIO36 and GPIO39. These are input-only pins, but more importantly, they are RTC pins, which means they will be able to wake the MCU up from deep sleep. GPIO36 is RTC_GPIO0 and GPIO39 is RTC_GPIO3. The MCU will be able to tell which RTC pin woke it up from sleep with the function esp_sleep_get_ext1_wakeup_status(). With the vehicle detector in pulse mode, we can determine which direction the vehicle is going. Pulse mode works by detecting vehicle presence in one of the loops first, then the second loop detecting presence while the first is still detecting presence. This means the vehicle must have crossed the first loop before the second. The detector will send a pulse to the relay corresponding to the first loop in this case. The MCU will wake up and since it knows the GPIO pin connected to the first loop relay is what woke it up, we also know the direction of the vehicle. Knowing the direction of the vehicle is important for keeping the delta of cars entering and exiting the lot at the point where the inductive loops lay in the road. A positive delta means more vehicles have entered than exited, negative means more have exited than entered. The delta value will incremented for vehicles entering the lot and decremented for vehicles leaving the lot. This updated value for the delta will be transmitted using the RFM95W LoRa transceiver to the LoRaWAN gateway. The delta value will also be stored in nonvolatile storage so that the MCU can go back to deep sleep. With this in mind, the MCU should be in deep sleep the majority of the time, only waking up long enough to update the delta, transmit it, and store it. This will lead to a much lower power consumption compared to leaving the MCU in active mode at all times when it is not necessary.
 
 ### Data Transmission
+Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN gateway via LoRa protocol using RFM95W transceivers connected to the ESP32 MCUs' GPIO pins. Using the LoRa library for Arduino, the system should always follow the standards that define LoRa and as a consequence also the FCC 915 MHz ISM band standards. The MCUs will communicate with the transceivers via SPI. The pin connections will be shown in the table below. The transceiver will send the delta previously determined by the MCU in the form of a LoRa packet which is encoded in Chirp Spread Spectrum modulation. The RAK2287 concentrator can receive and demodulate these LoRa packets so that our Raspberry Pi can understand the data contained in the LoRa packets. The Raspberry Pi is connected to the RAK2287 via the RAK5146 PiHAT which sits atop the Raspberry Pi and is connected via the Raspberry Pi's GPIO pins. The data from the PiHAT will be taken into ChirpStack software installed on the Raspberry Pi. ChirpStack Gateway Bridge has built-in support for the RAK2287 concentrator so setup should be easy. ChirpStack Gateway Bridge will route the packets it receives to ChirpStack Network Server, which is on the same Raspberry Pi. ChirpStack Network Server keeps a record of data it receives and is accessible over the internet, given the Raspberry Pi has an internet connection.
+
+| ESP32 MCU Pin | RFM95W Transceiver Pin |
+|---------------|------------------------|
+| GND           | GND                    |
+| 3.3V          | 3.3V                   |
+| GPIO14        | RESET                  |
+| GPIO5         | NSS                    |
+| GPIO18        | SCK                    |
+| GPIO23        | MOSI                   |
+| GPIO19        | MISO                   |
+| GPIO2         | DIO0                   |
 
 ### Data Storage
 
