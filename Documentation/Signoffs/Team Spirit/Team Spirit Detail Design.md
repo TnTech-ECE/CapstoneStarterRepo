@@ -17,6 +17,12 @@ The LEDs will be made into two strips, one of purple and one of gold, each consi
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/Team%20Spirit/Spirit%20System%20Circuit.png)
 
+The LEDs are shown in the two images below.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/Team%20Spirit/LED%20spec%20sheet.jpg)
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/Team%20Spirit/LEDs.jpg)
+
 The LEDs will be placed on the left, right, and rear sides of the robot, with each LED spaced 1 inch from the next LED in the line, and lines are one inch apart. The yellow line is on top of the side, and the purple line is on the bottom, as shown in the figure below.
 
 ![Alt text]()
