@@ -80,7 +80,7 @@ The DC motor has a gear reduction ratio to increase torque. The reason for this 
 
 **DC Motor model:** 
 
-The essential readings from the LT spice model labeled below as “Readings of LT spice dc motor model for rpm and torque” are the I(Current_sensor_2) and the Voltage at V(node_3). The current reading in the I(Current_sensor_2) is the equivalent speed of the motor at 6 volts in rpm. The max output torque is equivalent to the voltage at V(node_3) which is in N*m. I know this model works because from the specs of the dc motor the torque and rpm speed match what the load torque and current are equivalent to. The figure labeled “Specs of DC motor” in the BOM section is the original datasheet for the geared dc motor. Our motor is the 100-rpm motor so in the “Specs of DC motor” figure look at the 5th column.
+The essential readings from the LT spice model labeled below as “Readings of LT spice dc motor model for rpm and torque” are the **I(Current_sensor_2)** and the Voltage at **V(node_3)**. The current reading in the **I(Current_sensor_2)** is the equivalent speed of the motor at 6 volts in rpm. The max output torque is equivalent to the voltage at V(node_3) which is in **N*m** and then you can convert that value to Kg*cm. I know this model works because from the specs of the dc motor because the torque and rpm speed match what the load torque and current are equivalent to. The figure labeled “Specs of DC motor” in the BOM section is the original datasheet for the geared dc motor. Our motor is the 100-rpm motor so in the “Specs of DC motor” figure look at the 5th column.
 
 **Readings of LT spice dc motor model for rpm and torque**
 
