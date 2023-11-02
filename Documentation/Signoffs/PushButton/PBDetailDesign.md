@@ -37,25 +37,48 @@ Control block diagram for pushbutton system
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Control%20Block%20Diagram.png)
 
 
-Model of the electrical inductance and internal motor resistance for the DC motor
+Model of the electrical inductance and internal motor resistance for the DC motor to test and get torque values and loads under different conditions
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Electrical_LT.png)
 
-Model of mechanical circuit output conversion from electrical domain model from the DC motor
+Model of mechanical circuit that converts the electrical characteristics into the mechanical characteristics such as rpm and torque values
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
 
 
 Digital Logic Circuit for L298N Driver
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Digital%20Logic%20for%20L298N.png)
+
+
 H-Bridge circuit that is within the chip of the L298N chip
 
-![Alt text]()
-Drive gear parameters for 3d modeling and printing
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/H_Bridge.png)
 
-![Alt text]()
-Driven gear parameters for 3d modeling and printing
 
-![Alt text]()
+Drive gear parameters for 3d modeling and printing using blender
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_Gear_Param..png
+)
+
+
+Driven gear parameters for 3d modeling and printing using blender 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Driven_Gear_Param.png
+)
+
+## Analysis 
+
+**Shaft description:** 
+
+This shaft and arm will be printed using PLA material that way it gives us flexibility if we need to change diameter size or shape. The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. 
+
+**DC Motor description:** 
+
+The DC motor has a gear reduction ratio to increase torque. The reason for this is we need more torque than we do rotor/shaft speed so that it ensures the shaft for the button pusher is turned. To determine what our load torque is of the gears and shaft we can leave or input voltage as at least 6 volts and change the inertial from the shaft to a higher value that to see the max load inertia before reaching stalling torque. When this motor is enabled “Forward” it will rotate clockwise and when enabled to go “Backwards” it will rotate anticlockwise.
+
+**DC Motor model:** 
+
+The essential readings from the LT spice model labeled below as “Readings of LT spice dc motor model for rpm and torque” are the I(Current_sensor_2) and the Voltage at V(node_3). The current reading in the I(Current_sensor_2) is the equivalent speed of the motor at 6 volts in rpm. The max output torque is equivalent to the voltage at V(node_3) which is in N*m. I know this model works because from the specs of the dc motor the torque and rpm speed match what the load torque and current are equivalent to. The figure labeled “Specs of DC motor” in the BOM section is the original datasheet for the geared dc motor. Our motor is the 100-rpm motor so in the “Specs of DC motor” figure look at the 5th column.
+
 
