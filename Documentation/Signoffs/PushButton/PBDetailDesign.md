@@ -21,3 +21,9 @@ The push button subsystem will be the process of pushing the stop button to stop
 To drive the motors, we will use a L298N motor driver that can drive up to but not limited to two dc motors. The speed control pins ENA and ENB are used to turn on/off the motors and control their speed. To start the motion of the motor we will need to make sure the pins of ENA and ENB are pulled HIGH. If we want to change how fast the arm deploys, we can use PWM (Pulse width modulation) to control the speed of how fast the arm that is driven by the motor. 
 The internal H–Bridge of the IC is responsible the operation of the motor, and the VS pin powers the IC’s internal H-Bridge which can handle 5V – 12V. The VSS provides power to the logic circuitry inside the L298N IC, with a voltage range of 5V to 7V. The output ports of the driver are OUT1 and OUT2 and OUT3 and OUT4 which can drive 5V to 12V dc motors and are connected to the positive and negative terminals respectively.  
 The direction control ports are IN1 and IN2, which controls motor 1 and IN3 and IN4, which controls motor 2. These 4 input ports are controlled using digital HIGH and LOW signals that change the rotation of each motor connected to the L298N.
+
+ ## L298N Driver
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N_2.png)
+
+The truth table below shows the signals we want to send to change direction of the motor. This will be useful to us for when we want to reset the arm with the paint roller on it to pull in back into its original position. 
