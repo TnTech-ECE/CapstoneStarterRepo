@@ -106,6 +106,22 @@ The beveled gears are the mechanical system behind the pushbutton subsystem. The
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Beveled_connection.png)
 
+## Constraint Solutions
 
+**Constraint Solution 1:**
 
+The Arduino will send a logical High to “input 1” and a logical Low to “input 2” when the RGB sensor from the start subsystem sees the start light is green or when the backup pushbutton from the start subsystem is pressed.
+
+**Constraint Solution 2:**
+
+Since the stop buttons center is 2.5 inches from the bottom of the course the paint roller will overhang the tracks when it swings out. This can be achieved by having two consecutive perpendicular arms that force the paint roller to hang lower from the shaft connected to the secondary beveled gear on the robot’s base platform. The dimensions of where the button is located is in the first figure below and the part where the buttons general location on the gameboard is labeled “E” in the second figure below.
+
+**Stop button precise location**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Game_board_buttton.png
+)
+
+**Stop button general location “E”**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Game_Board.png)
 
