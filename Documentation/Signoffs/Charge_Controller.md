@@ -29,4 +29,6 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
 | Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
 | Dual Op Amp | TSB622IST | 1 | $1.54 | $1.54 |
+| | | | | |
+| Total | ----- | ----- | ----- | $--.-- |
 
