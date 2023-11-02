@@ -1,6 +1,6 @@
 ## Functionality
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/spiritmech.png)
 
 The purpose of the team spirit subsystem is to create a luminous and undeniable representation of TTU at the SECON robotics competition. It receives a signal and creates a display of purple and yellow blinking lights which are meant to represent Tennessee Tech University. 
 
@@ -19,3 +19,5 @@ The purple LED is a 5mm round model with attached wires and a series resistance 
 Yellow LED:
 
 The yellow LED is a 5mm round model with attached wires and a series resistance to protect the LED. The connected wiring and series resistances to the LEDs reduce the risk of a failure. The LEDs operate at 4 ~ 6  V+. 
+
+![Alt text]()
