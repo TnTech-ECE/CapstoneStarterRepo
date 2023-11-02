@@ -62,38 +62,50 @@ W_{PV}=\ \ \frac{36\ Wh}{4.4\ \times\ (\ 0.65\ )}\ =\ 12.59\ W_p
 2. PV sizing:
 The solar panel sizing can be determined by doing steps of calculation. The solar panel for a stand-alone system should be designed to cover the average daily load during the critical design month[3]. The solar panel is sized to satisfy the average daily load requirements for the month or season of the year with a lower ratio of daily insolation to the daily load[ 3 ]. Therefore, according to the Weather Atlas website, the month with the least sunshine average is February, with about 4.4 hours of sunshine [ 4 ]. Using module power output and daily insolation (in peak sun hours), the energy (watt-hours or amp-hours) delivered by a photovoltaic module for an average day can be determined [ 3 ]. Then, knowing the load requirements and the output of a single module, the solar panel can be sized [ 3 ]. 
 ```math
-Required\ array\ output\ per\ day\left(Wh\right)=\frac{{\rm Energy}_{Daily}}{0.85}
+Required\ array\ output\ per\ day\left(Wh\right)=\frac{{\rm Energy}_{Daily}}{0.85}\ ;\ \ SLD\ Battery efficiency = 0.85
 ```
 ```math
->SLD\ Battery efficiency = 0.85
+    
 ```
 ```math
-Required array output per day\left(Wh\right)=\frac{36}{0.85}\ =\ 42.35\ \
+Required\ array\ output\ per\ day\left(Wh\right) =\frac{36}{0.85} =\ 42.35
 ```
 ```math
-Energy output per module per day\left(Wh\right)=25Wh\times4.4\ =\ 110Wh
+    
 ```
 ```math
->\ W_{PV}=25Wh\ \ \times\ sunshine\ in\ Feb=4.4\
+Energy\ output\ per\ module\ per\ day\left(Wh\right) = 25Wh\times4.4 =\ 110Wh\ ;\ \ W_{PV}=25Wh\ \ \times\ sunshine\ in\ Feb=4.4
 ```
 ```math
-Module\ energy\ output\ at\ operating\ temperature\ (Wh)\ =0.8\ \times\ 110\ =\ 88Wh\
+    
 ```
 
-```math
->\ de-rating\ factor\ for\ critical\ applications\ =\ 0.8
-```
-```math
-Number\ of\ modules\ required\ to\ meet\ energy\ requirements\ =\ \frac{42.35\ Wh}{88\ Wh}=\ 0.48\ \approx\ 1\ moduale
-```
 
 ```math
->\frac{Required\ array\ output\ per\ day}{Module\ energy\ output\ at\ operating\ temperature}
+Module\ energy\ output\ at\ operating\ temperature\ (Wh) = 0.8\ \times\ 110\  =\ 88Wh  \ ;\ \ rating\ factor\ for\ critical\ applications =\ 0.8
 ```
+```math
+Number\ of\ modules\ required\ to\ meet\ energy\ requirements\ =\ \frac{42.35\ Wh}{88\ Wh} =\ 0.48\ \approx 1\ module\  \ ;\ \ \frac{Required\ array\ output\ per\ day}{Module\ energy\ output\ at\ operating\ temperature}
+```
+```math
+    
+```
+## Battery
 
-Based on the hand calculations, this subsystem will require one solar panel for a rated power of 25 W. 
 
 
+## Power Controller
+
+
+
+Based on the hand calculations this subsystem is going to require 1 solar module for rated power of 25 W.
+
+# BOM
+| Part | Part Number | Quantity | Price Per Unit | Total Price |
+| ------------ | ------------- | --------- | -------- | ---------- |
+| Solar Panel | AM-L02P25-1 | 1 | $35.99 |  $35.99 |
+| Seal Lead Acid | ML12-12F2 | 2 | $27.99 | $55.98 |
+| Total | ----- | ----- | ----- | $91.97 
 
 # References
 1. “Best direction for solar panels:,” Maximize Efficiency: Best Direction for Solar Panels”, https://www.sunrun.com/knowledge-center/best-direction-for-solar-panels (accessed Oct. 31, 2023).
