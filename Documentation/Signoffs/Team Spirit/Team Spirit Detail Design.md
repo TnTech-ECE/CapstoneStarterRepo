@@ -15,7 +15,7 @@ The team spirit system is made to show a representation of Tennessee Tech. It co
 
 The LEDs will be made into two strips, one of purple and one of gold, each consisting of 33 LEDs of their respective colors in parallel. Each LED has a built-in overcurrent protecting resistor, as shown in the figure below. These two lines of LEDs share a common ground rail, but each have their own power rail. The power comes from the main controller and will be a square wave with a frequency of 5 Hz and an amplitude of 5V with a DC offset of 2.5V. This ensures that the LEDs are turned on completely and off completely without sending a negative voltage through the circuit and damaging the LEDs. The purple side will start high, and the yellow side will start low. This is to ensure that they alternate and blink. 
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/Team%20Spirit/Spirit%20System%20Circuit.png)
 
 The LEDs will be placed on the left, right, and rear sides of the robot, with each LED spaced 1 inch from the next LED in the line, and lines are one inch apart. The yellow line is on top of the side, and the purple line is on the bottom, as shown in the figure below.
 
