@@ -22,24 +22,40 @@ To drive the motors, we will use a L298N motor driver that can drive up to but n
 The internal H–Bridge of the IC is responsible the operation of the motor, and the VS pin powers the IC’s internal H-Bridge which can handle 5V – 12V. The VSS provides power to the logic circuitry inside the L298N IC, with a voltage range of 5V to 7V. The output ports of the driver are OUT1 and OUT2 and OUT3 and OUT4 which can drive 5V to 12V dc motors and are connected to the positive and negative terminals respectively.  
 The direction control ports are IN1 and IN2, which controls motor 1 and IN3 and IN4, which controls motor 2. These 4 input ports are controlled using digital HIGH and LOW signals that change the rotation of each motor connected to the L298N.
 
- ## L298N Driver
+L298N Driver
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N_2.png)
 
 The truth table below shows the signals we want to send to change direction of the motor. This will be useful to us for when we want to reset the arm with the paint roller on it to pull in back into its original position. 
 
-## L298N Truth Table
+L298N Truth Table
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N%20TT.png)
 
-## Control block diagram for pushbutton system 
+Control block diagram for pushbutton system
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Control%20Block%20Diagram.png)
 
-## Model of the electrical inductance and internal motor resistance for the DC motor
+
+Model of the electrical inductance and internal motor resistance for the DC motor
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Electrical_LT.png)
 
-## Model of mechanical circuit output conversion from electrical domain model from the DC motor
+Model of mechanical circuit output conversion from electrical domain model from the DC motor
 
-![Alt text](
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
+
+
+Digital Logic Circuit for L298N Driver
+
+![Alt text]()
+H-Bridge circuit that is within the chip of the L298N chip
+
+![Alt text]()
+Drive gear parameters for 3d modeling and printing
+
+![Alt text]()
+Driven gear parameters for 3d modeling and printing
+
+![Alt text]()
+
