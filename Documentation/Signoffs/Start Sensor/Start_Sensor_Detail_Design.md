@@ -25,31 +25,29 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/newest%20Start%20System%20scematic.png)
 Figure 2. Wiring Diagram for Start Sensor
 
-The APDS-9960 is a digital RGB, ambient light, proximity, and gesture sensor that operates through I2C communication. 
+The APDS-9960 is a digital RGB, ambient light, proximity, and gesture sensor that operates through I2C communication.  
 
-VL (Optional Power): Pin 1 can be used to provide optional power to the IR LED used for proximity and gesture sensing. If the PS jumper is not connected, you can supply power to the IR LED through this pin. The voltage can range from 3.0V to 4.5V. 
+GND (Ground): Pin 6 establishes the ground connection for the circuit, serving as a shared reference point for electrical signal.
 
-GND (Ground): Pin 2 establishes the ground connection for the circuit, serving as a shared reference point for electrical signal.
+VCC (Power Supply): Pin 8 is used to power the APDS-9960 sensor board. It requires a voltage supply between 2.4V and 3.6V. 
 
-VCC (Power Supply): Pin 3 is used to power the APDS-9960 sensor board. It requires a voltage supply between 2.4V and 3.6V. 
+SDA (Serial Data Address): Pin 1 is part of the I2C communication interface. It's used to transfer data to and from the sensor when connected to a microcontroller. It is typically connected to the SDA pin on your microcontroller or I2C bus. 
 
-SDA (Serial Data Address): Pin 4 is part of the I2C communication interface. It's used to transfer data to and from the sensor when connected to a microcontroller. It is typically connected to the SDA pin on your microcontroller or I2C bus. 
+SCL (Serial Clock Line): Pin 7 is the clock line for I2C communication. It provides the clock pulses necessary for synchronized data transfer. It's usually connected to the SCL pin on your microcontroller or I2C bus. 
 
-SCL (Serial Clock Line): Pin 5 is the clock line for I2C communication. It provides the clock pulses necessary for synchronized data transfer. It's usually connected to the SCL pin on your microcontroller or I2C bus. 
+INT (External Interrupt): Pin 2 serves as an external interrupt pin. It goes LOW during an interrupt event, which is often used to notify the microcontroller that a certain condition or gesture has been detected. 
 
-INT (External Interrupt): Pin 6 serves as an external interrupt pin. It goes LOW during an interrupt event, which is often used to notify the microcontroller that a certain condition or gesture has been detected. 
+To wire the APDS-9960 sensor to a microcontroller, you would typically connect the following pins: 
 
-To wire the APDS-9960 sensor to a microcontroller, you would typically connect the following pins: -Connect VL (Pin 1) to a power supply (optional, if the PS jumper is not connected). 
+-Connect GND (Pin 6) to the ground (GND) of your microcontroller. 
 
--Connect GND (Pin 2) to the ground (GND) of your microcontroller. 
+-Connect VCC (Pin 8) to the power supply voltage within the specified range. 
 
--Connect VCC (Pin 3) to the power supply voltage within the specified range. 
+-Connect SDA (Pin 1) to the I2C_data pin on your microcontroller or I2C bus. 
 
--Connect SDA (Pin 4) to the SDA pin on your microcontroller or I2C bus. 
+-Connect SCL (Pin 7) to the I2C_CLK pin on your microcontroller or I2C bus. 
 
--Connect SCL (Pin 5) to the SCL pin on your microcontroller or I2C bus. 
-
--Connect INT (Pin 6) to an available external interrupt pin on your microcontroller. 
+-Connect INT (Pin 2) to an available external interrupt pin on your microcontroller. 
 
 With this wiring setup and the appropriate code, you can use the APDS-9960 sensor to detect and process RGB colors, ambient light levels, proximity, and gestures, making it a versatile sensor for various applications like touchless interfaces and color detection.
 
