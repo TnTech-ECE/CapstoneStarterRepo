@@ -14,6 +14,13 @@ The purpose of the charge controller subsystem is to maximize the power output o
 3. The subsystem shall prevent the batteries from discharging more than 50% of their maximum capacity. This constraint is to prevent the batteries from deep discharge. Deep discharge prematurly ages the battery. The maximum discharge percentage of 50% has been chosen TODO     To ensure the batteries are able to be used for as long as possible, deep discharge protection is necessary.
 4. The subsystem shall prevent the batteries from charging more than 95% of their maximum capacity. This constraint is to prevent the batteries from overcharging. Overcharging can cause the overheating and long term damage to the batteries. The maximum charge of 95% has been chosen TODO    To ensure the batteries are able to be used for as long as possible, overcharge protection is necessary. 
 
+*Figure 1. Charge Controller Block Diagram*
+
+
+![Charge Controller Block Diagram](https://raw.githubusercontent.com/Brady-Beecham/Capstone-Team-PowerHouse/Charge_Controller_Signoff/Documentation/Images/ChargeControllerBlockDiagram.jpeg)
+
+
+
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
