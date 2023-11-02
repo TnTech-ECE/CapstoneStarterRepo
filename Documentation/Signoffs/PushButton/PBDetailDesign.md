@@ -5,8 +5,8 @@ The push button subsystem will be the process of pushing the stop button to stop
 ## Specifications and Restraints
 
 
-| Number | Constraint component | | Constraint description | Origin |
-|--------|----------------------|-|------------------------|--------|
+| Number | Constraint component | Constraint description | Origin |
+|--------|----------------------|------------------------|--------|
 | 1. | Arm/Shaft | Length of the arm shall not extend out before the start | Competition Specifications |
 | 2. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
 | 3. | Arm/Shaft | The dimensions before the start of the arm shall not exceed 1 cubic ft. | Competition Specifications |
