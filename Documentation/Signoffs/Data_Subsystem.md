@@ -18,15 +18,22 @@ The data subsystem is responsible for the collection, transmission, and storage 
 4. The system shall be able to determine if a vehicle has entered or exited a lot based upon which GPIO pin receives a 3.3V signal. This constraint is a system requirement. If the microcontrollers cannot determine whether a car has entered or exited a lot with a high degree of accuracy, then it is useless to the system.
 5. The system shall be able to communicate effectively over a distance of at least 255 feet, which is a generous estimate of the straight line distance between the capstone lab and the furthest point the MCU may be located beside the lot entrance/exit. This distance must be achieved even when the signal has to pass through several layers of material that are part of Brown Hall. Reliable communication is a requirement for the system to function as intended. The calculation to approximate straight line distance from the capstone lab to the side of the road is: distance = sqrt(((num_floors*floor_height)^2)+(horizontal_distance^2)), num_floors being equal to 3, floor_height being equal to 15 ft, and horizontal_distance being equal to 250 ft. These values are purposely generous to account for any inaccuracy in the estimates, since the horizontal distance is based on a Google Maps measurement of 190ft, and the floor height is from an estimate based on average ceiling height plus the distance between floors (thickness of the floor). The signal will also have to be able to penetrate materials such as concrete, metal, and glass. The inability to penetrate these materials will mean an inability to transmit and receive data. The system must also be resilient to interference from the many 2.4GHz devices located across the entirety of Brown Hall.
 
-## Schematics
+## Schematics / Block Diagrams
 <img width="1218" alt="Basic block diagram Data Subsystem" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0370d95e-b63c-4620-a6a8-0f01a03bab97">
+
 <em>Figure 1. Block Diagram of Entire Subsystem</em>
 
 <img width="1226" alt="ESP32 block diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0bb3475e-d1ad-4ddd-a575-aecfe7b7a049">
+
 <em>Figure 2. ESP32 Block Diagram</em>
 
 <img width="1488" alt="Network Block Diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/6d3b6970-f1ab-40bd-b1b9-77c46b6871d3">
+
 <em>Figure 3. Network Block Diagram</em>
+
+![ESP32-Pinout-and-Dims](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/ea00408d-8041-4e54-99b8-66623ce833d7)
+
+<em>Figure 4. ESP WROOM 32E Dimensions and Pins</em>
 
 
 
