@@ -19,13 +19,14 @@ The data subsystem is responsible for the collection, transmission, and storage 
 5. The system shall be able to communicate effectively over a distance of at least 255 feet, which is a generous estimate of the straight line distance between the capstone lab and the furthest point the MCU may be located beside the lot entrance/exit. This distance must be achieved even when the signal has to pass through several layers of material that are part of Brown Hall. Reliable communication is a requirement for the system to function as intended. The calculation to approximate straight line distance from the capstone lab to the side of the road is: distance = sqrt(((num_floors*floor_height)^2)+(horizontal_distance^2)), num_floors being equal to 3, floor_height being equal to 15 ft, and horizontal_distance being equal to 250 ft. These values are purposely generous to account for any inaccuracy in the estimates, since the horizontal distance is based on a Google Maps measurement of 190ft, and the floor height is from an estimate based on average ceiling height plus the distance between floors (thickness of the floor). The signal will also have to be able to penetrate materials such as concrete, metal, and glass. The inability to penetrate these materials will mean an inability to transmit and receive data. The system must also be resilient to interference from the many 2.4GHz devices located across the entirety of Brown Hall.
 
 ## Schematics / Block Diagrams
-<img width="1218" alt="Basic block diagram Data Subsystem" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0370d95e-b63c-4620-a6a8-0f01a03bab97">
+
+![Basic block diagram Data Subsystem](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/c43f805b-1c6c-412f-835d-2dbf95f1ec6d)
 <em>Figure 1. Block Diagram of Entire Subsystem</em>
 
-<img width="1226" alt="ESP32 block diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0bb3475e-d1ad-4ddd-a575-aecfe7b7a049">
+![ESP32_Operation](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/38003323-e503-4745-a4c4-f8c044c9376d)
 <em>Figure 2. ESP32 Block Diagram</em>
 
-<img width="1488" alt="Network Block Diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/6d3b6970-f1ab-40bd-b1b9-77c46b6871d3">
+![Network_Block_Diagram](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/afadafb0-dcaf-43ec-a1ce-43f3f5a92893)
 <em>Figure 3. Network Block Diagram</em>
 
 ![ESP32_Schematic-Dimensions_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/27146c5b-f9e3-4d8a-9bb0-b24fef99b645)
