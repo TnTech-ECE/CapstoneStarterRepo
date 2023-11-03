@@ -20,20 +20,21 @@ The data subsystem is responsible for the collection, transmission, and storage 
 
 ## Schematics / Block Diagrams
 <img width="1218" alt="Basic block diagram Data Subsystem" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0370d95e-b63c-4620-a6a8-0f01a03bab97">
-
 <em>Figure 1. Block Diagram of Entire Subsystem</em>
 
 <img width="1226" alt="ESP32 block diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/0bb3475e-d1ad-4ddd-a575-aecfe7b7a049">
-
 <em>Figure 2. ESP32 Block Diagram</em>
 
 <img width="1488" alt="Network Block Diagram" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/6d3b6970-f1ab-40bd-b1b9-77c46b6871d3">
-
 <em>Figure 3. Network Block Diagram</em>
 
-![ESP32-Pinout-and-Dims](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/ea00408d-8041-4e54-99b8-66623ce833d7)
+![ESP32_Schematic-Dimensions_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/27146c5b-f9e3-4d8a-9bb0-b24fef99b645)
+<em>Figure 4. Dimensions of ESP32 and RFM85W Breakout Board</em>
 
-<em>Figure 4. ESP WROOM 32E Dimensions and Pins</em>
+![ESP32_Schematic-Wiring_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/07d51866-1d7c-4f3a-9a28-a11da050b1f7)
+<em>Figure 5. GPIO connections for ESP32</em>
+
+
 
 
 
