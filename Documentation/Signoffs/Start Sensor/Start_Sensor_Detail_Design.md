@@ -18,7 +18,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 | 2. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
 | 3. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
 | 4. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
-| 5. | The RGB Sensor shall be located in a width range around around 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
+| 5. | The RGB Sensor shall be located in a width range with in 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
 
 ## Buildable Schematic
 
@@ -75,13 +75,15 @@ Figure 6 offers a rough visual representation of how the Button and Sensor are i
 
 ## Analysis
 
-Constraint 1 Solution:  The RGB Sensor is configured to specifically detect the color green by setting both its red and blue sensors to a high state, allowing it to be sensitive to green light. The detailed explanation of how this configuration operates can be found in the Buildable Schematic Section, taking into account the specific characteristics of the LED's green light that it will be reading.
+Constraint 1 Solution:  The RGB Sensor shall detect a spectrum of green light from an LED. The RGB Sensor is configured to specifically detect the color green by setting both its red and blue sensors to a high state, allowing it to be sensitive to green light. The detailed explanation of how this configuration operates can be found in the Buildable Schematic Section, taking into account the specific characteristics of the LED's green light that it will be reading.
 
-Constraint 2 Solution: The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. Failing to meet this time limit could result in us not earning points for that particular run of the competition. To mitigate this risk, we have a contingency plan in place – we can manually initiate the robot's start using the push button. This approach allows us to proceed with other tasks aimed at scoring points.
+Constraint 2 Solution: The RGB Sensor shall detect the light within 3 seconds of light being turned on. The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. Failing to meet this time limit could result in us not earning points for that particular run of the competition. To mitigate this risk, we have a contingency plan in place – we can manually initiate the robot's start using the push button. This approach allows us to proceed with other tasks aimed at scoring points.
 
 However, it's essential to emphasize the importance of adhering to the 3-second window. Any delay beyond this limit could potentially cost us points in other aspects of the competition. Therefore, precise timing and efficient sensor operation are key to our overall success in the competition.
 
-Constraint 3 Solution: The RGB Sensor will be located on the back, middle of the robot (Figure 3 & 5). This will ensure that the sensor has a close enough range to read the Green LED. The Green LED is located on the back beginning wall, like how figure 7 conveys. The Sensor shall be placed between 3.7 to 4.3 inches from the ground. This is because the Sensor is best at detecting between 0.0 to 0.8 inches away; however the LED cannot be read by the sensor if it is parallel with the LED due to potential blockage or shadows from the sensor itself. Placing it slightly down will allow more light to flow into the sensor. The B represents the location of the Green LED on the Competition Board. Figure 8 shows us the dimensions of the location of the Green LED so that we may place our RGB sensor appropriately.
+Constraint 3 Solution: To optimize the performance of the RGB Sensor, it will be positioned at a specific height of approximately 4 inches from the ground, as depicted in Figures 3 and 5. This location, at the back and center of the robot, ensures proximity to the Green LED situated on the starting wall, illustrated in Figure 7. This positioning is essential because the sensor is most effective at detecting objects within the range of 0.0 to 0.8 inches. However, placing it parallel to the LED may lead to potential blockage or shadows caused by the sensor itself, hindering accurate readings.
+
+By situating the sensor slightly lower, it allows for better light capture, enhancing its ability to detect the Green LED. The optimal placement range lies between 3.7 to 4.3 inches, and 4 inches serves as the middle ground within this range. The 'B' denoted on the Competition Board (Figure 8) indicates the precise location of the Green LED, offering a clear reference for positioning the RGB sensor appropriately. This positioning strategy aims to ensure consistent and reliable detection of the Green LED, a critical aspect of the robot's functionality.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram.png)
 Figure 7. Competition Board Layout  
@@ -89,12 +91,19 @@ Figure 7. Competition Board Layout
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 Figure 8. Exact Height of Start Sensor
 
-Constraint 4 Solution: The RGB sensor must be positioned in close proximity to the Green Light LED, with an optimal placement range of 0.5 inches. This confines the allowable distance to a 1-inch zone, ensuring the sensor captures the widest range of green light for accurate detection.
+Constraint 4 Solution: 
+The placement of the RGB Sensor must be meticulously calibrated within a range of 0.5 inches of the Green Light LED location. It is imperative to position the RGB sensor in extremely close proximity to the Green Light LED, with an optimal range of 0.5 inches. This stringent requirement effectively confines the allowable distance to a tightly regulated 1-inch zone. This precision ensures that the sensor is strategically positioned to capture the maximum amount of green light, facilitating highly accurate detection of the Green Light LED.
+
+The reason for this specific range is to guarantee that the sensor can consistently and reliably detect the Green Light LED. By positioning it within this 0.5-inch zone, we maximize the amount of green light entering the sensor, thereby enhancing its sensitivity and reliability in recognizing the LED's presence. This meticulous placement is crucial for the overall success and functionality of the robot in the intended tasks.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
 Figure 9. Exact location lengthwise of Start Sensor and green LED
 
-Constraint 5 Solution: The RGB Sensor shall be located within a width range of the Green Light LED location. This width range would be around 3 inches from the wall to the middle of the sensor. In figure 7, you can see that the distance from the middle of the sensor to the end of the robot is 1.3 inches or 3.3 cm. This range is to keep it as close as possible to the Green LED so that the sensor may read the light and output like anticipated. 
+Constraint 5 Solution: The RGB Sensor is to be precisely positioned within a width range, spanning a distance of 3 inches from the wall to the midpoint of the Green Light LED location. This targeted width range entails that the sensor must be situated within 3 inches from the wall and towards the midpoint of the sensor's own location.
+
+In Figure 7, the illustration provides a clear perspective of this setup, demonstrating that the distance from the sensor's midpoint to the end of the robot measures approximately 1.3 inches or 3.3 cm. This specific placement range is meticulously chosen to ensure the sensor's proximity to the Green LED, optimizing its ability to detect the light and provide the expected output.
+
+The rationale behind this range is to maintain the sensor's close proximity to the Green LED, thus enhancing its ability to read and respond to the light source accurately. This strategic positioning is critical for achieving the desired performance and functionality of the robot in its designated tasks. 
 
 ## BOM
 
