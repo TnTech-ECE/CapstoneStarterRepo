@@ -2,7 +2,8 @@
 
 ## Function of the Subsystem
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Start%20Block%20Diagram.png)
+![Start Block Diagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/3065734b-7bd4-4b11-8a22-0d7dc8c595ce)
+<br />
 Figure 1: Start Sensor Block Diagram
 
 The Start Sensor System plays a pivotal role in launching the robot's predefined course. It employs an RGB color sensor programmed to identify a green LED, which marks the beginning of the robot's journey. Upon powering the sensor, if it detects the specified green color, it promptly communicates this information to the Main Controller, triggering the start state.
@@ -23,6 +24,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 ## Buildable Schematic
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/newest%20Start%20System%20scematic.png)
+<br />
 Figure 2. Wiring Diagram for Start Sensor
 
 The APDS-9960 is a digital RGB, ambient light, proximity, and gesture sensor that operates through I2C communication.  
@@ -52,21 +54,25 @@ To wire the APDS-9960 sensor to a microcontroller, you would typically connect t
 With this wiring setup and the appropriate code, you can use the APDS-9960 sensor to detect and process RGB colors, ambient light levels, proximity, and gestures, making it a versatile sensor for various applications like touchless interfaces and color detection.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/over%20all%203d%20model.PNG)
+<br />
 Figure 3. Rough 3D Model of entire Robot
 
 The figure above shows a rough 3D model of what the robot will look like with the Start Sensor System. In the picture above, the Green represents Power System, the blue represents the Navigation System, the Paint roller is the Button Push Mechanism, the Orange represents the Main Controller, the Yellow represents the Team Spirit System, the Brown stick on the back of the robot represents the Box Sweep System, and the Drivetrain is located underneath the robot. The start system includes both Gray rectangles near the back of the robot. The red marker is the push button, while the black marker is the color sensor, the perf board is represented with a purple area under the pushbutton. 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Side.jpg)
+<br />
 Figure 4. Precise Height of Start Sensor
 
 Figure 4 (above) shows the scale of how the Sensor and button will be located from a side view. You can see that the bottom of the sensor and button range from 3.7-4.3 inches due to the location of the Green LED placed on the course (Figures 6 & 7). The height of the tracks, once designed in the Drivetrain System, will adjust this height further, however the sensor must hit this range to properly read the green light that indicates the start of the run(Constaint 4).
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top.png)
+<br />
 Figure 5. Precise location of Start Sensor
 
 Figure 5 (above) shows where the Sensor will lay out on the Robot and a rough location of the button. You can read more about the button location in the analysis section. This does not include the perf board because it allows for a cleaner view of what is happening.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/button%20with%20perf%20board.PNG)
+<br />
 Figure 6. Button and Sensor attached to Robot
 
 Attaching to Chassis:
@@ -86,9 +92,11 @@ Constraint 3 Solution: To optimize the performance of the RGB Sensor, it will be
 By situating the sensor slightly lower, it allows for better light capture, enhancing its ability to detect the Green LED. The optimal placement range lies between 3.7 to 4.3 inches, and 4 inches serves as the middle ground within this range. The 'B' denoted on the Competition Board (Figure 8) indicates the precise location of the Green LED, offering a clear reference for positioning the RGB sensor appropriately. This positioning strategy aims to ensure consistent and reliable detection of the Green LED, a critical aspect of the robot's functionality.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram.png)
+<br />
 Figure 7. Competition Board Layout  
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
+<br />
 Figure 8. Exact Height of Start Sensor
 
 Constraint 4 Solution: 
@@ -97,6 +105,7 @@ The placement of the RGB Sensor must be meticulously calibrated within a range o
 The reason for this specific range is to guarantee that the sensor can consistently and reliably detect the Green Light LED. By positioning it within this 0.5-inch zone, we maximize the amount of green light entering the sensor, thereby enhancing its sensitivity and reliability in recognizing the LED's presence. This meticulous placement is crucial for the overall success and functionality of the robot in the intended tasks.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
+<br />
 Figure 9. Exact location lengthwise of Start Sensor and green LED
 
 Constraint 5 Solution: The RGB Sensor is to be precisely positioned within a width range, spanning a distance of 3 inches from the wall to the midpoint of the Green Light LED location. This targeted width range entails that the sensor must be situated within 3 inches from the wall and towards the midpoint of the sensor's own location.
