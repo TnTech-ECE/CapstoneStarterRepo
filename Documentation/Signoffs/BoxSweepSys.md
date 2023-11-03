@@ -15,22 +15,24 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 | 4. | The arm of the sweep shall reach far enough to obtain the large boxes | Competition Specifications |
 
 
+
 ## Buildable Schematic of Subsystem
-![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/49d00ecf-5d38-4079-bfce-1f7548c8ef04)
+![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/ccd1bc9a-c453-4c25-b664-b419bf981e83)
 <br />Figure 2: Box Sweep Wiring Diagram
 <br />
 <br />
 The SG90 Servo is a servo motor with 180 degrees of movement. This will be the point of motion for the sweep arm that will collect the boxes. The SG90 has three pins that control the function of the motor.
 
-Pulse Width Modulation (PWM, orange wire): This pin shall be connected to a PWM Pin on the main controller. Code within the main controller will send the appropriate pulse to lower the arm from 90 degrees to 180 degrees once the start signal is received by the main controller.
+Pulse Width Modulation (PWM, orange wire): This pin shall be connected to a PWM Pin on the main controller. Code within the main controller will send the appropriate pulse through the PWM pin to lower the arm from 90 degrees to 180 degrees once the start signal is received by the main controller.
 <br />
 <br />
-Vcc (red wire): This pin will be connected to the output of the Power System to power the SG90 Servo. The SG90 requires a voltage between 4.8V - 6V to be properly powered.
+Vcc (red wire): This pin shall be connected to the output of the Power System to power the SG90 Servo. The SG90 requires a voltage between 4.8V - 6V to be properly powered. The servo shall pull __V so that the motor will not move faster than 1 inch per second.
 <br />
 <br />
 Ground (GND, brown wire): This pin shall be connected to the ground of the power system. This shall properly ground the servo. 
 <br />
 <br />
+## Under Construction -- switching to Blender, redesigning, and refining
 ![BoxSweep3D](https://github.com/cebttu/CapstoneTeam1/assets/100803345/81a46d01-d600-43d9-bf44-87c3ea941958)
 <br /> Figure 1: Box Sweep 3D Model
 <br />
