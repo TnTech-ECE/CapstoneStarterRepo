@@ -32,7 +32,8 @@ Table 2.  Parameters for the voltages and currents for the subsystems.
 
 # Buildable schematic
 
-![Solar Power Block Diagram](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/7ac43640-4a02-4f02-a8d2-f1c25f2ac158)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/90190d97-494c-4989-bda5-5b015d1d8a00)
+
 *Figure 1. Solar Power Block Diagram*
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/9747e6d6-a8f2-4858-9b76-fd6fab358187)
@@ -147,6 +148,11 @@ For a battery capacity of 15.75 Ah, increasing the battery capacity is considere
 | Solar Panel | AM-L02P25-1 | 1 | $35.99 |  $35.99 |
 | Seal Lead Acid | ML12-12F2 | 2 | $27.99 | $55.98 |
 | Total | ----- | ----- | ----- | $91.97 
+
+
+Solar Panel: https://www.amazon.com/gp/product/B01IFJ73X4/ref=ewc_pr_img_1?smid=A5KU5HDAPDC75&psc=1
+
+Seal lead acid Battery: https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
 
 # References
 1. “Best direction for solar panels:,” Maximize Efficiency: Best Direction for Solar Panels”, https://www.sunrun.com/knowledge-center/best-direction-for-solar-panels (accessed Oct. 31, 2023).
