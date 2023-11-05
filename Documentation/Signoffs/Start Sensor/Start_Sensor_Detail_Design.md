@@ -19,7 +19,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 | 2. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
 | 3. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
 | 4. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
-| 5. | The RGB Sensor shall be located in a width range with in 3 inches from the wall to the middle of of the Green Light LED location | Competition and Sensor Specifications |
+| 5. | The RGB Sensor shall be laterally within 1.5 inches of the LED when the robot is placed on the board| Competition and Sensor Specifications |
 
 ## Buildable Schematic
 
@@ -109,7 +109,11 @@ The reason for this specific range is to guarantee that the sensor can consisten
 <br />
 Figure 9. Exact location lengthwise of Start Sensor and green LED
 
-Constraint 5 Solution: The RGB Sensor is to be precisely positioned within a width range, spanning a distance of 3 inches from the wall to the midpoint of the Green Light LED location. This targeted width range entails that the sensor must be situated within 3 inches from the wall and towards the midpoint of the sensor's location.
+Constraint 5 Solution: To ensure precise and effective detection of the Green LED, it is essential to position the RGB Sensor within a carefully defined lateral range. Specifically, this range spans a distance of 1.5 inches from either side of the Green LED, thereby creating a 3-inch zone in total. Placing the sensor within this range is crucial for reliable and accurate operation.  
+
+By accommodating this 3-inch width range, we guarantee that the sensor will be optimally situated in relation to the Green LED. This strategic placement enhances the sensor's ability to detect the presence of the Green LED with the highest degree of accuracy. Moreover, it minimizes the risk of any obstructions or shadows that might interfere with the sensor's performance.  
+
+This meticulous approach to positioning the RGB Sensor not only ensures consistent and reliable detection but also enhances the overall functionality of the robot in its designated tasks. It's a solution that maximizes the sensor's effectiveness and contributes to the success of the robot in real-world applications.
 
 In Figure 7, the illustration provides a clear perspective of this setup, demonstrating that the distance from the sensor's midpoint to the end of the robot measures approximately 1.3 inches or 3.3 cm. This specific placement range is meticulously chosen to ensure the sensor's proximity to the Green LED, optimizing its ability to detect the light and provide the expected output.
 
