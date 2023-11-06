@@ -28,7 +28,8 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | Buck-Boost Converter | MAX20040ATPA/VY+ | 1 | $2.48 | $2.48 |
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
 | Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
-| Dual Op Amp | TSB622IST | 1 | $1.54 | $1.54 |
-| | | | | |
+| Bidirectional Current and Power Monitor | INA226AIDGST | 1 | $3.33 | $3.33 |
+| MOSFET | BSC13DN30NSFD | 1 |$1.72 | $1.72 | 
+| Schottky Diode | | 1 | | |
 | Total | ----- | ----- | ----- | $--.-- |
 
