@@ -21,7 +21,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 
 # Analysis
 
-| Part | Input Voltage Range (V) | Input Current Range (V) | Output Voltage Range (A) | Output Current Range (A) |
+| Part | Input Voltage Range (V) | Input Current Range (A) | Output Voltage Range (V) | Output Current Range (A) |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Arduino Nano | 0 to 5 | --- | 0 to 5 | --- |
 | Solar Panel | --- | --- | 0 to 18 | 0 to 1.4 |
