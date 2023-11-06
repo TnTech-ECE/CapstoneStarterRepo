@@ -297,11 +297,11 @@ Due to restrictions from Tennessee Technological University, the wires cannot be
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Diablo Controls Inc. DSP-21 Vehicle Detector | DSP-21-LV | 2 | $104.95 | $209.90 |
 | Diablo 11 Pin Harness | CBL-005 | 2 | $10.92 | $21.84 |
-| 10FT Cord Cover Floor,Flexible Floor Cable Cover,Cord Hider Floor to Organize and Protect Wire,Floor Wire Covers Floor Cord Cover for Cords,for Home and Office (10ft, 5 Channel) | B09YLJS37F | 18 | $21.99 | $395.82 |
+| 10FT Cord Cover Floor,Flexible Floor Cable Cover,Cord Hider Floor to Organize and Protect Wire,Floor Wire Covers Floor Cord Cover for Cords,for Home and Office (10ft, 5 Channel) | B09YLJS37F | 18 | $22.99 | $413.82 |
 | Unjacketed Wire<sup>*</sup> | 14 AWG | 285 ft. | $0.00 | $0.00 |
 | Wire Connections<sup>*</sup> | N/A | N/A | $0.00 | $0.00 |
 | Jacketed Wire, Two Conductor <sup>*</sup> | 14 AWG | 100 ft. | $0.00 | $0.00 |
-| Total | ----- | ----- | ----- | $627.56 |
+| Total | ----- | ----- | ----- | $645.56 |
 
 <sup>*</sup> These parts will be provided by the Department of Electrical and Computer Engineering at Tennessee Technological University.
 
