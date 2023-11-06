@@ -72,7 +72,8 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 | RAK5146 PiHAT Kit for LoRaWAN US915 Without GPS                                  | N/A, RAK Wireless SKU: 816025       | 1        | $100.00        | $100.00     |
 | Pilot Gateway Pro LoRa Enclosure Kit for Raspberry Pi 4 - RAK7244                | N/A, Adafruit PID: 5057             | 1        | $27.50         | $27.50      |
 | SanDisk 128GB Ultra microSDXC                                                    | SDSQUAB-128G-GN6MA                  | 1        | $12.49         | $12.49      |
-| TOTAL                                                                            |                                     |          |                | $345.38     |
+| CanaKit 3.5A Raspberry Pi 4 Power Supply (USB-C)                                 | N/A, ASIN: B07TYQRXTK               | 1        | $9.99          | $9.99       |
+| TOTAL                                                                            |                                     |          |                | $355.37     |
 
 
 ## References
