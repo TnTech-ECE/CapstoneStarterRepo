@@ -310,6 +310,8 @@ Due to restrictions from Tennessee Technological University, the wires cannot be
 | Total | ----- | ----- | ----- | $206.95 |
 
 <sup>*</sup> These parts will be provided by the Department of Electrical and Computer Engineering at Tennessee Technological University.
+
+
 <sup>**</sup> These parts will not be used in this system and the costs are not calculated into the total costs.  However, these parts will be mentioned for future reference in this system.
 
 Note: The prices listed above do not include sales tax or shipping costs.
