@@ -19,6 +19,31 @@ The purpose of the charge controller subsystem is to maximize the power output o
 
 ![Charge Controller Block Diagram](https://raw.githubusercontent.com/Brady-Beecham/Capstone-Team-PowerHouse/Charge_Controller_Signoff/Documentation/Images/ChargeControllerBlockDiagram.jpeg)
 
+# Analysis
+
+output range from solar: 0 V and 0 A to 18 V and 1.4 A [1]
+
+input range for digital pot: 5 V High, 0.8 V Low for digital pins; ?? V ?? A for H / L pins
+output range for digital pot: function of H / L and the set resistance
+
+Input range for current sensors: -5 A to 5 A
+Output range for current sensors: 0 V to 8 V
+
+Voltage reader for MCU: the voltage is stepped down using a voltage divider that will divide 18 V to 4.5 V using a 0.25 gain
+
+BuckBoost input range: 4.5 V to 36 V
+Buck Boost output range: 12 V ?? A
+
+MOSFET input range: 
+ continuous drain current-> 14 A
+ gate source voltage-> -20 A to 20 A
+ gate threshold voltage 2 V to 4 V
+
+Bidirectional current and power monitor analog input range: -40 V to 40 V
+Digital output current: 10 mA
+
+Arduino nano max analog input: 5 V
+
 
 
 # BOM
@@ -32,4 +57,10 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | MOSFET | BSC13DN30NSFD | 1 |$1.72 | $1.72 | 
 | Schottky Diode | | 1 | | |
 | Total | ----- | ----- | ----- | $--.-- |
+
+# References
+Solar panel datasheet: https://m.media-amazon.com/images/I/C1dszUHMnaL.pdf
+Digital potentiometer datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/MAX5471-MAX5475.pdf
+MOSFET datasheet: https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a
+Bidirectional current and power monitor datasheet: https://www.ti.com/lit/ds/symlink/ina226.pdf?ts=1699175796094&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FINA226%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-null-null-GPN_EN-cpc-pf-google-eu%2526utm_content%253DINA226%2526ds_k%253DINA226%2BDatasheet%2526DCM%253Dyes%2526gclid%253DEAIaIQobChMIvurP68KsggMVYZKDBx2_egHxEAAYASAAEgIQ9PD_BwE%2526gclsrc%253Daw.ds
 
