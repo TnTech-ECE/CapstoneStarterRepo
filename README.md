@@ -39,6 +39,7 @@ I have been working for Merrick and Company for over 2 years. I plan to move to 
 Liam Counasse
 
 Adrin Jackson
+I am an intern with TVA. Some hobbies of mine are hiking and golfing with my friends and exploring new restaraunts.
 
 Conor Orr
 I am involved in multiple campus organizations. I am a practical problem solver and love getting my hands dirty.
