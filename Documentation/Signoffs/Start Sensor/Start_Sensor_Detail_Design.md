@@ -74,8 +74,8 @@ Attaching to Chassis:
 Figure 5 offers a rough visual representation of how the Button and Sensor are integrated into the robot. Our strategy involves employing a perf board for the button, which will be securely soldered into position, while the sensor will be affixed to the chassis using screw fastenings. This assembly method is designed for maximum stability and reliability in our robot's configuration, as exemplified by the corner bolts that secure the boards firmly in place. 
 
 ![Shroud](https://github.com/cebttu/CapstoneTeam1/assets/100803345/1b6439f0-add8-4d68-8b85-bc7182725e2c)
-Figure 6. Shroud
 <br />
+Figure 6. Shroud
 To further aid in the capturing of the light from the LED, a shroud will be constructed and centered over the chip. This shroud shall be tall enough (0.8 inches) to reach above the LED, this will allow the maximum amount of light from the LED to enter the shroud, while still blocking much of the ambient light of the room. The inside of the shroud also will be lined with a reflective material, such as aluminum foil to further reflect the LED's light into the sensor.
 
 
