@@ -28,7 +28,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | Solar Panel | --- | --- | 0 to 18 | 0 to 1.4 |
 | Digital Potentiometer | 0.8 to 5 (Digital pins only) | --- | --- | ---|
 | Current Sensor | --- | -5 to 5 | 0 to 8 | 0.003 to 0.010 |
-| Buck Boost Converter | 4.5 to 36 | --- | 12 | --- |
+| Buck Boost Converter | 4.5 to 36 | --- | 12 | 1.2 max |
 | MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
