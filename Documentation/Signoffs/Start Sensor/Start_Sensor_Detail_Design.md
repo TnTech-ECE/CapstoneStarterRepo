@@ -16,10 +16,10 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 | Number | Constraint Description | Origin |
 |--------|------------------------|--------|
 | 1. | The RGB Sensor shall detect a spectrum of green light from an LED | Competition Specifications |
-| 2. | The RGB Sensor shall detect the light within 3 seconds of light being turned on | Strategy Specifications |
-| 3. | The RGB Sensor shall be placed between 3.7 to 4.3 inches from the ground | Competition and Sensor Specifications |
-| 4. | The RGB Sensor shall be located with in a length range of 0.5 inches of the Green Light LED location | Competition and Sensor Specifications |
-| 5. | The RGB Sensor shall be laterally within 1.5 inches of the LED when the robot is placed on the board| Competition and Sensor Specifications |
+| 2. | The RGB Sensor shall detect the green light within 3 seconds of the green LED being turned on | Strategy Specifications |
+| 3. | The RGB Sensor shall be placed within a vertical range of 0.8 inches below the center of the LED | Sensor Specifications |
+| 4. | The RGB Sensor shall be located within a range of 0.5 inches to the left or right of the Green Light LED location | Sensor Specifications |
+| 5. | The RGB Sensor shall be at most 1.5 inches from the LED when the robot is placed on the board| Sensor Specifications |
 
 ## Buildable Schematic
 
@@ -55,72 +55,65 @@ With this wiring setup and the appropriate code, you can use the APDS-9960 senso
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/over%20all%203d%20model.PNG)
 <br />
-Figure 3. Rough 3D Model of entire Robot
+Figure 3. Rough 3D Model of the entire Robot
 
-The figure above shows a rough 3D model of what the robot will look like with the Start Sensor System. In the picture above, the Green represents Power System, the blue represents the Navigation System, the Paint roller is the Button Push Mechanism, the Orange represents the Main Controller, the Yellow represents the Team Spirit System, the Brown stick on the back of the robot represents the Box Sweep System, and the Drivetrain is located underneath the robot. The start system includes both Gray rectangles near the back of the robot. The red marker is the push button, while the black marker is the color sensor, the perf board is represented with a purple area under the pushbutton. 
+The figure above shows a rough 3D model of what the robot will look like with the Start Sensor System. In the picture above, the Green represents the Power System, the blue represents the Navigation System, the Paint roller is the Button Push Mechanism, the Orange represents the Main Controller, the Yellow represents the Team Spirit System, the Brown stick on the back of the robot represents the Box Sweep System, and the Drivetrain is located underneath the robot. The start system includes both Gray rectangles near the back of the robot. The red marker is the push button, while the black marker is the color sensor, the perf board is represented with a purple area under the push button. 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Side.jpg)
+![ChipFromWall](https://github.com/cebttu/CapstoneTeam1/assets/100803345/45fb78c1-9829-4a60-b00f-9874cf189764)
 <br />
-Figure 4. Precise Height of Start Sensor
+Figure 4. Precise Height of Start Sensor and Distance from LED
 
-Figure 4 (above) shows the scale of how the Sensor and button will be located from a side view. You can see that the bottom of the sensor and button range from 3.7-4.3 inches due to the location of the Green LED placed on the course (Figures 6 & 7). The height of the tracks, once designed in the Drivetrain System, will adjust this height further, however the sensor must hit this range to properly read the green light that indicates the start of the run(Constaint 4).
+Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The chip is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 4 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 8 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush. This will place the middle of the chip 1.35 inches from the LED's face.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top.png)
-<br />
-Figure 5. Precise location of Start Sensor
-
-Figure 5 (above) shows where the Sensor will lay out on the Robot and a rough location of the button. You can read more about the button location in the analysis section. This does not include the perf board because it allows for a cleaner view of what is happening.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/button%20with%20perf%20board.PNG)
 <br />
-Figure 6. Button and Sensor attached to Robot
+Figure 5. Button and Sensor attached to Robot
 
 Attaching to Chassis:
+Figure 5 offers a rough visual representation of how the Button and Sensor are integrated into the robot. Our strategy involves employing a perf board for the button, which will be securely soldered into position, while the sensor will be affixed to the chassis using screw fastenings. This assembly method is designed for maximum stability and reliability in our robot's configuration, as exemplified by the corner bolts that secure the boards firmly in place. 
 
-Figure 6 offers a rough visual representation of how the Button and Sensor are integrated into the robot. Our strategy involves employing a perf board for the button, which will be securely soldered into position, while the sensor will be affixed to the chassis using screw fastenings. This assembly method is designed for maximum stability and reliability in our robot's configuration, as exemplified by the corner bolts that secure the boards firmly in place. 
+![Shroud](https://github.com/cebttu/CapstoneTeam1/assets/100803345/1b6439f0-add8-4d68-8b85-bc7182725e2c)
+Figure 6. Shroud
+<br />
+To further aid in the capturing of the light from the LED, a shroud will be constructed and centered over the chip. This shroud shall be tall enough (0.8 inches) to reach above the LED, this will allow the maximum amount of light from the LED to enter the shroud, while still blocking much of the ambient light of the room. The inside of the shroud also will be lined with a reflective material, such as aluminum foil to further reflect the LED's light into the sensor.
+
 
 ## Analysis
 
-Constraint 1 Solution:  To make the chip detect green, we must connect the APDS-9960 module to our microcontroller using the appropriate pins. The APDS-9960 has pins for power (VCC and GND), I2C communication (SDA and SCL), and interrupt pins (if required). We must ensure that the module receives the required power supply voltage (VCC) within its specified voltage range (usually 3.3V or 5V). We will use the I2C communication protocol to interface with the APDS-9960 chip. We'll need to write and read data over the I2C bus to configure the sensor and retrieve information from it. Then we will initialize the APDS-9960 module by setting the appropriate configuration parameters. We can set the sensor to operate in color sensing mode, enabling it to detect different colors, including green. The APDS-9960 uses a combination of red, green, and blue (RGB) photodiodes to detect color. When you place a green LED in front of the module, the green light emitted by the LED will be incident on the green photodiode. For green light, the APDS-9960 sensor is designed to detect light in the wavelength range typically associated with green light, which falls within the range of approximately 520 nanometers (nm) to 570 nm. This corresponds to the green part of the visible light spectrum. The photodiodes generate electrical current in response to the detected light, and the module converts this current into a digital value representing the intensity of the detected color. Then it will read the color sensor data from the APDS-9960 module, our sensor starts to read in green light at 495 nm to 575 nm per the datasheet. The data will typically be in the form of digital values representing the intensity of the red, green, and blue light detected. You can use I2C commands to request this data from the module. 
+Constraint 1 Solution:
+<be />
+To make the chip detect green, we must connect the APDS-9960 module to our microcontroller using the appropriate pins. The APDS-9960 has pins for power (VCC and GND), I2C communication (SDA and SCL), and interrupt pins (if required). We must ensure that the module receives the required power supply voltage (VCC) within its specified voltage range (usually 3.3V or 5V). We will use the I2C communication protocol to interface with the APDS-9960 chip. We'll need to write and read data over the I2C bus to configure the sensor and retrieve information from it. Then we will initialize the APDS-9960 module by setting the appropriate configuration parameters. We can set the sensor to operate in color sensing mode, enabling it to detect different colors, including green. The APDS-9960 uses a combination of red, green, and blue (RGB) photodiodes to detect color. When you place a green LED in front of the module, the green light emitted by the LED will be incident on the green photodiode. For green light, the APDS-9960 sensor is designed to detect light in the wavelength range typically associated with green light, which falls within the range of approximately 520 nanometers (nm) to 570 nm. This corresponds to the green part of the visible light spectrum. The photodiodes generate an electrical current in response to the detected light, and the module converts this current into a digital value representing the intensity of the detected color. Then it will read the color sensor data from the APDS-9960 module, our sensor starts to read in green light at 495 nm to 575 nm per the datasheet. The data will typically be in the form of digital values representing the intensity of the red, green, and blue light detected. You can use I2C commands to request this data from the module. 
 
-In our code, we can analyze the color sensor data to determine whether the detected color is green. The specific threshold values and algorithms for color detection may vary depending on our application. We'll need to compare the intensity of green light with the intensity of the other colors to make this determination. Once we've determined that the detected color is green, we can send this information to our microcontroller. This could be done by setting a flag or sending a specific command over the I2C bus. Our microcontroller can then take further actions based on the color detection result, such as triggering specific functions or displaying information on a display. Additionally, we might need to calibrate the sensor for our specific application to ensure accurate color detection. The APDS-9960's datasheet and any library or documentation provided for our microcontroller will be valuable resources for configuring and using the sensor effectively.
+***FIX In our code, we can analyze the color sensor data to determine whether the detected color is green. The specific threshold values and algorithms for color detection may vary depending on our application. We'll need to compare the intensity of green light with the intensity of the other colors to make this determination. Once we've determined that the detected color is green, we can send this information to our microcontroller. This could be done by setting a flag or sending a specific command over the I2C bus. Our microcontroller can then take further actions based on the color detection result, such as triggering specific functions or displaying information on a display. Additionally, we might need to calibrate the sensor for our specific application to ensure accurate color detection. The APDS-9960's datasheet and any library or documentation provided for our microcontroller will be valuable resources for configuring and using the sensor effectively.
 
-Constraint 2 Solution: The RGB Sensor shall detect the light within 3 seconds of the light being turned on. The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. This timeframe is reasonable as the chip can convert analog signals to digital signals in a typical value of 2.78 ms and the I2C bus can begin to transmit this signal in a minimum of 2.03 us. This gives plenty of time for the sensor to detect the light, convert the signal, and send data within 3 seconds.
+***FIX Constraint 2 Solution: The RGB Sensor shall detect the light within 3 seconds of the light being turned on. The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. This timeframe is reasonable as the chip can convert analog signals to digital signals in a typical value of 2.78 ms and the I2C bus can begin to transmit this signal in a minimum of 2.03 us. This gives plenty of time for the sensor to detect the light, convert the signal, and send data within 3 seconds.
 
 In case the sensor fails to read the start signal properly, we can manually initiate the robot's start using the push button after 3 seconds have passed. The signal passed by the button when pressed will be interpreted by the main controller as equivalent to the sensor detecting green, and so the main controller will then begin the rest of the run.
 
-Constraint 3 Solution: To ensure the RGB Sensor's top-notch performance, we've taken great care in positioning it at a specific height of around 4 inches from the ground, as seen in Figures 3 and 5 of our design. This precision is crucial because the sensor excels at detecting objects within a range of 0.0 to 0.8 inches. However, if it's placed parallel to the Green LED, there's a risk of shadows or blockages that could mess with its accuracy and hinder the robot's operation.  
-
-So, to tackle this, we lowered the sensor slightly to let it capture more light effectively. This adjustment significantly boosts its ability to spot the Green LED accurately. Our research shows that the best placement falls between 3.7 and 4.3 inches off the ground, and we've gone with 4 inches as the middle ground within this range. Plus, Figure 8 gives us a clear reference with the 'B' marker on the Competition Board for precise sensor placement.  
-
-The chip comes pre-tuned and calibrated to detect objects up to 100mm away without needing additional adjustments. That's not just it; in addition to getting the placement right, we're making sure the sensor always stays within this critical 100mm or 3.94 inch range. Staying within that range will allow outside light forces to interfere with the signal less because the closer the sensor is to the LED, the more intense the green LED will be. This smart move dramatically improves our chances of consistently and accurately spotting the Green LED every time the robot gets to work. This attention to detail shows our dedication to making sure our robot performs at its best in various applications and tasks to get the most points to win the competition.
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram.png)
+Constraint 3 Solution:
 <br />
-Figure 7. Competition Board Layout  
+To ensure the RGB Sensor's top-notch performance, the sensor must be placed within a vertical range of 0.8 inches from the center of the LED. The sensor shall be placed at a height of 4 inches from the ground or 0.5 inches below the center of the LED, as seen in Figure 4. This precision is crucial because the sensor excels at detecting objects within a vertical range of 0.0 to 0.8 inches. However, if it's placed parallel to the Green LED, there's a risk of shadows or blockages that could mess with its accuracy and hinder the robot's operation. Therefore, the sensor is placed 4 inches from the floor or 0.5 inches below the center of the LED, staying within the premium detection range, while also not being parallel with the LED itself.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 <br />
 Figure 8. Exact Height of Start Sensor
 
-Constraint 4 Solution: 
-The placement of the RGB Sensor must be meticulously calibrated within a range of 0.5 inches of the Green Light LED location. It is imperative to position the RGB sensor close to the Green Light LED, with an optimal range of 0.5 inches. This stringent requirement effectively confines the allowable distance to a tightly regulated 1-inch zone. This precision ensures that the sensor is strategically positioned to capture the maximum amount of green light, facilitating highly accurate detection of the Green Light LED.
 
-The reason for this specific range is to guarantee that the sensor can consistently and reliably detect the Green Light LED. By positioning it within this 0.5-inch zone, we maximize the amount of green light entering the sensor, thereby enhancing its sensitivity and reliability in recognizing the LED's presence. This meticulous placement is crucial for the overall success and functionality of the robot in the intended tasks.
+Constraint 4 Solution: 
+<br />
+The RGB Sensor must be placed within a range of 0.5 inches to the left or right of the Green Light LED location. It is imperative to position the RGB sensor close to the Green Light LED, with an optimal range of 0.5 inches. This stringent requirement effectively confines the allowable distance to a tightly regulated 1-inch zone. This precision ensures that the sensor is strategically positioned to capture the maximum amount of green light, facilitating highly accurate detection of the Green Light LED. The sensor shall be centered on the robot so that it is equidistant from each side so that when the robot is set in the middle of the start pad and 1 inch from the wall, the sensor and the LED will be aligned.
+
+The reason for this specific range is to guarantee that the sensor can consistently and reliably detect the Green Light LED. By positioning it within this 0.5-inch zone, we maximize the amount of green light entering the sensor, thereby enhancing its sensitivity and reliability in recognizing the LED's presence.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
 <br />
 Figure 9. Exact location lengthwise of Start Sensor and green LED
 
-Constraint 5 Solution: To ensure precise and effective detection of the Green LED, it is essential to position the RGB Sensor within a carefully defined lateral range. Specifically, this range spans a distance of 1.5 inches from either side of the Green LED, thereby creating a 3-inch zone in total. Placing the sensor within this range is crucial for reliable and accurate operation.  
+Constraint 5 Solution:
+<br />
+The RGB shall at most be 1.5 inches from the face of the LED. Placing the sensor within a range of 1.5 inches from the LED aids the sensor's ability to detect the presence of the Green LED with the highest degree of accuracy while minimizing the risk of any obstructions or shadows. In Figure 4, the sensor is shown to be placed 1 inch from the LED and therefore the wall and this places the midpoint of the chip at 1.35" from the LED. To obtain this distance, the chip shall then be placed as far to the back edge of the robot as possible, to allow at least 1 inch behind the robot's back edge for other Systems with very slight room for error while placing the robot on the start pad (0.15".)
 
-By accommodating this 3-inch width range, we guarantee that the sensor will be optimally situated in relation to the Green LED. This strategic placement enhances the sensor's ability to detect the presence of the Green LED with the highest degree of accuracy. Moreover, it minimizes the risk of any obstructions or shadows that might interfere with the sensor's performance.  
-
-This meticulous approach to positioning the RGB Sensor not only ensures consistent and reliable detection but also enhances the overall functionality of the robot in its designated tasks. It's a solution that maximizes the sensor's effectiveness and contributes to the success of the robot in real-world applications.
-
-In Figure 7, the illustration provides a clear perspective of this setup, demonstrating that the distance from the sensor's midpoint to the end of the robot measures approximately 1.3 inches or 3.3 cm. This specific placement range is meticulously chosen to ensure the sensor's proximity to the Green LED, optimizing its ability to detect the light and provide the expected output.
-
-The rationale behind this range is to maintain the sensor's proximity to the Green LED, thus enhancing its ability to read and respond to the light source accurately. This strategic positioning is critical for achieving the desired performance and functionality of the robot in its designated tasks. 
 
 ## BOM
 
