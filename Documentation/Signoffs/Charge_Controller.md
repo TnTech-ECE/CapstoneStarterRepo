@@ -15,7 +15,8 @@ The purpose of the charge controller subsystem is to maximize the power output o
 4. The subsystem shall prevent the batteries from charging more than 95% of their maximum capacity. This constraint is to prevent the batteries from overcharging. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection is necessary. 
 
 *Figure 1. Charge Controller Schematic*
-![ChargeControllerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/70d331c8-993a-493d-aac8-c0ff65264913)
+
+![ChargeControllerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/c2b2df89-f01d-4235-8380-fac168b3c779)
 
 # Analysis
 
@@ -37,9 +38,13 @@ U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a m
 
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
-The Buck boost will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET.
+The Buck boost will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET (Q1).
 
-The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. TODO: How will overcharging and deep discharging be prevented physically?
+The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
+
+MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
+
+MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
 
 MOSFET input range: 
  continuous drain current-> 14 A
@@ -54,7 +59,7 @@ MOSFET input range:
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
 | Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
 | Bidirectional Current and Power Monitor | INA226AIDGST | 1 | $3.33 | $3.33 |
-| MOSFET | BSC13DN30NSFD | 1 |$1.72 | $1.72 | 
+| MOSFET | BSC13DN30NSFD | 2 |$1.72 | $3.44 | 
 | Schottky Diode | | 1 | | |
 | Total | ----- | ----- | ----- | $--.-- |
 
