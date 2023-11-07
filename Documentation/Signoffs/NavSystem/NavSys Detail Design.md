@@ -34,7 +34,7 @@ The following shows a numbered image of the sensor array. It is followed by a de
 | 5. | I2C Pull Option Jumper | Defaulted to 3.3 V pull-up, can be changhed to 5V if needed |
 | 6. | Mounting Holes | General Purpose mounting holes |
 | 7. | IR Transducers | These emit and detect IR radiation |
-| 8. | I2C Address Selsection | Jumpers to be set in accordance with the following table to set the desired outpur address. |
+| 8. | I2C Address Selsection | Jumpers to be set in accordance with the following table to set the desired output address. |
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/I2C%20Address%20Table.png)
 
