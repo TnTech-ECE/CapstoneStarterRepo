@@ -98,7 +98,13 @@ In case the sensor fails to read the start signal properly, we can manually init
 
 Constraint 3 Solution:
 <br />
-To ensure the RGB Sensor's top-notch performance, the sensor must be placed within a vertical range of 0.8 inches from the center of the LED. The sensor shall be placed at a height of 4 inches from the ground or 0.5 inches below the center of the LED, as seen in Figure 4. This precision is crucial because the sensor excels at detecting objects within a vertical range of 0.0 to 0.8 inches. However, if it's placed parallel to the Green LED, there's a risk of shadows or blockages that could mess with its accuracy and hinder the robot's operation. Therefore, the sensor is placed 4 inches from the floor or 0.5 inches below the center of the LED, staying within the premium detection range, while also not being parallel with the LED itself.
+For ensuring the optimal performance of the RGB Sensor, it is imperative that the sensor be positioned within a specific vertical range of 0.8 inches from the center of the LED. The sensor's height above the ground should be precisely 4 inches or 0.5 inches below the LED's center, as illustrated in Figure 4. This precision is of paramount importance because the sensor's proficiency lies in detecting objects within the vertical span of 0.0 to 0.8 inches. However, placing the sensor in parallel with the Green LED poses a risk of casting shadows or causing obstructions that could disrupt its accuracy and impede the robot's functionality.  
+
+To mitigate this issue, the sensor is strategically positioned 4 inches above the floor or 0.5 inches below the LED's center, thus maintaining its operation within the optimal detection range while avoiding parallel alignment with the LED.  
+
+Regarding the APDS-9960, it employs an ambient light sensor with a photodiode array that is meticulously oriented for efficient light detection. The photodiodes are conventionally situated on the sensor module to receive light from the top surface of the chip. This configuration optimizes their responsiveness. Moreover, the photodiodes are shielded with a light-sensitive material and may include an optical window or cover to filter unwanted light and protect the sensor from external interference.  
+
+Significant alterations in the direction of incident light can have a disruptive effect on the photodiodes' performance. Placing objects or barriers between the light source and the sensor can lead to improper light detection or attenuated responses. Similarly, exposing the sensor to light from a direction not aligned with its intended orientation can result in suboptimal functionality.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 <br />
