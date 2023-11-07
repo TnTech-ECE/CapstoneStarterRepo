@@ -63,7 +63,7 @@ The figure above shows a rough 3D model of what the robot will look like with th
 <br />
 Figure 4. Precise Height of Start Sensor and Distance from LED
 
-Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The chip is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 4 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 8 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush. This will place the middle of the chip 1.35 inches from the LED's face.
+Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The chip is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 4 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 7 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush. This will place the middle of the chip 1.35 inches from the LED's face.
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/button%20with%20perf%20board.PNG)
@@ -83,14 +83,18 @@ To further aid in the capturing of the light from the LED, a shroud will be cons
 ## Analysis
 
 Constraint 1 Solution:
-<be />
+<br />
 To make the chip detect green, we must connect the APDS-9960 module to our microcontroller using the appropriate pins. The APDS-9960 has pins for power (VCC and GND), I2C communication (SDA and SCL), and interrupt pins (if required). We must ensure that the module receives the required power supply voltage (VCC) within its specified voltage range (usually 3.3V or 5V). We will use the I2C communication protocol to interface with the APDS-9960 chip. We'll need to write and read data over the I2C bus to configure the sensor and retrieve information from it. Then we will initialize the APDS-9960 module by setting the appropriate configuration parameters. We can set the sensor to operate in color sensing mode, enabling it to detect different colors, including green. The APDS-9960 uses a combination of red, green, and blue (RGB) photodiodes to detect color. When you place a green LED in front of the module, the green light emitted by the LED will be incident on the green photodiode. For green light, the APDS-9960 sensor is designed to detect light in the wavelength range typically associated with green light, which falls within the range of approximately 520 nanometers (nm) to 570 nm. This corresponds to the green part of the visible light spectrum. The photodiodes generate an electrical current in response to the detected light, and the module converts this current into a digital value representing the intensity of the detected color. Then it will read the color sensor data from the APDS-9960 module, our sensor starts to read in green light at 495 nm to 575 nm per the datasheet. The data will typically be in the form of digital values representing the intensity of the red, green, and blue light detected. You can use I2C commands to request this data from the module. 
 
-***FIX In our code, we can analyze the color sensor data to determine whether the detected color is green. The specific threshold values and algorithms for color detection may vary depending on our application. We'll need to compare the intensity of green light with the intensity of the other colors to make this determination. Once we've determined that the detected color is green, we can send this information to our microcontroller. This could be done by setting a flag or sending a specific command over the I2C bus. Our microcontroller can then take further actions based on the color detection result, such as triggering specific functions or displaying information on a display. Additionally, we might need to calibrate the sensor for our specific application to ensure accurate color detection. The APDS-9960's datasheet and any library or documentation provided for our microcontroller will be valuable resources for configuring and using the sensor effectively.
+In the main controller code, we can analyze the color sensor data to determine whether the detected color is green. The main controller will receive the percentages of light (Red, Green, and Blue) via the I2C bus. It will then compare these values to each other, once Green is established as the highest value, the main controller will send signals to other subsystems to begin their operation.
 
-***FIX Constraint 2 Solution: The RGB Sensor shall detect the light within 3 seconds of the light being turned on. The RGB Sensor is crucial for our competition performance as it's required to read and output within a strict 3-second timeframe. This timeframe is reasonable as the chip can convert analog signals to digital signals in a typical value of 2.78 ms and the I2C bus can begin to transmit this signal in a minimum of 2.03 us. This gives plenty of time for the sensor to detect the light, convert the signal, and send data within 3 seconds.
+Constraint 2 Solution:
+<br />
+The RGB Sensor shall detect the light within 3 seconds of the green light being turned on. To aid this, the main controller and the start sensor will be powered on before the robot is placed on the start pad. The main controller will send signals via the I2C bus at this point to power on and enable the color detection process within the chip. At this point, the sensor shall begin taking in data and comparing it, however since the robot is not placed yet, the sensor can not accidentally read green and begin any other functions. To protect against this, black electrical tape will be placed over the opening of the shroud, this will block light from entering the sensor until it is removed. The tape shall only be removed once the robot is placed properly. This allows the sensor to boot up and perform the setup tasks before being placed, therefore omitting the time needed for setup and the sensor can begin detecting the LED's light immediately once the tape is removed. 
 
-In case the sensor fails to read the start signal properly, we can manually initiate the robot's start using the push button after 3 seconds have passed. The signal passed by the button when pressed will be interpreted by the main controller as equivalent to the sensor detecting green, and so the main controller will then begin the rest of the run.
+Once the tape is removed, the sensor will take in data from the LED, however, the LED will remain red until the judges start the clock. In the absolute worst case the LED will change to green in the middle of sending the data from the red light, this means that an entire data-sending cycle must complete and begin again and run to completion before the main controller will be able to compare the values of the green light. In standard mode which is the slowest, the I2C bus can transfer data at 100kbits/sec. A single data-sending cycle from requesting the information to sending all the values (red, green, blue, and clear) will take at least 145 bits in total. Under standard mode, this means this data can typically be sent in 1.45 ms. For two whole cycles to run to completion will take at least 2.9 ms. This gives plenty of extra time to allow for delay at any point in the detecting or sending process.
+
+In case the sensor fails to read the start signal properly, we can manually initiate the robot's start using the push button after 3 seconds have passed. The signal passed by the button when pressed will be interpreted by the main controller as equivalent to the sensor detecting green, and so the main controller will then begin the rest of the run in a reasonable amount of time.
 
 Constraint 3 Solution:
 <br />
@@ -98,7 +102,7 @@ To ensure the RGB Sensor's top-notch performance, the sensor must be placed with
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 <br />
-Figure 8. Exact Height of Start Sensor
+Figure 7. Exact Height of Start Sensor
 
 
 Constraint 4 Solution: 
@@ -109,7 +113,7 @@ The reason for this specific range is to guarantee that the sensor can consisten
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
 <br />
-Figure 9. Exact location lengthwise of Start Sensor and green LED
+Figure 8. Exact location lengthwise of Start Sensor and green LED
 
 Constraint 5 Solution:
 <br />
