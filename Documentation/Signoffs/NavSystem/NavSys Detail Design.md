@@ -17,7 +17,7 @@ The navigation system will use an array of infrared sensors to detect the yellow
 
 ## Buildable Schematic
 
-The image below shows the sensor array that will be used in the construction of the navigation system. 
+The image below shows the sensor array that will be used in the construction of the navigation system. This sensor array was chosen over other models due to its inbuilt I2C conversion abilities. This makes using this module easier than using a non converting sensor array and having to convert the output from the array to I2C for the main controller. It is also cheaper than most of the other alternatives for converting to I2C format.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/Sensor%20Array.jpg)
 
