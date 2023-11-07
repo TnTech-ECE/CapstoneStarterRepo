@@ -29,16 +29,17 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
+U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, and Q1. 
 
-As the current sensors can output up to 8 V, a voltage divider will be used to divide the voltage into a maximum voltage of 5 V to prevent frying the arduino nano.
+The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
 
-Voltage reader for MCU: the voltage is stepped down using a voltage divider that will divide 18 V to 4.5 V using a 0.25 gain
+U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a maximum of 5 V. A voltage divider will be used on the output of the current sensor to change the output to have a maximum voltage of 5 V. 
 
-The MCU will use the readings from the voltage reader and current sensor as inputs for its Maximum Power Point Tracking algorithm. The algorithm will send digital signals to the digital potentiometer to adjust the resistance. This resistance change will change the current, and therefore power received from the solar panel. 
+To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
-The Buck boost will have a varying current output that will be measured by another current sensor. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET.
+The Buck boost will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET.
 
-The batteries are connected to a bidirectional current and power monitor. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to protect the batteries from overcharging and deep discharging. 
+The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. TODO: How will overcharging and deep discharging be prevented physically?
 
 MOSFET input range: 
  continuous drain current-> 14 A
