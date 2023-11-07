@@ -33,18 +33,15 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
 
-output range from solar: 0 V and 0 A to 18 V and 1.4 A [1]
-
-input range for digital pot: 5 V High, 0.8 V Low for digital pins; ?? V ?? A for H / L pins
-output range for digital pot: function of H / L and the set resistance
-
 As the current sensors can output up to 8 V, a voltage divider will be used to divide the voltage into a maximum voltage of 5 V to prevent frying the arduino nano.
 
 Voltage reader for MCU: the voltage is stepped down using a voltage divider that will divide 18 V to 4.5 V using a 0.25 gain
 
-The MCU will use the readings from the voltage reader and current sensor as inputs for its Maximum Power Point Tracking algorithm. The algorithm will send digital signals to the digital potentiometer to adjust the resistance. This resistance change will change the current, and therefore power from the solar panel. 
+The MCU will use the readings from the voltage reader and current sensor as inputs for its Maximum Power Point Tracking algorithm. The algorithm will send digital signals to the digital potentiometer to adjust the resistance. This resistance change will change the current, and therefore power received from the solar panel. 
 
-The Buck boost will have a varying current output that will be measured by another current sensor. 
+The Buck boost will have a varying current output that will be measured by another current sensor. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET.
+
+The batteries are connected to a bidirectional current and power monitor. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to protect the batteries from overcharging and deep discharging. 
 
 MOSFET input range: 
  continuous drain current-> 14 A
