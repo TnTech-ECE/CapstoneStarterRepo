@@ -15,10 +15,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 4. The subsystem shall prevent the batteries from charging more than 95% of their maximum capacity. This constraint is to prevent the batteries from overcharging. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection is necessary. 
 
 *Figure 1. Charge Controller Schematic*
-
-
-![Charge Controller Schematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/d1a6a70f-f693-49f2-829d-296eb2cdbf57)
-
+![ChargeControllerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/70d331c8-993a-493d-aac8-c0ff65264913)
 
 # Analysis
 
