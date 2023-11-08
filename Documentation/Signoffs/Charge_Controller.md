@@ -35,19 +35,41 @@ U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage re
 
 The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
 
+
 U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a maximum of 5 V. A voltage divider will be used on the output of the current sensor to change the output to have a maximum voltage of 5 V. 
+
+Analysis of resistors required to divide 8 V down to 5 V (U2 and U4):
+
+```math
+Vout\ =Vin\times\frac{R1}{R1 + R2}
+```
+```math
+5\ = 8\times\frac{10,000}{10,000 + R2} = 6 kΩ
+```
+R1 is arbitrarily chosen to be 10 kΩ. R2 is calculated to be 6 kΩ.
+
 
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
-The Buck boost, U3, will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET (Q1).
+Analysis of resistors required to divide 18 V down to 4.5 V
+```math
+Vout\ =Vin\times\frac{R3}{R3 + R4}
+```
+```math
+5\ = 18\times\frac{10,000}{10,000 + R4} = 30 kΩ
+```
+R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ. 
 
-The math equations required to find the external components for U3 are given below:
+
+The Buck boost, U3, will have a varying current output that will be measured by U4. The voltage output is set to 12 V to match the battery voltage. 
+
+Analysis of components required to operate U3:
 
 Vinmax = 18 V
 
 Vout = 12 V
 
-Vfb = 1.25 V (typ)
+Vfb = 1.25 V (typical from datasheet)
 
 ILmax = 1.2 A
 
@@ -55,30 +77,39 @@ ILmax = 1.2 A
 
 Rfb2 is commonly set to 10 kΩ
 
-fsw = 400 kHz
+Rfsw = 73.2 kΩ (datasheet) and is rounded to 75 kΩ
+
+fsw = 400 kHz based on Rfsw (datasheet)
 
 ```math
 Rfb1\ =Rfb2\times\frac{Vout}{Vfb} -Rfb2\ =\ 86 kΩ
 ```
 
-
 ```math
 L_Buck\ =\frac{(Vinmax-Vout)Vout}{fsw\ \times\ ILmax\ \times\ \%Iripple\ \times\ Vinmax} =\ 208 μH
 ```
 
+```math
+Rc\ = 2π \times \ \frac{(Rcb \times Cout)}{gm \times\ (1 - Dboost)} \times\ \frac{(Rfb2 + Rfb1)}{Rfb2} =\ 13.92 kΩ
+```
 
+
+The current information from U3 is used to allow the MCU to regulate the current flowing in and out of the batteries through Q1 or Q2. 
+
+MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
+
+Analysis of Q1:
+TODO: BJT stuff
+
+
+MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
+
+Analysis of Q2: 
+TODO: BJT stuff
 
 
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
 
-MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
-
-MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
-
-MOSFET input range: 
- continuous drain current-> 14 A
- gate source voltage-> -20 A to 20 A
- gate threshold voltage 2 V to 4 V
 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
