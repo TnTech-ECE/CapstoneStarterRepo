@@ -6,7 +6,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 | 1.  | Controller shall maximize the output power from the solar panel. | System Requirements |
-| 2.  | Controller shall output 12 V at 50 mA with a 10% tolerance to the Power Controller. | System Requirements |
+| 2.  | Controller shall output 12 V at ??? mA with a 10% tolerance to the Power Controller. | System Requirements |
 | 3.  | Controller shall prevent the batteries from discharging more than 50% of their maximal capacity. | Extend Life of Batteries    |
 | 4.  | Controller shall prevent the batteries from being charged more than 95% of their maximal capacity.  | Extend Life of Batteries    |
 
@@ -98,17 +98,25 @@ The current information from U3 is used to allow the MCU to regulate the current
 
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
 
-Analysis of Q1:
+Analysis of components required for Q1:
 TODO: BJT stuff
+Rbjt1
 
 
 MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
 
-Analysis of Q2: 
+Analysis of components required for Q2: 
 TODO: BJT stuff
+Rbjt2
 
 
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
+
+Analysis of components required for U5:
+
+Rshunt\ = 2 mΩ (Datasheet)
+
+Rp1, Rp2, and Rp3 were arbitrarily chosen to be 1 kΩ as they are used for pull up resistors. 
 
 
 # BOM
