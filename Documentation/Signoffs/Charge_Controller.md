@@ -1,6 +1,7 @@
 # Charge Controller Subsystem
 
-The purpose of the charge controller subsystem is to maximize the power output of the solar panel and send power to the system, specifically the Power Controller subsystem. The charge controller will send the power controller 12 V at 50 mA regardless of the output of the solar panel. If the power received from the panel is more than what is required by the system, the excess power will be used to charge the two back batteries. Otherwise, the backup batteries will supplement the solar panel output until the required system power is met. 
+The purpose of the charge controller subsystem is to maximize the power output of the solar panel and send power to the system, specifically the Power Controller subsystem. The charge controller will send the power controller 12 V at 50 mA regardless of the output of the solar panel. If the power received from the panel is more than what is required by the system, the excess power will be used to charge the two backup batteries. Otherwise, the backup batteries will supplement the solar panel output until the required system power is met. 
+
 # Constraints
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
@@ -30,7 +31,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
-U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, and Q1. 
+U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, Q1, and Q2. 
 
 The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
 
@@ -38,7 +39,35 @@ U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a m
 
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
-The Buck boost will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET (Q1).
+The Buck boost, U3, will have a varying current output that will be measured by U4. This information is use to allow the MCU to regulate the current flowing in or out of the batteries through a MOSFET (Q1).
+
+The math equations required to find the external components for U3 are given below:
+
+Vinmax = 18 V
+
+Vout = 12 V
+
+Vfb = 1.25 V (typ)
+
+ILmax = 1.2 A
+
+%Iripple = 40%
+
+Rfb2 is commonly set to 10 kΩ
+
+fsw = 400 kHz
+
+```math
+Rfb1\ =Rfb2\times\frac{Vout}{Vfb} -Rfb2\ =\ 86 kΩ
+```
+
+
+```math
+L_Buck\ =\frac{(Vinmax-Vout)Vout}{fsw\ \times\ ILmax\ \times\ \%Iripple\ \times\ Vinmax} =\ 208 μH
+```
+
+
+
 
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
 
@@ -60,7 +89,7 @@ MOSFET input range:
 | Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
 | Bidirectional Current and Power Monitor | INA226AIDGST | 1 | $3.33 | $3.33 |
 | MOSFET | BSC13DN30NSFD | 2 |$1.72 | $3.44 | 
-| Schottky Diode | | 1 | | |
+| Schottky Diode | | 3 | | |
 | Total | ----- | ----- | ----- | $--.-- |
 
 # References
