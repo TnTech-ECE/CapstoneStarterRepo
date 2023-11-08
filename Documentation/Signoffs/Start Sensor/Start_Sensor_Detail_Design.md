@@ -59,11 +59,11 @@ Figure 3. Rough 3D Model of the entire Robot
 
 The figure above shows a rough 3D model of what the robot will look like with the Start Sensor System. In the picture above, the Green represents the Power System, the blue represents the Navigation System, the Paint roller is the Button Push Mechanism, the Orange represents the Main Controller, the Yellow represents the Team Spirit System, the Brown stick on the back of the robot represents the Box Sweep System, and the Drivetrain is located underneath the robot. The start system includes both Gray rectangles near the back of the robot. The red marker is the push button, while the black marker is the color sensor, the perf board is represented with a purple area under the push button. 
 
-![ChipFromWall](https://github.com/cebttu/CapstoneTeam1/assets/100803345/45fb78c1-9829-4a60-b00f-9874cf189764)
+![ChipFromWall](https://github.com/cebttu/CapstoneTeam1/assets/100803345/21d465fb-7866-4d3a-96b1-f0f9a457be84)
 <br />
 Figure 4. Precise Height of Start Sensor and Distance from LED
 
-Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The chip is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 4 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 7 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush. This will place the middle of the chip 1.35 inches from the LED's face.
+Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The photodiode is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 3.85 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 7 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush.
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/button%20with%20perf%20board.PNG)
@@ -73,11 +73,11 @@ Figure 5. Button and Sensor attached to Robot
 Attaching to Chassis:
 Figure 5 offers a rough visual representation of how the Button and Sensor are integrated into the robot. Our strategy involves employing a perf board for the button, which will be securely soldered into position, while the sensor will be affixed to the chassis using screw fastenings. This assembly method is designed for maximum stability and reliability in our robot's configuration, as exemplified by the corner bolts that secure the boards firmly in place. 
 
-![Shroud](https://github.com/cebttu/CapstoneTeam1/assets/100803345/1b6439f0-add8-4d68-8b85-bc7182725e2c)
+![Shroud](https://github.com/cebttu/CapstoneTeam1/assets/100803345/65c2a1e1-ec2b-42d3-bf1e-55e5e1dcdc4a)
 <br />
 Figure 6. Shroud
 
-To further aid in the capturing of the light from the LED, a shroud will be constructed and centered over the chip. This shroud shall be tall enough (0.8 inches) to reach above the LED, this will allow the maximum amount of light from the LED to enter the shroud, while still blocking much of the ambient light of the room. The inside of the shroud also will be lined with a reflective material, such as aluminum foil to further reflect the LED's light into the sensor.
+To further aid in the capturing of the light from the LED, a shroud will be constructed and the chip shall be attached to its back wall. This shroud shall be tall enough (0.9 inches) to reach above the LED and contain the height of the chip, this will allow the maximum amount of light from the LED to enter the shroud, while still blocking much of the ambient light of the room.
 
 
 ## Analysis
@@ -98,13 +98,9 @@ In case the sensor fails to read the start signal properly, we can manually init
 
 Constraint 3 Solution:
 <br />
-For ensuring the optimal performance of the RGB Sensor, it is imperative that the sensor be positioned within a specific vertical range of 0.8 inches from the center of the LED. The sensor's height above the ground should be precisely 4 inches or 0.5 inches below the LED's center, as illustrated in Figure 4. This precision is of paramount importance because the sensor's proficiency lies in detecting objects within the vertical span of 0.0 to 0.8 inches. However, placing the sensor in parallel with the Green LED poses a risk of casting shadows or causing obstructions that could disrupt its accuracy and impede the robot's functionality.  
+To ensure the optimal performance of the RGB Sensor, it is imperative that the sensor be positioned within a specific vertical range of 0.8 inches from the center of the LED. The sensor's height above the ground should be precisely 3.85 inches or 0.5 inches below the LED's center, as illustrated in Figure 4. This precision is paramount because the sensor's proficiency lies in detecting objects within the vertical span of 0.0 to 0.8 inches. However, placing the sensor in parallel with the Green LED poses a risk of casting shadows or causing obstructions that could disrupt its accuracy and impede the robot's functionality.  
 
-To mitigate this issue, the sensor is strategically positioned 4 inches above the floor or 0.5 inches below the LED's center, thus maintaining its operation within the optimal detection range while avoiding parallel alignment with the LED.  
-
-Regarding the APDS-9960, it employs an ambient light sensor with a photodiode array that is meticulously oriented for efficient light detection. The photodiodes are conventionally situated on the sensor module to receive light from the top surface of the chip. This configuration optimizes their responsiveness. Moreover, the photodiodes are shielded with a light-sensitive material and may include an optical window or cover to filter unwanted light and protect the sensor from external interference.  
-
-Significant alterations in the direction of incident light can have a disruptive effect on the photodiodes' performance. Placing objects or barriers between the light source and the sensor can lead to improper light detection or attenuated responses. Similarly, exposing the sensor to light from a direction not aligned with its intended orientation can result in suboptimal functionality.
+To mitigate this issue, the sensor is strategically positioned 3.85 inches above the floor, placing the photodiode 0.5 inches below the LED's center, thus maintaining its operation within the optimal detection range while avoiding parallel alignment with the LED.  
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
 <br />
@@ -123,7 +119,7 @@ Figure 8. Exact location lengthwise of Start Sensor and green LED
 
 Constraint 5 Solution:
 <br />
-The RGB shall at most be 1.5 inches from the face of the LED. Placing the sensor within a range of 1.5 inches from the LED aids the sensor's ability to detect the presence of the Green LED with the highest degree of accuracy while minimizing the risk of any obstructions or shadows. In Figure 4, the sensor is shown to be placed 1 inch from the LED and therefore the wall and this places the midpoint of the chip at 1.35" from the LED. To obtain this distance, the chip shall then be placed as far to the back edge of the robot as possible, to allow at least 1 inch behind the robot's back edge for other Systems with very slight room for error while placing the robot on the start pad (0.15".)
+The RGB shall at most be 1.5 inches from the face of the LED. Placing the sensor within a range of 1.5 inches from the LED aids the sensor's ability to detect the presence of the Green LED with the highest degree of accuracy while minimizing the risk of any obstructions or shadows. In Figure 4, the sensor is shown to be placed 1 inch from the LED and therefore the wall. To obtain this distance, the shroud shall then be placed as far to the back edge of the robot as possible, with the chip placed on its back wall. This will allow at least 0.5 inch behind the robot's back edge for other Systems.
 
 
 ## BOM
