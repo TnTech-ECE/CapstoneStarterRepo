@@ -44,7 +44,7 @@ The output voltage across the R1 is (16.4-1.4) V DC = 15DC
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/15c9f878-e6b5-41f9-ac4e-b48621441987)
 
 
- The circuit simulation was done by using LT Spice software, as shown in Figure 1.
+ The circuit simulation was done by using KiCad software, as shown in Figure 1.
 Firstly, A step-down transformer used the input AC voltage 12.
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ad635522-d0a1-4246-8543-7fff5a37064a)
@@ -66,12 +66,22 @@ Current R3:
 Current R2
 
 # BOM: 
-ITEM 
-1. One Kill switch. 
-2. Chips for Buck-Boost converter
-3. One Diode or Bridge (FWR) 
-3. Four Resistors 
-4. Three Capacitors 
+| Part | Part Number | Quantity | Price per Unit | Total Price |
+| ------------ | ------------- | --------- | -------- | ---------- |
+| Plug electric | ----- | 1 | $6.71 | $6.71
+| Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
+| Full wave Bridge Rectifier | TCT50-01E07AB | 1|$16.65 | $16.65 |
+| Battery |ML12-12F2 |1| $27.99|$27.99|
+| Resistor | R268|4| $0.10|$0.40|
+| Resistor | R74|3| $0.10|$0.30|
+| Total | ----- |-----| -----| $ |
 
 # References:
 Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana
+
+https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3114-1.pdf?ADICID=SYND_WW_P682800_PF-spglobal?hkey=EF798316E3902B6ED9A73243A3159BB0
+
+https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
+
+https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
+
