@@ -48,8 +48,8 @@ The output voltage across the R1 is (16.4-1.4) V DC = 15DC
 
 | Part |  Input volatge  | output volatge |  Current  | 
 | ------------ | ------------- | --------- | -------- | 
-
-| ------------ | ------------- | --------- | -------- | 
+| outlet | 120v | 120v | -------- | 
+| buck-Boost Converter | 22.6v | 12v | 1.2 | 
 
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
