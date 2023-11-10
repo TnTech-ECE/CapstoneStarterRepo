@@ -46,26 +46,30 @@ The output voltage across the R1 is (16.4-1.4) V DC = 15DC
 
  The circuit simulation was done by using KiCad software, as shown in Figure 1.
 
-Figure 2: 
+| Part |  Input volatge  | output volatge |  Current  | 
+| ------------ | ------------- | --------- | -------- | 
 
+| ------------ | ------------- | --------- | -------- | 
 
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Plug electric |  035-00101-2BP | 1 | $6.71 | $6.71 |
 | Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
-| Full wave Bridge Rectifier | TCT50-01E07AB | 1|$16.65 | $16.65 |
+| Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
+| Full wave Bridge Rectifier | GBU404 | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
 | Resistor | R268|4| $0.10|$0.40|
 | Resistor | R74|3| $0.10|$0.30|
 | Total | ----- |-----| -----| $ 86.09 |
 
 # References:
-Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana
+1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
 
-https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3114-1.pdf?ADICID=SYND_WW_P682800_PF-spglobal?hkey=EF798316E3902B6ED9A73243A3159BB0
+2. https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3114-1.pdf?ADICID=SYND_WW_P682800_PF-spglobal?hkey=EF798316E3902B6ED9A73243A3159BB0
 
-https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
+3. https://www.mouser.com/ProductDetail/Diodes-Incorporated/GBU404?qs=G5AQjGfRJcL0qZwbO1hCAw%3D%3D&mgh=1&gclid=Cj0KCQiAo7KqBhDhARIsAKhZ4uiLwH-geIVj7ENUvHTWf11hyNU4IoTfVOAK8-eMKpBxqfyngL2PZPkaAtnPEALw_wcB
+4. https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
 
-https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
+5. https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
 
