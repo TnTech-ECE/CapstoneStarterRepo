@@ -58,17 +58,27 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 | Part                                                                             | Part/Model Number                   | Quantity | Price Per Unit | Total Price |
 |----------------------------------------------------------------------------------|-------------------------------------|----------|----------------|-------------|
 | ESP32-WROOM-32E 4MB FLASH                                                        | ESP32-DEVKITC-32E                   | 2        | $10.00         | $20.00      |
-| RFM95W LORA RADIO TRANSCEIVER BR                                                  | 1528-1667-ND                        | 2        | $19.95         | $39.90      |
+| RFM95W LORA RADIO TRANSCEIVER BR                                                 | 1528-1667-ND                        | 2        | $19.95         | $39.90      |
 | U.FL, IPEX Connector, SMT                                                        | IPXSM66AL (I-PEX P/N 20279-001E-03) | 2        | $0.75          | $1.50       |
-| RAK Wireless Fiberglass Outdoor Antenna 3dBi N-Type to IPEX Connector 860-930MHz | N/A, RAK Wireless SKU: 915008       | 2        | $27.50         | $55.00      |
-| RASPBERRY PI 4 MODEL B 8GB                                                       | SC0195(9)                           | 1        | $75.00         | $75.00      |
 | 915MHz LoRa Antenna Omni 5dbi SMA Male + 15cm IPEX Extension Cable 2 Pcs         | TY-CSA23                            | 1        | $13.99         | $13.99      |
-| RAK5146 PiHAT Kit for LoRaWAN US915 Without GPS                                  | N/A, RAK Wireless SKU: 816025       | 1        | $100.00        | $100.00     |
-| Pilot Gateway Pro LoRa Enclosure Kit for Raspberry Pi 4 - RAK7244                | N/A, Adafruit PID: 5057             | 1        | $27.50         | $27.50      |
-| SanDisk 128GB Ultra microSDXC                                                    | SDSQUAB-128G-GN6MA                  | 1        | $12.49         | $12.49      |
-| CanaKit 3.5A Raspberry Pi 4 Power Supply (USB-C)                                 | N/A, ASIN: B07TYQRXTK               | 1        | $9.99          | $9.99       |
-| TOTAL                                                                            |                                     |          |                | $355.37     |
+| Long Range Indoor Antenna Kit; 860-930MHz; 3dBi; 295mm                           | N/A, Seeed Studio SKU: 110991765    | 1        | $14.90         | $14.90      |
+| Tenmory UFL to SMA Mini PCI U.FL to RP-SMA Female Ipex Connector Pigtail Antenna Extension Cable (6 inch (2 Pcs))      | N/A, ASIN: B07T85B3LN | 1 | $5.99 | $5.99|
+| WM1302 Raspberry Pi Hat                                                          | N/A, Seeed Studio SKU: 113100022    | 1        | $19.90         | $19.90      |
+| Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915 - M                              | WM1302-SPI-US915-M                  | 1        | $25.00         | $25.00      |
+| SanDisk 64GB Ultra microSDHC                                                     | SDSQUA4-064G-GN6MA                  | 1        | $8.99          | $8.99       |
+| CanaKit 5V 2.5A Raspberry Pi 3 B+ Power Supply/Adapter                           | ‎DCAR-RSP-2A5                        | 1        | $9.95          | $9.95       |
+| TOTAL                                                                            |                                     |          |                | $160.12     |
 
 
 ## References
-"Electronic Code of Federal Regulations," Title 47-Telecommunication, CHAPTER I-FEDERAL COMMUNICATIONS COMMISSION, SUBCHAPTER A-GENERAL, PART 15-RADIO FREQUENCY DEVICES, Subpart C-Intentional Radiators, Radiated Emission Limits, Additional Provisions, Section 15.247 Operation within the bands 902-928 MHz, 2400-2483.5 MHz, and 5725-5850 MHz. https://www.law.cornell.edu/cfr/text/47/15.247
+1. "Electronic Code of Federal Regulations," Title 47-Telecommunication, CHAPTER I-FEDERAL COMMUNICATIONS COMMISSION, SUBCHAPTER A-GENERAL, PART 15-RADIO FREQUENCY DEVICES, Subpart C-Intentional Radiators, Radiated Emission Limits, Additional Provisions, Section 15.247 Operation within the bands 902-928 MHz, 2400-2483.5 MHz, and 5725-5850 MHz. https://www.law.cornell.edu/cfr/text/47/15.247
+
+2. The ChirpStack Project documentation: https://www.chirpstack.io/docs/index.html
+
+3. RadioHead RH_RF95 library for RFM95W LoRa transceiver: https://www.airspayce.com/mikem/arduino/RadioHead/classRH__RF95.html#a854c2eaa2f3cf9583453ff09f15e1099
+
+4. LoRa Arduino library: https://github.com/sandeepmistry/arduino-LoRa
+
+5. "RFM95/96/97/98(W) - Low Power Long Range Transceiver Module" Datasheet: https://cdn.sparkfun.com/assets/learn_tutorials/8/0/4/RFM95_96_97_98W.pdf
+
+6. Semtech SX1302 LoRa Core™ Digital Baseband Chip for LoRaWAN network gateways documentation: https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R000000Hkyg/U8CIV3e9yI9T_aILFMxuzLNs_6_0Io1WIaksrNYyCMQ
