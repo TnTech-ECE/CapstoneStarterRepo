@@ -52,13 +52,13 @@ Figure 2:
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-| Plug electric | ----- | 1 | $6.71 | $6.71
+| Plug electric |  035-00101-2BP | 1 | $6.71 | $6.71 |
 | Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
 | Full wave Bridge Rectifier | TCT50-01E07AB | 1|$16.65 | $16.65 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
 | Resistor | R268|4| $0.10|$0.40|
 | Resistor | R74|3| $0.10|$0.30|
-| Total | ----- |-----| -----| $ |
+| Total | ----- |-----| -----| $ 86.09 |
 
 # References:
 Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana
