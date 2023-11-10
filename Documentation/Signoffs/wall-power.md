@@ -45,9 +45,6 @@ The output voltage across the R1 is (16.4-1.4) V DC = 15DC
 
 
  The circuit simulation was done by using KiCad software, as shown in Figure 1.
-Firstly, A step-down transformer used the input AC voltage 12.
-
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ad635522-d0a1-4246-8543-7fff5a37064a)
 
 Figure 2: 
 
