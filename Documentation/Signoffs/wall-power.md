@@ -2,12 +2,12 @@
 
 My main wall power subsystem input 120v AC. The main wall power has a transformer convert AC to AC, then a buck converters DC to DC that is step down will output 5V DC and boost converters that will be a step up that output 15v DC. After that, it will feed the other two subsystems, the first subsystem needs a 5v DC, and the second subsystem needs a 15v DC. However, I have another subsystem, which is a backup battery. If the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. The main idea is to supply power to the device, building a circuit that will convert to DC and then distribute voltage to other subsystems.  
 # Constraints
-| No. | Constraints |
-| --- | ----------- |
-| 1.  | Voltage equivalence: The main wall power subsystem needs to protect devices from the damage caused by voltage and guarantee the safety of the electrical system, as well as preserve the whole subsystem.|
-| 2.  | Transformer: A safe output voltage and the way to handle 120v AC input are requirements for the Transformer used to converter AC to AC.|
-| 3.  | Must be A way to disconnect the power from the source.|
-| 4.  | It should be within wire capabilities.|
+| No. | Constraints | Origin |
+| --- | ----------- | ------ |
+| 1.  | Voltage equivalence: The main wall power subsystem needs to protect devices from the damage caused by voltage and guarantee the safety of the electrical system, as well as preserve the whole subsystem.| System Requirements |
+| 2.  | Transformer: A safe output voltage and the way to handle 120v AC input are requirements for the Transformer used to converter AC to AC.| System Requirements |
+| 3.  | Must be A way to disconnect the power from the source.| System Requirements |
+| 4.  | It should be within wire capabilities.| System Requirements |
 
 1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity.
 2.	Transformer: How does the Transformer raise voltage or lower voltage as we need it. So, the Transformer used to Converter from AC high voltage different AC low. That means doing step-down voltage.
@@ -41,7 +41,8 @@ Primary Voltage = 120 V AC,
 Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (54/1) = 16.4 V
 For the positive/negative cycle, two diodes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V
 The output voltage across the R1 is (16.4-1.4) V DC = 15DC
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/eec2ba15-9c46-4504-bbdd-3025f72103d6)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/15c9f878-e6b5-41f9-ac4e-b48621441987)
+
 
  The circuit simulation was done by using LT Spice software, as shown in Figure 1.
 Firstly, A step-down transformer used the input AC voltage 12.
