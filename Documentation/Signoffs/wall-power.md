@@ -19,7 +19,8 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 8.	Subsystem two: it needs to step up “Boost” for the Subsystem and its 15v dc, 50mA.
 
 ## Backup Battery Subsystem:
-I am using the Backup Battery if the main wall power shuts down. However, that would make me do the Buck and Boost Converter to the battery a 15v, 50mA and 5v, 50mA. Also, inside the system, I have a kill switch. If something happens to the wall power, it will switch immediately to backup. The goal of the battery backup subsystem is to make sure that the first and second subsystems continue to function normally during power outages.
+Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall,  have a switch "controller" to manage all power from subsystems. 
+The battery backup subsystem's goal is to ensure that the first and second subsystems continue to function normally during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
 # Buildable Schematic:
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/0aebbcb8-a28d-4c62-835a-21147e2b2240)
