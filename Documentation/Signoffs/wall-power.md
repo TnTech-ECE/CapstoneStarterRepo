@@ -49,21 +49,8 @@ Firstly, A step-down transformer used the input AC voltage 12.
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ad635522-d0a1-4246-8543-7fff5a37064a)
 
-Figure 2: LTspiec simulated voltage waveform.
-The green line 120v, input voltage
-The blue line for Subsystem one across R3 and its 15v.
-The red line for subsystem two across R2, its 5v
+Figure 2: 
 
-Output for the current waveform:
-
-Figure 3: LTspiec simulated current waveform.
-This is for R2:
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/c4ed1379-f7da-4f14-a720-f73e2868fd5c)
-
-Current R3:
-
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/d098c987-91bf-4103-bf0c-0094cbb38c34)
-Current R2
 
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
