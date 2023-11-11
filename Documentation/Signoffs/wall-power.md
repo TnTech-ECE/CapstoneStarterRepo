@@ -21,7 +21,7 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 # Buildable Schematic:
 
-<img width="665" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/cc613290-0896-4617-991f-8223f626419a">
+<img width="697" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/16dd0fcd-408e-4520-ab23-b0a3130413bb">
 
 Figure 1.
 
@@ -32,19 +32,16 @@ Figure 2.
 # Analysis
 Circuit explanation: 
 1.	The input for wall power is 120v AC, 60 Hz.
-2.	Converter AC to AC 
-3.	Converter DC to DC
-4.	Buck “step down the voltage”
-5.	Boost “Step up the voltage”
-6.	Back-Boots for Backup battery
-7.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
-Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V For the positive/negative cycle, two di-odes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V The out-put voltage across the R1 is (16.4-1.4) V DC = 12.2v DC
- The circuit simulation was done by using KiCad software, as shown in Figure 1.
+2.	Converter 120v AC to 24v AC 
+3.	Converter 24v DC to 13.6v DC
+4.	
+5.	Buck “step down the voltage ”
+6.	Boost “Step up the voltage”
+7.	Back-Boots for Backup battery
+8.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
-| Part |  Input volatge  | output volatge |  Current  | 
-| ------------ | ------------- | --------- | -------- | 
-| outlet | 120v | 120v | -------- | 
-| buck-Boost Converter | 22.6v | 12v | 1.2 | 
+Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V For the positive/negative cycle,
+ two di-odes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V The out-put voltage across the R1 is (16.4-1.4) V DC = 12.2v DC
 
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
