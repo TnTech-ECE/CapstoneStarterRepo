@@ -23,7 +23,11 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 <img width="665" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/cc613290-0896-4617-991f-8223f626419a">
 
+Figure 1.
+
 <img width="583" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2bee2c6e-126c-49ae-a518-e64eea2e3d38">
+
+Figure 2.
 
 # Analysis
 Circuit explanation: 
@@ -35,18 +39,21 @@ Circuit explanation:
 6.	Back-Boots for Backup battery
 7.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V For the positive/negative cycle, two di-odes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V The out-put voltage across the R1 is (16.4-1.4) V DC = 12.2v DC
-
-
-
-
-
-
  The circuit simulation was done by using KiCad software, as shown in Figure 1.
 
 | Part |  Input volatge  | output volatge |  Current  | 
 | ------------ | ------------- | --------- | -------- | 
 | outlet | 120v | 120v | -------- | 
 | buck-Boost Converter | 22.6v | 12v | 1.2 | 
+
+###  Backup Battery
+| No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
+| --- | -------- | ------ | ----- | ------------------------ | --------- | ------------------ |
+| a. | Sensor | 9 V | 0.06 A | 9 * 0.06 = 0.45W | 24h | 10.8Wh |
+| b. | Data interpretation, Transmission, and Storage | 5 V | 0.25A | 5 * 0.25 = 1.25W | 24h | 30Wh | 
+| | | | | Total Rated Wattage = 1.7W | | Energy Consumption=40.8Wh |
+
+
 
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
@@ -58,7 +65,7 @@ Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Vo
 | Battery |ML12-12F2 |1| $27.99|$27.99|
 | Resistor | R268|4| $0.10|$0.40|
 | Resistor | R74|3| $0.10|$0.30|
-| Total | ----- |-----| -----| $ 86.09 |
+| Total | ----- |-----| -----| $89.76 |
 
 # References:
 1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
