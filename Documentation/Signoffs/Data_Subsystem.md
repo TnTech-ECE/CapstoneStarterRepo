@@ -16,20 +16,14 @@ The data subsystem is responsible for the transmission and storage of data. Data
 
 ## Schematics / Block Diagrams
 
-![Basic block diagram Data Subsystem](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/c43f805b-1c6c-412f-835d-2dbf95f1ec6d)
-<em>Figure 1. Block Diagram of Entire Subsystem</em>
-
-![ESP32_Operation](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/38003323-e503-4745-a4c4-f8c044c9376d)
-<em>Figure 2. ESP32 Block Diagram</em>
-
-![Network_Block_Diagram](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/afadafb0-dcaf-43ec-a1ce-43f3f5a92893)
-<em>Figure 3. Network Block Diagram</em>
+![Block Diagram](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/8d9a5715-6e17-4905-b8ca-53e408e95aed)
+<em>Figure 1. Block Diagram</em>
 
 ![ESP32_Schematic-Dimensions_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/27146c5b-f9e3-4d8a-9bb0-b24fef99b645)
-<em>Figure 4. Dimensions of ESP32 and RFM85W Breakout Board</em>
+<em>Figure 2. Dimensions of ESP32 and RFM85W Breakout Board</em>
 
-![ESP32_Schematic-Wiring_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/07d51866-1d7c-4f3a-9a28-a11da050b1f7)
-<em>Figure 5. GPIO connections for ESP32</em>
+![ESP32_Schematic-Wiring_View](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/8af4485d-a49f-4b8b-96bb-51c6164fa201)
+<em>Figure 3. GPIO connections for ESP32</em>
 
 
 
@@ -66,8 +60,7 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 | WM1302 Raspberry Pi Hat                                                          | N/A, Seeed Studio SKU: 113100022    | 1        | $19.90         | $19.90      |
 | Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915 - M                              | WM1302-SPI-US915-M                  | 1        | $25.00         | $25.00      |
 | SanDisk 64GB Ultra microSDHC                                                     | SDSQUA4-064G-GN6MA                  | 1        | $8.99          | $8.99       |
-| CanaKit 5V 2.5A Raspberry Pi 3 B+ Power Supply/Adapter                           | ‎DCAR-RSP-2A5                        | 1        | $9.95          | $9.95       |
-| TOTAL                                                                            |                                     |          |                | $160.12     |
+| TOTAL                                                                            |                                     |          |                | $150.17     |
 
 
 ## References
