@@ -21,8 +21,9 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 # Buildable Schematic:
 
+<img width="665" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/cc613290-0896-4617-991f-8223f626419a">
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/cf989bcb-e552-427f-8fb7-f024b741f645)
+<img width="521" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/68d8f48b-0c4d-47dc-8fd1-06edeb58bc12">
 
 # Analysis
 Circuit explanation: 
@@ -35,7 +36,8 @@ Circuit explanation:
 7.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V For the positive/negative cycle, two di-odes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V The out-put voltage across the R1 is (16.4-1.4) V DC = 12.2v DC
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/15c9f878-e6b5-41f9-ac4e-b48621441987)
+<img width="521" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2bde2809-ac86-4712-9a14-deb4e8a9210b">
+
 
 
  The circuit simulation was done by using KiCad software, as shown in Figure 1.
