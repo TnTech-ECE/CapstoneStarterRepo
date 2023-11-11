@@ -19,9 +19,9 @@ Table 1. Constraints and origins of the constraints.
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
-| a.  | Sensor | 9 V | 0.06 A |
-| b.  | Data interpretation, Transmission, and Storage | 5 V | 0.25 A |
-| c.  | Charge Controller | 5 V | 0.25 A |
+| a.  | Data interpretation, Transmission, and Storage | 5 V | 0.25 A |
+| b.  | Charge Controller | 5 V | 0.25 A |
+| c.  | Sensor | 9 V | 0.06 A |
 
 Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 
@@ -52,7 +52,151 @@ Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 
 # Analysis
 
+## Sizing and selection for Buck Converter
 
+
+| No. | Subsystem | Voltage | Current |
+| --- | ----------- | ------ | ------ |
+| a.  | Data interpretation, Transmission, and Storage | 5 V | 0.25 A |
+| b.  | Charge Controller | 5 V | 0.25 A |
+
+
+
+```math
+{\rm V}_{IN} = 10.8V  to  13.2V
+```
+```math
+{\rm V}_{OUT} = 5V
+```
+```math
+{\rm I}_{OUT(max)} = 0.25A
+```
+```math
+{\rm I}_{OUT(min)} = 0.05A
+```
+```math
+{\rm f}_{SW)} = 2.25MHz
+```
+
+
+Inductor Selection:
+For starting point is to choose the ripple current to be %40 of I_out(max). To ensure that the ripple current does not exceed the specified maximum.
+```math
+L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+```math
+L\ =\ \ \frac{5V}{2.25MHz\ \ast\ (0.4\ (0.25A)}\ \ast(1-\frac{5V}{13.2V})
+```
+```math
+L\ = 13.8 \mu H
+```
+Given this, a 1.7µH or 3.3µH, >1.2A inductor would suffice
+
+
+Using the desired input and output voltage along with the operating frequency, we can determine the value for the ripple current.
+
+```math
+{\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+```math
+{\rm ∆I}_{L} = \frac{5V}{(2.25MHz\ \ast\ 13.8\mu H} \ast(1-\frac{5}{13.2})
+```
+```math
+{\rm ∆I}_{L} = 0.1A
+```
+
+Feedback resistors Selection:
+
+Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be 187kΩ.  
+```math
+V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{1}}{R_{2}})
+
+```
+```math
+5V=\ 0.6V\ \ast(1 +\frac{187kΩ}{R_{2}})
+```
+```math
+R_{2}= 25.5kΩ
+```
+
+Input Capacitor Selection:
+
+According to the datasheet, the input capacitor is a 10µF ceramic capacitor, which is adequate for most applications. 
+```math
+I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max)}}{V_{OUT}}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.25A\ast\ \frac{5V}{13.2V}\ast{(\frac{13.2V}{5V}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.121A
+```
+
+
+Output Capacitor Selection:
+According to the datasheet for the output capacitor, a 22µF ceramic capacitor will be used based on the required EST to satisfy the output voltage ripple requirement and the bulk capacitance needed for loop stability. 
+
+
+
+| No. | Subsystem | Voltage | Current |
+| --- | ----------- | ------ | ------ |
+| c.  | Sensor | 9 V | 0.06 A |
+
+```math
+{\rm V}_{IN} = 10.8V  to  13.2V
+```
+```math
+{\rm V}_{OUT} = 9V
+```
+```math
+{\rm I}_{OUT(max)} = 0.06A
+```
+```math
+{\rm I}_{OUT(min)} = 0.05A
+```
+```math
+{\rm f}_{SW)} = 2.25MHz
+```
+
+
+Inductor Selection:
+For starting point is to choose the ripple current to be %40 of I_out(max). To ensure that the ripple current does not exceed the specified maximum.
+```math
+L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+
+
+
+Using the desired input and output voltage along with the operating frequency, we can determine the value for the ripple current.
+
+```math
+{\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+
+
+Feedback resistors Selection:
+
+Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be ---kΩ.  
+```math
+V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{1}}{R_{2}})
+
+```
+
+
+Input Capacitor Selection:
+
+According to the datasheet, the input capacitor is a 10µF ceramic capacitor, which is adequate for most applications. 
+```math
+I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max)}}{V_{OUT}}-1)}^\frac{1}{2}
+```
+
+
+
+
+Output Capacitor Selection:
+According to the datasheet for the output capacitor, a 22µF ceramic capacitor will be used based on the required EST to satisfy the output voltage ripple requirement and the bulk capacitance needed for loop stability. 
 
 
 
@@ -62,8 +206,11 @@ Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Step down buck regulator | LTC3621 | 2 | $7.38 |  $14.76 |
-| Fuse | ??? | ?? | ??? | ??? |
-| Total | ----- | ----- | ----- | $91.97 
+| Fuse | ---- | 3 | ---- | ----- |
+| Resistor | ---- | 6 | ---- | ----- |
+| Inductor | ---- | 3 | ---- | ----- |
+| Capacitor | ---- | 9 | ---- | ----- |
+| Total | ----- | ----- | ----- | $---- 
 
 
 
