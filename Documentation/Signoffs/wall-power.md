@@ -63,6 +63,7 @@ Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Vo
 | Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
 | Full wave Bridge Rectifier | GBU404 | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
+| capacitor | ----- | ----- | ----- | $? | $? |
 | Resistor | R268|4| $0.10|$0.40|
 | Resistor | R74|3| $0.10|$0.30|
 | Total | ----- |-----| -----| $89.76 |
