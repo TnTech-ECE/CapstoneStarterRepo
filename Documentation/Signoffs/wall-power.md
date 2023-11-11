@@ -21,8 +21,7 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 # Buildable Schematic:
 
-<img width="686" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/9ddb0730-8f93-4ba3-9960-697ffc191bfe">
-
+<img width="651" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/d27f9afc-5d70-4d1f-ae27-dfc52a8a177b">
 
 Figure 1.
 
