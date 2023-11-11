@@ -6,6 +6,7 @@ The descriptions and information in all readme files in the starter repo (includ
 
 Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
 
+This project is a continuation project from the 2022-23 academic year at Tennessee Technological University to monitor parking lots in a manner that allows students, faculty, staff, and campus visitors to find parking lots with availability in a timely manner. The previous team used cameras to monitor incoming and outgoing traffic in parking lots.  This solution will not work for many of the parking lots that do not have the infrastructure nearby to support cameras.  By using inductive loops to monitor designated entrances/exits of parking lots, more parking lots across campus can be monitored and students, faculty, etc. can find parking availability without having to search an entire parking lot in hopes of finding an open parking spot.
 
 ## Capabilities
 
@@ -56,16 +57,20 @@ Tell a bit about the customer for the project. Also discuss any other groups (sp
 
 ### Recognitions
 
-Since this project is a continuation from the 2022-23 academic year, this team wants to recognize the previous Parking Lot Monitoring System team and their members: Kester Nucum, Aaron Wilhite, Gabriel Laboy, Genevieve Schreiber, and Reggie Garza.  This team consisted of three computer engineering students and two electrical engineering students.  With their knowledge and collaboration with the CSC team, they were successful in creating a server, sign, and cameras to detect and count the number of vehicles in a specified parking lot.  Due to their work, this team of three electrical engineering students and two computer engineering students was able to create a ground-based solution to assist the current camera system in detecting vehicles entering and leaving a parking lot and display an accurate number of available parking spots within a specific parking lot..
+Since this project is a continuation from the 2022-23 academic year, this team wants to recognize the previous Parking Lot Monitoring System team and their members: Kester Nucum, Aaron Wilhite, Gabriel Laboy, Genevieve Schreiber, and Reggie Garza.  This team consisted of three computer engineering students and two electrical engineering students.  With their knowledge and collaboration with the CSC team, they were successful in creating a server, sign, and cameras to detect and count the number of vehicles in a specified parking lot.  Due to their work, this team of three electrical engineering students and two computer engineering students was able to create a ground-based solution to assist the current camera system in detecting vehicles entering and leaving a parking lot and display an accurate number of available parking spots within a specific parking lot.
 
 Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
 
 ## Repo Organization
 
+For the layout of the team's Github, it includes three main folders: Documentation, Reports, and Software.  The three folders are explained in the following subsections.
+
 Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
 
 
 ### Reports
+
+In the Reports folder, it contains documents such as the Project Proposal, Conceptual Design, Experimentation, Final Report, Lessons Learned, etc.  All documentation that is in the form of a report is located in this folder.  This folder also contains a broad explanation of the project from beginning to end in the numerous documents provided in this folder.
 
 In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
 
