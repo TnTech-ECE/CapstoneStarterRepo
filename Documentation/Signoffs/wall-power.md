@@ -23,7 +23,8 @@ Use the Backup Battery if the main wall power shuts down. Also, the battery will
 The battery backup subsystem's goal is to ensure that the first and second subsystems continue to function normally during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
 # Buildable Schematic:
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/0aebbcb8-a28d-4c62-835a-21147e2b2240)
+
+
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/cf989bcb-e552-427f-8fb7-f024b741f645)
 
 # Analysis
