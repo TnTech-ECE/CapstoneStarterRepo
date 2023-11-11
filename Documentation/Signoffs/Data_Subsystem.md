@@ -82,3 +82,7 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 5. "RFM95/96/97/98(W) - Low Power Long Range Transceiver Module" Datasheet: https://cdn.sparkfun.com/assets/learn_tutorials/8/0/4/RFM95_96_97_98W.pdf
 
 6. Semtech SX1302 LoRa Core™ Digital Baseband Chip for LoRaWAN network gateways documentation: https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R000000Hkyg/U8CIV3e9yI9T_aILFMxuzLNs_6_0Io1WIaksrNYyCMQ
+
+7. ESP32 Technical Reference: https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf
+
+8. ESP WROOM 32E pinout: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png
