@@ -53,8 +53,20 @@ Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Vo
 | b. | Data interpretation, Transmission, and Storage | 5 V | 0.25A | 5 * 0.25 = 1.25W | 24h | 30Wh | 
 | | | | | Total Rated Wattage = 1.7W | | Energy Consumption=40.8Wh |
 
+The backup battery selection is going to be dependent on multiple aspects. Since we are using a power controller with an input voltage of 12 V DC. Therefore, the battery selected to be a 12V battery Seal lead acid. Moreover, the battery capacity ( Ah ) will be determined by applying these calculations.
+Referring to the Table [ ]
+Total amp-hour demand per day =  (Total energy demand per day)/(Battery Voltage )
+Total amp-hour demand per day =  40.8Ah/(12V )
+Total amp-hour demand per day = 3.4 Ah
 
 
+The days of storage are desired to be three days ( Autonomy ). Also, the allowable depth of discharge limit is 0.8.
+Using the given values, we will be able to calculate the required battery capacity ( Ah)
+required battery capacity ( Ah) =  (Total amp-hour demand per day * Days of Autonomy )/(Depth of discharge)
+required battery capacity ( Ah) =  (3.4Ah * 3 days)/12V
+required battery capacity ( Ah) = 12.75 Ah
+The required battery capacity is 12.75 Ah therefore, increasing the battery capacity would be more convenient. The battery capacity ( Ah ) selected to be 14 Ah. 
+I use the ... form datasheet[6]
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
@@ -77,4 +89,7 @@ Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Vo
 4. https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
 
 5. https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
+   
+6. [file:///C:/Users/abofa/Downloads/R08-002%20-%20Design%20and%20Sizing%20of%20Solar%20Photovoltaic%20Systems%20-%20US%20(1).pdf](https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems)https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems
 
+  
