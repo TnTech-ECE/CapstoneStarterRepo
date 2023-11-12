@@ -21,7 +21,7 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 # Buildable Schematic:
 
-<img width="651" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/d27f9afc-5d70-4d1f-ae27-dfc52a8a177b">
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/d921c0f2-c3e3-4709-b1bf-cacd66c448a0)
 
 Figure 1.
 
@@ -34,14 +34,59 @@ Circuit explanation:
 1.	The input for wall power is 120v AC, 60 Hz.
 2.	Converter 120v AC to 24v AC 
 3.	Converter 24v DC to 13.6v DC
-4.	
-5.	Buck “step down the voltage ”
-6.	Boost “Step up the voltage”
-7.	Back-Boots for Backup battery
-8.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
+4.	Buck “step down the voltage ”
+5.	Boost “Step up the voltage”
+6.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
-Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V For the positive/negative cycle,
- two di-odes are in conduction mode at a time, causing a voltage drop of 0.7*2=1.4 V The out-put voltage across the R1 is (16.4-1.4) V DC = 12.2v DC
+Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V.
+
+
+Transformer:
+```math
+Output \ Voltage \  =input\times\frac{ Turs\  secondary }{ Turs\ primary }
+```
+```math
+Output \ Voltage \  =120\times\frac{ 200 }{ 1000 } = 24
+```
+Bridge Rectifier: 
+The process for Bridge Rectifier from 120v to 24v
+```math
+Output \ Voltage \  ={2}{π}\times\ (vm)- (vr\times\ π )
+```
+```math
+Output \ Voltage \  ={2}{π}\times\ (24\sqrt{2})- (0.7\ π )
+```
+
+```math
+Output \ Voltage \  = 20v\ DV
+```
+First Buck converter:
+Used the step-down voltage from 20v DC to get 12v DC
+Fs = 100KHz
+T = 10ms
+
+```math
+Vout \ = D * Vin
+```
+```math
+Duty\ Ratio  = \frac{ 12 } { 20} = 0.6
+```
+```math
+Vs\ ={L}\times \frac{ I } { Tno} +{12}  
+```
+```math
+20\ ={L}\times \frac{ 0.6 } { 6} +{12}  
+```
+
+```math
+8  = \frac{L} { 10} 
+```
+```math
+L = 80uH 
+```
+```math
+C  = \frac{ D\ Io } {8Fs\ Vo} 
+```
 
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
