@@ -34,12 +34,11 @@ Circuit explanation:
 1.	The input for wall power is 120v AC, 60 Hz.
 2.	Converter 120v AC to 24v AC 
 3.	Converter 24v DC to 13.6v DC
-4.	Buck “step down the voltage ”
-5.	Boost “Step up the voltage”
+4.	Buck “step down the voltage Subsystem one ”
+5.	Boost “Step up the voltage Subsystem two ”
 6.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
-Calculations: Input voltage = 120 V AC. Primary Voltage = 120 V AC, Secondary Voltage = 120V * √(Lp/Ls) = 120V * √ (13/1) = 13.6 V.
-
+Calculations:
 
 Transformer:
 ```math
@@ -135,10 +134,9 @@ From using the calculation form datasheet[6]
 | Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
 | Full wave Bridge Rectifier | GBU404 | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
-| capacitor | ----- | ----- | ----- | $? | $? |
-| Resistor | R268|4| $0.10|$0.40|
-| Resistor | R74|3| $0.10|$0.30|
-| Total | ----- |-----| -----| $89.76 |
+| capacitor | ----- | ----- | ----- | ----- | ----- |
+| Resistor | -----|-----| -----|-----|
+| Total | ----- |-----| -----| ----- |
 
 # References:
 1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
