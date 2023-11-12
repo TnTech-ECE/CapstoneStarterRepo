@@ -87,7 +87,9 @@ L = 80uH
 ```math
 C  = \frac{ D\ Io } {8Fs\ Vo} 
 ```
-
+```math
+C = 15 mF
+```
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
 | --- | -------- | ------ | ----- | ------------------------ | --------- | ------------------ |
