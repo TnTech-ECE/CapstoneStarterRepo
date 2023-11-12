@@ -133,7 +133,7 @@ From using the calculation form datasheet[6]
 | Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
 | Buck Converter | LTC3621  | ? | $7.38 |$----- |
 | Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
-| Full wave Bridge Rectifier | GBU404 | 1| $1.36 | $1.36 |
+| Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
 | capacitor | ----- | ----- | ----- | ----- | ----- |
 | Resistor | -----|-----| -----|-----|
@@ -145,10 +145,11 @@ From using the calculation form datasheet[6]
 2. Buck-Boost Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3114-1.pdf?ADICID=SYND_WW_P682800_PF-spglobal?hkey=EF798316E3902B6ED9A73243A3159BB0
 
 3. Bridge Rectifier: https://www.mouser.com/ProductDetail/Diodes-Incorporated/GBU404?qs=G5AQjGfRJcL0qZwbO1hCAw%3D%3D&mgh=1&gclid=Cj0KCQiAo7KqBhDhARIsAKhZ4uiLwH-geIVj7ENUvHTWf11hyNU4IoTfVOAK8-eMKpBxqfyngL2PZPkaAtnPEALw_wcB
-4. Transformer datasheet: https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
+4. Bridge Rectifier: https://www.digikey.com/en/products/detail/micro-commercial-co/MB12S-TP/2075331
+5. Transformer datasheet: https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
 
-5. Battery: https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
+6. Battery: https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
    
-6. Battery datasheet: [file:///C:/Users/abofa/Downloads/R08-002%20-%20Design%20and%20Sizing%20of%20Solar%20Photovoltaic%20Systems%20-%20US%20(1).pdf](https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems)https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems
-7. Buck Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf
+7. Battery datasheet: [file:///C:/Users/abofa/Downloads/R08-002%20-%20Design%20and%20Sizing%20of%20Solar%20Photovoltaic%20Systems%20-%20US%20(1).pdf](https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems)https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems
+8. Buck Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf
   
