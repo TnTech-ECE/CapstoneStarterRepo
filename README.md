@@ -23,9 +23,12 @@ Here explain in more detail (though not as much as will be given in the datashee
 ## Salient Outcomes
 
 1. This project will continue the work of creating an effective Parking Lot Monitoring System.
-     a. As of September 2023, the Parking Lot Monitoring System is in the second year of the overall project.  This team has inherited a previous system that used cameras to do complete both static tracking (monitor parked cars) and dynamic tracking (cars entering and exiting lots) to efficiently monitor parking lots.  This method is a very efficient way to monitor parking lots; however, parking lots that are located away from campus buildings or do not have the infrastructure to support camera placement in the lots do not benefit from this method.  By using a ground-based solution to monitor parking lots with designated entrances/exits, more parking lots can be monitored across the campus of Tennessee Tech.
+
+   a. As of September 2023, the Parking Lot Monitoring System is in the second year of the overall project.  This team has inherited a previous system that used cameras to do complete both static tracking (monitor parked cars) and dynamic tracking (cars entering and exiting lots) to efficiently monitor parking lots.  This method is a very efficient way to monitor parking lots; however, parking lots that are located away from campus buildings or do not have the infrastructure to support camera placement in the lots do not benefit from this method.  By using a ground-based solution to monitor parking lots with designated entrances/exits, more parking lots can be monitored across the campus of Tennessee Tech.
+
 2. This project will implement the use of solar panels to efficiently power the system.
-     a. Some parking lots across the campus of Tennessee Tech are not located near campus buildings.  To allow the system to work in these lots, solar panels will be used to power the system at these lots to efficiently monitor these lots so students, faculty, etc. know if there is parking availability at these specific lots.
+
+   a. Some parking lots across the campus of Tennessee Tech are not located near campus buildings.  To allow the system to work in these lots, solar panels will be used to power the system at these lots to efficiently monitor these lots so students, faculty, etc. know if there is parking availability at these specific lots.
 
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
