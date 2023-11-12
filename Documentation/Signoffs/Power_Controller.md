@@ -51,7 +51,7 @@ Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 
 
 # Analysis
-
+The selected buck converter datasheet can be found here [ https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf ]
 ## Sizing and selection for Buck Converter
 
 
@@ -169,7 +169,7 @@ L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(m
 
 
 
-Using the desired input and output voltage along with the operating frequency, we can determine the value for the ripple current.
+We can determine the value for the ripple current using the desired input and output voltage along with the operating frequency.
 
 ```math
 {\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
