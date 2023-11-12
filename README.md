@@ -10,10 +10,23 @@ This project is a continuation project from the 2022-23 academic year at Tenness
 
 ## Capabilities
 
+Though this project is a continuation project, it deviates away from using cameras and instead uses a ground-based solution.  Each capability of the project is mentioned:
+
+1. This project will detect vehicles and motorcycles entering/exiting parking lots that have designated entrances/exits.
+2. This project will only detect vehicles and motorcycles that enter/exit a parking lot at a speed less than 20 mph.
+3. This project will use LoRaWAN to transmit data from a designated entrance/exit of a parking lot to the Capstone Lab in Brown Hall for data interpretation and storage into the server.
+4. For testing this project in the Engineering Quad Parking Lot (between the engineering buildings on the campus of Tennessee Tech University), one entrance/exit will use solar power, with a backup battery, to power the inductive loops and the transmitter for the data.  By using solar power, parking lots that are not located near buildings with wall outlets can generate power and function across the campus of Tennessee Tech.
+
 Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
 
 ## Salient Outcomes
+
+1. This project will continue the work of creating an effective Parking Lot Monitoring System.
+     a. As of September 2023, the Parking Lot Monitoring System is in the second year of the overall project.  This team has inherited a previous system that used cameras to do complete both static tracking (monitor parked cars) and dynamic tracking (cars entering and exiting lots) to efficiently monitor parking lots.  This method is a very efficient way to monitor parking lots; however, parking lots that are located away from campus buildings or do not have the infrastructure to support camera placement in the lots do not benefit from this method.  By using a ground-based solution to monitor parking lots with designated entrances/exits, more parking lots can be monitored across the campus of Tennessee Tech.
+2. This project will implement the use of solar panels to efficiently power the system.
+     a. Some parking lots across the campus of Tennessee Tech are not located near campus buildings.  To allow the system to work in these lots, solar panels will be used to power the system at these lots to efficiently monitor these lots so students, faculty, etc. know if there is parking availability at these specific lots.
+
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
 
