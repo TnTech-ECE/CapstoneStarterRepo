@@ -11,9 +11,9 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 | 4.  | It should be within wire capabilities.| System Requirements |
 
 1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity.
-2.	Transformer: How does the Transformer raise voltage or lower voltage. So, We need to do the Converter from AC high voltage different AC low. That means doing step-down voltage.
+2.	Transformer: How does the Transformer raise voltage or lower voltage? So, We need to do the Converter from AC high voltage different AC low. That means doing step-down voltage.
 3.	Full wave bridge rectifier “FWR”: The FWR is a type of Full wave rectifier that uses four or more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. After the converter from AC to DC, we will get just the positive signals.
-4.	RC filter: Capacitor with Resister: Signal management and filtering are critical functions of electronic systems. Also, it will be smoothing the signals. However, we should use the Step-down voltage From DC to DC. After the RC filter, the input voltage will be 22.6v DC. We used the chip to do the process. The buck-boost converter gets what we need to get the output of 12v DC. Then, we have power subsystems. The input voltage will be the same, and it's 12v DC.
+4.	RC filter: Capacitor with Resister: Signal management and filtering are critical functions of electronic systems. Also, it will be smoothing the signals. However, we should use the Step-down voltage From DC to DC. After the RC filter, the input voltage will be 20v DC. We used the chip to do the process. The buck-boost converter gets what we need to get the output of 12v DC. Then, we have power subsystems. The input voltage will be the same, and it's 12v DC.
 5.	Controller: We have three systems, and their "chips" " are all buck-boost converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck-boost converter. Subsystem one: it needs to step down "Buck" for the Subsystem and its 5v dc, 250mA. Subsystem two must step up "Boost" for the Subsystem and its 9v dc, 60mA.
 6.	Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
@@ -34,15 +34,15 @@ Circuit explanation:
 1.	The input for wall power is 120v AC, 60 Hz.
 2.	Converter 120v AC to 24v AC 
 3.	Converter 24v DC to 13.6v DC
-4.	Buck “step down the voltage Subsystem one ”
-5.	Boost “Step up the voltage Subsystem two ”
+4.	Buck “step down the voltage Subsystem one”
+5.	Boost “Step up the voltage Subsystem two”
 6.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
 Calculations:
 
 Transformer:
 ```math
-Output \ Voltage \  =input\times\frac{ Turs\  secondary }{ Turs\ primary }
+Output \ Voltage \  =input\times\frac{ Turns\  secondary }{ Turns\ primary }
 ```
 ```math
 Output \ Voltage \  =120\times\frac{ 200 }{ 1000 } = 24
@@ -131,7 +131,7 @@ From using the calculation form datasheet[6]
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Plug electric |  035-00101-2BP | 1 | $6.71 | $6.71 |
 | Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
-| Buck Converter | LTC3621  | ? | $7.38 |$----- |
+| Buck Converter | LTC3621  | ? | $7.38 |----- |
 | Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
 | Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| $27.99|$27.99|
