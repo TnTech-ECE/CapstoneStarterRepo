@@ -31,11 +31,37 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
+### Solar Panel
+
+
+### Battery
+Two MightyMax Ml12-12 batteries will be used. The battery type is Sealed Lead Acid AGM. The sealed lead acid has a depth of discharge of 50%, and the battery's efficiency is 85 %. The two batteries will be connected in parallel to increase the global capacity of the battery, which is rated by amps per hour. The temperature factor is 1.19.
+
+The batteries will be located outdoors; therefore, the discharge capacity according to the temperature should be considered. The discharge capacity for the battery being outdoors for 20 hours at a temperature of -15 C will reduce the battery capacity to 65%.
+
+```math
+Battery\ Capacity (Ah) = \ \frac{Daily\ Electrical\ Load\ \times\ Days\ of\ Autonomy\ \times\ Temperature\ Compensation\ }{Load\ Subsystem\ Efficiency\ \times\ Depth\ of\ Discharge\ \times\ Voltage}
+```
+```math
+```
+```math
+Battery\ Capacity (Ah)= \ \frac{ 22.5 \times\ 3 \times\ 1.19 }{ 0.85 \times\ 0.5 \times\ 12}
+```
+```math
+```
+```math
+Battery\  Capacity (Ah) =\ 15.75\ Ah
+```
+For a battery capacity of 15.75 Ah, increasing the battery capacity is considered a good practice when choosing battery capacity for a solar power system. Also, considering the depth of discharge and other loss power factors, the desired battery capacity will be 24 Ah, which means we will need two batteries with 12 V and 12 Ah in parallel. Since connecting a battery in parallel will increase the battery capacity, the battery capacity will increase to 24 Ah, and the battery voltage will remain the same at 12 V. 
+
+
+### Arduino Nano
 U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, Q1, and Q2. 
 
 The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
 
 
+### Current Sensors
 U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a maximum of 5 V. A voltage divider will be used on the output of the current sensor to change the output to have a maximum voltage of 5 V. 
 
 Analysis of resistors required to divide 8 V down to 5 V (U2 and U4):
@@ -48,7 +74,7 @@ Vout\ =Vin\times\frac{R1}{R1 + R2}
 ```
 R1 is arbitrarily chosen to be 10 kΩ. R2 is calculated to be 6 kΩ.
 
-
+### Solar Output Voltage
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
 Analysis of resistors required to divide 18 V down to 4.5 V
@@ -60,7 +86,7 @@ Vout\ =Vin\times\frac{R3}{R3 + R4}
 ```
 R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ. 
 
-
+### BuckBoost Converter
 The Buck boost, U3, will have a varying current output that will be measured by U4. The voltage output is set to 12 V to match the battery voltage. 
 
 Analysis of components required to operate U3:
@@ -96,12 +122,12 @@ Rc\ = 2π \times \ \frac{(Rcb \times Cout)}{gm \times\ (1 - Dboost)} \times\ \fr
 
 The current information from U3 is used to allow the MCU to regulate the current flowing in and out of the batteries through Q1 or Q2. 
 
+### Overcharge and Deep Discharge Protection
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
 
 MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
 
 Analysis of components required for Q1 AND Q2:
-TODO: BJT stuff
 
 ```math
 Ic(sat)\ = \frac{Vcc - Vce(sat)}{Rc}
@@ -116,7 +142,7 @@ Vrbjt\ = Vnano - Vbe(sat)
 Rbjt\ = \frac{Vrbjt}{Ib(min)}
 ```
 
-
+### Battery Monitor
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
 
 Analysis of components required for U5:
