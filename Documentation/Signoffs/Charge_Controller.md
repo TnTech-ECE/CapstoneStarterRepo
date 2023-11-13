@@ -89,7 +89,7 @@ To read the voltage being output from the solar panel, a voltage divider will be
 
 Analysis of resistors required to divide 18 V down to 4.5 V
 ```math
-Vout\ =Vin\times\frac{R3}{R3 + R4}
+{\rm V}_{out}\ =Vin\times\frac{R3}{R3 + R4}
 ```
 ```math
 5\ = 18\times\frac{10,000}{10,000 + R4} = 30 kΩ
@@ -140,16 +140,16 @@ MOSFET Q2 will be controlled to allow excess current to flow to ground to preven
 Analysis of components required for Q1 AND Q2:
 
 ```math
-Ic(sat)\ = \frac{Vcc - Vce(sat)}{Rc}
+{\rm Ic}_{(sat)}\ = \frac{Vcc - {\rm Vce}_{(sat)}}{Rc}
 ```
 ```math
-Ib(min)\ = \frac{Ic(sat)}{βdc}
+{\rm Ib}_{(min)}\ = \frac{{\rm Ic}_{(sat)}}{βdc}
 ```
 ```math
-Vrbjt\ = Vnano - Vbe(sat)
+Vrbjt\ = Vnano - {\rm Vbe}_{(sat)}
 ```
 ```math
-Rbjt\ = \frac{Vrbjt}{Ib(min)}
+Rbjt\ = \frac{Vrbjt}{{\rm Ib}_{(min)}}
 ```
 
 ### Battery Monitor
@@ -157,7 +157,7 @@ The batteries are connected to a bidirectional current and power monitor, U5. Th
 
 Analysis of components required for U5:
 
-Rshunt\ = 2 mΩ (Datasheet)
+Rshunt = 2 mΩ (Datasheet)
 
 Rp1, Rp2, and Rp3 were arbitrarily chosen to be 1 kΩ as they are used for pull up resistors. 
 
