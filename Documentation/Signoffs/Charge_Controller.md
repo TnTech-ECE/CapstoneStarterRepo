@@ -98,16 +98,23 @@ The current information from U3 is used to allow the MCU to regulate the current
 
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
 
-Analysis of components required for Q1:
-TODO: BJT stuff
-Rbjt1
-
-
 MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
 
-Analysis of components required for Q2: 
+Analysis of components required for Q1 AND Q2:
 TODO: BJT stuff
-Rbjt2
+
+```math
+Ic(sat)\ = \frac{Vcc - Vce(sat)}{Rc}
+```
+```math
+Ib(min)\ = \frac{Ic(sat)}{βdc}
+```
+```math
+Vrbjt\ = Vnano - Vbe(sat)
+```
+```math
+Rbjt\ = \frac{Vrbjt}{Ib(min)}
+```
 
 
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
@@ -127,7 +134,7 @@ Rp1, Rp2, and Rp3 were arbitrarily chosen to be 1 kΩ as they are used for pull 
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
 | Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
 | Bidirectional Current and Power Monitor | INA226AIDGST | 1 | $3.33 | $3.33 |
-| MOSFET | BSC13DN30NSFD | 2 |$1.72 | $3.44 | 
+| NPN Silicon medium power transistor | ZTX653 | 2 | |  | 
 | Schottky Diode | | 3 | | |
 | Total | ----- | ----- | ----- | $--.-- |
 
@@ -136,7 +143,7 @@ Solar panel datasheet: https://m.media-amazon.com/images/I/C1dszUHMnaL.pdf
 
 Digital potentiometer datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/MAX5471-MAX5475.pdf
 
-MOSFET datasheet: https://www.infineon.com/dgdl/Infineon-BSC13DN30NSFD-DS-v02_01-EN.pdf?fileId=5546d46259b0420a0159d5c940fc0d9a
+BJT datasheet: [ZTX653_Datasheet.pdf](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/files/13336931/ZTX653_Datasheet.pdf)
 
 Bidirectional current and power monitor datasheet: https://www.ti.com/lit/ds/symlink/ina226.pdf?ts=1699175796094&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FINA226%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-null-null-GPN_EN-cpc-pf-google-eu%2526utm_content%253DINA226%2526ds_k%253DINA226%2BDatasheet%2526DCM%253Dyes%2526gclid%253DEAIaIQobChMIvurP68KsggMVYZKDBx2_egHxEAAYASAAEgIQ9PD_BwE%2526gclsrc%253Daw.ds
 
