@@ -19,6 +19,16 @@ The purpose of the charge controller subsystem is to maximize the power output o
 
 ![ChargeControllerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/c2b2df89-f01d-4235-8380-fac168b3c779)
 
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/9747e6d6-a8f2-4858-9b76-fd6fab358187)
+
+*Figure 2. Panel Dimensions*    
+
+
+ ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/fd162e54-20aa-4a76-92f4-9bdce27a9ec5)
+ ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/bf5d8d58-b88e-4fcc-ba54-afad7f79ded0) 
+
+ *Figure 3. Single Battery Dimensions*
+
 # Analysis
 
 | Part | Input Voltage Range (V) | Input Current Range (A) | Output Voltage Range (V) | Output Current Range (A) |
@@ -35,7 +45,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 
 
 ### Battery
-Two MightyMax Ml12-12 batteries will be used. The battery type is Sealed Lead Acid AGM. The sealed lead acid has a depth of discharge of 50%, and the battery's efficiency is 85 %. The two batteries will be connected in parallel to increase the global capacity of the battery, which is rated by amps per hour. The temperature factor is 1.19.
+Two MightyMax ML12-12 batteries will be used. The battery type is Sealed Lead Acid AGM. The sealed lead acid has a depth of discharge of 50%, and the battery's efficiency is 85 %. The two batteries will be connected in parallel to increase the global capacity of the battery, which is rated by amps per hour. The temperature factor is 1.19.
 
 The batteries will be located outdoors; therefore, the discharge capacity according to the temperature should be considered. The discharge capacity for the battery being outdoors for 20 hours at a temperature of -15 C will reduce the battery capacity to 65%.
 
@@ -155,6 +165,8 @@ Rp1, Rp2, and Rp3 were arbitrarily chosen to be 1 kΩ as they are used for pull 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
+| Solar Panel | AM-L02P25-1 | 1 | $35.99 |  $35.99 |
+| Seal Lead Acid | ML12-12F2 | 2 | $27.99 | $55.98 |
 | Arduino Nano | ABX00028 | 1 | $13.70 | $13.70 |
 | Buck-Boost Converter | MAX20040ATPA/VY+ | 1 | $2.48 | $2.48 |
 | Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
