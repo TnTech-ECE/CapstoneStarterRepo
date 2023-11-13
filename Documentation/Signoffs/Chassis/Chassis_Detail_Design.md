@@ -3,6 +3,7 @@
 ## Function of the Subsystem
 
 ![Chassis_Kit](https://github.com/cebttu/CapstoneTeam1/assets/100803345/c138d1fd-b654-46b5-a523-94a4c27e750c)
+<br />
 Figure 1: Pre-built Chassis Kit
 
 The chassis serves as the foundational element upon which every system depends for dimensions and functionality. Ensuring adherence to competition guidelines in terms of length, width, height, and weight is vital to being able to participate in the competition. The motors and other electrical components included in this kit, will not be used as they will not perform sufficiently for this project. Thus, this design only considers the structure of this chassis kit.
