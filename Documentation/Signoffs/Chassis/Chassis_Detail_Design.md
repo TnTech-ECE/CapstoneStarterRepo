@@ -32,8 +32,5 @@ Constraint 2 Solution:
 
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
-| Chassis Kit | Chassis and Tracks to mount subsystems to and move the robot| Chassis Design | 
-US02TS100
-
- | SmaringRobot | 1 | $59.99 | $59.99 |
+| Chassis Kit | Chassis and Tracks to mount subsystems to and move the robot| Chassis Design | US02TS100 | SmaringRobot | 1 | $59.99 | $59.99 |
 | | | | | | | | $59.99 |
