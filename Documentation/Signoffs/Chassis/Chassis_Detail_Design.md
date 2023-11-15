@@ -59,7 +59,8 @@ Required Speed = 2.03 inches/sec
 Gear Ratio = 1.42     (GR = # of teeth on Driven Gear / # of teeth on Driving Gear)  
 Motor Speed = ((2.03 * 1.42) / 31.1 inches)*(60 s) = 5.586 rpm minimum.
 
-When calculating the speed of the tracks with this rpm for the motor, we get around 2.022 inches/sec for the tracks. so the Efficiency loss would be (1-(2.022/2.03)*100 = 0.39% loss
+When calculating the speed of the tracks with this rpm for the motor, we get around 2.022 inches/sec for the tracks.
+Efficiency loss = (1-(2.022/2.03)*100 = 0.39% loss
 
 This is not an incredibly detrimental loss and this could be overcome.
 
