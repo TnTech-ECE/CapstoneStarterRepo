@@ -54,13 +54,19 @@ The mounting plate included with the chassis provides 50.45 square inches of roo
 
 Constraint 4 Solution:
 <br />
-Tread length = 31.1 inches <br />
-Required Speed = 2.03 inches/sec <br />
-Gear Ratio = 1.42     (GR = # of teeth on Driven Gear / # of teeth on Driving Gear)  <br />
-Motor Speed = ((2.03 * 1.42) / 31.1 inches)*(60 s) = 5.586 rpm minimum. <br /> 
+Tread length = 31.1 inches 
+<br />
+Required Speed = 2.03 inches/sec
+<br />
+Gear Ratio = 1.42     (GR = # of teeth on Driven Gear / # of teeth on Driving Gear)  
+<br />
+Motor Speed = ((2.03 * 1.42) / 31.1 inches)*(60 s) = 5.586 rpm minimum. 
+<br /> 
 
-When calculating the speed of the tracks with this rpm for the motor, we get around 2.022 inches/sec for the tracks. <br />
-Efficiency loss = (1-(2.022/2.03)*100 = 0.39% loss <br />
+When calculating the speed of the tracks with this rpm for the motor, we get around 2.022 inches/sec for the tracks.
+<br />
+Efficiency loss = (1-(2.022/2.03)*100 = 0.39% loss 
+<br />
 
 This is not an incredibly detrimental loss and this could be overcome.
 
