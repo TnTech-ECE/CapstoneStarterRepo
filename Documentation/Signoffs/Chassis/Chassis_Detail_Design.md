@@ -15,6 +15,8 @@ The chassis serves as the foundational element upon which every system depends f
 |--------|------------------------|--------|
 | 1. | The entire robot shall fit inside of 1 cubic foot. | Competition Specifications |
 | 2. | The entire robot shall not weigh more than 25 lbs. | Competition Specifications |
+| 3. | The chassis shall provide enough room for other subsystems to be attached as one unit. | Strategy Specifications |
+| 4. | The tracks shall not significantly impact the speed of the robot. | Strategy Specifications |
 
 
 ## Buildable Schematic
@@ -45,6 +47,13 @@ As demonstrated by the 3D Model in Figures 4 and 5, the length, width, and heigh
 Constraint 2 Solution:
 <br />
 The weight listed for the Chassis kit is 1.1kg or 2.4251 lbs. This weight includes the DC Motors that will not be installed and will instead be replaced with different motors, as defined in the Drive Train Design. Even if the new DC Motors weigh more than those included in this kit, the chassis will weigh in at a very small fraction of the maximum weight restriction of 25 lbs, leaving plenty of leftover weight for the other subsystems to use.
+
+Constraint 3 Solution:
+<br />
+The mounting plate included with the chassis provides 50.45 square inches of room for other subsystems. However, the back and the front of the plate will have extensions added so that they are even with the front and back of the tracks. This will allow an extra 15.62 square inches split between the front and the back of the plate, for a total of 66.07 square inches of room for other subsystems. If needed, a replica of the mounting plate can be built above the original plate, adding another 50.45 square inches. This shall provide plenty of room for the other subsystems.
+
+Constraint 4 Solution:
+<br />
 
 ## BOM
 
