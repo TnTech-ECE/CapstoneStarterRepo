@@ -45,7 +45,7 @@ The yellow LED is a 5mm round model with attached wires and a series resistance 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/team%20spirit.PNG)
 
-Figure 2: The circuit design of the LEDs in parallel with a series resistance of 510 Ω between the digital outputs and LEDs. It is connected to two digital outputs of the microcontroller for each strip, Purple LEDs, and Yellow LEDs. The common terminal of the LEDs is connected to the common terminal of the microcontroller.
+Figure 5: The circuit design of the LEDs in parallel with a series resistance of 510 Ω between the digital outputs and LEDs. It is connected to two digital outputs of the microcontroller for each strip, Purple LEDs, and Yellow LEDs. The common terminal of the LEDs is connected to the common terminal of the microcontroller.
 
 ## Analysis
 
