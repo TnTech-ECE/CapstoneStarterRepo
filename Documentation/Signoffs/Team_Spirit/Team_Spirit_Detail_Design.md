@@ -2,6 +2,8 @@
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/spiritmech.png)
 
+Figure 1: Block model of Team Spirit Subsystem
+
 The purpose of the team spirit subsystem is to create a luminous and undeniable representation of TTU at the SECON robotics competition. It receives a signal and creates a display of purple and yellow blinking lights which are meant to represent Tennessee Tech University. 
 
 The team spirit subsystem is nonoperational prior to entry of the thruster assembly zone. Upon entry into the thruster assembly zone the lights receive a signal and begin blinking. The lights remain on displaying a blinking pattern until the robot is powered off.
@@ -10,22 +12,28 @@ The team spirit subsystem is nonoperational prior to entry of the thruster assem
 | No. |Constraint Description                                                                                                                                                      |Origin                   |
 |-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
 |  1  |The LEDs shall create a highly visible demonstration of Tennessee Tech University with purple and yellow lights.                                                            |Competition Specification|
-|  2  |The system shall be dynamic by producing blinking lights at a frequency less than 50 Hz.                                                                                    |Competition Specification|
-|  3  |The LEDs shall be spaced 1 inch apart in one-inch increments around the rear and side panels of the robot for a total length of 33 inches per color, or 66 inches of lights.|Design Specification     |
+|  2  |The system shall be dynamic by producing blinking lights at a frequencyof 4 Hz.                                                                                    |Competition Specification|
+|  3  |The LEDs shall be spaced 0.5 inches apart on the rear and side panels of the robot for a total length of 22.64 inches for each color of LED's, and 64 total LED's.          |Design Specification     |
 |  4  |The LEDs shall extrude from 6mm holes evenly spaced 8.5mm apart on the side panel of the robot.                                                                             |Design Specification     |
-|  5  |Each LED shall be 8.5 mm from the top or bottom edge of the robot.                                                                                                          |Design Specification     |
+|  5  |Each LED shall be 6mm from the top or bottom edge of the robot.                                                                                                             |Design Specification     |
 |  6  |The Gold LEDs shall be installed above the purple LEDs on the sidewall of the robot.                                                                                        |Design Specification     |
 |  7  |The LEDs shall be secured on the back, and side panels of the robot and shall not be installed on the top, bottom, or on the front panel of the robot.                      |Design Specification     |
 |  8  |The LED lights shall not tamper with the IR sensors of the navegation system.                                                                                               |Design Specification     |
 ## Buildable
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/front%20view.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/accurate%20measurments.PNG)
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/3d%20corner%20view.PNG)
+Figure 2: 3D model of the Team Spirit Subsystem with metric units
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/3d%20corner2.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/measurements%20imperial%20units.PNG)
 
-The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The perimeter of the robot is 44 inches. Each side of the robot is eleven inches. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of thirty-three purple LED lights with series resistances, and another circuit of thirty-three yellow LED lights with series resistances. These two strips of LED lights will be present at 1-inch increments around the robot. The series resistance provides the LEDs with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control both strips creating the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 2 times each second, or at a rate of 30 Hz. This can be done by utilizing delays between steps in the looped program.
+Figure 3: 3D model of the Team Spirit Subsystem with imperial units
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/3d%20model.PNG)
+
+Figure 4: 3D model Team Spirit System
+
+The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. . The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control both strips creating the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program.
 
 Purple LED:
 
@@ -55,7 +63,7 @@ The system shall be dynamic by displaying lights which blink at a frequency peop
 
 Constraint 3 Solution:
 
-The LEDs shall be spaced 1 inch apart in one-inch increments around the sidewall of the robot for a total length of 33 inches per color, or 66 inches of lights. The spacing and positioning of the LEDs prevents the components from getting damaged on a moving part of another system. The spacing and positioning around the sidewall of the robot allows for maximum visibility to shine lights for the team spirit display. The LEDs will be secured into placed in the frame of the robot by drilling through the border of the platform and securing the LEDs in the sockets which are individually secured 1 inch apart.
+The LEDs shall be spaced 0.5 inches apart around the sidewall of the robot for a total length of 22.64 inches per color, or 57.48 inches of lights. The spacing and positioning of the LEDs prevents the components from getting damaged on a moving part of another system. The spacing and positioning around the sidewall of the robot allows for maximum visibility to shine lights for the team spirit display. The LEDs will be secured into placed in the frame of the robot by drilling through the border of the platform and securing the LEDs in the sockets which are individually secured 0.5 inches apart from the closest point.
 
 Constraint 4 Solution:
 
@@ -63,7 +71,7 @@ The LEDs shall extrude from holes 6mm in diameter 8.5mm apart vertically. Holes,
 
 Constraint 5 Solution:
 
-The LEDs shall be 8.5 mm from the top or bottom edge of the robot. This prevent potential damage to the edge of the frame while drilling holes to position the extruding LEDs. The holes will be drilled with centered positions marked 25 mm apart horozontally and 11.5 mm from the edge. The measurement for drilling 11.5 mm from either edge of the chassis side centeres the 6 mm drill bit on the designed location for the hole.
+The LEDs shall be 6 mm from the top or bottom edge of the robot. This prevent potential damage to the edge of the frame while drilling holes to position the extruding LEDs. The holes will be drilled with centered positions marked 25 mm apart horozontally and 11.5 mm from the edge. The measurement for drilling 11.5 mm from either edge of the chassis side centeres the 6 mm drill bit on the designed location for the hole.
 
 Constraint 6 Solution:
 
