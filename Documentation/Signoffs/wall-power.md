@@ -25,7 +25,7 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 Figure 1.
 
-<img width="583" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2bee2c6e-126c-49ae-a518-e64eea2e3d38">
+<img width="619" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/d28ae6c1-0e5b-4de0-b30b-a3115e7fc433">
 
 Figure 2.
 
@@ -145,7 +145,7 @@ From using the calculation form datasheet[6]
 2. Buck-Boost Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3114-1.pdf?ADICID=SYND_WW_P682800_PF-spglobal?hkey=EF798316E3902B6ED9A73243A3159BB0
 
 3. Bridge Rectifier: https://www.mouser.com/ProductDetail/Diodes-Incorporated/GBU404?qs=G5AQjGfRJcL0qZwbO1hCAw%3D%3D&mgh=1&gclid=Cj0KCQiAo7KqBhDhARIsAKhZ4uiLwH-geIVj7ENUvHTWf11hyNU4IoTfVOAK8-eMKpBxqfyngL2PZPkaAtnPEALw_wcB
-4. Bridge Rectifier: https://www.digikey.com/en/products/detail/micro-commercial-co/MB12S-TP/2075331
+4. Bridge Rectifier:[ https://www.digikey.com/en/products/detail/micro-commercial-co/MB12S-TP/2075331](https://goodarksemi.com/docs/datasheets/schottky_bridge_rectifiers/MB12S-MB110S.pdf)
 5. Transformer datasheet: https://www.mouser.com/ProductDetail/Triad-Magnetics/TCT50-01E07AB?qs=b1anAsPanWyYuqQKXv%2FQQw%3D%3D
 
 6. Battery: https://www.amazon.com/ML12-12-Battery-Terminal-Mighty-Product/dp/B00K53FG5Q/ref=sr_1_4?crid=2ENRDXKVGB5V8&keywords=ml12-12%2Bbattery&qid=1698983669&s=electronics&sprefix=ML12-12%2B%2Celectronics%2C153&sr=1-4&th=1
