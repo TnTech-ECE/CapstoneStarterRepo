@@ -57,16 +57,21 @@ H-Bridge circuit that is within the chip of the L298N chip
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/H_Bridge.png)
 
 
-**Drive** gear parameters for 3d modeling and printing using blender
+**Drive gear parameters for 3d modeling and printing using blender** 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_Gear_Param..png
 )
 
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_R_C.png)
 
-**Driven** gear parameters for 3d modeling and printing using blender 
+
+
+**Driven/Output gear parameters for 3d modeling and printing using blender**  
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Driven_Gear_Param.png
 )
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Output_R_C.png)
 
 
 
