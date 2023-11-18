@@ -162,6 +162,7 @@ For the wiring for our purpose, we do not need to use any PWM ports since we jus
 **Beveled gears description:**
 
 The beveled gears are the mechanical system behind the pushbutton subsystem. They are used to transfer the work and energy of the dc motor to the arm/shaft with the paint roller attached to it. The reason they are beveled is to save surface area on the platform of the robot. 
+
 **Connection of beveled gears**
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Beveled_connection.png)
