@@ -30,6 +30,9 @@ Here explain in more detail (though not as much as will be given in the datashee
 
    a. Some parking lots across the campus of Tennessee Tech are not located near campus buildings.  To allow the system to work in these lots, solar panels will be used to power the system at these lots to efficiently monitor these lots so students, faculty, etc. know if there is parking availability at these specific lots.
 
+3. This project will use LoRaWAN to transmit and receive data from the inductive loops.
+
+   a. To avoid having issues with using WiFi to transmit and receive data, LoRaWAN is used as it uses a higher frequency than WiFi and also has better penetration of buildings and longer range versus using WiFi.
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
 
@@ -75,6 +78,10 @@ Tell a bit about the customer for the project. Also discuss any other groups (sp
 
 Since this project is a continuation from the 2022-23 academic year, this team wants to recognize the previous Parking Lot Monitoring System team and their members: Kester Nucum, Aaron Wilhite, Gabriel Laboy, Genevieve Schreiber, and Reggie Garza.  This team consisted of three computer engineering students and two electrical engineering students.  With their knowledge and collaboration with the CSC team, they were successful in creating a server, sign, and cameras to detect and count the number of vehicles in a specified parking lot.  Due to their work, this team of three electrical engineering students and two computer engineering students was able to create a ground-based solution to assist the current camera system in detecting vehicles entering and leaving a parking lot and display an accurate number of available parking spots within a specific parking lot.
 
+Another group to recognize for this project is the NAVSEA representatives from Dahlgren, VA: Robert Sexton and Kristen Voyles.  By having their knowledge and expertise of both electrical/computer engineering and the engineering design process, the team was able to learn how to successfully work together as a team while using the knowledge and skills each team member has obtained over the course of their undergraduate education and apply it to a real-world engineering problem.
+
+For this project, the supervisor, Jesse Roberts, held an important role in this project.  Since this is a continuation project, the team relied heavily on Mr. Roberts' input as to what direction the project needed to go and also know the expected output of the project.  With Mr. Roberts' knowledge, the team was successful in finding faults in the previous team's work and able to find a solution in aiding the use of cameras across parking lots.
+
 Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
 
 ## Repo Organization
@@ -92,8 +99,12 @@ In the reports section of this repository information about the individual expec
 
 ### Documentation
 
+In the Documentation folder, folders such as 3D models, signoffs, team meeting minutes, etc. are found in this folder.  This contains very detailed explanations of the design process for the team.  The folder Meeting Minutes contains weekly updates from the team such as discussions between the team and decisions that the team made at these specific meetings.  The folder Electrical contains schematic drawings that were created and also PCB designs that the team used or considered using for the project.  To summarize, the Documentation folder contains very detailed explanations of the different steps in the design process and also the different discussions and decisions made by the team over the course of the project.
+
 In the documentaion section information regarding the documentation that is required and how it should be organized is given.
 
 ### Software
+
+In the Software folder, an explanation of the different software files, code files, etc. is given.  Each software folder contains an explanation of what the software does, all dependencies of the software, how to install the software, and how to use the software.  For those that want to replicate the exact software used for this project, precise detail is given to ensure that the process of using the software is simple to repeat when recreating this project.
 
 In the software directory of the repo information regarding how each team is expected to document software can be found.
