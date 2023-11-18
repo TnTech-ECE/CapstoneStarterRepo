@@ -68,11 +68,14 @@ H-Bridge circuit that is within the chip of the L298N chip
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Driven_Gear_Param.png
 )
 
+
+
 ## Analysis 
 
 **Shaft description:** 
 
 This shaft and arm will be printed using PLA material that way it gives us flexibility if we need to change diameter size or shape. The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. 
+
 
 **DC Motor description:** 
 
@@ -114,7 +117,11 @@ The Arduino will send a logical High to “input 1” and a logical Low to “in
 
 **Constraint Solution 2:**
 
-Since the stop buttons center is 2.5 inches from the bottom of the course the paint roller will overhang the tracks when it swings out. This can be achieved by having two consecutive perpendicular arms that force the paint roller to hang lower from the shaft connected to the secondary beveled gear on the robot’s base platform. The dimensions of where the button is located is in the first figure below and the part where the buttons general location on the gameboard is labeled “E” in the second figure below.
+Since the stop buttons center is 2.5 inches from the bottom of the course the paint roller will overhang the tracks when it swings out. This can be achieved by having two consecutive perpendicular arms that force the paint roller to hang lower from the shaft connected to the secondary beveled gear on the robot’s base platform. The dimensions of where the button is located is in the first figure below and the part where the buttons general location on the gameboard is labeled “E” in the third figure below.
+
+In order to reach the button the, shaft will need to reach out at least 5.9" that will be perpendicular to the tank trancks. This is because the width of the robot is is 9.24 inches and the platform width that the pushbutton system will be on is 6.1 inches. The total width of the course is 20.81 inches. If the robot is centered on the track the then the length from the platform to the other end of the wall is 11.57 inches total for both sides. If you divide this width by 2 then you can find the length from the right track side to the button which ends up being 5.8 inches. The decision to go with 5.9" is based off the fact that the paint roller foam will compress inward due the pressure of the wall. 
+
+
 
 **Stop button precise location**
 
