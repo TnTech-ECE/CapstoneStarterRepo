@@ -1,10 +1,6 @@
-# {Parking Lot Monitoring System: Ground Based Solution} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
+# {Parking Lot Monitoring System: Ground Based Solution}
 
 ## Executive Summary
-
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
 
 This project is a continuation project from the 2022-23 academic year at Tennessee Technological University to monitor parking lots in a manner that allows students, faculty, staff, and campus visitors to find parking lots with availability in a timely manner. The previous team used cameras to monitor incoming and outgoing traffic in parking lots.  This solution will not work for many of the parking lots that do not have the infrastructure nearby to support cameras.  By using inductive loops to monitor designated entrances/exits of parking lots, more parking lots across campus can be monitored and students, faculty, etc. can find parking availability without having to search an entire parking lot in hopes of finding an open parking spot.
 
@@ -16,9 +12,6 @@ Though this project is a continuation project, it deviates away from using camer
 2. This project will only detect vehicles and motorcycles that enter/exit a parking lot at a speed less than 20 mph.
 3. This project will use LoRaWAN to transmit data from a designated entrance/exit of a parking lot to the Capstone Lab in Brown Hall for data interpretation and storage into the server.
 4. For testing this project in the Engineering Quad Parking Lot (between the engineering buildings on the campus of Tennessee Tech University), one entrance/exit will use solar power, with a backup battery, to power the inductive loops and the transmitter for the data.  By using solar power, parking lots that are not located near buildings with wall outlets can generate power and function across the campus of Tennessee Tech.
-
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
 
 ## Salient Outcomes
 
@@ -33,9 +26,7 @@ Here explain in more detail (though not as much as will be given in the datashee
 3. This project will use LoRaWAN to transmit and receive data from the inductive loops.
 
    a. To avoid having issues with using WiFi to transmit and receive data, LoRaWAN is used as it uses a higher frequency than WiFi and also has better penetration of buildings and longer range versus using WiFi.
-
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
+   
 
 ## Project Demonstration & Images
 
@@ -81,30 +72,21 @@ Since this project is a continuation from the 2022-23 academic year, this team w
 Another group to recognize for this project is the NAVSEA representatives from Dahlgren, VA: Robert Sexton and Kristen Voyles.  By having their knowledge and expertise of both electrical/computer engineering and the engineering design process, the team was able to learn how to successfully work together as a team while using the knowledge and skills each team member has obtained over the course of their undergraduate education and apply it to a real-world engineering problem.
 
 For this project, the supervisor, Jesse Roberts, held an important role in this project.  Since this is a continuation project, the team relied heavily on Mr. Roberts' input as to what direction the project needed to go and also know the expected output of the project.  With Mr. Roberts' knowledge, the team was successful in finding faults in the previous team's work and able to find a solution in aiding the use of cameras across parking lots.
-
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+ 
 
 ## Repo Organization
 
 For the layout of the team's Github, it includes three main folders: Documentation, Reports, and Software.  The three folders are explained in the following subsections.
-
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
 
 
 ### Reports
 
 In the Reports folder, it contains documents such as the Project Proposal, Conceptual Design, Experimentation, Final Report, Lessons Learned, etc.  All documentation that is in the form of a report is located in this folder.  This folder also contains a broad explanation of the project from beginning to end in the numerous documents provided in this folder.
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
-
 ### Documentation
 
 In the Documentation folder, folders such as 3D models, signoffs, team meeting minutes, etc. are found in this folder.  This contains very detailed explanations of the design process for the team.  The folder Meeting Minutes contains weekly updates from the team such as discussions between the team and decisions that the team made at these specific meetings.  The folder Electrical contains schematic drawings that were created and also PCB designs that the team used or considered using for the project.  To summarize, the Documentation folder contains very detailed explanations of the different steps in the design process and also the different discussions and decisions made by the team over the course of the project.
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
-
 ### Software
 
 In the Software folder, an explanation of the different software files, code files, etc. is given.  Each software folder contains an explanation of what the software does, all dependencies of the software, how to install the software, and how to use the software.  For those that want to replicate the exact software used for this project, precise detail is given to ensure that the process of using the software is simple to repeat when recreating this project.
-
-In the software directory of the repo information regarding how each team is expected to document software can be found.
