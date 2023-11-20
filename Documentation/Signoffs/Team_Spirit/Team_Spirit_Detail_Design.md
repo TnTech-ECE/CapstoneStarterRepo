@@ -55,7 +55,7 @@ Constraint Solutions:
 
 Constraint 1 Solution:  
 
-The team spirit subsystem shall be a highly visible representation of Tennessee Tech University. The team spirit system utilizes purple and yellow LEDs which blink and are present on the rear and sides of the robot. The luminous emission of the LED lights highly visible within the bounds of the course to represent the university. 
+The team spirit subsystem shall be a highly visible representation of Tennessee Tech University. The team spirit system utilizes purple and yellow LEDs which blink and are present on the rear and sides of the robot. The luminous emission of the LED lights highly visible within the bounds of the course to represent the university. The robot shall have gold and yellow paint, gold painted above purple, along the front border of the robot to compensate for constraint 8. 
 
 Constraint 2 Solution: 
 
@@ -83,7 +83,7 @@ The LEDs shall be secured on the back, and side panels of the robot. The LEDs ca
 
 Constraint 8 Solution:
 
-The LED lights shall not tamper with the IR sensors of the navegation system. The LED lights used in the team spirit subsystem emit purple and yellow blinking lights. These colored lights are reflected from the paint on the course to the IR sensors of the navegation system. These wavelengths of light tamper with the color of light which is being recieved by the IR sensors. This creates inconsistencies in the lines which would be percieved by the line following program. The solution to this issue is not placing the LED strips on the front of the robot. This prevents the light from refelcting onto the IR sensors. The LED lights being secured to the rear of the robot does not create issues with the IR sensors due to the angle of the emmitted light.
+The LED lights shall not tamper with the IR sensors of the navegation system. The LED lights used in the team spirit subsystem emit purple and yellow blinking lights. These colored lights are reflected from the paint on the course to the IR sensors of the navegation system. These wavelengths of light tamper with the color of light which is being recieved by the IR sensors. This creates inconsistencies in the lines which would be percieved by the line following program. The solution to this issue is not placing the LED strips on the front of the robot. This prevents the light from refelcting onto the IR sensors. The LED lights being secured to the rear of the robot does not create issues with the IR sensors due to the angle of the emmitted light. This specifictaion restricts constraint 1 by restricting the represenation of the university. This is comepensated by painting a gold stripe above a purple stripe on the front border of the chassis.
 
 
 
