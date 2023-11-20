@@ -12,7 +12,7 @@ The team spirit subsystem is nonoperational prior to entry of the thruster assem
 | No. |Constraint Description                                                                                                                                                      |Origin                   |
 |-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
 |  1  |The LEDs shall create a highly visible demonstration of Tennessee Tech University with purple and yellow lights.                                                            |Competition Specification|
-|  2  |The system shall be dynamic by producing blinking lights at a frequencyof 4 Hz.                                                                                    |Competition Specification|
+|  2  |The system shall be dynamic by producing blinking lights at a frequencyof 4 Hz.                                                                                             |Competition Specification|
 |  3  |The LEDs shall be spaced 0.5 inches apart on the rear and side panels of the robot for a total length of 22.64 inches for each color of LED's, and 64 total LED's.          |Design Specification     |
 |  4  |The LEDs shall extrude from 6mm holes evenly spaced 8.5mm apart on the side panel of the robot.                                                                             |Design Specification     |
 |  5  |Each LED shall be 6mm from the top or bottom edge of the robot.                                                                                                             |Design Specification     |
@@ -33,7 +33,7 @@ Figure 3: 3D model of the Team Spirit Subsystem with imperial units
 
 Figure 4: 3D model Team Spirit System
 
-The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. . The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control both strips creating the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program.
+The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control a 2 - channel relay module to power the LEDs and create the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program and offesetting the blinking of one strip to alternate between purple and gold blinking lights.
 
 Purple LED:
 
@@ -43,9 +43,56 @@ Yellow LED:
 
 The yellow LED is a 5mm round model with attached wires and a series resistance to protect the LED. The connected wiring and series resistances to the LEDs reduce the risk of a failure. The LEDs operate at 4 ~ 6  V+. 
 
+2 Channel Relay:
+
+The 2 channel relay is required for the implimentation of the Team Spirit Subsystem. The relays will be used to provide 80 mA to each strip of LEDs from the power system; the relays are activated by signals from 2 digital outputs of the main microcontroller.
+
+No1:
+Normally open terminal of the first relay; connected to the positive terminal of the first LED strip.
+
+Common1:
+Common terminal of the first relay; connected to the common terminal of the first LED strip.
+
+Nc1:
+Normally closed pin of the first relay; not connected to any other pin.
+
+No2:
+Normally open terminal of the second relay; connected to the positive terminal of the second LED strip.
+
+Common2: 
+Common terminal of the second relay; connected to the common terminal of the second LED strip.
+
+Nc2:
+Normally closed pin of the second relay; not connected to any other pin.
+
+Vcc1:
+The voltage supplu pin of the relays. This pin will be powered by a 1.6 A, 5 VDC signal from the power system.
+
+IN2:
+The digital input control pin of the second relay. This pin will be connected to DIO 2 of the microcontroller.
+
+IN1:
+The digital input control pin of the first relay. This pin will be connected to DIO 1 of the microcontroller
+
+GND1: 
+This pin will be connected to the common terminal of the power system.
+
+GND2:
+A direct connection to the ground terminal which would be connected to the common terminal of a 5 V+ source if Vcc2 and JD-Vcc are not shorted together.
+
+Vcc2:
+A direct connection to the voltage supply of the relays. This pin will be connected to JD-Vcc to control either electromagnets of the relays.
+
+JD-Vcc:
+Voltage control of the electromagnet which sets the relay to high or low. This pin will be connected to Vcc2 to activate the electromagnets of either relay.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/Dual-Channel-Relay-Module-Overview.jpg)
+
+Figure 5: The 2 channel relay component used to power the LED strips with labeled pins.
+
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/64ledcircuitdiagram.PNG)
 
-Figure 5: The circuit design of the LEDs in parallel with a series resistance of 510 Ω between the digital outputs and LEDs. It is connected to two digital outputs of the microcontroller for each strip, Purple LEDs, and Yellow LEDs. The common terminal of the LEDs is connected to the common terminal of the microcontroller.
+Figure 6: The circuit design of the LEDs in parallel with a series resistance of 510 Ω between the digital outputs and LEDs. It is connected to two digital outputs of the microcontroller for each strip, Purple LEDs, and Yellow LEDs. The common terminal of the LEDs is connected to the common terminal of the microcontroller.
 
 ## Analysis
 
@@ -85,17 +132,12 @@ Constraint 8 Solution:
 
 The LED lights shall not tamper with the IR sensors of the navegation system. The LED lights used in the team spirit subsystem emit purple and yellow blinking lights. These colored lights are reflected from the paint on the course to the IR sensors of the navegation system. These wavelengths of light tamper with the color of light which is being recieved by the IR sensors. This creates inconsistencies in the lines which would be percieved by the line following program. The solution to this issue is not placing the LED strips on the front of the robot. This prevents the light from refelcting onto the IR sensors. The LED lights being secured to the rear of the robot does not create issues with the IR sensors due to the angle of the emmitted light. This specifictaion restricts constraint 1 by restricting the represenation of the university. This is comepensated by painting a gold stripe above a purple stripe on the front border of the chassis.
 
-
-
-
-
-
-
 ## BOM
 
-|Item                 |Description                                                        |Subsystem  |Part Number  |Manufacturer|Quantity|Price  |Total Price|
-|---------------------|-------------------------------------------------------------------|-----------|-------------|------------|--------|-------|-----------|
-|  5mm LEDs - Yellow  |Yellow 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|W04127_3-US-1|DORHEA      |100     |$0.0799|$7.99      |
-|  5mm LEDs - Purple  |Purple 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|‎W04127_6-US-1|DORHEA      |100     |$0.0799|$7.99      |
-|                     |                                                                   |           |             |            |        |       |$15.98     | 
-
+|Item                     |Description                                                        |Subsystem  |Part Number  |Manufacturer|Quantity|Price  |Total Price|
+|-------------------------|-------------------------------------------------------------------|-----------|-------------|------------|--------|-------|-----------|
+|5mm LEDs - Yellow        |Yellow 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|W04127_3-US-1|DORHEA      |100     |$0.0799|$7.99      |
+|5mm LEDs - Purple        |Purple 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|‎W04127_6-US-1|DORHEA      |100     |$0.0799|$7.99      |
+|5 VDC 2 - Channel Relay  |5 VDC 2 - Channel Relay with electromagnetic switching.            |Team Spirit|8541582329   |SONGLE      |1       |$6.79  |$6.79      | 
+|                         |                                                                   |           |             |            |        |       |$22.77     | 
+ 
