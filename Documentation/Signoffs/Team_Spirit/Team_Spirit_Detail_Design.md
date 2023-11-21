@@ -90,10 +90,9 @@ Voltage control of the electromagnet which sets the relay to high or low. This p
 
 Figure 5: The 2 channel relay component used to power the LED strips with labeled pins.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/64ledcircuitdiagram.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/LEDSWITHRELAYSCHEM.PNG)
 
-Figure 6: The circuit design of the LEDs in parallel with a series resistance of 510 Ω between the digital outputs and LEDs. It is connected to two digital outputs of the microcontroller for each strip, Purple LEDs, and Yellow LEDs. The common terminal of the LEDs is connected to the common terminal of the microcontroller.
-
+Figure 6: The circuit design of the Team Spirit Subsystem.
 ## Analysis
 
 Analysis:
