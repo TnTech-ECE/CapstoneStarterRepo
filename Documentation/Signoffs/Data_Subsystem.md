@@ -41,6 +41,24 @@ The data subsystem is responsible for the transmission and storage of data. Data
 ### Data Transmission
 Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN gateway using LoRa protocol via RFM95W transceivers connected to the ESP32 MCUs' GPIO pins. Using the LoRa library for Arduino, the system should always follow the standards that define LoRa and as a consequence also the FCC 915 MHz ISM band standards. The RFM9X transceivers come in different regional variants. The RFM95W can be configured to operate at any frequency in the range 862-1020 MHz according to the datasheet. For the transceiver to meet constraint 1, the frequency must be set to 915 MHz. This can be done using the RadioHead RH_RF95 library public member function setFrequency(915.0). Nearly everything about the RFM95W is configurable with software. The MCUs will communicate with the transceivers via SPI protocol. The pin connections are shown in the table below and in Figure 3. The table shows the pin names of the actual transceiver PCB according to the datasheet, and Figure 3 shows the breakout board the transceiver is mounted on. The breakout board provides labels for the pins and an easy way to attach an antenna. An antenna is vital in getting the most range possible out of the RFM95W transceiver. The transceiver will send the delta of vehicles in/out of the lot, which was previously determined by the MCU, in the form of a LoRa packet which is encoded in Chirp Spread Spectrum modulation. The WM1302 concentrator can receive and demodulate these LoRa packets so that our Raspberry Pi can understand the data contained in the LoRa packets. The Raspberry Pi is connected to the WM1302 gateway module via the WM1302 PiHAT which sits atop the Raspberry Pi and is connected via the Raspberry Pi's GPIO pins. The data from the PiHAT will be passed into ChirpStack software installed on the Raspberry Pi. ChirpStack Gateway Bridge has built-in support for Semtech SX1302-based concentrators (through the ChirpStack Concentratord backend), such as the WM1302 concentrator, so setup should be mostly painless. ChirpStack Gateway Bridge will route the packets it receives to ChirpStack Network Server, which is on the same Raspberry Pi. ChirpStack Network Server keeps a record of data it receives and is accessible over the internet, given the Raspberry Pi has an internet connection. LoRa protocol should meet the range and material penetration constraint. LoRa uses the 915 MHz frequency band which can effectively penetrate concrete, metal, and glass. With the addition of antennas attached to the RFM95W PCBs, the system should be able to easily reach the gateway from the roadside.
 
+### Addressing Constraints
+Constraint 1. <br/>
+This constraint will be addressed by configuring all devices that will be transmitting and receiving LoRa packets to only do so on the 915 MHz frequency band. This is simply a parameter in software that will need to be specified. For the Raspberry Pi gateway, this is not necessary as the WM1302 LoRaWAN concentrator that has been selected for this project is made to operate exclusively on the US915 frequency band. For the RFM95W transceiver modules, the frequency band can be specified with the RadioHead RH_RF95 library public member function setFrequency(915.0).
+<br/>
+Constraint 2. <br/>
+This constraint will be addressed by using the LoRa library for Arduino. The ESP32 microcontrollers will use this library to transmit data with the RFM95W transceivers. The Raspberry Pi will meet this constraint by using ChirpStack software which is intended to work with LoRa exclusively and thus will require no additional configuration (pertaining to selecting the transmission protocol).
+<br/>
+Constraint 3. <br/>
+
+<br/>
+Constraint 4. <br/>
+
+<br/>
+Constraint 5. <br/>
+
+
+
+
 | ESP32 MCU Pin | RFM95W Transceiver Pin |
 |---------------|------------------------|
 | GND           | GND                    |
