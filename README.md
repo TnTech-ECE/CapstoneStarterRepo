@@ -28,38 +28,37 @@ A video demonstration shall be included once the construction and implementation
 ### Team
 #### Electrical Engineers
 
-Callie Battenfield
+**Callie Battenfield** <br />
 I am a CmpE and EE double major, as well as the secretary of Tech's IEEE chapter. I am the team captain for this project and I am specifically responsible for the design of the Box Sweep Mechanism, Chassis, and the Main Controller.
 
-Caz Bilbrey
+**Caz Bilbrey** <br />
 I have been working for Merrick and Company for over 2 years. I plan to move to Oak Ridge Tennessee to continue my work in glovebox design. I am responsible for the design of the Start Sensor and Chassis. 
 
-Liam Counasse
+**Liam Counasse** <br />
 I am majoring in electrical engineering with a minor in mathematics. My interests include industrial automation design and programming for a variety of languages. I am responsible for the design of the Team Spirit System.
 
-Adrin Jackson
+**Adrin Jackson** <br />
 I am an intern with TVA. Some hobbies of mine are hiking and golfing with my friends and exploring new restaurants. I am responsible for the design of the Button Push Mechanism, Drive Train, and Power System.
 
-Conor Orr
+**Conor Orr** <br />
 I am involved in multiple campus organizations. I am a practical problem solver and love getting my hands dirty. I am responsible for the design of the Navigation System and Drive Train.
 
 #### Mechanical Engineers
 
-Colby Adams
+**Colby Adams** <br />
 I am a senior mechanical engineering major with a mechatronic concentration. Last summer I had an internship at JR Automation in Nashville working on the mechanical side of their projects.
 
-James Howell
+**James Howell** <br />
 I am a ME major, concentrating in mechatronics. I'm a project lead for ARC, fronting the design of a custom 3d printer as well as facilitating the use of the club's working printers for its other projects.
 
-Steve Jordan
+**Steve Jordan** <br />
 I worked on an internship at Aisin Automotive Casting Tennessee last summer where I researched and presented an Industrial Parts Washer Station to save $36,000 yearly in short stops. I plan to move to Knoxville Tennessee to work in design/consulting.
 
-Zachary Wisti
+**Zachary Wisti** <br />
 I am the president of the TTU Formula SAE team. I welcome challenges and like to face them head-on.
 
 ### Faculty Supervisor
-
-The faculty supervisor for this project is Mr. Jesse Roberts. 
+**Mr. Jesse Roberts**
 
 ### Stakeholders
 
