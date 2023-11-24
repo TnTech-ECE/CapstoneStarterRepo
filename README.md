@@ -65,18 +65,26 @@ I am the president of the TTU Formula SAE team. I welcome challenges and like to
 The stakeholders for this project are the ECE and ME Departments at Tennessee Technological University. They are who the robot will be representing at the 2024 SECON Competition.
 
 ## Repo Organization
-
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
-
 ### [Reports](https://github.com/cebttu/CapstoneTeam1/blob/main/Reports)
 
-In the reports section of this repository, the various reports for this project can be found. At this time it only includes the project proposal.
+- [Project Proposal](https://github.com/cebttu/CapstoneTeam1/blob/main/Reports/Project_Proposal_Final.pdf)
+- [Conceptual Design](https://github.com/cebttu/CapstoneTeam1/blob/main/Reports/Capstone_Conceptual_Design_Final.pdf)
 
 ### [Documentation](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation)
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+-[Signoffs](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Signoffs)
+  -[Chassis Detail Design]()
+  -[Start Sensor Detail Design](https://github.com/cebttu/CapstoneTeam1/blob/main/Documentation/Signoffs/Start%20Sensor/Start_Sensor_Detail_Design.md)
+  -[Box Sweep Detail Design]()
+  -[Button Push Detail Design]()
+  -[Team Spirit Detail Design]()
+  -[Navigation System Detail Design]()
+  -[Drive Train Detail Design]()
+  -[Main Controller Detail Design]()
+  -[Power System Detail Design]()
+-[3D Model](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/3D%20Models)
+-[Electrical Models](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Electrical)
+-[Meeting Minutes](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Meeting%20Minutes)
 
 ### [Software](https://github.com/cebttu/CapstoneTeam1/tree/main/Software)
-
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+  Currently empty, this will be populated once implementation begins in 2024.
