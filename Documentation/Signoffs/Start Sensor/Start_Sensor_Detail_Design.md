@@ -2,7 +2,7 @@
 
 ## Function of the Subsystem
 
-![Start Block Diagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/3065734b-7bd4-4b11-8a22-0d7dc8c595ce)
+![Start Block Diagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/dc88cb99-784d-4035-bbb8-08cd5ce10c2c)
 <br />
 Figure 1: Start Sensor Block Diagram
 
@@ -23,7 +23,7 @@ To ensure operational robustness and mitigate the risk of sensor malfunction, a 
 
 ## Buildable Schematic
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/newest%20Start%20System%20scematic.png)
+![newest Start System scematic](https://github.com/cebttu/CapstoneTeam1/assets/100803345/98812e69-0204-4d6f-b21e-40b2f7f2d0f5)
 <br />
 Figure 2. Wiring Diagram for Start Sensor
 
@@ -53,7 +53,7 @@ To wire the APDS-9960 sensor to a microcontroller, you would typically connect t
 
 With this wiring setup and the appropriate code, you can use the APDS-9960 sensor to detect and process RGB colors, ambient light levels, proximity, and gestures, making it a versatile sensor for various applications like touchless interfaces and color detection.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/over%20all%203d%20model.PNG)
+![over all 3d model](https://github.com/cebttu/CapstoneTeam1/assets/100803345/aa8d6932-dcb6-4af9-b135-b8346041e3fa)
 <br />
 Figure 3. Rough 3D Model of the entire Robot
 
@@ -66,7 +66,8 @@ Figure 4. Precise Height of Start Sensor and Distance from LED
 Figure 4 (above) shows the scale of how the Sensor shall be located from a side view. The photodiode is 0.5 inches below the center of the Green LED due to the optimal detection distance of the sensor. This means the chip must be 3.85 inches from the ground as the center of the LED is 4.5 inches from the ground, see Figure 7 (Exact Height of Start Sensor.) The chip shall also be 1 inch from the face of the LED, and the back wall of the board as it should be flush.
 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/button%20with%20perf%20board.PNG)
+
+![button with perf board](https://github.com/cebttu/CapstoneTeam1/assets/100803345/e6ab4f35-d06d-48a4-a9e0-58c87edd3457)
 <br />
 Figure 5. Button and Sensor attached to Robot
 
@@ -102,7 +103,7 @@ To ensure the optimal performance of the RGB Sensor, it is imperative that the s
 
 To mitigate this issue, the sensor is strategically positioned 3.85 inches above the floor, placing the photodiode 0.5 inches below the LED's center, thus maintaining its operation within the optimal detection range while avoiding parallel alignment with the LED.  
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/Board%20Diagram%202.png)
+![Board Diagram 2](https://github.com/cebttu/CapstoneTeam1/assets/100803345/07645d96-748b-4a73-9e41-aece0ea19a42)
 <br />
 Figure 7. Exact Height of Start Sensor
 
@@ -113,7 +114,7 @@ The RGB Sensor must be placed within a range of 0.5 inches to the left or right 
 
 The reason for this specific range is to guarantee that the sensor can consistently and reliably detect the Green Light LED. By positioning it within this 0.5-inch zone, we maximize the amount of green light entering the sensor, thereby enhancing its sensitivity and reliability in recognizing the LED's presence.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/CazBilbrey-StartSensor-SignOff/Documentation/Signoffs/Start%20Sensor/3D%20Model%20Top%202.png)
+![3D Model Top 2](https://github.com/cebttu/CapstoneTeam1/assets/100803345/22edf50d-71e8-4810-a9bf-eb31a22fffb0)
 <br />
 Figure 8. Exact location lengthwise of Start Sensor and green LED
 
