@@ -44,9 +44,9 @@
 
 
 ## [Project Photos](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Images)
--[Project Images]()
+- [Project Images]()
 	- Coming in 2024
- -[Detail Design Images](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Images/Detail%20Design%20Images)
+ - [Detail Design Images](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Images/Detail%20Design%20Images)
 	- [Chassis]()
   	- [Start Sensor](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Images/Detail%20Design%20Images/Start%20Sensor)
 	- [Box Sweep]()
