@@ -87,4 +87,4 @@ A video demonstration shall be included once the construction and implementation
 - [Meeting Minutes](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Meeting%20Minutes)
 
 ### [Software](https://github.com/cebttu/CapstoneTeam1/tree/main/Software)
-  Currently empty, this will be populated once implementation begins in 2024.
+- Currently empty, this will be populated once implementation begins in 2024.
