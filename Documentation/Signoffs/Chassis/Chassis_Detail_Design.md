@@ -56,21 +56,9 @@ Estimation of other subsystems' footprints resulted in needing 62 square inches 
 
 Constraint 4 Solution:
 <br />
-Tread length = 31.1 inches 
-<br />
-Required Speed = 2.03 inches/sec
-<br />
-Gear Ratio = 1.42     (GR = # of teeth on Driven Gear / # of teeth on Driving Gear)  
-<br />
-Motor Speed = ((2.03 * 1.42) / 31.1 inches)*(60 s) = 5.586 rpm minimum. 
-<br /> 
+The primary difference between the movement of a vehicle with wheels and a vehicle with tracks is that tracks require more torque to begin movement and move at a slower pace than wheels. 
 
-When calculating the speed of the tracks with this rpm for the motor, we get around 2.022 inches/sec for the tracks.
-<br />
-Efficiency loss = (1-(2.022/2.03)*100 = 0.39% loss 
-<br />
-
-This is not an incredibly detrimental loss and this could be overcome.
+(Doing the math and all, will fill in here once finished.)
 
 ## BOM
 
