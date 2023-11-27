@@ -10,7 +10,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 1. | Arm/Shaft | Length of the arm shall not extend out before the start | Competition Specifications |
 | 2. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
 | 3. | Arm/Shaft | The dimensions before the start of the arm shall not exceed 1 cubic ft. | Competition Specifications |
-| 4. |  Arm/Shaft | Lenth of the arm will not exceed nor be below the length of 12 inches when fully extended | Competition Specifications |
+| 4. |  Arm/Shaft | Lenth of the arm will shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
 | 5. | DC motor | Operation voltage is 6V for 100 rpm for the dc geared reduction motor | DC motor specs |
 | 6. |  DC motor | The stall torque of the motor is 0.7 kg*cm (the max torque that can be applied before the shaft quits rotating). | DC motor specs |
 | 7. | Bevel Gears  | The teeth of the beveled gears shall endure enough torque to prevent the teeth from breaking under a load and will have a pressure angle of at least 20 degrees | AGMA Standard |
@@ -204,7 +204,7 @@ When the arm/shaft of the push button subsystem is not active, the height and wi
 
 **Constraint Solution 4:**
 
-The length of the shaft/arm needs to at least reach out approximately 12 inches for our robot being centered of the course. The course width from side to side is 23.25 inches. If our robot is approximately 1 foot in length, then our arm needs to be at least 11.25 inches assuming we are in the center of the board. The figure below shows the total width of the board.
+The length of the shaft/arm needs to at least reach out approximately 12 inches for our robot being centered of the course. The course width from side to side is 23.25 inches. If our robot is approximately 1 foot in width, then our arm needs to be at least 11.25 inches when extended out from the side of the robot chassis. This is assuming we are in the center of the board. The figure below shows the total width of the board.
 
 **Game board dimensions**
 
