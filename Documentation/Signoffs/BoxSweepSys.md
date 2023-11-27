@@ -17,11 +17,11 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 
 
 ## Buildable Schematic of Subsystem
-![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/ccd1bc9a-c453-4c25-b664-b419bf981e83)
+![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/f4b8b9de-97ab-4256-9050-8eab1a528d14)
 <br />Figure 2: Box Sweep Wiring Diagram
 <br />
 <br />
-The SG90 Servo is a servo motor with 180 degrees of movement. This will be the point of motion for the sweep arm that will collect the boxes. The SG90 has three pins that control the function of the motor.
+The FS90 Servo is a servo motor with 120 degrees of movement. This will be the point of motion for the sweep arm that will collect the boxes. The SG90 has three pins that control the function of the motor.
 
 Pulse Width Modulation (PWM, orange wire): This pin shall be connected to a PWM Pin on the main controller. Code within the main controller will send the appropriate pulse through the PWM pin to lower the arm from 90 degrees to 180 degrees once the start signal is received by the main controller.
 <br />
@@ -71,6 +71,6 @@ To have the arm of the sweep reach the large boxes the skirt is included to prev
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | SG90 |	DIYables | 1 | Recycled | Recycled |
+| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | FS90 |	FEETECH | 1 | Recycled | Recycled |
 | Servo Saver | Bearing to protect the servo from lateral torque | Box Sweep | B075F2ZT1Q | ETPNNASO | 1 | $9.99 | $9.99 |
 |||||||| $9.99 |
