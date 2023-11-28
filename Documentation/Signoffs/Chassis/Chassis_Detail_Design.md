@@ -56,9 +56,8 @@ Estimation of other subsystems' footprints resulted in needing 62 square inches 
 
 Constraint 4 Solution:
 <br />
-The primary difference between the movement of a vehicle with wheels and a vehicle with tracks is that tracks require more torque to begin movement and move at a slower pace than wheels. 
+Tracks and traditional wheels operate similarly, by having a motor rotate the wheel itself or the drive pulley of the tracks, which is functionally a wheel that pulls the tracks along. However, tracks have more weight and surface area touching the ground, increasing friction and drag. This will end up slowing the tracks down marginally. However, the torque shall not increase in any significant way, and this slowdown in speed can be overcome by providing the motor more power on the stretches of the course when precise movement is not critical, thus increasing the speed of the robot. 
 
-(Doing the math and all, will fill in here once finished.)
 
 ## BOM
 
