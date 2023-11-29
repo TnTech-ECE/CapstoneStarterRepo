@@ -33,7 +33,7 @@ Figure 3: 3D model of the Team Spirit Subsystem with imperial units
 
 Figure 4: 3D model Team Spirit System
 
-The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control a 2 - channel relay module to power the LEDs and create the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program and offesetting the blinking of one strip to alternate between purple and gold blinking lights.
+The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control a 2 - channel relay module to power the LEDs and create the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program and offesetting the blinking of one strip to alternate between purple and gold blinking lights. 
 
 Purple LED:
 
@@ -45,7 +45,7 @@ The yellow LED is a 5mm round model with attached wires and a series resistance 
 
 2 Channel Relay:
 
-The 2 channel relay is required for the implimentation of the Team Spirit Subsystem. The relays will be used to provide 80 mA to each strip of LEDs from the power system; the relays are activated by signals from 2 digital outputs of the main microcontroller.
+The 2 channel relay is required for the implimentation of the Team Spirit Subsystem. The relays will be used to provide 80 mA to each strip of LEDs from the power system; the relays are activated by signals from 2 digital outputs of the main microcontroller. The relay is capable of switching a maximum of 10 times per second.
 
 No1:
 Normally open terminal of the first relay; connected to the positive terminal of the first LED strip.
@@ -105,7 +105,7 @@ The team spirit subsystem shall be a highly visible representation of Tennessee 
 
 Constraint 2 Solution: 
 
-The system shall be dynamic by displaying lights which blink at a frequency people can see. This restricts the lights to blinking at frequencies that are visibly turning on and off as a function of time. The imposed rule reducing the frequency of the signal as a function of time defines it as a dynamic system. The recommended frequency is less than 50 Hz because at 50 Hz blinking lights are perceived by people to be on.
+The system shall be dynamic by displaying lights which blink at a frequency people can see. This restricts the lights to blinking at frequencies that are visibly turning on and off as a function of time. The imposed rule reducing the frequency of the signal as a function of time defines it as a dynamic system. The system is capable of blink at a rate of 4Hz due to the capability of the relay to switch 10 times per second; or once every 100 ms.
 
 Constraint 3 Solution:
 
