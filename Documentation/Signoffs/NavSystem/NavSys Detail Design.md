@@ -52,9 +52,9 @@ The following is a 3D model of where the sensor package will go on the robot. Th
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Nav%20Sys.png)
 
-The following image shows the mounting holes on the robot chassis and the sensor array. This view is from the underside of the robot.
+The following image shows the mounting holes on the robot chassis and the sensor array. This view is from the underside of the robot. As shown, the sensor array is behind the slope of the tracks, preventing it from dragging on the slopes of the course.
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Underside.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/aConorOrr-signoff-Navigation/Documentation/Signoffs/NavSystem/3D%20Model%20Underside%20Blender.png)
 
 ## Analysis
 
