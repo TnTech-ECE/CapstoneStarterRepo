@@ -19,6 +19,7 @@ The team spirit subsystem is nonoperational prior to entry of the thruster assem
 |  6  |The Gold LEDs shall be installed above the purple LEDs on the sidewall of the robot.                                                                                        |Design Specification     |
 |  7  |The LEDs shall be secured on the back, and side panels of the robot and shall not be installed on the top, bottom, or on the front panel of the robot.                      |Design Specification     |
 |  8  |The LED lights shall not tamper with the IR sensors of the navegation system.                                                                                               |Design Specification     |
+|  9  |The Relay component shall have a lifespan of 10,000 electrical operations.                                                                                                  |Device Specification     |
 ## Buildable
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/accurate%20measurments.PNG)
@@ -130,6 +131,10 @@ The LEDs shall be secured on the back, and side panels of the robot. The LEDs ca
 Constraint 8 Solution:
 
 The LED lights shall not tamper with the IR sensors of the navegation system. The LED lights used in the team spirit subsystem emit purple and yellow blinking lights. These colored lights are reflected from the paint on the course to the IR sensors of the navegation system. These wavelengths of light tamper with the color of light which is being recieved by the IR sensors. This creates inconsistencies in the lines which would be percieved by the line following program. The solution to this issue is not placing the LED strips on the front of the robot. This prevents the light from refelcting onto the IR sensors. The LED lights being secured to the rear of the robot does not create issues with the IR sensors due to the angle of the emmitted light. This specifictaion restricts constraint 1 by restricting the represenation of the university. This is comepensated by painting a gold stripe above a purple stripe on the front border of the chassis.
+
+Constraint 9 Solution:
+
+The relay component shall have a life span of 10,000 electrical operations. The internal contacts of the relay spark during electrical operation and become damaged over time; this life span is shortened if compoenent is used aboved rated values of 7 A, 250 VAC. The calculated life of the relay for this specific application is 41 minutes and 40 seconds. The solution is to limit the quantity of time which the team spirit system will be active during testing. The team spirit subsystem will be activated during the competition and terminated when the robot is powered off. The team spirit subsytem will be high for a minimum of 8.1 seconds; the length of time required to move from the edge of the crater to the end of the course. This minimum value and an approximated maximum running time of 1 minute for the team to approach the robot and power it off; designates a total of 41 possible runs for debugging and competition. 
 
 ## BOM
 
