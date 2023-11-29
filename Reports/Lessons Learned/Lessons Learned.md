@@ -10,5 +10,20 @@ This document should be used as an ongoing documentation of the following:
 
 Create a section addressing each of the above questions. 
 
-Unanticipated problems -
-Arduino Uno Wifi Rev2's SPI bus does not connect to the same pins as Arduino R3 despite pinout on website saying so. This is according to full schematic and several forums.
+## What went well
+- Meeting for at least an hour twice a week worked well during the first semester of progress. This allowed constant progress
+## What didn't go well
+- Our team's communication went down during the second semester due to us having different schedules.
+- We waited to experimentally test our subsystems for too long. We waited for each subsystem to be individually tested to work, but one of them never ended up working, meaning we were very late to test everything together.
+## Unanticipated problems 
+- Arduino Uno Wifi Rev2's SPI bus does not connect to the same pins as Arduino R3 despite pinout on website saying so. This is according to full schematic and several forums.
+- Components
+- 
+
+## What we would do differently
+- Spend a group session formulating permanent weekly meeting plans once we realize that our schedules did not synergize at all. 
+- We would recommend having a signoff that specifically focuses on how each subsystem physically connects to each other, i.e. adaptors, jumper cables, power connections, physical placement, etc.
+## "Best practices" we have identified
+- 
+## Words of Wisdom
+- Buy as many pre-built parts as possible that work within the necessary parameters.
