@@ -72,6 +72,16 @@ Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN g
 | GPIO19        | MISO                   |
 | GPIO2         | DIO0                   |
 
+### Why These Pins?
+- GND, 3.3V
+  - These are power supply pins used for powering the RFM95W
+- GPIO14 for RESET
+- GPIO5 for NSS (Chip Select)
+- GPIO18 for SCK
+- GPIO23 for MOSI
+- GPIO19 for MISO
+- GPIO2 for DIO0 (RFM95W GPIO)
+
 ### Data Storage
 Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be running on Raspberry Pi OS installed on a microSD card and will have ChirpStack software installed. A Python script will take the current deltas contained in ChirpStack Network Server and subtract them from the known value of the total parking spaces in a lot. This will give the total number of parking spaces available in the lot. After the calculation, the number of spaces available as well as a timestamp will be stored in a MySQL database on the Raspberry Pi. Any other data the Computer Science team may need for the mobile app can be contained here as well. For example, location data could also be included. The Computer Science team can make use of this data with the Firebase cloud server that serves the mobile app. This can be accomplished with another Python script that will push a query of the database to the Firebase cloud server. Firebase integration will be considered after the subsystem is fully functional by itself.
 
