@@ -7,65 +7,36 @@ All signoffs for each subsystem will be located in this folder.
 
 ## Final set of prints (final design artifacts)
 
-All schematics and artifacts should be in an appropriate file type. 
-
 ### 3D Models
 
-Required format: 
-- .stl
-
-3D models should be stored in the proper file type to facilitate editing, viewing, and printing. The best filetype for this is .stl, so all 3d models should be pushed to the repo as stl files. Stl files can be converted to solidworks models or autocad 3d models as necessary, can be 3d printed easily, and are 3d viewable natively in github. File (Documentation/3D Models)
-
-Every constructed system of the project must have a complete (buildable) 3d model schematic.
-
+All 3D models that are created in the design process of the project will be located in this folder.
 
 ### Wiring Schematics
 
-Required software: 
-- autocad or autocad electrical
-
-For wiring schematics, use autocad or autocad electrical. All the source files must be included in the github repo along with pdf versions of all schematics. File (Documentation/Electrical/Schematics/Sources)
-
-Every electrical system must have a complete (buildable) pdf circuit schematic. File (Documentation/Electrical/Schematics)
-
-Autocad is freely available to students with versions for mac, windows, and linux.
+All electrical schematics that are created in the design process of the project will be located in this folder.
 
 #### PCB files
 
-Required Software:
-- kicad 
-
-KiCad should be used for all PCB design. All source files must be deposited in the repo. File (Documentation/Electrical/PCB/Sources)
-
-Along with the source files, a complete set of gerber files for each PCB must also be included in the repo. These should be included in a folder called gerber files. File (Documentation/Electrical/PCB)
-
-kiCad is a free and open source software.
-
+All PCB files that are created in the design process of the project will be located in this folder.
 
 ## Final BOM
 
-The final version of the BOM should be uploaded as a pdf output of the excel BOM file. The excel BOM file should also be included.
+The final BOM for the entire project will be located in this folder.  This BOM will be available once all signoffs are complete and all parts have been ordered through the Tennessee Tech ECE department.
 
 
 ## Datasheet 
 
-This must give all the information necessary for other systems to interface with your project in the intended manner. This must include the power expectations, interfacing, and compliance.
-	
-This must also include the results from all experimentation and the interpretation of the results.
-  
-  
-  
+All datasheets that are used in this project will be located in this folder.  
   
 ## The project poster
 
-Include the project poster
-
+The final project poster will be located in this folder.  This will be entered in during the month of April 2024.
 
 ## Detailed photos of the project
 
-Include a folder of a set of detailed photos of the project. File (Documentation/Images)
+All photos of the final project will be located in this folder.
 
 
 ## Any additional documents that are appropriate to include
 
-If there are additional items that are important to understanding and working on or with the project, include them as well. 
+Any additional documents that are necessary to include will be located in this folder. 
