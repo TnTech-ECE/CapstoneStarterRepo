@@ -1,6 +1,6 @@
-For each of the sets of programs written, create a directory in the software folder. 
+For each of the sets of programs written, a directory in the software folder has been created. 
 
-Each software folder must contain a readme file detailing
+Each software folder will contain a readme file detailing
 
 1. What the software does
 2. All dependencies
