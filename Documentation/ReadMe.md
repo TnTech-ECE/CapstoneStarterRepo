@@ -28,10 +28,6 @@ The final BOM for the entire project will be located in this folder.  This BOM w
 
 All datasheets that are used in this project will be located in this folder.  
   
-## The project poster
-
-The final project poster will be located in this folder.  This will be entered in during the month of April 2024.
-
 ## Detailed photos of the project
 
 All photos of the final project will be located in this folder.
