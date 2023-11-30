@@ -51,6 +51,15 @@ Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN g
 
  
 - Constraint 3
+  - This constraint will be addressed by choosing parts such as antennas with adequate gain and parameters in the code to maximize the range of the network. The TX power of the RFM95W can be reduced from the 20 dBm mode to a lower setting to conserve power if necessary. This will be determined via testing. To show that the system is capable of meeting the minimum range constraint, the Ericsson propagation model is used as a pessimistic estimate of the range for LoRaWAN. Compared to the required 255 feet in constraint 3, the model predicts a range in the order of kilometers. This is clearly well in excess of the minimum required distance and would likely be enough to cover the entirety of campus.
+  - The Ericsson propagation model was derived from the Hata model, which was itself developed based on urban area data collected in Tokyo [10]. This is clearly a more challenging environment than the comparatively less dense Tennessee Technological University campus and the city of Cookeville. Thus, we should expect better performance from the system than what the model predicts. The Ericsson model and the values chosen for the simulation are as follows.
+
+    The Ericsson Propagation Model: $L = a₀ + a₁ log₁₀(d) + a₂ log₁₀(h_b) + a₃ log₁₀(h_b) \times \log₁₀(d) - 3.2 \log₁₀(11.75hᵣ)² + g(f)$
+    Where $L$ is the path loss, $a₀$-$a₃$ are environment constants, $h_b$ is the base station antenna height, in our case the gateway, $h_r$ is the end device antenna height, in our case the ESP32 microcontrollers with RFM95W transceivers, $d$ is the distance between the base station and the end device, and $g(f)$ which is the frequency correction factor described as $g(f) = 44.49 log₁₀(f) - 4.78 log₁₀(f)²$, where %f% is carrier frequency.
+    The values chosen for the simulation are as close to the expected true values as possible, taking into account the valid ranges for the model. The model is only accurate for certain values. The valid range for carrier frequency is 150 Mhz to 2 GHz, 915 MHz was used. The valid range for base station antenna height ($h_b$) is 20 to 200 m, the minimum of 20 m was used. The valid range for end device antenna height ($h_r$) is 1 to 5 m, the minimum of 1 m was used. The valid range for distance ($d$) is 0.2 to 100 km, a range of distances was used for the plot. The environment constants were chosen to represent the values for an urban environment, they were specified in the simulation as follows: $a_0 = 36.2$, $a_1 = 30.2$, $a_2 = -12$, $a_3 = 0.1$. The simulated plot of path loss vs distance and link budget vs distance is below. The source code for the simulation can be found 
+
+  ![EricssonModelSim](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/ae5a141c-50e4-490c-8482-ebf9dfe14a14)
+   <em>Figure 4. Path Loss vs Distance and Link Budget vs Distance for Ericsson Model</em>
 
 
 - Constraint 4
@@ -121,3 +130,5 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 8. ESP WROOM 32E pinout: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png
 
 9. F. Adelantado, X. Vilajosana, P. Tuset-Peiro, B. Martinez, J. Melia-Segui and T. Watteyne, "Understanding the Limits of LoRaWAN," in IEEE Communications Magazine, vol. 55, no. 9, pp. 34-40, Sept. 2017, doi: 10.1109/MCOM.2017.1600613.
+
+10. M. Stusek et al., "Accuracy Assessment and Cross-Validation of LPWAN Propagation Models in Urban Scenarios," in IEEE Access, vol. 8, pp. 154625-154636, 2020, doi: 10.1109/ACCESS.2020.3016042.
