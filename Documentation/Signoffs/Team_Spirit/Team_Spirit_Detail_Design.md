@@ -64,7 +64,7 @@ The gate terminal of the MOSFET is used to control the drain current of the circ
 
 Figure 5: The N - Channel MOSFET which acts as a relay for the Team Spirit Subsystem 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/LEDSWITHRELAYSCHEM.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmosmodel.PNG)
 
 Figure 6: The circuit design of the Team Spirit Subsystem.
 ## Analysis
@@ -113,6 +113,6 @@ The LED lights shall not tamper with the IR sensors of the navegation system. Th
 |-------------------------|-------------------------------------------------------------------|-----------|-------------|------------|--------|-------|-----------|
 |5mm LEDs - Yellow        |Yellow 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|W04127_3-US-1|DORHEA      |100     |$0.0799|$7.99      |
 |5mm LEDs - Purple        |Purple 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|‎W04127_6-US-1|DORHEA      |100     |$0.0799|$7.99      |
-|N - Channel MOSFET       | 30 A,  60 V rated N channel MOSFET.                               |Team Spirit|RFP30N06LE   |FAIRCHILD   |1       |$7.99  |$7.99    | 
-|                         |                                                                   |           |             |            |        |       |$23.97a     | 
+|N - Channel MOSFET       | 30 A,  60 V rated N channel MOSFET.                               |Team Spirit|RFP30N06LE   |FAIRCHILD   |1       |$7.99  |$7.99      | 
+|                         |                                                                   |           |             |            |        |       |$23.97a    | 
  
