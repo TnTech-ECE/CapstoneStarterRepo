@@ -18,8 +18,8 @@ The data subsystem is responsible for the transmission and storage of data. Data
 1. Data shall be transmitted on the unlicensed 915 MHz ISM band bounded by 902 MHz and 928 MHz. This constraint comes from the FCC standards for the 902 MHz to 928 MHz ISM band. A license is required to operate in many other frequency bands, so those frequency bands must be avoided. Other frequency bands are reserved for certain applications, these must be avoided as well. The system will use LoRa to transmit data, and LoRa uses the 915 MHz ISM band, therefore, the system is constrained to using this frequency band.
 2. Data shall be transmitted according to the standards set by The LoRa Alliance that define the LoRa protocol. For the system to transmit data properly with LoRa, it must follow the standards that define LoRa. This includes how data must be encoded using Chirp Spread Spectrum modulation for LoRa. The LoRa concentrator module must receive data encoded in that manner to properly demodulate the chirps so the data can be collected from the LoRa packets.
 3. The system shall be able to communicate effectively over a distance of at least 255 feet, which is a generous estimate of the straight line distance between the capstone lab and the furthest point the MCU may be located beside the lot entrance/exit. This distance must be achieved even when the signal has to pass through several layers of material that are part of Brown Hall. Reliable communication is a requirement for the system to function as intended. The calculation to approximate straight line distance from the capstone lab to the side of the road is: distance = sqrt(((num_floors*floor_height)^2)+(horizontal_distance^2)), num_floors being equal to 3, floor_height being equal to 15 ft, and horizontal_distance being equal to 250 ft. These values are purposely generous to account for any inaccuracy in the estimates, since the horizontal distance is based on a Google Maps measurement of 190ft (center of Brown Hall to the far side of the road), and the floor height is from an estimate based on average ceiling height plus the distance between floors (thickness of the floor). The signal will also have to be able to penetrate materials such as concrete, metal, and glass. The inability to penetrate these materials will mean an inability to transmit and receive data. The system must also be resilient to interference from the many 2.4GHz devices located across the entirety of Brown Hall.
-4. The system is constrained by the limited data rate that is inherent to the LoRaWAN protocol. Specifically, the bit rate can range between 0.3 kbps to 27 kbps depending on the spreading factor and bandwidth used. A balance will have to be achieved between the spreading factor, bandwidth, range, battery life, and data rate. The spreading factor can range from SF7 to SF12. A higher spreading factor means more range, slower data rate, and shorter battery life. The inverse is true for lower spreading factors.
-5. The system is constrained by the maximum payload size afforded by LoRaWAN. Depending on the spreading factor, the maximum payload size can range from 51 bytes to 222 bytes. As the spreading factor gets smaller, the payload can become larger.
+4. The system is constrained by the limited data rate that is inherent to the LoRaWAN protocol [11]. Specifically, the bit rate can range between 0.3 kbps to 27 kbps depending on the spreading factor and bandwidth used. A balance will have to be achieved between the spreading factor, bandwidth, range, battery life, and data rate. The spreading factor can range from SF7 to SF12. A higher spreading factor means more range, slower data rate, and shorter battery life. The inverse is true for lower spreading factors.
+5. The system is constrained by the maximum payload size afforded by LoRaWAN [11]. Depending on the spreading factor, the maximum payload size can range from 51 bytes to 222 bytes. As the spreading factor gets smaller, the payload can become larger.
 
 ## Schematics / Block Diagrams
 
@@ -41,6 +41,33 @@ The data subsystem is responsible for the transmission and storage of data. Data
 ### Data Transmission
 Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN gateway using LoRa protocol via RFM95W transceivers connected to the ESP32 MCUs' GPIO pins. Using the LoRa library for Arduino, the system should always follow the standards that define LoRa and as a consequence also the FCC 915 MHz ISM band standards. The RFM9X transceivers come in different regional variants. The RFM95W can be configured to operate at any frequency in the range 862-1020 MHz according to the datasheet. For the transceiver to meet constraint 1, the frequency must be set to 915 MHz. This can be done using the RadioHead RH_RF95 library public member function setFrequency(915.0). Nearly everything about the RFM95W is configurable with software. The MCUs will communicate with the transceivers via SPI protocol. The pin connections are shown in the table below and in Figure 3. The table shows the pin names of the actual transceiver PCB according to the datasheet, and Figure 3 shows the breakout board the transceiver is mounted on. The breakout board provides labels for the pins and an easy way to attach an antenna. An antenna is vital in getting the most range possible out of the RFM95W transceiver. The transceiver will send the delta of vehicles in/out of the lot, which was previously determined by the MCU, in the form of a LoRa packet which is encoded in Chirp Spread Spectrum modulation. The WM1302 concentrator can receive and demodulate these LoRa packets so that our Raspberry Pi can understand the data contained in the LoRa packets. The Raspberry Pi is connected to the WM1302 gateway module via the WM1302 PiHAT which sits atop the Raspberry Pi and is connected via the Raspberry Pi's GPIO pins. The data from the PiHAT will be passed into ChirpStack software installed on the Raspberry Pi. ChirpStack Gateway Bridge has built-in support for Semtech SX1302-based concentrators (through the ChirpStack Concentratord backend), such as the WM1302 concentrator, so setup should be mostly painless. ChirpStack Gateway Bridge will route the packets it receives to ChirpStack Network Server, which is on the same Raspberry Pi. ChirpStack Network Server keeps a record of data it receives and is accessible over the internet, given the Raspberry Pi has an internet connection. LoRa protocol should meet the range and material penetration constraint. LoRa uses the 915 MHz frequency band which can effectively penetrate concrete, metal, and glass. With the addition of antennas attached to the RFM95W PCBs, the system should be able to easily reach the gateway from the roadside.
 
+| ESP32 MCU Pin | RFM95W Transceiver Pin |
+|---------------|------------------------|
+| GND           | GND                    |
+| 3.3V          | 3.3V                   |
+| GPIO14        | RESET                  |
+| GPIO5         | NSS                    |
+| GPIO18        | SCK                    |
+| GPIO23        | MOSI                   |
+| GPIO19        | MISO                   |
+| GPIO2         | DIO0                   |
+
+### Why These Pins on the ESP32?
+- GND, 3.3V
+  - These are power supply pins used for powering the RFM95W
+- GPIO14 for RESET
+  - This is simply a GPIO that is not reserved for anything else the system may need to use. This can be changed if necessary.
+- GPIO5 for NSS (Chip Select)
+  - This is the dedicated VSPI_CS pin
+- GPIO18 for SCK
+  - This is the dedicated VSPI_CLK pin
+- GPIO23 for MOSI
+  - This is the dedicated VSPI_MOSI pin
+- GPIO19 for MISO
+  - This is the dedicated VSPI_MISO pin
+- GPIO2 for DIO0 (RFM95W GPIO)
+  - This is simply a GPIO that is not reserved for anything else the system may need to use. This can be changed if necessary.
+
 ### Addressing Constraints
 - Constraint 1
   - This constraint will be addressed by configuring all devices that will be transmitting and receiving LoRa packets to only do so on the 915 MHz frequency band. This is simply a parameter in software that will need to be specified. For the Raspberry Pi gateway, this is not necessary as the WM1302 LoRaWAN concentrator that has been selected for this project is made to operate exclusively on the US915 frequency band. For the RFM95W transceiver modules, the frequency band can be specified with the RadioHead RH_RF95 library public member function setFrequency(915.0).
@@ -54,42 +81,20 @@ Data will be transmitted from the ESP32 MCUs to the Raspberry Pi-based LoRaWAN g
   - This constraint will be addressed by choosing parts such as antennas with adequate gain and parameters in the code to maximize the range of the network. The TX power of the RFM95W can be reduced from the 20 dBm mode to a lower setting to conserve power if necessary. This will be determined via testing. To show that the system is capable of meeting the minimum range constraint, the Ericsson propagation model is used as a pessimistic estimate of the range for LoRaWAN. Compared to the required 255 feet in constraint 3, the model predicts a range in the order of kilometers. This is clearly well in excess of the minimum required distance and would likely be enough to cover the entirety of campus.
   - The Ericsson propagation model was derived from the Hata model, which was itself developed based on urban area data collected in Tokyo [10]. This is clearly a more challenging environment than the comparatively less dense Tennessee Technological University campus and the city of Cookeville. Thus, we should expect better performance from the system than what the model predicts. The Ericsson model and the values chosen for the simulation are as follows.
 
-    The Ericsson Propagation Model: $L = a₀ + a₁ log₁₀(d) + a₂ log₁₀(h_b) + a₃ log₁₀(h_b) \times \log₁₀(d) - 3.2 \log₁₀(11.75hᵣ)² + g(f)$
-    Where $L$ is the path loss, $a₀$-$a₃$ are environment constants, $h_b$ is the base station antenna height, in our case the gateway, $h_r$ is the end device antenna height, in our case the ESP32 microcontrollers with RFM95W transceivers, $d$ is the distance between the base station and the end device, and $g(f)$ which is the frequency correction factor described as $g(f) = 44.49 log₁₀(f) - 4.78 log₁₀(f)²$, where %f% is carrier frequency.
-    The values chosen for the simulation are as close to the expected true values as possible, taking into account the valid ranges for the model. The model is only accurate for certain values. The valid range for carrier frequency is 150 Mhz to 2 GHz, 915 MHz was used. The valid range for base station antenna height ($h_b$) is 20 to 200 m, the minimum of 20 m was used. The valid range for end device antenna height ($h_r$) is 1 to 5 m, the minimum of 1 m was used. The valid range for distance ($d$) is 0.2 to 100 km, a range of distances was used for the plot. The environment constants were chosen to represent the values for an urban environment, they were specified in the simulation as follows: $a_0 = 36.2$, $a_1 = 30.2$, $a_2 = -12$, $a_3 = 0.1$. The simulated plot of path loss vs distance and link budget vs distance is below. The source code for the simulation can be found 
+   - The Ericsson Propagation Model: $L = a₀ + a₁ log₁₀(d) + a₂ log₁₀(h_b) + a₃ log₁₀(h_b) \times \log₁₀(d) - 3.2 \log₁₀(11.75hᵣ)² + g(f)$
+    Where $L$ is the path loss, $a₀$ - $a₃$ are environment constants, $h_b$ is the base station antenna height, in our case the gateway, $h_r$ is the end device antenna height, in our case the ESP32 microcontrollers with RFM95W transceivers, $d$ is the distance between the base station and the end device, and $g(f)$ which is the frequency correction factor described as $g(f) = 44.49 log₁₀(f) - 4.78 log₁₀(f)²$, where $f$ is carrier frequency.
+    The values chosen for the simulation are as close to the expected true values as possible, taking into account the valid ranges for the model. The model is only accurate for certain values. The valid range for carrier frequency is 150 Mhz to 2 GHz, 915 MHz was used. The valid range for base station antenna height ($h_b$) is 20 to 200 m, the minimum of 20 m was used. The valid range for end device antenna height ($h_r$) is 1 to 5 m, the minimum of 1 m was used. The valid range for distance ($d$) is 0.2 to 100 km, a range of distances was used for the plot. The environment constants were chosen to represent the values for an urban environment, they were specified in the simulation as follows: $a_0 = 36.2$, $a_1 = 30.2$, $a_2 = -12$, $a_3 = 0.1$. The simulated plot of path loss vs distance and link budget vs distance is below.
 
   ![EricssonModelSim](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/119456660/ae5a141c-50e4-490c-8482-ebf9dfe14a14)
    <em>Figure 4. Path Loss vs Distance and Link Budget vs Distance for Ericsson Model</em>
 
 
 - Constraint 4
-
+  - This constraint will be addressed by adjusting the parameters of the RFM95W to suit the needs of the system. The data rate can be changed by modifying the value for the spreading factor in the range SF7 to SF12. A smaller spreading factor means a higher data rate and vice versa with a fixed bandwidth and coding rate [12]. We will always use a coding rate 4/5, which is the default. The data rate can also be changed by modifying the bandwidth. We can choose 125 kHz, 250 kHz, or 500 kHz for bandwidth. With a fixed spreading factor and coding rate, doubling the bandwidth doubles the data rate [12]. Since higher spreading factors mean lower battery life due to longer time on air [12], the system will aim to use a lower spreading factor.
 
 - Constraint 5
-
-
-
-
-| ESP32 MCU Pin | RFM95W Transceiver Pin |
-|---------------|------------------------|
-| GND           | GND                    |
-| 3.3V          | 3.3V                   |
-| GPIO14        | RESET                  |
-| GPIO5         | NSS                    |
-| GPIO18        | SCK                    |
-| GPIO23        | MOSI                   |
-| GPIO19        | MISO                   |
-| GPIO2         | DIO0                   |
-
-### Why These Pins?
-- GND, 3.3V
-  - These are power supply pins used for powering the RFM95W
-- GPIO14 for RESET
-- GPIO5 for NSS (Chip Select)
-- GPIO18 for SCK
-- GPIO23 for MOSI
-- GPIO19 for MISO
-- GPIO2 for DIO0 (RFM95W GPIO)
+  - This constraint will be addressed if necessary. The system will likely only send packets with a payload smaller than the minimum max payload size. This is because the ESP32 microcontrollers will only be sending the delta of vehicles entering or exiting the lot as a two to three-digit integer number. The max payload size is determined by the spreading factor and bandwidth. A higher spreading factor and bandwidth correlate to a larger max payload size [12].
+ 
 
 ### Data Storage
 Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be running on Raspberry Pi OS installed on a microSD card and will have ChirpStack software installed. A Python script will take the current deltas contained in ChirpStack Network Server and subtract them from the known value of the total parking spaces in a lot. This will give the total number of parking spaces available in the lot. After the calculation, the number of spaces available as well as a timestamp will be stored in a MySQL database on the Raspberry Pi. Any other data the Computer Science team may need for the mobile app can be contained here as well. For example, location data could also be included. The Computer Science team can make use of this data with the Firebase cloud server that serves the mobile app. This can be accomplished with another Python script that will push a query of the database to the Firebase cloud server. Firebase integration will be considered after the subsystem is fully functional by itself.
@@ -132,3 +137,7 @@ Data will be processed and stored on the Raspberry Pi. The Raspberry Pi will be 
 9. F. Adelantado, X. Vilajosana, P. Tuset-Peiro, B. Martinez, J. Melia-Segui and T. Watteyne, "Understanding the Limits of LoRaWAN," in IEEE Communications Magazine, vol. 55, no. 9, pp. 34-40, Sept. 2017, doi: 10.1109/MCOM.2017.1600613.
 
 10. M. Stusek et al., "Accuracy Assessment and Cross-Validation of LPWAN Propagation Models in Urban Scenarios," in IEEE Access, vol. 8, pp. 154625-154636, 2020, doi: 10.1109/ACCESS.2020.3016042.
+
+11. F. Adelantado, X. Vilajosana, P. Tuset-Peiro, B. Martinez, J. Melia-Segui and T. Watteyne, "Understanding the Limits of LoRaWAN," in IEEE Communications Magazine, vol. 55, no. 9, pp. 34-40, Sept. 2017, doi: 10.1109/MCOM.2017.1600613.
+
+12. The Things Network LoRaWAN Documentation: https://www.thethingsnetwork.org/docs/lorawan/spreading-factors/
