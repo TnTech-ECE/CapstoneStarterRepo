@@ -11,11 +11,13 @@ The current iteration of this project is capable of:
 2. Output sound is capable of being transferred from the power amp.
 3. Two-way communication between Arduino Uno R4 through Arduino NANO 33 IOT to the Serial laptop COM port.
 4. Input and error subsystems can inconsistently amplify received sound signals.
+5. Main processor can swap between different filter types (low-pass, high-pass, etc.).
+6. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
 5. Main processor can quickly swap between different approximation filters.
 6. Main processor can correctly apply the Filtered-X LMS algorithm.
 7. Convolutional Neural Network correctly identifies noise in specific broadband ranges.
 8. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
-
+9. 
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
@@ -24,11 +26,22 @@ Projects often have some outcomes that are more interesting than others. Here, h
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
+Below is an experimental setup with all subsystems working together: Main processor, power, and output are inside the mounting shelf. The speakers are fixed to the wall with input and error microphones in fixed positions.
+<img src="/Documentation/Images/Main Readme/Full_system.jpg" width= "50%" height = "50%">
 
-Below the video link show some well-taken, appropriately sized images of the project.
 
-( Will be done later )
+Below showcases the subsystems inside the mounting
+
+<img src="/Documentation/Images/Main Readme/Main_System.jpg" width= "50%" height = "50%">
+
+Below is a closeup of the output speakers and input microphone
+
+<img src="/Documentation/Images/Main Readme/Output_System.jpg" width= "50%" height = "50%">
+
+Below shows a dissection of the parts used to make this project work
+
+<img src="/Documentation/Images/Main Readme/Disection.jpg" width= "50%" height = "50%" >
+
 
 ## About Us
 
