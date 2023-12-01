@@ -1,1 +1,1 @@
-This folder contains all the KiCad schematic files and PCB files. (Note: This PCB is not the up to date version, the up to date version is shown in a png under the schematics folder. The gerber files are based off the up to date PCB).
+This folder contains all the KiCad schematic files and PCB files for the input and error subsystem. (Note: This PCB is not the up to date version, the up to date version is shown in a png file under the schematics folder called Input_Error_PCB. The gerber files are based off the up to date PCB).
