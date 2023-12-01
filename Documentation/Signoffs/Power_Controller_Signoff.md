@@ -137,7 +137,14 @@ I_{RMS}\cong\ 0.123A
 
 
 Output Capacitor Selection:
+
+
 According to the datasheet for the output capacitor, a 22µF ceramic capacitor will be used based on the required EST to satisfy the output voltage ripple requirement and the bulk capacitance needed for loop stability. 
+
+
+
+
+
 
 
 
@@ -224,7 +231,13 @@ I_{RMS}\cong\ 0.023A
 
 
 Output Capacitor Selection:
+
+
 According to the datasheet for the output capacitor, a 22µF ceramic capacitor will be used based on the required EST to satisfy the output voltage ripple requirement and the bulk capacitance needed for loop stability. 
+
+
+
+
 
 ### LTstice Simulations
 
