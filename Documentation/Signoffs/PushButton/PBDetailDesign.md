@@ -88,48 +88,10 @@ The DC motor has a gear reduction ratio to increase torque. The reason for this 
 0.9833 rad/second which is eqivalent to 59 rad/minute for 2 seconds. The reason the shaft needs to be at 2 seconds is because at because if the shaft turns at 59 rad/minute for one second then the output shaft angle will only rotate 45 degrees which means our pushbutton will not be touching the wall. If we average 59 rad/min for 2 seconds then it will rotate out 90 degrees. The Matlab code that proves this is given below and the figures for "Input speed in rpm vs Output degrees" , "Input speed in rps vs Output degrees", and "Input speed in rpm vs Input speed in rps " are also given below. 
 
 **Matlab code:** 
- % Define output gear parameters
-output_teeth = 25; % Number of teeth on the output gear
 
-% Define input gear parameters
-input_teeth = 20;
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Matlab_code_1.png)
 
-input_speed_rpm = 0:1:100;
-
-% Calculate output gear speed based on gear ratio
-
-output_speed_rpm = input_speed_rpm * (input_teeth / output_teeth);
-
-% Convert speeds from radians per minute to radians per second
-input_speed_rps = input_speed_rpm / 60;
-output_speed_rps = output_speed_rpm / 60;
-
-%Convert speeds from radians per second to degrees
-input_degrees = input_speed_rps * (180/pi);
-output_degrees = output_speed_rps * (180/pi);
-input_degrees_per_minute = input_speed_rpm * (180/pi);
-output_degrees_per_minute = output_speed_rpm * (180/pi);
-
-figure;
-plot(input_speed_rps,output_degrees,'LineWidth', 1.5);
-xlabel('Input Gear Speed (rad/s)');
-ylabel('Output Gear degrees (degrees)');
-title('Input Gear Speed (rps) vs Output Gear degrees of rotation');
-grid on;
-
-figure(2);
-plot(input_speed_rpm, output_degrees,'LineWidth', 1.5);
-xlabel('Input Gear Speed (rad/m)');
-ylabel('Output Gear degrees (degrees)');
-title('Input Gear Speed (rpm) vs Output Gear degrees of rotation');
-grid on;
-
-figure(3);
-plot(input_speed_rpm, input_speed_rps,'LineWidth', 1.5);
-xlabel('Input Gear Speed (rad/m)');
-ylabel('Input Gear Speed (rad/s)');
-title('Input Gear Speed (rpm) vs Input Gear speed (rps)');
-grid on;
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Matlab_code_2.png)
 
 **Figure 1 Matlab code:** 
 
