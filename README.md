@@ -17,7 +17,6 @@ The current iteration of this project is capable of:
 6. Main processor can correctly apply the Filtered-X LMS algorithm.
 7. Convolutional Neural Network correctly identifies noise in specific broadband ranges.
 8. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
-9. 
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
