@@ -33,3 +33,5 @@ Create a section addressing each of the above questions.
 - Communicate extensively during the design/signoff phase especially to pinpoint possible issues in the overall design.
 - Prioritize the most critical parts of your system first.
 - Manage and organize your time throughout the two semesters well (With a Gantt chart for example).
+- Understand the goals for your design very well.
+- Always think about how you can further streamline your design.
