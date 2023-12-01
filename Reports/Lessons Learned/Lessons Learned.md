@@ -11,7 +11,7 @@ This document should be used as an ongoing documentation of the following:
 Create a section addressing each of the above questions. 
 
 ## What went well
-- Meeting for at least an hour twice a week worked well during the first semester of progress. This allowed constant progress
+- Meeting for at least an hour twice a week worked well during the first semester of progress. This allowed us to make significant progress between every meeting. In the first semester communication was also better overall which allowed us to find and tweak errors effectively. 
 ## What didn't go well
 - Our team's communication went down during the second semester due to us having different schedules.
 - We waited to experimentally test our subsystems for too long. We waited for each subsystem to be individually tested to work, but one of them never ended up working, meaning we were very late to test everything together.
