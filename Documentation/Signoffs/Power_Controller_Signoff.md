@@ -86,10 +86,10 @@ L\ =\ \ \frac{5.5V}{2.25MHz\ \ast\ (0.4\ (0.25A)}\ \ast(1-\frac{5.5V}{13.2V})
 ```math
 L\ = 14.26 \mu H
 ```
-Given this, a 1.7µH or 3.3µH, >1.2A inductor would suffice
+Given this, a 14.26µH, we can pick the inductor as 15µH, which would suffice.
 
 
-Using the desired input and output voltage along with the operating frequency, we can determine the value for the ripple current.
+We can determine the value for the ripple current using the desired input and output voltage along with the operating frequency.
 
 ```math
 {\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
@@ -109,7 +109,7 @@ V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{1}}{R_{2}})
 
 ```
 ```math
-5V=\ 0.6V\ \ast(1 +\frac{196kΩ}{R_{2}})
+5.5V=\ 0.6V\ \ast(1 +\frac{196kΩ}{R_{2}})
 ```
 ```math
 R_{2}= 24kΩ
@@ -138,7 +138,7 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
-| c.  | Sensor | 9 V | 0.06 A |
+| c.  | Sensor | 9 V | 0.05 A |
 
 ```math
 {\rm V}_{IN} = 10.8V  to  13.2V
@@ -147,10 +147,10 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 {\rm V}_{OUT} = 9V
 ```
 ```math
-{\rm I}_{OUT(max)} = 0.06A
+{\rm I}_{OUT(max)} = 0.05A
 ```
 ```math
-{\rm I}_{OUT(min)} = 0.05A
+{\rm I}_{OUT(min)} = 0.04A
 ```
 ```math
 {\rm f}_{SW)} = 2.25MHz
@@ -162,6 +162,16 @@ For starting point is to choose the ripple current to be %40 of I_out(max). To e
 ```math
 L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
 ```
+```math
+L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+```math
+L\ =\ \ \frac{9V}{2.25MHz\ \ast\ (0.4\ (0.05A)}\ \ast(1-\frac{9V}{13.2V})
+```
+```math
+L\ = 63.63 \mu H
+```
+Given a 63.63µH, we can pick the inductor as 68µH, which would suffice.
 
 
 
@@ -170,14 +180,25 @@ We can determine the value for the ripple current using the desired input and ou
 ```math
 {\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
 ```
-
+```math
+{\rm ∆I}_{L} = \frac{9V}{(2.25MHz\ \ast\ 68 \mu H)} \ast(1-\frac{9}{13.2})
+```
+```math
+{\rm ∆I}_{L} = 0.019A
+```
 
 Feedback resistors Selection:
 
-Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be ---kΩ.  
+Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be 196kΩ.  
 ```math
 V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{1}}{R_{2}})
 
+```
+```math
+9V=\ 0.6V\ \ast(1 +\frac{196kΩ}{R_{2}})
+```
+```math
+R_{2}= 14kΩ
 ```
 
 
@@ -187,7 +208,13 @@ According to the datasheet, the input capacitor is a 10µF ceramic capacitor, wh
 ```math
 I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max)}}{V_{OUT}}-1)}^\frac{1}{2}
 ```
+```math
+I_{RMS}\cong\ 0.05A\ast\ \frac{9V}{13.2V}\ast{(\frac{13.2V}{9V}-1)}^\frac{1}{2}
+```
 
+```math
+I_{RMS}\cong\ 0.023A
+```
 
 
 
@@ -202,7 +229,6 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Step down buck regulator | LTC3621 | 2 | $7.38 |  $14.76 |
-| Fuse | ---- | 3 | ---- | ----- |
 | Resistor | ---- | 6 | ---- | ----- |
 | Inductor | ---- | 3 | ---- | ----- |
 | Capacitor | ---- | 9 | ---- | ----- |
