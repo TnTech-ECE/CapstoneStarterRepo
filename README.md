@@ -58,6 +58,8 @@ We would like to thank **Jesse Roberts** for his contributions and feedback thro
 
 We would like to thank **Dr. Jeffrey Austen** for advice and guidance during the early stages of our capstone. 
 
+We would like to thank **Dr. Van Neste** for allowing us to use his equipment to test and put together our project 
+
 ## Repo Organization
 
 ### [Reports](/Reports)
