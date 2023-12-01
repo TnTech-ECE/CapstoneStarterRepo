@@ -303,7 +303,10 @@ Interpretation of Results
 ### Constraint 22 - Power shall operate on a maximum input ripple voltage of 400 mV 
 
 Experimental Design
-* hi
+The objective of this experiment was to prove that the system can operate with a maximum input ripple voltage of 400mV
+
+This was tested by
+
   
 Results
 * bye
@@ -315,7 +318,10 @@ Interpretation of Results
 ### Constraint 23 - Shall step down power supply to 5, 10, and 12 VDC
 
 Experimental Design
-* hi
+The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
+
+This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
+
   
 Results
 * bye
@@ -327,7 +333,9 @@ Interpretation of Results
 ### Constraint 24 - Attenuate targeted noises by at least 20 dB
 
 Experimental Design
-* hi
+The objective of this experiment is to prove that the system is capable of suppressing the noises created from outside the classroom.
+This was tested by 
+
   
 Results
 * bye
