@@ -64,9 +64,7 @@ The [Conceptual Design and Planning](/Reports/Conceptual%20Design/Conceptual_Des
 
 The [Experimentation](/Reports/Experimentation) report shows [finish later]
 
-The [Poster](/Reports/Poster) is [finish later]
-
-The [Final Report](/Reports/Final%20Report) includes [finish later]
+The [Poster](/Reports/Poster) is an executive summary of our outcomes in a visually appealing format.
 
 The [Lessons Learned](/Reports/Lessons%20Learned/Lessons%20Learned.md) files shows all lessons learned throughout the process. It includes lessons in both team communication, project management, and technical knowledge.
 
@@ -76,9 +74,16 @@ All documentation is included in the above folder. Folders for the files includi
 
 Documentation include all schematics, images, models, and designs used in the project. 
 
+The [3D Models](/Documentation/3D%20Models) folder has the 3D-printed designs and to-scale scenes of the implemented project
+
+The [Electrical](/Documentation/Electrical) folder has a subdirectory housing PCBs that were used in our design and another of Computer-Aided Drawings used in other signoffs
+
+The [Electrical](/Documentation/Images) houses many of the images used to aid the signoff process and explanation
+
+The [Meeting Minutes](/Documentation/Meeting%20Minutes) folder contains dated minutes for all team meetings. This allows the reader to analyze current and previous progress in a time-based manner. 
+
 The [Signoffs](/Documentation/Signoffs) folder houses all approved detail designs. These designs are for each subsystem and shows all constraints. The signoffs should convince the reader that all constraints are met as well as link to all other relevant documentation in their respective folders. These signoffs should also link any software in which is relevant.
 
-The [Meeting Minutes](/Documentation/Meeting%20Minutes) folder contains dated minutes for all team meetings. This allows the reader to analyze current and previous progress in a time based manner. 
 
 ### [Software](/Software)
 
