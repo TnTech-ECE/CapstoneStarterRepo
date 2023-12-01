@@ -1,1 +1,1 @@
-See the documentation [Readme](https://github.com/TnTech-ECE/StarterRepo/blob/4acf2722f47a9d7eadf164df901ab597b25184e5/Documentation/ReadMe.md) for information about what should be in this directory
+This folder contains all the KiCad schematic files and PCB files. (Note: This PCB is not the up to date version, the up to date version is shown in a png under the schematics folder. The gerber files are based off the up to date PCB).
