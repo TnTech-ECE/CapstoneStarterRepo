@@ -45,6 +45,11 @@ Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 
 *Figure 5. Bcuk converter LTspice circuit. *
 
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/efc35af5-12ed-431b-a107-a553a85b83a2)
+*Figure 6. 3D model Bcuk converter for both Data interpretation, Transmission, and Storage & Charge Controller subsystem. *
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/87ff96b0-694d-4336-85ee-692bb51951ac)
+*Figure 7. 3D model Bcuk converter for Sensor subsystem. *
 
 # Analysis
 The selected buck converter datasheet can be found here [ https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf ]
@@ -220,6 +225,39 @@ I_{RMS}\cong\ 0.023A
 
 Output Capacitor Selection:
 According to the datasheet for the output capacitor, a 22µF ceramic capacitor will be used based on the required EST to satisfy the output voltage ripple requirement and the bulk capacitance needed for loop stability. 
+
+### LTstice Simulations
+
+
+1. Data interpretation, Transmission, and Storage.
+<img width="591" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/2c84c5af-273f-4d3a-9f36-0606341da4ce">
+
+<img width="591" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/3bce3e71-f4bd-41f6-a3e6-d5bbc17da826">
+
+<img width="592" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/141133fd-5a81-4887-b7f8-b1b1cb6a3ff8">
+
+  
+
+2. Charge Controller
+<img width="590" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/e674e08c-d9b4-4d1a-8d6a-fa1710c363e3">
+<img width="590" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/cf0ff7f6-8f61-4e0c-aba3-4eb2af7cfb4f">
+<img width="587" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/4dbf35bb-fd21-4d4a-863e-b9e899b19452">
+
+
+3. Sensor
+   
+<img width="592" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/bf137a25-99d7-48b6-9135-7f6f06d4b3ac">
+
+
+
+
+<img width="589" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/afcd198c-b484-4e31-a641-94203bef5584">
+
+
+
+<img width="592" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/d2163bbe-c74e-4bca-a8ac-d0eaeb0d6857">
+
+<img width="590" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/fe81aabd-3279-4adf-a038-f8796a42ed74">
 
 
 
