@@ -266,11 +266,17 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-| Step down buck regulator | LTC3621 | 2 | $7.38 |  $14.76 |
-| Resistor | ---- | 6 | ---- | ----- |
-| Inductor | ---- | 3 | ---- | ----- |
-| Capacitor | ---- | 9 | ---- | ----- |
-| Total | ----- | ----- | ----- | $---- 
+| Step down buck regulator | LTC3621 | 3 | $7.38 |  $22.14 |
+| Resistor 196kΩ | ERJ-1GNF1963C | 3 | 0.1 | 0.3 |
+| Resistor 24kΩ | ERJ-1GNF2402C | 3 | 0.1 | 0.3 |
+| Resistor 14kΩ | ERJ-1GNF1402C | 3 | 0.1 | 0.3 |
+| Inductor 15uH | XFL3012-153MEC | 2 | $2.08 | $4.16 |
+| Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 |
+| Capacitor 22pF| C3216CH2J221J060AA | 3 | $0.21 | $0.63 |
+| Capacitor 1uF| C3216X8R1E105M160AA | 3 | $0.42 | $1.26 |
+| Capacitor 10uF| C3216JB1E106M160AB | 3 | $0.56 | $1.68 |
+| Capacitor 22uF| C3216JB1C226M160AB | 3 | $0.64 | $1.92 |
+| Total | ----- | ----- | ----- | $35.31 
 
 
 
