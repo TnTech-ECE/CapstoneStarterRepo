@@ -11,8 +11,10 @@ The current iteration of this project is capable of:
 2. Output sound is capable of being transferred from the power amp.
 3. Two-way communication between Arduino Uno R4 through Arduino NANO 33 IOT to the Serial laptop COM port.
 4. Input and error subsystems can inconsistently amplify received sound signals.
-5. Main processor can swap between different filter types (low-pass, high-pass, etc.).
-6. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
+5. Main processor can quickly swap between different approximation filters.
+6. Main processor can correctly apply the Filtered-X LMS algorithm.
+7. Convolutional Neural Network correctly identifies noise in specific broadband ranges.
+8. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
 
 ## Salient Outcomes
 
