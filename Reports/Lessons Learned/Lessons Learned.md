@@ -30,3 +30,5 @@ Create a section addressing each of the above questions.
 - 
 ## Words of Wisdom
 - Buy as many pre-built parts as possible that work within the necessary parameters.
+- Communicate extensively during the design/signoff phase especially to pinpoint possible issues in the overall design.
+- Allocate time and prioritize the most critical parts of your system first.
