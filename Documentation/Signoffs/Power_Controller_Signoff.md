@@ -1,6 +1,6 @@
 # Power Controller Subsystem
 
-The purpose of this subsystem is to step down the voltages and feed the other subsystems with the needed voltages and current. To step down the voltage, a buck converter will be used to accomplish this task. 
+The purpose of this subsystem is to step down the voltages and feed the other subsystems with the needed voltages and current. A buck converter will be used to accomplish this task and step down the voltage. 
 The power controller will power three subsystems with a constant DC voltage and current depending on the demanded voltages and currents. Moreover, the power controller will take responsibility for not overcurrent, overvoltage, or causing any damage to the components within each subsystem.   
 
 
@@ -19,33 +19,29 @@ Table 1. Constraints and origins of the constraints.
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
-| a.  | Data interpretation, Transmission, and Storage | 5 V | 0.25 A |
-| b.  | Charge Controller | 5 V | 0.25 A |
-| c.  | Sensor | 9 V | 0.06 A |
+| a.  | Data interpretation, Transmission, and Storage | 5.5 V | 0.25 A |
+| b.  | Charge Controller | 5.5 V | 0.25 A |
+| c.  | Sensor | 9 V | 0.05 A |
 
 Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 
    
 # Buildable schematic
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/8b989135-5936-4303-bc17-c2979f02de09)
 
-*Figure 1. Power controller schematic. *
-
-
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/e66dc8a1-0d02-4da9-98a4-6e2ac69257a3)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/1fb8825c-9833-4ec3-beaf-dfcdac34c26c)
 
 *Figure 2. Bcuk converter for Data interpretation, Transmission, and Storage subsystem *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/52a144c0-32bf-44c4-b660-c4d55845ca8a)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/505ee68b-3550-4c9d-bab7-5cf35953f803)
 
 *Figure 3. Bcuk converter for Charge Controller subsystem. *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/6a654343-ef61-46cf-ad8e-d7075d725dc4)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/1b4c97fa-e024-4062-88ea-4175f10f0a67)
 
 *Figure 4. Bcuk converter for Sensor subsystem. *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/81bb2e38-37a6-48ad-9ef6-326acbdcaf97)
+<img width="513" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/cb205683-d54e-452e-acd2-901814983d52">
 
 *Figure 5. Bcuk converter LTspice circuit. *
 
@@ -57,8 +53,8 @@ The selected buck converter datasheet can be found here [ https://www.analog.com
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
-| a.  | Data interpretation, Transmission, and Storage | 5 V | 0.25 A |
-| b.  | Charge Controller | 5 V | 0.25 A |
+| a.  | Data interpretation, Transmission, and Storage | 5.5 V | 0.25 A |
+| b.  | Charge Controller | 5.5 V | 0.25 A |
 
 
 
@@ -66,7 +62,7 @@ The selected buck converter datasheet can be found here [ https://www.analog.com
 {\rm V}_{IN} = 10.8V  to  13.2V
 ```
 ```math
-{\rm V}_{OUT} = 5V
+{\rm V}_{OUT} = 5.5V
 ```
 ```math
 {\rm I}_{OUT(max)} = 0.25A
@@ -85,10 +81,10 @@ For starting point is to choose the ripple current to be %40 of I_out(max). To e
 L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
 ```
 ```math
-L\ =\ \ \frac{5V}{2.25MHz\ \ast\ (0.4\ (0.25A)}\ \ast(1-\frac{5V}{13.2V})
+L\ =\ \ \frac{5.5V}{2.25MHz\ \ast\ (0.4\ (0.25A)}\ \ast(1-\frac{5.5V}{13.2V})
 ```
 ```math
-L\ = 13.8 \mu H
+L\ = 14.26 \mu H
 ```
 Given this, a 1.7µH or 3.3µH, >1.2A inductor would suffice
 
@@ -99,7 +95,7 @@ Using the desired input and output voltage along with the operating frequency, w
 {\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
 ```
 ```math
-{\rm ∆I}_{L} = \frac{5V}{(2.25MHz\ \ast\ 13.8\mu H} \ast(1-\frac{5}{13.2})
+{\rm ∆I}_{L} = \frac{5.5V}{(2.25MHz\ \ast\ 14.26 \mu H)} \ast(1-\frac{5.5}{13.2})
 ```
 ```math
 {\rm ∆I}_{L} = 0.1A
@@ -107,16 +103,16 @@ Using the desired input and output voltage along with the operating frequency, w
 
 Feedback resistors Selection:
 
-Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be 187kΩ.  
+Next, you can find the external resistive divider values for R_2. Considering selecting a high resistor value for R_1 to be 196kΩ.  
 ```math
 V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{1}}{R_{2}})
 
 ```
 ```math
-5V=\ 0.6V\ \ast(1 +\frac{187kΩ}{R_{2}})
+5V=\ 0.6V\ \ast(1 +\frac{196kΩ}{R_{2}})
 ```
 ```math
-R_{2}= 25.5kΩ
+R_{2}= 24kΩ
 ```
 
 Input Capacitor Selection:
@@ -127,11 +123,11 @@ I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max
 ```
 
 ```math
-I_{RMS}\cong\ 0.25A\ast\ \frac{5V}{13.2V}\ast{(\frac{13.2V}{5V}-1)}^\frac{1}{2}
+I_{RMS}\cong\ 0.25A\ast\ \frac{5.5V}{13.2V}\ast{(\frac{13.2V}{5.5V}-1)}^\frac{1}{2}
 ```
 
 ```math
-I_{RMS}\cong\ 0.121A
+I_{RMS}\cong\ 0.123A
 ```
 
 
