@@ -2,13 +2,17 @@
 
 ## Executive Summary
 
-Construction noise has increased throughout Tennessee Technological University as it expands. Even though the expansion of our alma mater is a generally good thing, the added noise distracts students during times of instruction. Our team is working on developing a proof of concept for an active noise cancelling solution to the growing noise pollution problem that uses the vibrations in the outer wall of a room as the input signal. 
+Construction noise has increased throughout Tennessee Technological University as it expands. Even though the expansion of our alma mater is a generally good thing, the added noise distracts students during times of instruction. Our team is working on developing a proof of concept for an active noise-canceling solution to the growing noise pollution problem that uses the vibrations in the outer wall of a room as the input signal. 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
-( Will be done later )
+The current iteration of this project is capable of:
+1. Transferring power to each subsystem.
+2. Output sound is capable of being transferred from the power amp.
+3. Two-way communication between Arduino Uno R4 through Arduino NANO 33 IOT to the Serial laptop COM port.
+4. Input and error subsystem can inconsistently amplify received sound signals.
+5. Main processor can swap between different filter types (low-pass, high-pass, etc.).
+6. Mounting shelf can be easily be set up and moved to different locations, most subsystems can fit inside the mounting shelf.
 
 ## Salient Outcomes
 
