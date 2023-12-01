@@ -1,11 +1,8 @@
 # Reports 
 All of the completed documents 
-# Completed Documents
-1. [Project Proposal](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/main/Reports/Project_ProposalV2.pdf)
-2. [Conceptual Design and Planning](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/blob/main/Reports/Conceptual_DesignV2.pdf)
-
-# Documents Under Progress
-1. Final Report
-2. Experimentation
-3. Lessons Learned
-4. Poster
+1. [Project Proposal](/Reports/Project%20Proposal/Project_ProposalV2.pdf)
+2. [Conceptual Design and Planning](/Reports/Conceptual%20Design/Conceptual_DesignV2.pdf)
+3. [Experimentation](/Reports/Experimentation/Experimentation.md)
+4. [Final Presentation](/Reports/Final%20Presentation/Final_Presentation.pptx)
+5. [Lessons Learned](/Reports/Lessons%20Learned/Lessons%20Learned.md)
+6. [Poster](/Reports/Poster/Final_Poster.pdf)
