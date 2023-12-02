@@ -360,28 +360,28 @@ The system was not able to meet the goal of -20 dB reduction. It is considered n
 
 | **ID** | **Constraint description**                                                                          | **Constraint Met?** |
 |--------|-----------------------------------------------------------------------------------------------------|---------------------|
-| 1      | Send and receive 16-bit data with machine learning                                                  |                     |
-| 2      | Send and receive 16-bit data with main processor                                                    |                     |
-| 3      | Send audio data and receive filter data within 4 seconds                                            |                     |
-| 4      | Bluetooth must reach anywhere in the room                                                           |                     |
-| 5      | Microphone shall react to inputs from 20 Hz to 20 kHz                                               |                     |
-| 6      | Input and error subsystem's output shall be no higher than 3.3 Vpp                                  |                     |
-| 7      | Input and error subsystems' gain shall match each other                                             |                     |
-| 8      | Input and error delay shall be within 0.2 ms                                                        |                     |
-| 9      | Main processor shall process and output within 1.4 ms                                               |                     |
-| 10     | Communicate FIR filter coefficients with Bluetooth connection subsystem                             |                     |
-| 11     | Main processor shall hold at least 2 seconds of samples per input signal                            |                     |
+| 1      | Send and receive 16-bit data with machine learning                                                  |         yes            |
+| 2      | Send and receive 16-bit data with main processor                                                    |         yes            |
+| 3      | Send audio data and receive filter data within 4 seconds                                            |         N/A            |
+| 4      | Bluetooth must reach anywhere in the room                                                           |         yes            |
+| 5      | Microphone shall react to inputs from 20 Hz to 20 kHz                                               |         N/A            |
+| 6      | Input and error subsystem's output shall be no higher than 3.3 Vpp                                  |         N/A            |
+| 7      | Input and error subsystems' gain shall match each other                                             |         N/A            |
+| 8      | Input and error delay shall be within 0.2 ms                                                        |         N/A            |
+| 9      | Main processor shall process and output within 1.4 ms                                               |         N/A            |
+| 10     | Communicate FIR filter coefficients with Bluetooth connection subsystem                             |         no            |
+| 11     | Main processor shall hold at least 2 seconds of samples per input signal                            |         N/A            |
 | 12     | Speaker shall be within 0.5 m from the window being measured                                        |     yes                |
 | 13     | Shall be easy to remove and setup in a different room                                               |      yes               |
-| 14     | Mounting shall have a space for input, error, output, processing, and power subsystems              |                     |
-| 15     | The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz           |                     |
+| 14     | Mounting shall have a space for input, error, output, processing, and power subsystems              |      no               |
+| 15     | The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz           |      yes               |
 | 16     | Audio amplifier shall deliver at least 10 W of continuous power at its output                       |      yes               |
-| 17     | Speaker shall capable of outputting 90 dB and 90 dB SPL across the window                           |         no            |
+| 17     | Speaker shall capable of outputting 90 dB and 90 dB SPL across the window                           |         N/A            |
 | 18     | Speakers shall have an input power rating maximum that matches the amplifier's maximum power output |   yes                  |
 | 19     | Speakers shall be mounted to the wall without impeding movement or damaging the classroom           |       yes              |
-| 20     | Power shall convert wall outlet AC to DC                                                            |                     |
-| 21     | Power shall supply a minimum of 29 W                                                                |                     |
-| 22     | Power shall operate on a maximum input ripple voltage of 400 mV                                     |                     |
+| 20     | Power shall convert wall outlet AC to DC                                                            |          yes           |
+| 21     | Power shall supply a minimum of 29 W                                                                |           N/A          |
+| 22     | Power shall operate on a maximum input ripple voltage of 400 mV                                     |           yes          |
 | 23     | Shall step down power supply to 5, 10, and 12 VDC                                                   |      no               |
 | 24     | Attenuate targeted noises by at least 20 dB                                                         |         no            |
 
