@@ -204,14 +204,12 @@ This constraint was not tested.
 
 ### Constraint 22 - Power shall operate on a maximum input ripple voltage of 400 mV 
 
-Experimental Design
+#### Experimental Design
 The objective of this experiment was to prove that the system can operate with a maximum input ripple voltage of 400mV
 
-This was tested by taking an oscilloscope and measuring the supply voltages on the protoboard and measuring the ripple voltage
+This was tested by taking an oscilloscope and measuring the supply voltages on the protoboard and measuring the peak-to-peak voltage when AC coupled.
 
-
-  
-Results
+#### Results
 
 |Sample | 5 Volt Rail Ripple (mVpp)| 10 Volt Rail Ripple (mVpp) | 12 Volt Rail Average Ripple (mVpp)|
 |----|----|----|----|
@@ -232,57 +230,58 @@ Results
 |15|212| 158 | 90|
 |16|208| 242 | 88|
 |Average|210.75|208.25|104.39375| 
+  
+#### Interpretation of Results
 
 For 5 Volt rail:
 
-Null Hypothesis => $\mu$ = 400 mV
+Null Hypothesis => $\mu$ < 400 mV pp$
 
-Alt. Hypothesis => $\mu < 400 < \mu$ 
+Alt. Hypothesis => $400 mV pp < \mu$ 
 
 T-score = 150.0923876
 
-T-Test = 1.50784*10^-6 
+T-Test = 1.50784E-26
 
-Ripple voltage was meant confidence level on 5 V rail.
+Did achieve 5 V to wanted confidence level.
 
 For 10 Volt rail:
 
-Null Hypothesis => $\mu$ = 10 V
+Null Hypothesis => $\mu$ < 400 mV pp$
 
-Alt. Hypothesis => $\mu < 10 < \mu$ 
+Alt. Hypothesis => $400 mV pp < \mu$ 
 
-T-score = -19.62311562
+T-score = 22.78224801
 
-T-Test = 1 
+T-Test = 1.52012E-13
 
-Did not achieve 10 V to wanted confidence level.
+Did achieve 10 V to wanted confidence level.
 
 For 12 Volt rail:
 
-Null Hypothesis => $\mu$ = 12 V
+Null Hypothesis => $\mu$ < 400 mV pp$
 
-Alt. Hypothesis => $\mu < 12 < \mu$ 
+Alt. Hypothesis => $400 mV pp < \mu$ 
 
-T-score = -121.8105832
+T-score = 150.0923876
 
-T-Test = 1 
+T-Test = 1.50784E-26
 
-Did not achieve 12 V to wanted confidence level.
+Did achieve 12 V to wanted confidence level.
 
+#### Conclusion
 
-  
-Interpretation of Results
-* sigh
+This constraint was met.
 
 
 ### Constraint 23 - Shall step down power supply to 5, 10, and 12 VDC
 
-Experimental Design
+#### Experimental Design
 *The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
 
 *This was tested by taking a oscilloscope on each output of the proto-board and taking samples of the DC voltage.
 
-Results
+#### Results
 
 |Sample | 5 Volt Rail Average Voltage | 10 Volt Rail Average Voltage | 12 Volt Rail Average Voltage |
 |----|----|----|----|
@@ -303,6 +302,8 @@ Results
 |15|7.21| 10.3 | 12.5|
 |16|7.19| 10.2 | 12.6|
 |Average|7.193|10.2375|12.535| 
+
+#### Interpretation of Results
 
 For 5 Volt rail:
 
@@ -340,12 +341,12 @@ T-Test = 1
 
 Did not achieve 12 V to wanted confidence level.
 
-Improvements and Future Work
+#### Improvements and Future Work
 
 * Redesign with better filtering, and the 3.3V regulator of Arduino in mind.
 * Add safety features.
 
-Conclusion
+#### Conclusion
 
 Constraint was not met
 
