@@ -295,7 +295,7 @@ Constraint was not met
 
 #### Experimental Design
 
-![Experimental Setup*](/brokenLink)
+![Experimental Setup*](/Reports/Experimentation/Images/Full_system.jpg)
 
 
 1. Setup a simulation of a classroom with outside noise coming in towards the input microphone and
