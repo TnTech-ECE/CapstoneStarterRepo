@@ -262,6 +262,7 @@ Results
 |15|7.21| 10.3 | 12.5|
 |16|7.19| 10.2 | 12.6|
 |Average|7.193|10.2375|12.535| 
+
 For 5 Volt rail:
 
 Null Hypothesis => $\mu$ = 5 V
