@@ -1,7 +1,3 @@
-This document should be a pdf that details all experiments which were conducted. The purpose of the experiment, a description of the experiment, the expected result of the experiment, and the number of trials (must be enough to establish statistically significant results) must be given for each of the experiments.
-
-The results of the experiments should be in the proper format. Data that is best suited to graphs must be in a graph. The same is true of tables. Results should not be given in paragraph format. 
-
 # Experimental Analysis Report
 
 ## Introduction
@@ -50,40 +46,19 @@ The purpose of this report is to check all requirements for the project  and det
 | Shall encrypt any data sent wirelessly                                                               | Bluetooth Communication  | Lack of time to implement                      |
 
 
-## Experimental Results
+## Results
 
 ### Constraint 1 - Send and receive 16-bit data with machine learning
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+This constraint is not traditionally experimental, but was met.
 
 ### Constraint 2 - Send and receive 16-bit data with main processor 
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+This constraint is not traditionally experimental, but was not met.
 
 ### Constraint 3 - Send audio data and receive filter data within 4 seconds 
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Since constraint 2 was not met, this was not able to be tested.
 
 ### Constraint 4 - Bluetooth must reach anywhere in the room
 
@@ -99,86 +74,31 @@ Interpretation of Results
 
 ### Constraint 5 - Microphone shall react to inputs from 20 Hz to 20 kHz
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested due to lack of time.
 
 ### Constraint 6 - Input and error subsystem's output shall be no higher than 3.3 Vpp
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested due to lack of time.
 
 ### Constraint 7 - Input and error subsystems' gain shall match each other
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested due to lack of time.
 
 ### Constraint 8 - Input and error delay shall be within 0.2 ms
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
 
+This constraint was not tested due to lack of time.
 
 ### Constraint 9 - Main processor shall process and output within 1.4 ms
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested due to lack of time.
 
 ### Constraint 10 - Communicate FIR filter coefficients with Bluetooth connection subsystem
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint is not traditionally experimental and was not met.
 
 ### Constraint 11 - Main processor shall hold at least 2 seconds of samples per input signal
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested due to lack of time, but is not traditionally experimental.
 
 ### Constraint 12 - Speaker shall be within 0.5 m from the window being measured
 
@@ -192,12 +112,21 @@ Conclusion
 ### Constraint 13 - Shall be easy to remove and setup in a different room
 
 Experimental Design
-* Both the speakers and the mounting subsystem were attached the wall using velcro command strips. Which allow the components to be pulled off of the wall and reattached multiple times
+* Both the speakers and the mounting subsystem were attached the wall using velcro command strips. Which allow the components to be pulled off of the wall and reattached multiple times\
+
+Results
+
+| Trial | Damage (Qualitative)|
+|-------|---------------------|
+| 1| None|
+| 2| None|
+| 3| None|
+| 4| None|
+
+No damage was found.
   
 Conclusion
 * While the experimental setup used was not the one that was originally envisioned, it still allowed for easy removal and installation in multiple rooms. This constraint was satisfied.
-
-
 
 ### Constraint 14 - Mounting shall have a space for input, error, output, processing, and power subsystems
 
