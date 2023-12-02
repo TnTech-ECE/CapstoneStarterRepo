@@ -72,8 +72,7 @@ The sound that we are trying to cancel will be coming in through the classroom w
 
 ## Buildable schematic 
 
-<img width="1287" alt="Screen Shot 2023-09-10 at 1 13 08 PM" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/9382a2a9-fe0b-4a97-b8be-2d37acaadc13">
-
+<img width="1064" alt="Output_Subsystem" src="https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/3683130f-195b-4fce-b46d-e7fb2f44c36a">
 
 ### **Figure 3: Audio Amplifier AA-AB32231 connected to speaker with appropriate specifications**
 
