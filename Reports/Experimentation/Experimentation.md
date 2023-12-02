@@ -282,12 +282,12 @@ T-Test = 1
 
 Did not achieve 12 V to wanted confidence level.
 
-## Improvements and Future Work
+Improvements and Future Work
 
 * Redesign with better filtering, and the 3.3V regulator of Arduino in mind.
 * Add safety features.
 
-## Conclusion
+Conclusion
 
 Constraint was not met
 
