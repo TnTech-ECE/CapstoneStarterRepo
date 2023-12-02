@@ -336,7 +336,7 @@ The graphs in "results" show instantaneous power vs time. They only encompass in
 
 Average Noise Power Reduction = -2.4426 dB
 
-![Trial 1: Noise](Reports/Experimentation/Images/Trial1_InstantaneousPower_vs_Time.png)
+![Trial 1: Noise](/Reports/Experimentation/Images/Trial1_InstantaneousPower_vs_Time.png)
 
 ![Trial 2: Audio](/trial2image)
 
