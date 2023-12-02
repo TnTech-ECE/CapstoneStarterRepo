@@ -320,22 +320,51 @@ Interpretation of Results
 
 ### Constraint 24 - Attenuate targeted noises by at least 20 dB
 
-Experimental Design
-The objective of this experiment is to prove that the system is capable of suppressing the noises created from outside the classroom.
-This was tested by 
+#### Experimental Design
 
+![Experimental Setup*](/brokenLink)
+
+1. Setup a simulation of a classroom with outside noise coming in towards the input microphone and
+through to the speakers which point to the error microphone
+2. Record ten-second audio clips using a microphone at the error location with ambient noise three times
+3. Record ten-second audio clips using a microphone at the error location with generated noise without
+active noise cancellation three times
+4. Record ten-second audio clips using a microphone at the error location with generated noise with
+active noise cancellation three times
+5. Save all results, process data with MATLAB
+
+The graphs in "results" show instantaneous power vs time. They only encompass interesting points in that trial, for better visualization.
   
-Results
-* bye
+#### Results
+| Trial | Noise Power Reduction |
+|-------|-------------|
+| 1     | -1.4852 dB  |
+| 2     | -2.1379 dB  |
+| 3     | -3.9413 dB  |
+
+Average Noise Power Reduction = -2.4426 dB
+
+![Trial 1: Noise](/trial1image)
+
+![Trial 2: Audio](/trial2image)
+
+![Trial 3: Impulse](/trial3image)
   
-Interpretation of Results
-* sigh
+#### Interpretation of Results
+
+The system was not tested with strong rigor, and was an idealized setup. However, the system was still able to show some reduction. In each trial, a reduction was made with an average reduction of 2.4426 dB (signal power). This is still not to spec.
+
+\* The picture above is not the exact setup as when the results were collected, but very similar. Differences include using benchtop power supplies and different microphones.
 
 ## Improvements and Future Work
 
+* Optimize the Filtered-X LMS algorithm and include higher order FIR Filters
+* Use Approximated Plant Responses
+* Enable the use of the machine learning algorithm by fixing communication.
 
 ## Conclusion
 
+The system was not able to meet the goal of -20 dB reduction. It is considered not met. However, some audio reduction was shown, and the team believes further research and better implementation could create a system that eventually achieves success.
 
 | **ID** | **Constraint description**                                                                          | **Constraint Met?** |
 |--------|-----------------------------------------------------------------------------------------------------|---------------------|
@@ -362,6 +391,6 @@ Interpretation of Results
 | 21     | Power shall supply a minimum of 29 W                                                                |                     |
 | 22     | Power shall operate on a maximum input ripple voltage of 400 mV                                     |                     |
 | 23     | Shall step down power supply to 5, 10, and 12 VDC                                                   |                     |
-| 24     | Attenuate targeted noises by at least 20 dB                                                         |
+| 24     | Attenuate targeted noises by at least 20 dB                                                         |         No            |
 
 
