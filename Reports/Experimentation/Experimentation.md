@@ -214,7 +214,7 @@ Interpretation of Results
 ### Constraint 15 - The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz
 
 Experimental Design
-*To test the frequency response of the speaker, a microphone was used to measure the outputted sound from the speaker as different frequencies were inputted from a waveform generator. These frequencies were stepped up from 1 Hz all the way to 20 kHz to obtain an accurate graph and data for the speakers frequency response.
+* To test the frequency response of the speaker, a microphone was used to measure the outputted sound from the speaker as different frequencies were inputted from a waveform generator. These frequencies were stepped up from 1 Hz all the way to 20 kHz to obtain an accurate graph and data for the speakers frequency response.
   
 Results
 ![Frequency_Response](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/2b59f3d0-11ce-473b-958a-6827894d9689)
