@@ -207,11 +207,33 @@ This constraint was not tested.
 Experimental Design
 The objective of this experiment was to prove that the system can operate with a maximum input ripple voltage of 400mV
 
-This was tested by
+This was tested by taking an oscilloscope and measuring the supply voltages on the protoboard and measuring the ripple voltage
+
 
   
 Results
-* bye
+
+|Sample | 5 Volt Rail Ripple (mVpp)| 10 Volt Rail Ripple (mVpp) | 12 Volt Rail Average Ripple (mVpp)|
+|----|----|----|----|
+| 1|212| 164 | 111|
+| 2|208| 232| 85.4|
+| 3|212| 162 | 91|
+| 4|204| 234 | 186.4|
+| 5|216| 170 | 120|
+| 6|208| 226 | 90|
+| 7|212| 242 | 116|
+| 8|220| 172 | 82|
+| 9|216| 232 | 110|
+|10|204| 238 | 114|
+|11|200| 224 | 116|
+|12|212| 166 | 86.5|
+|13|216| 236 | 92|
+|14|212| 234 | 92|
+|15|212| 158 | 90|
+|16|208| 242 | 88|
+|Average|210.75|208.25|104.39375| 
+
+
   
 Interpretation of Results
 * sigh
