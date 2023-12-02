@@ -233,6 +233,42 @@ Results
 |16|208| 242 | 88|
 |Average|210.75|208.25|104.39375| 
 
+For 5 Volt rail:
+
+Null Hypothesis => $\mu$ = 400 mV
+
+Alt. Hypothesis => $\mu < 400 < \mu$ 
+
+T-score = 150.0923876
+
+T-Test = 1.50784*10^-6 
+
+Ripple voltage was meant confidence level on 5 V rail.
+
+For 10 Volt rail:
+
+Null Hypothesis => $\mu$ = 10 V
+
+Alt. Hypothesis => $\mu < 10 < \mu$ 
+
+T-score = -19.62311562
+
+T-Test = 1 
+
+Did not achieve 10 V to wanted confidence level.
+
+For 12 Volt rail:
+
+Null Hypothesis => $\mu$ = 12 V
+
+Alt. Hypothesis => $\mu < 12 < \mu$ 
+
+T-score = -121.8105832
+
+T-Test = 1 
+
+Did not achieve 12 V to wanted confidence level.
+
 
   
 Interpretation of Results
