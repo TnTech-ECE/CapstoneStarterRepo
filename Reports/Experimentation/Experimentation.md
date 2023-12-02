@@ -183,25 +183,20 @@ Interpretation of Results
 ### Constraint 12 - Speaker shall be within 0.5 m from the window being measured
 
 Experimental Design
-* hi
+* As shown in our experimental setup, the speakers were attached to a wooden slab which was then attached to the door through Velcro command strips.
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* Due to the nature of the experimental setup, the speakers did not protrude more than 0.5 meters away from the door being tested. Meaning that this constraint was satisfied.
 
 
 ### Constraint 13 - Shall be easy to remove and setup in a different room
 
 Experimental Design
-* hi
+* Both the speakers and the mounting subsystem were attached the wall using velcro command strips. Which allow the components to be pulled off of the wall and reattached multiple times
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* While the experimental setup used was not the one that was originally envisioned, it still allowed for easy removal and installation in multiple rooms. This constraint was satisfied.
+
 
 
 ### Constraint 14 - Mounting shall have a space for input, error, output, processing, and power subsystems
@@ -231,49 +226,42 @@ Interpretation of Results
 ### Constraint 16 - Audio amplifier shall deliver at least 10 W of continuous power at its output
 
 Experimental Design
-* hi
+* The power system was successfully able to power each of the components together, and each rail had the correct amount of voltage that was needed. Due to time constraints and difficulties though, no additional testing was done.
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* While not explicitly tested, the audio amplifier was successfully able to power the speakers and output an inputted signal. So, this constraint is considered satisfied.
+
 
 
 ### Constraint 17 - Speaker shall capable of outputting 90 dB and 90 dB SPL across the window
 
 Experimental Design
-* hi
+* The speakers were able to successfully output when powered and a full frequency response was done, however, we were unable to test the SPL due to time constraints.
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* While it is believed that the speaker was outputting above 90 SPL, no explicit testing was done , therefore this constraint was not fulfilled.
+
 
 
 ### Constraint 18 - Speakers shall have an input power rating maximum that matches the amplifier's maximum power output
 
 Experimental Design
-* hi
+* The speaker and the amplifier were chosen according to their rated values for power, impedance, and output capabilities. The amplifier is rated to supply 16 W of power at its output, while the speaker needs 10 W of power at its input.
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* The power that the amplifier is rated to supply is sufficient in what the speaker is rated to intake. This constraint is satisfied.
+
+
 
 
 ### Constraint 19 - Speakers shall be mounted to the wall without impeding movement or damaging the classroom
 
 Experimental Design
-* hi
+* The speakers were screwed into a wooden slab, which was then attached to the door through command strips.  After removal of the experimental setup, there showed no signs of damage to the door or the wall. Nor did the speakers block the movement of those within the room.
   
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Conclusion
+* The mounting of the speakers neither damaged the wall nor impede movement. This constraint was satisfied.
+
 
 
 ### Constraint 20 - Power shall convert wall outlet AC to DC
