@@ -296,7 +296,7 @@ Average Noise Power Reduction = -2.4426 dB
 
 ![Trial 2: Audio](/Reports/Experimentation/Images/trial2.png)
 
-**Trial 2++
+**Trial 2**
 
 ![Trial 3: Impulse](/Reports/Experimentation/Images/trial3.png)
 
