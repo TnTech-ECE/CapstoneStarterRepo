@@ -306,30 +306,28 @@ Interpretation of Results
 ### Constraint 23 - Shall step down power supply to 5, 10, and 12 VDC
 
 Experimental Design
-The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
+*The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
 
-This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
+*This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
 
   
 Results
-* bye
+* The results proved that the system provided the wanted power needed to run the other systems.
   
-Interpretation of Results
-* sigh
+
 
 
 ### Constraint 24 - Attenuate targeted noises by at least 20 dB
 
 Experimental Design
-The objective of this experiment is to prove that the system is capable of suppressing the noises created from outside the classroom.
-This was tested by 
+*The objective of this experiment is to prove that the system is capable of suppressing the noises created from outside the classroom.
+*This is tested by comparing the sound with and without noise cancellation to see if there is a minimum of 20dB difference in sound 
 
   
 Results
-* bye
+* The results showed that there was a minimum of 20dB in sound difference.
   
-Interpretation of Results
-* sigh
+
 
 ## Improvements and Future Work
 
