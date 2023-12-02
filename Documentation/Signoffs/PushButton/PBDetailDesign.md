@@ -77,9 +77,29 @@ H-Bridge circuit that is within the chip of the L298N chip
 
 ## Analysis 
 
-**Shaft description:** 
+**Shaft\Arm description:** 
 
-This shaft and arm will be printed using PLA material that way it gives us flexibility if we need to change diameter size or shape. The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. 
+This shaft and arm will be printed using PLA material that way it gives us flexibility if we need to change diameter size or shape. The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. The base of the arm is already mounted to the center body of the driven gear because it is 3-d printed to the driven gear. The base of the arm will have PVC tubing with a t-joint elbow with a 90-degree bend that slides over the top of the base that creates the perpendicular shaft to the to the base of the arm.  The shaft that is perpendicular to the base of the arm is what extends out to hit the pushbutton. 
+
+**Connection of Bottom shaft to bearing**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bearing_Shaft.png)
+
+**Shaft\Arm lateral force:**
+
+To calculate the lateral force on the arm the speed of the robot needs to be known. To calculate the acceleration, we can use the graph of the dc motors speed with respect to time to find the acceleration. From the graph it takes the motors approximately 0.3 seconds to get to 60 RPM. Converting 60 RPM to meters/sec gives us 0.1101 meters/second. Acceleration is equal to dv/dt  so Acceleration=((0.1101 m/s-0 m/s))/(0.3 seconds)=0.367 m/s^2 . Assuming the robot is at max weight capacity of 11.34kG (25lbs) then we can calculate the force exertion from the robot which is 4.17N. Then assuming the robot moves at a 45-degree angle towards the right-hand side of the wall we can now calculate the total force exerted by the wall and robot on the arm. The calculation for the force is described below along with the speed of the motor graph that was used to determine the force exerted by the robot.
+
+**Free Body diagram for lateral force on robot**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/FBD.png)
+
+**Speed of the drivetrain motors**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Speed_of_motor.png)
+
+**Lateral Force Calculation**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Lateral_Force_Calc.png)
 
 
 **DC Motor description:** 
