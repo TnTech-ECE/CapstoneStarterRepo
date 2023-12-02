@@ -230,44 +230,45 @@ This was tested by taking an oscilloscope and measuring the supply voltages on t
 |15|212| 158 | 90|
 |16|208| 242 | 88|
 |Average|210.75|208.25|104.39375| 
-  
-#### Interpretation of Results
 
 For 5 Volt rail:
 
-Null Hypothesis => $\mu$ < 400 mV pp$
+Null Hypothesis => $\mu$ = 400 mV
 
-Alt. Hypothesis => $400 mV pp < \mu$ 
+Alt. Hypothesis => $\mu < 400 mV < \mu$ 
 
 T-score = 150.0923876
 
-T-Test = 1.50784E-26
+T-Test = 1.50784*10^-6 
 
-Did achieve 5 V to wanted confidence level.
+Ripple voltage met confidence level on 5 V rail.
 
 For 10 Volt rail:
 
-Null Hypothesis => $\mu$ < 400 mV pp$
+Null Hypothesis => $\mu$ = 400 mV
 
-Alt. Hypothesis => $400 mV pp < \mu$ 
+Alt. Hypothesis => $\mu < 400 mV < \mu$ 
 
 T-score = 22.78224801
 
-T-Test = 1.52012E-13
+T-Test = 1.52012*10^-13 
 
-Did achieve 10 V to wanted confidence level.
+Ripple voltage met confidence level on 10 V rail.
 
 For 12 Volt rail:
 
-Null Hypothesis => $\mu$ < 400 mV pp$
+Null Hypothesis => $\mu$ = 400 mV
 
-Alt. Hypothesis => $400 mV pp < \mu$ 
+Alt. Hypothesis => $\mu < 400 mV < \mu$ 
 
-T-score = 150.0923876
+T-score = 47.88114764
 
-T-Test = 1.50784E-26
+T-Test = 1.25059*10^-18 
 
-Did achieve 12 V to wanted confidence level.
+Ripple voltage met confidence level on 12 V rail.
+
+#### Interpretation of Results
+For the 5 V rail, 10 V rail and 12 V rail all met the required ripple voltage constraint of less than 400 mV.
 
 #### Conclusion
 
