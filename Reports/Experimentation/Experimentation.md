@@ -62,14 +62,7 @@ Since constraint 2 was not met, this was not able to be tested.
 
 ### Constraint 4 - Bluetooth must reach anywhere in the room
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
+Insert graph of yes
 
 
 ### Constraint 5 - Microphone shall react to inputs from 20 Hz to 20 kHz
@@ -102,12 +95,7 @@ This constraint was not tested due to lack of time, but is not traditionally exp
 
 ### Constraint 12 - Speaker shall be within 0.5 m from the window being measured
 
-Experimental Design
-* As shown in our experimental setup, the speakers were attached to a wooden slab which was then attached to the door through Velcro command strips.
-  
-Conclusion
-* Due to the nature of the experimental setup, the speakers did not protrude more than 0.5 meters away from the door being tested. Meaning that this constraint was satisfied.
-
+This constraint is not traditionally experimental, but was met.
 
 ### Constraint 13 - Shall be easy to remove and setup in a different room
 
@@ -130,15 +118,7 @@ Conclusion
 
 ### Constraint 14 - Mounting shall have a space for input, error, output, processing, and power subsystems
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint is not traditionally experimental, but was met.
 
 ### Constraint 15 - The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz
 
@@ -156,13 +136,7 @@ Interpretation of Results
 
 ### Constraint 16 - Audio amplifier shall deliver at least 10 W of continuous power at its output
 
-Experimental Design
-* The power system was successfully able to power each of the components together, and each rail had the correct amount of voltage that was needed. Due to time constraints and difficulties though, no additional testing was done.
-  
-Conclusion
-* While not explicitly tested, the audio amplifier was successfully able to power the speakers and output an inputted signal. So, this constraint is considered satisfied.
-
-
+This constraint was not tested due to lack of time.
 
 ### Constraint 17 - Speaker shall capable of outputting 90 dB and 90 dB SPL across the window
 
@@ -176,11 +150,7 @@ Conclusion
 
 ### Constraint 18 - Speakers shall have an input power rating maximum that matches the amplifier's maximum power output
 
-Experimental Design
-* The speaker and the amplifier were chosen according to their rated values for power, impedance, and output capabilities. The amplifier is rated to supply 16 W of power at its output, while the speaker needs 10 W of power at its input.
-  
-Conclusion
-* The power that the amplifier is rated to supply is sufficient in what the speaker is rated to intake. This constraint is satisfied.
+This constraint was not tested due to lack of time.
 
 
 
@@ -197,27 +167,11 @@ Conclusion
 
 ### Constraint 20 - Power shall convert wall outlet AC to DC
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint is not traditionally experimental and is categorical in nature. This constraint was fufilled.
 
 ### Constraint 21 - Power shall supply a minimum of 29 W
 
-Experimental Design
-* hi
-  
-Results
-* bye
-  
-Interpretation of Results
-* sigh
-
+This constraint was not tested.
 
 ### Constraint 22 - Power shall operate on a maximum input ripple voltage of 400 mV 
 
@@ -375,7 +329,7 @@ The system was not able to meet the goal of -20 dB reduction. It is considered n
 | 13     | Shall be easy to remove and setup in a different room                                               |      yes               |
 | 14     | Mounting shall have a space for input, error, output, processing, and power subsystems              |      no               |
 | 15     | The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz           |      yes               |
-| 16     | Audio amplifier shall deliver at least 10 W of continuous power at its output                       |      yes               |
+| 16     | Audio amplifier shall deliver at least 10 W of continuous power at its output                       |      N/A              |
 | 17     | Speaker shall capable of outputting 90 dB and 90 dB SPL across the window                           |         N/A            |
 | 18     | Speakers shall have an input power rating maximum that matches the amplifier's maximum power output |   yes                  |
 | 19     | Speakers shall be mounted to the wall without impeding movement or damaging the classroom           |       yes              |
