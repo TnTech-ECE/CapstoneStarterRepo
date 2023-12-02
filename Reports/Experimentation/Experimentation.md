@@ -310,14 +310,73 @@ Interpretation of Results
 Experimental Design
 *The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
 
-*This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
+*This was tested by taking a oscilloscope on each output of the proto-board and taking samples of the DC voltage.
 
-  
 Results
-* The results proved that the system provided the wanted power needed to run the other systems.
-  
 
+|Sample | 5 Volt Rail Average Voltage | 10 Volt Rail Average Voltage | 12 Volt Rail Average Voltage |
+|----|----|----|----|
+| 1|7.18| 10.2 | 12.5|
+| 2|7.20| 10.3 | 12.6|
+| 3|7.19| 10.2 | 12.6|
+| 4|7.19| 10.2 | 12.6|
+| 5|7.20| 10.3 | 12.6|
+| 6|7.19| 10.3 | 12.6|
+| 7|7.19| 10.2 | 12.6|
+| 8|7.20| 10.2 | 12.6|
+| 9|7.19| 10.3 | 12.5|
+|10|7.18| 10.2 | 12.4|
+|11|7.19| 10.3 | 12.4|
+|12|7.20| 10.2 | 12.4|
+|13|7.19| 10.2 | 12.4|
+|14|7.20| 10.2 | 12.5|
+|15|7.21| 10.3 | 12.5|
+|16|7.19| 10.2 | 12.6|
+|Average|7.193|10.2375|12.535| 
+For 5 Volt rail:
 
+Null Hypothesis => $\mu$ = 5 V
+
+Alt. Hypothesis => $\mu < 5 < \mu$ 
+
+T-score = -1142.233481
+
+T-Test = 1 
+
+Did not achieve 5 V to wanted confidence level.
+
+For 10 Volt rail:
+
+Null Hypothesis => $\mu$ = 10 V
+
+Alt. Hypothesis => $\mu < 10 < \mu$ 
+
+T-score = -19.62311562
+
+T-Test = 1 
+
+Did not achieve 10 V to wanted confidence level.
+
+For 12 Volt rail:
+
+Null Hypothesis => $\mu$ = 12 V
+
+Alt. Hypothesis => $\mu < 12 < \mu$ 
+
+T-score = -121.8105832
+
+T-Test = 1 
+
+Did not achieve 12 V to wanted confidence level.
+
+## Improvements and Future Work
+
+* Redesign with better filtering, and the 3.3V regulator of Arduino in mind.
+* Add safety features.
+
+## Conclusion
+
+Constraint was not met
 
 ### Constraint 24 - Attenuate targeted noises by at least 20 dB
 
@@ -393,7 +452,7 @@ The system was not able to meet the goal of -20 dB reduction. It is considered n
 | 20     | Power shall convert wall outlet AC to DC                                                            |                     |
 | 21     | Power shall supply a minimum of 29 W                                                                |                     |
 | 22     | Power shall operate on a maximum input ripple voltage of 400 mV                                     |                     |
-| 23     | Shall step down power supply to 5, 10, and 12 VDC                                                   |                     |
-| 24     | Attenuate targeted noises by at least 20 dB                                                         |         No            |
+| 23     | Shall step down power supply to 5, 10, and 12 VDC                                                   |      no               |
+| 24     | Attenuate targeted noises by at least 20 dB                                                         |         no            |
 
 
