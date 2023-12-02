@@ -82,7 +82,7 @@ The [Project Proposal](/Reports/Project%20Proposal/Project_ProposalV2.pdf) repor
 
 The [Conceptual Design and Planning](/Reports/Conceptual%20Design/Conceptual_DesignV2.pdf) report provides all specifications and constraints the project must follow. This includes standards and regulations that must be followed.
 
-The [Experimentation](/Reports/Experimentation) report shows [finish later]
+The [Experimentation](/Reports/Experimentation) report shows the experimentation and results for each constraint. It gives a solid overview of what the system currently does and how it has evolved.
 
 The [Poster](/Reports/Poster) is an executive summary of our outcomes in a visually appealing format.
 
