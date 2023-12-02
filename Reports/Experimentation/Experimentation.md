@@ -62,8 +62,37 @@ Since constraint 2 was not met, this was not able to be tested.
 
 ### Constraint 4 - Bluetooth must reach anywhere in the room
 
-Insert graph of yes
+Experimental Design
 
+Room 314 was divided into 9 sections. The Arduino Uno R4 Wifi broadcasted bluetooth in one corner, and the Arduino Nano 33 IoT was then sent to each division. A yes was checked in that divisions box if the signal was received.
+
+Results
+
+|  Trial 1|  1    |  2      |  3       |
+|---------|-------|---------|----------|
+|    A    |  yes  |  yes    |  yes     |
+|    B    |  yes  |  yes    |  yes     |
+|    C    |  yes  |  yes    |  yes     |
+
+|  Trial 2|  1    |  2      |  3       |
+|---------|-------|---------|----------|
+|    A    |  yes  |  yes    |  yes     |
+|    B    |  yes  |  yes    |  yes     |
+|    C    |  yes  |  yes    |  yes     |
+
+|  Trial 3|  1    |  2      |  3       |
+|---------|-------|---------|----------|
+|    A    |  yes  |  yes    |  yes     |
+|    B    |  yes  |  yes    |  yes     |
+|    C    |  yes  |  yes    |  yes     |
+
+Interpretation of Results
+
+* Each coordinate represents a place in room 314. As all divisions were yes for each trial, this would mean the bluetooth can reach throughout the room consistently.
+
+Conclusion
+
+This constraint was fulfilled.
 
 ### Constraint 5 - Microphone shall react to inputs from 20 Hz to 20 kHz
 
