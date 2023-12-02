@@ -124,7 +124,7 @@ For the wiring for our purpose, we do not need to use any PWM ports since we jus
 
 **Pinout of the microcontroller and the L298N driver**
 
-![Alt text]([https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Schematic_2_L298N.png](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Schematic_2_L298N.png))
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Schematic_2_L298N.png)
 
 **Beveled gears description:**
 
