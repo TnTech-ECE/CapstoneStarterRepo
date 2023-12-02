@@ -214,13 +214,15 @@ Interpretation of Results
 ### Constraint 15 - The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz
 
 Experimental Design
-* hi
+* To test the frequency response of the speaker, a microphone was used to measure the outputted sound from the speaker as different frequencies were inputted from a waveform generator. These frequencies were stepped up from 1 Hz all the way to 20 kHz to obtain an accurate graph and data for the speakers frequency response.
   
 Results
-* bye
+![Frequency_Response](https://github.com/CarsonDPope/Active-Noise-Control-With-Wall-Transmission-Detection/assets/123997954/2b59f3d0-11ce-473b-958a-6827894d9689)
+#### **Figure: Speaker Average Frequenct Response (dBspl vs Frequency (Hz))**
+* The above graph shows the speakers measured dBspl against the inputted frequency. As indicated by the orange the line, the speaker performs optimally in the range of 1 kHz - 17kHz.
   
 Interpretation of Results
-* sigh
+* As shown in the frequency response graph obtained, the speaker performs optimally in the range of 1 kHz - 17 kHz. This constraint is satisfied.
 
 
 ### Constraint 16 - Audio amplifier shall deliver at least 10 W of continuous power at its output
@@ -306,16 +308,15 @@ Interpretation of Results
 ### Constraint 23 - Shall step down power supply to 5, 10, and 12 VDC
 
 Experimental Design
-The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
+*The objective of this experiment is to take the voltage from the wall wart and using it to provide 5VDC, 10VDC, and 12VDC
 
-This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
+*This was tested by taking a oscilloscope on each output of the proto-board and measured the DC Voltages
 
   
 Results
-* bye
+* The results proved that the system provided the wanted power needed to run the other systems.
   
-Interpretation of Results
-* sigh
+
 
 
 ### Constraint 24 - Attenuate targeted noises by at least 20 dB
@@ -323,6 +324,7 @@ Interpretation of Results
 #### Experimental Design
 
 ![Experimental Setup*](/brokenLink)
+
 
 1. Setup a simulation of a classroom with outside noise coming in towards the input microphone and
 through to the speakers which point to the error microphone
@@ -335,6 +337,7 @@ active noise cancellation three times
 
 The graphs in "results" show instantaneous power vs time. They only encompass interesting points in that trial, for better visualization.
   
+
 #### Results
 | Trial | Noise Power Reduction |
 |-------|-------------|
@@ -379,14 +382,14 @@ The system was not able to meet the goal of -20 dB reduction. It is considered n
 | 9      | Main processor shall process and output within 1.4 ms                                               |                     |
 | 10     | Communicate FIR filter coefficients with Bluetooth connection subsystem                             |                     |
 | 11     | Main processor shall hold at least 2 seconds of samples per input signal                            |                     |
-| 12     | Speaker shall be within 0.5 m from the window being measured                                        |                     |
-| 13     | Shall be easy to remove and setup in a different room                                               |                     |
+| 12     | Speaker shall be within 0.5 m from the window being measured                                        |     yes                |
+| 13     | Shall be easy to remove and setup in a different room                                               |      yes               |
 | 14     | Mounting shall have a space for input, error, output, processing, and power subsystems              |                     |
 | 15     | The audio amplifier and speaker shall support a minimum frequency range of 1 kHz - 17 kHz           |                     |
-| 16     | Audio amplifier shall deliver at least 10 W of continuous power at its output                       |                     |
-| 17     | Speaker shall capable of outputting 90 dB and 90 dB SPL across the window                           |                     |
-| 18     | Speakers shall have an input power rating maximum that matches the amplifier's maximum power output |                     |
-| 19     | Speakers shall be mounted to the wall without impeding movement or damaging the classroom           |                     |
+| 16     | Audio amplifier shall deliver at least 10 W of continuous power at its output                       |      yes               |
+| 17     | Speaker shall capable of outputting 90 dB and 90 dB SPL across the window                           |         no            |
+| 18     | Speakers shall have an input power rating maximum that matches the amplifier's maximum power output |   yes                  |
+| 19     | Speakers shall be mounted to the wall without impeding movement or damaging the classroom           |       yes              |
 | 20     | Power shall convert wall outlet AC to DC                                                            |                     |
 | 21     | Power shall supply a minimum of 29 W                                                                |                     |
 | 22     | Power shall operate on a maximum input ripple voltage of 400 mV                                     |                     |
