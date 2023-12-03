@@ -33,7 +33,7 @@ Figure 3: 3D model of the Team Spirit Subsystem with imperial units
 
 Figure 4: 3D model Team Spirit System
 
-The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two digital inputs from the microcontroller of the main controller system. These digital inputs will control 2 N - channel MOSFET's to power the LEDs and create the blinking pattern. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program and offesetting the blinking of one strip to alternate between purple and gold blinking lights. 
+The competition requires that the team spirit display be dynamic and highly visible to represent the team and university. The total perimeter of the chassis is 28.74 inches. The right and left sides of the chassis are each 8. The led light will line the rear and side outer panels of the robot. The front will not be lined due to interference with the IR sensors of the navigation system. The team spirit system will utilize 2 circuits with one circuit of 32 purple LED lights with series resistances, and another circuit of 32 yellow LED lights with series resistances. The LED's are horozontally placed 0.5 inches apart. The series resistance provided by the series resistors of the LEDs, provides the LED's with overcurrent protection and prevents potential damage to the components. The gold strip will be placed above the purple strip on the siding of the robot. This system requires two 5V digital inputs from the microcontroller to power the LEDs and create the blinking pattern. These pins will send 5V signals to the gate terminal of an n type MOSFET, allowing the strip to be powered by the power system at the drain terminal. The frequency of the blinking will be controlled by a function being looped outputting to each strip 4 times each second, or at a rate of 4 Hz. This can be done by utilizing delays between steps in the looped program and offesetting the blinking of one strip to alternate between purple and gold blinking lights. 
 
 Purple LED:
 
@@ -45,11 +45,11 @@ The yellow LED is a 5mm round model with attached wires and a series resistance 
 
 N - Channel MOSFET:
 
-The N - Channel MOSFET can supply a max of 30 A of drain current. The MOSFET will be used as a relay for the team spirit subsystem due to its fast switching times and potential drain current.
+The N - Channel MOSFET can supply a max of 30 A of drain current. The switching time of the MOSFET is 128 ns. 
 
 Drain:
 
-The drain terminal of the MOSFET is connected to the positive terminal of the LED's.
+The drain terminal of the MOSFET is connected to the positive terminal of the LED's. The drain terminal's maximum output characteristics from the D terminal are 30A, at 60V.
 
 Source:
 
@@ -57,7 +57,7 @@ The source terminal of the MOSFET is connected to the common terminal of the cir
 
 Gate:
 
-The gate terminal of the MOSFET is used to control the drain current of the circuit. The gate is connected to the digital input of the microcontroller.
+The gate terminal of the MOSFET is controlled by a 5V signal from the microcontroller. The gate terminal controls current flow from the drain terminal of the MOSFET.
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmos.PNG)
