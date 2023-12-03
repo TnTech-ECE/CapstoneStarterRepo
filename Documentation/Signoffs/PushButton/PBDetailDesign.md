@@ -110,9 +110,6 @@ The ball bearing will be placed in the bracket where there is a housing for the 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_description.png)
 
-**Fitment of gears and bracket**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_Gear_Motor.png)
 
 **DC Motor description:** 
 
@@ -137,6 +134,12 @@ The DC motor has a gear reduction ratio to increase torque. The reason for this 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Plot_3_Gear_speed_rpm_input_speed_rps.png)
 
+**Mating gear attachment on motor**
+The mating gear will be attached to the motor’s shaft. The shaft of the motor fits tightly within the borehole of the mating gear. To prevent the gear from sliding off the motor’s shaft, there will be a small hole drilled into the shaft of the motor with a cotter pin placed into it.
+
+**Fitment of gears and bracket and motor**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_Gear_Motor.png)
 
 **DC Motor model:** 
 
