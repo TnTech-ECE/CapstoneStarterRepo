@@ -29,27 +29,26 @@ Table 2.  Parameters for the demanded voltages and currents by each subsystem.
 # Buildable schematic
 
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/1fb8825c-9833-4ec3-beaf-dfcdac34c26c)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/d623bbcf-d5a9-4744-912b-34ae3b8c1c46)
 
-*Figure 2. Bcuk converter for Data interpretation, Transmission, and Storage subsystem *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/505ee68b-3550-4c9d-bab7-5cf35953f803)
-
-*Figure 3. Bcuk converter for Charge Controller subsystem. *
-
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/1b4c97fa-e024-4062-88ea-4175f10f0a67)
-
-*Figure 4. Bcuk converter for Sensor subsystem. *
+*Figure 1. Bcuk converter Kicad schematic. *
 
 <img width="513" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/cb205683-d54e-452e-acd2-901814983d52">
 
-*Figure 5. Bcuk converter LTspice circuit. *
+*Figure 2. Bcuk converter LTspice circuit. *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/efc35af5-12ed-431b-a107-a553a85b83a2)
-*Figure 6. 3D model Bcuk converter for both Data interpretation, Transmission, and Storage & Charge Controller subsystem. *
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/87ff96b0-694d-4336-85ee-692bb51951ac)
-*Figure 7. 3D model Bcuk converter for Sensor subsystem. *
+
+<img width="378" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/9fab8b5c-5745-49ac-8c7c-5a9d863afe70">
+
+*Figure 3. 3D model for Bcuk converter. *
+
+
+<img width="359" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/131785470/3afbcac7-7a61-49d0-9408-2ae98eb4a2f8">
+
+*Figure 4. PCB design and measurement. *
+
 
 # Analysis
 The selected buck converter datasheet can be found here [ https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf ]
@@ -279,7 +278,7 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-| Step down buck regulator | LTC3621 | 3 | $7.38 |  $22.14 |
+| Step down buck regulator | LTC3621 | 3 | $8.12 |  $24.36 |
 | Resistor 196kΩ | ERJ-1GNF1963C | 3 | 0.1 | 0.3 |
 | Resistor 24kΩ | ERJ-1GNF2402C | 3 | 0.1 | 0.3 |
 | Resistor 14kΩ | ERJ-1GNF1402C | 3 | 0.1 | 0.3 |
@@ -289,6 +288,7 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 | Capacitor 1uF| C3216X8R1E105M160AA | 3 | $0.42 | $1.26 |
 | Capacitor 10uF| C3216JB1E106M160AB | 3 | $0.56 | $1.68 |
 | Capacitor 22uF| C3216JB1C226M160AB | 3 | $0.64 | $1.92 |
+| Fixed Terminal Blocks 2P SIDE ENTRY| 282834-2 | 4 | $1.41 | $5.64 |
 | Total | ----- | ----- | ----- | $35.31 
 
 
