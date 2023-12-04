@@ -45,7 +45,7 @@ The yellow LED is a 5mm round model with attached wires and a series resistance 
 
 N - Channel MOSFET:
 
-The N - Channel MOSFET can supply a max of 30 A of drain current. The switching time of the MOSFET is 128 ns. 
+The N - Channel MOSFET can supply a max of 30 A of drain current. The switching time of the MOSFET is 128 ns and the maximum required switching speed by design is 250 ms. The G terminal of the MOSFET must recieve a signal of 5V to place the MOSFET in triode mode. The MOSFET must be in triode mode to supply the neccessary current to the circuit. 
 
 Drain:
 
@@ -64,7 +64,7 @@ The gate terminal of the MOSFET is controlled by a 5V signal from the microcontr
 
 Figure 5: The N - Channel MOSFET which acts as a relay for the Team Spirit Subsystem 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmosmodel.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/12-3-23circuitmodel.PNG)
 
 Figure 6: The circuit design of the Team Spirit Subsystem.
 ## Analysis
