@@ -24,7 +24,8 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 
 *Multiplexer Circuit*
 
-![Allows for Choosing Alternative Frequency](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/bbec31d6-68c5-4542-8250-604886730868)
+![Allows for Choosing Alternative Frequency](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/6b2f09ac-75b8-47db-a5c3-178c9a5b2be8)
+
 
 *Function to Change the Frequency in the Loops*
 
@@ -53,6 +54,36 @@ When deciding the Loop Controller to use for the Parking Lot Monitoring System p
 ## Voltage Step Down from 9V to 5V
 
 For the Loop Controller to function properly, the input voltage and current that will received from the Power Controller will be +9V at 50 mA.  From both the user manual and the website of the Dual Loop Controller, the voltage range is from 7 - 40 VDC or 5 - 28 VAC with a current consumption average of 35 mA.  After updating the designs to fit the specific needs of using only DC voltage/current, the connections necessary to convert AC input power to DC power were removed and a LM78M05CDT/NOPB voltage regulator with specific capacitors were placed to lower the voltage rating from 9V to 5V.  By using the voltage regulator to step down to 5V, this allows for both the oscillator and the comparator to have a more stable voltage.  In the schematic image, there is a 10 &mu;H inductor labeled as L1 in the voltage step down.  This inductor was previously used to separate the voltage input of the original microcontroller from the comparator.  However, to avoid future issues that may result from not separating the voltage input of the loop oscillator from the voltage input of the comparator, the 10 &mu;H inductor will continue to be used in this design so the comparator works properly and the controller does not have to be redesigned to include the inductor.
+
+## Loop OSC before Loops
+
+
+
+## Multiplexer Circuit
+
+After the oscillator circuit generates the oscillation, the information is then sent to both Loop A and Loop B.  For each loop, there are two sets of two BC857 transistors with two of the four PNP transistors creating a positive half-wave signal of the oscillator signal and the other two PNP transistors creating a negative half-wave signal of the oscillator signal that is received from the oscillator circuit.  For the four sets of two PNP transistors that will be used to generate the positive and negative half-wave signals of the oscillator signal, the base pin will be connected in parallel to the 1 kΩ resistor that is connected to the output connection points labeled Loop 1A, Loop 1B, Loop 2A, Loop 2B.  For the PNP transistor responsible for creating the positive half-wave signal, the current will flow from pin 2 (emitter pin) to pin 1 (base pin) and out of pin 3 (collector pin).  For the PNP transistor responsible for creating the negative half-wave signal, the current will flow the opposite direction of the previous transistor and enter pin 3 and exit pin 2.  However, pin 1 of the transistor will also be connected to the 1 kΩ resistor.  The schematic image labeled "To connect the outputs labeled "Loop 1A, Loop 1B, etc." to the circuit, the two transistors that create both parts of the sine wave, the transistors will be connected in parallel and two transistors used for Loop 1B will be connected to pin 6 (secondary transformer) of the first 78602/16JC transformer while the two transistors for Loop 1A will be connected to pin 5 (or the center tap of the secondary transformer) will be connected to the same 78602/16JC transformer.  By using the transformer, this allowed for each channel to have an additional multiplexer (this is the reason for having Loop 1A, Loop 1B, etc. instead of having solely Loop A and Loop B) to allow for each channel to have an alternative oscillator frequency provided to them (The image of the schematic drawing for the transformer is shown in "Function to Change the Frequency in the Loops").  Now that the oscillator signal is set correctly in the multiplexer circuit, the comparator circuit will be used to determine when the sine wave is positive and when it is negative in reference to the symbol "GNDA".
+
+## Comparator Circuit
+
+For the comparator circuit, the operational amplifier (op-amp) is used to amplify the signal greatly to allow for easier reading of the information sent from the output of the op-amp to the connection point labeled "OSC Out".  The purpose of the "OSC Out" connection is to count the pulse coming in order to detect the change in frequency of oscillation and determine if a car/pickup truck has passed over the inductive loop.  By comparing the frequency of the OSC Out connection to the frequencies of Loop 1A, Loop 1B, etc. connection points, it is possible to determine to determine the direction of the vehicle and whether it is entering or leaving a specific parking lot.  This information will then be used to either increase the count or decrease the count of the number of available parking spots in a specific parking lot.
+
+The BC846 NPN transistor that is placed after the output of the op-amp was originally used to separate the voltage of the comparator from the voltage of the original microchip.  As mentioned in the section labeled "Voltage Step Down from 9V to 5V", the NPN transistor will be included in the updated design to avoid possible issues that are related to voltage stability.
+
+## Loop Controller Circuit
+
+As seen in the schematic drawing for the entire circuit, some components of the circuit are connected to a point labeled "GNDA".  Then, GNDA is connected to a central point where two capacitors and TL431BSA-7 voltage regulator are connected in parallel to each other and then connected to the ground connection.  As mentioned in previous sections, some of the components require voltage stability for different reasons.  The main purpose is to stabilize the voltage entering the numerous components and also to prevent frequency ripple from affecting the results of the circuit.  If the results are affected negatively due to the voltage not being stabilized, then incorrect results will be produced and ultimately lead to incorrect readings from the loops.  This will lead to inaccurate counts of the number of cars/pickup trucks in a specific parking lot.
+
+## DIP Switches
+
+
+
+## PCB Design of the Loop Controller Circuit
+
+For the PCB Design of the Loop Controller, a variety of terminal blocks with screw connections and THT connection points are used to connect the Loop Controller to the inductive loops, the ESP32 Microcontroller, and the power supply.  
+
+For the 9V power supply and the inductive loop connections, they will be installed and removed often during the building and testing phases of the project.  Due to this, it is simplier and more effective to connect the loops and power supply using fixed terminal blocks with screws as it is simple to install and remove while also allowing for secure connections to the Loop Controller.  If the wires that are used for the loops and power supply were soldered to the PCB board, the wires would slowly deteroirate over time due to the constant heat being applied from the soldering iron.
+
+For the connection points labeled Loop 1A, Loop 1B, Loop 2A, Loop 2B, OSC Out, Nibble0_Out, and Nibble1_Out, they will be connected to the ESP32 Microcontroller through jumper wires with one end connected to the microcontroller with a female connection and the other end soldered to the Loop Controller.  By connecting the ESP32 to the Loop Controller with wires containing a female connection at the ESP32 end, the microcontroller can be safely connected and removed from the Loop Controller without having to solder or desolder the ESP32 numerous times during the building and testing phases of the project.  By soldering wires to the Loop Controller, the wires will already be provided and removes the step of having to connect the microcontroller to the Loop Controller.
 
 
 
