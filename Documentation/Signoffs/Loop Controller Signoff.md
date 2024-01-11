@@ -70,7 +70,7 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 
 # Analysis
 
-When deciding the Loop Controller to use for the Parking Lot Monitoring System project, the team discovered a Dual Loop Controller that could be built by the team instead of being pre-fabricated by a company.  Upon further discovery of important components being out of stock, such as the pre-programmed microchip necessary to control the loop detector, the team made the decision to redesign the controller and remove unneccesary components that would not be beneficial to the redesigned loop controller.  Instead of relying upon the pre-programmed microchip, the loop controller will be connected to the ESP32 MCU of the Data Interpretation Subsystem and the change in frequency from the inductive loops will be monitored by the ESP32 MCU to determine whether a car/pickup truck has passed over the inductive loops.  If this is true, then the count of how many cars/pickup trucks in a specific parking lot will either increase or decrease based on the information received from the inductive loops.
+When deciding the Loop Controller to use for the Parking Lot Monitoring System project, the team discovered a Dual Loop Controller that could be built by the team instead of being pre-fabricated by a company [1].  Upon further discovery of important components being out of stock, such as the pre-programmed microchip necessary to control the loop detector, the team made the decision to redesign the controller to fit the needs of the team and remove unneccesary components that would not be beneficial to the redesigned loop controller.  Instead of relying upon the pre-programmed microchip, the loop controller will be connected to the ESP32 MCU of the Data Interpretation Subsystem and the change in frequency from the inductive loops will be monitored by the ESP32 MCU to determine whether a car/pickup truck has passed over the inductive loops.  If this is true, then the count of how many cars/pickup trucks in a specific parking lot will either increase or decrease based on the information received from the inductive loops.
 
 ## Voltage Step Down from 9V to 5V
 
@@ -150,4 +150,4 @@ For the connection points labeled Loop 1A, Loop 1B, Loop 2A, Loop 2B, OSC Out, N
 *Note: The prices listed above do not include sales tax or shipping costs.*
 
 # References
-1. Loop Controller website
+1. “Dual Channel Inductive Loop Vehicle Detector,” Elektronika.ba, https://www.elektronika.ba/868/dual-channel-inductive-loop-vehicle-detector/ (accessed Jan. 11, 2024). 
