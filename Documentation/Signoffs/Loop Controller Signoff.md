@@ -1,5 +1,5 @@
 # Loop Controller Subsystem
-
+The purpose of the Loop Controller is to be able to monitor the change in frequency from the inductive loops placed in designated entrances/exits and determine whether a car/pickup truck has passed over the loops.  Once a vehicle is detected, the change in frequency received from the loops will be sent to the ESP32 Microcontroller of the Data Interpretation Subsystem where the count of how many cars/pickup trucks are in the specific parking lot will either increase or decrease, depending on the direction of the car/pickup truck.
 
 # Constraints
 | No. | Constraints | Origin |
@@ -46,11 +46,13 @@
 
 
 
-
-
 # Analysis
 
+When deciding the Loop Controller to use for the Parking Lot Monitoring System project, the team discovered a Dual Loop Controller that could be built by the team instead of being pre-fabricated by a company.  Upon further discovery of important components being out of stock, such as the pre-programmed microchip necessary to control the loop detector, the team made the decision to redesign the controller and remove unneccesary components that would not be beneficial to the redesigned loop controller.  Instead of relying upon the pre-programmed microchip, the loop controller will be connected to the ESP32 MCU of the Data Interpretation Subsystem and the change in frequency from the inductive loops will be monitored by the ESP32 MCU to determine whether a car/pickup truck has passed over the inductive loops.  If this is true, then the count of how many cars/pickup trucks in a specific parking lot will either increase or decrease based on the information received from the inductive loops.
 
+## Voltage Step Down from 9V to 5V
+
+For the Loop Controller to function properly, the input voltage and current that will received from the Power Controller will be +9V at 50 mA.  From both the user manual and the website of the Dual Loop Controller, the voltage range is from 7 - 40 VDC or 5 - 28 VAC with a current consumption average of 35 mA.  After updating the designs to fit the specific needs of using only DC voltage/current, the connections necessary to convert AC input power to DC power were removed and a LM78M05CDT/NOPB voltage regulator with specific capacitors were placed to lower the voltage rating from 9V to 5V.  By using the voltage regulator to step down to 5V, this allows for both the oscillator and the comparator to have a more stable voltage.  In the schematic image, there is a 10 &mu;H inductor labeled as L1 in the voltage step down.  This inductor was previously used to separate the voltage input of the original microcontroller from the comparator.  However, to avoid future issues that may result from not separating the voltage input of the loop oscillator from the voltage input of the comparator, the 10 &mu;H inductor will continue to be used in this design so the comparator works properly and the controller does not have to be redesigned to include the inductor.
 
 
 
@@ -94,4 +96,4 @@
 *Note: The prices listed above do not include sales tax or shipping costs.*
 
 # References
-1. 
+1. Loop Controller website
