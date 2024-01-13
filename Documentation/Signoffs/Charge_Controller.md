@@ -41,10 +41,10 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
 | Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
 
-### Solar Panel
+## Solar Panel
 
 
-### Battery
+## Battery
 Two MightyMax ML12-12 batteries will be used. The battery type is Sealed Lead Acid AGM. The sealed lead acid has a depth of discharge of 50%, and the battery's efficiency is 85 %. The two batteries will be connected in parallel to increase the global capacity of the battery, which is rated by amps per hour. The temperature factor is 1.19.
 
 The batteries will be located outdoors; therefore, the discharge capacity according to the temperature should be considered. The discharge capacity for the battery being outdoors for 20 hours at a temperature of -15 C will reduce the battery capacity to 65%.
@@ -65,13 +65,13 @@ Battery\  Capacity (Ah) =\ 15.75\ Ah
 For a battery capacity of 15.75 Ah, increasing the battery capacity is considered a good practice when choosing battery capacity for a solar power system. Also, considering the depth of discharge and other loss power factors, the desired battery capacity will be 24 Ah, which means we will need two batteries with 12 V and 12 Ah in parallel. Since connecting a battery in parallel will increase the battery capacity, the battery capacity will increase to 24 Ah, and the battery voltage will remain the same at 12 V. 
 
 
-### Arduino Nano
+## Arduino Nano
 U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, Q1, and Q2. 
 
 The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
 
 
-### Current Sensors
+## Current Sensors
 U2 can output up to a maximum of 8 V. The Arduino is only able to read up to a maximum of 5 V. A voltage divider will be used on the output of the current sensor to change the output to have a maximum voltage of 5 V. 
 
 Analysis of resistors required to divide 8 V down to 5 V (U2 and U4):
@@ -84,7 +84,7 @@ Vout\ =Vin\times\frac{R1}{R1 + R2}
 ```
 R1 is arbitrarily chosen to be 10 kΩ. R2 is calculated to be 6 kΩ.
 
-### Solar Output Voltage
+## Solar Output Voltage
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
 Analysis of resistors required to divide 18 V down to 4.5 V
@@ -96,39 +96,128 @@ Analysis of resistors required to divide 18 V down to 4.5 V
 ```
 R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ. 
 
-### BuckBoost Converter
-The Buck boost, U3, will have a varying current output that will be measured by U4. The voltage output is set to 12 V to match the battery voltage. 
+## MPPC BuckBoost Converter
+The Maximal Power Point Control Buck-Boost will be activated at 9 V and output a steady 12 V. 
 
-Analysis of components required to operate U3:
-
-Vinmax = 18 V
-
+### Datasheet Provided Values
+```math
+C_{Vin}\ = 100 uF
+```
+```math
+C_{BST1}\ = 0.22 uF
+```
+```math
+C_{BST2}\ = 0.22 uF
+```
+```math
+C_{BST3}\ = 22 uF
+```
+```math
+C_{VCC}\ = 4.7 uF (LowESRCeramicCapacitor)
+```
+```math
+V_{FB} = 1.25 V 
+```
+### Desired Input and Output
+```math
+Vin_{max} = 18 V
+```
+```math
+Vin_{min} = 0 V
+```
+```math
 Vout = 12 V
-
-Vfb = 1.25 V (typical from datasheet)
-
-ILmax = 1.2 A
-
-%Iripple = 40%
-
-Rfb2 is commonly set to 10 kΩ
-
-Rfsw = 73.2 kΩ (datasheet) and is rounded to 75 kΩ
-
-fsw = 400 kHz based on Rfsw (datasheet)
-
+```
+### Output Voltage Programming
+R_FB2 is nominally chosen to be 10 kΩ
 ```math
-Rfb1\ =Rfb2\times\frac{Vout}{Vfb} -Rfb2\ =\ 86 kΩ
+Vout\ = 0.795\times(1+\frac{R_{FB1}}{ R_{FB2}})
+```
+```math
+12\ = 0.795\times(1+\frac{R_{FB1}}{ 10,000})
+```
+```math
+R_{FB1}\ = 12\times\frac{10,000}{0.795} - 10,000
+```
+```math
+R_{FB1}\ = 141 kΩ
+```
+```math
+R_{FB1}\ = 10 kΩ
+```
+### Programming Custon Vin Enable thresholds:
+The input voltage threshold is desired to be at 9 V. TODO: EXPLAIN WHY--------------------------------------------
+```math
+V_{th(rising)} = 1.205 \times\ \frac{R_{EN1} + R_{EN2}}{R_EN2}
+```
+R_en2 is arbitrarily set to 10 kΩ
+```math
+9 = 1.205 \times\ \frac{R_{EN1} + 10,000}{10,000}
+```
+```math
+R_{EN1} = 9 \times\ \frac{10,000}{1.205} - 10,000
+```
+```math
+R_{EN1} = 64,688.8 Ω = 65 kΩ
+```
+```math
+R_{EN2} = 10 kΩ
+```
+### Programming Custom Vin Hysteresis:
+```math
+V_{HYST}\ = ((R_{HY} \times\ R_{EN1}) + (R_{HY}\times\ R_{EN2}) + (R_{EN1}\times\ R_{EN2})) \times\ \frac{0.25 \times\ 10^{-6}}{R_{EN2}} + (0.09 \times\ \frac{R_{EN1} + R_{EN2}}{R_{EN2}})
+```
+R_en1 = 65 kΩ
+
+R_en2 = 10 kΩ
+
+V_hyst is set to be 1 V
+```math
+1\ = ((R_{HY} \times\ 65,000) + (R_{HY}\times\ 10,000) + (65,000\times\ 10,000)) \times\ \frac{0.25 \times\ 10^{-6}}{10,000} + (0.09 \times\ \frac{65,000 + 10,000}{10,000})
+```
+```math
+R_{HY}\ = 164,666.6 Ω = 165 kΩ
+```
+### MPPC Programming
+Vmppc should be 75% of the solar panel's open circuit voltage, 16.8 V. R_mppc2 should be between 50 kΩ and 250 kΩ.
+R_mppc2 is arbitrarily chosen to be 100 kΩ.
+```math
+V_{MPPC}\ = 0.795\times(1+\frac{R_{MPPC1}}{ R_{MPPC2}})
+```
+```math
+16.8\ = 0.795\times(1+\frac{R_{MPPC1}}{ 100,000})
+```
+```math
+R_{MPPC1}\ = 16.8\times\frac{100,000}{0.795} - 100,000
+```
+```math
+R_{MPPC1}\ = 2,014,150 Ω = 2 MΩ
+```
+```math
+R_{MPPC2}\ = 100 kΩ
 ```
 
-```math
-L_Buck\ =\frac{(Vinmax-Vout)Vout}{fsw\ \times\ ILmax\ \times\ \%Iripple\ \times\ Vinmax} =\ 208 μH
-```
+MPPC requires compensation to maintain stability of the input voltage regulation loop.
+C_mppc and R_mppc3 are a zero-pole pair
 
 ```math
-Rc\ = 2π \times \ \frac{(Rcb \times Cout)}{gm \times\ (1 - Dboost)} \times\ \frac{(Rfb2 + Rfb1)}{Rfb2} =\ 13.92 kΩ
+C_{MPPC}\ = \frac{1}{2π \times\ R_{MPPC2} \times\ 360}
 ```
-
+```math
+C_{MPPC}\ = \frac{1}{2π \times\ 100,000 \times\ 360}
+```
+```math
+C_{MPPC}\ = 4.42 nF
+```
+```math
+R_{MPPC3}\ = \frac{C_{Vin}}{2π \times\ C_{MPPC}}
+```
+```math
+R_{MPPC3}\ = \frac{100 \times\ 10^{-6}}{2π \times\ 4.42 \times\ 10^{-9}}
+```
+```math
+R_{MPPC3}\ = 3.6 kΩ
+```
 
 The current information from U3 is used to allow the MCU to regulate the current flowing in and out of the batteries through Q1 or Q2. 
 
