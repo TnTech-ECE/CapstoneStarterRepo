@@ -6,7 +6,7 @@ The purpose of the charge controller subsystem is to maximize the power output o
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 | 1.  | Controller shall maximize the output power from the solar panel. | System Requirements |
-| 2.  | Controller shall output 12 V at ??? mA with a 10% tolerance to the Power Controller. | System Requirements |
+| 2.  | Controller shall output 12 V with a 10% tolerance to the Power Controller. | System Requirements |
 | 3.  | Controller shall prevent the batteries from discharging more than 50% of their maximal capacity. | Extend Life of Batteries    |
 | 4.  | Controller shall prevent the batteries from being charged more than 95% of their maximal capacity.  | Extend Life of Batteries    |
 
@@ -123,7 +123,7 @@ V_{FB} = 1.25 V
 Vin_{max} = 18 V
 ```
 ```math
-Vin_{min} = 0 V
+Vin_{min} = 9 V
 ```
 ```math
 Vout = 12 V
@@ -218,8 +218,90 @@ R_{MPPC3}\ = \frac{100 \times\ 10^{-6}}{2π \times\ 4.42 \times\ 10^{-9}}
 ```math
 R_{MPPC3}\ = 3.6 kΩ
 ```
+### Programming Switching Frequency:
+```math
+F_{sw}= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
+```
+Switching frequency is chosen to be 1 MHz
+```math
+1,000,000= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
+```
+```math
+R_{RT} = 76.6 kΩ = 80 kΩ
+```
 
-The current information from U3 is used to allow the MCU to regulate the current flowing in and out of the batteries through Q1 or Q2. 
+### Inductor Selection:
+
+The LT3120 Datasheet recommends inductors between the values of 1.5 uH and 15 uH for best performance.
+
+A 15 uH inductor is chosen as the minimum voltage input, 9, is close enough to 12 to not cause a detrimental amount of ripple current in boost mode.
+
+Vin_max = 18 V
+
+Vin_min = 9 V
+
+F_sw = 1 MHz
+
+Inductor Ripple Current in Buck Mode
+
+```math
+I_{Δ}= \frac{Vout}{L} \times\ \frac{Vin_{max} - Vout}{Vin_{max}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
+```
+```math
+I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{18 - 12}{18} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
+```
+```math
+I_{Δ}= 205 mA
+```
+
+Inductor Ripple Current in Boost Mode
+
+```math
+I_{Δ}= \frac{Vout}{L} \times\ \frac{Vout - Vin_{min}}{Vin_{min}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
+```
+```math
+I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{12- 9}{9} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
+```
+```math
+I_{Δ}= 248 mA
+```
+### Output Capacitor Selection:
+
+The LT3120 Datasheet recommends a low ESR output capacitor to minimize output voltage ripple
+
+I_load = 7.15 A
+
+Vout = 12 V
+
+Vin_min = 9 V
+
+F_sw = 1 MHz
+
+C_out is chosen to be 150 uF
+
+Output Ripple Voltage in Buck Mode
+
+```math
+V_{Δ}= \frac{I_{LOAD} \times\ 70 \times\ 10^{-9}}{ C_{OUT}}
+```
+```math
+V_{Δ}= \frac{7.15 \times\ 70 \times\ 10^{-9}}{ 150 \times\ 10^{-6}}
+```
+```math
+V_{Δ}= 3.34 mV
+```
+
+Output Ripple Voltage in Boost Mode
+
+```math
+V_{Δ}= \frac{I_{LOAD}}{(F_{SW} \times\ C_{OUT})} \times\ (Vout - Vin_{MIN} + \frac{70 \times\ 10^{-9} \times\ F_{SW} \times\ Vin_{MIN}}{Vout})
+```
+```math
+V_{Δ}= \frac{7.15}{1,000,000 \times\ 150 \times\ 10^{-6}} \times\ (12 - 9 + \frac{70 \times\ 10^{-9} \times\ 1,000,000 \times\ 9}{12})
+```
+```math
+V_{Δ}= 145.5 mV
+```
 
 ### Overcharge and Deep Discharge Protection
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
