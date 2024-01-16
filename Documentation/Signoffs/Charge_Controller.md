@@ -30,17 +30,6 @@ The purpose of the charge controller subsystem is to maximize the power output o
  *Figure 3. Single Battery Dimensions*
 
 # Analysis
-
-| Part | Input Voltage Range (V) | Input Current Range (A) | Output Voltage Range (V) | Output Current Range (A) |
-| ------------ | ------------- | --------- | -------- | ---------- |
-| Arduino Nano | 0 to 5 | --- | 0 to 5 | --- |
-| Solar Panel | --- | --- | 0 to 18 | 0 to 1.4 |
-| Digital Potentiometer | 0.8 to 5 (Digital pins only) | --- | --- | ---|
-| Current Sensor | --- | -5 to 5 | 0 to 8 | 0.003 to 0.010 |
-| Buck Boost Converter | 4.5 to 36 | --- | 12 | 1.2 max |
-| MOSFET | --- | -20 to 20 | --- | -20 to 20 | 
-| Bidirectional current and power monitor | -40 to 40 | 0.005 | 0 to 5 | 0.010 |
-
 ## Solar Panel
 
 
@@ -55,7 +44,7 @@ Battery\ Capacity (Ah) = \ \frac{Daily\ Electrical\ Load\ \times\ Days\ of\ Auto
 ```math
 ```
 ```math
-Battery\ Capacity (Ah)= \ \frac{ 22.5 \times\ 3 \times\ 1.19 }{ 0.85 \times\ 0.5 \times\ 12}
+=>Battery\ Capacity (Ah)= \ \frac{ 22.5 \times\ 3 \times\ 1.19 }{ 0.85 \times\ 0.5 \times\ 12}
 ```
 ```math
 ```
@@ -97,7 +86,7 @@ Analysis of resistors required to divide 18 V down to 4.5 V
 R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ. 
 
 ## MPPC BuckBoost Converter
-The Maximal Power Point Control Buck-Boost will be activated at 9 V and output a steady 12 V. 
+The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a steady 12 V. 
 
 ### Datasheet Provided Values
 ```math
@@ -120,24 +109,23 @@ V_{FB} = 1.25 V
 ```
 ### Desired Input and Output
 ```math
-Vin_{max} = 18 V
+V_{IN(max)} = 18 V
 ```
 ```math
-Vin_{min} = 9 V
+V_{IN(min)} = 5 V
 ```
 ```math
-Vout = 12 V
+V_{OUT} = 12 V
 ```
 ### Output Voltage Programming
 R_FB2 is nominally chosen to be 10 kΩ
 ```math
-Vout\ = 0.795\times(1+\frac{R_{FB1}}{ R_{FB2}})
+V_{OUT} = 0.795\times(1+\frac{R_{FB1}}{ R_{FB2}})
 ```
 ```math
-12\ = 0.795\times(1+\frac{R_{FB1}}{ 10,000})
+=>R_{FB1}\ = 12\times\frac{10,000}{0.795} - 10,000
 ```
 ```math
-R_{FB1}\ = 12\times\frac{10,000}{0.795} - 10,000
 ```
 ```math
 R_{FB1}\ = 141 kΩ
@@ -146,19 +134,18 @@ R_{FB1}\ = 141 kΩ
 R_{FB1}\ = 10 kΩ
 ```
 ### Programming Custon Vin Enable thresholds:
-The input voltage threshold is desired to be at 9 V. TODO: EXPLAIN WHY--------------------------------------------
+The input voltage threshold is desired to be at 5 V. TODO: EXPLAIN WHY--------------------------------------------
 ```math
 V_{th(rising)} = 1.205 \times\ \frac{R_{EN1} + R_{EN2}}{R_EN2}
 ```
 R_en2 is arbitrarily set to 10 kΩ
 ```math
-9 = 1.205 \times\ \frac{R_{EN1} + 10,000}{10,000}
+=>R_{EN1} = 5 \times\ \frac{10,000}{1.205} - 10,000
 ```
 ```math
-R_{EN1} = 9 \times\ \frac{10,000}{1.205} - 10,000
 ```
 ```math
-R_{EN1} = 64,688.8 Ω = 65 kΩ
+R_{EN1} = 31493 Ω = 30 kΩ
 ```
 ```math
 R_{EN2} = 10 kΩ
@@ -167,16 +154,14 @@ R_{EN2} = 10 kΩ
 ```math
 V_{HYST}\ = ((R_{HY} \times\ R_{EN1}) + (R_{HY}\times\ R_{EN2}) + (R_{EN1}\times\ R_{EN2})) \times\ \frac{0.25 \times\ 10^{-6}}{R_{EN2}} + (0.09 \times\ \frac{R_{EN1} + R_{EN2}}{R_{EN2}})
 ```
-R_en1 = 65 kΩ
-
-R_en2 = 10 kΩ
-
 V_hyst is set to be 1 V
 ```math
-1\ = ((R_{HY} \times\ 65,000) + (R_{HY}\times\ 10,000) + (65,000\times\ 10,000)) \times\ \frac{0.25 \times\ 10^{-6}}{10,000} + (0.09 \times\ \frac{65,000 + 10,000}{10,000})
+=>1\ = ((R_{HY} \times\ 30,000) + (R_{HY}\times\ 10,000) + (30,000\times\ 10,000)) \times\ \frac{0.25 \times\ 10^{-6}}{10,000} + (0.09 \times\ \frac{30,000 + 10,000}{10,000})
 ```
 ```math
-R_{HY}\ = 164,666.6 Ω = 165 kΩ
+```
+```math
+R_{HY}\ = 632,500 Ω = 630 kΩ
 ```
 ### MPPC Programming
 Vmppc should be 75% of the solar panel's open circuit voltage, 16.8 V. R_mppc2 should be between 50 kΩ and 250 kΩ.
@@ -185,10 +170,9 @@ R_mppc2 is arbitrarily chosen to be 100 kΩ.
 V_{MPPC}\ = 0.795\times(1+\frac{R_{MPPC1}}{ R_{MPPC2}})
 ```
 ```math
-16.8\ = 0.795\times(1+\frac{R_{MPPC1}}{ 100,000})
+=>R_{MPPC1}\ = 16.8\times\frac{100,000}{0.795} - 100,000
 ```
 ```math
-R_{MPPC1}\ = 16.8\times\frac{100,000}{0.795} - 100,000
 ```
 ```math
 R_{MPPC1}\ = 2,014,150 Ω = 2 MΩ
@@ -204,16 +188,22 @@ C_mppc and R_mppc3 are a zero-pole pair
 C_{MPPC}\ = \frac{1}{2π \times\ R_{MPPC2} \times\ 360}
 ```
 ```math
-C_{MPPC}\ = \frac{1}{2π \times\ 100,000 \times\ 360}
+=>C_{MPPC}\ = \frac{1}{2π \times\ 100,000 \times\ 360}
+```
+```math
 ```
 ```math
 C_{MPPC}\ = 4.42 nF
 ```
 ```math
+```
+```math
 R_{MPPC3}\ = \frac{C_{Vin}}{2π \times\ C_{MPPC}}
 ```
 ```math
-R_{MPPC3}\ = \frac{100 \times\ 10^{-6}}{2π \times\ 4.42 \times\ 10^{-9}}
+=>R_{MPPC3}\ = \frac{100 \times\ 10^{-6}}{2π \times\ 4.42 \times\ 10^{-9}}
+```
+```math
 ```
 ```math
 R_{MPPC3}\ = 3.6 kΩ
@@ -224,7 +214,9 @@ F_{sw}= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
 ```
 Switching frequency is chosen to be 1 MHz
 ```math
-1,000,000= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
+=>1,000,000= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
+```
+```math
 ```
 ```math
 R_{RT} = 76.6 kΩ = 80 kΩ
@@ -234,21 +226,17 @@ R_{RT} = 76.6 kΩ = 80 kΩ
 
 The LT3120 Datasheet recommends inductors between the values of 1.5 uH and 15 uH for best performance.
 
-A 15 uH inductor is chosen as the minimum voltage input, 9, is close enough to 12 to not cause a detrimental amount of ripple current in boost mode.
-
-Vin_max = 18 V
-
-Vin_min = 9 V
-
-F_sw = 1 MHz
+A 15 uH inductor is chosen as the minimum voltage input, 5, is close enough to 12 to not cause a detrimental amount of ripple current in boost mode.
 
 Inductor Ripple Current in Buck Mode
 
 ```math
-I_{Δ}= \frac{Vout}{L} \times\ \frac{Vin_{max} - Vout}{Vin_{max}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
+I_{Δ}= \frac{V_{OUT}}{L} \times\ \frac{V_{IN(max)} - V_{OUT}}{V_{IN(max)}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
 ```
 ```math
-I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{18 - 12}{18} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
+=>I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{18 - 12}{18} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
+```
+```math
 ```
 ```math
 I_{Δ}= 205 mA
@@ -257,25 +245,21 @@ I_{Δ}= 205 mA
 Inductor Ripple Current in Boost Mode
 
 ```math
-I_{Δ}= \frac{Vout}{L} \times\ \frac{Vout - Vin_{min}}{Vin_{min}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
+I_{Δ}= \frac{V_{OUT}}{L} \times\ \frac{V_{OUT} - V_{IN(min)}}{V_{IN(min)}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
 ```
 ```math
-I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{12- 9}{9} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
+=>I_{Δ}= \frac{12}{15\times\ 10^{-6}} \times\ \frac{12- 5}{5} \times\ (\frac{1}{1,000,000} - 70\times\ 10^{-9})
 ```
 ```math
-I_{Δ}= 248 mA
+```
+```math
+I_{Δ}= 1.04 A
 ```
 ### Output Capacitor Selection:
 
 The LT3120 Datasheet recommends a low ESR output capacitor to minimize output voltage ripple
 
 I_load = 7.15 A
-
-Vout = 12 V
-
-Vin_min = 9 V
-
-F_sw = 1 MHz
 
 C_out is chosen to be 150 uF
 
@@ -285,7 +269,9 @@ Output Ripple Voltage in Buck Mode
 V_{Δ}= \frac{I_{LOAD} \times\ 70 \times\ 10^{-9}}{ C_{OUT}}
 ```
 ```math
-V_{Δ}= \frac{7.15 \times\ 70 \times\ 10^{-9}}{ 150 \times\ 10^{-6}}
+=>V_{Δ}= \frac{7.15 \times\ 70 \times\ 10^{-9}}{ 150 \times\ 10^{-6}}
+```
+```math
 ```
 ```math
 V_{Δ}= 3.34 mV
@@ -294,13 +280,155 @@ V_{Δ}= 3.34 mV
 Output Ripple Voltage in Boost Mode
 
 ```math
-V_{Δ}= \frac{I_{LOAD}}{(F_{SW} \times\ C_{OUT})} \times\ (Vout - Vin_{MIN} + \frac{70 \times\ 10^{-9} \times\ F_{SW} \times\ Vin_{MIN}}{Vout})
+V_{Δ}= \frac{I_{LOAD}}{(F_{SW} \times\ C_{OUT})} \times\ (V_{OUT} - V_{IN(min)} + \frac{70 \times\ 10^{-9} \times\ F_{SW} \times\ V_{IN(min)}}{V_{OUT}})
 ```
 ```math
-V_{Δ}= \frac{7.15}{1,000,000 \times\ 150 \times\ 10^{-6}} \times\ (12 - 9 + \frac{70 \times\ 10^{-9} \times\ 1,000,000 \times\ 9}{12})
+=>V_{Δ}= \frac{7.15}{1,000,000 \times\ 150 \times\ 10^{-6}} \times\ (12 - 5 + \frac{70 \times\ 10^{-9} \times\ 1,000,000 \times\ 5}{12})
 ```
 ```math
-V_{Δ}= 145.5 mV
+```
+```math
+V_{Δ}= 29.2 mV
+```
+### Frequency Compensation Network:
+
+R_Load = Vout / I_Load = 1.67 Ohms
+
+Gcs = 13.6 A / V (Datasheet)
+
+Eff = 80% (Datasheet)
+
+Lowest Frequency for f_{RHPZ}
+
+```math
+f_{RHPZ} = \frac{V_{IN(MIN)}^{2} \times\ R_{LOAD}}{ V_{OUT}^{2} \times\ 2π \times\ L_{SW}}
+```
+```math
+=>f_{RHPZ} = \frac{5^{2} \times\ 1.52}{ 12^{2} \times\ 2π \times\ (15 \times\ 10^{-6})}
+```
+```math
+```
+```math
+f_{RHPZ} = 3100 Hz
+```
+The closed loop crossover frequency (fcc) should be sufficiently below the RHPZ frequency to account for variability of the internal components of the IC (Datasheet). A seventh of RHPZ will be chosen to match the example given in the datasheet
+```math
+f_{CC} = \frac{1}{7} \times\ f_{RHPZ}
+```
+```math
+```
+```math
+f_{CC} = 443 Hz
+```
+Phase contribution of RHPZ:
+```math
+Φ_{RHPZ} = -atan(\frac{fcc}{f_{FHPZ}})
+```
+```math
+=>Φ_{RHPZ} = -atan(\frac{100}{700})
+```
+```math
+```
+```math
+Φ_{RHPZ} = -8.13°
+```
+Effective Output Current Gain:
+```math
+G_{CS(OUT)} = G_{CS} \times\ \frac{V_{IN}}{2V_{OUT}} \times\ Eff
+```
+```math
+=>G_{CS(OUT)} = 13.6 \times\ \frac{5}{2(12)} \times\ 0.8
+```
+```math
+```
+```math
+G_{CS(OUT)} = 2.27 \frac{A}{V}
+```
+Output Load Pole
+```math
+f_{VC} = \frac{2}{2π \times\ R_{LOAD} \times\ C_{OUT}}
+```
+```math
+=>f_{VC} = \frac{2}{2π \times\ 1.67 \times\ 150 \times\ 10^{-6}}
+```
+```math
+```
+```math
+f_{VC} = 1270.7 Hz
+```
+Gain and Phase Contributions due to the Output Filter:
+```math
+G_{OUT} = G_{CS(OUT)} \times\ \sqrt{\frac{R_{LOAD}^{2}}{ (\frac{f_{CC}}{f_{VC}})^{2} + 1}}
+```
+```math
+=>G_{OUT} = 2.27 \times\ \sqrt{\frac{1.67^{2}}{ (\frac{442}{1271})^{2} + 1}}
+```
+```math
+```
+```math
+G_{OUT} = 3.78
+```
+```math
+```
+```math
+Φ_{VC} = -atan(\frac{f_{CC}}{f_{VC}})
+```
+```math
+=>Φ_{VC} = -atan(\frac{442}{1271})
+```
+```math
+```
+```math
+Φ_{VC} = -19.18°
+```
+Required Phase Boost from the Compensation Network:
+A Phase margin of 50° is chosen to match the example from the datasheet
+```math
+Φ_{Z} = 50 - Φ_{VC} - Φ_{RHPZ} - 180
+```
+```math
+=>Φ_{Z} = 50 - (-19.18) - (-8.13) - 180
+```
+```math
+```
+```math
+Φ_{Z} = -102.69°
+```
+Compensation Network Gain:
+```math
+G_{COMP} = (\frac{0.795}{V_{OUT}} \times\ G_{OUT} )^{-1}
+```
+```math
+=>G_{COMP} = (\frac{0.795}{12} \times\ 3.78 )^{-1}
+```
+```math
+G_{COMP} = 3.99 ~ 4
+```
+```math
+R_{VC} = \frac{G_{COMP}}{ 120 \times\ 10^{-6}}
+```
+```math
+=>R_{VC} = \frac{4}{ 120 \times\ 10^{-6}}
+```
+```math
+R_{VC} = 33,333Ω ~ 35 kΩ
+```
+```math
+C_{VC} = \frac{tan(Φ_{Z})}{ 2π \times\ f_{CC} \times\ R_{VC}}
+```
+```math
+=>C_{VC} = \frac{tan(-102.69)}{ 2π \times\ 442 \times\ 35,000}
+```
+```math
+C_{VC} = 4.57 \times\ 10^{-8} ~ 0.50 pF
+```
+```math
+```
+```math
+R_{VC} = 35 kΩ
+```
+```math
+C_{VC} = 0.50 pF
 ```
 
 ### Overcharge and Deep Discharge Protection
