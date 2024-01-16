@@ -48,7 +48,8 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 
 *Loop Controller Circuit*
 
-![Loop Controller PCB Design](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/1bc7910a-cc5b-4d6c-9198-c0fc6247e933)
+![Loop Controller PCB Design](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/9b7472bc-a12b-469e-935c-216afa037990)
+
 
 *PCB Design for the Loop Controller*
 
