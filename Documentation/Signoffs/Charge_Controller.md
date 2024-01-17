@@ -85,7 +85,7 @@ Analysis of resistors required to divide 18 V down to 4.5 V
 ```
 R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ. 
 
-## MPPC BuckBoost Converter
+## LT3120 MPPC BuckBoost Converter
 The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a steady 12 V. 
 
 ### Datasheet Provided Values
@@ -145,7 +145,7 @@ R_en2 is arbitrarily set to 10 kΩ
 ```math
 ```
 ```math
-R_{EN1} = 31493 Ω = 30 kΩ
+R_{EN1} = 31,493 Ω = 30 kΩ
 ```
 ```math
 R_{EN2} = 10 kΩ
@@ -182,7 +182,7 @@ R_{MPPC2}\ = 100 kΩ
 ```
 
 MPPC requires compensation to maintain stability of the input voltage regulation loop.
-C_mppc and R_mppc3 are a zero-pole pair
+C_mppc and R_mppc3 are a zero-pole pair.
 
 ```math
 C_{MPPC}\ = \frac{1}{2π \times\ R_{MPPC2} \times\ 360}
@@ -228,7 +228,7 @@ The LT3120 Datasheet recommends inductors between the values of 1.5 uH and 15 uH
 
 A 15 uH inductor is chosen as the minimum voltage input, 5, is close enough to 12 to not cause a detrimental amount of ripple current in boost mode.
 
-Inductor Ripple Current in Buck Mode
+Inductor Ripple Current in Buck Mode:
 
 ```math
 I_{Δ}= \frac{V_{OUT}}{L} \times\ \frac{V_{IN(max)} - V_{OUT}}{V_{IN(max)}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
@@ -242,7 +242,7 @@ I_{Δ}= \frac{V_{OUT}}{L} \times\ \frac{V_{IN(max)} - V_{OUT}}{V_{IN(max)}} \tim
 I_{Δ}= 205 mA
 ```
 
-Inductor Ripple Current in Boost Mode
+Inductor Ripple Current in Boost Mode:
 
 ```math
 I_{Δ}= \frac{V_{OUT}}{L} \times\ \frac{V_{OUT} - V_{IN(min)}}{V_{IN(min)}} \times\ (\frac{1}{F_{sw}} - 70\times\ 10^{-9})
@@ -263,7 +263,7 @@ I_load = 7.15 A
 
 C_out is chosen to be 150 uF
 
-Output Ripple Voltage in Buck Mode
+Output Ripple Voltage in Buck Mode:
 
 ```math
 V_{Δ}= \frac{I_{LOAD} \times\ 70 \times\ 10^{-9}}{ C_{OUT}}
@@ -277,7 +277,7 @@ V_{Δ}= \frac{I_{LOAD} \times\ 70 \times\ 10^{-9}}{ C_{OUT}}
 V_{Δ}= 3.34 mV
 ```
 
-Output Ripple Voltage in Boost Mode
+Output Ripple Voltage in Boost Mode:
 
 ```math
 V_{Δ}= \frac{I_{LOAD}}{(F_{SW} \times\ C_{OUT})} \times\ (V_{OUT} - V_{IN(min)} + \frac{70 \times\ 10^{-9} \times\ F_{SW} \times\ V_{IN(min)}}{V_{OUT}})
@@ -311,7 +311,7 @@ f_{RHPZ} = \frac{V_{IN(MIN)}^{2} \times\ R_{LOAD}}{ V_{OUT}^{2} \times\ 2π \tim
 ```math
 f_{RHPZ} = 3100 Hz
 ```
-The closed loop crossover frequency (fcc) should be sufficiently below the RHPZ frequency to account for variability of the internal components of the IC (Datasheet). A seventh of RHPZ will be chosen to match the example given in the datasheet
+The closed loop crossover frequency (fcc) should be sufficiently below the RHPZ frequency to account for variability of the internal components of the IC (Datasheet). A seventh of RHPZ will be chosen to match the example given in the datasheet.
 ```math
 f_{CC} = \frac{1}{7} \times\ f_{RHPZ}
 ```
@@ -382,7 +382,7 @@ G_{OUT} = 3.78
 Φ_{VC} = -19.18°
 ```
 Required Phase Boost from the Compensation Network:
-A Phase margin of 50° is chosen to match the example from the datasheet
+A Phase margin of 50° is chosen to match the example from the datasheet.
 ```math
 Φ_{Z} = 50 - Φ_{VC} - Φ_{RHPZ} - 180
 ```
@@ -402,7 +402,7 @@ G_{COMP} = (\frac{0.795}{V_{OUT}} \times\ G_{OUT} )^{-1}
 =>G_{COMP} = (\frac{0.795}{12} \times\ 3.78 )^{-1}
 ```
 ```math
-G_{COMP} = 3.99 ~ 4
+G_{COMP} = 3.99 = 4
 ```
 ```math
 R_{VC} = \frac{G_{COMP}}{ 120 \times\ 10^{-6}}
@@ -411,7 +411,7 @@ R_{VC} = \frac{G_{COMP}}{ 120 \times\ 10^{-6}}
 =>R_{VC} = \frac{4}{ 120 \times\ 10^{-6}}
 ```
 ```math
-R_{VC} = 33,333Ω ~ 35 kΩ
+R_{VC} = 33,333Ω = 35 kΩ
 ```
 ```math
 C_{VC} = \frac{tan(Φ_{Z})}{ 2π \times\ f_{CC} \times\ R_{VC}}
@@ -420,7 +420,7 @@ C_{VC} = \frac{tan(Φ_{Z})}{ 2π \times\ f_{CC} \times\ R_{VC}}
 =>C_{VC} = \frac{tan(-102.69)}{ 2π \times\ 442 \times\ 35,000}
 ```
 ```math
-C_{VC} = 4.57 \times\ 10^{-8} ~ 0.50 pF
+C_{VC} = 4.57 \times\ 10^{-8} = 50 pF
 ```
 ```math
 ```
@@ -428,8 +428,88 @@ C_{VC} = 4.57 \times\ 10^{-8} ~ 0.50 pF
 R_{VC} = 35 kΩ
 ```
 ```math
-C_{VC} = 0.50 pF
+C_{VC} = 50 pF
 ```
+## LTC4020 Battery Charger BuckBoost Analysis
+### Battery Charging Voltage Programming:
+```math
+V_{FLOAT} = 2.3125 \times\ (1 + \frac{R_{FB1}}{R_{FB2}})
+```
+The battery's required float charge voltage is in between 13.6 V and 13.8 V. A value of 13.7 V will be chosen to give room for 100 mV of error. 
+
+R_fb2 is arbitrarily chosen to be 20 kΩ.
+
+```math
+=>13.7 = 2.3125 \times\ (1 + \frac{R_{FB1}}{20,000})
+```
+```math
+```
+```math
+R_{FB1} = 98.5 kΩ
+```
+```math
+R_{FB2} = 20 kΩ
+```
+The battery's cycle charge voltage range is from 14.5 V to 14.9 V. Using the above resistances, the absoption voltage is calculated as follows:
+```math
+V_{ABSORPTION} = 2.5 \times\ (1 + \frac{R_{FB1}}{R_{FB2}})
+```
+```math
+=>V_{ABSORPTION} = 2.5 \times\ (1 + \frac{98,500}{20,000})
+```
+```math
+```
+```math
+V_{ABSORPTION} = 14.8125
+```
+V_absorption is less than the maximal 14.9 V. The battery will be charged within its specifications.
+
+### Battery Charging Current Programming:
+The battery's maximum charging current is rated at 3.6 A.
+
+```math
+R_{CS} = \frac{0.05}{I_{CSMAX}}
+```
+```math
+=>R_{CS} = \frac{0.05}{3.6}
+```
+```math
+```
+```math
+R_{CS} = 0.014 Ω
+```
+### Output Voltage Programming:
+```math
+V_{OUT} = 2.75 \times\ (1 + \frac{R_{FBMAX1}}{R_{FBMAX2}})
+```
+The datasheet recommends the two output voltage programming resistors, R_fbmax1 and R_fbmax2, to match those of the battery charge voltage resistors, R_fb1 and R_fb2.
+```math
+=>V_{OUT} = 2.75 \times\ (1 + \frac{98,500}{20,000})
+```
+```math
+```
+```math
+V_{OUT} = 16.29 V
+```
+This output voltage is unused.
+
+### Programming Switching Frequency:
+A switching frequency of 100 kHz is desired.
+```math
+R_{RT} = 100,000 \times] (\frac{F_{0}}{250,000})^{-1.0695}
+```
+```math
+=>R_{RT} = 100,000 \times] (\frac{100,000}{250,000})^{-1.0695}
+```
+```math
+```
+```math
+R_{RT} = 266,438 Ω ~= 270 kΩ
+```
+### Inductor Selection: 
+### Inductor Current Sensing Selection:
+### Input Supply Decoupling:
+### Output Supply Decoupling:
 
 ### Overcharge and Deep Discharge Protection
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
