@@ -76,7 +76,7 @@ R1 is arbitrarily chosen to be 10 kΩ. R2 is calculated to be 6 kΩ.
 ## Solar Output Voltage
 To read the voltage being output from the solar panel, a voltage divider will be used to change the maximum output voltage of the solar panel, 18 V, to a voltage that the arduino can handle, 4.5 V. 
 
-Analysis of resistors required to divide 18 V down to 4.5 V
+Analysis of resistors required to divide 18 V down to 4.5 V:
 ```math
 {\rm V}_{out}\ =Vin\times\frac{R3}{R3 + R4}
 ```
@@ -88,7 +88,7 @@ R3 is arbitrarily chosen to be 10 kΩ. R4 is calculated to be 30 kΩ.
 ## LT3120 MPPC BuckBoost Converter
 The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a steady 12 V. 
 
-### Datasheet Provided Values
+### Datasheet Provided Values:
 ```math
 C_{Vin}\ = 100 uF
 ```
@@ -107,7 +107,7 @@ C_{VCC}\ = 4.7 uF (LowESRCeramicCapacitor)
 ```math
 V_{FB} = 1.25 V 
 ```
-### Desired Input and Output
+### Desired Input and Output:
 ```math
 V_{IN(max)} = 18 V
 ```
@@ -117,8 +117,8 @@ V_{IN(min)} = 5 V
 ```math
 V_{OUT} = 12 V
 ```
-### Output Voltage Programming
-R_FB2 is nominally chosen to be 10 kΩ
+### Output Voltage Programming:
+R_FB2 is nominally chosen to be 10 kΩ.
 ```math
 V_{OUT} = 0.795\times(1+\frac{R_{FB1}}{ R_{FB2}})
 ```
@@ -138,7 +138,7 @@ The input voltage threshold is desired to be at 5 V. TODO: EXPLAIN WHY----------
 ```math
 V_{th(rising)} = 1.205 \times\ \frac{R_{EN1} + R_{EN2}}{R_EN2}
 ```
-R_en2 is arbitrarily set to 10 kΩ
+R_en2 is arbitrarily set to 10 kΩ.
 ```math
 =>R_{EN1} = 5 \times\ \frac{10,000}{1.205} - 10,000
 ```
@@ -163,7 +163,7 @@ V_hyst is set to be 1 V
 ```math
 R_{HY}\ = 632,500 Ω = 630 kΩ
 ```
-### MPPC Programming
+### MPPC Programming:
 Vmppc should be 75% of the solar panel's open circuit voltage, 16.8 V. R_mppc2 should be between 50 kΩ and 250 kΩ.
 R_mppc2 is arbitrarily chosen to be 100 kΩ.
 ```math
@@ -507,11 +507,83 @@ R_{RT} = 100,000 \times] (\frac{F_{0}}{250,000})^{-1.0695}
 R_{RT} = 266,438 Ω ~= 270 kΩ
 ```
 ### Inductor Selection: 
-### Inductor Current Sensing Selection:
-### Input Supply Decoupling:
-### Output Supply Decoupling:
+Inductor selection when the primary operating mode is V_in < V_out:
 
-### Overcharge and Deep Discharge Protection
+Φ_L is the ratio of peak to peak ripple current to max average inductor current =  0.2
+```math
+L_{MIN} = \frac{V_{IN(MIN)} \times\ (1 - \frac{ V_{IN(MIN)}}{V_FBMAX})}{ F_{0} \times\ Φ_{L} \times\ I_{MAX}}
+```
+```math
+=>L_{MIN} = \frac{2.5 \times\ (1 - \frac{ 2.5 }{2.75})}{ 100,000 \times\ 0.2 \times\ 3.6}
+```
+```math
+```
+```math
+L_{MIN} = 3.156 uH = 3 uH
+```
+### Inductor Current Sensing Selection:
+The datasheet recommends that both sense resistors are of the same value.
+
+```math
+R_{SENSE} = \frac{0.05}{I_{MAX}}
+```
+```math
+=>R_{SENSE} = \frac{0.05}{3.6}
+```
+```math
+```
+```math
+R_{SENSE} = 0.014Ω
+```
+```math
+```
+```math
+C_{SENSEB} = \frac{10^{-9}}{R_SENSE}
+```
+```math
+=>C_{SENSEB} = \frac{10^{-9}}{0.014}
+```
+```math
+```
+```math
+C_{SENSEB} = 66.7 nF = 70 nF
+```
+### Input Supply Decoupling:
+A high quality low ESR decoupling capacitor is recommended to minimize voltage glitches on the V_in supply.
+
+Placing a smaller ceramic cap (0.1 u to 10 u) close to the IC in parallel with the input decoupling capacitor is recommended for high frequency noise reduction.
+
+For boost operation: 
+```math
+C_{IN} = \frac{ I_{MAX}}{ V_{IN(MIN)} \times\ F_{0}}
+```
+```math
+=>C_{IN} = \frac{ 3.6}{ 2.5 \times\ 100,000}
+```
+```math
+```
+```math
+C_{IN} =14.4 uF = 14 uF
+```
+### Output Supply Decoupling:
+A high quality low ESR decoupling capacitor is recommended to minimize voltage glitches on the V_out supply.
+
+V_Δout is the acceptable output ripple voltage = 50 mV.
+
+For boost operation:
+```math
+C_{OUT} >= \frac{ I_{MAX} \times\ (V_{FBMAX} - V_{IN(MIN)})}{ V_{FBMAX} \times\ F_{0} \times\ V_{ΔOUT}}
+```
+```math
+=>C_{OUT} >= \frac{ 3.6 \times\ (2.75 - 2.5)}{ 2.75 \times\ 100,000 \times\ 0.05}
+```
+```math
+```
+```math
+C_{OUT} >= 65 uF
+```
+
+## Overcharge and Deep Discharge Protection
 MOSFET Q1 will be used to prevent deep discharge. When the Arduino reads that the battery is entering deep discharge range, the MOSFET will close and no more current will flow out of the batteries. This means that the system will not receive enough current to operate and will shut down due to lack of power. 
 
 MOSFET Q2 will be controlled to allow excess current to flow to ground to prevent overcharge. 
@@ -531,7 +603,7 @@ Vrbjt\ = Vnano - {\rm Vbe}_{(sat)}
 Rbjt\ = \frac{Vrbjt}{{\rm Ib}_{(min)}}
 ```
 
-### Battery Monitor
+## Battery Monitor
 The batteries are connected to a bidirectional current and power monitor, U5. This will be used to keep track of the power being charged and discharged from the batteries. Having this information will allow the MCU to prevent the batteries from overcharging and deep discharging. 
 
 Analysis of components required for U5:
