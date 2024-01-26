@@ -169,7 +169,7 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 
 
 Inductor Selection:
-For starting point is to choose the ripple current to be %40 of I_out(max). To ensure that the ripple current does not exceed the specified maximum.
+The starting point is to choose the ripple current to be %40 of I_out(max). To ensure that the ripple current does not exceed the specified maximum.
 ```math
 L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
 ```
@@ -279,9 +279,9 @@ According to the datasheet for the output capacitor, a 22µF ceramic capacitor w
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Step down buck regulator | LTC3621 | 3 | $8.12 |  $24.36 |
-| Resistor 196kΩ | ERJ-1GNF1963C | 3 | 0.1 | 0.3 |
-| Resistor 24kΩ | ERJ-1GNF2402C | 3 | 0.1 | 0.3 |
-| Resistor 14kΩ | ERJ-1GNF1402C | 3 | 0.1 | 0.3 |
+| Resistor 196kΩ | ERJ-1GNF1963C | 3 | $0.1 | $0.3 |
+| Resistor 24kΩ | ERJ-1GNF2402C | 3 | $0.1 | $0.3 |
+| Resistor 14kΩ | ERJ-1GNF1402C | 3 | $0.1 | $0.3 |
 | Inductor 15uH | XFL3012-153MEC | 2 | $2.08 | $4.16 |
 | Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 |
 | Capacitor 22pF| C3216CH2J221J060AA | 3 | $0.21 | $0.63 |
