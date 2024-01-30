@@ -54,3 +54,9 @@ Start Sensor and Backup Push Button Switch Power Connections
 
 **Constraint Solution 1:**
 In order to prevent the wire from overheating from overcurrent draw from the battery, the power subsystem will use 16-gauge wires. This gauge of wire is capable of hosting up to 10 amps max. This wire was also chosen because the next smallest wire is 18-gauge wire, which can only hose 5 amps and out battery can supply 5.2-amp hours.
+
+**Constraint Solution 2:**
+The IEEE SECON competion requires that all competitors must have an emergency shut off switch for the safey concerns. In order to effectively cut power from all subsystems and not just cut power from the main controller is to implement a stop button or toggle switch that cuts power from the battery to the power distribution board. The power distribution board that will be used is a Evemodel PCB012 Power Distribution Board. This board has pins connected to implement a switch that cuts power from the battery to all ports of the distribution board.
+
+**Constraint Solution 3:** 
+
