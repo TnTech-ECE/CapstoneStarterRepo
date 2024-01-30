@@ -10,7 +10,8 @@ The function of the main controller is to be the brain of the robot. It will rea
 
 | Number | Constraint Description | Origin |
 |--------|------------------------|--------|
-| 1. | ... | ... |
+| 1. | Shall be powered separately from all other subsystems to limit boot time | Strategy Specifications |
+| 2. | Shall be operated at a maximum of 16MHz | Component Specifications |
 
 ## Buildable Schematic
 ![WorkingCircuitDiagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/2fbc8957-5ec6-4fab-8fdf-ab92ff29c93c) <br>
@@ -20,7 +21,11 @@ Figure 2: ATmega 2560 Circuit diagram
 ## Analysis
 
 Constraint 1 Solution:
-<br />
+<br>
+The 
+
+Constraint 2 Solution:
+<br>
 
 ## BOM
 
