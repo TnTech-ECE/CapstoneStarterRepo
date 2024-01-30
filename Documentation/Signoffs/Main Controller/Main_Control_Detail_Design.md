@@ -13,6 +13,9 @@ The function of the main controller is to be the brain of the robot. It will rea
 | 1. | ... | ... |
 
 ## Buildable Schematic
+![WorkingCircuitDiagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/2fbc8957-5ec6-4fab-8fdf-ab92ff29c93c) <br>
+Figure 2: ATmega 2560 Circuit diagram
+
 
 ## Analysis
 
