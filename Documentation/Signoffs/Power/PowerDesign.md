@@ -13,7 +13,7 @@ The power subsystem is the system that will provide power to all the components 
 
 ## Buildable Schematic
 
-Wiring Diagram
+Wiring Chart
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Wiring%20chart.PNG)
 
@@ -42,4 +42,5 @@ Pushbutton Power Connections
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Push_button_power.png)
 
 Box Sweep Power Connections
+
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Box_sweep.png)
