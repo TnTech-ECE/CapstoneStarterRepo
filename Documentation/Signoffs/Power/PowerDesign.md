@@ -44,3 +44,7 @@ Pushbutton Power Connections
 Box Sweep Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Box_sweep.png)
+
+Start Sensor and Backup Push Button Switch Power Connections
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Start.png)
