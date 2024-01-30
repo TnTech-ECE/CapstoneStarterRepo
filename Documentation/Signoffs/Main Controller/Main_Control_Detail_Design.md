@@ -26,6 +26,7 @@ The
 
 Constraint 2 Solution:
 <br>
+The main controller will be powered at 5 Volts from the power supply to keep the clock speed at or below 16 MHz according to the datasheet for the ATMEGA 2560.
 
 ## BOM
 
