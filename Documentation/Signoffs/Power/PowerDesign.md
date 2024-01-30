@@ -12,4 +12,4 @@ The power subsystem is the system that will provide power to all the components 
 
 
 ## Buildable Schematic
-
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Power_dis_main.png)
