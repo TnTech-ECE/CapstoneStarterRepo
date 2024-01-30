@@ -4,7 +4,7 @@
 ![MainCtrl](https://github.com/cebttu/CapstoneTeam1/assets/100803345/b6630717-3855-4901-84fc-6557652b8195) <br>
 Figure 1: Main Control Block Diagram
 
-The function of the main controller is to be the brain of the robot. It will read in data from the sensors to determine where the robot is and what it should be doing. It will communicate with the drive train, the button push, box sweep, and team spirit systems in order for them to perform their functions based on the current states of the controller.
+The function of the main controller is to be the brain of the robot. It will read in data from the sensors to determine where the robot is and what it should be doing at any given time during the robot's progression through the course. It will communicate with the drive train, the button push, the box sweep, and the team spirit systems by sending the appropriate signals at the appropriate times to make the other systems perform their functions properly.
 
 ## Constraints and Standards
 
