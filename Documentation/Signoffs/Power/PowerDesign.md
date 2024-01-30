@@ -19,5 +19,5 @@ Wiring Diagram
 
 Main Power Distribution
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/MAIN.png)
 
