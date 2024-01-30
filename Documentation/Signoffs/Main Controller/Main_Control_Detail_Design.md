@@ -22,7 +22,7 @@ Figure 2: ATmega 2560 Circuit diagram
 
 Constraint 1 Solution:
 <br>
-The 
+The main control shall be powered separately from all other subsystems to limit boot time. This is to streamline the operation of the robot at the start of each round, by having the main controller powered separately the chip does not need to boot up and waste precious time setting up to direct the other subsystems. 
 
 Constraint 2 Solution:
 <br>
