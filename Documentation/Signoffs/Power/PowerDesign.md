@@ -34,7 +34,12 @@ Team Spirit Power Connections
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Team_S.png)
 
 Navigation Power Connections
+
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/NAVG.png)
 
 Pushbutton Power Connections
-![Alt text]()
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Push_button_power.png)
+
+Box Sweep Power Connections
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Box_sweep.png)
