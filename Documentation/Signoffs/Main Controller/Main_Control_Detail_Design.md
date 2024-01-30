@@ -1,7 +1,7 @@
 # Main Control Design
 
 ## Function of the Subsystem
-![MainCtrl](https://github.com/cebttu/CapstoneTeam1/assets/100803345/b6630717-3855-4901-84fc-6557652b8195)
+![MainCtrl](https://github.com/cebttu/CapstoneTeam1/assets/100803345/b6630717-3855-4901-84fc-6557652b8195) <br>
 Figure 1: Main Control Block Diagram
 
 
