@@ -26,7 +26,7 @@ The main control shall be powered separately from all other subsystems to limit 
 
 Constraint 2 Solution:
 <br>
-The main controller will be powered at 5 Volts from the power supply to keep the clock speed at or below 16 MHz according to the datasheet for the ATMEGA 2560.
+The main controller will be powered at 5 Volts from the power supply to keep the clock speed at or below 16 MHz according to the datasheet for the ATMEGA 2560. Although overclocking is possible 16MHz is the default setting for the ATmega 2560 chip and will be plenty fast for the other subsystems to process signals to or from the main controller. 
 
 ## BOM
 
