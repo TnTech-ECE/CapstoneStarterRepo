@@ -48,3 +48,9 @@ Box Sweep Power Connections
 Start Sensor and Backup Push Button Switch Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Start.png)
+
+
+## Analysis 
+
+**Constraint Solution 1:**
+In order to prevent the wire from overheating from too much current draw from the battery, the power subsystem will use 16-gauge wire because this gauge of wire is capable of hosting up to 10 amps max. This wire was also chosen because the next smallest wire is 18-gauge wire, which can only hose 5 amps and out battery can supply 5.2-amp hours.
