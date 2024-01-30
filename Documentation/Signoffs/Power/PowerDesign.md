@@ -33,3 +33,5 @@ Team Spirit Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Team_S.png)
 
+Navigation Power Connections
+![ALt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/NAVG.png)
