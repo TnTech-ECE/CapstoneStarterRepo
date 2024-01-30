@@ -9,3 +9,7 @@ The power subsystem is the system that will provide power to all the components 
 | 2. |  Emergency Switch | The power subsystem shall have an emergency off switch that will cut power to all components of the robot  | Competition Specifications |
 | 3. | Battery | The battery shall supply at least 5 amp per hour to ensure there is enough current supplied for the demand of the load | ASTM F963-17 |
 | 4. | Fuse | The power subsystem shall have fuses in place to protect all the subsystem components from overcurrent    | IEC 60127 |
+
+
+## Buildable Schematic
+
