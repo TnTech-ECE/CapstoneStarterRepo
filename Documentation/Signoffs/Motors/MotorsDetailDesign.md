@@ -1,4 +1,5 @@
 ## Functionality
+The Motor subsystem is the system that is the main drive train to the robot. The drivetrain will consist of two dc motors. The motors are driven off of a L298 Dual H Bridge Motor Speed Controller to allow individual speed and direction control of the motors. 
 
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
@@ -21,3 +22,7 @@ Command window parameters for DC motor model
 ## Analysis
 
 ## BOM
+| Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
+|------|-------------|-------------|--------------|----------|-------|-------------|
+| | | | | | | |
+| | | | | | | |
