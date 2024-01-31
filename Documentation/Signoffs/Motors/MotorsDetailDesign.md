@@ -62,5 +62,6 @@ Second transfer function block parameters
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-------------|--------------|----------|-------|-------------|
-| | | | | | | |
+| Motors |  |  |  |  | | |
+| Motor Shield | | | | | | |
 | | | | | | | |
