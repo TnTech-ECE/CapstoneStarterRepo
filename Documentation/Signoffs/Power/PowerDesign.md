@@ -67,4 +67,5 @@ The main control board that will be used is an Arduino Mega 2560. The max curren
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-------------|--------------|----------|-------|-------------|
-| Batteries | Power Supply | PCB012 Power Distribution Board Self-Adapt Distributor | 	Evemodel | 1 | $16.99 | |
+| Batteries | 7.4V Lipo Battery 2S 50C 5200mAh Lipos Hard Case with | N/A | Zeee | 2 | $30.99 | $30.99 |
+| Batteries | Power Supply | PCB012 Power Distribution Board Self-Adapt Distributor | 	Evemodel | 1 | $16.99 | $16.99 |
