@@ -1,6 +1,12 @@
 ## Functionality
 
-## Constraints
+## Specifications and Restraints
+| Number | Constraint | Constraint description | Origin |
+|--------|----------------------|------------------------|--------|
+| 1. | ISO 10218. | The robot shall stay in compliance with ISO 10218. | Safety and Competition Specification |
+| 2. |   |   |  |
+| 3. |  |  |  |
+| 4. |  |  |  |
 
 ## Buildable Schematic
 
