@@ -69,3 +69,4 @@ The main control board that will be used is an Arduino Mega 2560. The max curren
 |------|-------------|-------------|--------------|----------|-------|-------------|
 | Batteries | 7.4V Lipo Battery 2S 50C 5200mAh Lipos Hard Case with | N/A | Zeee | 2 | $30.99 | $30.99 |
 | Power distribution board | distributes parellel branch wires to other components | N/A | 	Evemodel | 1 | $16.99 | $16.99 |
+| Buck Converter | Steps down voltage from main power | LM2596 | Valefod | 3 | $13.99 | $13.99 |
