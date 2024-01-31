@@ -1,6 +1,6 @@
 
 ## Functionality
-The power subsystem is the system that will provide power to all the components of the other subsystems on the robot. The subsystem will also be responsible for hosting the emergency off switch in case of an error occurring. The power supply for this subsystem will consist of two 7.4 volt, 5200 maH batteries connected in series. The batteries will be connected to a distribution board, and the distriution board allows a parallel branch of wires to be connected to all the components of the robot.
+The power subsystem is the system that will provide power to all the components of the other subsystems on the robot. The subsystem will also be responsible for hosting the emergency off switch in case of an error occurring. The power supply for this subsystem will consist of two 7.4 volt, 5200 maH batteries connected in series. The batteries will be connected to a distribution board, and the distriution board allows a parallel branch for wires to be connected to all the components of the robot.
 
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
