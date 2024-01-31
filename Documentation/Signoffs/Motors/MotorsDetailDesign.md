@@ -19,7 +19,45 @@ Simulink transfer function block model
 Command window parameters for DC motor model
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Command_parameters.png)
+
+First transfer function block parameters 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Transfer_block1.png)
+
+Second transfer function block parameters
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Transfer_block2.png)
+
 ## Analysis
+
+**Constraint Solution 1:**
+
+
+
+
+
+**Constraint Solution 2:**
+
+
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/RPM.png)
+
+**Constraint Solution 3:**
+
+
+
+
+
+**Constraint Solution 4:**
+
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Torque.png)
+
+
+**Constraint Solution 5:**
+
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Current.png)
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
