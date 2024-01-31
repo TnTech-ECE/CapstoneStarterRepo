@@ -71,4 +71,4 @@ The main control board that will be used is an Arduino Mega 2560. The max curren
 | Power distribution board | distributes parellel branch wires to other components | N/A | 	Evemodel | 1 | $16.99 | $16.99 |
 | Buck Converters | Steps down voltage from main power | LM2596 | Valefod | 3 | $13.99 | $13.99 |
 | Wire | 16AWG 100FT Electrical Wire Cable 2 Conductors Red Black | N/A | Askcable | 100 ft. | $15.19 | $15.19 |
-| Emergency swithc | Used to cut power to all systems| N/A | N/A | 1 | Recycled | Recycled |
+| Emergency switch | Used to cut power to all systems| N/A | N/A | 1 | Recycled | Recycled |
