@@ -64,3 +64,7 @@ For organization and easier maintenance, wires from the the distribution board w
 **Constraint Solution 4:**
 The main control board that will be used is an Arduino Mega 2560. The max current the trace of the Arduino PCB can handle is 2 amps. The power supplied from all the subsystems being directly powered from the Arduino board will not exceed over 1 amp. To ensure that the current does not exceed over 2 amps there is a 12 ohm resistor in place to prevent overcurrent load to the arduino. If the voltage from the battery is 14.8V then we can use a 12 ohm resistor in order to keep keep a constant current supplied to the Arduino. Using Ohm's law the approximate constant current supplied to the Arduino would be around 1.233 amps. As a fail safe, the Arduino will have an inline blade fuse rated for 2 amps. 
 
+## BOM
+| Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
+|------|-------------|-------------|--------------|----------|-------|-------------|
+| Batteries | Power Supply | PCB012 Power Distribution Board Self-Adapt Distributor | 	Evemodel | 1 | $16.99 | |
