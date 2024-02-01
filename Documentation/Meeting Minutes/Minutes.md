@@ -1,20 +1,19 @@
-###Minutes Starter File
+### Minutes Starter File
 
-##Attendance
+## Attendance
+   -Meredith Nye
+   -Abe Perkins
+   -Sterling Sloan
+   -Aaron Stewart
+   -JieJun Stowell
+   -Austin Williams
 
--Meredith Nye
--Abe Perkins
--Sterling Sloan
--Aaron Stewart
--JieJun Stowell
--Austin Williams
+## Progress Updates
 
-##Progress Updates
+## Planned Tasks
 
-##Planned Tasks
+## Discussion Notes
 
-##Discussion Notes
+## Upcoming Deadlines
 
-##Upcoming Deadlines
-
-##Other
+## Other
