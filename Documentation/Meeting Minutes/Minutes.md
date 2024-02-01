@@ -1,12 +1,12 @@
 # Minutes Starter File
 
 ## Attendance
-   -Meredith Nye
-   -Abe Perkins
-   -Sterling Sloan
-   -Aaron Stewart
-   -JieJun Stowell
-   -Austin Williams
+   - Meredith Nye
+   - Abe Perkins
+   - Sterling Sloan
+   - Aaron Stewart
+   - JieJun Stowell
+   - Austin Williams
 
 ## Progress Updates
 
