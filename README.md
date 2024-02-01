@@ -29,12 +29,15 @@ Give a brief bio for each team member and their broad contribution to the projec
 
 Meredith Nye
 
--Abe Perkins
--Sterling Sloan
--Aaron Stewart
--JieJun Stowell
--Austin Williams
+Abe Perkins
 
+Sterling Sloan
+
+Aaron Stewart
+
+JieJun Stowell
+
+Austin Williams
 
 ### Faculty Supervisor
 
