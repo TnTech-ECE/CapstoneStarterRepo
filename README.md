@@ -1,7 +1,4 @@
-# {Name of the Project} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
-
+# Drone Tracker
 ## Executive Summary
 
 Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
@@ -28,15 +25,28 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specific).
+
+Meredith Nye
+
+Abe Perkins
+
+Sterling Sloan
+
+Aaron Stewart
+
+JieJun Stowell
+
+Austin Williams
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Dr. Jeffrey Austin
 
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+Dr. Jeffrey Austin
 
 ### Recognitions
 
