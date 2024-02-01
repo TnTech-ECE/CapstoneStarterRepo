@@ -26,12 +26,14 @@ Below the video link show some well-taken, appropriately sized images of the pro
 ### Team
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specific).
--Meredith Nye-
--Abe Perkins-
--Sterling Sloan-
--Aaron Stewart-
--JieJun Stowell-
--Austin Williams-
+
+Meredith Nye
+
+-Abe Perkins
+-Sterling Sloan
+-Aaron Stewart
+-JieJun Stowell
+-Austin Williams
 
 
 ### Faculty Supervisor
