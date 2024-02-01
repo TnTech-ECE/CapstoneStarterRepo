@@ -1,4 +1,4 @@
-### Minutes Starter File
+# Minutes Starter File
 
 ## Attendance
    -Meredith Nye
