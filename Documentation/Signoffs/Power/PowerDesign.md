@@ -74,7 +74,9 @@ Representative Power Supply and Loads
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Representative_Power_circuit.png)
 
+Total Load Results
 
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Total_Load.png)
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
