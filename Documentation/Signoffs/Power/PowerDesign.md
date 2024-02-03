@@ -74,7 +74,7 @@ Representative Power Supply and Loads
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Representative_Power_circuit.png)
 
-Total Load Results
+Total Load Results under Max Conditions
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Total_Load.png)
 
