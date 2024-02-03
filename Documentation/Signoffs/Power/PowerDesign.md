@@ -81,7 +81,7 @@ Total Load Results
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-------------|--------------|----------|-------|-------------|
-| Batteries | 7.4V Lipo Battery 2S 50C 5200mAh Lipos Hard Case with | N/A | Zeee | 2 | $30.99 | $30.99 |
+| Batteries | 7.4V Lipo Battery 2S 50C 5200mAh Lipos  | N/A | Zeee | 2 | $30.99 | $30.99 |
 | Power distribution board | distributes parellel branch wires to other components | N/A | 	Evemodel | 1 | $16.99 | $16.99 |
 | Buck Converters | Steps down voltage from main power | LM2596 | Valefod | 3 | $13.99 | $13.99 |
 | Wire | 16AWG 100FT Electrical Wire Cable 2 Conductors Red Black | N/A | Askcable | 100 ft. | $15.19 | $15.19 |
