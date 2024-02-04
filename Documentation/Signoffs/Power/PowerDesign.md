@@ -38,6 +38,8 @@ Team Spirit Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Team_S.png)
 
+The NMOS MOSFET that is connected to the main power supply allows power isolation from the arduino digital signal pin. 
+
 Navigation Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/NAVG.png)
