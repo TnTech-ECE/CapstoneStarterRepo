@@ -16,7 +16,7 @@ The power subsystem is the system that will provide power to all the components 
 
 Wiring Chart
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Wiring%20chart.PNG)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Wiring_diagram.png)
 
 Main Power Distribution
 
