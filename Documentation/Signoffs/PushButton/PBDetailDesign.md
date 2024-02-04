@@ -221,12 +221,4 @@ To get the drive gear to fit without coming off the dc motor shaft, the borehole
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Specs_DC_motor.png)
 
-**L298N Driver dimensions:**
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/L298N_dimensions.png)
-
-**Dimensions of Bracket**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_diameters.png)
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_LxWxH.png)
