@@ -47,16 +47,6 @@ The results of the LT Spice models will be in the "Analysis" section.
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
 
 
-Digital Logic Circuit for L298N Driver
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Digital%20Logic%20for%20L298N.png)
-
-
-H-Bridge circuit that is within the chip of the L298N chip
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/H_Bridge.png)
-
-
 **Drive gear parameters for 3d modeling and printing using blender** 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_Gear_Param..png
