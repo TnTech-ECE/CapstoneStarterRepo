@@ -68,9 +68,6 @@ To calculate the lateral force on the arm the speed of the robot needs to be kno
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/FBD.png)
 
-**Speed of the drivetrain motors**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Speed_of_motor.png)
 
 **Lateral Force Calculation**
 
