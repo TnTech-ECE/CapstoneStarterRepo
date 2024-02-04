@@ -105,4 +105,5 @@ Total Load Results under Max Conditions
 | Wire | 16AWG 100FT Electrical Wire Cable 2 Conductors Red Black | N/A | Askcable | 100 ft. | $15.19 | $15.19 |
 | Emergency switch | Used to cut power to all systems| N/A | N/A | 1 | Recycled | Recycled |
 |Band Strap| Holds battery pack in place to the chassis | N/A | N/A | 2 | Recycled | Recycled |
-| Fuse | Protects the main control from over current | 
+| Fuse | Protects the main control from over current | N/A | GNAWRISHING | 3 | $9.98 | $9.98 |
+|      |                                             |     |             |   |       | $90.03 |
