@@ -62,7 +62,7 @@ The best location for storing the batteris would be undernath the chassis. If pl
 
 Power bus/buck converters/emergency ON/OFF switch
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Power_board_dc_buck_converters.png)
 
 To make room for the power distribution board, buck converters, and emergency off switch, the power distribution board will be mounted 2 inches higher than the chassis platform. Since our total height is 3.74 inches, raising the power distribution board by 2 inches to 5.74 inches total allows the robot to stay well within 1 cubic foot. Having this extra heighth allows more room for the buck converters and emergency switch to be mounted as well. 
 
