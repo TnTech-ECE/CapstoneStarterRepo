@@ -1,7 +1,6 @@
 ## Functionality
 
-The push button subsystem will be the process of pushing the stop button to stop the time, which will denote the completion of the course. The system will consist of a dc motor, bevel gears, a shaft, a bearing, a L298N motor driver module, and a paint roller that will swing out on the arm perpendicular to the platform of the robot. The set of bevel gears will be driven by a 6 volt DC motor that will rotate the shaft of the paint roller to be fully extended. Once fully extended the paint roller will contour the right hand side of the wall until the end of the course to hit the stop button. After hitting the stop button, the L298N driver module is used to reverse polarity of the DC motor so that the shaft with the paint roller on it may return to its original position. 
-
+The push button subsystem will be the process of pushing the stop button to stop the time, which will denote the completion of the course. The system will consist of a servo motor, beveled gears, a shaft, a bearing block with bearing, a lateral arm, and a paint roller that will swing out on the arm perpendicular to the platform of the robot. The set of bevel gears will be driven by a 6-9 volt servo motor that will rotate the shaft of the paint roller to be fully extended. Once fully extended the paint roller will contour the right hand side of the wall until the end of the course to hit the stop button. 
 ## Specifications and Restraints
 
 
