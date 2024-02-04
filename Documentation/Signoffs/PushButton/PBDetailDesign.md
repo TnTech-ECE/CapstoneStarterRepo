@@ -101,17 +101,6 @@ The essential readings from the LT spice model labeled below as “Readings of L
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/LT_Spice_results.png)
 
-**L298N Driver description:**
-
-The L298N is a directional and speed controller for DC motors. The reason for using this is because it will allow the arm/shaft with the paint roller to swing out and retract back in when desired. It can change directions because the L298N uses an H-Bridge which switches the polarity of the DC motor when specified, and when you switch the polarity of a DC motor it changes rotation. 
-
-**L298N Driver wiring:**
-
-For the wiring for our purpose, we do not need to use any PWM ports since we just want high and low signals to turn the arm/shaft. We can use any of the digital GPIO pins to turn off the motor or control the direction of our motor. One of the digital GPIO pins will connect to “input 1” and the other GPIO digital pin will connect into “input 2” of the L298N. Our external battery connection will need to have the positive terminal connected to the 12+ terminal and the negative terminal of the external battery will need to be connected into the GND pin of our L298N driver.  The positive terminals and the negative terminals of our DC motor will connect its positive terminal into the “Out 1” and the negative terminal will connect into the “Out 2” pin.  The figure below shows the visual connections. 
-
-**Pinout of the microcontroller and the L298N driver**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Schematic_2_L298N.png)
 
 **Beveled gears description:**
 
