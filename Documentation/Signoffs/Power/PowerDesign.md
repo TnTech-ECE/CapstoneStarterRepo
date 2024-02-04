@@ -50,6 +50,18 @@ Start Sensor and Backup Push Button Switch Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Start.png)
 
+Battery Placement on chassis
+
+![ALt text]()
+
+The best location for storing the batteris would be undernath the chassis. If placed on the top platform of the chassis then it would interfere with the start sensor and the pushbutton subsystems. When placed on the bottom of the chassis the ground clearence of the robot will be reduced 0.98 inches as this is the thickness of the batteries. The total ground clearence after placing the batteries is 2.76 inches instead of 3.74 inches before. To hold the batteries to the bottom of the chassis, metal band strap will be used to bolt the batteries in place. 
+
+Power bus/buck converters/emergency ON/OFF switch
+
+![Alt text]()
+
+To make room for the power distribution board, buck converters, and emergency off switch, the power distribution board will be mounted 2 inches higher than the chassis platform. Since our total height is 3.74 inches, raising the power distribution board by 2 inches to 5.74 inches total allows the robot to stay well within 1 cubic foot. Having this extra heighth allows more room for the buck converters and emergency switch to be mounted as well. 
+
 
 ## Analysis 
 
