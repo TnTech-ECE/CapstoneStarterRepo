@@ -18,16 +18,15 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 4. For the original design of the Dual Loop Controller<sup>2</sup>, a pre-programmed PIC16F1939-I/PT microchip was used to control the device.  Due to both the complexity of the microchip and the pre-programmed version being out of stock, the controller will be connected to the ESP32 Microcontroller used for the Data system and be programmed by the team to detect changes in frequency in the inductive loops and determine if the vehicle is entering or exiting the parking lot.  By using the ESP32 Microcontroller, it removes the necessity of having to purchase another microcontroller that is specific to this device only and it utilizes unused pins on the ESP32 Microcontroller that is already purchased for the Data system.  Though it adds more programming to the ESP32, it allows the team to program on a microcontroller in a programming language (Python) <sup>3</sup> that most of the team has prior experience with in previous courses, internships, or as part of hobbies they pursue outside of class.
 
 # Buildable Schematic
-![Step Down from 9V to 5V](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/93b631e5-14f0-4459-82f4-954723526c5d)
+![Step Down from 9V to 3 3V](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/dbc74fa1-fd84-4af8-95ac-ae0d8f2ada5e)
 
-*Voltage Step Down from 9V to 5V*
+*Voltage Step Down from 9V to 3.3V*
 
 ![Loop OSC before Loops](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/1316c1ce-a4ec-4b09-bacc-f14fbafb8b75)
 
 *Loop OSC Circuit*
 
-![Multiplexer](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/a0bcb837-4b9d-4baf-bef7-1b3136bb9f27)
-
+![Multiplexer](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/26f7086b-d504-4652-a150-2f1d87167a0f)
 
 *Multiplexer Circuit*
 
@@ -36,7 +35,7 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 
 *Function to Change the Frequency in the Loops*
 
-![Comparator Circuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/5150e01b-7e1e-4e08-814f-283a762b43a6)
+![Comparator Circuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/81781839-ad74-4430-9f80-b831f0d27fba)
 
 *Comparator Circuit*
 
@@ -44,16 +43,15 @@ The purpose of the Loop Controller is to be able to monitor the change in freque
 
 *DIP Switch for the Specific Software Parameter in the Loop Controller*
 
-![Entire Loop Controller Circuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/4ece5f31-7fd4-4ebf-bd4b-5eb371ed32cf)
+![Entire Loop Controller Circuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/f295a83a-cf35-4d64-9ebb-3bfa02c00dd9)
 
 *Loop Controller Circuit*
 
-![Loop Controller PCB Design](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/9b7472bc-a12b-469e-935c-216afa037990)
-
+![Loop Controller PCB Design](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/f4cb542d-2279-432b-8dd9-5e5048bc2e35)
 
 *PCB Design for the Loop Controller*
 
-![3D Model of PCB](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/581850e6-cb2f-4587-bb69-55a129531240)
+![3D Model of PCB](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/142754780/c3317c77-1055-4eac-b34d-fa4592a72c98)
 
 *3D Model of the Loop Controller PCB*
 
