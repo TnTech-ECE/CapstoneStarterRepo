@@ -171,12 +171,4 @@ To get the drive gear to fit without coming off the dc motor shaft, the borehole
 |  |  |  |  |  |  |  | $22.96  |
 
 
-**DC Motor dimensions:**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/DC_motor_dimensions.png)
-
-**Specs of DC motor:**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Specs_DC_motor.png)
-
 
