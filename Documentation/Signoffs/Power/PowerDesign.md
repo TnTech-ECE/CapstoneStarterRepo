@@ -56,7 +56,7 @@ Start Sensor and Backup Push Button Switch Power Connections
 
 Battery Placement on chassis
 
-![ALt text]()
+![ALt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Battery_placement.png)
 
 The best location for storing the batteris would be undernath the chassis. If placed on the top platform of the chassis then it would interfere with the start sensor and the pushbutton subsystems. When placed on the bottom of the chassis the ground clearence of the robot will be reduced 0.98 inches as this is the thickness of the batteries. The total ground clearence after placing the batteries is 2.76 inches instead of 3.74 inches before. To hold the batteries to the bottom of the chassis, metal band strap will be used to bolt the batteries in place. 
 
@@ -99,6 +99,6 @@ Total Load Results under Max Conditions
 |------|-------------|-------------|--------------|----------|-------|-------------|
 | Batteries | 7.4V Lipo Battery 2S 50C 5200mAh Lipos  | N/A | Zeee | 2 | $30.99 | $30.99 |
 | Power distribution board | distributes parellel branch wires to other components | N/A | 	Evemodel | 1 | $16.99 | $16.99 |
-| Buck Converters | Steps down voltage from main power | LM2596 | Valefod | 3 | $13.99 | $13.99 |
+| Buck Converters | Steps down voltage from main power | LM2596 | Valefod | 5 | $16.88 | $16.88 |
 | Wire | 16AWG 100FT Electrical Wire Cable 2 Conductors Red Black | N/A | Askcable | 100 ft. | $15.19 | $15.19 |
 | Emergency switch | Used to cut power to all systems| N/A | N/A | 1 | Recycled | Recycled |
