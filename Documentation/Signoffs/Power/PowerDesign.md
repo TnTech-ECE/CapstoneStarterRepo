@@ -7,7 +7,7 @@ The power subsystem is the system that will provide power to all the components 
 |--------|----------------------|------------------------|--------|
 | 1. | ASTM B258-18 | The power subsystem shall use wire that can host at least 6 amps as the battery is capable of providing 5.2 amps per hour to prevent overheating and possible fire. | ASTM B258-18 |
 | 2. |  Emergency Switch | The power subsystem shall have an emergency off switch that will cut power to all components of the robot  | Competition Specifications |
-| 3. | Accessibility | The power subsystem shall have easy accecibility to all of its it components | Competition Specifications |
+| 3. | Accessibility | The power subsystem shall have easy accecibility to all of its it components and wires | Competition Specifications |
 | 4. | Fuse | The power subsystem shall have fuses in place to protect subsystem components from overcurrent | IEC 60127 |
 | 5. | Load Support | The power subsytem shall provide apporpriate voltage and current under max load conditions of every subsystem | Battery Specifications | 
 
