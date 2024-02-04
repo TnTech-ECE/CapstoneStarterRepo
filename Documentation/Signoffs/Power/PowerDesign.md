@@ -26,9 +26,13 @@ Arduino Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/MC.png)
 
+The arduino has a buck converter connected to it because the recommended operating voltage is 7-12 volts, and the adjustable buck converter will step down the 14.8 volts from the main power supply to 12 volts. If 14.8 volts are applied directly to the arduino for long periods of time then the arduino will start to overheat. Applying too much voltage can also damage the on board voltage regulator.
+
 Drive Train Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Drive_T.png)
+
+The motor shield will have internal flyback diodes and noise shielding to help prevent back emf from the motors causing damage to the board and other nearby components. To ensure more noise reduction the wires for the DC motors will be winded together. 
 
 Team Spirit Power Connections
 
