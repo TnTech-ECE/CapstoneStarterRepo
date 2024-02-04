@@ -58,7 +58,7 @@ This shaft and arm will be printed using PLA material that way it gives us flexi
 
 **Connection of Bottom shaft to bearing**
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bearing_Shaft.png)
+![Alt text]()
 
 **Shaft\Arm lateral force:**
 
@@ -83,38 +83,19 @@ The ball bearing will be placed in the bracket where there is a housing for the 
 
 **Housing\Bracket for driven gear and bearing**
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_description.png)
+![Alt text]()
 
 
-**DC Motor description:** 
+**Servo Motor description:** 
 
-The DC motor has a gear reduction ratio to increase torque. The reason for this is we need more torque than we do rotor/shaft speed so that it ensures the shaft for the button pusher is turned. To determine what our load torque is of the gears and shaft we can leave or input voltage as at least 6 volts and change the inertial from the shaft to a higher value that to see the max load inertia before reaching stalling torque. When this motor is enabled “Forward” it will rotate clockwise and when enabled to go “Backwards” it will rotate anticlockwise. In order to get the shaft to turn 90 degrees so that the roller will be perpendicular to the robot to hit the pushbutton we can calculate the rpm needed for a period of time to do so. After calculation I found the shaft of the motor needs to turn at an average of 
-0.9833 rad/second which is eqivalent to 59 rad/minute for 2 seconds. The reason the shaft needs to be at 2 seconds is because at because if the shaft turns at 59 rad/minute for one second then the output shaft angle will only rotate 45 degrees which means our pushbutton will not be touching the wall. If we average 59 rad/min for 2 seconds then it will rotate out 90 degrees. The Matlab code that proves this is given below and the figures for "Input speed in rpm vs Output degrees" , "Input speed in rps vs Output degrees", and "Input speed in rpm vs Input speed in rps " are also given below. 
 
-**Matlab code:** 
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Matlab_code_1.png)
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Matlab_code_2.png)
-
-**Figure 1 Matlab code:** 
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Plot_1_Input_speed_rps_output_degrees.png)
-
-**Figure 2 Matlab code:**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Plot_2_Input_rpm_Output_degrees.png)
-
-**Figure 3 Matlab code:** 
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Plot_3_Gear_speed_rpm_input_speed_rps.png)
 
 **Mating gear attachment on motor**
 The mating gear will be attached to the motor’s shaft. The shaft of the motor fits tightly within the borehole of the mating gear. To prevent the gear from sliding off the motor’s shaft, there will be a small hole drilled into the shaft of the motor with a cotter pin placed into it.
 
-**Fitment of gears and bracket and motor**
+**Fitment of gears, bearing block and  servo motor**
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Bracket_Gear_Motor.png)
+![Alt text]()
 
 **DC Motor model:** 
 
