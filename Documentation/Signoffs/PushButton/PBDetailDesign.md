@@ -107,7 +107,7 @@ The beveled gears are the mechanical system behind the pushbutton subsystem. The
 
 **Constraint Solution 1:**
 
-The Arduino will send a logical High to “input 1” and a logical Low to “input 2” when the RGB sensor from the start subsystem sees the start light is green or when the backup pushbutton from the start subsystem is pressed.
+~~The Arduino will send a logical High to “input 1” and a logical Low to “input 2” when the RGB sensor from the start subsystem sees the start light is green or when the backup pushbutton from the start subsystem is pressed.~~
 
 **Constraint Solution 2:**
 
@@ -162,11 +162,11 @@ To get the drive gear to fit without coming off the dc motor shaft, the borehole
 
 | Item | Description | Subsystem | Part Number | Manufacturer | QTY. | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|------|-------|-------------|
-| Geared DC motor | Used to turn the shaft | Push button  | 6V-100RPM-150i | Greartisan | 1 | $11.99  | $11.99 |
+| Servo Motor | Used to turn the shaft | Push button  | MG995 | Tower Pro | 1 | Recycled | Recycled |
 | Paint roller | Used to compress button | Push button  | N/A | Mister Rui | 1 pk | $10.97  | $10.97 |
-| Motor shield/driver | Controls the direction and speed of the geared dc motor | Push button  | L298N | N/A (Recycled) | 1 | $0.00  | $0.00 |
+| ~~Motor shield/driver~~| ~~Controls the direction and speed of the geared dc motor~~ | ~~Push button~~  | ~~L298N~~ | ~~N/A (Recycled)~~ | ~~1~~ | ~~$0.00~~  | ~~$0.00~~ |
 | PLA | Used for printing gears | Push button  | N/A | N/A | 1.7 cu in. | $0.00 | $0.00 |
-|  |  |  |  |  |  |  | $22.96  |
+|  |  |  |  |  |  |  | $10.97  |
 
 
 
