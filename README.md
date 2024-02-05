@@ -1,4 +1,4 @@
-# Golf Ball Diversion
+# Golf Ball Interceptor
 
 The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
