@@ -40,7 +40,7 @@ The results of the LT Spice models will be in the "Analysis" section.
 **Beveled gear parameters for 3d modeling and printing using blender** 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_Gear_Param..png
-) ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Drive_driven_param.png)
+) 
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Drive_driven_param.png)
