@@ -146,8 +146,8 @@ From using the calculation form datasheet[6]
 | Buck Converter | LTC3621  | 2 | $7.38 |$14.76 |
 | Transformer | TCT50-01E07AB | 1 | $19.99 | $19.99 |
 | Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
-| Battery |ML12-12F2 |1| -----|$27.99|
-| Inductor 10uH | ----- | 1 | ----- | ----- | ----- |
+| Battery |ML12-12F2 | 1 | $27.99 | $27.99 |
+| Inductor 10uH | DFE201210U-R47MP2 | 1 | $0.32 | $0.32 | ----- |
 | Inductor 15uH | XFL3012-153MEC | 2 | $2.08 | $2.08 | ----- |
 | Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 | ----- |
 | Resistor 270Ω | -----| 1 | $0.1|-----|
