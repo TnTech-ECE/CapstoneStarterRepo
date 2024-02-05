@@ -40,13 +40,6 @@ The results of the LT Spice models will be in the "Analysis" section.
 
 
 
-**Driven/Output gear parameters for 3d modeling and printing using blender**  
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Driven_Gear_Param.png
-)
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Output_R_C.png)
-
 
 
 ## Analysis 
