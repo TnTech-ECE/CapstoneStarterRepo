@@ -35,6 +35,7 @@ Constraint 3 Solution:
 |-----------------|--------------|--------|
 || VCC | 1 |
 || GND | 1 |
+
 | Drivetrain Subsystem | Type of Pins | Number |
 |----------------------|--------------|--------|
 
