@@ -1,6 +1,6 @@
 # Wall power Subsystem:
 
-My main wall power subsystem input 120v AC. The main wall power has a transformer convert AC to AC, then a buck converters DC to DC that is step down will output 5V DC and boost converters that will be a step up that output 9v DC. After that, it will feed the other two subsystems, the first subsystem needs a 5v DC, and the second subsystem needs a 9v DC. However, I have another subsystem, which is a backup battery. If the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. The main idea is to supply power to the device, building a circuit that will convert to DC and then distribute voltage to other subsystems.
+My main wall power subsystem input 120v AC. The main wall power has a transformer convert AC to AC, then a buck converters DC to DC that is step down will output 5.5V DC and boost converters that will be a step up that output 9v DC. After that, it will feed the other two subsystems, the first subsystem needs a 5.5v DC, and the second subsystem needs a 9v DC. However, I have another subsystem, which is a backup battery. If the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. The main idea is to supply power to the device, building a circuit that will convert to DC and then distribute voltage to other subsystems.
 
 # Constraints
 | No. | Constraints | Origin |
@@ -14,7 +14,7 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 2.	Transformer: How does the Transformer raise voltage or lower voltage? So, We need to do the Converter from AC high voltage different AC low. That means doing step-down voltage.
 3.	Full wave bridge rectifier “FWR”: The FWR is a type of Full wave rectifier that uses four or more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. After the converter from AC to DC, we will get just the positive signals.
 4.	RC filter: Capacitor with Resister: Signal management and filtering are critical functions of electronic systems. Also, it will be smoothing the signals. However, we should use the Step-down voltage From DC to DC. After the RC filter, the input voltage will be 20v DC. We used the chip to do the process. The buck-boost converter gets what we need to get the output of 12v DC. Then, we have power subsystems. The input voltage will be the same, and it's 12v DC.
-5.	Controller: We have three systems, and their "chips" " are all buck-boost converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck-boost converter. Subsystem one: it needs to step down "Buck" for the Subsystem and its 5v dc, 250mA. Subsystem two must step up "Boost" for the Subsystem and its 9v dc, 60mA.
+5.	Controller: We have three systems, and their "chips" " are all buck-boost converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck converter. Subsystem one: it needs to step down "Buck" for the Subsystem and its 5.5v dc, 250mA. Subsystem two must step down "Bcuk" for the Subsystem and its 9v dc, 50mA.
 6.	Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
 
@@ -32,10 +32,10 @@ Figure 2.
 # Analysis
 Circuit explanation: 
 1.	The input for wall power is 120v AC, 60 Hz.
-2.	Converter 120v AC to 24v AC 
-3.	Converter 24v DC to 13.6v DC
-4.	Buck “step down the voltage Subsystem one”
-5.	Boost “Step up the voltage Subsystem two”
+2.	Transformer from 120v AC to 24v AC 
+3.	Full wave bridge rectifier 24v DC to 13.6v DC
+4.	Boost-Buck converter  to get the output 12v
+5.	Buck converter: “Step down the voltages for Subsystem One and Subsystem Two”
 6.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
 Calculations:
@@ -59,7 +59,7 @@ Output \ Voltage \  ={2}{π}\times\ (24\sqrt{2})- (0.7\ π )
 ```math
 Output \ Voltage \  = 20v\ DV
 ```
-First Buck converter:
+First Buck-Boost converter:
 Used the step-down voltage from 20v DC to get 12v DC
 Fs = 100KHz
 T = 10ms
@@ -88,6 +88,18 @@ C  = \frac{ D\ Io } {8Fs\ Vo}
 ```
 ```math
 C = 15 mF
+```
+
+
+Feedback voltage input:
+```math
+Vout  = 1+ \frac{Rtop} { Rbot} 
+```
+```math
+12  = 1+ \frac{ 190k } {Rbot} 
+```
+```math
+Rbot = 17k
 ```
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
