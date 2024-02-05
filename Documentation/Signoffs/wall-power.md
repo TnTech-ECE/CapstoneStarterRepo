@@ -142,13 +142,14 @@ From using the calculation form datasheet[6]
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Plug electric |  035-00101-2BP | 1 | $6.71 | $6.71 |
-| Buck-Boost Converter | LTC3114-1  | 3 | $11.35 |$34.04 |
-| Buck Converter | LTC3621  | ? | $7.38 |----- |
-| Transformer | TCT50-01E07AB | 1 | $18.87 | 18.87 |
+| Buck-Boost Converter | LTC3114-1  | 1 | $11.35 |$11.35 |
+| Buck Converter | LTC3621  | 2 | $7.38 |$14.76 |
+| Transformer | TCT50-01E07AB | 1 | $19.99 | $19.99 |
 | Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
-| Battery |ML12-12F2 |1| $27.99|$27.99|
+| Battery |ML12-12F2 |1| -----|$27.99|
 | capacitor | ----- | ----- | ----- | ----- | ----- |
-| Resistor | -----|-----| -----|-----|
+| Resistor 270Ω | -----|-----| $0.1|-----|
+| Resistor 190kΩ | -----|-----| $0.1|-----|
 | Total | ----- |-----| -----| ----- |
 
 # References:
@@ -164,4 +165,6 @@ From using the calculation form datasheet[6]
    
 7. Battery datasheet: [file:///C:/Users/abofa/Downloads/R08-002%20-%20Design%20and%20Sizing%20of%20Solar%20Photovoltaic%20Systems%20-%20US%20(1).pdf](https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems)https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems
 8. Buck Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf
+9. Fiada 24V 40VA Control Transformer, UL Certified Primary 120, 208, 240V Secondary 24V, HVAC Furnace Transformer Multi Tap(1 Pack) https://a.co/d/bubQZsQ
+https://a.co/d/bubQZsQ  
   
