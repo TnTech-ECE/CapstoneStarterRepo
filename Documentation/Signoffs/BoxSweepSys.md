@@ -58,6 +58,5 @@ The sweep system will not rotate back towards the chassis more than 90 degrees i
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo | Moves the arm up and down slowly at appropriate times | Box Sweep | FS90 |	FEETECH | 1 | Recycled | Recycled |
-| Servo Saver | Bearing to protect the servo from lateral torque | Box Sweep | B075F2ZT1Q | ETPNNASO | 1 | $9.99 | $9.99 |
+| Servo Assembly | Rotates the ruler assembly out and back | Box Sweep | N\a |	FN\a | 1 | Recycled | Recycled |
 |||||||| $9.99 |
