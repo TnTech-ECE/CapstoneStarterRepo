@@ -18,7 +18,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 
 Control block diagram for pushbutton system
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Control%20Block%20Diagram.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_Control_block.png)
 
 
 Model of the electrical inductance and internal motor resistance for the DC motor to test and get torque values and loads under different conditions.
@@ -29,6 +29,11 @@ Model of mechanical circuit that converts the electrical characteristics into th
 The results of the LT Spice models will be in the "Analysis" section.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
+
+
+**Pinout of servo motor**
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_pinout.png)
 
 
 **Beveled gear parameters for 3d modeling and printing using blender** 
