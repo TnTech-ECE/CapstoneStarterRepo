@@ -9,44 +9,43 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 ## Constraints of Subsystem
 | Constraint no. | Description | Origin|
 |----------------|-------------|-------|
-| 1. | The ruler, flexible skirt, and Servo shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
+| 1. | The ruler and flexible skirt shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
 | 2. | The sweep shall use the mechanism from the Push Button Subsystem and meet all constraints except number 2. | Push Button Functionality |
 | 3. | The arm of the sweep shall not extend past the cubic foot requirement before the start sensor is triggered. | Competition Specifications |
-| 4. | The arm of the sweep shall reach far enough to obtain the large boxes | Competition Specifications |
+| 4. | The sweep system shall not interfere with the operation of the tracks. | Strategy Specfifications |
 
 
 
 ## Buildable Schematic of Subsystem
-The box sweep shall use the same mechanism as the button push subsystem, with only two changes. The first is that it will use a ruler and skirt instead of a paint roller, and the second is that it will be mounted upsidedown off the side of the robot to swing out the arm. 
+The box sweep shall use the same mechanism as the button push subsystem, with only two changes. The first is that it will use a ruler and skirt instead of a paint roller, and the second is that it will be mounted upsidedown off the side of the robot to swing out the arm. The arm shall start parralel to the tracks, and when it recieves the signal from the main controller, will rotate 90 degrees to be perpendicular to the robot's direction of movement.
 <br />
 <br />
-## Under Construction -- switching to Blender, redesigning, and refining
-![BoxSweep3D](https://github.com/cebttu/CapstoneTeam1/assets/100803345/81a46d01-d600-43d9-bf44-87c3ea941958)
+![Box Sweep 3D model](https://github.com/cebttu/CapstoneTeam1/assets/143427017/46702d1e-ca21-405c-965e-da1f78810bdb)
 <br /> Figure 1: Box Sweep 3D Model
 <br />
 <br />
-The Servo unit and Servo Saver represented by the blue and orange block shall have the ruler, represented by the brown block, and the flexible skirt, represented by the purple block, attached to it. The Servo will begin with the ruler and skirt vertically upright at 90 degrees. However, once the start sensor is activated, the servo will lower the ruler and skirt to 180 degrees. This shall allow the sweep to reach the large boxes. The exact height from the bottom of the board is dependent on the height of the tracks as defined in the drive train system at a later date.
+The blue bubble represents the servo system from the button push system, see that signoff for details. The grey is the chassis, including the mounting point for the servo assembly that extends from the right hand side of the robot an inch out from the tracks, as shown in the model above. The red bar is the ruler and the skirt that are attached to the servo assembly. The skirt is to be made of a flexible yet sturdy cutting board found in the capstone lab, which will be affixed to the bottom of the ruler in order for the blocks to be caught and dragged along.
 
 
 ## Analysis of Subsystem
 Constraint 1: 
 <br />
-To have the servo, skirt, and ruler sourced from recycled parts: the servo unit shall be salvaged from the SECON 2023 robot, the ruler shall be provided by a student within the team, and the flexible skirt shall use a cutting mat that is left over in the Capstone lab.
+To have the skirt and ruler sourced from recycled parts: The ruler shall be provided by a student within the team, and the flexible skirt shall use a cutting mat that is left over in the Capstone lab.
 <br />
 <br />
 Constraint 2:
 <br />
-To have the sweep move at no greater than 1 inch per second: the voltage to the servo unit will be controlled so that the maximum speed of the sweep is no greater than 1 inch per second.
+In ordwer for the sweep system to adhere to the constraints of the button push system it will use the exact same servo assembly as the button push. This is achievable as the weight of the ruler and skirt willbe significantly less than the weight of the paint roller. The paint roller weighs 5.3 ounces, whilst the ruler weighs 0.96 ounces and the skirt will weigh 2.1 ounces roughly. This means that the torque load will be significantly less than the load with the paint roller.
 <br />
 <br /> 
 Constraint 3:
 <br /> 
-To fit the cubic foot requirement before the start signal is triggered: the arm of the sweep shall begin in the vertical upright position at 90 degrees, and the ruler and skirt will be trimmed to 8.5" long and 3.88" wide with the left side of the servo unit placed 4.2" from the far right side of the robot.
+To fit the cubic foot requirement before the start signal is triggered: the arm of the sweep shall begin each run parrallel to the tracks, and not extending beyond the back of the robot. The ruler will be cut down to fit this length requirement, and the skirt cut to fit the ruler.
 <br /> 
 <br /> 
 Constraint 4:
 <br /> 
-To have the arm of the sweep reach the large boxes the skirt is included to prevent boxes from sliding under the ruler, and the ruler is trimmed to the absolute maximum it can reach while still fulfilling the cubic foot requirement while upright (8.15".) 
+To have the arm of the sweep reach the large boxes the skirt is included to prevent boxes from sliding under the ruler, and the ruler is trimmed to the absolute maximum it can reach while still fulfilling the cubic foot requirement while parallel to the tracks. 
 <br /> 
 <br /> 
 
