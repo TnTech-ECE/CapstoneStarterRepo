@@ -23,7 +23,7 @@ Control block diagram for pushbutton system
 
 
 
-//Model of the electrical inductance and internal motor resistance for the DC motor to test and get torque values and loads under different conditions.//
+Model of the electrical inductance and internal motor resistance for the DC motor to test and get torque values and loads under different conditions.
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Electrical_LT.png)
 
