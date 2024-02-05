@@ -56,7 +56,27 @@ Estimation of other subsystems' footprints resulted in needing 62 square inches 
 
 Constraint 4 Solution:
 <br />
-Tracks and traditional wheels operate similarly, by having a motor rotate the wheel itself or the drive pulley of the tracks, which is functionally a wheel that pulls the tracks along. However, tracks have more weight and surface area touching the ground, increasing friction and drag. This will end up slowing the tracks down marginally. However, the torque shall not increase in any significant way, and this slowdown in speed can be overcome by providing the motor more power on the stretches of the course when precise movement is not critical, thus increasing the speed of the robot. 
+Between a tracked (ex. tank tread) and conventional 4-wheel robot design, the differences in
+terms of the dynamics are small in the context of purely straight movement. However, tracks are known
+for higher torque requirements because they turn by skid-steering, which isn’t necessarily exclusive to
+tracks. With skid-steering, slipping has to occur with part of the contact with some of the track, and
+higher torque is needed to overcome that friction. The dynamics of this specific interacƟon is a very
+complex one, beyond the capability and resources of any undergraduate student. However, this
+interacƟon may be considered negligible in comparison to another and likely more criƟcal analysis,
+which we can do.
+
+The regions of the course that are likely of the most concern are the inclines in which the robot will
+need enough power in which to overcome a component of its own weight ( ~38%).
+
+![BasicModel](https://github.com/cebttu/CapstoneTeam1/assets/100803345/821e621f-83ca-413a-95d7-d6978102d20c)
+<br>
+Figure 6: Basic Physics Model of Traversing the Incline
+
+The calculations are best done using a spreadsheet, to allow parameters to change for different
+assumptions and such. Figure 7 entails the most plausible set of parameters and assumptions and their outcome. The assumption of having the maximum weight is likely the most overestimated one here, but if the design remains plausible even still, any possible hindrance by the decision of a tracked design should be negligible.
+![ExcelCalc](https://github.com/cebttu/CapstoneTeam1/assets/100803345/6fa4ad7f-d055-4a1a-9df2-9d2890fb739c)
+<br>
+Figure 7: Spreadsheet Detailing Likely Scenarios
 
 
 ## BOM
