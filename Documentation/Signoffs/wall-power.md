@@ -147,9 +147,28 @@ From using the calculation form datasheet[6]
 | Transformer | TCT50-01E07AB | 1 | $19.99 | $19.99 |
 | Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 |1| -----|$27.99|
-| capacitor | ----- | ----- | ----- | ----- | ----- |
-| Resistor 270Ω | -----|-----| $0.1|-----|
-| Resistor 190kΩ | -----|-----| $0.1|-----|
+| Inductor 10uH | ----- | 1 | ----- | ----- | ----- |
+| Inductor 15uH | XFL3012-153MEC | 2 | $2.08 | $2.08 | ----- |
+| Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 | ----- |
+| Resistor 270Ω | -----| 1 | $0.1|-----|
+| Resistor 20kΩ | -----| 1 | $0.1|-----|
+| Resistor 56.2kΩ | -----| 1 | $0.1|-----|
+| Resistor 190Ω | -----| 1 | $0.1|-----|
+| Resistor 17kΩ | -----| 1 | $0.1|-----|
+| Resistor 196kΩ | ERJ-1GNF1963C | 2 | $0.1 | $0.2 |
+| Resistor 24kΩ | ERJ-1GNF2402C | 1 | $0.1 | $0.1 |
+| Resistor 14kΩ | ERJ-1GNF1402C | 1 | $0.1 | $0.1 |
+| capacitor 200uF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 10uF | C3216JB1E106M160AB | 3 | $0.56 | $1.68 | ----- |
+| capacitor 68uF | ----- | 2 | ----- | ----- | ----- |
+| capacitor 33nF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 10pF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 10nF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 4.7uF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 44uF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 1uF | C3216X8R1E105M160AA | 2 | $0.42 | $0.84 | ----- |
+| capacitor 22pF | C3216CH2J221J060AA | 2 | $0.21 | $0.42 | ----- |
+| capacitor 22uF | C3216JB1C226M160AB | 2 | $0.64 | $1.28 | ----- |
 | Total | ----- |-----| -----| ----- |
 
 # References:
