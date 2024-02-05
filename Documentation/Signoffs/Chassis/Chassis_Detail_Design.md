@@ -60,9 +60,9 @@ Between a tracked (ex. tank tread) and conventional 4-wheel robot design, the di
 terms of the dynamics are small in the context of purely straight movement. However, tracks are known
 for higher torque requirements because they turn by skid-steering, which isn’t necessarily exclusive to
 tracks. With skid-steering, slipping has to occur with part of the contact with some of the track, and
-higher torque is needed to overcome that friction. The dynamics of this specific interacƟon is a very
+higher torque is needed to overcome that friction. The dynamics of this specific interaction is a very
 complex one, beyond the capability and resources of any undergraduate student. However, this
-interacƟon may be considered negligible in comparison to another and likely more criƟcal analysis,
+interaction may be considered negligible in comparison to another and likely more critical analysis,
 which we can do.
 
 The regions of the course that are likely of the most concern are the inclines in which the robot will
