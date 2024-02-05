@@ -10,26 +10,14 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 | Constraint no. | Description | Origin|
 |----------------|-------------|-------|
 | 1. | The ruler, flexible skirt, and Servo shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
-| 2. | The arm of the sweep shall not move faster than 1 inch per second. | ISO 10218 |
+| 2. | The sweep shall use the mechanism from the Push Button Subsystem and meet all constraints except number 2. | Push Button Functionality |
 | 3. | The arm of the sweep shall not extend past the cubic foot requirement before the start sensor is triggered. | Competition Specifications |
 | 4. | The arm of the sweep shall reach far enough to obtain the large boxes | Competition Specifications |
 
 
 
 ## Buildable Schematic of Subsystem
-![BoxSweepWire](https://github.com/cebttu/CapstoneTeam1/assets/100803345/f4b8b9de-97ab-4256-9050-8eab1a528d14)
-<br />Figure 2: Box Sweep Wiring Diagram
-<br />
-<br />
-The FS90 Servo is a servo motor with 120 degrees of movement. This will be the point of motion for the sweep arm that will collect the boxes. The SG90 has three pins that control the function of the motor.
-
-Pulse Width Modulation (PWM, orange wire): This pin shall be connected to a PWM Pin on the main controller. Code within the main controller will send the appropriate pulse through the PWM pin to lower the arm from 90 degrees to 180 degrees once the start signal is received by the main controller.
-<br />
-<br />
-Vcc (red wire): This pin shall be connected to the output of the Power System to power the SG90 Servo. The SG90 requires a voltage between 4.8V - 6V to be properly powered. The servo shall pull __V so that the motor will not move faster than 1 inch per second.
-<br />
-<br />
-Ground (GND, brown wire): This pin shall be connected to the ground of the power system. This shall properly ground the servo. 
+The box sweep shall use the same mechanism as the button push subsystem, with only two changes. The first is that it will use a ruler and skirt instead of a paint roller, and the second is that it will be mounted upsidedown off the side of the robot to swing out the arm. 
 <br />
 <br />
 ## Under Construction -- switching to Blender, redesigning, and refining
