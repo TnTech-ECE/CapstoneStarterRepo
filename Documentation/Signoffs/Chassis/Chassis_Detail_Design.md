@@ -74,6 +74,8 @@ Figure 6: Basic Physics Model of Traversing the Incline
 
 The calculations are best done using a spreadsheet, to allow parameters to change for different
 assumptions and such. Figure 7 entails the most plausible set of parameters and assumptions and their outcome. The assumption of having the maximum weight is likely the most overestimated one here, but if the design remains plausible even still, any possible hindrance by the decision of a tracked design should be negligible.
+
+
 ![ExcelCalc](https://github.com/cebttu/CapstoneTeam1/assets/100803345/6fa4ad7f-d055-4a1a-9df2-9d2890fb739c)
 <br>
 Figure 7: Spreadsheet Detailing Likely Scenarios
