@@ -31,7 +31,7 @@ The results of the LT Spice models will be in the "Analysis" section.
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
 
 
-**Drive gear parameters for 3d modeling and printing using blender** 
+**Beveled gear parameters for 3d modeling and printing using blender** 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Drive_Gear_Param..png
 )
