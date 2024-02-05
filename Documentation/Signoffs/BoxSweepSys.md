@@ -58,5 +58,5 @@ The sweep system will not rotate back towards the chassis more than 90 degrees i
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
 | Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo Assembly | Rotates the ruler assembly out and back | Box Sweep | N\a |	FN\a | 1 | Recycled | Recycled |
+| Servo Assembly | Rotates the ruler assembly out and back | Box Sweep | N\a |	N\a | 1 | Recycled | Recycled |
 |||||||| $9.99 |
