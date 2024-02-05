@@ -35,7 +35,7 @@ To have the skirt and ruler sourced from recycled parts: The ruler shall be prov
 <br />
 Constraint 2:
 <br />
-In ordwer for the sweep system to adhere to the constraints of the button push system it will use the exact same servo assembly as the button push. This is achievable as the weight of the ruler and skirt willbe significantly less than the weight of the paint roller. The paint roller weighs 5.3 ounces, whilst the ruler weighs 0.96 ounces and the skirt will weigh 2.1 ounces roughly. This means that the torque load will be significantly less than the load with the paint roller.
+In order for the sweep system to adhere to the constraints of the button push system it will use the exact same servo assembly as the button push. This is achievable as the weight of the ruler and skirt willbe significantly less than the weight of the paint roller. The paint roller weighs 5.3 ounces, whilst the ruler weighs 0.96 ounces and the skirt will weigh 2.1 ounces roughly. This means that the torque load will be significantly less than the load with the paint roller.
 <br />
 <br /> 
 Constraint 3:
@@ -45,7 +45,7 @@ To fit the cubic foot requirement before the start signal is triggered: the arm 
 <br /> 
 Constraint 4:
 <br /> 
-To have the arm of the sweep reach the large boxes the skirt is included to prevent boxes from sliding under the ruler, and the ruler is trimmed to the absolute maximum it can reach while still fulfilling the cubic foot requirement while parallel to the tracks. 
+The sweep system will not rotate back towards the chassis more than 90 degrees in order to prevent the ruler from sticking into the tracks and jammming them up or breaking the ruler. This will be accomplished by setting the servo to only rotate 90 degrees maximum.
 <br /> 
 <br /> 
 
