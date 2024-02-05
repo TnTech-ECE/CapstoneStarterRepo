@@ -19,7 +19,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 
 Control block diagram for pushbutton system
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_Control_block.png)
+![Alt text]()
 
 
 
