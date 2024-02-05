@@ -71,6 +71,12 @@ Figure 6: The circuit design of the Team Spirit Subsystem.
 
 Analysis:
 
+An N-MOS will be used to control the current to the LED lights. An LTSpice analysis has been performed to determine the operational region of the N-MOS and the compatibility with the circuit. The analysis of the cicuit yeilded the following: with a gate voltage of 5 volts from each impulse of the microcontrollers DIO, the voltage of the drain terminal is 27 mV during operation, and each device is supplied 20 mA of current. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/capstonespice.PNG)
+
+Figure 7: LTSpice analysis of the Team Spirits N-MOS functionality
+
 Constraint Solutions:
 
 Constraint 1 Solution:  
@@ -115,4 +121,9 @@ The LED lights shall not tamper with the IR sensors of the navegation system. Th
 |5mm LEDs - Purple        |Purple 5mm LED attached to a wire and a series impedance of 0.25 W.|Team Spirit|‎W04127_6-US-1|DORHEA      |100     |$0.0799|$7.99      |
 |N - Channel MOSFET       | 30 A,  60 V rated N channel MOSFET.                               |Team Spirit|RFP30N06LE   |FAIRCHILD   |1       |$7.99  |$7.99      | 
 |                         |                                                                   |           |             |            |        |       |$23.97a    | 
- 
+
+## Apendix
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/data%20points.txt)
+
+Figure 8: All data points produced during the electrical analysis of the N-MOS.
