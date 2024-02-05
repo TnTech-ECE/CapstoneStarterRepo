@@ -78,7 +78,9 @@ The ball bearing will be placed in the bracket where there is a housing for the 
 
 **Housing\Bracket for driven gear and bearing**
 
-![Alt text]()
+For attaching the driven gear (the gear that lays flat on the chassis) there is a pillow bearing block mount that houses the bearing. The shaft that will be within the inner diameter of the bearing will hold the driven gear. The driven gear borehole will have a diamter of 8mm to have a tight fit on the shaft. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/PB_pillow_bearing_block.png)
 
 
 **Servo Motor description:** 
