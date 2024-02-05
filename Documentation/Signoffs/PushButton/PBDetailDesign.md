@@ -55,7 +55,7 @@ This shaft and arm will be printed using PLA material that way it gives us flexi
 
 **Connection of Bottom shaft to bearing**
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_connections.png)
 
 **Shaft\Arm lateral force:**
 
