@@ -27,12 +27,47 @@ This subsystem will input solar power from the range of 0 V to 24 V and will out
 ## Battery and Solar Power
 
 ## Arduino Nano
-U6 is the Arduino Nano. It will receive inputs from U2, U4, U5, and a voltage read from a voltage divider. It will output to U1, U3, U5, Q1, and Q2. 
+The Arduino is in charge of controlling the amount of power that is directed from the solar panels to the battery chargers. This will be accomplished through a greedy algorithm utilizing pulse width modulation (PWM) on a power MOSFET. 
 
-The input from U2, a current sensor to read output current from the solar panel,  and the voltage divider, to read output voltage from solar panel, will be used for the Maximum Power Point Tracking algorithm. The algorithm will send digital signals to U1, the digital potentiometer, to adjust the resistance of the solar panel output. This change of resistance will change the amount of power being output from the solar panel. The algorithm will continually change the resistance trying to find the maximum power output from the solar panel. 
+The algorithm has one responsibility: send as much current to the battery chargers as possible without negatively affecting the output current to the system. 
+
+*Figure 3. Greedy Algorithm*
+
+![GreedyAlgorithmFlowChart](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/3c34bec7-9ece-4f0c-912a-553cb6658c08)
+
+
+The Arduino will take two inputs to control the PWM rate: output current and the 12 V supplied from the solar panel MPPC BuckBoost. A current sensor at the system's output will be used to detect if the algorithm is taking away current from the system to try to supply the battery chargers. The output of the solar panel BuckBoost is used to validate that the algorithm has power to try to charge the batteries. 
+
+### Current Sensor
+The current sensor being used is the _ACS724LLCTR-05AU-T_. It has an analog output of up to Vcc + 0.5 V corresponding to the current levels from 0 A to 5 A. The maximal output voltage is 5.5 V which corresponds to 5 A. 
+
+The Arduino nano can only handle analog voltages up to 5 V. 5.5 V can damage the Arduino's input pins. The system's current usage has been calculated to be less than an amp, which means that the output voltage from the current sensor is not going to reach 5.5 V. The Arduino's analog pins will not be damaged by the system's expected current usage. 
+
+### MPPC Output Voltage Detection
+The Solar Panel's MPPC Outvoltage will be read using one of the Arduino's analog pins. The maximum voltage for the MPPC Outputvoltage is 12 V and the maximum voltage that the Arduino can take on its analog pins is 5 V.
+
+A voltage divider using two resistors will be used to divide the voltage down from 12 V to 4.5 V. 4.5 V will be used to give 0.5 V of room for any ripple voltage from the BuckBoost. 
+
+```math
+V_{Arduino} = V_{BUCKBOOST} ( \frac{R_{2}}{R_{1} + R_{2}})
+```
+
+R_2 is arbitrarily set to 10 kΩ.
+
+```math
+4.5 = 12 ( \frac{10,000}{R_{1} + 10,000})
+```
+```math
+```
+```math
+R_{1} = 16,666 Ω = 17 kΩ
+```
+
+### Arduino Power Initialization
+The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during the power initialization of the system.
 
 ## LT3120 MPPC BuckBoost Converter
-The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a steady 12 V. 
+The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a 12 V. 
 
 ### Datasheet Provided Values:
 ```math
@@ -531,20 +566,7 @@ C_{OUT} >= 65 uF
 
 ## Battery Charging and Discharging Switching Logic
 
-## Current Sensor
-There is one current sensor used to measure the amount of current the system is using. This value will be used by the Arduino to decide how much power to send to charge the batteries. More information can be found in the _Battery Charing and Discharging Switching Logic_ about how the batteries are charged. 
-
-The sensor can output up to a maximum of 8 V. This output will need to be reduced to a maximum of 5 V so that it may be safely read by the Arduino. A voltage divider will be used on the output of the current sensor to change the output to have a maximum voltage of 5 V. 
-
-Analysis of resistors required to divide 8 V down to 5 V (U2 and U4):
-
-```math
-Vout\ =Vin\times\frac{R1}{R1 + R2}
-```
-```math
-5\ = 8\times\frac{10,000}{10,000 + R2} = 6 kΩ
-```
-R1 is arbitrarily chosen to be 10 kΩ. R2 is calculated to be 6 kΩ.
+![SwitchingLogicSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/da172cf9-7878-4793-9c5a-bc8ed448d146)
 
 ## Overcharge and Deep Discharge Protection
 
