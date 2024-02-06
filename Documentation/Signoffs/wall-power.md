@@ -94,9 +94,30 @@ As Given Cout and L from Datasheet.
 
 Inductor Selection: 
 
+```math
+{\rm Inductance \ L} = 68uH
+```
+```math
+{\rm f}_{SW} = 1.2MHz
+```
+```math
 
+{\rm Switch \ pin \ minimum \ low \ t}_{low} = 0.05us
+```
+
+
+```math
+ {\rm ∆I _{L}}_{p-p(BUCK)}\ = \frac{V_{OUT}} {L\ }\  \ast\ (\frac{V_{IN}-{V_{OUT}}}{V_{IN}}) \ast\ (\frac{1}{f}-{t_{low}}) Amps
+```
+```math
+ {\rm ∆I _{L}}_{p-p(BUCK)}\ = \frac{12} {68uH\ }\  \ast\ (\frac{{V22.03v}-{12v}}{22.03v}) \ast\ (\frac{1}{1.2MHz}-{0.05us}) Amps
+```
+```math
+ {\rm ∆I _{L}}_{p-p(BUCK)}\ = 0.01228 \ Amps
+```
 
 Feedback voltage input:
+
 ```math
 Vout  = 1+ \frac{Rtop} { Rbot} 
 ```
