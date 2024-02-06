@@ -40,7 +40,7 @@ To have the sweep arm from recycled parts: The PLA will be used from what is lef
 <br />
 Constraint 2:
 <br />
-In order for the sweep system to not excede the torque rating of the servo, a load calculation was performed using a significantly heavier arm attached to the servo. This analysis is shown below. The Newtons cannot excede 5 Newtons of torque. The analysis is shown below, showing that the force on the servo will not exceed the torque rating of the servo.
+In order for the sweep system to not exceed the torque rating of the servo, a load calculation was performed using a significantly heavier arm attached to the servo. This analysis is shown below. The Newtons cannot exceed 5 Newtons of torque. The analysis is shown below, showing that the force on the servo will not exceed the torque rating of the servo.
 <br />
 ![Lateral_Force_Calc](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fa98f1bf-39c1-4020-b57f-75a3844d7086)
 <br /> Figure 3: Force Calculation
@@ -52,7 +52,7 @@ To fit the cubic foot requirement before the start signal is triggered: the arm 
 <br /> 
 Constraint 4:
 <br /> 
-The sweep system will not rotate back towards the chassis more than 90 degrees in order to prevent the ruler from sticking into the tracks and jammming them up or breaking the ruler. This will be accomplished by setting the servo to only rotate 90 degrees maximum.
+The sweep system will not rotate back towards the chassis more than 90 degrees in order to prevent the arm from sticking into the tracks and jammming them up or breaking the arm of the sweep. This will be accomplished by setting the servo to only rotate 90 degrees maximum.
 <br /> 
 <br /> 
 
@@ -60,5 +60,5 @@ The sweep system will not rotate back towards the chassis more than 90 degrees i
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
 | PLA | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo Motor | Rotates the ruler assembly out and back | Box Sweep | MG995 |	Tower Pro | 1 | Recycled | Recycled |
+| Servo Motor | Rotates the arm assembly out and back | Box Sweep | MG995 |	Tower Pro | 1 | Recycled | Recycled |
 |||||||| $0.00 |
