@@ -64,17 +64,24 @@ Output \ Voltage \  = 20v\ DV
 | 1  | Buck-Boost converter | 17 V | 0.3 A |
 
 ```math
-{\rm V}_{IN} =  17V   to   21.03V
+{\rm V}_{IN} =  17V \  to \  21.03V
 ```
 ```math
 {\rm V}_{OUT} = 12v
 ```
 ```math
-{\rm Maximum I}_{OUT} = 0.7A
+{\rm Maximum \ I}_{OUT} \ (boost \ mode) = 0.7A
 ```
 ```math
-{\rm R}_{LOAD} = \frac{ 12 } { 0.7} = 17.1 Ω
+{\rm R}_{LOAD(min)} = \frac{ 12 } { 0.7} = 17.1 Ω
 ```
+```math
+{\rm Maximum \ I}_{OUT} \ (buck \ mode) = 1A
+```
+```math
+{\rm R}_{LOAD(min)} =  12 
+```
+
 ```math
 Vout \ = D * Vin
 ```
@@ -82,18 +89,11 @@ Vout \ = D * Vin
 Duty\ Ratio  = \frac{ 12 } { 17} = 0.7
 ```
 ```math
-{\rm F}_{s} = 100KHz
-```
-```math
 {\rm C}_{OUT} = 44uF 
 ```
 ```math
 {\rm L} = 10uH 
-```
-As Given Cout and L from Datasheet.
-
-Inductor Selection: 
-
+``` 
 ```math
 {\rm Inductance \ L} = 68uH
 ```
