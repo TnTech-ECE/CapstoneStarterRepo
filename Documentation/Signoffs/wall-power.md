@@ -83,15 +83,6 @@ Output \ Voltage \  = 20v\ DV
 ```
 
 ```math
-Vout \ = D * Vin
-```
-```math
-Duty\ Ratio  = \frac{ 12 } { 17} = 0.7
-```
-```math
-{\rm C}_{OUT} = 44uF 
-```
-```math
 {\rm L} = 10uH 
 ``` 
 ```math
@@ -136,7 +127,13 @@ From the datasheet, the input for Capacitor 10uH  and the output for Capacitor 4
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
-| 2  | Buck converter | 5.5 V | 0.25 A |
+| 2  | Data interpretation and Storage | 5.5 V | 0.25 A |
+
+
+| No. | Subsystem | Voltage | Current |
+| --- | ----------- | ------ | ------ |
+| 3  | Sensor | 9 V | 0.05 A |
+
 
 
 ###  Backup Battery
