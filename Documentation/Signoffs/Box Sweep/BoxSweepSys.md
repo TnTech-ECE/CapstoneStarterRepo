@@ -9,38 +9,45 @@ The Box Sweep Mechanism acts as the method of obtaining and moving the large box
 ## Constraints of Subsystem
 | Constraint no. | Description | Origin|
 |----------------|-------------|-------|
-| 1. | The ruler and flexible skirt shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
-| 2. | The sweep shall use the mechanism from the Push Button Subsystem and meet all constraints except number 2. | Push Button Functionality |
+| 1. | The sweep arm shall be recycled parts to lessen the environmental impact of the robot. | Ethical Considerations |
+| 2. | The sweep servo shall not exceed an operating torque of 0.7 kg*cm.  | Servo Specifications |
 | 3. | The arm of the sweep shall not extend past the cubic foot requirement before the start sensor is triggered. | Competition Specifications |
 | 4. | The sweep system shall not interfere with the operation of the tracks. | Strategy Specfifications |
 
 
 
 ## Buildable Schematic of Subsystem
-The box sweep shall use the same mechanism as the button push subsystem, with only two changes. The first is that it will use a ruler and skirt instead of a paint roller, and the second is that it will be mounted upsidedown off the side of the robot to swing out the arm. The arm shall start parralel to the tracks, and when it recieves the signal from the main controller, will rotate 90 degrees to be perpendicular to the robot's direction of movement.
+The box sweep shall use a servo to rotate the arm of the sweep system out and retract it back after the first corner. The arm will be attached directly to the servo, preventing the need of gears or bearings. The arm, designed by the mechanicla side of the capstone team, will be a tapered, flexible PLA beam. This makes the weight of the arm minimal, reducing the torque load on the servo. The arm will be 2 inches tall, 6.5 inches long, and a thickness of 1/4 inch tapered to an edge on both a hieght and a length edge. A 3 dimensional diagram is shown below.
 <br />
 <br />
 ![Box Sweep 3D model](https://github.com/cebttu/CapstoneTeam1/assets/143427017/46702d1e-ca21-405c-965e-da1f78810bdb)
 <br /> Figure 1: Box Sweep 3D Model
 <br />
 <br />
-The blue bubble represents the servo system from the button push system, see that signoff for details. The grey is the chassis, including the mounting point for the servo assembly that extends from the right hand side of the robot an inch out from the tracks, as shown in the model above. The red bar is the ruler and the skirt that are attached to the servo assembly. The skirt is to be made of a flexible yet sturdy cutting board found in the capstone lab, which will be affixed to the bottom of the ruler in order for the blocks to be caught and dragged along.
-
+The blue bubble represents the servo of the sweep system. The grey is the chassis, including the mounting point for the servo assembly that extends from the right hand side of the robot an inch out from the tracks, as shown in the model above, which will be designed and fabricated by the mechanical team. The red bar is the arm attached to the servo. Below is an electrical diagram of the servo connected to a buck converter to power the motor.
+<br />
+<br />
+![Box Sweep Pinout](https://github.com/cebttu/CapstoneTeam1/assets/143427017/11aee153-4096-441c-984f-074d1cd05cbc)
+<br /> Figure 2: Box Sweep Electrical Pinout
+<br />
+<br />
 
 ## Analysis of Subsystem
 Constraint 1: 
 <br />
-To have the skirt and ruler sourced from recycled parts: The ruler shall be provided by a student within the team, and the flexible skirt shall use a cutting mat that is left over in the Capstone lab.
+To have the sweep arm from recycled parts: The PLA will be used from what is left over in the Capstone lab.
 <br />
 <br />
 Constraint 2:
 <br />
-In order for the sweep system to adhere to the constraints of the button push system it will use the exact same servo assembly as the button push. This is achievable as the weight of the ruler and skirt willbe significantly less than the weight of the paint roller. The paint roller weighs 5.3 ounces, whilst the ruler weighs 0.96 ounces and the skirt will weigh 2.1 ounces roughly. This means that the torque load will be significantly less than the load with the paint roller.
+In order for the sweep system to not excede the torque rating of the servo, a load calculation was performed using a significantly heavier arm attached to the servo. This analysis is shown below. The Newtons cannot excede 5 Newtons of torque. The analysis is shown below, showing that the force on the servo will not exceed the torque rating of the servo.
 <br />
+![Lateral_Force_Calc](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fa98f1bf-39c1-4020-b57f-75a3844d7086)
+<br /> Figure 3: Force Calculation
 <br /> 
 Constraint 3:
 <br /> 
-To fit the cubic foot requirement before the start signal is triggered: the arm of the sweep shall begin each run parrallel to the tracks, and not extending beyond the back of the robot. The ruler will be cut down to fit this length requirement, and the skirt cut to fit the ruler.
+To fit the cubic foot requirement before the start signal is triggered: the arm of the sweep shall begin each run parrallel to the tracks, and not extending beyond the back of the robot. The arm will not be long enough to extend beyond the length of the chassis.
 <br /> 
 <br /> 
 Constraint 4:
@@ -49,14 +56,9 @@ The sweep system will not rotate back towards the chassis more than 90 degrees i
 <br /> 
 <br /> 
 
-
-
-
-
 ## BOM of Subsystem 
 | Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|----------|-------|-------------|
-| Ruler | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Cutting board sheet | Acts as a flexible skirt for the arm to prevent boxes from pushing their way under the arm | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
-| Servo Assembly | Rotates the ruler assembly out and back | Box Sweep | N\a |	N\a | 1 | Recycled | Recycled |
-|||||||| $9.99 |
+| PLA | Acts as the arm of the box sweep | Box Sweep | N/a | N/a | 1 | Recycled | Recycled |
+| Servo Motor | Rotates the ruler assembly out and back | Box Sweep | MG995 |	Tower Pro | 1 | Recycled | Recycled |
+|||||||| $0.00 |
