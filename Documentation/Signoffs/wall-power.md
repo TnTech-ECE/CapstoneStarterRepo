@@ -90,7 +90,7 @@ Duty\ Ratio  = \frac{ 12 } { 17} = 0.7
 ```math
 {\rm L} = 10uH 
 ```
-As Given C out and L from Datasheet.
+As Given Cout and L from Datasheet.
 
 Inductor Selection: 
 
