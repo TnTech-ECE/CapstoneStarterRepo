@@ -59,36 +59,41 @@ Output \ Voltage \  ={2}{π}\times\ (24\sqrt{2})- (0.7\ π )
 ```math
 Output \ Voltage \  = 20v\ DV
 ```
-First Buck-Boost converter:
-Used the step-down voltage from 20v DC to get 12v DC
-Fs = 100KHz
-T = 10ms
+| No. | Subsystem | Voltage | Current |
+| --- | ----------- | ------ | ------ |
+| 1  | Buck-Boost converter | 17 V | 0.3 A |
 
+```math
+{\rm V}_{IN} =  17V   to   21.03V
+```
+```math
+{\rm V}_{OUT} = 12v
+```
+```math
+{\rm Maximum I}_{OUT} = 0.7A
+```
+```math
+{\rm R}_{LOAD} = \frac{ 12 } { 0.7} = 17.1 Ω
+```
 ```math
 Vout \ = D * Vin
 ```
 ```math
-Duty\ Ratio  = \frac{ 12 } { 20} = 0.6
+Duty\ Ratio  = \frac{ 12 } { 17} = 0.7
 ```
 ```math
-Vs\ ={L}\times \frac{ I } { Tno} +{12}  
+{\rm F}_{s} = 100KHz
 ```
 ```math
-20\ ={L}\times \frac{ 0.6 } { 6} +{12}  
+{\rm C}_{OUT} = 44uF 
 ```
+```math
+{\rm L} = 10uH 
+```
+As Given C out and L from Datasheet.
 
-```math
-8  = \frac{L} { 10} 
-```
-```math
-L = 80uH 
-```
-```math
-C  = \frac{ D\ Io } {8Fs\ Vo} 
-```
-```math
-C = 15 mF
-```
+Inductor Selection: 
+
 
 
 Feedback voltage input:
