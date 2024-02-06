@@ -105,7 +105,8 @@ Duty\ Ratio  = \frac{ 12 } { 17} = 0.7
 {\rm Switch \ pin \ minimum \ low \ t}_{low} = 0.05us
 ```
 
-
+Inductor Selection:
+From the datasheet, input 4.7uH, which is the best performance with an inductor.
 ```math
  {\rm ∆I _{L}}_{p-p(BUCK)}\ = \frac{V_{OUT}} {L\ }\  \ast\ (\frac{V_{IN}-{V_{OUT}}}{V_{IN}}) \ast\ (\frac{1}{f}-{t_{low}}) Amps
 ```
@@ -125,8 +126,19 @@ Vout  = 1+ \frac{Rtop} { Rbot}
 12  = 1+ \frac{ 190k } {Rbot} 
 ```
 ```math
-Rbot = 17k
+Rbot  \ (R4) = 17k
 ```
+
+
+Input and Output Capacitor Selection:
+
+From the datasheet, the input for Capacitor 10uH  and the output for Capacitor 44uF, which is the best performance with an inductor.
+
+| No. | Subsystem | Voltage | Current |
+| --- | ----------- | ------ | ------ |
+| 2  | Buck converter | 5.5 V | 0.25 A |
+
+
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
 | --- | -------- | ------ | ----- | ------------------------ | --------- | ------------------ |
