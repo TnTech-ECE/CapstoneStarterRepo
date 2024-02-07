@@ -32,7 +32,7 @@ Results for minimum speed required
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/MATLAB_speed.png) 
 
 **Constraint Solution 2:**
-
+To reduce noise from the DC motors 
 
 
 **Constraint Solution 3:**
