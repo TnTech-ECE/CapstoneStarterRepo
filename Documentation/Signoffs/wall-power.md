@@ -303,7 +303,7 @@ As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. Th
 
 6. subsystem one for The current 250mA. 
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f81d0f1a-620e-4a7e-a5b0-fd45ca79a210) 
+<img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/b8047f4f-d1b3-4a99-87f5-95b3ed001e6f">
 
 7. subsystem Two for the current 50mA  
 
