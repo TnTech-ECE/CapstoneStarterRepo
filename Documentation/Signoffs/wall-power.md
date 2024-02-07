@@ -30,7 +30,7 @@ Figure 1. Kicad schematic.
 
 Figure 2.Kicad schematic.
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/22ed6b98-9a01-4cd2-be48-144a3b56dba3)
+<img width="682" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2e106e42-a74c-4504-aafa-09c2f7e3c4d4">
 
 Figure 3.  LTspice circuit.
 
