@@ -23,11 +23,16 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 <img width="554" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/fd44d2a2-c110-43f6-b50a-bfd37c17dc03">
 
-Figure 1.
+Figure 1. Kicad schematic.
+
 
 <img width="565" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/10b6a241-da31-40f5-92b7-01cc5ed3fb99">
 
-Figure 2.
+Figure 2.Kicad schematic.
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/22ed6b98-9a01-4cd2-be48-144a3b56dba3)
+
+Figure 3.  LTspice circuit.
 
 # Analysis
 Circuit explanation: 
