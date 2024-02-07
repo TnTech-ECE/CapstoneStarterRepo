@@ -4,11 +4,12 @@ The Motor subsystem is the system that is the main drive train to the robot. The
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
 |--------|----------------------|------------------------|--------|
-| 1. | ISO 10218 | The robot shall stay in compliance with ISO 10218. | Safety and Competition Specification |
-| 2. | Time |  The robot shall traverse the course in under 2 minutes.| Competition Specification |
+| ~~1.~~ | ~~ISO 10218~~ | ~~The robot shall stay in compliance with ISO 10218.~~ | ~~Safety and Competition Specification~~ |
+| 2. | Time |  The motor shall be able to obtain an average speed of 2 inches a second in order to reach a time goal of 1:30. Team constraint| Competition Specification |
 | 3. | Circuit Protection |  The motors shall have the back EMF reduced to shield noise from the motor driver| Motor Shield Specifications |
-| 4. | Torque |  The motors shall have enough torque to traverse the crater| Competition Specification |
-| 5. |  |  |  |
+| 4. | Torque |  The motors shall be able to support a torque load of at least 6.8 kg*cm to drive a max weight of 25lbs up a 22.5-degree incline.  | Competition Specification |
+| 5. | Coupling  | The motor shall be able to couple to the 4 mm drive shaft on the treads of the chassis. Chassis specs | Chassis Specifications |
+| 6. | Versatility | They will be functionally independent of each other, so that they can operate at different speeds and directions | Team constraint |
 
 ## Buildable Schematic
 
