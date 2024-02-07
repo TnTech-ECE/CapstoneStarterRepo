@@ -20,7 +20,7 @@ Wiring Chart
 
 Main Power Distribution
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/MAIN.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/New_Main.png)
 
 Arduino Power Connections
 
