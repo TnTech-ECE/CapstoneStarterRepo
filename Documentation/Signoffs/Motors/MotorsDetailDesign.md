@@ -1,5 +1,5 @@
 ## Functionality
-The Motor subsystem is the system that is the main drive train to the robot. The drivetrain will consist of two dc motors. The motors are driven off of a L298 Dual H Bridge Motor Speed Controller to allow individual speed and direction control of the motors. 
+The Motor subsystem is the system that is the main drive train to the robot. The drivetrain will consist of two dc motors which are driven off of a L298 Dual H Bridge Motor Speed Controller that allows the robot to travel at the desired speed to complete the course in a  This subsystem will allow the correction of the chassis direction if the robot is not in the desired position.
 
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
@@ -16,17 +16,6 @@ Pinout Connections for DC Motors
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Motor_pinout.png)
 
-Command window parameters for DC motor model
-
-![Alt text]()
-
-First transfer function block parameters 
-
-![Alt text]()
-
-Second transfer function block parameters
-
-![Alt text]()
 
 ## Analysis
 
