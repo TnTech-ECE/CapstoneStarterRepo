@@ -262,6 +262,40 @@ Input Capacitor :
 
 As given in the Datasheet, the Input Capacitor is 10uF. This is enough for most uses.
 
+```math
+I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max)}}{V_{OUT}}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.25A\ast\ \frac{9V}{12V}\ast{(\frac{12V}{9}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.021A
+```
+Output Capacitor:
+
+As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. The practical series establishes the quantity of bulk capacitance required to ensure the control loop is stable and the choice of C OUT resistance (ESR) necessary to reduce voltage ripple and load step transients.
+###  Ltspice simulations 
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/85826a38-8647-45ef-94c7-22370cb69d43)
+1. The Transformer
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/a22ae370-b5f8-4171-8fbe-c28a07cba32c)
+2. The RC filter
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/75ef5c70-0ff6-4185-ae2e-67f3c96b0512)
+Buck-boost converter
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ba7a7f10-b724-4868-b76a-b7c61bd0ff23)
+3. Buck converter for subsystem 5.5v
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f2cf1a2d-a279-4222-b454-f5561ce36fdf)
+4. Buck converter for subsystem 9v
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f81d0f1a-620e-4a7e-a5b0-fd45ca79a210)
+
+5. Final result
+
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
 | --- | -------- | ------ | ----- | ------------------------ | --------- | ------------------ |
