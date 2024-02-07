@@ -49,6 +49,8 @@ The shaft of the motor selected is 3.5mm in diameter, so to be able to get the s
 
 **Constraint Solution 5:**
 
+In case of getting stuck, getting off course, or veering off from one motor rotating faster than the other, the motors will use a HAL effect encoder. This encoder allows determining position and speed control of the motors. 
+
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
 |------|-------------|-------------|--------------|----------|-------|-------------|
