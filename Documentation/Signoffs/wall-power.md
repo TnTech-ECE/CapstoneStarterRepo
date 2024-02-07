@@ -102,7 +102,7 @@ Output \ Voltage \  = 20v\ DV
 ```
 
 Inductor Selection:
-From the datasheet, input 4.7uH, which is the best performance with an inductor.
+From the datasheet, input 4.7uH, which performs best with an inductor.
 ```math
  {\rm ∆I _{L}}_{p-p(BUCK)}\ = \frac{V_{OUT}} {L\ }\  \ast\ (\frac{V_{IN}-{V_{OUT}}}{V_{IN}}) \ast\ (\frac{1}{f}-{t_{low}}) Amps
 ```
@@ -133,13 +133,134 @@ From the datasheet, the input for Capacitor 10uH  and the output for Capacitor 4
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
 | 2  | Data interpretation and Storage | 5.5 V | 0.25 A |
+```math
+{\rm V}_{IN} =  12V
+```
+```math
+{\rm V}_{OUT} = 5.5v
+```
+```math
+{\rm I}_{OUT} =  0.25A
+```
+```math
+{\rm f}  = 2.25MHz 
+```
+Inductor Selection:
+```math
+L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+```math
+L\ =\ \ \frac{5.5V}{2.25MHz\ \ast\ (0.4\ (0.25A)}\ \ast(1-\frac{5.5V}{12V})
+```
+```math
+L\ = 13.2 \mu H
+```
+So, the nearest for L is 15uH, and it fits well in the datasheet.
+
+For the operating frequency, expected input and output voltages, and other information, can define the value of the ripple current.
+
+```math
+{\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+
+```math
+{\rm ∆I}_{L} = \frac{5.5V}{(2.25MHz\ \ast\ 13.2 \mu H)} \ast(1-\frac{5.5v}{12v})
+```
+```math
+{\rm ∆I}_{L} = 0.100A
+```
+Feedback resistors Selection:
+As given from the Datasheet, we can select a high resistor value for R6 to be 196kΩ.
+
+```math
+V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{6}}{R_{7}})
+
+```
+```math
+5.5V=\ 0.6V\ \ast(1 +\frac{196kΩ}{R_{7}})
+```
+```math
+R_{6}= 24kΩ
+```
+
+Input Capacitor :
+
+As given in the Datasheet, the Input Capacitor is 10uF. This is enough for most uses.
+
+```math
+I_{RMS}\cong\ I_{OUT(max)}\ast\ \frac{V_{OUT}}{V_{IN(max)}}\ast{(\frac{V_{IN(max)}}{V_{OUT}}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.25A\ast\ \frac{5.5V}{12V}\ast{(\frac{12V}{5.5V}-1)}^\frac{1}{2}
+```
+
+```math
+I_{RMS}\cong\ 0.1245A
+```
+Output Capacitor:
+As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. The practical series establishes the quantity of bulk capacitance required to ensure the control loop is stable and the choice of C OUT resistance (ESR) necessary to reduce voltage ripple and load step transients.
 
 
 | No. | Subsystem | Voltage | Current |
 | --- | ----------- | ------ | ------ |
 | 3  | Sensor | 9 V | 0.05 A |
 
+```math
+{\rm V}_{IN} =  12V
+```
+```math
+{\rm V}_{OUT} = 9v
+```
+```math
+{\rm I}_{OUT} =  0.5A
+```
 
+```math
+{\rm f}  = 2.25MHz 
+```
+
+Inductor Selection:
+
+```math
+L\ = \frac{V_{OUT}}{f\ \ast\ {\rm ∆I}_{L(max)}}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+```math
+L\ =\ \ \frac{9V}{2.25MHz\ \ast\ (0.4\ (0.05A)}\ \ast(1-\frac{9V}{12V})
+```
+```math
+L\ = 50 \mu H
+```
+So, the nearest for L is 68uH, and it fits well in the datasheet.
+
+For the operating frequency, expected input and output voltages, and other information, can define the value of the ripple current.
+
+```math
+{\rm ∆I}_{L} = \frac{V_{OUT}}{f\ \ast\ L}\ \ast(1-\frac{V_{OUT}}{V_{IN(max)}})
+```
+
+```math
+{\rm ∆I}_{L} = \frac{9V}{(2.25MHz\ \ast\ 50 \mu H)} \ast(1-\frac{9v}{12v})
+```
+```math
+{\rm ∆I}_{L} = 0.02A
+```
+Feedback resistors Selection:
+As given in the Datasheet, I select the resistor value for R8 to be 140kΩ.
+
+```math
+V_{OUT}=\ 0.6V\ \ast(1 +\frac{R_{8}}{R_{9}})
+
+```
+```math
+9V=\ 0.6V\ \ast(1 +\frac{140kΩ}{R_{9}})
+```
+```math
+R_{9}= 9.5kΩ
+```
+Input Capacitor :
+
+As given in the Datasheet, the Input Capacitor is 10uF. This is enough for most uses.
 
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
@@ -148,7 +269,7 @@ From the datasheet, the input for Capacitor 10uH  and the output for Capacitor 4
 | b. | Data interpretation, Transmission, and Storage | 5 V | 0.25A | 5 * 0.25 = 1.25W | 24h | 30Wh | 
 | | | | | Total Rated Wattage = 1.7W | | Energy Consumption=40.8Wh |
 
-The backup battery selection is going to be dependent on multiple aspects. Since we are using a power controller with an input voltage of 12 V DC. Therefore, the battery selected to be a 12V battery Seal lead acid. Moreover, the battery capacity ( Ah ) will be determined by applying these calculations.
+The backup battery selection is going to be dependent on multiple aspects. since we are using a power controller with an input voltage of 12 V DC. Therefore, the battery selected to be a 12V battery Seal lead acid. Moreover, the battery capacity ( Ah ) will be determined by applying these calculations.
 Referring to the Table [ ]
 
 ```math
