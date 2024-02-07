@@ -12,21 +12,21 @@ The Motor subsystem is the system that is the main drive train to the robot. The
 
 ## Buildable Schematic
 
-Simulink transfer function block model for a DC motor
+Pinout Connections for DC Motors
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Simulink_Model.png)
+![Alt text]()
 
 Command window parameters for DC motor model
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Command_parameters.png)
+![Alt text]()
 
 First transfer function block parameters 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Transfer_block1.png)
+![Alt text]()
 
 Second transfer function block parameters
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Transfer_block2.png)
+![Alt text]()
 
 ## Analysis
 
