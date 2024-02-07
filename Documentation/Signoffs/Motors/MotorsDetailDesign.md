@@ -37,13 +37,6 @@ Results for minimum speed required
 
 **Constraint Solution 3:**
 
- 
-
-
-
-
-**Constraint Solution 3:**
-
 The motor that is selected spec sheet shows the different conditions of operation of the speed, torque, current, and max efficiency of the motors selected. From observing the spec sheet we can see that the motor will be able to pull the weight in order to pull the weight of the robot up the 22.5 degree incline we need to be able to support 6.8 kg-cm. The yellow line in the graph below shows the torque, the 
 purple line shows the RPM the motos will rotate at 6.8 kg-cm which is right around 28 RPM which is perfect for meeting our average RPM speed, and the brown line shows the current draw at 6.8 kg-cm which is about 0.65 amps of current at the max torque our motors will need to overcome. 
 
@@ -53,6 +46,8 @@ purple line shows the RPM the motos will rotate at 6.8 kg-cm which is right arou
 **Constraint Solution 4:**
 
 The shaft of the motor selected is 3.5mm in diameter, so to be able to get the shaft of the motor to couple to the drive train of the robot chassis, there will be a 3.5mm to 4mm coupler that will allow the motor to transfer power to the treads.
+
+**Constraint Solution 5:**
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
