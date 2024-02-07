@@ -39,7 +39,7 @@ Second transfer function block parameters
 
 **Constraint Solution 2:**
 
-
+The motor shall have an average rotation speed of at least 28 RPM. This rpm will give us our minimum speed needed to reach the goal of at least 2 inches per second. This calculation was done based off the radius of the drive wheel which is 0.69 inches. Then finding the circumference using Circumference=2*pi*radius we find that that the circumference equals 4.335 inches. Then take the RPM speed of the motor and divide it by 60 to convert to rotations per second. After obtaining the RPS speed we multiply this number by our circumference and get our inches per second speed which is approximately 2.0230 inches per second. 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/RPM.png)
 
