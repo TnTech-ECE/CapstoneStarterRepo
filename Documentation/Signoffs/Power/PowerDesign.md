@@ -75,9 +75,15 @@ To make room for the power distribution board, buck converters, and emergency ON
 In order to prevent the wire from overheating from overcurrent draw from the battery, the power subsystem will use 16-gauge wires. This gauge of wire is capable of hosting up to 13 amps max. This wire was also chosen because the next smallest wire is 18-gauge wire, which can only hose 5 amps and out battery can supply 5.2-amp hours.
 
 **Constraint Solution 2:**
-The IEEE SECON competion requires that all competitors must have an emergency shut off switch for the safey concerns. In order to effectively cut power from all subsystems and not just cut power from the main controller is to implement a stop button or toggle switch that cuts power from the battery to the power distribution board. The power distribution board that will be used is a Evemodel PCB012 Power Distribution Board. This board has pins connected to implement a switch that cuts power from the battery to all ports of the distribution board.
+The IEEE SECON competion requires that all competitors must have an emergency shut off switch for the safey concerns. In order to effectively cut power from all subsystems and not just cut power from the main controller is to implement a stop button or toggle switch that cuts power from the battery to the power distribution board. The power distribution board that will be used is a Evemodel PCB012 Power Distribution Board. This board has pins connected to implement a switch that cuts power from the battery to all ports of the distribution board. The main controller will not be connected to the main power distribution board. This is to prevent the main controller from getting turned off from the emergency ON/OFF switch that turns off power to all the other subystem components. To seperate power connections from the emergency ON/OFF switch, the battery wires will be split using a 1 in 2 out terminal block splice connector. This will allow two seperate wires for each of the positve end of the battery terminal and the negative end of the battery terminal. One pair of positive and negative wires will go to the power distribution board while the other pair will go to the main controller. 
+
+Emergency Switch Connection to Power Distribution Board
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Emergency_Switch.png)
+
+1 in 2 out splice
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Splice.png)
 
 **Constraint Solution 3:** 
 For organization and easier maintenance, wires from the the distribution board will be seperated using wire seperators. The wires will also have printed labeles that show what location the wire is coming from and what subsystem it is going to. The power susbystem connectors shall be mainly comprised of screw terminals to allow easy access for checking and maintaining the wires. The connection from the battery to the power distribution board will use Dean style connector. The connection from the power distribution board to the arduino will use a DC jack for supplying power to the board.
