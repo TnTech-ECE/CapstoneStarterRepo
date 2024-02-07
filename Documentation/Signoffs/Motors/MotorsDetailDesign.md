@@ -1,5 +1,5 @@
 ## Functionality
-The Motor subsystem is the system that is the main drive train to the robot. The drivetrain will consist of two dc motors which are driven off of a L298 Dual H Bridge Motor Speed Controller that allows the robot to travel at the needed speed to complete the course in a desirable time. This subsystem will allow the correction of the chassis direction if the robot is not in the desired position.
+The Motor subsystem is the system that is the main drive train to the robot. The drivetrain will consist of two dc motors which are driven off of a L298 Dual H Bridge Motor Speed Controller that allows the robot to travel at the needed speed to complete the course in a desirable time. This subsystem will allow the correction of the chassis position if the robot is not in the desired direction.
 
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
