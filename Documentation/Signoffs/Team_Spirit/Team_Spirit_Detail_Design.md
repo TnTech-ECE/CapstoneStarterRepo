@@ -71,11 +71,23 @@ Figure 6: The circuit design of the Team Spirit Subsystem.
 
 Analysis:
 
-An N-MOS will be used to control the current to the LED lights. An LTSpice analysis has been performed to determine the operational region of the N-MOS and the compatibility with the circuit. The analysis of the cicuit yeilded the following: with a gate voltage of 5 volts from each impulse of the microcontrollers DIO, the voltage of the drain terminal is 27 mV during operation, and each device is supplied 20 mA of current. 
+An N-MOS will be used to control the current to the LED lights. An LTSpice analysis has been performed to determine the operational region of the N-MOS and the compatibility with the circuit. The analysis of the cicuit yeilded the following: with a gate voltage of 5 volts from each impulse of the microcontrollers DIO, the voltage of the drain terminal is 5 volts during operation, and each device is supplied 20 mA of current. The gate volatge of each MOSFET is 5 volts during operation and 0 volts when not in operation. This values verfiy the initial calculations of the design and suit the parameters of the LED strips. 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/capstonespice.PNG)
 
-Figure 7: LTSpice analysis of the Team Spirits N-MOS functionality
+Figure 7: LTSpice analysis of the Team Spirits N-MOS functionality as an operating point analysis
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/MOSFETCIRCUIT.PNG)
+
+Figure 8: LTSpice analysis of the Team Spirit N-MOS functionality as a transient analysis with pulsed sources
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmos1.PNG)
+
+Figure 9: Plot of N-MOS characteristics of strip A
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmos2.PNG)
+
+Figure 10: Plot of N-MOS characteristics of strip B
 
 Constraint Solutions:
 
@@ -126,4 +138,4 @@ The LED lights shall not tamper with the IR sensors of the navegation system. Th
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/data%20points.txt)
 
-Figure 8: All data points produced during the electrical analysis of the N-MOS.
+Figure 11: All data points produced during the electrical analysis of the N-MOS.
