@@ -25,12 +25,13 @@ My main wall power subsystem input 120v AC. The main wall power has a transforme
 
 Figure 1. Kicad schematic.
 
+<img width="533" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/59b7bdb5-850a-4419-89f9-fc26030403ad">
 
-<img width="565" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/10b6a241-da31-40f5-92b7-01cc5ed3fb99">
 
 Figure 2.Kicad schematic.
 
-<img width="682" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2e106e42-a74c-4504-aafa-09c2f7e3c4d4">
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/80d81f0b-1505-4cbe-aab9-bea52dd7c6fe)
+
 
 Figure 3.  LTspice circuit.
 
@@ -278,23 +279,35 @@ Output Capacitor:
 As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. The practical series establishes the quantity of bulk capacitance required to ensure the control loop is stable and the choice of C OUT resistance (ESR) necessary to reduce voltage ripple and load step transients.
 ###  Ltspice simulations 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/85826a38-8647-45ef-94c7-22370cb69d43)
+
 1. The Transformer
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/a22ae370-b5f8-4171-8fbe-c28a07cba32c)
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/a22ae370-b5f8-4171-8fbe-c28a07cba32c) 
+
 2. The RC filter
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/75ef5c70-0ff6-4185-ae2e-67f3c96b0512)
-Buck-boost converter
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/75ef5c70-0ff6-4185-ae2e-67f3c96b0512) 
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ba7a7f10-b724-4868-b76a-b7c61bd0ff23)
-3. Buck converter for subsystem 5.5v
+3. Buck-boost converter
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f2cf1a2d-a279-4222-b454-f5561ce36fdf)
-4. Buck converter for subsystem 9v
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ba7a7f10-b724-4868-b76a-b7c61bd0ff23) 
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f81d0f1a-620e-4a7e-a5b0-fd45ca79a210)
+ 
+4. Buck converter for subsystem 5.5v
 
-5. Final result
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f2cf1a2d-a279-4222-b454-f5561ce36fdf) 
+
+5. Buck converter for subsystem 9v
+
+<img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/4b6eb468-48f5-4a7e-bef4-76bb4fc6b212"> 
+
+6. subsystem one for The current 250mA. 
+
+![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f81d0f1a-620e-4a7e-a5b0-fd45ca79a210) 
+
+7. subsystem Two for the current 50mA  
+
+
 
 ###  Backup Battery
 | No. | Subsystem | Voltage | Current | Rated Wattage[W]| Hours per day used [ h ] | Energy Consumption [ Wh ] |
