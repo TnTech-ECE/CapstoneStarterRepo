@@ -58,7 +58,7 @@ Results
 **Constraint Solution 4:**
 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Torque.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Graph_of_dc_motors.png)
 
 
 **Constraint Solution 5:**
