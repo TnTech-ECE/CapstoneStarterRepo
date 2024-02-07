@@ -51,6 +51,7 @@ Results
 
 **Constraint Solution 3:**
 
+ 
 
 
 
@@ -65,8 +66,7 @@ purple line shows the RPM the motos will rotate at 6.8 kg-cm which is right arou
 
 **Constraint Solution 5:**
 
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Current.png)
+The shaft of the motor selected is 3.5mm in diameter, so to be able to get the shaft of the motor to couple to the drive train of the robot chassis, there will be a 3.5mm to 4mm coupler that will allow the motor to transfer power to the treads.
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
