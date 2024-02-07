@@ -343,28 +343,29 @@ From using the calculation form datasheet[6]
 | Full wave Bridge Rectifier | GBU404, MB12S-TP | 1| $1.36 | $1.36 |
 | Battery |ML12-12F2 | 1 | $27.99 | $27.99 |
 | Inductor 10uH | DFE201210U-R47MP2 | 1 | $0.32 | $0.32 | ----- |
-| Inductor 15uH | XFL3012-153MEC | 2 | $2.08 | $2.08 | ----- |
+| Inductor 15uH | XFL3012-153MEC | 1 | $2.08 | $2.08 | ----- |
 | Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 | ----- |
-| Resistor 270Ω | -----| 1 | $0.1|-----|
-| Resistor 20kΩ | -----| 1 | $0.1|-----|
-| Resistor 56.2kΩ | -----| 1 | $0.1|-----|
-| Resistor 190Ω | -----| 1 | $0.1|-----|
-| Resistor 17kΩ | -----| 1 | $0.1|-----|
-| Resistor 196kΩ | ERJ-1GNF1963C | 2 | $0.1 | $0.2 |
-| Resistor 24kΩ | ERJ-1GNF2402C | 1 | $0.1 | $0.1 |
-| Resistor 14kΩ | ERJ-1GNF1402C | 1 | $0.1 | $0.1 |
-| capacitor 200uF | ----- | 1 | ----- | ----- | ----- |
+| Resistor 270Ω | ERJ-U02D2700X | 1 | $0.10 | $0.10 |
+| Resistor 20kΩ | RC0603FR-0720KL | 1 | $0.10| $0.10 |
+| Resistor 56.2kΩ | CRCW201056K2FKEF | 1 | $0.29 | $0.29 |
+| Resistor 190Ω | WSL2512R0190FEA18 | 1 | $0.10 | $0.10 |
+| Resistor 17kΩ | RMCF0402FT16K9 | 1 | $0.10 | $0.10 |
+| Resistor 196kΩ | ERJ-1GNF1963C | 1 | $0.1 | $0.10 |
+| Resistor 24kΩ | ERJ-1GNF2402C | 1 | $0.1 | $0.10 |
+| Resistor 140kΩ | CR0603-FX-1403ELF | 1 | $0.10 | $0.10 |
+| Resistor 14kΩ | ERJ-1GNF1402C | 1 | $0.1 | $0.10 |
+| capacitor 200uF | C2220C204KBGLCAUTO | 1 | $4.37 | $4.37 | ----- |
 | capacitor 10uF | C3216JB1E106M160AB | 3 | $0.56 | $1.68 | ----- |
-| capacitor 68uF | ----- | 2 | ----- | ----- | ----- |
-| capacitor 33nF | ----- | 1 | ----- | ----- | ----- |
-| capacitor 10pF | ----- | 1 | ----- | ----- | ----- |
-| capacitor 10nF | ----- | 1 | ----- | ----- | ----- |
-| capacitor 4.7uF | ----- | 1 | ----- | ----- | ----- |
-| capacitor 44uF | ----- | 1 | ----- | ----- | ----- |
+| capacitor 68uF | MSS7348-683MEC | 2 | $2.62 | $4.52 | ----- |
+| capacitor 33nF | 1206CC333KAT2A | 1 | $0.71 | $0.71 | ----- |
+| capacitor 10pF | KGQ05FCG1H100GH | 1 | $0.24 | $0.24 | ----- |
+| capacitor 10nF | KAM15AR72A103KM | 1 | $0.31 | $0.31 | ----- |
+| capacitor 4.7uF | C1608X5R1E475K080AC | 1 | $0.32 | $0.32 | ----- |
+| capacitor 44uF | C1812C444K5GLCAUTO | 1 | $3.47| $3.47 | ----- |
 | capacitor 1uF | C3216X8R1E105M160AA | 2 | $0.42 | $0.84 | ----- |
 | capacitor 22pF | C3216CH2J221J060AA | 2 | $0.21 | $0.42 | ----- |
 | capacitor 22uF | C3216JB1C226M160AB | 2 | $0.64 | $1.28 | ----- |
-| Total | ----- |-----| -----| ----- |
+| Total | ----- |-----| -----| $139.73 |
 
 # References:
 1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
