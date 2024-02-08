@@ -4,7 +4,7 @@ The Motor subsystem is the system that is the main drive train to the robot. The
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
 |--------|----------------------|------------------------|--------|
-| 1. | Time |  The motor shall be able to obtain an average speed of 2 inches a second in order to reach a time goal of 1:30. Team constraint| Competition Specification |
+| 1. | Time |  The motor shall be able to obtain an average speed of 2 inches a second in order to reach a time goal of 1:30 | Strategy Specifications |
 | 2. | Circuit Protection |  The motors shall have the back EMF reduced to shield noise from the motor driver| Motor Shield Specifications |
 | 3. | Torque |  The motors shall be able to support a torque load of at least 6.8 kg*cm to drive a max weight of 25lbs up a 22.5-degree incline.  | Competition Specification |
 | 4. | Coupling  | The motor shall be able to couple to the 4 mm drive shaft on the treads of the chassis. Chassis specs | Chassis Specifications |
