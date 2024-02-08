@@ -40,7 +40,7 @@ To reduce noise from the DC motors
 The motor that is selected spec sheet shows the different conditions of operation of the speed, torque, current, and max efficiency of the motors selected. From observing the spec sheet we can see that the motor will be able to pull the weight in order to pull the weight of the robot up the 22.5 degree incline we need to be able to support 6.8 kg-cm. The yellow line in the graph below shows the torque, the 
 purple line shows the RPM the motos will rotate at 6.8 kg-cm which is right around 28 RPM which is perfect for meeting our average RPM speed, and the brown line shows the current draw at 6.8 kg-cm which is about 0.65 amps of current at the max torque our motors will need to overcome. 
 
-                                                   Selected motors data sheet
+Selected motors data sheet
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Graph_of_dc_motors.png)
 
