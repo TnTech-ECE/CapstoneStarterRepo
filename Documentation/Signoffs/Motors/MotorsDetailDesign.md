@@ -33,7 +33,7 @@ Results for minimum speed required
 
 **Constraint Solution 2:**
 
-To reduce EMF noise from affecting the main control, a motor shield will be connected to both of the DC motors. When the motors are turned off there is a big change in the magnetic field around the motor windings. A voltage spike occurs from the the drastic change in magnetic field from the motor windings, but having the motor shield can redirect the spike back through the motors. 
+To reduce EMF noise from affecting the main control, a motor shield will be connected to both of the DC motors. When the motors are turned off there is a big change in the magnetic field around the motor windings. A voltage spike occurs from the this drastic change in magnetic field, but having the motor shield can redirect the spike back through the motors instead of the main control.
 
 Motor Shield
 
