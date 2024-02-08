@@ -16,6 +16,10 @@ Pinout Connections for DC Motors
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/New_Motor_Pinout.png)
 
+Wires from motor pinout
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Wire_pinout.png)
+
 
 ## Analysis
 
