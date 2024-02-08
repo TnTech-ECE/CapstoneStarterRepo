@@ -27,8 +27,9 @@ This subsystem will input solar power from the range of 0 V to 24 V and will out
 ## Battery and Solar Power
 
 ## Arduino Nano
-The Arduino is in charge of controlling the amount of power that is directed from the solar panels to the battery chargers. This will be accomplished through a greedy algorithm utilizing pulse width modulation (PWM) on a power MOSFET. 
+The Arduino is in charge of controlling the amount of power that is generated from the solar panels to the battery chargers. This will be accomplished through a greedy algorithm utilizing pulse width modulation (PWM) on a power MOSFET. 
 
+### Greedy Algorithm
 The algorithm has one responsibility: send as much current to the battery chargers as possible without negatively affecting the output current to the system. 
 
 *Figure 3. Greedy Algorithm*
@@ -39,14 +40,25 @@ The algorithm has one responsibility: send as much current to the battery charge
 The Arduino will take two inputs to control the PWM rate: output current and the 12 V supplied from the solar panel MPPC BuckBoost. A current sensor at the system's output will be used to detect if the algorithm is taking away current from the system to try to supply the battery chargers. The output of the solar panel BuckBoost is used to validate that the algorithm has power to try to charge the batteries. 
 
 ### Current Sensor
+
 The current sensor being used is the _ACS724LLCTR-05AU-T_. It has an analog output of up to Vcc + 0.5 V corresponding to the current levels from 0 A to 5 A. The maximal output voltage is 5.5 V which corresponds to 5 A. 
 
+*Figure 4. Current Sensor*
+
+![Current_Sensor](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/77c480b2-e3f3-470d-a903-46c6adff1ef6)
+
 The Arduino nano can only handle analog voltages up to 5 V. 5.5 V can damage the Arduino's input pins. The system's current usage has been calculated to be less than an amp, which means that the output voltage from the current sensor is not going to reach 5.5 V. The Arduino's analog pins will not be damaged by the system's expected current usage. 
+
+The capacitors connected to the current sensor are derived from the current sensor datasheet.
 
 ### MPPC Output Voltage Detection
 The Solar Panel's MPPC Outvoltage will be read using one of the Arduino's analog pins. The maximum voltage for the MPPC Outputvoltage is 12 V and the maximum voltage that the Arduino can take on its analog pins is 5 V.
 
 A voltage divider using two resistors will be used to divide the voltage down from 12 V to 4.5 V. 4.5 V will be used to give 0.5 V of room for any ripple voltage from the BuckBoost. 
+
+*Figure 5. MPPC Output Voltage Detection*
+
+![MPPC_OutputVoltage_MCU](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/8ba78edc-a9bd-4dae-b528-dedf64751925)
 
 ```math
 V_{Arduino} = V_{BUCKBOOST} ( \frac{R_{2}}{R_{1} + R_{2}})
@@ -55,13 +67,40 @@ V_{Arduino} = V_{BUCKBOOST} ( \frac{R_{2}}{R_{1} + R_{2}})
 R_2 is arbitrarily set to 10 kΩ.
 
 ```math
-4.5 = 12 ( \frac{10,000}{R_{1} + 10,000})
+=>4.5 = 12 ( \frac{10,000}{R_{1} + 10,000})
 ```
 ```math
 ```
 ```math
 R_{1} = 16,666 Ω = 17 kΩ
 ```
+### Pulse Width Modulation Control
+The Arduino will be controlling a power MOSFET that sends 8 V to both of the battery charger ICs. To achieve a voltage high enough to drive the MOSFET, 12 V from the output of the MPPC Buck Boost, a noninverting operational amplifier circuit will be used. 
+
+The _TLV9361QDCKRQ1_ Operational Amplifier has been chosen for its supply range of 2.25 V to 20 V.
+
+The circuit and analysis are shown below:
+
+*Figure 6. Noninverting Operational Amplifier Circuit*
+
+![NonInvertingOpAmp](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/8a7621e7-263d-4556-a525-12bc407a4e9c)
+
+```math
+V_{out} = V_{McuOut} ( \frac{R_{1} + R_{2}}{R_{2}})
+```
+
+R_2 is arbitrarily set to 10 kΩ.
+
+```math
+=>12 = 5 ( \frac{R_{1} + 10,000}{10,000})
+```
+```math
+```
+```math
+R_{1} = 14 kΩ
+```
+
+Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control according to the Nano's Datasheet.
 
 ### Arduino Power Initialization
 The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during the power initialization of the system.
@@ -566,7 +605,7 @@ C_{OUT} >= 65 uF
 
 ## Battery Charging and Discharging Switching Logic
 
-![SwitchingLogicSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/da172cf9-7878-4793-9c5a-bc8ed448d146)
+Batteries can not be charged and discharged at the same time. Relay circuity has been designed to switch the batteries from a disconnected orientation for charging to a parallel orientation for discharging. 
 
 ## Overcharge and Deep Discharge Protection
 
