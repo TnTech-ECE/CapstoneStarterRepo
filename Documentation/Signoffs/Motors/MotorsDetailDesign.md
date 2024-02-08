@@ -59,7 +59,7 @@ DC motor dimensions for 172:1
 
 **Constraint Solution 5:**
 
-In case of getting stuck, getting off course, or veering off from one motor rotating faster than the other, the motors will use a HAL effect encoder. This encoder allows determining position and speed control of the motors by using the output signal of the sensor. 
+In case of getting stuck, getting off course, or veering off from one motor rotating faster than the other, the motors will use a HAL effect encoder. This encoder allows determining position and speed control of the motors by using the output signal of the sensor. This sensor in conjuction with the motor shield can also allow the robot to back up to get back into correct position if needed.
 
 Enoder
 
