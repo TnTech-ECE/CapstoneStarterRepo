@@ -32,8 +32,12 @@ Results for minimum speed required
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/MATLAB_speed.png) 
 
 **Constraint Solution 2:**
-To reduce noise from the DC motors 
 
+To reduce EMF noise from affecting the main control, a motor shield will be connected to both of the DC motors. When the motors are turned off there is a big change in the magnetic field around the motor windings. A voltage spike occurs from the the drastic change in magnetic field from the motor windings, but having the motor shield can redirect the spike back through the motors. 
+
+Motor Shield
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Motor_shield.png)
 
 **Constraint Solution 3:**
 
