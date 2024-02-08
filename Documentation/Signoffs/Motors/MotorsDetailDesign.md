@@ -55,7 +55,7 @@ The chassis of the robot has drive gears attached to the treads, and attached to
 
 Coupler used to attach motor shaft to chassis
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Coupler.png)
+![Alt text]()
 
 **Constraint Solution 5:**
 
