@@ -78,4 +78,4 @@ Enoder
 |------|-------------|-------------|--------------|----------|-------|-------------|
 | Motors | Metal gear DC motors used to drive robot chassis | 4868 | Pololu | 2 | $45.95 | $91.90 |
 | Motor Shield | Protects main controller and allows more outputs | N/A | Drok | 1 | $15.99 | $15.99 |
-| | | | | | | |
+| | | | | | | $107.89 |
