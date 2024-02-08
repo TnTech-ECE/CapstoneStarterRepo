@@ -14,7 +14,7 @@ The Motor subsystem is the system that is the main drive train to the robot. The
 
 Pinout Connections for DC Motors
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/New_Motor_Pinout.png)
+![Alt text]()
 
 Wires from motor pinout
 
