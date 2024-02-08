@@ -51,7 +51,7 @@ Selected motors data sheet
 
 **Constraint Solution 4:**
 
-The shaft of the motor selected is 3.5mm in diameter, so to be able to get the shaft of the motor to couple to the drive train of the robot chassis, there will be a 3.5mm to 4mm coupler that will allow the motor to transfer power to the treads.
+The chassis of the robot has drive gears attached to the treads, and attached to the drive gear are the DC motor shafts. The coupling for the shaft to the drive gear requires that the motor shaft should be 4mm in diameter and have a D-cut slot on the shaft. The motor that has been selected also has a 4mm diameter shaft that has a D-cut slot for better connection between the coupler and the drive gear. 
 
 Coupler used to attach motor shaft to chassis
 
