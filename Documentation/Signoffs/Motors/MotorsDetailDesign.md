@@ -53,9 +53,9 @@ Selected motors data sheet
 
 The chassis of the robot has drive gears attached to the treads, and attached to the drive gear are the DC motor shafts. The coupling for the shaft to the drive gear requires that the motor shaft should be 4mm in diameter and have a D-cut slot on the shaft. The motor that has been selected also has a 4mm diameter shaft that has a D-cut slot for better connection between the coupler and the drive gear. 
 
-Coupler used to attach motor shaft to chassis
+DC motor dimensions
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Motor_dimensions.png)
 
 **Constraint Solution 5:**
 
