@@ -58,21 +58,21 @@ A voltage divider using two resistors will be used to divide the voltage down fr
 
 *Figure 5. MPPC Output Voltage Detection*
 
-![MPPC_OutputVoltage_MCU](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/8ba78edc-a9bd-4dae-b528-dedf64751925)
+![MPPC_OutputVoltage_MCU](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/9da74e91-6231-459a-a25a-85d8d91f222f)
 
 ```math
-V_{Arduino} = V_{BUCKBOOST} ( \frac{R_{2}}{R_{1} + R_{2}})
+V_{Arduino} = V_{BUCKBOOST} ( \frac{R_{15}}{R_{16} + R_{15}})
 ```
 
-R_2 is arbitrarily set to 10 kΩ.
+R_15 is arbitrarily set to 10 kΩ.
 
 ```math
-=>4.5 = 12 ( \frac{10,000}{R_{1} + 10,000})
+=>4.5 = 12 ( \frac{10,000}{R_{16} + 10,000})
 ```
 ```math
 ```
 ```math
-R_{1} = 16,666 Ω = 17 kΩ
+R_{15} = 16,666 Ω = 17 kΩ
 ```
 ### Pulse Width Modulation Control
 The Arduino will be controlling a power MOSFET that sends 8 V to both of the battery charger ICs. To achieve a voltage high enough to drive the MOSFET, 12 V from the output of the MPPC Buck Boost, a noninverting operational amplifier circuit will be used. 
