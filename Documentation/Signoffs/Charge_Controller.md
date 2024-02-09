@@ -127,6 +127,8 @@ The activiation voltage of 5 V has been derived from the diagram obtained from t
 
 The highlighted portion of the chart shows that a 5 V input at 1 MHz switching frequency and 12 V output should be able to produce 1 A of current. This amount of current will be sufficient to power the system. 
 
+This graph also shows that at 12 and 15 V inputs, 8 A of current can be drawn. When the solar panel is producing anywhere from 12 to 18 V, the MPPC Buckboost will be able to generate enough current to charge both batteries at a rate near their maximum charge current of 3.6 A each through the LTC4020 ICs.
+
 ### Datasheet Provided Values:
 ```math
 C_{BST1}\ = 0.22 uF
