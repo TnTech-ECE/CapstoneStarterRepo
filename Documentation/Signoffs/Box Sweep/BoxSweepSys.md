@@ -27,11 +27,11 @@ The box sweep shall use a servo to rotate the arm of the sweep system out and re
 The blue bubble represents the servo of the sweep system. The grey is the chassis, including the mounting point for the servo assembly that extends from the right hand side of the robot an inch out from the tracks, as shown in the model above, which will be designed and fabricated by the mechanical team. The red bar is the arm attached to the servo. Below is an electrical diagram of the servo connected to a buck converter to power the motor.
 <br />
 <br />
-![Box Sweep Pinout](https://github.com/cebttu/CapstoneTeam1/assets/143427017/11aee153-4096-441c-984f-074d1cd05cbc)
+![Box Sweep Pinout 2](https://github.com/cebttu/CapstoneTeam1/assets/143427017/37abafcf-d26c-440f-b7df-0feb932debee)
 <br /> Figure 2: Box Sweep Electrical Pinout
 <br />
 <br />
-
+The connection on theleft goes to the main controller, and the battery connections will beshown in more detail in the power subsystem's electrical diagram. The connections to the exact pins on the main controller will be show in that subsystem as well.
 ## Analysis of Subsystem
 Constraint 1: 
 <br />
