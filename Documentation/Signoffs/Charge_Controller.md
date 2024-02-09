@@ -104,6 +104,28 @@ R_2 is arbitrarily set to 10 kΩ.
 R_{1} = 14 kΩ
 ```
 
+The MPPC Output is 12 V. To divide it down to 8 V to allow the MOSFET to be controlled at 12 V, a voltage divider circuit has been implemented. 
+
+*Figure 8. MPPC Output Voltage Division*
+
+
+![MPPC_Division](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/da63a1d5-d8bf-410f-91e1-a913e67af3a7)
+
+```math
+V_{DividedMppc} = V_{MPPC_OUT} ( \frac{R_{4}}{R_{3} + R_{4}})
+```
+
+R_4 is arbitrarily set to 10 kΩ.
+
+```math
+=>8 = 12 ( \frac{10,000}{R_{3} + 10,000})
+```
+```math
+```
+```math
+R_{3} = 5 kΩ
+```
+
 Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control according to the Nano's Datasheet.
 
 ### Arduino Power Initialization
@@ -111,7 +133,7 @@ The Arduino is powered by the Power Controller Subsystem which this subsystem ou
 
 ## LT3120 MPPC BuckBoost Converter
 
-*Figure 8. MPPC BuckBoost Schematic*
+*Figure 9. MPPC BuckBoost Schematic*
 
 ![MPPC_BuckBoost_Schematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/77c6b65d-4030-4f47-84da-bdd2f5ed8677)
 
@@ -121,7 +143,7 @@ The output voltage is chosen to be 12 V to correspond with the 12 V batteries. T
 
 The activiation voltage of 5 V has been derived from the diagram obtained from the datasheet below:
 
-*Figure 9. MPPC BuckBoost Efficiency vs Output Current*
+*Figure 10. MPPC BuckBoost Efficiency vs Output Current*
 
 ![MPPC_EN_V_CHART](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/29067efa-4bf9-4003-87b2-75b1e6abfbd5)
 
@@ -469,13 +491,13 @@ C_{VC} = 50 pF
 ```
 ## LTC4020 Battery Charger BuckBoost Analysis
 
-*Figure 10. LTC4020 Schematic*
+*Figure 11. LTC4020 Schematic*
 
 ![BatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/c261d68d-fee7-4ad5-8a76-c2f6e054d151)
 
 The _LTC4020_ IC has been chosen due to its ability to take in a range of input voltages from 4.5 V to 55 V and handle the different charging modes for sealed lead acid batteries. With this IC, the battery simply needs to be connected to the charge output to be charged instead of having to design different circuitry for each charging mode.
 
-Two IC will be used for this subsystem, one for each battery. This is so that the batteries will be charged in the appropriate mode in the case that the two batteries have different chargers. 
+Two IC will be used for this subsystem, one for each battery. This is so that the batteries will be charged in the appropriate mode in the case that the two batteries have different charges. 
 
 Due to having two _LTC4020_ circuits, a separate PCB has been designed from the other BuckBoost and circuitry. This will allow for a more modular design and increased flexibility for adding or removing batteries from the subsystem.
 
