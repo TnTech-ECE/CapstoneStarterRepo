@@ -85,6 +85,10 @@ The circuit and analysis are shown below:
 
 ![NonInvertingOpAmp](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/8a7621e7-263d-4556-a525-12bc407a4e9c)
 
+*Figure 7. Noninverting Operational Amplifier Schematic*
+![NonInvertingOpAmpSchem](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/782c8d26-dc1b-498d-bf5a-8480b7f2008f)
+
+
 ```math
 V_{out} = V_{McuOut} ( \frac{R_{1} + R_{2}}{R_{2}})
 ```
@@ -103,7 +107,7 @@ R_{1} = 14 kΩ
 Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control according to the Nano's Datasheet.
 
 ### Arduino Power Initialization
-The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during the power initialization of the system.
+The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during this time.
 
 ## LT3120 MPPC BuckBoost Converter
 The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a 12 V. 
