@@ -110,12 +110,24 @@ Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control a
 The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during this time.
 
 ## LT3120 MPPC BuckBoost Converter
-The Maximal Power Point Control Buck-Boost will be activated at 5 V and output a 12 V. 
+
+*Figure 8. MPPC BuckBoost Schematic*
+
+![MPPC_BuckBoost_Schematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/77c6b65d-4030-4f47-84da-bdd2f5ed8677)
+
+The Maximal Power Point Control Buck-Boost will be activated at 5 V from the solar panel and will output 12 V. 
+
+The output voltage is chosen to be 12 V to correspond with the 12 V batteries. This will allow the subsystem output to remain near 12 V whether it's the MPPC buckboost powering the system or if it's the batteries powering the system. 
+
+The activiation voltage of 5 V has been derived from the diagram obtained from the datasheet below:
+
+*Figure 9. MPPC BuckBoost Efficiency vs Output Current*
+
+![MPPC_EN_V_CHART](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/29067efa-4bf9-4003-87b2-75b1e6abfbd5)
+
+The highlighted portion of the chart shows that a 5 V input at 1 MHz switching frequency and 12 V output should be able to produce 1 A of current. This amount of current will be sufficient to power the system. 
 
 ### Datasheet Provided Values:
-```math
-C_{Vin}\ = 100 uF
-```
 ```math
 C_{BST1}\ = 0.22 uF
 ```
@@ -123,7 +135,7 @@ C_{BST1}\ = 0.22 uF
 C_{BST2}\ = 0.22 uF
 ```
 ```math
-C_{BST3}\ = 22 uF
+C_{BST3}\ = 22 nF
 ```
 ```math
 C_{VCC}\ = 4.7 uF (LowESRCeramicCapacitor)
@@ -152,13 +164,12 @@ V_{OUT} = 0.795\times(1+\frac{R_{FB1}}{ R_{FB2}})
 ```math
 ```
 ```math
-R_{FB1}\ = 141 kΩ
+R_{FB1}\ = 141 kΩ = 140 kΩ
 ```
 ```math
 R_{FB1}\ = 10 kΩ
 ```
 ### Programming Custon Vin Enable thresholds:
-The input voltage threshold is desired to be at 5 V. TODO: EXPLAIN WHY--------------------------------------------
 ```math
 V_{th(rising)} = 1.205 \times\ \frac{R_{EN1} + R_{EN2}}{R_EN2}
 ```
@@ -217,7 +228,7 @@ C_{MPPC}\ = \frac{1}{2π \times\ R_{MPPC2} \times\ 360}
 ```math
 ```
 ```math
-C_{MPPC}\ = 4.42 nF
+C_{MPPC}\ = 4.42 nF = 4 nF
 ```
 ```math
 ```
@@ -236,14 +247,14 @@ R_{MPPC3}\ = 3.6 kΩ
 ```math
 F_{sw}= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
 ```
-Switching frequency is chosen to be 1 MHz
+Switching frequency is chosen to be 1 MHz.
 ```math
 =>1,000,000= \frac{100 \times\ 10^{9}}{8 + (1.2 \times\ R_{RT})}
 ```
 ```math
 ```
 ```math
-R_{RT} = 76.6 kΩ = 80 kΩ
+R_{RT} = 76.6 kΩ = 76.8 kΩ
 ```
 
 ### Inductor Selection:
