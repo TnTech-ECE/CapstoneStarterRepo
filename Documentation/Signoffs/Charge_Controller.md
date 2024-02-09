@@ -468,6 +468,19 @@ R_{VC} = 35 kΩ
 C_{VC} = 50 pF
 ```
 ## LTC4020 Battery Charger BuckBoost Analysis
+
+*Figure 10. LTC4020 Schematic*
+
+![BatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/c261d68d-fee7-4ad5-8a76-c2f6e054d151)
+
+The _LTC4020_ IC has been chosen due to its ability to take in a range of input voltages from 4.5 V to 55 V and handle the different charging modes for sealed lead acid batteries. With this IC, the battery simply needs to be connected to the charge output to be charged instead of having to design different circuitry for each charging mode.
+
+Two IC will be used for this subsystem, one for each battery. This is so that the batteries will be charged in the appropriate mode in the case that the two batteries have different chargers. 
+
+Due to having two _LTC4020_ circuits, a separate PCB has been designed from the other BuckBoost and circuitry. This will allow for a more modular design and increased flexibility for adding or removing batteries from the subsystem.
+
+The ICs will take in 8 V from the MPPC Output voltage that is controlled by the Arduino's PWM.
+
 ### Battery Charging Voltage Programming:
 ```math
 V_{FLOAT} = 2.3125 \times\ (1 + \frac{R_{FB1}}{R_{FB2}})
