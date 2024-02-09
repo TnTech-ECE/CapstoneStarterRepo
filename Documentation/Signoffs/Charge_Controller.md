@@ -7,15 +7,13 @@ This subsystem will input solar power from the range of 0 V to 24 V and will out
 # Constraints
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
-| 1.  | Controller shall maximize the output power from the solar panel. | System Requirements |
+| 1.  | Controller shall maximize the output power from the solar panel. | Ethical Requirements |
 | 2.  | Controller shall output 12 V with a 10% tolerance to the Power Controller. | System Requirements |
-| 3.  | Controller shall prevent the batteries from discharging more than 50% of their maximal capacity. | Extend Life of Batteries    |
-| 4.  | Controller shall prevent the batteries from being charged more than 95% of their maximal capacity.  | Extend Life of Batteries    |
+| 3.  | Controller shall prevent the batteries from being damaged due to over-charging  | Extend Life of Batteries    |
 
 1. The subsystem shall maximize the output power from the solar panel. Solar panels can only generate power when they are placed in sunlight. Sunlight, while abundant during the daytime, is not present 24 hours of the day. During the times that the sun is present, its power received from the solar panels shall be maximized.  
 2. The subsystem shall output 12 V with a 10% tolerance to the Power Controller. 
-3. The subsystem shall prevent the batteries from discharging more than 50% of their maximum capacity. This constraint is to prevent the batteries from deep discharge. Deep discharge prematurley ages the battery. To ensure the batteries are able to be used for as long as possible, deep discharge protection shall be used.
-4. The subsystem shall prevent the batteries from charging more than 95% of their maximum capacity. This constraint is to prevent the batteries from overcharging. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection shall be used. 
+3. The subsystem shall prevent the batteries from attempting to charge past its maximum charging capacity. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection shall be used. 
 
 *Figure 1. Main Schematic*
 ![ChargeControllerMainSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/635f4758-22fd-4ef8-af43-daa270049438)
@@ -23,8 +21,6 @@ This subsystem will input solar power from the range of 0 V to 24 V and will out
 ![ChargeControllerBatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/7e1a4d18-1312-4168-a129-692a039a0fc5)
 
 # Analysis
-
-## Battery and Solar Power
 
 ## Arduino Nano
 The Arduino is in charge of controlling the amount of power that is generated from the solar panels to the battery chargers. This will be accomplished through a greedy algorithm utilizing pulse width modulation (PWM) on a power MOSFET. 
@@ -77,7 +73,7 @@ R_{15} = 16,666 Ω = 17 kΩ
 ### Pulse Width Modulation Control
 The Arduino will be controlling a power MOSFET that sends 8 V to both of the battery charger ICs. To achieve a voltage high enough to drive the MOSFET, 12 V from the output of the MPPC Buck Boost, a noninverting operational amplifier circuit will be used. 
 
-The _TLV9361QDCKRQ1_ Operational Amplifier has been chosen for its supply range of 2.25 V to 20 V.
+The _TLV9361QDCKRQ1_ Operational Amplifier has been chosen for its supply range of 2.25 V to 20 V. It requires a gate threshold voltage of at least 1.2 V and nominally over 2.5 V for the MOSFET to enter the full saturation region. The gate voltage is 12 V and the source voltage is 8 V. There is a 4 V gap to ensure that the MOSFET enters the full saturation region.
 
 The circuit and analysis are shown below:
 
@@ -659,7 +655,7 @@ C_{OUT} >= 65 uF
 
 Batteries can not be charged and discharged at the same time. Relay circuity has been designed to switch the batteries from a disconnected orientation for charging to a parallel orientation for discharging. 
 
-## Overcharge and Deep Discharge Protection
+## Overcharge Protection
 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
