@@ -23,16 +23,6 @@ Control block diagram for pushbutton system
 
 
 
-Model of the electrical inductance and internal motor resistance for the DC motor to test and get torque values and loads under different conditions.
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Electrical_LT.png)
-
-Model of mechanical circuit that converts the electrical characteristics into the mechanical characteristics such as rpm and torque values.
-The results of the LT Spice models will be in the "Analysis" section.
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Mechanical_LT.png)
-
-
 **Pinout of servo motor**
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_pinout.png)
