@@ -43,6 +43,10 @@ Motor Shield
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Motor_shield.png)
 
+Motor Shield Specs
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Motor_Shield_Specs.png)
+
 **Constraint Solution 3:**
 
 The motor that is selected spec sheet shows the different conditions of operation of the speed, torque, current, and max efficiency of the motors selected. From observing the spec sheet we can see that the motor will be able to pull the weight in order to pull the weight of the robot up the 22.5 degree incline we need to be able to support 6.8 kg-cm. The yellow line in the graph below shows the torque, the 
