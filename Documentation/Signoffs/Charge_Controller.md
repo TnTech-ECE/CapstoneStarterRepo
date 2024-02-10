@@ -2,7 +2,7 @@
 
 The Charge Controller's purpose is to harness solar power and supply the rest of the system with power. The solar power will be used as the main source of power with two batteries as a secondary source of power. The solar panel's output will be used to both power the system and also charge the batteries. This will allow the system to be self-sufficient when it comes to power. 
 
-This subsystem will input solar power from the range of 0 V to 24 V and will output 12 V. 
+This subsystem can input solar power from the range of 0 V to 24 V and will output 12 V. 
 
 # Constraints
 | No. | Constraints | Origin |
@@ -11,7 +11,7 @@ This subsystem will input solar power from the range of 0 V to 24 V and will out
 | 2.  | Controller shall output 12 V with a 10% tolerance to the Power Controller. | System Requirements |
 | 3.  | Controller shall prevent the batteries from being damaged due to over-charging  | Extend Life of Batteries    |
 
-1. The subsystem shall maximize the output power from the solar panel. Solar panels can only generate power when they are placed in sunlight. Sunlight, while abundant during the daytime, is not present 24 hours of the day. During the times that the sun is present, its power received from the solar panels shall be maximized.  
+1. The subsystem shall maximize the output power from the solar panel. Solar panels can only generate power when they are placed in sunlight. Sunlight, while abundant during the daytime, is not present 24 hours of the day. During the times that the sun is present, its power received from the solar panels shall be maximized.
 2. The subsystem shall output 12 V with a 10% tolerance to the Power Controller. 
 3. The subsystem shall prevent the batteries from attempting to charge past its maximum charging capacity. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection shall be used. 
 
@@ -499,6 +499,10 @@ Due to having two _LTC4020_ circuits, a separate PCB has been designed from the 
 
 The ICs will take in 8 V from the MPPC Output voltage that is controlled by the Arduino's PWM.
 
+### Overcharge Protection:
+
+The _LTC4020_ handles all aspects of charging, including overcharge protection. This is done through the use of the different charging modes. Once the battery is deemed 'charged enough', float charge kicks in to place to maintain the battery at near full capacity. This is standard for sealed lead acid batteries. 
+
 ### Battery Charging Voltage Programming:
 ```math
 V_{FLOAT} = 2.3125 \times\ (1 + \frac{R_{FB1}}{R_{FB2}})
@@ -662,8 +666,6 @@ Batteries can not be charged and discharged at the same time. Relay circuity has
 When the solar panel is generating power, the MPPC Output is outputting 12 V which causes the relays to switch to the normally open position connecting the batteries to the battery charging ICs. Otherwise the batteries will be connected to the output of the system by connecting to the normally closed position.
 
 The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and a 12 V coil voltage. Its operational durability is dependent on the switching current. While charging, the switching current will be close to the amount of current required to charge the batteries plus the current required to run the battery charger IC, estimated to be 3.5 A. At 3.5 A, 100,0000 operations can be expected. Assuming that there are 50 operations a day, 50 times that the batteries and solar switch who is powering the system, the relays will last 2,000 days or nearly five and a half years. 
-
-## Overcharge Protection
 
 # BOM
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
