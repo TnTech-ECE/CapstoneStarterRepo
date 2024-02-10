@@ -71,7 +71,7 @@ Figure 6: The circuit design of the Team Spirit Subsystem.
 
 Analysis:
 
-An N-MOS will be used to control the current to the LED lights. An LTSpice analysis has been performed to determine the operational region of the N-MOS and the compatibility with the circuit. The analysis of the cicuit yeilded the following: with a gate voltage of 5 volts from each impulse of the microcontrollers DIO, the voltage of the drain terminal is 5 volts during operation, and each device is supplied 20 mA of current. The gate volatge of each MOSFET is 5 volts during operation and 0 volts when not in operation. This values verfiy the initial calculations of the design and suit the parameters of the LED strips. 
+An N type MOSFET will be utilized to control the flow of current to the LED strip. This N-MOS will be utilized like an electronic switch through a 5 volt signal sent to the gate terminal. It allows for current to pass from the drain terminal to the source terminal closing the circuit. 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/capstonespice.PNG)
 
@@ -89,6 +89,8 @@ Figure 9: Plot of N-MOS characteristics of strip A
 
 Figure 10: Plot of N-MOS characteristics of strip B
 
+Figures 9 and 10 display plots of the voltage at the gate, drain, and source terminals over a period of 380 ms. The drain terminal is being used to control a 5 volt power supply. A 5 volt signal is shown to be pass from the drain to source terminals while the gate terminal is recieving a 5 volt signal. No current is passing from the drain terminal to the source terminal while the gate is not being powered. These results satisfy the conditions of constraint 2 requiring a frequency of 4 Hz, 250 ms. The experimental results in the plots above indicate that the N-MOS characteristics satisfy the needs of the circuit and creates a functional method of precise control from the microcontroller to the Team Spirit subsytem. 
+
 Constraint Solutions:
 
 Constraint 1 Solution:  
@@ -97,7 +99,7 @@ The team spirit subsystem shall be a highly visible representation of Tennessee 
 
 Constraint 2 Solution: 
 
-The system shall be dynamic by displaying lights which blink at a frequency people can see. This restricts the lights to blinking at frequencies that are visibly turning on and off as a function of time. The imposed rule reducing the frequency of the signal as a function of time defines it as a dynamic system. The system is capable of blink at a rate of 4Hz due to the capability of the relay to switch 10 times per second; or once every 100 ms.
+The system shall be dynamic by displaying lights which blink at a frequency people can see. This restricts the lights to blinking at frequencies that are visibly turning on and off as a function of time. The imposed rule reducing the frequency of the signal as a function of time defines it as a dynamic system. The 128 ns switching time of the N-MOS satisfies the intended switching time of 250 ms, 4 Hz.
 
 Constraint 3 Solution:
 
