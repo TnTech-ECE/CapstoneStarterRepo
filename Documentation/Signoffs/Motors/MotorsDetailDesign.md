@@ -20,7 +20,7 @@ Wires from motor pinout
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Wire_pinout.png)
 
-The encoder pins for 
+The e
 
 
 ## Analysis
