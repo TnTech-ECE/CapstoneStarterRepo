@@ -16,9 +16,12 @@ This subsystem can input solar power from the range of 0 V to 24 V and will outp
 3. The subsystem shall prevent the batteries from attempting to charge past its maximum charging capacity. Overcharging can cause the overheating and long term damage to the batteries. To ensure the batteries are able to be used for as long as possible, overcharge protection shall be used. 
 
 *Figure 1. Main Schematic*
-![ChargeControllerMainSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/635f4758-22fd-4ef8-af43-daa270049438)
+
+![ChargeControllerMainSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/bded840d-856e-4bf6-be86-34b03425f4bf)
+
 *Figure 2. Battery Charger Schematic*
-![ChargeControllerBatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/7e1a4d18-1312-4168-a129-692a039a0fc5)
+
+![ChargeControllerBatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/5ad36d3c-03fd-482d-953a-e1e1622dd50b)
 
 # Analysis
 
