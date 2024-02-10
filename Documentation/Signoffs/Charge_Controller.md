@@ -564,10 +564,10 @@ This output voltage is unused.
 ### Programming Switching Frequency:
 A switching frequency of 100 kHz is desired.
 ```math
-R_{RT} = 100,000 \times] (\frac{F_{0}}{250,000})^{-1.0695}
+R_{RT} = 100,000 \times (\frac{F_{0}}{250,000})^{-1.0695}
 ```
 ```math
-=>R_{RT} = 100,000 \times] (\frac{100,000}{250,000})^{-1.0695}
+=>R_{RT} = 100,000 \times (\frac{100,000}{250,000})^{-1.0695}
 ```
 ```math
 ```
@@ -653,7 +653,15 @@ C_{OUT} >= 65 uF
 
 ## Battery Charging and Discharging Switching Logic
 
+*Figure 12. Charge Controller Switching Logic*
+
+![SwitchingLogicSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/d0d2b79f-e9f1-429a-b16f-d59f0f4ce858)
+
 Batteries can not be charged and discharged at the same time. Relay circuity has been designed to switch the batteries from a disconnected orientation for charging to a parallel orientation for discharging. 
+
+When the solar panel is generating power, the MPPC Output is outputting 12 V which causes the relays to switch to the normally open position connecting the batteries to the battery charging ICs. Otherwise the batteries will be connected to the output of the system by connecting to the normally closed position.
+
+The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and a 12 V coil voltage. Its operational durability is dependent on the switching current. While charging, the switching current will be close to the amount of current required to charge the batteries plus the current required to run the battery charger IC, estimated to be 3.5 A. At 3.5 A, 100,0000 operations can be expected. Assuming that there are 50 operations a day, 50 times that the batteries and solar switch who is powering the system, the relays will last 2,000 days or nearly five and a half years. 
 
 ## Overcharge Protection
 
