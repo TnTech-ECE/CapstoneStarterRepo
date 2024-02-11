@@ -25,7 +25,7 @@ Control block diagram for pushbutton system
 
 **Pinout of servo motor**
 
-![Alt text]()
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/New_PB_schematic.png)
 
 
 **Beveled gear parameters for 3d modeling and printing using blender** 
