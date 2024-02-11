@@ -10,7 +10,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 1. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
 | 2. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
 | 3. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
-| 4. |  Servo motor | The stall torque of the motor is 13 kg*cm (the max torque that can be applied before the shaft quits rotating). | Servo Motor Specifications |
+| 4. |  Servo motor | The stall torque of the motor is 20 kg*cm (the max torque that can be applied before the shaft quits rotating). | Servo Motor Specifications |
 
 
 ## Buildable Schematic
@@ -63,6 +63,10 @@ For attaching the driven gear (the gear that lays flat on the chassis) there is 
 
 
 **Servo Motor description:** 
+
+The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/New_pin_release.png)
 
 
 ## Constraint Solutions
