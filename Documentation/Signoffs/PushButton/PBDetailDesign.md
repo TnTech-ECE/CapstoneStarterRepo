@@ -38,6 +38,8 @@ Mounting for Shaft/Arm depiction from ME
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/PB_on_robot.png)
 
+This depiction of the arm is when it is held in place by the servo motor and pin release bracket before releasing the arm to its default position of 90 degrees to the chassis.
+
 **Servo Motor description:** 
 
 The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
