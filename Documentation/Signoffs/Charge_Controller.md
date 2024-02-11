@@ -17,7 +17,7 @@ This subsystem can input solar power from the range of 0 V to 24 V and will outp
 
 *Figure 1. Main Schematic*
 
-![ChargeControllerMainSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/bded840d-856e-4bf6-be86-34b03425f4bf)
+![ChargeControllerMainSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/2a748a91-0a83-4563-8bf3-aeebc676da00)
 
 *Figure 2. Battery Charger Schematic*
 
