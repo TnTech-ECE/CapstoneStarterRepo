@@ -10,7 +10,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 1. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
 | 2. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
 | 3. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
-| 4. |  Servo motor | The stall torque of the motor is 0.7 kg*cm (the max torque that can be applied before the shaft quits rotating). |Servo Motor Specifications |
+| 4. |  Servo motor | The stall torque of the motor is 13 kg*cm (the max torque that can be applied before the shaft quits rotating). | Servo Motor Specifications |
 
 
 ## Buildable Schematic
@@ -31,7 +31,11 @@ Control block diagram for pushbutton system
 
 **Shaft\Arm description:** 
 
-This shaft and arm will be printed using PLA material that way it gives us flexibility if we need to change diameter size or shape. The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. The base of the arm is already mounted to the center body of the driven gear because it is 3-d printed to the driven gear. The base of the arm will have PVC tubing with a t-joint elbow with a 90-degree bend that slides over the top of the base that creates the perpendicular shaft to the to the base of the arm.  The shaft that is perpendicular to the base of the arm is what extends out to hit the pushbutton. 
+The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. The arm of the robot will have a return spring attached to it in order to allow the default position which is 90 degrees perpendicular to the chassis. 
+
+Mounting for Shaft/Arm depiction from ME
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/PB_on_robot.png)
 
 **Connection of Bottom shaft to bearing**
 
@@ -50,10 +54,6 @@ To calculate the lateral force on the arm the speed of the robot needs to be kno
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Lateral_Force_Calc.png)
 
-**Mounting for Shaft/Arm**
-
-The driven gear will be set within a bracket that has been bored out to allow the driven (output) gear to rotate. The borehole housing for the driven gear is 95mm (3.74 in) in diameter to allow enough clearence for the 70.2mm (2.76 in) driven gear diamter. The bottom of the driven gear will have a 10mm (0.4 in) shaft that will extrude out the bottom of the driven gear that is also 3-d printed into the body of the gear that will be placed within the inner race of a ball bearing. 
-The ball bearing will be placed in the bracket where there is a housing for the outer race to squeeze into with a tolerance of 0.0254mm (0.001 in) which is a common standard for the “ABEC scale” that is used and accepted in most industries. The bearing I am wanting to use has a 10mm (0.40 in) inner race and the outer race is 30mm (1.1811 in). The bracket bearing housing diameter is 30.0254 mm (1.1821 in) which creates the minimum tolerance needed to prevent the outer race from slipping. The height of the bearing housing is near the same height as the bearing being used, which is 9mm (0.354 in.) and the bearing housing height is 9.03mm (0.355691 in). The figures below show the bracket and housing for the gears and bearing (visual dimensions in the dimensions section). The Bracket for the arm has mounting holes that will have screws that mount to the robots chassis platform. 
 
 **Housing\Bracket for driven gear and bearing**
 
