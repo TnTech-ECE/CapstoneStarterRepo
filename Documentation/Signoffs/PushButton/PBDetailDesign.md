@@ -38,7 +38,7 @@ The arm acts as the main support for the paint roller brush. When the paint roll
 
 The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/New_pin_release.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Newest_Servo_drop.png)
 
 
 
