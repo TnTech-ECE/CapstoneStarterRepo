@@ -107,6 +107,15 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 
 To help prevent the motor from reaching its max torque load, I have created my bevel gear model to have a high gear ratio of 1.25. This higher gear ratio increases the more output torque increases with less input torque from the dc motor. For beveled gears I had to change the pitch angle of the drive gear to 39 degrees and the driven gear to 50 degrees to get them to mesh properly.
 
+**Constraint Solution 5:**
+
+The bracket that implements the pin release mechanism recommends for fitment to use a MG995, MG996R, or MG958 servos. The motor selected for this subsystem is the MG995 
+
+
+Bracket Dimensions
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Pin_Bracket.png)
+
 
 
 
