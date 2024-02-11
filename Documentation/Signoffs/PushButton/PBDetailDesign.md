@@ -81,7 +81,7 @@ In order to reach the button the, shaft will need to reach out at least 5.9" tha
 
 Since the length of the robot is 10 inches total in width due to the track size, then the arm of the push button will placed approximately 1.27 inches from the back right side of the robot. This is because the button is seven inches from the back wall and if the robot goes to the very end in worse case scenario then the arm will not be too far away to reach it. The math behind this is 10 inches of track length - 7 inches from back wall = 3 inches torwards the back end of the robot extends past the button. The platform is 8.27 inches in length so 10 inches - 8.27 inches gives a 1.73 inches. Then dividing this number by two gives the total extra length the track extends out past the platform for one end. So the amount the tracks extend out past the platform for one side is 1.73 in. / 2 = 0.865 inches from the platform to the end of the track. If the track extends past the button by 3 inches then the platform extends past the button by 2.135 inches (3 in. - 0.865 in.). So from this calculation the arm for the push button system needs to be at least 2.135 inches from the back right side of the robot or be placed up more towards the front. 
 
-**Mounting for Shaft/Arm depiction from ME**
+**Mounting for Shaft/Arm depiction from ME group**
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/PB_on_robot.png)
 
