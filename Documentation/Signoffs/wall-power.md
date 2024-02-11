@@ -22,7 +22,7 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 
 # Buildable Schematic:
 
-<img width="554" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/fd44d2a2-c110-43f6-b50a-bfd37c17dc03">
+<img width="748" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/c14086f1-37d9-468a-81f5-8736e0404f9a">
 
 Figure 1. Kicad schematic.
 
