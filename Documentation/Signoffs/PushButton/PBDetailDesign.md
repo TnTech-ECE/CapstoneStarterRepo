@@ -10,7 +10,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 1. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
 | 2. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
 | 3. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
-| 4. |  Servo motor | The stall torque of the motor is 20 kg*cm (the max torque that can be applied before the shaft quits rotating) | Servo Motor Specifications |
+| 4. |  Servo motor | The stall torque of the motor (the max torque that can be applied before the shaft quits rotating) shall not be exceeded | Servo Motor Specifications |
 | 5. |  Servo motor | The servo motor shall fit the bracket for releasing spring loaded arm | Pin Release Bracket Specifications |
 
 
@@ -105,17 +105,26 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 
 **Constraint Solution 4:**
 
-To help prevent the motor from reaching its max torque load, I have created my bevel gear model to have a high gear ratio of 1.25. This higher gear ratio increases the more output torque increases with less input torque from the dc motor. For beveled gears I had to change the pitch angle of the drive gear to 39 degrees and the driven gear to 50 degrees to get them to mesh properly.
+To prevent from reaching stall torque, the servo motor that was seleceted is the MG996R. The reason for using this motor is because it allows heavier torque loads to be lifted even if they are suspened. According to the data sheet, this servo can lift 11 kg*cm of torque before stalling. Since the pin placement of the release bracket is attached approximately 24mm (2.4 cm) from the ceneter of the servo arm, this means that under max conditions we can still lift 4.5 kg * cm of suspended weight before stalling. The MG996R also has more accuracy than the MG995, due to an upgraded IC, which will allow for more precise control.  
+
+Servo Arm 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Servo_Arm.png)
+
+The pin release bracket will be attached to the outer most mounting hole on the servo arm.
 
 **Constraint Solution 5:**
 
-The bracket that implements the pin release mechanism recommends for fitment to use a MG995, MG996R, or MG958 servos. The motor selected for this subsystem is the MG995 
+The bracket that implements the pin release mechanism recommends for fitment to use a MG995, MG996R, or MG958 servos. The motor selected for this subsystem is the MG996R.
 
 
 Bracket Dimensions
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Pin_Bracket.png)
 
+Servo Dimensions
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Servo_dimensions.png)
 
 
 
@@ -124,10 +133,11 @@ Bracket Dimensions
 
 | Item | Description | Subsystem | Part Number | Manufacturer | QTY. | Price | Total Price |
 |------|-------------|-----------|-------------|--------------|------|-------|-------------|
-| Servo Motor | Used to turn the shaft | Push button  | MG995 | Tower Pro | 1 | Recycled | Recycled |
-| Paint roller | Used to compress button | Push button  | N/A | Mister Rui | 1 pk | $10.97  | $10.97 |
-| PLA | Used for printing gears | Push button  | N/A | N/A | 1.7 cu in. | $0.00 | $0.00 |
-|  |  |  |  |  |  |  | $10.97  |
+| Servo Motor | Used to turn the shaft | Push button  | (MG996R) B07MFK266B | Deegoo | 4 | $20.99 | $20.99 |
+| Paint Roller | Used to compress button | Push button  | N/A | Mister Rui | 1 pk | Recycled  | Recycled |
+| Pin Release Bracket | Used to release arm | Push button | B07HKF6C5P | Rcmodel | 1 | $12.89 | $12.89 |
+|Servo Arm | Used to hold pin for pin release bracket | Push button | B07P8TFWPZ | ShareGoo | 3 | $7.99 | $7.99 |
+|  |  |  |  |  |  |  | $41.87 |
 
 
 
