@@ -1,19 +1,18 @@
 ## Functionality
 
-The push button subsystem will be the process of pushing the stop button to stop the time, which will denote the completion of the course. The system will consist of a servo motor, beveled gears, a shaft, a bearing block with bearing, a lateral arm, and a paint roller that will swing out on the arm perpendicular to the platform of the robot. The set of bevel gears will be driven by a 6-9 volt servo motor that will rotate the shaft of the paint roller to be fully extended. Once fully extended the paint roller will contour the right hand side of the wall until the end of the course to hit the stop button. 
+The push button subsystem will be the process of pushing the stop button to stop the time, which will denote the completion of the course. The system will consist of a servo motor, a pin release mechanism, a lateral arm that is spring loaded, and a paint roller. The arm of the robot will swing out perpendicular to the chassis of the platform once the servo opens the pin mechanism. Once released the paint roller will contour the right-hand side of the wall until the end of the course to hit the stop button.
 
 ## Specifications and Restraints
 
 
 | Number | Constraint component | Constraint description | Origin |
 |--------|----------------------|------------------------|--------|
-| ~~1.~~ | ~~Arm/Shaft~~ | ~~Length of the arm shall not extend out before the start~~ | ~~Competition Specifications~~ |
-| 2. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
-| 3. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
-| 4. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
-| 5. |  Servo motor | The stall torque of the motor is 0.7 kg*cm (the max torque that can be applied before the shaft quits rotating). |Servo Motor Specifications |
-| 6. | Bevel Gears  | The teeth of the beveled gears shall endure enough torque to prevent the teeth from breaking under a load and will have a pressure angle of at least 20 degrees | AGMA Standard |
-| 7. |  Bevel Gears  | Drive gear borehole diameter shall fit the diameter of the dc motor shaft down to 0.001 in. = 0.0254 mm.| AGMA Standard |
+| 1. |  Arm/Shaft | The height of the paint roller will hang at most 2.5 inches off the ground to compress the stop button  | Competition Specifications |
+| 2. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
+| 3. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
+| 4. |  Servo motor | The stall torque of the motor is 0.7 kg*cm (the max torque that can be applied before the shaft quits rotating). |Servo Motor Specifications |
+| 5. | Bevel Gears  | The teeth of the beveled gears shall endure enough torque to prevent the teeth from breaking under a load and will have a pressure angle of at least 20 degrees | AGMA Standard |
+| 6. |  Bevel Gears  | Drive gear borehole diameter shall fit the diameter of the dc motor shaft down to 0.001 in. = 0.0254 mm.| AGMA Standard |
 
 ## Buildable Schematic
 
@@ -77,30 +76,10 @@ For attaching the driven gear (the gear that lays flat on the chassis) there is 
 **Servo Motor description:** 
 
 
-
-**Mating gear attachment on motor**
-The mating gear will be attached to the motor’s shaft. The shaft of the motor fits tightly within the borehole of the mating gear. To prevent the gear from sliding off the motor’s shaft, there will be a small hole drilled into the shaft of the motor with a cotter pin placed into it.
-
-**Fitment of gears, bearing block and  servo motor**
-
-![Alt text]()
-
-
-**Beveled gears description:**
-
-The beveled gears are the mechanical system behind the pushbutton subsystem. They are used to transfer the work and energy of the dc motor to the arm/shaft with the paint roller attached to it. The reason they are beveled is to save surface area on the platform of the robot. 
-
-**Connection of beveled gears**
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Beveled_connection.png)
-
 ## Constraint Solutions
 
+
 **Constraint Solution 1:**
-
-~~The Arduino will send a logical High to “input 1” and a logical Low to “input 2” when the RGB sensor from the start subsystem sees the start light is green or when the backup pushbutton from the start subsystem is pressed.~~
-
-**Constraint Solution 2:**
 
 Since the stop buttons center is 2.5 inches from the bottom of the course the paint roller will overhang the tracks when it swings out. This can be achieved by having two consecutive perpendicular arms that force the paint roller to hang lower from the shaft connected to the secondary beveled gear on the robot’s base platform. The dimensions of where the button is located is in the first figure below and the part where the buttons general location on the gameboard is labeled “E” in the third figure below.
 
@@ -120,11 +99,11 @@ Since the length of the robot is 10 inches total in width due to the track size,
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Game_Board.png)
 
-**Constraint Solution 3:**
+**Constraint Solution 2:**
 
 When the arm/shaft of the push button subsystem is not active, the height and width of the arm/shaft will not exceed the leftover height of the robot and it will be flush with the platform before swinging in an outward motion. Since the height of the arm will be 3 inches tall and the height of the platform it sits on is 3.74 inches tall the robot will still be within 1 cubic foot. When the arm of the robot is retracted the arm with the paint roller can run parellel with the tracks. 
 
-**Constraint Solution 4:**
+**Constraint Solution 3:**
 
 The length of the shaft/arm needs to at least reach out approximately 12 inches for our robot being centered of the course. The course width from side to side is 23.25 inches. If our robot is approximately 1 foot in width, then our arm needs to be at least 11.25 inches when extended out from the side of the robot chassis. This is assuming we are in the center of the board. The figure below shows the total width of the board.
 
@@ -133,11 +112,11 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Game_Board_dimensions.png)
 
 
-**Constraint Solution 5:**
+**Constraint Solution 4:**
 
 To help prevent the motor from reaching its max torque load, I have created my bevel gear model to have a high gear ratio of 1.25. This higher gear ratio increases the more output torque increases with less input torque from the dc motor. For beveled gears I had to change the pitch angle of the drive gear to 39 degrees and the driven gear to 50 degrees to get them to mesh properly.
 
-**Constraint Solution 6:**
+**Constraint Solution 5:**
 
 The bevel gear teeth will have a pressure angle of 20 degrees because this will reduce slippage in between the drive gear and the secondary gear. Gears with this pressure angle can endure higher torque loads on the teeth of the gear. To achieve this if you can install the add on for blender called “precision gears”. Once downloaded you can choose what type of gear you want, to do this click the “add” tab at the top then click “Mesh” then go to the very bottom and choose the “precision gears” tab. From there you will select the beveled gear and make sure your units are in metric. Then select the drive gear and click on the “object” tabs to the right in blender and you will see a section called “parameters” go to the option called “pressure angle” and enter 20 degrees. Then repeat the same steps for the driven gear.
 
@@ -145,7 +124,7 @@ The bevel gear teeth will have a pressure angle of 20 degrees because this will 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Depiction_pressure_angle.png)
 
-**Constraint Solution 7:**
+**Constraint Solution 6:**
 
 To get the drive gear to fit without coming off the dc motor shaft, the borehole diameter needs to be slightly larger than the shaft diameter without being so much larger it comes off or causes slippage. An AGME standard is that the inner diameter of the borehole must be no larger than 0.001 in. if it will be housing the shaft of the motor. Since our dimensions of the gears are metric and in mm, our housing diameter of the drive gear will be no larger than 0.02mm. To do this select the drive gear and click on the “object” tab on the right panel and then scroll down to the option called “borehole” then select “round subtract” to cut out the center diameter of the gear and enter 1.51mm into the radius parameter of the borehole selection. This radius gives us a diameter of 3.02mm which is within the 0.0254 mm maximum clearance from the AGME standard, for our 3mm shaft. We will not need to do this for our driven gear because there will be no shaft going into the borehole.
 
