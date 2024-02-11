@@ -37,9 +37,13 @@ Mounting for Shaft/Arm depiction from ME
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/PB_on_robot.png)
 
-**Connection of Bottom shaft to bearing**
+**Servo Motor description:** 
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/Push_button_connections.png)
+The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/New_pin_release.png)
+
+
 
 **Shaft\Arm lateral force:**
 
@@ -61,12 +65,6 @@ For attaching the driven gear (the gear that lays flat on the chassis) there is 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Images/PB_pillow_bearing_block.png)
 
-
-**Servo Motor description:** 
-
-The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/New_pin_release.png)
 
 
 ## Constraint Solutions
