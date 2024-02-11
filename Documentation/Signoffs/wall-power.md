@@ -349,7 +349,7 @@ From using the calculation form datasheet[6]
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-| Plug electric |  035-00101-2BP | 1 | $6.71 | $6.71 |
+|  Adapter Power Supply |  ------------- | 1 | $9.99 | $9.99 |
 | Buck-Boost Converter | LTC3114-1  | 1 | $11.35 |$11.35 |
 | Buck Converter | LTC3621  | 2 | $7.38 |$14.76 |
 | Transformer | TCT50-01E07AB | 1 | $19.99 | $19.99 |
@@ -394,5 +394,8 @@ From using the calculation form datasheet[6]
 7. Battery datasheet: [file:///C:/Users/abofa/Downloads/R08-002%20-%20Design%20and%20Sizing%20of%20Solar%20Photovoltaic%20Systems%20-%20US%20(1).pdf](https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems)https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems
 8. Buck Converter datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3621fc.pdf
 9. Fiada 24V 40VA Control Transformer, UL Certified Primary 120, 208, 240V Secondary 24V, HVAC Furnace Transformer Multi Tap(1 Pack) https://a.co/d/bubQZsQ
-https://a.co/d/bubQZsQ  
+https://a.co/d/bubQZsQ
+10. Adapter Power Supply AC to DC Plug  https://www.amazon.com/3000mA-Volts-Adapter-Power-Supply/dp/B08CZ7Z9TB/ref=asc_df_B08CZ7Z9TB/?tag=hyprod-20&linkCode=df0&hvadid=647103656310&hvpos=&hvnetw=g&hvrand=9662999191843388178&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013670&hvtargid=pla-1950777511611&psc=1&mcid=685d49c72c873cfb88c5918053752121
+
+
   
