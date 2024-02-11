@@ -7,7 +7,7 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 | --- | ----------- | ------ |
 | 1.  | Voltage equivalence: The main wall power subsystem needs to protect devices from the damage caused by voltage and guarantee the safety of the electrical system, as well as preserve the whole subsystem.| System Requirements |
 | 2.  | Transformer: A safe output voltage and the way to handle 120v AC input are requirements for the Transformer used to converter AC to AC.| System Requirements |
-| 3.  | Must be A way to disconnect the power from the source.| System Requirements |
+| 3.  | Must be a kill switch to disconnect the power from the source.| System Requirements |
 | 4.  | It should be within wire capabilities.| System Requirements |
 
 1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity.
@@ -34,8 +34,8 @@ Figure 2.Kicad schematic.
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/80d81f0b-1505-4cbe-aab9-bea52dd7c6fe)
 
 
-Figure 3.  LTspice circuit.
-
+Figure 3.  LTspice circuit, 
+for more details on Ltspice simulations
 # Analysis
 Circuit explanation: 
 1.	The input for wall power is 120v AC, 60 Hz.
