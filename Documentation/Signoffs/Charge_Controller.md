@@ -109,7 +109,7 @@ V_out = 16 V
 R_17 is arbitrarily set to 10 kΩ.
 
 ```math
-=>16 = 1.229 ( \frac{16}{10,000} + 1)
+=>16 = 1.229 ( \frac{R_{18}}{10,000} + 1)
 ```
 ```math
 ```
@@ -693,10 +693,34 @@ The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and 
 | Part | Part Number | Quantity | Price Per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
 | Arduino Nano | ABX00028 | 1 | $13.70 | $13.70 |
-| Buck-Boost Converter | MAX20040ATPA/VY+ | 1 | $2.48 | $2.48 |
-| Digital Potentiometer | MAX5474 | 1 | $2.48 | $2.48 |
-| Current Sensor | ACS712ELCTR-05B-T | 2 | $3.70 | $7.40 |
-| Bidirectional Current and Power Monitor | INA226AIDGST | 1 | $3.33 | $3.33 |
-| NPN Silicon medium power transistor | ZTX653 | 2 | |  | 
-| Schottky Diode | | 3 | | |
+| MPPC Buck-Boost Converter | LT3120JV#PBF | 1 | $10.04  | $10.04 |
+| Battery Charger Buck-Boost Converter | LTC4020EUHF#PBF | 1 | $12.51 | $12.51 |
+| Boost Converter | TPS61170DRVR | 1 | $1.94 | $1.94 |
+| Current Sensor | ACS712ELCTR-05B-T | 1 | $3.70 | $7.40 |
+| Operational Amplifier | TLV9361QDCKRQ1  | 1 | $1.51 | $1.51 |
+| Relay | G6RN-1-DC5 | 2 | $4.10 | $8.20 | 
+| Dual N-Channel MOSFET | SI7272DP-T1-GE3 | 3 | $1.43 | $4.29 |
+| P-Channel MOSFET | NVD5117PLT4G-VF01 | 1 | $1.97 | $1.97 |
+| Schottky Diode | SBR0560S1Q-7 | 4 | $0.38 | $1.52 |
+| Zener Diode | BZX84C6V2LT116 | 1 | $0.24 | $0.24 |
+| Diode | RFN10BM3STL | 1 | $1.27 | $1.27 |
+| 50 pF Capacitor | 12062A500KAT2A | 1 | $0.40 | $0.40 |
+| 100 pF Capacitor | KGM31BCG1H101JT | 1 | $0.24 | $0.24 |
+| 680 pF Capacitor | KGM31TCG2H681JU | 2 | $0.28 | $0.56 |
+| 1 nF Capacitor | KGM31AR73D102KU | 1 | $0.71 | $0.71 |
+| 4 nF Capacitor | 30LVD40-R | 1 | $1.66 | $1.66 |
+| 10 nF Capacitor | KAM31GCG2J103JU | 1 | $0.99 | $0.99 |
+| 22 nF Capacitor | KGM31BR71H223JT | 1 | $0.31 | $0.31 |
+| 68 nF Capacitor | C1206C683J5GECAUTO7210 | 1 | $0.74 | $0.74 |
+| 0.1 uF Capacitor | KGM31BCG1H101JT | 4 | $0.24 | $0.96 |
+| 0.22 uF Capacitor | KAF31BR71H224KT | 2 | $0.44 | $0.88 |
+| 0.33 uF Capacitor | KAM31NR81H334KU | 1 | $0.40 | $0.40 |
+| 1 uF Capacitor | KGM31HR71E105KU | 2 | $0.33 | $0.66 |
+| 2.2 uF Capacitor | KAF31GR71E225KU | 1 | $0.42 | $0.42 |
+| 5 uF Capacitor | TE1202-E3 | 3 | $4.58 | $13.74 |
+| 10 uF Capacitor | 870575873001 | 4 | $1.33 | $5.32 |
+| 15 uF Capacitor | C3216X5R1V156M160AC | 2 | $0.99 | $1.98 |
+| 68 uF Capacitor | C3216X5R0J686M160AB | 1 | $0.71 | $0.71 |
+| 150 uF Capacitor | 870575574002 | 1 | $1.81 | $1.81 |
+
 | Total | ----- | ----- | ----- | $--.-- |
