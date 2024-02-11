@@ -95,7 +95,7 @@ The main control board that will be used is an Arduino Mega 2560. The max curren
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Fuse.png)
 
 **Constraint Solution 5:** 
-In order to select the correct battery, the max voltage and current draw conditions of every subsystems component was collected. The battery chosen supplies 5200mAH of current which provides an extra 620mAH if needed, compared to the max current load demand of the entire robot. When modeling the load demand of the system, all the components of every subsytem can modeled as a resistor using Ohm's Law by using the max voltage and current draw of each component. To model dc to dc step down buck converter voltages in LT-SPice, a zener diode was used, and to apply the correct step down voltage from the main power supply, the forward bias voltage was chosen based off of the previous node voltages. The results after running the simulation under max conditions was 4.58 Amps
+In order to select the correct battery, the max voltage and current draw conditions of every subsystems component was collected. The battery chosen supplies 5200mAH of current which provides an extra 620mAH if needed, compared to the max current load demand of the entire robot. When modeling the load demand of the system, all the components of every subsytem can modeled as a resistor using Ohm's Law by using the max voltage and current draw of each component. To model dc to dc step down buck converter voltages in LT-SPice, a zener diode was used, and to apply the correct step down voltage from the main power supply, the forward bias voltage was chosen based off of the previous node voltages. The results after running the simulation under max conditions was 4.58 Amps.
 
 Representative Power Supply and Loads
 
@@ -104,6 +104,17 @@ Representative Power Supply and Loads
 Total Load Results under Max Conditions
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Total_Load.png)
+
+**Constrain Solution 6:**
+Since the buck converters have switching components in them, there will be some noise present feeding from the rails of the buck converter to the subsystem they supply. The buck converters that will be used are LM2596S. One of the causes for noise being supplied is due to the ripple voltage coming off the positive and negative terminals of the voltage rails due to the output capacitor. According to Texas Instruments data sheet, the switching frequency of the LM259s is 150kHz, the series inductance is 33uH and, the output capacitor 220uF. Using the ripple voltage equation for a buck converter we can calculate the output noise. The output ripple voltage is approximately 1.74mV peak-to-peak when applying 14.8 volts to the positive side and adjusting the output to 12 volts from the buck converter. The maximum output ripple voltage that the LM2596S produces is approximately 100mV-200mV peak-to-peak according to the data sheet. The output noise from the buck converter is mitigated by the Arduino Mega from using a voltage regulator that helps smooth out voltage spikes. The IR sensor however does not have any specifications on what how much EMI it is susceptible. Even though our calculated output noise is very low, to take extra precaution, the wires connected from the buck converter to the IR sensor will be twisted together. The same will go for the start sensor as well. 
+
+Buck Converter Circuit Diagram
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Buck_Circuit.png)
+
+Equations to solve for output noise
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Noise.png)
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
