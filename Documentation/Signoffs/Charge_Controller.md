@@ -51,7 +51,7 @@ The Arduino nano can only handle analog voltages up to 5 V. 5.5 V can damage the
 The capacitors connected to the current sensor are derived from the current sensor datasheet.
 
 ### MPPC Output Voltage Detection
-The Solar Panel's MPPC Outvoltage will be read using one of the Arduino's analog pins. The maximum voltage for the MPPC Outputvoltage is 12 V and the maximum voltage that the Arduino can take on its analog pins is 5 V.
+The Solar Panel's MPPC Outvoltage will be read using one of the Arduino's analog pins. The maximum voltage for the MPPC Outputvoltage is 12 V and the maximum voltage that the Arduino can take on its analog pins is 5 V. The exact voltage is not important. What is important is if the MPPC BuckBoost is outputting _something_ so that the batteries can attempt to be charged.
 
 A voltage divider using two resistors will be used to divide the voltage down from 12 V to 4.5 V. 4.5 V will be used to give 0.5 V of room for any ripple voltage from the BuckBoost. 
 
@@ -73,20 +73,64 @@ R_15 is arbitrarily set to 10 kΩ.
 ```math
 R_{15} = 16,666 Ω = 17 kΩ
 ```
+
 ### Pulse Width Modulation Control
-The Arduino will be controlling a power MOSFET that sends 8 V to both of the battery charger ICs. To achieve a voltage high enough to drive the MOSFET, 12 V from the output of the MPPC Buck Boost, a noninverting operational amplifier circuit will be used. 
+Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control according to the Nano's Datasheet.
 
-The _TLV9361QDCKRQ1_ Operational Amplifier has been chosen for its supply range of 2.25 V to 20 V. It requires a gate threshold voltage of at least 1.2 V and nominally over 2.5 V for the MOSFET to enter the full saturation region. The gate voltage is 12 V and the source voltage is 8 V. There is a 4 V gap to ensure that the MOSFET enters the full saturation region.
+The circuitry is discussed in the _Pulse Width Modulation_ section.
 
-The circuit and analysis are shown below:
+### Arduino Power Initialization
+The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during this time.
 
-*Figure 6. Noninverting Operational Amplifier Circuit*
 
-![NonInvertingOpAmp](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/8a7621e7-263d-4556-a525-12bc407a4e9c)
+## Pulse Width Modulation
 
-*Figure 7. Noninverting Operational Amplifier Schematic*
-![NonInvertingOpAmpSchem](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/782c8d26-dc1b-498d-bf5a-8480b7f2008f)
+*Figure 6. Pulse Width Modulation Circuitry*
+![PulseWidthModulationCircuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/f43bbd51-7e45-481e-98f0-0cb06c225042)
 
+
+The Arduino will be controlling a power MOSFET that sends the MPPC BuckBoost output, 12 V, to both of the battery charger ICs. To achieve a voltage high enough to drive the MOSFET with a 12 V source, a Boost voltage regulator IC and a noninverting operational amplifier circuit will be used. 
+
+### MOSFET
+The MOSFET being driven is the _SI7272DP-T1-GE3_. It requires a gate threshold voltage of at least 1.2 V and to enter full saturation mode 2.5 V is required. 
+
+### TPS6117 Boost IC
+The boost IC will increase the MPPC Output voltage from 12 V to 16 V to ensure that the MOSFET is properly driven with 4 V between the gate and the source. The  _TPS61170DRVR_ boost IC has been chosen due to its minimalistic circuitry and applicable ratings.
+
+*Figure 7. PWM Boost Schematic*
+![BoostPWMCircuit](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/b4cdc252-34ae-443d-bc0f-fa34f01c6c57)
+
+Output Voltage Programming:
+```math
+V_{out} = 1.229 ( \frac{R_{18}}{R_{17}} + 1)
+```
+V_out = 16 V
+
+R_17 is arbitrarily set to 10 kΩ.
+
+```math
+=>16 = 1.229 ( \frac{16}{10,000} + 1)
+```
+```math
+```
+```math
+R_{1} = 120.2 kΩ = 120 kΩ
+```
+
+The Inductor is recommended to be between 10 uH and 22 uH. A 15 uH Inductor will be used to match the inductor on the MPPC BuckBoost.
+
+The compensation network resistor, R19, and capacitor, C15, are recommended to be 10 kΩ and 680 pF respectively. 
+
+The output capacitor is recommended to be between the values of 1 uF and 10 uF. A 5 uF capacitor will be used. 
+
+The input capacitor is recommended to be between the values of 1 uF and 4.7 uF. A 5 uF capacitor will be used to match the output capacitor.
+
+### Operational Amplifer
+The _TLV9361QDCKRQ1_ Operational Amplifier has been chosen for its supply range of 2.25 V to 20 V. 
+
+*Figure 8. Noninverting Operational Amplifier Schematic*
+
+![NonInvertingOpAmpSchem](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/d304539d-4012-425c-9054-18f5685a1f9b)
 
 ```math
 V_{out} = V_{McuOut} ( \frac{R_{1} + R_{2}}{R_{2}})
@@ -102,37 +146,9 @@ R_2 is arbitrarily set to 10 kΩ.
 ```math
 R_{1} = 14 kΩ
 ```
-
-The MPPC Output is 12 V. To divide it down to 8 V to allow the MOSFET to be controlled at 12 V, a voltage divider circuit has been implemented. 
-
-*Figure 8. MPPC Output Voltage Division*
-
-
-![MPPC_Division](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/da63a1d5-d8bf-410f-91e1-a913e67af3a7)
-
-```math
-V_{DividedMppc} = V_{MPPC_OUT} ( \frac{R_{4}}{R_{3} + R_{4}})
-```
-
-R_4 is arbitrarily set to 10 kΩ.
-
-```math
-=>8 = 12 ( \frac{10,000}{R_{3} + 10,000})
-```
-```math
-```
-```math
-R_{3} = 5 kΩ
-```
-
-Pin D10 on the Arduino Nano has been chosen due to its ability for PWM control according to the Nano's Datasheet.
-
-### Arduino Power Initialization
-The Arduino is powered by the Power Controller Subsystem which this subsystem outputs to. This means that the Arduino will not be powered on during the initial start up of the system. This is acceptable as the batteries are not going to be charging during this time.
-
 ## LT3120 MPPC BuckBoost Converter
 
-*Figure 9. MPPC BuckBoost Schematic*
+*Figure 10. MPPC BuckBoost Schematic*
 
 ![MPPC_BuckBoost_Schematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/77c6b65d-4030-4f47-84da-bdd2f5ed8677)
 
@@ -142,7 +158,7 @@ The output voltage is chosen to be 12 V to correspond with the 12 V batteries. T
 
 The activiation voltage of 5 V has been derived from the diagram obtained from the datasheet below:
 
-*Figure 10. MPPC BuckBoost Efficiency vs Output Current*
+*Figure 11. MPPC BuckBoost Efficiency vs Output Current*
 
 ![MPPC_EN_V_CHART](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/29067efa-4bf9-4003-87b2-75b1e6abfbd5)
 
@@ -490,7 +506,7 @@ C_{VC} = 50 pF
 ```
 ## LTC4020 Battery Charger BuckBoost Analysis
 
-*Figure 11. LTC4020 Schematic*
+*Figure 12. LTC4020 Schematic*
 
 ![BatteryChargerSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/c261d68d-fee7-4ad5-8a76-c2f6e054d151)
 
@@ -596,6 +612,9 @@ L_{MIN} = \frac{V_{IN(MIN)} \times\ (1 - \frac{ V_{IN(MIN)}}{V_FBMAX})}{ F_{0} \
 ```math
 L_{MIN} = 3.156 uH = 3 uH
 ```
+
+The _PA4339.701NLT_ 5 uH inductor will be used for its 4 A current rating.
+
 ### Inductor Current Sensing Selection:
 The datasheet recommends that both sense resistors are of the same value.
 
@@ -660,7 +679,7 @@ C_{OUT} >= 65 uF
 
 ## Battery Charging and Discharging Switching Logic
 
-*Figure 12. Charge Controller Switching Logic*
+*Figure 13. Charge Controller Switching Logic*
 
 ![SwitchingLogicSchematic](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/45153206/d0d2b79f-e9f1-429a-b16f-d59f0f4ce858)
 
