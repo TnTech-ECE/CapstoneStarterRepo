@@ -155,7 +155,6 @@ To get the drive gear to fit without coming off the dc motor shaft, the borehole
 |------|-------------|-----------|-------------|--------------|------|-------|-------------|
 | Servo Motor | Used to turn the shaft | Push button  | MG995 | Tower Pro | 1 | Recycled | Recycled |
 | Paint roller | Used to compress button | Push button  | N/A | Mister Rui | 1 pk | $10.97  | $10.97 |
-| ~~Motor shield/driver~~| ~~Controls the direction and speed of the geared dc motor~~ | ~~Push button~~  | ~~L298N~~ | ~~N/A (Recycled)~~ | ~~1~~ | ~~$0.00~~  | ~~$0.00~~ |
 | PLA | Used for printing gears | Push button  | N/A | N/A | 1.7 cu in. | $0.00 | $0.00 |
 |  |  |  |  |  |  |  | $10.97  |
 
