@@ -11,8 +11,7 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 2. | Arm/Shaft | The dimensions of the arm before beginning the course shall not exceed 1 cubic ft. | Competition Specifications |
 | 3. |  Arm/Shaft | Lenth of the arm shall be 11.25 inches at minimum when fully extended to reach the push button on the right hand of the wall   | Competition Specifications |
 | 4. |  Servo motor | The stall torque of the motor is 0.7 kg*cm (the max torque that can be applied before the shaft quits rotating). |Servo Motor Specifications |
-| 5. | Bevel Gears  | The teeth of the beveled gears shall endure enough torque to prevent the teeth from breaking under a load and will have a pressure angle of at least 20 degrees | AGMA Standard |
-| 6. |  Bevel Gears  | Drive gear borehole diameter shall fit the diameter of the dc motor shaft down to 0.001 in. = 0.0254 mm.| AGMA Standard |
+
 
 ## Buildable Schematic
 
@@ -116,17 +115,9 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 
 To help prevent the motor from reaching its max torque load, I have created my bevel gear model to have a high gear ratio of 1.25. This higher gear ratio increases the more output torque increases with less input torque from the dc motor. For beveled gears I had to change the pitch angle of the drive gear to 39 degrees and the driven gear to 50 degrees to get them to mesh properly.
 
-**Constraint Solution 5:**
 
-The bevel gear teeth will have a pressure angle of 20 degrees because this will reduce slippage in between the drive gear and the secondary gear. Gears with this pressure angle can endure higher torque loads on the teeth of the gear. To achieve this if you can install the add on for blender called “precision gears”. Once downloaded you can choose what type of gear you want, to do this click the “add” tab at the top then click “Mesh” then go to the very bottom and choose the “precision gears” tab. From there you will select the beveled gear and make sure your units are in metric. Then select the drive gear and click on the “object” tabs to the right in blender and you will see a section called “parameters” go to the option called “pressure angle” and enter 20 degrees. Then repeat the same steps for the driven gear.
 
-**Depiction of pressure angles for gears**
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Depiction_pressure_angle.png)
-
-**Constraint Solution 6:**
-
-To get the drive gear to fit without coming off the dc motor shaft, the borehole diameter needs to be slightly larger than the shaft diameter without being so much larger it comes off or causes slippage. An AGME standard is that the inner diameter of the borehole must be no larger than 0.001 in. if it will be housing the shaft of the motor. Since our dimensions of the gears are metric and in mm, our housing diameter of the drive gear will be no larger than 0.02mm. To do this select the drive gear and click on the “object” tab on the right panel and then scroll down to the option called “borehole” then select “round subtract” to cut out the center diameter of the gear and enter 1.51mm into the radius parameter of the borehole selection. This radius gives us a diameter of 3.02mm which is within the 0.0254 mm maximum clearance from the AGME standard, for our 3mm shaft. We will not need to do this for our driven gear because there will be no shaft going into the borehole.
 
 ## BOM
 
