@@ -34,12 +34,6 @@ Control block diagram for pushbutton system
 
 The arm acts as the main support for the paint roller brush. When the paint roller hits the wall after being extended the brush will roll and contour with the wall so that way, we have a point of contact with the right side of the wall for the majority of the course and especially the end. The arm of the robot will have a return spring attached to it in order to allow the default position which is 90 degrees perpendicular to the chassis. 
 
-Mounting for Shaft/Arm depiction from ME
-
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/PB_on_robot.png)
-
-This depiction of the arm is when it is held in place by the servo motor and pin release bracket before releasing the arm to its default position of 90 degrees to the chassis.
-
 **Servo Motor description:** 
 
 The servo motor will be the main release mechanism for the arm. Since the arm of the robot has a return spring, the pin that is held from the servo will have a ring that slides in between the pin and bracket from the servo. 
