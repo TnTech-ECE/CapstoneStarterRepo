@@ -38,7 +38,7 @@ This image shows the connections of the power system to the servo through the bu
 <br /> Figure 3: Box Sweep Electrical Connections to Main controller
 <br />
 <br />
-This image shows the connections of the box sweep servo to the main controller.
+This image shows the connections of the box sweep servo to the main controller. It is connected to a pulse width modualtion output pin on the main controller, as detailed in the main controller's system design datasheet.
 ## Analysis of Subsystem
 Constraint 1: 
 <br />
