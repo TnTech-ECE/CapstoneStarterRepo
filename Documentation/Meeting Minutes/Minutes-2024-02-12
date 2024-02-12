@@ -1,0 +1,129 @@
+Attendance: Conor, Caz, Adrin, Callie, Liam, Zac, Roberts, Colby, Stephen, and James
+
+IEEE attendance reminder for MEs 
+-No
+
+Riding down arrangements tbd
+
+$10 for 3 minutes on our board
+-or tip jar
+-keep comp officials out
+-maybe not say donation
+
+Give specs to MEs
+
+How to deal with motor noise
+-0.1 ceramic capacitor
+
+look at push button and box sweep
+-Roberts to check after meeting
+
+Power to be taken care of tonight
+
+Team Spirit 
+-How will it work
+-How will it tun on
+-How will it turn on and off (Blink)
+-How do you know the current
+-How can you prove that the MOSFETs will survive
+    -How do you know you are in Spec or not?
+    -WHat are you pulling
+    -Was that in the Simulation -Current
+    -Show Current so we know that it is not pulling too much. 
+    -Doesn't have to be pulse source
+    -Show in graph too Voltage output and Current
+
+Prooving Motors will work with simulation
+-Motors used in past Projects, make sure they are good. 
+-Estrapulation graph looks similar to ours\
+
+Previous SECON folders
+-2023 is best for viewing sign offs
+-2022 and before a bit CRAY CRAY
+-Do lots of digging
+  -May have more than 1 layer 
+  -Almost worked
+
+THANK GOSH FOR SUPER SIMPLE COMPETITION THIS YEAR
+
+Conor to put prototype randomly in Github
+If we get button working start sensor working
+
+Arduino code for each person
+-writing seudo code for each
+-Going to have each person do their own
+-Each be tested rather than everything all at once
+-VOID???
+-Void is like main
+
+Latch system should be relatively easy to mount
+-Will get diminsions when comes in
+-James has pictures of design in CAD
+-Roberts said either way of spring will be fine
+
+Every picture of course is different 
+-Nav can direct before and after crater
+-Wrong measurements on Files
+-Discord
+  -No one knows what is going on in Competition Discord
+  -Fire fire fire panick fire
+-More concerned about Nav line than anything
+-2nd white line after crater would be nice for team spirit, if not, it is all good
+-2 inch paint rolller rather than 4in
+-Chassis is ordered and Start Sensor
+-MEs have a way to help with verifying friction ??
+  -If we ran into friction issues
+    -Could print out of TPU
+    -Different Geometry or same
+    -TPU is more grippy
+    -Hot glue to help????
+    -Add weight???
+    -Spray on shoe to help?
+    -Is it a boat instead of a car? and was it FLEXSEAL????
+-Failing Mechanically
+  -Arm and Friction is biggest concern
+    
+  -Current tracks are engineering plastic but removable
+
+-order BOM for buttom push to be ordered, possibly tonight??
+
+Anything from ME's?
+-is box sweep going to interfere with button push
+    -MEs make surface
+    -Cervo below platform
+    -Sprint to finish
+    -GO GO GO 
+    -BUtton push activated after crater
+    -Box sweep closes at corner
+    -Robot to box, not box to robot
+    -Serious concerns about placement for box sweep and button push
+
+Not messing with Fuel Thrushers or Zipline
+  -Goal is repetatability
+  -Hardware get extra 10 points for that
+  -Chat GBT make power point?????
+
+Back for box sweep instead of front
+If small boxes can fit under robot
+  -can robot run them over easily?
+Shield for robot if rub up against side
+  -back right edge to add roller to help from rubbing edge
+  -Paint roller or dead wheel to help
+  -Wheel to prevents us to get track to wall contact
+  -Roller barring
+  -accept that we will grind on the wall
+  -3d print skate wheels
+  -bracket and Roller
+    -Not too big wink
+Julie Mountain will email us back when parts are in
+
+
+
+MEs:
+Part to be ordered
+throw box sweep
+look into traction
+
+    
+
+
