@@ -67,6 +67,7 @@ For a full pin assignment see Figure 2.
 || PWM | 1 |
 
 | Type of Pin | ATMEGA 2560 number available | Number used total |
+|-------------|------------------------------|-------------------|
 | Digital Input/Output | 54 | 7 |
 | I2C | 2 (P43 P44) | 4 (can connect to the same pins) |
 | PWM | 15 | 4 |
