@@ -6,17 +6,16 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 | No. | Constraints | Origin |
 | --- | ----------- | ------ |
 | 1.  | Voltage equivalence: The main wall power subsystem needs to protect devices from the damage caused by voltage and guarantee the safety of the electrical system, as well as preserve the whole subsystem.| System Requirements |
-| 2.  | Transformer: A safe output voltage and the way to handle 120v AC input are requirements for the Transformer used to converter AC to AC.| System Requirements |
+| 2.  | During main power failures, power flow is controlled by the switch controller..| System Requirements |
 | 3.  | Must be a kill switch to disconnect all the power from the source.| System Requirements |
 | 4.  | It should be within wire capabilities.| System Requirements |
 
-1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity. Also, I used a kill switch to shut down all the power if something happened. 
+1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity. Also, For emergencies, I used a physical kill switch to shut down all the power if something happened. 
 
-2. Transformer: How does the Transformer raise voltage or lower voltage? So, we need to convert the converter from high voltage AC to different low AC. That means doing step-down voltage.
-4.	The Adapter Power Supply is 120v AC to 12v DC, which means the adapter is a device with input and output. Inside the adapter are a transformer, a rectifier, and a filter. For example, for these inside the adapter, the transformer means the transformer raises voltage or lowers voltage, and we need high-voltage AC and low-voltage AC. That means step-down voltage. However, a rectifier has more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. We will get just the positive signals after the converter from AC to DC. In the end, a filter is Signal management, and filtering is a critical function of electronic systems. Also, it will be smoothing the signals. We must use it after the step-down voltage from DC to DC gets something single.
-5.	Controller: We have two systems, and their "chips" are all buck converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck converter. Subsystem one: it needs to step down the "Buck converter" for the Subsystem and its 5.5v dc, 250mA. Subsystem two must step down the "Bcuk converters" for the Subsystem and its 9v dc, 50mA.
+2.	The Adapter Power Supply is 120v AC to 12v DC, which means the adapter is a device with input and output. Inside the adapter are a transformer, a rectifier, and a filter. For example, for these inside the adapter, the transformer means the transformer raises voltage or lowers voltage, and we need high-voltage AC and low-voltage AC. That means step-down voltage. However, a rectifier has more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. We will get just the positive signals after the converter from AC to DC. In the end, a filter is Signal management, and filtering is a critical function of electronic systems. Also, it will be smoothing the signals. We must use it after the step-down voltage from DC to DC gets something single.
+3.	Controller: We have two systems, and their "chips" are all buck converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck converter. Subsystem one: it needs to step down the "Buck converter" for the Subsystem and its 5.5v dc, 250mA. Subsystem two must step down the "Bcuk converters" for the Subsystem and its 9v dc, 50mA.
 
-6.	Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
+4.	Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
 
 
@@ -193,34 +192,25 @@ Output Capacitor:
 
 As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. The practical series establishes the quantity of bulk capacitance required to ensure the control loop is stable and the choice of C OUT resistance (ESR) necessary to reduce voltage ripple and load step transients.
 ###  Ltspice simulations 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/85826a38-8647-45ef-94c7-22370cb69d43)
 
-1. The Transformer
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/a22ae370-b5f8-4171-8fbe-c28a07cba32c) 
-
-2. The RC filter
-
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/75ef5c70-0ff6-4185-ae2e-67f3c96b0512) 
-
-3. Buck-boost converter
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ba7a7f10-b724-4868-b76a-b7c61bd0ff23) 
 
  
-4. Buck converter for subsystem 5.5v
+1. Buck converter for subsystem 5.5v
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f2cf1a2d-a279-4222-b454-f5561ce36fdf) 
 
-5. Buck converter for subsystem 9v
+2. Buck converter for subsystem 9v
 
 <img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/4b6eb468-48f5-4a7e-bef4-76bb4fc6b212"> 
 
-6. subsystem one for The current 250mA. 
+3. subsystem one for The current 250mA. 
 
 <img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/b8047f4f-d1b3-4a99-87f5-95b3ed001e6f">
 
-7. subsystem Two for the current 50mA  
+4. subsystem Two for the current 50mA  
 
 
 
