@@ -41,7 +41,7 @@ Results for minimum speed required
 
 **Constraint Solution 2:**
 
-To reduce EMF noise from affecting the main control, a motor shield will be connected to both of the DC motors. When the motors are turned off there is a big change in the magnetic field around the motor windings. A voltage spike occurs from the this drastic change in magnetic field, but having the motor shield can redirect the spike back through the motors instead of the main control. The motor driver module has the capability to output up to 7 amps of current for each port the motors are connected to. 
+To reduce EMF noise from affecting the main control, a motor shield will be connected to both of the DC motors. When the motors are turned off there is a big change in the magnetic field around the motor windings. A voltage spike occurs from the this drastic change in magnetic field, but having the motor shield can redirect the spike back through the motors instead of the main control. The motor driver module has the capability to output up to 7 amps of current for each port the motors are connected to which is more than sufficient for what the DC motors need considering the stall torque of the motors is 1.8 amps at 12 volts. 
 
 Motor Shield
 
