@@ -127,4 +127,6 @@ Equations to solve for output noise
 | Emergency switch | Used to cut power to all systems| N/A | N/A | 1 | Recycled | Recycled |
 |Band Strap| Holds battery pack in place to the chassis | N/A | N/A | 2 | Recycled | Recycled |
 | Fuse | Protects the main control from over current | N/A | GNAWRISHING | 3 | $9.98 | $9.98 |
-|      |                                             |     |             |   |       | $90.03 |
+| Splicer | Allows seperation of power shut off from all other subsystem | B0B28GYYL2 | XALXMAW | 20 | $12.98 | $12.98 |
+| Deans T Style connector | Allows connection from batteries to power distribution board | B07WHPD4KD | elechawk | 5 | $8.99 | $8.99 |
+|      |                                             |     |             |   |       | $112 |
