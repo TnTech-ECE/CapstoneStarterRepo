@@ -249,14 +249,15 @@ Required \ battery \ capacity \ (Ah) = {12.75 Ah}
 ```
 The required battery capacity is 12.75 Ah therefore, increasing the battery capacity would be more convenient. The battery capacity ( Ah ) was selected to be 14 Ah. 
 
-From using the calculation form datasheet[6]
-
+From using the calculation form datasheet[6] 
+SPDT SW
 # BOM: 
 | Part | Part Number | Quantity | Price per Unit | Total Price |
 | ------------ | ------------- | --------- | -------- | ---------- |
-|  Adapter Power Supply |  ------------- | 1 | $9.99 | $9.99 |
+|  Adapter Power Supply | 12V 3A Adapter Power Supply AC to DC Plug | 1 | $9.99 | $9.99 |
 | Buck Converter | LTC3621  | 2 | $7.38 |$14.76 |
 | Battery |ML12-12F2 | 1 | $27.99 | $27.99 |
+| SPDT Switch | ADG419BRZ-REEL7  | 1 | $6.73| $6.73 |
 | Inductor 15uH | XFL3012-153MEC | 1 | $2.08 | $2.08 | 
 | Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 |
 | Resistor 270Ω | ERJ-U02D2700X | 1 | $0.10 | $0.10 |
@@ -270,7 +271,7 @@ From using the calculation form datasheet[6]
 | capacitor 1uF | C3216X8R1E105M160AA | 2 | $0.42 | $0.84 | 
 | capacitor 22pF | C3216CH2J221J060AA | 2 | $0.21 | $0.42 | 
 | capacitor 22uF | C3216JB1C226M160AB | 2 | $0.64 | $1.28 |
-| Total | ----- |-----| -----| $66.31 |
+| Total | ----- |-----| -----| $73.04 |
 
 # References:
 1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
