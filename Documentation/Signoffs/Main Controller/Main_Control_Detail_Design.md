@@ -69,7 +69,7 @@ For a full pin assignment see Figure 2.
 | Type of Pin | ATMEGA 2560 number available | Number used total |
 |-------------|------------------------------|-------------------|
 | Digital Input/Output | 54 | 7 |
-| I2C | 2 (P43 P44) | 4 (can connect to the same pins) |
+| I2C | 2 (P43 P44) | 2 (two sensors can connect to the same pins) |
 | PWM | 15 | 4 |
 | VCC | 1 | 1 |
 | GND | 1 | 1 |
