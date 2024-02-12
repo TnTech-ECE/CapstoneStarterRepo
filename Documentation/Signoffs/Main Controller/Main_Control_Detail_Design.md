@@ -41,19 +41,23 @@ Constraint 3 Solution:
 
 | Navigation Subsystem | Type of Pins | Number |
 |----------------------|--------------|--------|
+|| I2C (SDA/SCL) | 2 |
 
 | Start Sensor Subsystem | Type of Pins | Number |
 |------------------------|--------------|--------|
+|| I2C (SDA/SCL) | 2 |
+|| Digital Input/Output | 1 |
 
 | Team Spirit Subsystem | Type of Pins | Number |
 |-----------------------|--------------|--------|
 
 | Box Sweep Subsystem | Type of Pins | Number |
 |---------------------|--------------|--------|
+|| PWM | 1|
 
 | Button Push Subsystem | Type of Pins | Number |
 |-----------------------|--------------|--------|
-
+|| PWM | 1 |
 
 ## BOM
 
