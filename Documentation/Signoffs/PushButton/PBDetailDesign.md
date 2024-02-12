@@ -13,7 +13,6 @@ The push button subsystem will be the process of pushing the stop button to stop
 | 4. |  Servo motor | The stall torque of the motor (the max torque that can be applied before the shaft quits rotating) shall not be exceeded | Servo Motor Specifications |
 | 5. |  Servo motor | The servo motor shall fit the bracket for releasing spring loaded arm | Pin Release Bracket Specifications |
 
-
 ## Buildable Schematic
 
 Control block diagram for pushbutton system
@@ -105,7 +104,12 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 
 **Constraint Solution 4:**
 
-To prevent from reaching stall torque, the servo motor that was seleceted is the MG996R. The reason for using this motor is because it allows heavier torque loads to be lifted even if they are suspened. According to the data sheet, this servo can lift 11 kg*cm of torque before stalling. Since the pin placement of the release bracket is attached approximately 24mm (2.4 cm) from the ceneter of the servo arm, this means that under max conditions we can still lift 4.5 kg * cm of suspended weight before stalling. The MG996R also has more accuracy than the MG995, due to an upgraded IC, which will allow for more precise control using PWM. We know this servo can have 180 degrees of directional control using PWM because this is shown in the MG996R data sheet pin out as shown below.
+To prevent from reaching stall torque, the servo motor that was seleceted is the MG996R. The reason for using this motor is because it allows heavier torque loads to be lifted even if they are suspened. According to the data sheet, this servo can lift 11 kg*cm of torque before stalling. Since the pin placement of the release bracket is attached approximately 24mm (2.4 cm) from the ceneter of the servo arm, this means that under max conditions we can still lift 4.5 kg * cm of suspended weight before stalling. The MG996R also has more accuracy than the MG995, due to an upgraded IC, which will allow for more precise control using PWM. We know this servo can have 180 degrees of directional control using PWM because this is shown in the MG996R data sheet pin out as shown below. This motor's power will be pulled from the main power supply and stepped down from the buck converter. The reason for the motor drawing power from the buck converter is because the Arduino can does not have enough current to suffice the MG996R stall torque condition. However the buck converter will be able to supply enough current to the MG996R because the buck converter can output up to 5 amps of current to support the max torque load of the MG996R which is 2.5 amps.
+
+MG996R specifications
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoff-PushButton/Documentation/Signoffs/PushButton/Push_specs.png)
+
 
 Servo data sheet wiring 
 
