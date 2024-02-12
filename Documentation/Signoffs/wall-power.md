@@ -257,7 +257,7 @@ SPDT SW
 |  Adapter Power Supply | 12V 3A Adapter Power Supply AC to DC Plug | 1 | $9.99 | $9.99 |
 | Buck Converter | LTC3621  | 2 | $7.38 |$14.76 |
 | Battery |ML12-12F2 | 1 | $27.99 | $27.99 |
-| SPDT Switch | ADG419BRZ-REEL7  | 1 | $6.73| $6.73 |
+| SPDT Switch |  G6RN-1-DC5  | 1 | $4.10 | $4.10 |
 | Inductor 15uH | XFL3012-153MEC | 1 | $2.08 | $2.08 | 
 | Inductor 68uH | MSS7348-683MEC | 1 | $2.62 | $2.62 |
 | Resistor 270Ω | ERJ-U02D2700X | 1 | $0.10 | $0.10 |
