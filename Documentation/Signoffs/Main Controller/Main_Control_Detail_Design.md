@@ -28,7 +28,7 @@ The main control shall be powered separately from all other subsystems to limit 
 
 Constraint 2 Solution:
 <br>
-The main controller will be powered at 5 Volts from the power supply to keep the clock speed at or below 16 MHz according to the datasheet for the ATMEGA 2560. Although overclocking is possible 16MHz is the default setting for the ATmega 2560 chip and will be plenty fast for the other subsystems to process signals to or from the main controller. 
+The main controller will be powered at 7-12 Volts from the power supply to keep the clock speed at or below 16 MHz according to the datasheet for the ATMEGA 2560. Although overclocking is possible 16MHz is the default setting for the ATmega 2560 chip and will be plenty fast for the other subsystems to process signals to or from the main controller. 
 
 Constraint 3 Solution:
 <br>
@@ -66,6 +66,12 @@ For a full pin assignment see Figure 2.
 |-----------------------|--------------|--------|
 || PWM | 1 |
 
+| Type of Pin | ATMEGA 2560 number available | Number used total |
+| Digital Input/Output | 54 | 7 |
+| I2C | 2 (P43 P44) | 4 (can connect to the same pins) |
+| PWM | 15 | 4 |
+| VCC | 1 | 1 |
+| GND | 1 | 1 |
 
 ## BOM
 
