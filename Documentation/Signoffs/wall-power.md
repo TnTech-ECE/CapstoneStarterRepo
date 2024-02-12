@@ -7,10 +7,10 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 | --- | ----------- | ------ |
 | 1.  | Voltage equivalence: The main wall power subsystem needs to protect devices from the damage caused by voltage and guarantee the safety of the electrical system, as well as preserve the whole subsystem.| System Requirements |
 | 2.  | Transformer: A safe output voltage and the way to handle 120v AC input are requirements for the Transformer used to converter AC to AC.| System Requirements |
-| 3.  | Must be a kill switch to disconnect the power from the source.| System Requirements |
+| 3.  | Must be a kill switch to disconnect all the power from the source.| System Requirements |
 | 4.  | It should be within wire capabilities.| System Requirements |
 
-1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity.
+1.	Mian Wall Power input 120V AC: The primary power source is the 120V AC mains supply. It is the electricity that can used to power many types of devices. Wall power has multiple uses, including lighting, running devices at home, and charging machines. That system offers it access to a conveniently available supply of electricity. Also, I used a kill switch to shut down all the power if something happened. 
 
 2. Transformer: How does the Transformer raise voltage or lower voltage? So, we need to convert the converter from high voltage AC to different low AC. That means doing step-down voltage.
 4.	The Adapter Power Supply is 120v AC to 12v DC, which means the adapter is a device with input and output. Inside the adapter are a transformer, a rectifier, and a filter. For example, for these inside the adapter, the transformer means the transformer raises voltage or lowers voltage, and we need high-voltage AC and low-voltage AC. That means step-down voltage. However, a rectifier has more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. We will get just the positive signals after the converter from AC to DC. In the end, a filter is Signal management, and filtering is a critical function of electronic systems. Also, it will be smoothing the signals. We must use it after the step-down voltage from DC to DC gets something single.
@@ -26,7 +26,7 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 
 Figure 1. Kicad schematic.
 
-<img width="533" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/59b7bdb5-850a-4419-89f9-fc26030403ad">
+<img width="644" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/a8d9f662-629c-4247-995f-d076e45dc967">
 
 
 Figure 2.Kicad schematic.
@@ -35,6 +35,7 @@ Figure 2.Kicad schematic.
 
 
 Figure 3.  LTspice circuit, 
+
 for more details on Ltspice simulations
 # Analysis
 Circuit explanation: 
