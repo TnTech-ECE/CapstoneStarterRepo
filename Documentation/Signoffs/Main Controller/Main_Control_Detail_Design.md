@@ -15,7 +15,8 @@ The function of the main controller is to be the brain of the robot. It will rea
 | 3. | Shall have enough GPIO pins to support all other subsystems | Other Subsystem Specifications |
 
 ## Buildable Schematic
-![WorkingCircuitDiagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/2fbc8957-5ec6-4fab-8fdf-ab92ff29c93c) <br>
+![WorkingCircuitDiagram](https://github.com/cebttu/CapstoneTeam1/assets/100803345/d04688e1-a315-443f-bce5-013f0973826f)
+<br>
 Figure 2: ATmega 2560 Circuit diagram
 
 
@@ -31,6 +32,8 @@ The main controller will be powered at 5 Volts from the power supply to keep the
 
 Constraint 3 Solution:
 <br>
+For a full pin assignment see Figure 2. 
+
 | Power Subsystem | Type of Pins | Number |
 |-----------------|--------------|--------|
 || VCC | 1 |
@@ -38,6 +41,9 @@ Constraint 3 Solution:
 
 | Drivetrain Subsystem | Type of Pins | Number |
 |----------------------|--------------|--------|
+|| PWM | 2 |
+|| Digital Input/Output | 4 |
+
 
 | Navigation Subsystem | Type of Pins | Number |
 |----------------------|--------------|--------|
@@ -50,6 +56,7 @@ Constraint 3 Solution:
 
 | Team Spirit Subsystem | Type of Pins | Number |
 |-----------------------|--------------|--------|
+|| Digital Input/Output | 2 |
 
 | Box Sweep Subsystem | Type of Pins | Number |
 |---------------------|--------------|--------|
@@ -58,6 +65,7 @@ Constraint 3 Solution:
 | Button Push Subsystem | Type of Pins | Number |
 |-----------------------|--------------|--------|
 || PWM | 1 |
+
 
 ## BOM
 
