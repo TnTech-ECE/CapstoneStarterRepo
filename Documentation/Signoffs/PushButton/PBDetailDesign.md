@@ -105,7 +105,11 @@ The length of the shaft/arm needs to at least reach out approximately 12 inches 
 
 **Constraint Solution 4:**
 
-To prevent from reaching stall torque, the servo motor that was seleceted is the MG996R. The reason for using this motor is because it allows heavier torque loads to be lifted even if they are suspened. According to the data sheet, this servo can lift 11 kg*cm of torque before stalling. Since the pin placement of the release bracket is attached approximately 24mm (2.4 cm) from the ceneter of the servo arm, this means that under max conditions we can still lift 4.5 kg * cm of suspended weight before stalling. The MG996R also has more accuracy than the MG995, due to an upgraded IC, which will allow for more precise control.  
+To prevent from reaching stall torque, the servo motor that was seleceted is the MG996R. The reason for using this motor is because it allows heavier torque loads to be lifted even if they are suspened. According to the data sheet, this servo can lift 11 kg*cm of torque before stalling. Since the pin placement of the release bracket is attached approximately 24mm (2.4 cm) from the ceneter of the servo arm, this means that under max conditions we can still lift 4.5 kg * cm of suspended weight before stalling. The MG996R also has more accuracy than the MG995, due to an upgraded IC, which will allow for more precise control using PWM. We know this servo can have 180 degrees of directional control using PWM because this is shown in the MG996R data sheet pin out.
+
+Servo data sheet wiring 
+
+
 
 Servo Arm 
 
