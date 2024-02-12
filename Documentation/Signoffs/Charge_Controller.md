@@ -627,7 +627,7 @@ R_{SENSE} = \frac{0.05}{I_{MAX}}
 ```math
 ```
 ```math
-R_{SENSE} = 0.014Ω
+R_{SENSE} = 0.014 Ω
 ```
 ```math
 ```
@@ -698,7 +698,7 @@ The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and 
 | Boost Converter | TPS61170DRVR | 1 | $1.94 | $1.94 |
 | Current Sensor | ACS712ELCTR-05B-T | 1 | $3.70 | $7.40 |
 | Operational Amplifier | TLV9361QDCKRQ1  | 1 | $1.51 | $1.51 |
-| Relay | G6RN-1-DC5 | 2 | $4.10 | $8.20 | 
+| SPDT Relay | G6RN-1-DC5 | 2 | $4.10 | $8.20 | 
 | Dual N-Channel MOSFET | SI7272DP-T1-GE3 | 3 | $1.43 | $4.29 |
 | P-Channel MOSFET | NVD5117PLT4G-VF01 | 1 | $1.97 | $1.97 |
 | Schottky Diode | SBR0560S1Q-7 | 4 | $0.38 | $1.52 |
@@ -722,5 +722,21 @@ The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and 
 | 15 uF Capacitor | C3216X5R1V156M160AC | 2 | $0.99 | $1.98 |
 | 68 uF Capacitor | C3216X5R0J686M160AB | 1 | $0.71 | $0.71 |
 | 150 uF Capacitor | 870575574002 | 1 | $1.81 | $1.81 |
-
+| 0.014 Ω Resistor | WSL2512R0140FEA18 | 3 | $1.03 | $3.09 |
+| 100 Ω Resistor | SFR18EZPF1000 | 2 | $0.26 | $0.52 |
+| 3.6 kΩ Resistor | CCF073K60JKE36 | 1 | $0.30 | $0.30 |
+| 10 kΩ Resistor | CFR01SJ0103B00 | 6 | $0.033 per unit | $0.198 |
+| 14 kΩ Resistor | ERA-8AEB1402V | 1 | $0.59 | $0.59 |
+| 17 kΩ Resistor | MFR-12FTF52-17K | 1 | $0.10 | $0.10 |
+| 20 kΩ Resistor | 3503G2B20KFTDF | 2 | $1.67 | $3.34 |
+| 30 kΩ Resistor | CRCW251230K0JNEG | 1 | $0.32 | $0.32 |
+| 33 kΩ Resistor | CFR01SJ0333B00 | 2 | $0.033 per unit | $0.066 |
+| 76.8 kΩ Resistor | CCF5576K8FKE36 | 1 | $0.30 | $0.30 |
+| 98.8 kΩ Resistor | TNPW120698K8BEEN | 2 | $0.88 | $1.76 |
+| 100 kΩ Resistor | CFR01SJ0104B00 | 1 | $0.033 per unit | $0.033 |
+| 120 kΩ Resistor | ERA-8KEB1203V | 1 | $0.82 | $0.82 |
+| 140 kΩ Resistor | CRCW2512140KFKEG | 1 | $0.34 | $0.34 |
+| 270 kΩ Resistor | ERA-8KEB2703V | 1 | $0.82 | $0.82 |
+| 620 kΩ Resistor | CRCW2512620KJNEG1 | 1 | $0.32 | $0.32 |
+| 2 MΩ Resistor | RCV12062M00FKEAAT | 1 | $0.35 | $0.35 |
 | Total | ----- | ----- | ----- | $--.-- |
