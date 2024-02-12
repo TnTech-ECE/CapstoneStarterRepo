@@ -704,6 +704,8 @@ The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and 
 | Schottky Diode | SBR0560S1Q-7 | 4 | $0.38 | $1.52 |
 | Zener Diode | BZX84C6V2LT116 | 1 | $0.24 | $0.24 |
 | Diode | RFN10BM3STL | 1 | $1.27 | $1.27 |
+| 5 uH Inductor | PA4339.701NLT | 1 | $1.77 | $1.77 |
+| 15 uH Inductor | SRP1245CC-150M | 2 | $1.96 | $3.92 |
 | 50 pF Capacitor | 12062A500KAT2A | 1 | $0.40 | $0.40 |
 | 100 pF Capacitor | KGM31BCG1H101JT | 1 | $0.24 | $0.24 |
 | 680 pF Capacitor | KGM31TCG2H681JU | 2 | $0.28 | $0.56 |
@@ -739,4 +741,4 @@ The _G6RN-1_ SPDT relay has been chosen due to its 8 A switching capability and 
 | 270 kΩ Resistor | ERA-8KEB2703V | 1 | $0.82 | $0.82 |
 | 620 kΩ Resistor | CRCW2512620KJNEG1 | 1 | $0.32 | $0.32 |
 | 2 MΩ Resistor | RCV12062M00FKEAAT | 1 | $0.35 | $0.35 |
-| Total | ----- | ----- | ----- | $--.-- |
+| Total | ----- | ----- | ----- | $116.037 |
