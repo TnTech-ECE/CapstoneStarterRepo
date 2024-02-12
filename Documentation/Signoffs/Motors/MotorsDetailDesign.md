@@ -20,7 +20,9 @@ Wires from motor pinout
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Wire_pinout.png)
 
-The Encoder A Output and Encoder B Output are digital signals, and both encoders will be connected to one digital pin of the micrcontroller. For both motors there are a total of four digital pins connected to the microcontroller.
+The Encoder A Output and Encoder B Output are digital signals, and both encoders will be connected to one digital pin of the micrcontroller. For both motors there are a total of four digital pins connected to the microcontroller. The proof that the encoder A and encoder B outputs will work with the arduino are shown below because the HAL sensors on the encoder provide a digital signal that can be read as an input from the arduino pins.
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Encoder_proof.png)
 
 
 ## Analysis
