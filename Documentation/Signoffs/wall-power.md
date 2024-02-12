@@ -1,6 +1,6 @@
 # Wall power Subsystem:
 
-My main wall power subsystem input 120v AC. The main wall power has an adapter Power Supply that converts AC to AC or AC to DC, then a buck converters DC to DC that is step down will output 5.5V DC and buck converters that will be a step down that output 9v DC. After that, it will feed the other two subsystems; the first subsystem needs a 5.5v DC, and the second subsystem needs a 9v DC. However, I have another subsystem, which is a backup battery. If the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. The main idea is to supply power to the device, building a circuit that will convert to DC and then distribute voltage to other subsystems.
+My main wall power subsystem input is 120v AC. The main wall power has an adapter Power Supply that converts AC to AC or AC to DC, then a buck converters DC to DC that is step down will output 5.5V DC and buck converters that will be a step down that output 9v DC. After that, it will feed the other two subsystems; the first subsystem needs a 5.5v DC, and the second subsystem needs a 9v DC. However, I have another subsystem, which is a backup battery. If the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. The main idea is to supply power to the device, building a circuit that will convert to DC and then distribute voltage to other subsystems.
 
 # Constraints
 | No. | Constraints | Origin |
@@ -15,7 +15,7 @@ My main wall power subsystem input 120v AC. The main wall power has an adapter P
 2.	The Adapter Power Supply is 120v AC to 12v DC, which means the adapter is a device with input and output. Inside the adapter are a transformer, a rectifier, and a filter. For example, for these inside the adapter, the transformer means the transformer raises voltage or lowers voltage, and we need high-voltage AC and low-voltage AC. That means step-down voltage. However, a rectifier has more diodes in a bridge circuit setup to effectively transform an alternating current AC into a direct current DC. Also, it shows that the current uses a single path after converting. We will get just the positive signals after the converter from AC to DC. In the end, a filter is Signal management, and filtering is a critical function of electronic systems. Also, it will be smoothing the signals. We must use it after the step-down voltage from DC to DC gets something single.
 3.	Controller: We have two systems, and their "chips" are all buck converters. Firstly, it is a controller or master switch between the wall power and backup battery, and this controller manages the voltage between them. The input comes with the same voltage, and it's 12v DC. The idea for the controller is that if the main wall power shuts down, a switch will activate the backup battery to feed the two subsystems. Secondly, the other two subsystems will be the same chips and buck converter. Subsystem one: it needs to step down the "Buck converter" for the Subsystem and its 5.5v dc, 250mA. Subsystem two must step down the "Bcuk converters" for the Subsystem and its 9v dc, 50mA.
 
-4.	Use the Backup Battery if the main wall power shuts down. Also, the battery will be connected to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
+4.	Use the Backup Battery if the main wall power shuts down. Also, the battery connects to the kill switch. If something happens to the wall power, the subsystems will change the switch immediately to the backup battery. Between the backup battery and the main wall, have a switch "controller" to manage all power from subsystems. The battery backup subsystem aims to ensure that the first and second subsystems usually function during power outages. The backup battery type is a 12-volt 12AH sealed lead acid AGM.
 
 
 
@@ -30,17 +30,12 @@ Figure 1. Kicad schematic.
 
 Figure 2.Kicad schematic.
 
-![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/80d81f0b-1505-4cbe-aab9-bea52dd7c6fe)
 
-
-Figure 3.  LTspice circuit, 
-
-for more details on Ltspice simulations
 # Analysis
 Circuit explanation: 
 1.	The input for wall power is 120v AC, 60 Hz.
 2.	Adapter Power Supply 120v AC to 12v DC 
-3.	Buck converter: “Step down the voltages for Subsystem One and Subsystem Two”
+3.	Buck converter: “Step down the voltages for Subsystem One and Subsystem Two.”
 4.	The output needs to have two subsystems with an output of 9v DC, 60mA, And 5v DC, 250mA.
 
 Calculations:
@@ -194,23 +189,28 @@ As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. Th
 ###  Ltspice simulations 
 
 
+<img width="959" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2f5794d4-8e9a-44a6-bdae-3d3b066a6541">
+
+
+
+ 1. LTspice circuit, 
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ba7a7f10-b724-4868-b76a-b7c61bd0ff23) 
 
  
-1. Buck converter for subsystem 5.5v
+2. Buck converter for subsystem 5.5v
 
 ![image](https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/f2cf1a2d-a279-4222-b454-f5561ce36fdf) 
 
-2. Buck converter for subsystem 9v
+3. Buck converter for subsystem 9v
 
 <img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/4b6eb468-48f5-4a7e-bef4-76bb4fc6b212"> 
 
-3. subsystem one for The current 250mA. 
+4. subsystem one for The current 250mA. 
 
 <img width="955" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/b8047f4f-d1b3-4a99-87f5-95b3ed001e6f">
 
-4. subsystem Two for the current 50mA  
+5. subsystem Two for the current 50mA  
 
 
 
