@@ -10,7 +10,7 @@ The power subsystem is the system that will provide power to all the components 
 | 3. | Accessibility | The power subsystem shall have easy accecibility to all of its it components and wires | Competition Specifications |
 | 4. | Fuse | The power subsystem shall have fuses in place to protect subsystem components from overcurrent | IEC 60127 |
 | 5. | Load Support | The power subsytem shall provide apporpriate voltage and current under max load conditions of every subsystem | Battery Specifications | 
-| 6. | Noise Suppresion| The switching supply noise from the buck converters shall be mitigated to prevent signal and circuit interferences | Team Strategy Specification |
+| 6. | Noise Suppresion| The switching supply noise from the buck converters and the motors shall be mitigated to prevent signal and circuit interferences | Team Strategy Specification |
 
 
 ## Buildable Schematic
