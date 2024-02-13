@@ -21,7 +21,7 @@ My main wall power subsystem input is 120v AC. The main wall power has an adapte
 
 # Buildable Schematic:
 
-<img width="722" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/ac1fd0b7-1c75-403d-b98d-5fe164d41c73">
+<img width="808" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/c4cfd3b4-9d33-4001-8afd-c4d1b48f0b7b">
 
 Figure 1. Kicad schematic.
 
