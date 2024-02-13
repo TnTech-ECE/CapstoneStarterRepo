@@ -24,6 +24,12 @@ The Encoder A Output and Encoder B Output are digital signals, and both encoders
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Encoder_proof.png)
 
+Code example for DC motors with CPR Encoder
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Arduino_motor_code_1.png)
+
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/ConorOrr-Signoff-Motors/Documentation/Signoffs/Motors/Arduino_motor_code_2.png)
+
 
 ## Analysis
 
