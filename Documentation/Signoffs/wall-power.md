@@ -270,7 +270,7 @@ SPDT SW
 | capacitor 1uF | C3216X8R1E105M160AA | 2 | $0.42 | $0.84 | 
 | capacitor 22pF | C3216CH2J221J060AA | 2 | $0.21 | $0.42 | 
 | capacitor 22uF | C3216JB1C226M160AB | 2 | $0.64 | $1.28 |
-| Total | ----- |-----| -----| $73.04 |
+| Total | ----- |-----| -----| $70.38 |
 
 # References:
 1.Power Electronics pdf, Daniel W. Hart Valparaiso University Valparaiso, Indiana.
