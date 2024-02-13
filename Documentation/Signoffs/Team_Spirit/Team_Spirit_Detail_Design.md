@@ -89,7 +89,11 @@ Figure 9: Plot of N-MOS characteristics of strip A
 
 Figure 10: Plot of N-MOS characteristics of strip B
 
-Figures 9 and 10 display plots of the voltage at the gate, drain, and source terminals over a period of 380 ms. The drain terminal is being used to control a 5 volt power supply. A 5 volt signal is shown to be pass from the drain to source terminals while the gate terminal is recieving a 5 volt signal. No current is passing from the drain terminal to the source terminal while the gate is not being powered. These results satisfy the conditions of constraint 2 requiring a frequency of 4 Hz, 250 ms. The experimental results in the plots above indicate that the N-MOS characteristics satisfy the needs of the circuit and creates a functional method of precise control from the microcontroller to the Team Spirit subsytem. 
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/NMOS%20CURRENT.PNG)
+
+Figure 11: LTSPICE simulation of the current characteristics of the NMOS terminal.
+
+Figures 9 and 10 display plots of the voltage at the gate, drain, and source terminals over a period of 380 ms. Figure 11 demonstrates the current characteristics of the gate and drain terminals of the NMOS and the current passing through one LED. The results of this simulation indicate that upon a load to each gate terminal the drain terminals pass 640 mA to the source terminal. The analysis of the forward current of the LED incates that an acceptable current of 20 mA are being supplied to each LED. The drain terminal is being used to control a 5 volt power supply. A 5 volt signal is shown to be pass from the drain to source terminals while the gate terminal is recieving a 5 volt signal. No current is passing from the drain terminal to the source terminal while the gate is not being powered. These results satisfy the conditions of constraint 2 requiring a frequency of 4 Hz, 250 ms. The experimental results in the plots above indicate that the N-MOS characteristics satisfy the needs of the circuit and creates a functional method of precise control from the microcontroller to the Team Spirit subsytem. 
 
 Constraint Solutions:
 
@@ -140,4 +144,4 @@ The LED lights shall not tamper with the IR sensors of the navegation system. Th
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/data%20points.txt)
 
-Figure 11: All data points produced during the electrical analysis of the N-MOS.
+Figure 12: All data points produced during the electrical analysis of the N-MOS.
