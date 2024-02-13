@@ -119,7 +119,7 @@ Adjustable Buck Converter Maximum Output Ripple Noise
 
 **Noise from Motors**
 
-To help mitigate noise from the motors, pololu suggests that using capacitors are usually the most effective way to suppress motor noise, and recommend you soldering at least one capacitor across your motor terminals. Typically you will want to use anywhere from one to three 0.1 µF ceramic capacitors, soldered as close to the motor casing as possible. Since our motors are bidirectional, and we need bidirectional control, Pololu suggest that for our application that we do not use a polarized capacitor.
+To help mitigate noise from the motors, pololu suggests that using capacitors are usually the most effective, and recommend soldering at least one capacitor across your motor terminals. Typically you will want to use anywhere from one to three 0.1 µF ceramic capacitors, soldered as close to the motor casing as possible. Since our motors are bidirectional, and we need bidirectional control, Pololu suggest that for our application that we do not use a polarized capacitor.
 
 
 
