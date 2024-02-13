@@ -188,7 +188,7 @@ As given in the Datasheet, the Input Capacitor is 22uF. This is best for use. Th
 ###  Ltspice simulations 
 
 
-<img width="959" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/2f5794d4-8e9a-44a6-bdae-3d3b066a6541">
+<img width="960" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/fe2e2bf0-eed7-4606-9356-107b78118970">
 
 
 
