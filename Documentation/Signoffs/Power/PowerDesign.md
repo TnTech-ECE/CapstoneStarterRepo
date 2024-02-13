@@ -107,15 +107,21 @@ Total Load Results under Max Conditions
 
 
 **Constrain Solution 6:**
-Since the buck converters have switching components in them, there will be some noise present feeding from the rails of the buck converter to the subsystem they supply. The buck converters that will be used are LM2596S. One of the causes for noise being supplied is due to the ripple voltage coming off the positive and negative terminals of the voltage rails due to the output capacitor. According to Texas Instruments data sheet, the switching frequency of the LM259s is 150kHz, the series inductance is 33uH and, the output capacitor 220uF. Using the ripple voltage equation for a buck converter we can calculate the output noise. The output ripple voltage is approximately 174mV peak-to-peak when applying 14.8 volts to the positive side and adjusting the output to 12 volts from the buck converter. The maximum output ripple voltage that the LM2596S can produces is approximately 200mV peak-to-peak according to the data sheet. The output noise from the buck converter is mitigated by the Arduino Mega 2560 on board voltage regulator that helps smooth out voltage spikes. The voltage regulator on the Arduino Mega 2560 is an AMS1117, and this chip has a 1Vpp PSRR (power supply ripple rejection) which is well above the 200mV range that our buck converter has the potential of producing. The IR sensor uses a Kb33 voltage regulator chip which has a PSRR  of 0.5 Vpp which is also well above the buck converters max voltage ripple noise output.  Even though our calculated output noise is lower as compared to the specifications of the IR sensor and Arduino, the wires connected from the buck converter to the IR sensorwill be twisted together to take extra precaution. 
+
+**Noise from Buck Converters**
+
+Since the buck converters have switching components in them, there will be some noise present feeding from the rails of the buck converter to the subsystem they supply. The buck converters that will be used are LM2596S. One of the causes for noise being supplied is due to the ripple voltage coming off the positive and negative terminals of the voltage rails due to the output capacitor. According to Texas Instruments data sheet, the switching frequency of the LM259s is 150kHz, the series inductance is 33uH and, the output capacitor 220uF. Using the ripple voltage equation for a buck converter we can calculate the output noise. The output ripple voltage is approximately 174mV peak-to-peak when applying 14.8 volts to the positive side and adjusting the output to 12 volts from the buck converter. The maximum output ripple voltage that the LM2596S can produces is approximately 200mV peak-to-peak according to the data sheet. The output noise from the buck converter is mitigated by the Arduino Mega 2560 on board voltage regulator that helps smooth out voltage spikes. The voltage regulator on the Arduino Mega 2560 is an AMS1117, and this chip has a 1Vpp PSRR (power supply ripple rejection) which is well above the 200mV range that our buck converter has the potential of producing. The IR sensor uses a Kb33 voltage regulator chip which has a PSRR  of 0.5 Vpp which is also well above the buck converters max voltage ripple noise output.  Even though our calculated output noise is lower as compared to the specifications of the IR sensor and Arduino, the wires connected from the buck converter to the IR sensorwill be twisted together to take extra precaution. To mitigate the motor noise to components 
 
 Adjustable Buck Converter Maximum Output Ripple Noise
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Ripple_noise.png)
 
-Equations to solve for output noise
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Noise.png)
+**Noise from Motors**
+
+To help mitigate noise from the motors, pololu suggests that using capacitors are usually the most effective way to suppress motor noise, and recommend you soldering at least one capacitor across your motor terminals. Typically you will want to use anywhere from one to three 0.1 µF ceramic capacitors, soldered as close to the motor casing as possible. Since our motors are bidirectional, and we need bidirectional control, Pololu suggest that for our application that we do not use a polarized capacitor.
+
+
 
 ## BOM
 | Item | Description | Part Number | Manufacturer | Quantity | Price | Total Price |
@@ -129,4 +135,5 @@ Equations to solve for output noise
 | Fuse | Protects the main control from over current | N/A | GNAWRISHING | 3 | $9.98 | $9.98 |
 | Splicer | Allows seperation of power shut off from all other subsystem | B0B28GYYL2 | XALXMAW | 20 | $12.98 | $12.98 |
 | Deans T Style connector | Allows connection from batteries to power distribution board | B07WHPD4KD | elechawk | 5 | $8.99 | $8.99 |
+|0.1uF Capacitor | Used to mitigate noise from the motors | N/A | N/A | 2 | Recycled | Recycled |
 |      |                                             |     |             |   |       | $112 |
