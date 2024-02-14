@@ -55,7 +55,7 @@ Box Sweep Power Connections
 
 Start Sensor and Backup Push Button Switch Power Connections
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Start.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Start_sensor_schematic.png)
 
 Battery Placement on chassis
 
