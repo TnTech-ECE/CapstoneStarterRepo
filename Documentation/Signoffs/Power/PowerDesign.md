@@ -127,7 +127,7 @@ Connection of capacitors to motors
 
 **Arduino input Noise**
 
-The Arduino can handle an input voltage range of 6-20 volts. The voltage supplied from the buck converter output side is stepped down to 12 volts from the main power supply and connected to the Arduino. Since the buck converter outputs at maximum 200mV peak-to-peak of ripple voltage then the maximum input voltage the Arduino will undergo is 12.2 volts which is well within the range that the Arduino can handle. As for the current supplied to the arduino, the maximum current that can be supplied is 2 amps with a minumum supply current of 500mA which our buck converter is capable of supplying.
+The Arduino can handle an input voltage range of 6-20 volts. The voltage supplied from the buck converter output side is stepped down to 12 volts from the main power supply and connected to the Arduino. Since the buck converter outputs at maximum 200mV peak-to-peak of ripple voltage then the maximum input voltage the Arduino will undergo is 12.2 volts which is well within the range of 6-20 volts. As for the current supplied to the arduino, the maximum current that can be supplied is 2 amps with a minumum supply current of 500mA which our buck converter is capable of supplying. (Protection from overcurrent in constraint solution 4).
 
 
 
