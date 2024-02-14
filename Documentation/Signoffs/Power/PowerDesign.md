@@ -27,7 +27,7 @@ Arduino Power Connections
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/MC_New.png)
 
-The arduino has a buck converter connected to it because the recommended operating voltage is 7-12 volts, and the adjustable buck converter will step down the 14.8 volts from the main power supply to 12 volts. If 14.8 volts are applied directly to the arduino for long periods of time then the arduino will start to overheat. Applying too much voltage can also damage the on board voltage regulator.
+The arduino has a buck converter connected to it because the recommended operating voltage is 7-12 volts, but can handle from 6-20 volts. The adjustable buck converter will step down the 14.8 volts from the main power supply to 12 volts. If 14.8 volts are applied directly to the arduino for long periods of time then the arduino will start to overheat. Applying too much voltage can also damage the on board voltage regulator.
 
 Drive Train Power Connections
 
@@ -110,7 +110,7 @@ Total Load Results under Max Conditions
 
 **Noise from Buck Converters**
 
-Since the buck converters have switching components in them, there will be some noise present feeding from the rails of the buck converter to the subsystem they supply. The buck converters that will be used are LM2596S. One of the causes for noise being supplied is due to the ripple voltage coming off the positive and negative terminals of the voltage rails due to the output capacitor. According to Texas Instruments data sheet, the switching frequency of the LM259s is 150kHz, the series inductance is 33uH and, the output capacitor 220uF. Using the ripple voltage equation for a buck converter we can calculate the output noise. The output ripple voltage is approximately 174mV peak-to-peak when applying 14.8 volts to the positive side and adjusting the output to 12 volts from the buck converter. The maximum output ripple voltage that the LM2596S can produces is approximately 200mV peak-to-peak according to the data sheet. The output noise from the buck converter is mitigated by the Arduino Mega 2560 on board voltage regulator that helps smooth out voltage spikes. The voltage regulator on the Arduino Mega 2560 is an AMS1117, and this chip has a 1Vpp PSRR (power supply ripple rejection) which is well above the 200mV range that our buck converter has the potential of producing. The IR sensor uses a Kb33 voltage regulator chip which has a PSRR  of 0.5 Vpp which is also well above the buck converters max voltage ripple noise output.  Even though our calculated output noise is lower as compared to the specifications of the IR sensor and Arduino, the wires connected from the buck converter to the IR sensorwill be twisted together to take extra precaution. To mitigate the motor noise to components 
+Since the buck converters have switching components in them, there will be some noise present feeding from the rails of the buck converter to the subsystem they supply. The buck converters that will be used are LM2596S. One of the causes for noise being supplied is due to the ripple voltage coming off the positive and negative terminals of the voltage rails due to the output capacitor. According to Texas Instruments data sheet, the switching frequency of the LM259s is 150kHz, the series inductance is 33uH and, the output capacitor 220uF. Using the ripple voltage equation for a buck converter we can calculate the output noise. The output ripple voltage is approximately 174mV peak-to-peak when applying 14.8 volts to the positive side and adjusting the output to 12 volts from the buck converter. The maximum output ripple voltage that the LM2596S can produces is approximately 200mV peak-to-peak according to the data sheet. The voltage regulator on the Arduino Mega 2560 is an AMS1117, and this chip has a 1Vpp PSRR (power supply ripple rejection) which is well above the 200mV range that our buck converter has the potential of producing. The IR sensor uses a Kb33 voltage regulator chip which has a PSRR  of 0.5 Vpp which is also well above the buck converters max voltage ripple noise output.  Even though our calculated output noise is lower as compared to the specifications of the IR sensor and Arduino, the wires connected from the buck converter to the IR sensorwill be twisted together to take extra precaution. 
 
 Adjustable Buck Converter Maximum Output Ripple Noise
 
@@ -124,6 +124,10 @@ To help mitigate noise from the motors, pololu suggests that using capacitors ar
 Connection of capacitors to motors
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Capacitor_connections.png)
+
+**Arduino input Noise**
+
+The Arduino can handle an input voltage range of 6-20 volts. The voltage supplied from the buck converter output side is stepped down to 12 volts from the main power supply and connected to the Arduino. Since the buck converter outputs at maximum 200mV peak-to-peak of ripple voltage then the maximum input voltage the Arduino will undergo is 12.2 volts which is well within the range that the Arduino can handle. As for the current supplied to the arduino, the maximum current that can be supplied is 2 amps with a minumum supply current of 500mA. The buck converter is capable of providing up to 5 amps, and has a CC knob that allows the buck converters current to also be stepped down. The current will be limited using a 12 ohm resistor as seen in the scheamtics in the power distribution connections along with the 2 amp fuse to protect from overcurrent. 
 
 
 
