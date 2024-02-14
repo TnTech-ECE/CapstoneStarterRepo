@@ -35,7 +35,7 @@ Figure 2.Kicad schematic.
 Figure 3. 3D Model
 
 
-<img width="380" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/348b2a72-3863-40cd-96b0-8a5dd7801d9d">
+<img width="531" alt="image" src="https://github.com/Brady-Beecham/Capstone-Team-PowerHouse/assets/143124480/5fed5b79-debf-4f57-8cbc-f32b77d57719">
 
 Figure 4. PCB design and measurement 
 
