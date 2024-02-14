@@ -37,7 +37,7 @@ The motor shield will have internal flyback diodes and noise shielding to help p
 
 Team Spirit Power Connections
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Team_S.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Power_TS.png)
 
 The NMOS MOSFET that is connected to the main power supply allows power isolation from the arduino digital signal pin. 
 
