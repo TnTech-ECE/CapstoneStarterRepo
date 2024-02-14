@@ -47,11 +47,11 @@ Navigation Power Connections
 
 Pushbutton Power Connections
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Push_button_power.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/PB_Servo_schematic.png)
 
 Box Sweep Power Connections
 
-![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Box_sweep.png)
+![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Box_Servo_schematic.png)
 
 Start Sensor and Backup Push Button Switch Power Connections
 
