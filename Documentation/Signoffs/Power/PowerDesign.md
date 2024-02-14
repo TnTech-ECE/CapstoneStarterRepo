@@ -125,9 +125,17 @@ Connection of capacitors to motors
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/Adrin11-signoffs-Power/Documentation/Images/Powe-Images/Capacitor_connections.png)
 
-**Arduino input Noise**
+**Arduino Input Noise**
 
 The Arduino can handle an input voltage range of 6-20 volts. The voltage supplied from the buck converter output side is stepped down to 12 volts from the main power supply and connected to the Arduino. Since the buck converter outputs at maximum 200mV peak-to-peak of ripple voltage then the maximum input voltage the Arduino will undergo is 12.2 volts which is well within the range of 6-20 volts. As for the current supplied to the arduino, the maximum current that can be supplied is 2 amps with a minumum supply current of 500mA which our buck converter is capable of supplying. (Protection from overcurrent to the Arduino in constraint solution 4).
+
+**Push Button and Box Sweep Input Noise**
+
+Based off the MG996R servo data sheet, the servos for the Push button and the box sweep subsystem will be able to handle the output voltage from the buck converters. The buck converters output voltage for these two subsystems will be adjusted with the VC knob to be 6 volts. Considering that the maximum peak-to-peak voltage output noise from the buck converters are 200mV peak-to-peak, the max voltage range the servos will undergo is approximately 6.2 volts and 5.8 volts minimum which is well within the maximum input range of 4.8 – 7.2 volts. Since the MG996R servos are operating in approximately the 6-volt range, the operating current is 500mA -900mA, and the stall torque current is 2.5 amps which our buck converter is able to supply up to 5 amps, but the CC knob will be adjusted to under the 2.5-amp range to prevent shorting of the motor windings within the MG996R. 
+
+**Start Sensor Input Noise**
+
+The APDS-9960 RGB sensor data sheet states the operating voltage is 2.4-3.6 volts. The start sensor will be powered from the 3.3-volt output pin from the Arduino. The Arduinos internal power supply for the 3.3-volt pin uses a low noise LP2985 voltage regulator.  The output noise from the LP2985 according to the data sheet states it is 30u VRMS which is equivalent to 85u volts peak-to-peak which under max condition the sensor will undergo 3.300085 volts and under minimum operation the sensor will have 3.29991516 volts which is well within the range of 2.4-3.3 volts for the APDS-9960 RGB sensor.  According to the start sensor data sheet pin out, the sensor board does not need an external current limiting sensor when connected to the 3.3-volt pin on the Arduino and the minimum operation current for the board is approximately 0.2mA which the 3.3-volt pin is capable of supplying. 
 
 
 
