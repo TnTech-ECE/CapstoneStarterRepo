@@ -49,15 +49,15 @@ The N - Channel MOSFET can supply a max of 30 A of drain current. The switching 
 
 Drain:
 
-The drain terminal of the MOSFET is connected to the positive terminal of the LED's. The drain terminal's maximum output characteristics from the D terminal are 30A, at 60V.
+The drain terminal of the MOSFET is connected to the positive terminal of the LED's. The drain terminal's maximum output characteristics are 30A, at 60V. The minimum drain current is 25 &mu;A, the minimum drain voltage is 1.5 volts.
 
 Source:
 
-The source terminal of the MOSFET is connected to the common terminal of the circuit.
+The source terminal of the MOSFET is connected to the common terminal of the circuit. The minimum source current is 10 &mu;A and the minimum voltage is 1.5 V. The maximum current is 30 A and the maximum voltage is 60 A. 
 
 Gate:
 
-The gate terminal of the MOSFET is controlled by a 5V signal from the microcontroller. The gate terminal controls current flow from the drain terminal of the MOSFET.
+The gate terminal of the MOSFET is controlled by a signal from the microcontroller. The gate terminal controls current flow from the drain terminal of the MOSFET. The Gate terminal may recieve a minimum of 1 volt and a maximum of 10 volts; it will be operated at volts. The minimum current applied to the gate terminal of the NMOS is 31 mA.
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmos.PNG)
