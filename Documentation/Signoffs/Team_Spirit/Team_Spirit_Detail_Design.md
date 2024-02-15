@@ -57,7 +57,7 @@ The source terminal of the MOSFET is connected to the common terminal of the cir
 
 Gate:
 
-The gate terminal of the MOSFET is controlled by a signal from the microcontroller. The gate terminal controls current flow from the drain terminal of the MOSFET. The Gate terminal may recieve a minimum of 1 volt and a maximum of 10 volts; it will be operated at volts. The minimum current applied to the gate terminal of the NMOS is 31 mA.
+The gate terminal of the MOSFET is controlled by a signal from the microcontroller. The gate terminal controls current flow from the drain terminal of the MOSFET. The Gate terminal may recieve a minimum of 1 volt and a maximum of 10 volts; it will be operated at volts. The minimum current applied to the gate terminal of the NMOS is 31 mA. Each digital input pin of the microcontroller outputs a 5 volt, 40 mA signal. These DIO pins supply sufficient current and voltage to the gate terminal of the NMOS.
 
 
 ![Alt text](https://github.com/cebttu/CapstoneTeam1/blob/LiamCounasse-signoff-Team_Spirit/Documentation/Signoffs/Team_Spirit/nmos.PNG)
