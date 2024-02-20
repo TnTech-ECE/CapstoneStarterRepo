@@ -1,47 +1,39 @@
-# Drone Tracker
+# Drone Tracking System
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
-
+Drones have grown exceedingly popular in recent years due to both their novelty and capabilities. Unfortunately, not all drone users prioritize the safety and privacy of others while flying their drones, so to combat a rise in unsafe drone activities, the Federal Aviation Administration (FAA) created a regulation in 2023 requiring drones to emit a remote identification signal. Utilizing this regulation, this team is designing a drone tracking device that will notify the Tennessee Technological University (TTU) Police if an unauthorized drone enters the contiguous campus.
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
+Coming soon :)
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
+Coming soon :)
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
-
-Below the video link show some well-taken, appropriately sized images of the project.
-
+Coming soon :)
 
 ## About Us
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specific).
+[Meredith Nye](www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
 
-Meredith Nye
+[Abe Perkins](www.linkedin.com)
 
-Abe Perkins
+[Sterling Sloan](www.linkedin.com)
 
-Sterling Sloan
+[Aaron Stewart](www.linkedin.com)
 
-Aaron Stewart
+[JieJun Stowell](www.linkedin.com)
 
-JieJun Stowell
-
-Austin Williams
+[Austin Williams](www.linkedin.com)
 
 ### Faculty Supervisor
 
-Dr. Jeffrey Austin
+The faculty supervisor for this project is Dr. Jeffrey Austin
 
 ### Stakeholders
 
