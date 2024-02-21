@@ -25,7 +25,7 @@ Coming soon :)
 
 [Sterling Sloan](www.linkedin.com)
 
-[Aaron Stewart](www.linkedin.com)
+[Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
 
 [JieJun Stowell](www.linkedin.com)
 
