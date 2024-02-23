@@ -29,7 +29,7 @@ Coming soon :)
 
 [JieJun Stowell](www.linkedin.com)
 
-[Austin Williams](www.linkedin.com)
+[Austin Williams](www.linkedin.com/in/austingwilliams/) is an electrical engineering major with a concentration in Power Systems. He is interested in power transmission and operations.
 
 ### Faculty Supervisor
 
