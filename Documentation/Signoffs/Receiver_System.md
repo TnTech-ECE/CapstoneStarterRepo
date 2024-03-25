@@ -1,14 +1,14 @@
 # Receiver System 
 ## Functionality
-
+The Receiver system will be responsible for receiving and unpacking Remote ID (RID) data to be sent by the network to the database.
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 |           |        |              
+|  1 | The receiver will only receive information within the frequency bands of 2.5 GHZ and 5 GHz. | Design Constraint and Ethical Constraint|
 |  2 |           |        |                          
 |  3 |           |        |              
 
-<sup>1</sup> Reason for contraint 1 and why it is important
+<sup>1</sup> FAA Policy 14 CFR § 89 [^1] and FCC Policy 47 CFR § 15 [^2]  <!-- I forgot what source was used to find the frequencies that the RID was transmitted through so I just put these -->
 
 <sup>2</sup> Reason for contraint 2 and why it is important
 
@@ -29,9 +29,5 @@
 |Total     |             |          |                |            |
 
 ## References
-<!-- This is how to do footnotes for the references: --> 
-Here is a simple footnote[^1].
-[^1]: Reference 1
-[^2]: Reference 2 
-[^3]: Reference 3
-<!--etc.-->
+[^1]: "Part 89- minimum message elements broadcast by standard remote identification unmanned aircraft,” Title 14- Aeronautics and Space, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-89/subpart-D/section-89.305 [Accessed Feb. 15, 2024].
+[^2]: “Part 15- radio frequency devices,” Title 47- Telecommunication, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15 [Accessed Feb. 19, 2024].
