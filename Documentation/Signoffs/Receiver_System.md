@@ -31,3 +31,4 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ## References
 [^1]: "Part 89- minimum message elements broadcast by standard remote identification unmanned aircraft,” Title 14- Aeronautics and Space, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-89/subpart-D/section-89.305 [Accessed Feb. 15, 2024].
 [^2]: “Part 15- radio frequency devices,” Title 47- Telecommunication, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15 [Accessed Feb. 19, 2024].
+[^3]: D. Aouladhadj, E. Kpre, V. Deniau, A. Kharchouf, C. Gransart, & C. Gaquière (2023). Drone Detection and Tracking Using RF Identification Signals. Sensors (Basel, Switzerland), 23(17), 7650. https://doi.org/10.3390/s23177650
