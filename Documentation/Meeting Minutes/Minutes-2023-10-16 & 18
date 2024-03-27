@@ -1,0 +1,69 @@
+Project:  IEEE Robotics Competition
+
+Meeting 10/16
+Attendance: Caz, Adrin, Liam, Conor, & Callie 
+
+Topics to Discuss: Project and Individual Tasks
+
+-Catme Due Tomorrow
+-Detailed Design is on going
+-Me's please let us know if you need sooner rather than later
+-Caz is First
+-then conor
+-team spirit - Liam
+-box sweep - Callie
+-button push - adrin
+-drive train - Caz
+-Main Control - Callie
+-Power - Adrin
+Date Ranges on Ghantt Chart
+
+Caz Is LOA Oct 30th - Nov 4th
+
+ME Chasis Design until end of semester
+More info to them as each Subsystem is done
+
+MEs starting on Board
+-Record Recycle Material 
+-Excel Sheet to help
+
+-Start Check up Meeting on Fridays
+-Nav System
+  -2 IR Sensors
+  -No arduino
+  -left right stragin to the Main control
+
+-We all Agreed to do Presentation
+  -Ask Roberts if we get to choose the day
+
+
+
+Meeting 10/18
+Attendance: Caz, Adrin, Liam, Conor, Callie 
+
+-Conors Nav System
+  -8 sensors
+  -
+-Liams Team Spirit 
+  -LED strip around robot
+-Callie Arm box
+  -wheel take torque, not motor
+  -On barring not cervo
+  -hook and skirt
+-Try to be as realistic as you can - Robbie
+-Get IEEE to do tshirt for extra points
+-Caz start system
+  -Color Sensor-Filter that will allow green light
+  -Red to reflect green
+  -Color Sensor
+    -Range for green light
+    -Not reflected. 
+    -Shroud?
+
+
+
+
+
+
+
+
