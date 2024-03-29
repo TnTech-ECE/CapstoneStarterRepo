@@ -4,15 +4,19 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The receiver will only receive information within the frequency bands of 2.5 GHz and 5 GHz. | Design Constraint and Ethical Constraint|
-|  2 |           |        |                          
-|  3 |           |        |              
+|  1 | Shall only receive information within the frequency bands of 2.4 GHz and 5.8 GHz. | Design Constraint|
+|  2 | Shall only unpack and read data from the RID signal | Ethical Constraint       |                          
+|  3 | Shall store the data for 90 days    |  TTU Police  |   
+|  4 | Shall receive data from RID emitting drones | Design Constraint |
 
-<sup>1</sup> FAA Policy 14 CFR § 89 [^1] and FCC Policy 47 CFR § 15 [^2]  <!-- I forgot what source was used to find the frequencies that the RID was transmitted through so I just put these -->
 
-<sup>2</sup> Reason for constraint 2 and why it is important
+<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three difference drone detection cases. In each case, the frequency band used was either the 2.4 Ghz or 5.8 Ghz ISM bands.   
 
-<sup>3</sup> Reason for constraint 3 and why it is important
+<sup>2</sup> If the reciever reads data that is not the RID signal, it could be considered a privacy concern
+
+<sup>3</sup> TTU police would like the data to be stored for 90 days for records purposes
+
+<sup>4</sup> If a drone is not emitted the RID signal, the reciever will not be able to pick up a RID signal
 
 ## Schematic
 
@@ -29,6 +33,4 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |Total     |             |          |                |            |
 
 ## References
-[^1]: "Part 89- minimum message elements broadcast by standard remote identification unmanned aircraft,” Title 14- Aeronautics and Space, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-89/subpart-D/section-89.305 [Accessed Feb. 15, 2024].
-[^2]: “Part 15- radio frequency devices,” Title 47- Telecommunication, Code of Federal Regulations, Available: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15 [Accessed Feb. 19, 2024].
-[^3]: D. Aouladhadj, E. Kpre, V. Deniau, A. Kharchouf, C. Gransart, & C. Gaquière (2023). Drone Detection and Tracking Using RF Identification Signals. Sensors (Basel, Switzerland), 23(17), 7650. https://doi.org/10.3390/s23177650
+[^1]: D. Aouladhadj, E. Kpre, V. Kharchouf, C. Gransart, and C. Gaquiere, “Drone detection and tracking using rf identification signals,” Sensors(Basel), vol. 23, no. 17, p. 7650, 2023.
