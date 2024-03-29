@@ -10,7 +10,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |  4 | Shall receive data from RID emitting drones | Design Constraint |
 
 
-<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three difference drone detection cases. In each case, the frequency band used was either the 2.4 Ghz or 5.8 Ghz ISM bands.   
+<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three difference drone detection cases. In each case, the frequency band used was either the 2.4 Ghz or 5.8 Ghz ISM bands [^1].   
 
 <sup>2</sup> If the reciever reads data that is not the RID signal, it could be considered a privacy concern
 
