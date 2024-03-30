@@ -1,6 +1,6 @@
 # Receiver System 
 ## Functionality
-The Receiver system will be responsible for receiving and unpacking Remote ID (RID) data to be sent by the network to the database. This sub-system shall be composed of a singular antenna along with a microprocessor that will decode, package, and transmit the recieved data to the networked database to be used by the remainder of the system.
+The Receiver system will be responsible for receiving and unpacking Remote ID (RID) data to be sent by the network to the database. This sub-system shall be composed of a singular antenna along with a microprocessor and storage drive that will decode, package, and transmit/store the recieved data to the networked database to be used by the remainder of the system.
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
