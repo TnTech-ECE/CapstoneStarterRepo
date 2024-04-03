@@ -12,3 +12,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
 - Constaint 5: Design a system that complies with the ANSI Z136.1 Standard
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
+- Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
+  - It is expected that 30 I/O ports are required to power the laser sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
+## Schematic
+## Analysis
