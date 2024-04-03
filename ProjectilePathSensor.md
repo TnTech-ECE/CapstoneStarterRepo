@@ -6,3 +6,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - Reasoning: Do to a constumer requirement the interceptor and all external sensor post must be autonomous after intial startup.
 - Constraint 2: Design a sensor array that can detect approaching objects and relay their locations to the interceptor.
   - This constraint was developed to meet the requirement to have a sensor that has determines when a projectile has begun to move towards the interceptor.
+- Constraint 3: Design a sensor array that operates on battery power.
+  - All sensor posts must be powered with a standalone powersupply and must not receive power from a outlet. This originated from a constraint provided by the constumer.
+- Constraint 4: he Design shall implement the best remote battery power solution to limit the interceptor’s environmental impact.
+  - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
