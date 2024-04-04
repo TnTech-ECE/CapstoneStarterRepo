@@ -3,7 +3,7 @@
 
 **Function:**
 
-![Elaboration Photo](/images/conceptual)
+![Elaboration Photo](../Images/Sensor_subsystem/conceptual.png)
 
 Figure 1: Sensor Subsystem
 
@@ -95,13 +95,13 @@ mechanism and the start of the board is 60 inches. Because of this, it is impera
 ample data within that 60-inch range. The VL53L8CX has a frame rate capability of 60 HZ. This
 frequency gives a clock period of 16.67 ms. 
 
-![Clock Period formula](/Images/Sensor_subsystem/clock_period.png)
+![Clock Period formula](../Images/Sensor_subsystem/clock_period.png)
 
 This means the VL53L8CX will receive another data sample every 16.67 ms. From the conceptual design
 we can assume the max speed of the golf ball is 6 m/s. If the golf ball is traveling at this speed, it will go
 236.448 inch/sec:
 
-![Speed formula](/Images/Sensor_subsystem/speed.png)
+![Speed formula](../Images/Sensor_subsystem/speed.png)
 
 This means the golf ball will pass by the firing machine after .25376 seconds, or 253.76 ms. This will
 allow for 14 samples to be taken before the projectile reaches the interceptor when operating at the
@@ -125,13 +125,13 @@ resistor sets this pin to a low logic level.
 
 **Buildable Schematic**
 
-![Absolute Maximums](/Images/Sensor_subsystem/maximums.png)
+![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
 
 Based on the specification sheets for the LDK130 IC’s that are included in the board, the input voltage for
 the voltage enable input can range from a low of -0.3v to a high of VI + 0.3. Therefore, in this case it
 would be appropriate to use the 5v from the battery power system as seen below.
 
-![Schematic](/Images/Sensor_subsystem/schematic.png)
+![Schematic](../Images/Sensor_subsystem/schematic.png)
 
 The functionality of the board itself and its individual pieces can be found in the data sheets in the
 references section. These specific references are the data sheet for the SATEL-VL53L8 as well as
