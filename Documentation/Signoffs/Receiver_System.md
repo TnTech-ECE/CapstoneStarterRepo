@@ -12,7 +12,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |  6 | Shall receive signals from a minimum radius of 600 meters | Design Constraint |
 
 
-<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands [^1].   
+<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands [^5].   
 
 <sup>2</sup> If the receiver reads data that is not the RID signal, it could be considered a privacy concern.
 
@@ -22,7 +22,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 
 <sup>5</sup> The campus police are only concerned about drones flying on the contiguous Tech campus.
 
-<sup>6</sup> The signal receiver has a minimum detection radius of 600 meters [^2].
+<sup>6</sup> The signal receiver has a minimum detection radius of 600 meters.
 
 ## Schematic
 
