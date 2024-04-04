@@ -201,3 +201,42 @@ The button pusher deployed successfully every time the robot crossed the gap or 
 | 30 | Yes |
 
 This shows an 87% success rate of the button pusher, which is within the desired parameters.
+
+### Team Spirit
+
+The Team Spirit subsystem needed to blink at least 80% of the time. The table below shows the successful blinkage of the system.
+
+| Trial | Detection |
+|-------|-----------|
+| 1 | Yes |
+| 2 | Yes |
+| 3 | Yes |
+| 4 | Yes |
+| 5 | Yes |
+| 6 | Yes |
+| 7 | Yes |
+| 8 | Yes |
+| 9 | Yes |
+| 10 | Yes |
+| 11 | Yes |
+| 12 | Yes |
+| 13 | Yes |
+| 14 | Yes |
+| 15 | Yes |
+| 16 | Yes |
+| 17 | Yes |
+| 18 | Yes |
+| 19 | Yes |
+| 20 | Yes |
+| 21 | Yes |
+| 22 | Yes |
+| 23 | Yes |
+| 24 | Yes |
+| 25 | Yes |
+| 26 | Yes |
+| 27 | Yes |
+| 28 | Yes |
+| 29 | Yes |
+| 30 | Yes |
+
+This shows that the team spirit system worked % of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot an dcaused the robot to tip over, so a significantnly smaller version was implemented for the competition.
