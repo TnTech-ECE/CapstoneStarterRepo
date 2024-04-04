@@ -26,37 +26,37 @@ distance, speed, and position of the target as it slides down the fishing line.
 | 10  | The sensors shall have range large enough to cover the gameboard   | Conceptual Design|
 | 11  | The sensors shall be able to detect plastic                        | System Constraint|
 
-1. The sensors shall be wirelessly connected to the processor [Conceptual Design]
+1. The sensors shall be wirelessly connected to the processor [Conceptual Design].
 The post sensors and the device sensors need to be wirelessly connected to the processor because they are
 not close enough to be wired.
-3. The sensors shall be powered by a 5 volt source [Device Constraint]
+3. The sensors shall be powered by a 5 volt source [Device Constraint].
 Needs to be powered by a 5-volt source, regardless of placement because that is what the board of the
 sensor requires.
-5. A sensor shall fit within 1'x1'x1' area [Conceptual Design]
+5. A sensor shall fit within 1'x1'x1' area [Conceptual Design].
 There will be a sensor placed on the launcher itself therefore it needs to be small enough to fit.
-6. Post sensor will be powered by a battery [Conceptual Design]
+6. Post sensor will be powered by a battery [Conceptual Design].
 The sensor’s connected to the post will be battery powered because there are no available outlets for
 power.
-7. Must be mounted to or from a sensor stand [Conceptual Design]
+7. Must be mounted to or from a sensor stand [Conceptual Design].
 The non device sensors will be mounted to the sensor posts.
-8. Device sensor will be powered by the device [System constraint]
+8. Device sensor will be powered by the device [System constraint].
 The device sensor will be connected to the device and therefore powered by that device.
-9. The sensor shall read ample data for a maximum golf ball speed of 6 m/s [Conceptual Design]
+9. The sensor shall read ample data for a maximum golf ball speed of 6 m/s [Conceptual Design].
 The golf ball has a maximum calculated speed of 6 m/s. The sensor needs to track an ample number of
 data points regardless of the speed.
-10. The post sensors shall receive data to calculate height and wire position [Conceptual Design]
+10. The post sensors shall receive data to calculate height and wire position [Conceptual Design].
 The post sensors will be responsible for acquiring the data necessary in determining which variable height
 and which variable wire position the golf ball is traveling from. It is ideal for this sensor to assist with
 acquiring speed data as well.
-11. The device sensors shall receive data to calculate the speed [Conceptual Design]
+11. The device sensors shall receive data to calculate the speed [Conceptual Design].
 The device sensors will be responsible for acquiring the data necessary in determining what the speed or
 estimated speed of the golf ball to aid in firing. It is ideal for this sensor to assist with acquiring position
 and height data as well.
-12. The sensors shall have range large enough to cover the gameboard [Conceptual Design]
+12. The sensors shall have range large enough to cover the gameboard [Conceptual Design].
 The sensors will need to have a range large enough to cover the 60 inches from the start of the board to
 the device, the 64 inches side to side which is the width of the gameboard and must cover up to the
 highest variable height.
-13. The sensors shall be able to detect plastic [System Constraint]
+13. The sensors shall be able to detect plastic [System Constraint].
 The sensors have to be able to detect the plastic golf ball from about 4-6 feet away
 
 **Analysis:**
