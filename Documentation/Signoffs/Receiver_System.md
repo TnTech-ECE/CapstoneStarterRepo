@@ -52,7 +52,7 @@ The microprocessor being used will be a Raspberry Pi 5 because of its low cost a
 
 
 ## References and Links
-[^1]: "Standard specification for remote ID and tracking F3411," ASTM International, (2019).
+[^1]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019).
 
 [^2]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
 
