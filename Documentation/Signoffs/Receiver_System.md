@@ -25,7 +25,8 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 <sup>6</sup> The signal receiver has a minimum detection radius of 600 meters.
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/1b805ac1-c482-4b8c-84ec-018f146e1b68)
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/94ca592a-c287-4259-beb6-767af949bf2f)
+
 
 
 ## Analysis
