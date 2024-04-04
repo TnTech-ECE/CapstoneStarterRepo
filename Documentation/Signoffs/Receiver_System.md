@@ -34,14 +34,21 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ### Storage Drive
 
 ## BOM
+#### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
+|HackRF One         |3583             |1          |$339.95            |$339.95            |
+|Raspberry Pi 5          |8GB-9028             |1          |$80.00                |$80.00            |
+|microHDMI to HDMI cable          |633696492882            |1          |$8.95                |$8.95            |
+|ANT-W63WS1-SMA          |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
+|INSERT STORAGE DRIVE HERE  |             |          |                |            |
 |Total     |             |          |                |            |
+
+Links\
+HackRF One (https://www.adafruit.com/product/3583) \
+Raspberry Pi 5(https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi) \
+microHDMI to HDMI (2m) (https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/) \
+ANT-W63WS1-SMA (https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr)
 
 ## References
 [^1]: D. Aouladhadj, E. Kpre, V. Kharchouf, C. Gransart, and C. Gaquiere, “Drone detection and tracking using rf identification signals,” Sensors(Basel), vol. 23, no. 17, p. 7650, 2023.
