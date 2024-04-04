@@ -4,7 +4,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | Only needs to receive information within the frequency bands of 2.4 GHz and 5.8 GHz. | Design Constraint|
+|  1 | Shall only need to receive information within the frequency bands of 2.4 GHz and 5.8 GHz. | Design Constraint|
 |  2 | Shall only unpack and read data from the RID signal | Ethical Constraint       |                          
 |  3 | Shall store the data for 90 days    |  TTU Police  |   
 |  4 | Shall receive data from RID emitting drones | Design Constraint |
@@ -38,6 +38,7 @@ P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>Tx</sub> - L<sub>fs</su
 ### Microprocessor
 The microprocessor being used will be a Raspberry Pi 5 because of its low cost and speed. The Raspberry Pi is compatible with GNU Radio and will be able to run a python script continuously. We will be using Python to decide what is done with the data received by the SDR. The Python script will decide what to do with the signals received by verifying the way the RID signal is packaged. RID signals may have the same frequency as Bluetooth and WiFi, but the way the data is packaged is different [^1]. An if statement will then send the data over to the camera and database subsystems for the drone to be considered detected. 
 ### Storage Drive
+The amount of data being transmitted in the RID package is 25 bytes in length. The RID signal is broadcasted by the drone at a minimum rate of 1 Hz [^1]. If the data must be stored for a maximum of 90 days, a 16 Gb flash drive will be able to handle storing the RID data from 15 drones continously emmitting the RID signal at a 5 Hz rate. Since a 16 Gb flash drive is cheap and capable it is the chosen method of ensuring that the RID data is available for the Tech police for up to 90 days.
 
 ## BOM
 #### All prices listed are in USD
@@ -47,8 +48,8 @@ The microprocessor being used will be a Raspberry Pi 5 because of its low cost a
 |Raspberry Pi 5 [^10]         |8GB-9028             |1          |$80.00                |$80.00            |
 |microHDMI to HDMI cable [^11]         |633696492882            |1          |$8.95                |$8.95            |
 |ANT-W63WS1-SMA [^12]         |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
-|INSERT STORAGE DRIVE HERE  |             |          |                |            |
-|Total     |             |          |                |            |
+|SanDisk 16GB Ultra USB 3.0 Flash Drive [^13]  |  SDCZ48-016G-GAM46    |     1     |   $8.40             |     $8.40       |
+|Total     |             |   5       |                |   $449.57         |
 
 
 ## References and Links
@@ -68,4 +69,4 @@ The microprocessor being used will be a Raspberry Pi 5 because of its low cost a
 [^10]: https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi
 [^11]: https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/
 [^12]: https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr
-[^13]: storage drive link
+[^13]: https://www.amazon.com/SanDisk-256GB-Ultra-Flash-Drive/dp/B081QSX1M5/ref=asc_df_B081QSHG1K/?tag=hyprod-20&linkCode=df0&hvadid=459410835726&hvpos=&hvnetw=g&hvrand=9423232362259022858&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-890104531595&mcid=a47a478b7c513e0f85caae62028ebb4b&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAQtWChgfWAVDCBFGj-Oq49ku2rOxcPK86G5gFl3ynmqLBhmZR-aUABoCx60QAvD_BwE&th=1
