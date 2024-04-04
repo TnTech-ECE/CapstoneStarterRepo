@@ -33,7 +33,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 
 ## Analysis
 ### Antenna
-The software defined radio (SDR) we will be utilizing is the HackRF One and purchasing an ANT-W63WS1-SMA as an antenna for the device. We need an SDR that is compatible with GNU Radio because GNU is open source, free, and the team has familiarity with it. GNU also needs to be used to amplify weaker signals to increase the Rx gain of the receiver subsystem and tell the radio what signals to receive. The HackRF One is the cheapest SDR available that is compatible with GNU Radio and is able to receive the maximum RF frequency output by the drone, 5.8 GHz WiFi. The HackRF One is also able to pick up the minimum frequency emitted by the drone at 2.4 GHz Wifi and Bluetooth. The ANT-W63WS1-SMA is the antenna picked for the SDR because its designed for receiving both WiFi frequency signals and the Bluetooth frequency. This means the antenna is also omnidirectional and its other specifications are sufficient for the price. Based on the data gathered on the transmitted signal from [5] we were able to find a minimum dBm gain transmitted by the drone for all three signal types. Other assumptions had to be made about the gain of the Tx antenna gain and the receiver sensitivity of the antenna based on the standard practice. Based on these assumptions and link budget calculations this design will be able to cover the maximum range of 600 m on the contiguous campus.
+The software defined radio (SDR) we will be utilizing is the HackRF One and purchasing an ANT-W63WS1-SMA as an antenna for the device. We need an SDR that is compatible with GNU Radio because GNU is open source, free, and the team has familiarity with it. GNU also needs to be used to amplify weaker signals to increase the Rx gain of the receiver subsystem and tell the radio what signals to receive. The HackRF One is the cheapest SDR available that is compatible with GNU Radio and is able to receive the maximum RF frequency output by the drone, 5.8 GHz WiFi. The HackRF One is also able to pick up the minimum frequency emitted by the drone at 2.4 GHz Wifi and Bluetooth. The ANT-W63WS1-SMA is the antenna picked for the SDR because its designed for receiving both WiFi frequency signals and the Bluetooth frequency. This means the antenna is also omnidirectional and its other specifications are sufficient for the price. Based on the data gathered on the transmitted signal from [^5] we were able to find a minimum dBm gain transmitted by the drone for all three signal types. Other assumptions had to be made about the gain of the Tx antenna gain and the receiver sensitivity of the antenna based on the standard practice. Based on these assumptions and link budget calculations this design will be able to cover the maximum range of 600 m on the contiguous campus.
 ### Microprocessor
 The microprocessor being used will be a Raspberry Pi 5 because of its low cost and speed. The Raspberry Pi is compatible with GNU Radio and will be able to run a python script continuously. We will be using Python to decide what is done with the data received by the SDR. The Python script will decide what to do with the signals received by verifying the way the RID signal is packaged. RID signals may have the same frequency as Bluetooth and WiFi, but the way the data is packaged is different. An if statement will then send the data over to the camera and database subsystems for the drone to be considered detected. 
 ### Storage Drive
@@ -42,7 +42,7 @@ The microprocessor being used will be a Raspberry Pi 5 because of its low cost a
 #### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|HackRF One         |3583             |1          |$339.95            |$339.95            |
+|HackRF One [^8]        |3583             |1          |$339.95            |$339.95            |
 |Raspberry Pi 5          |8GB-9028             |1          |$80.00                |$80.00            |
 |microHDMI to HDMI cable          |633696492882            |1          |$8.95                |$8.95            |
 |ANT-W63WS1-SMA          |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
@@ -55,7 +55,7 @@ Raspberry Pi 5(https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi
 microHDMI to HDMI (2m) (https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/) \
 ANT-W63WS1-SMA (https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr)
 
-## References
+## References and Links
 [^1]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
 
 [^2]: “ANT-W63WS1 Series Blade-Style Dipole WiFi 6 Antenna,” Mouser, https://www.mouser.com/datasheet/2/418/9/ENG_DS_ant_w63_cw_rcs_ccc_ds_A1-3238314.pdf (accessed Apr. 3, 2024). 
