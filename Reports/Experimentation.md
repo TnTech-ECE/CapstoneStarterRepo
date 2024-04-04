@@ -126,3 +126,41 @@ The motors worked 100% of the time, and correctly executed the code given to the
 
 ### Main Control
 
+The main controller code needed to be able to complete the course at least 85% of the time. The table below shows the completion and percentage of course traversed if not completed.
+
+| Trial No. | Completed | Percentage |
+|-----------|----------|----------|
+| 1 | Yes | 100 |
+| 2 | Yes | 100 |
+| 3 | No | 40 |
+| 4 | Yes | 100 |
+| 5 | Yes | 100 |
+| 6 | Yes | 100 |
+| 7 | Yes | 100 |
+| 8 | Yes | 100 |
+| 9 | Yes | 100 |
+| 10 | Yes | 100 |
+| 11 | No | 85 |
+| 12 | Yes | 100 |
+| 13 | Yes | 100 |
+| 14 | Yes | 100 |
+| 15 | Yes | 100 |
+| 16 | Yes | 100 |
+| 17 | Yes | 100 |
+| 18 | Yes | 100 |
+| 19 | No | 87 |
+| 20 | Yes | 100 |
+| 21 | Yes | 100 |
+| 22 | Yes | 100 |
+| 23 | Yes | 100 |
+| 24 | Yes | 100 |
+| 25 | No | 42 |
+| 26 | Yes | 100 |
+| 27 | Yes | 100 |
+| 28 | Yes | 100 |
+| 29 | Yes | 100 |
+| 30 | Yes | 100 |
+
+This shows that the code allowed the course to be completed 87% of the time, which is within the required parameters.
+
+### 
