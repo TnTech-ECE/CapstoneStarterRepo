@@ -42,18 +42,13 @@ The microprocessor being used will be a Raspberry Pi 5 because of its low cost a
 #### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|HackRF One [^8]        |3583             |1          |$339.95            |$339.95            |
-|Raspberry Pi 5          |8GB-9028             |1          |$80.00                |$80.00            |
-|microHDMI to HDMI cable          |633696492882            |1          |$8.95                |$8.95            |
-|ANT-W63WS1-SMA          |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
+|HackRF One [^9]        |3583             |1          |$339.95            |$339.95            |
+|Raspberry Pi 5 [^10]         |8GB-9028             |1          |$80.00                |$80.00            |
+|microHDMI to HDMI cable [^11]         |633696492882            |1          |$8.95                |$8.95            |
+|ANT-W63WS1-SMA [^12]         |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
 |INSERT STORAGE DRIVE HERE  |             |          |                |            |
 |Total     |             |          |                |            |
 
-Links:\
-HackRF One (https://www.adafruit.com/product/3583) \
-Raspberry Pi 5(https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi) \
-microHDMI to HDMI (2m) (https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/) \
-ANT-W63WS1-SMA (https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr)
 
 ## References and Links
 [^1]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
@@ -70,3 +65,9 @@ ANT-W63WS1-SMA (https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Techno
 [^7]: M. Ossmann, “Greatscottgadgets/hackrf: Low cost software radio platform,” GitHub, https://github.com/greatscottgadgets/hackrf (accessed Apr. 3, 2024). 
 
 [^8]: “Welcome to hackrf’s documentation!,” Welcome to HackRF’s documentation! - HackRF documentation, https://hackrf.readthedocs.io/en/latest/ (accessed Apr. 3, 2024). 
+
+[^9]: https://www.adafruit.com/product/3583
+[^10]: https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi
+[^11]: https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/
+[^12]: https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr
+[^13]: storage drive link
