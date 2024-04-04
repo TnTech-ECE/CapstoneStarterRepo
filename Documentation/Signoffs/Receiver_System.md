@@ -44,7 +44,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |INSERT STORAGE DRIVE HERE  |             |          |                |            |
 |Total     |             |          |                |            |
 
-Links\
+Links:\
 HackRF One (https://www.adafruit.com/product/3583) \
 Raspberry Pi 5(https://www.pishop.us/product/raspberry-pi-5-8gb/?src=raspberrypi) \
 microHDMI to HDMI (2m) (https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/) \
