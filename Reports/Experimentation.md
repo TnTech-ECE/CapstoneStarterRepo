@@ -163,4 +163,41 @@ The main controller code needed to be able to complete the course at least 85% o
 
 This shows that the code allowed the course to be completed 87% of the time, which is within the required parameters.
 
-### 
+### Button Push
+
+The button pusher deployed successfully every time the robot crossed the gap or reached the point in the code that deployed it, however it did not push the button every time it deployed. It needed to push the button 85% of the time. The table below shows the success rate of the button pusher.
+
+| Trial | Pushed |
+|-------|-----------|
+| 1 | Yes |
+| 2 | Yes |
+| 3 | Yes |
+| 4 | Yes |
+| 5 | Yes |
+| 6 | Yes |
+| 7 | Yes |
+| 8 | Yes |
+| 9 | Yes |
+| 10 | Yes |
+| 11 | Yes |
+| 12 | Yes |
+| 13 | Yes |
+| 14 | No |
+| 15 | Yes |
+| 16 | No |
+| 17 | Yes |
+| 18 | Yes |
+| 19 | Yes |
+| 20 | Yes |
+| 21 | Yes |
+| 22 | Yes |
+| 23 | Yes |
+| 24 | Yes |
+| 25 | Yes |
+| 26 | Yes |
+| 27 | No |
+| 28 | Yes |
+| 29 | No |
+| 30 | Yes |
+
+This shows an 87% success rate of the button pusher, which is within the desired parameters.
