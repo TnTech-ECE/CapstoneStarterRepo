@@ -12,7 +12,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |  6 | Shall receive signals from a minimum radius of 600 meters | Design Constraint |
 
 
-<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands [6].   
+<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands [^6].   
 
 <sup>2</sup> If the receiver reads data that is not the RID signal, it could be considered a privacy concern.
 
@@ -56,17 +56,17 @@ microHDMI to HDMI (2m) (https://www.pishop.us/product/micro-hdmi-to-standard-hdm
 ANT-W63WS1-SMA (https://www.mouser.com/ProductDetail/TE-Connectivity-Linx-Technologies/ANT-W63WS1-SMA?qs=81r%252BiQLm7BRk7ZBsbgmcew%3D%3D&utm_source=octopart&utm_medium=aggregator&utm_campaign=712-ANT-W63WS1-SMA&utm_content=TE+Connectivity&TETID=LnmBpHNgVr)
 
 ## References
-[1] J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
+[^1]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
 
-[2] “ANT-W63WS1 Series Blade-Style Dipole WiFi 6 Antenna,” Mouser, https://www.mouser.com/datasheet/2/418/9/ENG_DS_ant_w63_cw_rcs_ccc_ds_A1-3238314.pdf (accessed Apr. 3, 2024). 
-[3] “Raspberry pi 5,” Raspberry Pi, https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 3, 2024).
+[^2]: “ANT-W63WS1 Series Blade-Style Dipole WiFi 6 Antenna,” Mouser, https://www.mouser.com/datasheet/2/418/9/ENG_DS_ant_w63_cw_rcs_ccc_ds_A1-3238314.pdf (accessed Apr. 3, 2024). 
+[^3]: “Raspberry pi 5,” Raspberry Pi, https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 3, 2024).
 
-[4] S. Cerwin, Radio Propagation and Antennas: A Non-Mathematical Treatment of Radio and Antennas. Bloomington, IN: AuthorHouse, 2019. 
+[^4]: S. Cerwin, Radio Propagation and Antennas: A Non-Mathematical Treatment of Radio and Antennas. Bloomington, IN: AuthorHouse, 2019. 
 
-[5] ASTM F3411-19, https://cdn.standards.iteh.ai/samples/105468/200257eeb5fa47a78e98a17ac132ba03/ASTM-F3411-19.pdf (accessed Apr. 3, 2024). 
+[^5]: ASTM F3411-19, https://cdn.standards.iteh.ai/samples/105468/200257eeb5fa47a78e98a17ac132ba03/ASTM-F3411-19.pdf (accessed Apr. 3, 2024). 
 
-[6] D. Aouladhadj et al., “Drone detection and tracking using RF Identification Signals,” National Center for Biotechnology Information, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10490811/ (accessed Apr. 3, 2024). 
+[^6]: D. Aouladhadj et al., “Drone detection and tracking using RF Identification Signals,” National Center for Biotechnology Information, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10490811/ (accessed Apr. 3, 2024). 
 
-[7] M. Ossmann, “Greatscottgadgets/hackrf: Low cost software radio platform,” GitHub, https://github.com/greatscottgadgets/hackrf (accessed Apr. 3, 2024). 
+[^7]: M. Ossmann, “Greatscottgadgets/hackrf: Low cost software radio platform,” GitHub, https://github.com/greatscottgadgets/hackrf (accessed Apr. 3, 2024). 
 
-[8] “Welcome to hackrf’s documentation!,” Welcome to HackRF’s documentation! - HackRF documentation, https://hackrf.readthedocs.io/en/latest/ (accessed Apr. 3, 2024). 
+[^8]: “Welcome to hackrf’s documentation!,” Welcome to HackRF’s documentation! - HackRF documentation, https://hackrf.readthedocs.io/en/latest/ (accessed Apr. 3, 2024). 
