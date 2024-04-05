@@ -16,6 +16,9 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - It is expected that 30 I/O ports are required to power the laser sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
 ## Schematic
 ## Analysis
+### Autonomous System
+According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory on the chip for program storage [Must BE CITED]. This means after an intial program of the Atmega the program will automatically run on startup. 
+### Object Detection 
 ### Battery
 Due to the constraint of having to use battery power all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
 
@@ -33,8 +36,11 @@ Due to the constraint of having to use battery power all sensors, lasers, and mi
 | Elegoo Atmega 2560 | EL-CB-002 | 1 | $20.99 | $20.99 | 
 | Samsung 25R 18650 | 25R | 2 | $3.75 | $7.50 |
 | 18650 Battery Holder | 114090053 | 1 | $1.49 | $1.49 |
+| 8 pack of Lasers | Ky-008 | 2 | $11.99 | $23.98 |
+
 
 ## Refrences
+[1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
 [1] AZ Delivery, "Ky-008 Laser Trasmitter Modul Datenblatt"m ky-008, 2017. \
 [2] DFRobot, "20W Adjustable DC-DC Buck Converter with Digital Display", DFR0379, Feb, 2017. \
 [3] “114090053,” Digikey, https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/114090053/10451921?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-10451921_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB (accessed Apr. 4, 2024). 
