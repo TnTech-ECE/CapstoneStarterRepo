@@ -29,6 +29,8 @@ Due to the constraint of having to use battery power all sensors, lasers, and mi
 | Atmega 2560 | Maximum current 200 mA |
 | Total | 561 mA |
 
+### Complying with Laser Saftey Standards
+The Ky-008 
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
@@ -41,6 +43,7 @@ Due to the constraint of having to use battery power all sensors, lasers, and mi
 
 ## Refrences
 [1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
+[1] ArduinoModules, “KY-008 laser transmitter module,” ArduinoModulesInfo, https://arduinomodules.info/ky-008-laser-transmitter-module/ (accessed Apr. 6, 2024). 
 [1] AZ Delivery, "Ky-008 Laser Trasmitter Modul Datenblatt"m ky-008, 2017. \
 [2] DFRobot, "20W Adjustable DC-DC Buck Converter with Digital Display", DFR0379, Feb, 2017. \
 [3] “114090053,” Digikey, https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/114090053/10451921?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-10451921_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB (accessed Apr. 4, 2024). 
