@@ -29,8 +29,11 @@ Due to the constraint of having to use battery power all sensors, lasers, and mi
 | Atmega 2560 | Maximum current 200 mA |
 | Total | 561 mA |
 
+### Broader impact of Battery
+The choice of a lithium ion battery was a multifactor choice. The first and most important factor was to have the capability to recharge and reuse the same batteries throughout the project. According to the battery's spreadsheet when the battery is discharged at 20A for 250 cycles the batteries capacity is still nearly 2000 mAh [13]. Due to the significantly less current being discharged from the battery, it is expected that the capacity will decrease less. However, even with using provided data, it is expected to still be able ot provide power to the system for atleast 30 minutes using the 1700 maH cutoff explained above. 
+
 ### Complying with Laser Saftey Standards
-The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less than .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
+The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less thaThn .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
@@ -39,6 +42,7 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 | Samsung 25R 18650 [11] | 25R | 2 | $3.75 | $7.50 |
 | 18650 Battery Holder [6] | 114090053 | 1 | $1.49 | $1.49 |
 | 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
+| Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
 
 
 ## Refrences
@@ -53,5 +57,6 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 [9] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
 [10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
 [11] “Samsung 25R 18650 2500mah 20A battery,” 18650BatteryStore.com, https://www.18650batterystore.com/products/samsung-25r-18650? utm_campaign=21017394957&utm_source=x_c&utm_medium=cpc&utm_content=&utm_term=_&adgroupid=&gad_source=4&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIDVn2o2IZExphwsLASVktA_GrIyjrilURVrJArgcjTx32l40fdsE0aAlPREALw_wcB [accessed Apr. 4, 2024]. \
-[12] "Red Laser Transmitter Module KY-008" , DevoBOT.
-[13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. 
+[12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
+[13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. \
+[14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB.
