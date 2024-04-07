@@ -1,4 +1,3 @@
-
 # Sensor Post Array Velocity and Acceleration Signoff
 ## Functionality 
  This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball as it travels down the fishing line twards the interceptor body. To accomplish this task this subsystem will take in the velocity and acceleration data from the mmWave Radar to do the calculations neccisary to acertain the velocity and acceleration. This subsystem will then wirelessly transmit the velocity and acceleration of the practice gold ball to the aiming subsystem for further use of this data.
@@ -19,15 +18,22 @@ Using 0.02124202 meters for the rarget radius gives an RCS estimation of 0.00141
 <p align = "center">
 <img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/RadarRange.png/>
 </p>
-In this equation plug in the Radar Output Power or Equivalent Transmit Power lower end of the range 9 dBm, operating frequency of 24 GHz the RCS of 0.0014175, since we do not have a data sheet we make assumptions for the two remaing unkowns. The antena gain is assumed to be 1.5 since it is common for antenas and the minimum detecitible signal is assumed to be -90 dBm. With these values we get a maximum detection distance of 1.188 m or 46.77 inches. 
+In this equation plug in the Radar Output Power or Equivalent Transmit Power lower end of the range 9 dBm, operating frequency of 24 GHz the RCS of 0.0014175, since we do not have a data sheet we make assumptions for the two remaing unkowns. The antena gain is assumed to be 1.5 since it is common for antenas and the minimum detecitible signal is assumed to be -90 dBm. With these values we get a maximum detection distance of 1.188 m or 46.77 inches. By connecting the center sensor posts together and placing the radar apperatus in the center this maximum distance is accepltible.
+
+### Optimal Radar Placement
 
 ## Implementation and Testing
 
 ### Bill of Materials (BOM)
 <div align="center">
-|     Name of item     | Description | Part Number | Manufacuer | Quantity | Price | Total |
-|----------------------|-------------|-------------|------------|----------|-------|-------|
-|DFRobot mmWave Radar  |||||||
+| Name of Item   | Description                                                                  | Part Number     | Manufacturer     | Quantity     | Price      | Total   |
+|----------------|------------------------------------------------------------------------------|-----------------|------------------|--------------|------------|---------|
+| Turntable Motor | The turntable motor allows the launcher to turn left and right                 | 1478           | Polulu      | 1        | 47.95       |  47.95    |
+| Turntable Motor Driver     | The motor driver supplies the voltage and current to the motor.                                   | 3730           | Polulu      | 1            |  28.95        |  28.95     |
+| Launch Angle Motor          | The motors will allow the launcher to move the pitch up and down.                 | 2267            | Pololu           | 1            |  21.95       |  21.95   |
+| Launch Angle Motor Driver    | The motor driver supplies the voltage and current to the motor.                           | 2676            | Pololu           | 1   |  7.95        |  7.95    |
+| Microcontroller| The microcontroller communicates with the master control and motor drivers.  | Raspberry Pi 5 4 GB RAM | Adafruit          | 1            | 60.00       | 60.00    |
+| Total          |                                                                              |                 |                  |              | Total Cost | $166.80 |
 <div>
 ### Refrences
 
