@@ -30,7 +30,7 @@ Due to the constraint of having to use battery power all sensors, lasers, and mi
 | Total | 561 mA |
 
 ### Complying with Laser Saftey Standards
-The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [CITE THIS]. This laser is a continous with a 650 nm wavelength [Cite This] , and that classifies this laser as a Class 3R [Cite this]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [Cite THIS] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less than .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all.
+The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [CITE THIS]. This laser is a continous with a 650 nm wavelength [Cite This] , and that classifies this laser as a Class 3R [Cite this]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [Cite THIS] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less than .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
