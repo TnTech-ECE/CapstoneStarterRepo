@@ -17,41 +17,41 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 ## Schematic
 ## Analysis
 ### Autonomous System
-According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory on the chip for program storage [Must BE CITED]. This means after an intial program of the Atmega the program will automatically run on startup. 
+According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory on the chip for program storage [Must BE CITED]. This means after an intial program of the Atmega the program will automatically run on startup. Once the microcontroller is properly programed the only step required to start the projectile path detection system is to turn on the powersupply.
 ### Object Detection 
 ### Battery
 Due to the constraint of having to use battery power all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
 
 | Device | Current Draw |
 | ------ | --------------- | 
-| Laser Array | 450 mA at 5 Volts and ~ 322 mA at 7 Volts| 
+| Laser Array | 450 mA at 5 Volts and ~ 322 mA at 7 Volts [4]| 
 | Buck Converter| 88% efficency ~39 mA |
 | Atmega 2560 | Maximum current 200 mA |
 | Total | 561 mA |
 
 ### Complying with Laser Saftey Standards
-The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [CITE THIS]. This laser is a continous with a 650 nm wavelength [Cite This] , and that classifies this laser as a Class 3R [Cite this]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [Cite THIS] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less than .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
+The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less than .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
 | ----------------- | ---- | ----| ------| ------ |
-| Elegoo Atmega 2560 | EL-CB-002 | 1 | $20.99 | $20.99 | 
-| Samsung 25R 18650 | 25R | 2 | $3.75 | $7.50 |
-| 18650 Battery Holder | 114090053 | 1 | $1.49 | $1.49 |
-| 8 pack of Lasers | Ky-008 | 2 | $11.99 | $23.98 |
+| Elegoo Atmega 2560 [7] | EL-CB-002 | 1 | $20.99 | $20.99 | 
+| Samsung 25R 18650 [11] | 25R | 2 | $3.75 | $7.50 |
+| 18650 Battery Holder [6] | 114090053 | 1 | $1.49 | $1.49 |
+| 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
 
 
 ## Refrences
 [1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
-[1]  "American National Standard for Safe Use of Lasers" , ANSI Z136.1 , AMERICAN NATIONAL STANDARDS INSTITUTE, 2022. \
-[1] ArduinoModules, “KY-008 laser transmitter module,” ArduinoModulesInfo, https://arduinomodules.info/ky-008-laser-transmitter-module/ (accessed Apr. 6, 2024). \
-[1] AZ Delivery, "Ky-008 Laser Trasmitter Modul Datenblatt"m ky-008, 2017. \
-[2] DFRobot, "20W Adjustable DC-DC Buck Converter with Digital Display", DFR0379, Feb, 2017. \
-[3] “114090053,” Digikey, https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/114090053/10451921?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-10451921_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB (accessed Apr. 4, 2024). 
-[3] “ELEGOO MEGA R3 Board ATmega 2560 + USB Cable Compatible with Arduino IDE Projects RoHS Compliant,” Amazon.com.\
-[1] "Laser Classification" , Weill Cornell Medicine. 
-[1] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
-[2] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
-[3] “Samsung 25R 18650 2500mah 20A battery,” 18650BatteryStore.com, https://www.18650batterystore.com/products/samsung-25r-18650? utm_campaign=21017394957&utm_source=x_c&utm_medium=cpc&utm_content=&utm_term=_&adgroupid=&gad_source=4&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIDVn2o2IZExphwsLASVktA_GrIyjrilURVrJArgcjTx32l40fdsE0aAlPREALw_wcB [accessed Apr. 4, 2024]. \
-[1] "Red Laser Transmitter Module KY-008" , DevoBOT.
-[4] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. 
+[2]  "American National Standard for Safe Use of Lasers" , ANSI Z136.1 , AMERICAN NATIONAL STANDARDS INSTITUTE, 2022. \
+[3] ArduinoModules, “KY-008 laser transmitter module,” ArduinoModulesInfo, https://arduinomodules.info/ky-008-laser-transmitter-module/ (accessed Apr. 6, 2024). \
+[4] AZ Delivery, "Ky-008 Laser Trasmitter Modul Datenblatt"m ky-008, 2017. \
+[5] DFRobot, "20W Adjustable DC-DC Buck Converter with Digital Display", DFR0379, Feb, 2017. \
+[6] “114090053,” Digikey, https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/114090053/10451921?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-10451921_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB (accessed Apr. 4, 2024). 
+[7] “ELEGOO MEGA R3 Board ATmega 2560 + USB Cable Compatible with Arduino IDE Projects RoHS Compliant,” Amazon.com.\
+[8] "Laser Classification" , Weill Cornell Medicine. 
+[9] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
+[10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
+[11] “Samsung 25R 18650 2500mah 20A battery,” 18650BatteryStore.com, https://www.18650batterystore.com/products/samsung-25r-18650? utm_campaign=21017394957&utm_source=x_c&utm_medium=cpc&utm_content=&utm_term=_&adgroupid=&gad_source=4&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIDVn2o2IZExphwsLASVktA_GrIyjrilURVrJArgcjTx32l40fdsE0aAlPREALw_wcB [accessed Apr. 4, 2024]. \
+[12] "Red Laser Transmitter Module KY-008" , DevoBOT.
+[13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. 
