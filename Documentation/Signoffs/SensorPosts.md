@@ -27,7 +27,7 @@ In this equation plug in the Radar Output Power or Equivalent Transmit Power low
 ### Bill of Materials (BOM)
 <div align="center">
 |Name of item|Description|Part Number|Manufacuer|Quantity|Price|Total|
-|------------|-----------|----------------------|--------|-----|-----|
+|------------|-----------|-----------|----------|--------|-----|-----|
 <div>
 ### Refrences
 
