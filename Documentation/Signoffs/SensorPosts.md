@@ -26,14 +26,8 @@ In this equation plug in the Radar Output Power or Equivalent Transmit Power low
 
 ### Bill of Materials (BOM)
 <div align="center">
-| Name of Item   | Description                                                                  | Part Number     | Manufacturer     | Quantity     | Price      | Total   |
-|----------------|------------------------------------------------------------------------------|-----------------|------------------|--------------|------------|---------|
-| Turntable Motor | The turntable motor allows the launcher to turn left and right                 | 1478           | Polulu      | 1        | 47.95       |  47.95    |
-| Turntable Motor Driver     | The motor driver supplies the voltage and current to the motor.                                   | 3730           | Polulu      | 1            |  28.95        |  28.95     |
-| Launch Angle Motor          | The motors will allow the launcher to move the pitch up and down.                 | 2267            | Pololu           | 1            |  21.95       |  21.95   |
-| Launch Angle Motor Driver    | The motor driver supplies the voltage and current to the motor.                           | 2676            | Pololu           | 1   |  7.95        |  7.95    |
-| Microcontroller| The microcontroller communicates with the master control and motor drivers.  | Raspberry Pi 5 4 GB RAM | Adafruit          | 1            | 60.00       | 60.00    |
-| Total          |                                                                              |                 |                  |              | Total Cost | $166.80 |
+|Name of item|Description|Part Number|Manufacuer|Quantity|Price|Total|
+|------------|-----------|----------------------|--------|-----|-----|
 <div>
 ### Refrences
 
