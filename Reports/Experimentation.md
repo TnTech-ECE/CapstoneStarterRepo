@@ -55,6 +55,6 @@ This shows a 100% success rate of the button pusher, which is within the desired
 
 The Team Spirit subsystem needed to blink at least 80% of the time. The table below shows the successful blinkage of the system.
 
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/5f764108-d8af-4c67-8b90-d69f989f2182)
 
-
-This shows that the team spirit system worked 82% of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot and caused the robot to tip over, so a significantnly smaller version was implemented for the competition.
+This shows that the team spirit system worked 82% of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot and caused the robot to tip over, so a significantnly smaller version was implemented for the competition. The system, when it blinked, would blink at 5Hz, which is whithin the range of visibility to the human eye.
