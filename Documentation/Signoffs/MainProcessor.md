@@ -1,8 +1,17 @@
-**Purpose Inside the Project:**
+**Function:**
 
-The primary purpose of integrating the Raspberry Pi 4 into this project is to serve as the central processing unit for receiving, processing, and interpreting data from multiple sources—wireless transmitters receiving signals from sensors and a local sensor. The Raspberry Pi 4 acts as the brain of the system, centralizing the data and analysis of data related to a golf ball's trajectory. The board’s goal is to perform calculations to determine the velocity, height, distance, and direction of the golf ball in real-time.
+The primary function of the Raspberry Pi 4 in this project is to serve as the central processing unit for receiving, processing, and interpreting data from multiple sources—wireless transmitters receiving signals from sensors and a local sensor. The Raspberry Pi 4 acts as the brain of the system, centralizing the data and analysis of data related to a golf ball's trajectory. The board’s goal is to perform calculations to determine the velocity, height, distance, and direction of the golf ball in real-time.
 
 The Raspberry Pi 4 plays a crucial role in controlling the golf ball interceptor’s firing mechanism. By processing the collected data, it calculates the optimal timing to activate the interceptor, making sure that it aims accurately at the golf ball during its flight path on the strings, particularly at the designated "kill zone."
+
+**Constraints:**
+
+| NO. | Constraint                                                          | Origin           |
+|-----|---------------------------------------------------------------------|------------------|
+| 1 | Time Constraints - Receive and calculate data and predict golf ball projectory| System Constraint |
+| 2 | Processing Speed - Optimizing code for a faster processing speed  | System Constraint |
+| 3 | Signal Interpretation Challenges - Turning all the incoming signals into readable data | Programing Constraint |
+| 4 | Resource Utilization - Not overloading board memory | System Constraint |
 
 **Execution Using Raspberry Pi 4:**
 
@@ -36,7 +45,7 @@ The TB6600 Stepper Motor Driver's compatibility with the Raspberry Pi's GPIO pin
 
 The Raspberry Pi 4 board is priced at $55.00 from DigiKey, serving as a cost-effective control unit for the project. The overall cost should remain relatively low compared to alternative solutions, making the Raspberry Pi 4 a big beneficial choice for the project's budget.
 
-**Constraints and Limitations:**
+**Fulfilling Constrains:**
 
 Time Constraints: Real-time processing of sensor data and trajectory calculations impose time constraints on the Raspberry Pi 4. Since the processor on the Raspberry Pi 4 runs at 1.5GHz, the processor needs to be able to receive, process, calculate the interceptor’s path, and aim the interceptor before the golf ball gets too far down the string. The programs and data transmission needs to be optimized for an accurate and efficient system to be able to run fast enough. Delays in data acquisition, processing, or interceptor firing may affect the interception accuracy dramatically.
 
