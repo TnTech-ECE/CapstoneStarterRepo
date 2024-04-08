@@ -239,4 +239,4 @@ The Team Spirit subsystem needed to blink at least 80% of the time. The table be
 | 29 | Yes |
 | 30 | Yes |
 
-This shows that the team spirit system worked 82% of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot an dcaused the robot to tip over, so a significantnly smaller version was implemented for the competition.
+This shows that the team spirit system worked 82% of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot and caused the robot to tip over, so a significantnly smaller version was implemented for the competition.
