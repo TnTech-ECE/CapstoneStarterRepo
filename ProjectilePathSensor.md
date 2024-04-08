@@ -49,6 +49,7 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 | 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
 | Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
 | 100k Ohm Resistors 25 Pack | 25EP514100K | 1 | $5.78 | $5.78 |
+| 32Pcs of PCB board | NA | 1 | $9.99 | $9.99 | 
 
 ## Refrences
 [1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
@@ -66,4 +67,5 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 [13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. \
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
 [15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500. \
-[16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com.
+[16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
+[17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
