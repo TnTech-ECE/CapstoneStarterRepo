@@ -13,7 +13,7 @@
 ## Analysis
 ### Detection distance
 To find the maximum distance the radar will be able to detect the a few calculations where needed. The first being the Radar Cross Section (RCS) which is the equivalent area of the target preceived by the radar. To do this I used the online calculator [1] which uses the target having a sherical shape and the following formula.
-$$ RCS = { 4* Pi * r^2 * Sr\over St } $$
+$ RCS = { 4* Pi * r^2 * Sr\over St } $
 Using 0.02124202 meters (average radius of a golf ball) for the rarget radius gives an RCS estimation of 0.0014175 meters $^2$. Now that an RCS value has been found the max radar range calculator [2] can be used to find the maximum range the radar can be used to detect the golfball. This calculator uses the equation 
 <p align = "center">
 <img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/RadarRange.png/>
