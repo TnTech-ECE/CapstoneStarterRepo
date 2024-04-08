@@ -1,7 +1,7 @@
 
 # Sensor Subsystem
 
-**Function:**
+## **Function:**
 
 ![Elaboration Photo](../Images/Sensor_subsystem/conceptual.png)
 
@@ -10,7 +10,7 @@ Figure 1: Sensor Subsystem
 The goal of this subsystem is to accurately and quickly gather several data points to determine the
 distance, speed, and position of the target as it slides down the fishing line.
 
-**Constraints:**
+## **Constraints:**
 
 | No. | Constraint                                                          | Origin           |
 |-----|---------------------------------------------------------------------|------------------|
@@ -59,7 +59,7 @@ highest variable height.
 13. The sensors shall be able to detect plastic [System Constraint].
 The sensors have to be able to detect the plastic golf ball from about 4-6 feet away
 
-**Analysis:**
+## **Analysis:**
 
 Based on the constraints given, the team chose the VL53L8CX time of flight sensor. This sensor
 was chosen because it is able to detect plastic, has a range of about thirteen meters, has a wide field of
@@ -123,7 +123,7 @@ known that the pin LPn is set high by default because of the pull up resistor to
 connection from the EXT_IOVDD pin to the EXT_SPI_I2C_N pin will be required because a pull down
 resistor sets this pin to a low logic level.
 
-**Buildable Schematic**
+## **Buildable Schematic**
 
 ![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
 
@@ -137,13 +137,13 @@ The functionality of the board itself and its individual pieces can be found in 
 references section. These specific references are the data sheet for the SATEL-VL53L8 as well as
 the data sheets for the vl53l8CX, and the LDK130 series chip.
 
-**Bill of Materials:**
+### **Bill of Materials:**
 
 | Device | Quantity | Price | Total |
 | ------ | -------- | ----- | ----- |
 | SATEL-VL53L8 Board (2-pack)| 1 | $27.50 | $27.50 |
 
-**References:**
+## **References:**
 
 [1] “Datasheet - VL53L8CX - low-power high-performance 8x8 ...,” STMicroelectronics,
 https://www.st.com/resource/en/datasheet/vl53l8cx.pdf (accessed Apr. 4, 2024).
