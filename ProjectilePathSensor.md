@@ -13,7 +13,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 - Constaint 5: Design a system that complies with the ANSI Z136.1 Standard
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
 - Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
-  - It is expected that 30 I/O ports are required to power the laser sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
+  - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
 ## Schematic
 ## Analysis
 ### Autonomous System
@@ -21,6 +21,8 @@ According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory
 ### Object Detection 
 ### Battery
 Due to the constraint of having to use battery power all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
+
+###
 
 | Device | Current Draw |
 | ------ | --------------- | 
