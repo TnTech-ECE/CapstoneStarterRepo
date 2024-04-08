@@ -36,6 +36,9 @@ The choice of a lithium ion battery was a multifactor choice. The first and most
 
 ### Complying with Laser Saftey Standards
 The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less thaThn .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
+
+### Microcontroller Verification
+Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors. Also, the microcontroller must supply 3.3 Volts and ground to the esp wireless communicator. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. 
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
@@ -45,6 +48,7 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 | 18650 Battery Holder [6] | 114090053 | 1 | $1.49 | $1.49 |
 | 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
 | Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
+| 100k Ohm Resistors 25 Pack | 25EP514100K | 1 | $5.78 | $5.78 |
 
 ## Refrences
 [1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
@@ -61,4 +65,5 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 [12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
 [13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. \
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
-[15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500.
+[15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500. \
+[16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com.
