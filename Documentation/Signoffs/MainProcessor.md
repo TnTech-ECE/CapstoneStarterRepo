@@ -4,6 +4,9 @@ The primary function of the Raspberry Pi 4 in this project is to serve as the ce
 
 The Raspberry Pi 4 plays a crucial role in controlling the golf ball interceptor’s firing mechanism. By processing the collected data, it calculates the optimal timing to activate the interceptor, making sure that it aims accurately at the golf ball during its flight path on the strings, particularly at the designated "kill zone."
 
+![System](../Images/)
+Figure 1: Raspberry Pi 4 B Wiring scematic.
+
 **Constraints:**
 
 | NO. | Constraint                                                          | Origin           |
