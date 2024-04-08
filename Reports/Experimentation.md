@@ -16,7 +16,7 @@ The navigation subsystem was tested by what percentage of the time it was able t
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
-The goal was to have the navigation subsystem detect the corner 80% of the time, and it successfully detected 86% of the time. This passes the benchmark required for successful deployment of the navigation sensors. This can be seen by the blue bar being over the orange line.
+The goal was to have the navigation subsystem detect the corner 80% of the time, and it successfully detected 86% of the time. This passes the benchmark required for successful deployment of the navigation sensors. This can be seen by the blue bar being over the orange line. The Navigation sensor had to be significantly closer to the yellow line to accurately detect the line than a 1/2 inch. After this was discovered the navigating went significantly smoother. It was mounted on the front of the bot in the center, as designed. The difference between the original design and the final product was that the navigation sensors were attached to the bottom of the front wheelie bars instead of directly on the chassis. This was done to be able to avoid the sensors getting caught on the small boxes.
 
 ### Power
 
@@ -28,7 +28,11 @@ As shown, of 30 trials, the system did not brown out 30 times. This is exceeded 
 
 ### Motors
 
-The motors worked 100% of the time, and correctly executed the code given to them. Sometimes this code was wrong, but that was a fault in the micro controller, not the motors.
+The motors worked 100% of the time, and correctly executed the code given to them. Sometimes this code was wrong, but that was a fault in the micro controller, not the motors. Below shows the table of the completion times of the robot through the course the times where it successfully navigated the course.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fda5c17e-8859-43e8-a6a4-06c611938467)
+
+This shows that the motors were more than sufficient to power the robot around the track in under a minute and 30 seconds.
 
 ### Main Control
 
