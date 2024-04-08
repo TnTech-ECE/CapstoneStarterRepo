@@ -36,117 +36,25 @@ This shows that the motors were more than sufficient to power the robot around t
 
 ### Main Control
 
-The main controller code needed to be able to complete the course at least 85% of the time. The table below shows the completion and percentage of course traversed if not completed.
+The main controller code needed to be able to complete the course at least 85% of the time. The table below shows percentage of course traversed each trial.
 
-| Trial No. | Completed | Percentage |
-|-----------|----------|----------|
-| 1 | Yes | 100 |
-| 2 | Yes | 100 |
-| 3 | No | 40 |
-| 4 | Yes | 100 |
-| 5 | Yes | 100 |
-| 6 | Yes | 100 |
-| 7 | Yes | 100 |
-| 8 | Yes | 100 |
-| 9 | Yes | 100 |
-| 10 | Yes | 100 |
-| 11 | No | 85 |
-| 12 | Yes | 100 |
-| 13 | Yes | 100 |
-| 14 | Yes | 100 |
-| 15 | Yes | 100 |
-| 16 | Yes | 100 |
-| 17 | Yes | 100 |
-| 18 | Yes | 100 |
-| 19 | No | 87 |
-| 20 | Yes | 100 |
-| 21 | Yes | 100 |
-| 22 | Yes | 100 |
-| 23 | Yes | 100 |
-| 24 | Yes | 100 |
-| 25 | No | 42 |
-| 26 | Yes | 100 |
-| 27 | Yes | 100 |
-| 28 | Yes | 100 |
-| 29 | Yes | 100 |
-| 30 | Yes | 100 |
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/a8e9cd95-c6c8-4694-9917-4931f2e0640b)
 
-This shows that the code allowed the course to be completed 87% of the time, which is within the required parameters.
+This shows that the code allowed the course to be completed 87% of the time, which is within the required parameters. The main controller was also responsible for the timers for the second turn and the gap crossing triggers. This meant that the main control was also responsible for the deployment of the team spirit and button push subsystems. The trials for these subsystems were only accounted for when the robot reached those places, as the main control sometimes failed to complete the course, as shown above.
 
 ### Button Push
 
 The button pusher deployed successfully every time the robot crossed the gap or reached the point in the code that deployed it, however it did not push the button every time it deployed. It needed to push the button 85% of the time. The table below shows the success rate of the button pusher.
 
-| Trial | Pushed |
-|-------|-----------|
-| 1 | Yes |
-| 2 | Yes |
-| 3 | Yes |
-| 4 | Yes |
-| 5 | Yes |
-| 6 | Yes |
-| 7 | Yes |
-| 8 | Yes |
-| 9 | Yes |
-| 10 | Yes |
-| 11 | Yes |
-| 12 | Yes |
-| 13 | Yes |
-| 14 | No |
-| 15 | Yes |
-| 16 | No |
-| 17 | Yes |
-| 18 | Yes |
-| 19 | Yes |
-| 20 | Yes |
-| 21 | Yes |
-| 22 | Yes |
-| 23 | Yes |
-| 24 | Yes |
-| 25 | Yes |
-| 26 | Yes |
-| 27 | No |
-| 28 | Yes |
-| 29 | No |
-| 30 | Yes |
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/45f9c7a4-0510-457c-ad99-9dd19ae779ad)
 
-This shows an 87% success rate of the button pusher, which is within the desired parameters.
+
+This shows a 100% success rate of the button pusher, which is within the desired parameters. This is shown by of the 26 times the robot reached the button, the button was pushed all 26 times.
 
 ### Team Spirit
 
 The Team Spirit subsystem needed to blink at least 80% of the time. The table below shows the successful blinkage of the system.
 
-| Trial | Blink |
-|-------|-----------|
-| 1 | Yes |
-| 2 | Yes |
-| 3 | Yes |
-| 4 | No |
-| 5 | Yes |
-| 6 | Yes |
-| 7 | Yes |
-| 8 | Yes |
-| 9 | Yes |
-| 10 | No |
-| 11 | Yes |
-| 12 | Yes |
-| 13 | Yes |
-| 14 | Yes |
-| 15 | Yes |
-| 16 | Yes |
-| 17 | Yes |
-| 18 | No |
-| 19 | Yes |
-| 20 | Yes |
-| 21 | Yes |
-| 22 | Yes |
-| 23 | Yes |
-| 24 | Yes |
-| 25 | No |
-| 26 | Yes |
-| 27 | Yes |
-| 28 | No |
-| 29 | Yes |
-| 30 | Yes |
+
 
 This shows that the team spirit system worked 82% of the time. However a major design flaw in the team spirit system was that it was too heavy fo rthe robot and caused the robot to tip over, so a significantnly smaller version was implemented for the competition.
