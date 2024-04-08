@@ -16,7 +16,15 @@ Data Processing and Calculations: Upon receiving sensor signals, the Raspberry P
 
 Signal Interpretation: The Raspberry Pi 4 interprets wireless signals received from the sensors, using the data points related to the golf ball's motion. Signal processing techniques are employed to filter noise, create a higher signal clarity, and extract only the useful information.
 
-Control of Golf Ball Interceptor Shooter: Based on the calculated trajectory data, the Raspberry Pi 4 will control the timing and activation of the golf ball interceptor shooting mechanism. It needs to have the interceptor to be properly aligned towards the golf ball's predicted path, and fire at the appropriate time to hit the ball mid-air. This could use preset fire-positions to optimize the interception process.
+Control of Golf Ball Interceptor Shooter: Based on the calculated trajectory data, the Raspberry Pi 4 will control the timing and activation of the golf ball interceptor shooting mechanism. It needs to have the interceptor to be properly aligned towards the golf ball's predicted path, and fire at the appropriate time to hit the ball mid-air. This could use preset fire positions to optimize the interception process.
+
+**Integration**
+
+In addition to its role in processing sensor data and trajectory calculations, the Raspberry Pi 4 will integrate with a TB6600 Stepper Motor Driver to control the interceptor's aiming mechanism. This stepper motor driver controls the interceptor's movements, allowing for accurate alignment with the golf ball's predicted path.
+
+Upon receiving data from the wireless communicator, the Raspberry Pi 4 will execute commands to adjust the stepper motors to a specific location, aligning the interceptor with the incoming golf ball. The Python scripts running on the Raspberry Pi will translate trajectory calculations into precise motor movements.
+
+The TB6600 Stepper Motor Driver's compatibility with the Raspberry Pi's GPIO pins will enable easy communication and control of the system.
 
 **Cost Analysis:**
 
