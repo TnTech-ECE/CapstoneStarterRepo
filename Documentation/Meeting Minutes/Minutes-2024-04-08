@@ -1,36 +1,45 @@
 Attendance: Caz, Conor, Callie, Liam
 
-4-25 attendance : Caz, Callie, Liam, Conor
+4-25 Attendance: Caz, Callie, Liam, Conor
 
-We have a presentation my either Thursday or Friday
-Caz has 2 exam friday 4/25
+We have a presentation on either Thursday or Friday
 
-Poster is due Monday the 15th at 12am
+Poster is due Monday the 15th at 12 am
 Caz will do it, Conor to get Graphs
 
 Experimental Analysis - in process
   -Here are our exhausted trials
-  -Here is what happened at competition
-    -Sheer badluck
+  -Here is what happened at the competition
+    -Sheer bad luck
 
 Presentation
   -Make a new 
   -due on the 21st
-  -Callie will do presentation
-  -talk about problems we encounter and how we over came them
+  -Callie will do a presentation
+  -talk about problems we encounter and how we overcome them
     -browning, start sensor, etc
 
-
-Github update and cleaned
+Github updated and cleaned
   -Confirm from Roberts
     -Lessons learned
     -One file
+    -All Courses relevant to Capstone and How
   
 Table Clean on the 29th
 
 Contribution Statement Due on 
--Each person will make own excel
+-Each person will make their own excel
   -list system and tasks done
-  -only from 2024 though
+  -only from 2024
   -Each person has to agree
+NOT MANDATORY
 
+Dr. B may have us present on Wednesday the 24th to IBC as an advertisement for funding
+
+
+
+Noise issue: Similar to Browning out
+    Going downhill, motors to Generators then dumping voltage to Ground pin. 
+    The motor was generating, then positive to ground, the potential difference was too small to power microcontroller
+
+  -9 Volt battery solves, added extra ground to help get rid of communication through commons
