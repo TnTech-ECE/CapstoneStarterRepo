@@ -48,8 +48,11 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 | 18650 Battery Holder [6] | 114090053 | 1 | $1.49 | $1.49 |
 | 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
 | Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
-| 100k Ohm Resistors 25 Pack | 25EP514100K | 1 | $5.78 | $5.78 |
-| 32Pcs of PCB board | NA | 1 | $9.99 | $9.99 | 
+| 100k Ohm Resistors 25 Pack [16] | 25EP514100K | 1 | $5.78 | $5.78 |
+| 32Pcs of PCB board [17] | NA | 1 | $9.99 | $9.99 | 
+| 20 Pcs Photoresistors [18] | GL5528 | 1 | $5.99 | $5.99 |
+| Total | | | | $80.62 |
+
 
 ## Refrences
 [1] "8PCS 3 Pin 650nm 5V Laser Transmitter Sensor Module Board KY-008 Dot Diode Copper Head Sensor Module Diode Laser Mini laser head for Arduino Raspberry Pi Laser", Amazon.com. \ 
@@ -69,3 +72,4 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 [15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500. \
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
 [17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
+[18] "Chanzon 5mm 1 Ω ohm Photoresistor LDR Resistor 5528 GL5528 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
