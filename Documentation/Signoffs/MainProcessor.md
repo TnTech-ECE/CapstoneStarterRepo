@@ -42,7 +42,13 @@ Resource Utilization: Memory resources of the Raspberry Pi 4 is going to have 4 
 
 
 **References:**
+
 [1] “SC0194(9) raspberry pi | embedded computers | DigiKey,” DigiKey, https://www.digikey.com/en/products/detail/raspberry-pi/SC0194-9/10258781 (accessed Apr. 7, 2024). 
 
 [2] “Raspberry pi 4 model B specifications – raspberry pi,” Raspberry Pi, https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/ (accessed Apr. 7, 2024). 
+
+[3] “TB6600 Stepper Motor Driver,” Bulkman, https://bulkman3d.com/wp-content/uploads/2019/06/TB6600-Stepper-Motor-Driver-BM3D-v1.1.pdf (accessed Apr. 8, 2024). 
+
+[4] “TB6600 Stepper Motor Driver,” DFRobot, https://www.dfrobot.com/product-1547.html (accessed Apr. 8, 2024). 
+
 
