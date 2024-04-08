@@ -42,8 +42,7 @@ Resource Utilization: Memory resources of the Raspberry Pi 4 is going to have 4 
 
 
 **References:**
-https://www.digikey.com/en/products/detail/raspberry-pi/SC0194(9)/10258781?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Medium%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20223376311_adg-_ad-__dev-c_ext-_prd-10258781_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQu9jpuUpHtPr-bgw8H0jxdKFzT3ajibryuJEkEnzjqBR5XKOmK6T8aAp16EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQu9jpuUpHtPr-bgw8H0jxdKFzT3ajibryuJEkEnzjqBR5XKOmK6T8aAp16EALw_wcB
+[1] “SC0194(9) raspberry pi | embedded computers | DigiKey,” DigiKey, https://www.digikey.com/en/products/detail/raspberry-pi/SC0194-9/10258781 (accessed Apr. 7, 2024). 
 
-
-https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/
+[2] “Raspberry pi 4 model B specifications – raspberry pi,” Raspberry Pi, https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/ (accessed Apr. 7, 2024). 
 
