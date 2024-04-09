@@ -15,6 +15,8 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 - Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
   - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
 ## Schematic
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/42a86054-733d-40ea-b6a5-a1acf12b2075)
+
 ## Analysis
 ### Autonomous System
 According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory on the chip for program storage [Must BE CITED]. This means after an intial program of the Atmega the program will automatically run on startup. Once the microcontroller is properly programed the only step required to start the projectile path detection system is to turn on the powersupply.
