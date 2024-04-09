@@ -21,10 +21,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 <sup>4</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than one second. 
 
-<sup>5</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of the detected drone.
-
->[!NOTE]
-> Detected seems wrong in the last sentence, couldn't think of the right word. 
+<sup>5</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make important decisions about what order to operate in.
 
 ## Schematic
 
