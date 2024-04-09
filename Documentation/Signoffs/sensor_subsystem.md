@@ -59,10 +59,25 @@ highest variable height.
 13. The sensors shall be able to detect plastic [System Constraint].
 The sensors have to be able to detect the plastic golf ball from about 4-6 feet away
 
+## **Buildable Schematic**
+
+![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
+
+Based on the specification sheets for the LDK130 IC’s that are included in the board, the input voltage for
+the voltage enable input can range from a low of -0.3v to a high of VI + 0.3. Therefore, in this case it
+would be appropriate to use the 5v from the battery power system as seen below.
+
+![Schematic](../Images/Sensor_subsystem/schematic.png)
+
+The functionality of the board itself and its individual pieces can be found in the data sheets in the
+references section. These specific references are the data sheet for the SATEL-VL53L8 as well as
+the data sheets for the vl53l8CX, and the LDK130 series chip.
+
+
 ## **Analysis:**
 
 Based on the constraints given, the team chose the VL53L8CX time of flight sensor. This sensor
-was chosen because it is able to detect plastic, has a range of about thirteen meters, has a wide field of
+was chosen because it is able to detect plastic, has a range of about thirteen feet, has a wide field of
 view, has low power consumption requirements, has a sampling frequency that can take multiple
 measurements of the ball’s trajectory, and can be used to determine distance for both height and location.
 After determining the sensor, a SATEL-VL53L8 board was chosen to integrate with the sensor. This
@@ -70,6 +85,8 @@ board allows for integration with a microcontroller that will be used in the com
 transmit the data. It also provides its own power regulation for the sensor therefore only requiring a 5-volt
 input from the battery or device power systems. The exact specifications and advantages of the device
 that meet the project specifications and expected functionality will be further discussed.
+
+First of all, the team plans to use this sensor because of its ability to detect plastic objects. The datasheet does not specifiy the minimum size an object can be detected because time of flight sensors use the reflectivity of the object, so the minimum size that can be detected will vary based on the object's material. The datasheet does note the wavelength of light the sensor laser uses which is 940 nm. It is also noted by the manufactor that the object has to be large enough for the photons of the light to reflect off of. This means the object size can vary based on reflectivy, but objects that are too small for light to bounce off of will not be detectable. Plastic golf balls are large enough to reflect light because the golf ball can have a glare. However, the team still had to determine that the golf ball is reflective enough to be detected by the sensor. In order to this, a plastic training golf ball was placed under fluorescent light. A noticeable glare was observed by several people when placed under the light from approximately seven and a half feet away. The highest wavelength of fluorescent light is 700 nm. The wavelength of the sensor's laser is 940 nm. Studies have shown that plastic's reflectivity increases with wavelength under about 1200 nm to 1400 nm before starting to decrease. This means the golf ball should be more reflective to the sensor because of the higher wavelength. Based on this information, the team has determined that the golf ball is reflective enough at the distance it will be from the sensor for the object to be detectable. Next, the team focus on determining if the sensor can sense the speeds the golf ball will reach.
 
 The team plans on using two sensors to determine the golf ball’s height, line position, and speed.
 One sensor will be located on the stand closest to where the golf ball starts its trajectory. This sensor can
@@ -123,20 +140,6 @@ known that the pin LPn is set high by default because of the pull up resistor to
 connection from the EXT_IOVDD pin to the EXT_SPI_I2C_N pin will be required because a pull down
 resistor sets this pin to a low logic level.
 
-## **Buildable Schematic**
-
-![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
-
-Based on the specification sheets for the LDK130 IC’s that are included in the board, the input voltage for
-the voltage enable input can range from a low of -0.3v to a high of VI + 0.3. Therefore, in this case it
-would be appropriate to use the 5v from the battery power system as seen below.
-
-![Schematic](../Images/Sensor_subsystem/schematic.png)
-
-The functionality of the board itself and its individual pieces can be found in the data sheets in the
-references section. These specific references are the data sheet for the SATEL-VL53L8 as well as
-the data sheets for the vl53l8CX, and the LDK130 series chip.
-
 ### **Bill of Materials:**
 
 | Device | Quantity | Price | Total |
@@ -161,5 +164,13 @@ https://www.st.com/content/ccc/resource/technical/document/datasheet/29/10/f7/87
 7/f4/DM00076097.pdf/files/DM00076097.pdf/jcr:content/translations/en.DM00076097.pd
 f (accessed Apr. 4, 2024).
 
-[5] “Pull-up resistor and pull-down resistor explained,” Basic Electronics Tutorials,
+[5] “Detect presence of small object moving at supersonic speeds using TOF sensor(s),” Solved: Detect presence of small object moving at superson... - STMicroelectronics Community, https://community.st.com/t5/imaging-sensors/detect-presence-of-small-object-moving-at-supersonic-speeds/td-p/615253 (accessed Apr. 9, 2024). 
+
+[6] “What is glare? and how to minimize it.,” What Is Glare? And How To Minimize It. | Lumen8, https://lumen-8.com.au/news/what-glare-and-how-minimize-it#:~:text=There%20are%20two%20main%20types,computer%20screen%20or%20glossy%20surface (accessed Apr. 9, 2024). 
+
+[7] Center for Devices and Radiological Health, “Compact fluorescent lamps (cfls) – fact sheet/FAQ,” U.S. Food and Drug Administration, https://www.fda.gov/radiation-emitting-products/home-business-and-entertainment-products/compact-fluorescent-lamps-cfls-fact-sheetfaq#:~:text=Since%20CFLs%20are%20designed%20to,(%3E%20700%20nm)%20radiation. (accessed Apr. 9, 2024). 
+
+[8] M. Moshtaghi, E. Knaeps, S. Sterckx, S. Garaba, and D. Meire, “Spectral reflectance of marine macroplastics in the VNIR and SWIR measured in a controlled environment,” Scientific reports, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7940656/ (accessed Apr. 9, 2024). 
+
+[9] “Pull-up resistor and pull-down resistor explained,” Basic Electronics Tutorials,
 https://www.electronics-tutorials.ws/logic/pull-up-resistor.html (accessed Apr. 3, 2024). 
