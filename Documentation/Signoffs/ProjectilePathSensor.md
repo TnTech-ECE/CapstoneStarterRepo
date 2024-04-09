@@ -15,7 +15,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 - Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
   - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
 ## Schematic
-![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/42a86054-733d-40ea-b6a5-a1acf12b2075)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/e07acf35-f173-472a-92ad-ec09fcd796f9)
 
 ## Analysis
 ### Autonomous System
