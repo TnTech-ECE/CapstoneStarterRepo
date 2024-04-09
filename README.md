@@ -33,7 +33,7 @@ Coming soon :)
 
 ### Faculty Supervisor
 
-The faculty supervisor for this project is Dr. Jeffrey Austin
+The faculty supervisor for this project is Dr. Jeffrey Austen
 
 ### Stakeholders
 
