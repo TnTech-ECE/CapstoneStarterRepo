@@ -56,8 +56,8 @@ The ESP8266 has a built in WiFi module allowing for wireless communication. This
 |Samsung 25R 18650 2500mAh |2500mAh Litium Ion Battery      |N\A          |Samsung     |1         |$3.75  |$3.75  |
 |--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
 
-
 <div>
+
 ### Refrences
 
 RCS Calulator
