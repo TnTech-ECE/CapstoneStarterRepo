@@ -38,7 +38,7 @@ The faculty supervisor for this project is Dr. Jeffrey Austin
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
-Dr. Jeffrey Austin
+Dr. Jeffrey Austen
 
 ### Recognitions
 
