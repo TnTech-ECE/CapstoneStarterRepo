@@ -59,19 +59,27 @@ The ESP8266 has a built in WiFi module allowing for wireless communication. This
 
 RCS Calulator
 [def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
+
 Radar Maximum Range Calculator
 [def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
+
 Dipole antena wikapidia
-[def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.  
+[def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.
+
 micro controller
 [def4]:https://www.dfrobot.com/product-1634.html
+
 wiki 
 [def5]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
+
 mmWave 9m
 [def6]: https://www.dfrobot.com/product-2282.html
+
 battery holder
 [def6]: https://www.sparkfun.com/products/12899
+
 FireBeetle Data sheet
 [def7]: https://www.mouser.com/pdfdocs/DFR0489_Web.pdf
+
 Samsung 2500mAh battery
 [def8]: https://www.18650batterystore.com/products/samsung-25r-18650
