@@ -9,7 +9,9 @@
 * C19: The Design shall implement the best remote battery power solution to limit the interceptor's environmental impact.
 * C22: 
 ## Schematics
-
+<p align = "center">
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1.pdf width='250'>
+</p>
 ## Analysis
 ### Detection distance
 To find the maximum distance the radar will be able to detect the a few calculations where needed. The first being the Radar Cross Section (RCS) which is the equivalent area of the target preceived by the radar. To do this I used the online calculator [1] which uses the target having a sherical shape and the following formula.
@@ -26,20 +28,32 @@ In this equation plug in the Radar Output Power or Equivalent Transmit Power low
 The choice to bridge the center senor posts and place the radar system in the middle of the game board is to reduce the maximum distance from the edge of the gameboard from the radar. Also having the radar infront of the interceptor body reduces the cosign effect on the radar giving us a more accurate velocity and acceleration.
 
 ### Battery
+To ensure that the battery will last greater than one hour. The operating current of the ESP8266 is 80 mA and the operating current for the radar is 90 mA, using the formula
 
+$$ current * duration = mAh $$
 
+since we have the mAh avalible of the battery and the current the microcontroller and mmWave Radar use we can rewrite the formula to 
+
+$$ {mAh\over current} = duration $$
+
+using this formula we get an best case operation time 14.7 hours. But as the battery drains the voltage of the batter will stop. Since best case operation time is roughly 14 times the desired operation accounting for the voltage drain is not needed in this case.
+
+### Microcontroller
+The ESP8266 has a built in WiFi module allowing for wireless communication. This micro controller also works with the mmWave radar chosen as shown by a tutorial[4]
 
 ## Implementation and Testing
 ### Bill of Materials (BOM)
 <div align="center">
-|Name of item|Description|Part Number|Manufacuer|Quantity|Price|Total|
-|------------|-----------|-----------|----------|--------|-----|-----|
+|Name of item      |Description               |Part Number|Manufacuer|Quantity|Price|Total|
+|------------------|--------------------------|-----------|----------|--------|-----|-----|
+|FireBeetle ESP8266| Microcontroller with WiFi| DFR0489   |DFRobot   | 1      |$7.50|$7.50|
+|------------------|--------------------------|-----------|----------|--------|-----|-----|
 <div>
 ### Refrences
 
 
 [def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
 [def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
-[def99]: Dipole antena wikapidia
+Dipole antena wikapidia
 [def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.  
-[def4]: g
+[def4]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
