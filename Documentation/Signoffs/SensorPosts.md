@@ -22,7 +22,7 @@ Using 0.02124202 meters (average radius of a golf ball) for the rarget radius gi
 <p align = "center">
 <img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/RadarRange.png/ width='250'>
 </p>
-In this equation plug in the Radar Output Power or Equivalent Transmit Power lower end of the range 9 dBm, operating frequency of 24 GHz the RCS of 0.0014175, since we do not have a data sheet we make assumptions for the two remaing unkowns. The antena gain is assumed to be 1.5 because that is the gain of a resonant dipole antenas and the minimum detecitible signal is assumed to be -90 dBm. With these values we get a maximum detection distance of 1.188 m or 46.77 inches. By connecting the center sensor posts together and placing the radar apperatus in the center this maximum distance to the edge of the game board is 49.67 from where the radar will be operating from so at the worst case the radar will reach 95% of the way to the furthast edge in the worst case.
+In this equation plug in the Radar Output Power or Equivalent Transmit Power lower end of the range 9 dBm, operating frequency of 24 GHz the RCS of 0.0014175, since we do not have a data sheet we make assumptions for the two remaing unkowns. The antena gain is assumed to be 1.5 because that is the gain of a resonant dipole antenas[3] and the minimum detecitible signal is assumed to be -90 dBm. With these values we get a maximum detection distance of 1.188 m or 46.77 inches. By connecting the center sensor posts together and placing the radar apperatus in the center this maximum distance to the edge of the game board is 49.67 from where the radar will be operating from so at the worst case the radar will reach 95% of the way to the furthast edge in the worst case.
 
 ### Radar Placement
 The choice to bridge the center senor posts and place the radar system in the middle of the game board is to reduce the maximum distance from the edge of the gameboard from the radar. Also having the radar infront of the interceptor body reduces the cosign effect on the radar giving us a more accurate velocity and acceleration.
@@ -44,16 +44,37 @@ The ESP8266 has a built in WiFi module allowing for wireless communication. This
 ## Implementation and Testing
 ### Bill of Materials (BOM)
 <div align="center">
-|Name of item      |Description               |Part Number|Manufacuer|Quantity|Price|Total|
-|------------------|--------------------------|-----------|----------|--------|-----|-----|
-|FireBeetle ESP8266| Microcontroller with WiFi| DFR0489   |DFRobot   | 1      |$7.50|$7.50|
-|------------------|--------------------------|-----------|----------|--------|-----|-----|
+
+|Name of item              |Description                     |Part Number  |Manufacuer  |Quantity  |Price  |Total  |
+|--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
+|FireBeetle ESP8266        |Microcontroller with WiFi       |DFR0489      |DFRobot     | 1        |$7.50  |$7.50  |
+|--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
+|mmWave Radar 9m           |mmWave Radar by DFRobot 9m Range|SEN0395      |DFRobot     |1         |$29.00 |$29.00 |
+|--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
+|Battery Holder            |Battery Holder - 1x18650        |PRT-12899    |ChinaDAIR   |1         |$1.15  |$1.15  |
+|--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
+|Samsung 25R 18650 2500mAh |2500mAh Litium Ion Battery      |N\A          |Samsung     |1         |$3.75  |$3.75  |
+|--------------------------|--------------------------------|-------------|------------|----------|-------|-------|
+
+
 <div>
 ### Refrences
 
-
+RCS Calulator
 [def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
+Radar Maximum Range Calculator
 [def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
 Dipole antena wikapidia
 [def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.  
-[def4]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
+micro controller
+[def4]:https://www.dfrobot.com/product-1634.html
+wiki 
+[def5]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
+mmWave 9m
+[def6]: https://www.dfrobot.com/product-2282.html
+battery holder
+[def6]: https://www.sparkfun.com/products/12899
+FireBeetle Data sheet
+[def7]: https://www.mouser.com/pdfdocs/DFR0489_Web.pdf
+Samsung 2500mAh battery
+[def8]: https://www.18650batterystore.com/products/samsung-25r-18650
