@@ -68,7 +68,11 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 
 #define PCNT_INPUT_PIN_1 34
 #define PCNT_INPUT_PIN_2 35
-#define NUM_FREQ_VALS 4
+
+// The number of elements in the array used to calculate average frequency
+// Use a lower number to have it more reactive to change, 
+// fewer "frequency deviations" for a single event
+#define NUM_FREQ_VALS 3
 
 // Determines values that cause PCNT to overflow, max values are chosen
 #define EXAMPLE_PCNT_HIGH_LIMIT 32767
@@ -353,8 +357,9 @@ void initial_freq_tune() {
 
 
 // Speed Estimation
-void print_speed_mph(Loop_Event loop_evt, int64_t last_event_timestamp){
-    int64_t diff_us = loop_evt.timestamp - last_event_timestamp;
+// Pretty inaccurate, multiple events can result in events extremely close in time
+void print_speed_mph(int64_t curr_event_timestamp, int64_t last_event_timestamp){
+    int64_t diff_us = curr_event_timestamp - last_event_timestamp;
     double distance_feet = 4.0; // set to distance between the loops
     double time_seconds = (double)diff_us / 1000000.0;
     double speed_fps = distance_feet / time_seconds;
@@ -514,7 +519,7 @@ void dir_logic_task(void *arg)
                         printf("\nDelta increased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
-                        print_speed_mph(loop_evt, last_event_timestamp);
+                        print_speed_mph(loop_evt.timestamp, last_event_timestamp);
                     }
                     else
                     {
@@ -523,7 +528,7 @@ void dir_logic_task(void *arg)
                         printf("\nDelta decreased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
-                        print_speed_mph(loop_evt, last_event_timestamp);
+                        print_speed_mph(loop_evt.timestamp, last_event_timestamp);
                     }
                 }
                 else if((last_event_id == LOOP_B) && (loop_evt.loop_id == LOOP_A) && (curr_time_us - last_delta_change_time > DELTA_TIMEOUT_MS*1000)) // Loop B then A triggered
@@ -536,7 +541,7 @@ void dir_logic_task(void *arg)
                         printf("\n\nDelta decreased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
-                        print_speed_mph(loop_evt, last_event_timestamp);
+                        print_speed_mph(loop_evt.timestamp, last_event_timestamp);
                     }
                     else
                     {
@@ -545,7 +550,7 @@ void dir_logic_task(void *arg)
                         printf("\n\nDelta increased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
-                        print_speed_mph(loop_evt, last_event_timestamp);
+                        print_speed_mph(loop_evt.timestamp, last_event_timestamp);
                     }
                 }
                 else
