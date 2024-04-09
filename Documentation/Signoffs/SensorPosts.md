@@ -58,28 +58,21 @@ The ESP8266 has a built in WiFi module allowing for wireless communication. This
 ### Refrences
 
 [1] [RCS Calulator][def1]: Radar Cross Section calculator.
-[def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
-
 [2] [Radar Maximum Range Calculator][def2]: Radar max range calculator.
-[def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
-
 [3] [Dipole antena wikapidia][def3]: Wiki page on dipole antena.
-[def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.
-
 [4] [FireBeetle ESP8266][def4]: ESP8266 purchase link.
-[def4]:https://www.dfrobot.com/product-1634.html
-
 [5] [Tutorial for mmWave Radar][def5]: mmWave Radar quick setup guides including pin connections.
-[def5]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
-
 [6] [mmWave Radar 9m range][def6]: mmWave radar 9m range purchase link.
-[def6]: https://www.dfrobot.com/product-2282.html
-
 [7] [18650 battery holder][def7]: battery holder to power microcontroller and radar.
-[def7]: https://www.sparkfun.com/products/12899
-
 [8] [FireBeetle 8266 Data sheet][def8]: Firebeteel ESP8266 Datasheet.
-[def8]: https://www.mouser.com/pdfdocs/DFR0489_Web.pdf
-
 [9] [Samsung 18650 2500mAh battery][def9]: 18650 battery.
+
+[def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
+[def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
+[def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.
+[def4]:https://www.dfrobot.com/product-1634.html
+[def5]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
+[def6]: https://www.dfrobot.com/product-2282.html
+[def7]: https://www.sparkfun.com/products/12899
+[def8]: https://www.mouser.com/pdfdocs/DFR0489_Web.pdf
 [def9]: https://www.18650batterystore.com/products/samsung-25r-18650
