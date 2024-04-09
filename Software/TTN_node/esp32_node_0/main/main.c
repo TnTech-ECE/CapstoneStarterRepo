@@ -29,6 +29,8 @@
 
         Multithreading with FreeRTOS. LoRaWAN runs on core1, other tasks on core0
 
+        Speed estimation.
+
     Setup:
         todo
 
@@ -66,7 +68,7 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 
 #define PCNT_INPUT_PIN_1 34
 #define PCNT_INPUT_PIN_2 35
-#define NUM_FREQ_VALS 3
+#define NUM_FREQ_VALS 4
 
 // Determines values that cause PCNT to overflow, max values are chosen
 #define EXAMPLE_PCNT_HIGH_LIMIT 32767
@@ -96,8 +98,8 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 #define LOOP_A_FIRST 1
 
 int freq_array_index = 0;
-float freq_avg_loop_a = 0;
-float freq_avg_loop_b = 0;
+int64_t freq_avg_loop_a = 0;
+int64_t freq_avg_loop_b = 0;
 
 // Delta value which will be kept in nonvolatile storage
 // Current delta is set to zero if it does not already exist, 
@@ -106,8 +108,8 @@ float freq_avg_loop_b = 0;
 #define NVS_KEY_CURRENT_DELTA "current_delta"
 int32_t current_delta;
 
-float freq_array_loop_a[NUM_FREQ_VALS] = {[0 ... (NUM_FREQ_VALS-1)] = 0};
-float freq_array_loop_b[NUM_FREQ_VALS] = {[0 ... (NUM_FREQ_VALS-1)] = 0};
+int64_t freq_array_loop_a[NUM_FREQ_VALS] = {[0 ... (NUM_FREQ_VALS-1)] = 0};
+int64_t freq_array_loop_b[NUM_FREQ_VALS] = {[0 ... (NUM_FREQ_VALS-1)] = 0};
 
 typedef enum {LOOP_A, LOOP_B, INVALID} LOOP_ID;
 
@@ -115,7 +117,7 @@ typedef enum {LOOP_A, LOOP_B, INVALID} LOOP_ID;
 typedef struct  
 {
     int64_t timestamp;
-    float frequency;
+    int64_t frequency;
     LOOP_ID loop_id;
 } Loop_Event;
 
@@ -175,7 +177,7 @@ const char *appKey = "F64422CFA825B4D89FF6B074027B41C5";
 
 // For debugging purposes, choose 0 to not have any LoRaWAN connectivity
 // choose 1 to use LoRaWAN network
-#define DO_LORAWAN 1
+#define DO_LORAWAN 0
 
 
 // Nonvolatile Storage
@@ -279,27 +281,27 @@ void messageReceived(const uint8_t* message, size_t length, ttn_port_t port)
 
 // Takes parameters: pcnt_unit handle, pulse count pointer, previous time pointer, frequency pointer, 
 // and the loop id enum of which loop this is for
-void get_freq_from_pcnt(pcnt_unit_handle_t pcnt_unit, int *pulse_count, int64_t *prev_time_us, float *freq, LOOP_ID loop_id)
+void get_freq_from_pcnt(pcnt_unit_handle_t pcnt_unit, int *pulse_count, int64_t *prev_time_us, int64_t *freq, LOOP_ID loop_id)
 {
     int64_t curr_time_us = esp_timer_get_time();
     int64_t elapsed_time_us = curr_time_us - *prev_time_us;
 
     ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit, pulse_count));
 
-    *freq = (float)(*pulse_count) / (elapsed_time_us / 1e6);
+    *freq = (int64_t)(((double)(*pulse_count) / ((double)elapsed_time_us / 1e6)) + 0.5);
     *prev_time_us = curr_time_us;
 
     pcnt_unit_clear_count(pcnt_unit);
 
     // Print the pulse count and frequency along with the loop identifier
-    printf("\nLoop %c: Pulse Count: %d, Frequency: %f Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
+    printf("\nLoop %c: Pulse Count: %d, Frequency: %lld Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
 }
 
 // Initial frequency tuning function
 void initial_freq_tune() {
     int64_t prev_time_us = 0;
     int pulse_count = 0;
-    float frequency = 0;
+    int64_t frequency = 0;
 
     printf("\n\nTUNING LOOP A");
 
@@ -334,8 +336,8 @@ void initial_freq_tune() {
     }
 
     // Calculate average frequencies
-    float sum_a = 0;
-    float sum_b = 0;
+    int64_t sum_a = 0;
+    int64_t sum_b = 0;
     for (int i = 0; i < NUM_FREQ_VALS; i++) 
     {
         sum_a += freq_array_loop_a[i];
@@ -345,8 +347,20 @@ void initial_freq_tune() {
     freq_avg_loop_b = sum_b / NUM_FREQ_VALS;
 
     // Print average frequencies
-    printf("\n\n\nTuning finished!\nLoop A: Average Frequency is %f", freq_avg_loop_a);
-    printf("\nLoop B: Average Frequency is %f", freq_avg_loop_b);
+    printf("\n\n\nTuning finished!\nLoop A: Average Frequency is %lld", freq_avg_loop_a);
+    printf("\nLoop B: Average Frequency is %lld", freq_avg_loop_b);
+}
+
+
+// Speed Estimation
+void print_speed_mph(Loop_Event loop_evt, int64_t last_event_timestamp){
+    int64_t diff_us = loop_evt.timestamp - last_event_timestamp;
+    double distance_feet = 4.0; // set to distance between the loops
+    double time_seconds = (double)diff_us / 1000000.0;
+    double speed_fps = distance_feet / time_seconds;
+    double speed_mph = speed_fps * 0.681818;
+
+    printf("\nEstimated speed: %.2f miles per hour", speed_mph);
 }
 
 
@@ -361,8 +375,8 @@ void pcnt_task(void *arg)
     int pulse_count_loop_b = 0;
     int64_t prev_time_us_0 = 0;
     int64_t prev_time_us_1 = 0;
-    float freq_loop_a = 0;
-    float freq_loop_b = 0;
+    int64_t freq_loop_a = 0;
+    int64_t freq_loop_b = 0;
 
     // Subscribe this task to TWDT, then check if it is subscribed
     ESP_ERROR_CHECK(esp_task_wdt_add(NULL));
@@ -417,8 +431,8 @@ void pcnt_task(void *arg)
         freq_array_index = (freq_array_index+1) % NUM_FREQ_VALS;
 
         // Get array averages
-        float sum_a = 0;
-        float sum_b = 0;
+        int64_t sum_a = 0;
+        int64_t sum_b = 0;
         for (int i = 0; i < NUM_FREQ_VALS; i++)
         {
             sum_a += freq_array_loop_a[i];
@@ -427,8 +441,8 @@ void pcnt_task(void *arg)
         freq_avg_loop_a = sum_a / NUM_FREQ_VALS;
         freq_avg_loop_b = sum_b / NUM_FREQ_VALS;
 
-        printf("\nLoop A avg: %f", freq_avg_loop_a);
-        printf("\nLoop B avg: %f", freq_avg_loop_b);
+        printf("\nLoop A avg: %lld", freq_avg_loop_a);
+        printf("\nLoop B avg: %lld", freq_avg_loop_b);
 
         esp_task_wdt_reset();
         esp_task_wdt_reset_user(pcnt_task_twdt_user_hdl);
@@ -486,10 +500,6 @@ void dir_logic_task(void *arg)
             // Get the current time in microseconds
             int64_t curr_time_us = esp_timer_get_time();
 
-            //int64_t diff;
-            //diff = curr_time_us - last_event_timestamp;
-            //printf("\ncurr time: %lld, event timestamp: %lld, diff: %lld", curr_time_us, last_event_timestamp, diff);
-
             if((loop_evt.loop_id != last_event_id) && ((curr_time_us - last_event_timestamp) < (TIME_TO_STALE_EVENT_MS*1000)))
             {
                 printf("\n\nEvents with different ID detected!");
@@ -504,6 +514,7 @@ void dir_logic_task(void *arg)
                         printf("\nDelta increased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
+                        print_speed_mph(loop_evt, last_event_timestamp);
                     }
                     else
                     {
@@ -512,6 +523,7 @@ void dir_logic_task(void *arg)
                         printf("\nDelta decreased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
+                        print_speed_mph(loop_evt, last_event_timestamp);
                     }
                 }
                 else if((last_event_id == LOOP_B) && (loop_evt.loop_id == LOOP_A) && (curr_time_us - last_delta_change_time > DELTA_TIMEOUT_MS*1000)) // Loop B then A triggered
@@ -524,6 +536,7 @@ void dir_logic_task(void *arg)
                         printf("\n\nDelta decreased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
+                        print_speed_mph(loop_evt, last_event_timestamp);
                     }
                     else
                     {
@@ -532,14 +545,15 @@ void dir_logic_task(void *arg)
                         printf("\n\nDelta increased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
+                        print_speed_mph(loop_evt, last_event_timestamp);
                     }
                 }
                 else
                 {
-                    last_event_id = loop_evt.loop_id;
                     continue;
                 }
             }
+
             last_event_timestamp = loop_evt.timestamp;
             last_event_id = loop_evt.loop_id;
             //printf("\nlast_event_id at end: %d", last_event_id);
