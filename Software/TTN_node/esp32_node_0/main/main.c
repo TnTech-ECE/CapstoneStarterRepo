@@ -1,10 +1,42 @@
 /*
     Kyle Plant
-    2024-04-06
+    2024-04-09
     Dual input frequency measurement and directional logic for inductive loop system
-    with LoRaWAN TTN network connectivity
+    with LoRaWAN TTN network connectivity.
 
-    Add ability to manually set delta with LoRaWAN (downlink from gateway)
+    Hardware:
+        ESP32 WROOM 32E
+        RFM95W LoRa Transceiver
+
+    Software:
+        ESP-IDF, I used the extension on VSCode.
+        Getting Started: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html
+
+    Features / Operation:
+        To be used with an inductive loop controller board that outputs
+        square wave pulses with Vpp 3.3V.
+
+        Uses directional logic with two inductive loops, Loop A and Loop B, to determine
+        the delta of vehicles past the loops.
+
+        TTN compatibility using library from: https://github.com/manuelbl/ttn-esp32
+
+        Nonvolatile storage of delta and network session keys for TTN OTAA.
+
+        Automatic frequency average tuning.
+
+        Manually set delta from downlinks. Format as a single hex byte!
+
+        Multithreading with FreeRTOS. LoRaWAN runs on core1, other tasks on core0
+
+    Setup:
+        todo
+
+        TTN library getting started guide: https://github.com/manuelbl/ttn-esp32/wiki/Get-Started
+        I have included the version of the library I used for this project in the components folder.
+
+    Work Needed:
+        Make secrets.h for TTN OTAA keys.
 */
 
 
@@ -43,6 +75,8 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 // How much of a frequency change is needed for it to be counted as a vehicle
 #define LOOP_DETECTION_THRESHOLD_HZ 150 
 
+
+// Sets how long frequency measurement tasks should wait to accumulate pulses on PCNT units
 #define SAMPLE_WINDOW_MS 350
 
 // The amount of time it takes for an event to become "stale"
@@ -51,10 +85,14 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 // will be thrown out
 #define TIME_TO_STALE_EVENT_MS 2000
 
-// Delta cannot be changed again until this amount of time since last change
+// Delta cannot be changed again until this amount of time has passed since last change
 #define DELTA_TIMEOUT_MS 250
 
 // This is how you choose which loop is considered the entrance and exit loop
+// If Loop A is "first" then a vehicle traveling over Loop A then Loop B
+// will result in a positive change in the delta, vice versa for Loop B then Loop A,
+// it will then decrease the delta.
+// If LOOP_A_FIRST is set to 0, then Loop B is "first" 
 #define LOOP_A_FIRST 1
 
 int freq_array_index = 0;
@@ -81,13 +119,16 @@ typedef struct
     LOOP_ID loop_id;
 } Loop_Event;
 
+// Queue handles
 #define QUEUE_LENGTH 15
 QueueHandle_t loop_event_queue;
 
+// Task handles
 TaskHandle_t pcnt_task_handle;
 TaskHandle_t dir_logic_task_handle;
 TaskHandle_t sendMessages_task_handle;
 
+// PCNT config
 pcnt_unit_config_t unit_config = {
         .high_limit = EXAMPLE_PCNT_HIGH_LIMIT,
         .low_limit = EXAMPLE_PCNT_LOW_LIMIT,
@@ -105,6 +146,7 @@ pcnt_chan_config_t chan_config_1 = {
 };
 pcnt_channel_handle_t pcnt_1_chan = NULL;
 
+// LoRaWAN
 // NOTE:
 // The LoRaWAN frequency and the radio chip must be configured by running 'idf.py menuconfig'.
 // Go to Components / The Things Network, select the appropriate values and save.
@@ -185,7 +227,7 @@ void write_current_delta_to_nvs() {
 //static uint8_t msgData[] = "Hello, world"; // Test message
 
 
-// LoRa functions
+// LoRaWAN functions
 
 void sendMessages(void* pvParameter)
 {
@@ -206,85 +248,95 @@ void sendMessages(void* pvParameter)
     }
 }
 
-
+// Used to manually set the current delta with downlinks from gateway, send single byte payloads only (0x00-0xFF)
 void messageReceived(const uint8_t* message, size_t length, ttn_port_t port)
 {
     printf("Message of %d bytes received on port %d:", length, port);
     for (int i = 0; i < length; i++)
         printf(" %02x", message[i]);
     printf("\n");
+
+    // Check if length is equal to 1 (indicating a single-byte payload)
+    if (length == 1) 
+    {
+        // Process the single-byte payload
+        printf("\nReceived single-byte payload: %02x\n", message[0]);
+        printf("\nWriting new delta to NVS...");
+
+        // Write the received byte to the NVS as current_delta
+        write_current_delta_to_nvs(message[0]);
+
+        printf(" Delta updated in NVS!\n");
+    } 
+    else 
+    {
+        printf("\nReceived payload is not a single byte.\n");
+    }
 }
 
 
+// General frequency related functions
+
+// Takes parameters: pcnt_unit handle, pulse count pointer, previous time pointer, frequency pointer, 
+// and the loop id enum of which loop this is for
+void get_freq_from_pcnt(pcnt_unit_handle_t pcnt_unit, int *pulse_count, int64_t *prev_time_us, float *freq, LOOP_ID loop_id)
+{
+    int64_t curr_time_us = esp_timer_get_time();
+    int64_t elapsed_time_us = curr_time_us - *prev_time_us;
+
+    ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit, pulse_count));
+
+    *freq = (float)(*pulse_count) / (elapsed_time_us / 1e6);
+    *prev_time_us = curr_time_us;
+
+    pcnt_unit_clear_count(pcnt_unit);
+
+    // Print the pulse count and frequency along with the loop identifier
+    printf("\nLoop %c: Pulse Count: %d, Frequency: %f Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
+}
+
 // Initial frequency tuning function
-void initial_freq_tune()
-{   
-    int64_t curr_time_us = 0;
+void initial_freq_tune() {
     int64_t prev_time_us = 0;
-    int64_t elapsed_time_us = 0;
     int pulse_count = 0;
     float frequency = 0;
 
-
     printf("\n\nTUNING LOOP A");
-    for(int i = 0; i < NUM_FREQ_VALS; i++)
+
+    // Clear PCNT counter and set initial time
+    pcnt_unit_clear_count(pcnt_unit_0);
+    prev_time_us = esp_timer_get_time();
+
+    // Delay before starting measurements
+    vTaskDelay(pdMS_TO_TICKS(SAMPLE_WINDOW_MS));
+
+    for (int i = 0; i < NUM_FREQ_VALS; i++) 
     {
-        // Loop A
-        curr_time_us = esp_timer_get_time();
-
-        ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit_0, &pulse_count));
-        printf("\npulse count 1: %d", pulse_count);
-
-        elapsed_time_us = curr_time_us - prev_time_us;
-
-        frequency = (float)pulse_count / (elapsed_time_us / 1e6);
-        printf("\nfrequency 1: %f Hz", frequency);
-        prev_time_us = curr_time_us;
-
+        get_freq_from_pcnt(pcnt_unit_0, &pulse_count, &prev_time_us, &frequency, LOOP_A);
         freq_array_loop_a[i] = frequency;
-
-        pcnt_unit_clear_count(pcnt_unit_0);
-
         vTaskDelay(pdMS_TO_TICKS(SAMPLE_WINDOW_MS));
     }
-
-    // First PCNT value is off by a lot, replace it with the most recent value
-    freq_array_loop_a[0] = freq_array_loop_a[NUM_FREQ_VALS-1];
-
-    curr_time_us = 0;
-    prev_time_us = 0;
-    elapsed_time_us = 0;
-    pulse_count = 0;
-    frequency = 0;
 
     printf("\n\nTUNING LOOP B");
-    for(int i = 0; i < NUM_FREQ_VALS; i++)
+
+    // Clear PCNT counter and set initial time
+    pcnt_unit_clear_count(pcnt_unit_1);
+    prev_time_us = esp_timer_get_time();
+
+    // Delay before starting measurements
+    vTaskDelay(pdMS_TO_TICKS(SAMPLE_WINDOW_MS));
+
+    for (int i = 0; i < NUM_FREQ_VALS; i++) 
     {
-        // Loop B
-        curr_time_us = esp_timer_get_time();
-
-        ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit_1, &pulse_count));
-        printf("\npulse count 1: %d", pulse_count);
-
-        elapsed_time_us = curr_time_us - prev_time_us;
-
-        frequency = (float)pulse_count / (elapsed_time_us / 1e6);
-        printf("\nfrequency 1: %f Hz", frequency);
-        prev_time_us = curr_time_us;
-
+        get_freq_from_pcnt(pcnt_unit_1, &pulse_count, &prev_time_us, &frequency, LOOP_B);
         freq_array_loop_b[i] = frequency;
-
-        pcnt_unit_clear_count(pcnt_unit_1);
-
         vTaskDelay(pdMS_TO_TICKS(SAMPLE_WINDOW_MS));
     }
 
-    // First PCNT value is off by a lot, replace it with the most recent value
-    freq_array_loop_b[0] = freq_array_loop_b[NUM_FREQ_VALS-1];
-
-    float sum_a = 0; 
+    // Calculate average frequencies
+    float sum_a = 0;
     float sum_b = 0;
-    for (int i = 0; i < NUM_FREQ_VALS; i++)
+    for (int i = 0; i < NUM_FREQ_VALS; i++) 
     {
         sum_a += freq_array_loop_a[i];
         sum_b += freq_array_loop_b[i];
@@ -292,9 +344,11 @@ void initial_freq_tune()
     freq_avg_loop_a = sum_a / NUM_FREQ_VALS;
     freq_avg_loop_b = sum_b / NUM_FREQ_VALS;
 
+    // Print average frequencies
     printf("\n\n\nTuning finished!\nLoop A: Average Frequency is %f", freq_avg_loop_a);
     printf("\nLoop B: Average Frequency is %f", freq_avg_loop_b);
 }
+
 
 
 //FreeRTOS tasks
@@ -305,12 +359,8 @@ void pcnt_task(void *arg)
 {
     int pulse_count_loop_a = 0;
     int pulse_count_loop_b = 0;
-    int64_t curr_time_us_0 = 0;
-    int64_t curr_time_us_1 = 0;
     int64_t prev_time_us_0 = 0;
     int64_t prev_time_us_1 = 0;
-    int64_t elapsed_time_us_0 = 0;
-    int64_t elapsed_time_us_1 = 0;
     float freq_loop_a = 0;
     float freq_loop_b = 0;
 
@@ -335,47 +385,17 @@ void pcnt_task(void *arg)
     while(1)
     {
         // Freq 1
-
-        // Get current time for freq1
-        curr_time_us_0 = esp_timer_get_time();
-
-        ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit_0, &pulse_count_loop_a));
-
-        elapsed_time_us_0 = curr_time_us_0 - prev_time_us_0;
-
-        freq_loop_a = (float)pulse_count_loop_a / (elapsed_time_us_0 / 1e6);
-        prev_time_us_0 = curr_time_us_0;
-
-        // Clear PCNT unit 0
-        pcnt_unit_clear_count(pcnt_unit_0);
-
-        //printf("\n\n\npulse count 1: %d", pulse_count_loop_a);
-        //printf("\nfrequency 1: %f Hz", freq_loop_a);
-
+        get_freq_from_pcnt(pcnt_unit_0, &pulse_count_loop_a, &prev_time_us_0, &freq_loop_a, LOOP_A);
 
         // Freq 2
-        curr_time_us_1 = esp_timer_get_time();
-
-        ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit_1, &pulse_count_loop_b));
-
-        elapsed_time_us_1 = curr_time_us_1 - prev_time_us_1;
-
-        freq_loop_b = (float)pulse_count_loop_b / (elapsed_time_us_1 / 1e6);
-        prev_time_us_1 = curr_time_us_1;
-
-        // Clear PCNT unit 1
-        pcnt_unit_clear_count(pcnt_unit_1);
-
-        //printf("\npulse count 2: %d", pulse_count_loop_b);
-        //printf("\nfrequency 2: %f Hz", freq_loop_b);
-
+        get_freq_from_pcnt(pcnt_unit_1, &pulse_count_loop_b, &prev_time_us_1, &freq_loop_b, LOOP_B);
 
         // Check if frequency is abnormal, push to queue if so
         if((freq_loop_a - freq_avg_loop_a) > LOOP_DETECTION_THRESHOLD_HZ)
         {
             printf("\nLOOP_A: DEVIATION IN FREQ DETECTED!");
             Loop_Event loop_evt;
-            loop_evt.timestamp = curr_time_us_0;
+            loop_evt.timestamp = esp_timer_get_time();
             loop_evt.frequency = freq_loop_a;
             loop_evt.loop_id = LOOP_A;
             xQueueSend(loop_event_queue, &loop_evt, pdMS_TO_TICKS(10));
@@ -385,7 +405,7 @@ void pcnt_task(void *arg)
         {
             printf("\nLOOP_B: DEVIATION IN FREQ DETECTED!");
             Loop_Event loop_evt;
-            loop_evt.timestamp = curr_time_us_1;
+            loop_evt.timestamp = esp_timer_get_time();
             loop_evt.frequency = freq_loop_b;
             loop_evt.loop_id = LOOP_B;
             xQueueSend(loop_event_queue, &loop_evt, pdMS_TO_TICKS(10));
@@ -407,8 +427,8 @@ void pcnt_task(void *arg)
         freq_avg_loop_a = sum_a / NUM_FREQ_VALS;
         freq_avg_loop_b = sum_b / NUM_FREQ_VALS;
 
-        //printf("\n\nLoop A avg: %f", freq_avg_loop_a);
-        //printf("\nLoop B avg: %f", freq_avg_loop_b);
+        printf("\nLoop A avg: %f", freq_avg_loop_a);
+        printf("\nLoop B avg: %f", freq_avg_loop_b);
 
         esp_task_wdt_reset();
         esp_task_wdt_reset_user(pcnt_task_twdt_user_hdl);
@@ -428,7 +448,7 @@ void pcnt_task(void *arg)
 // Directional Logic task: 
 // Check for events, analyze them: 
 // Identify valid detection events and get directionality
-// Leave singular events that are recent, another may arrive soon
+// Do not update delta during timeout period since last delta change
 // Discard stale events, events that are a certain age
 void dir_logic_task(void *arg)
 {
@@ -481,7 +501,7 @@ void dir_logic_task(void *arg)
                     {
                         read_current_delta_from_nvs();
                         current_delta++;
-                        printf("\n\nDelta increased to %ld", current_delta);
+                        printf("\nDelta increased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
                     }
@@ -489,7 +509,7 @@ void dir_logic_task(void *arg)
                     {
                         read_current_delta_from_nvs();
                         current_delta--;
-                        printf("\n\nDelta decreased to %ld", current_delta);
+                        printf("\nDelta decreased to %ld", current_delta);
                         write_current_delta_to_nvs();
                         last_delta_change_time = esp_timer_get_time();
                     }
