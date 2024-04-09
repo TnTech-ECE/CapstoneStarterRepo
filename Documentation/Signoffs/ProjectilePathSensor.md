@@ -25,7 +25,7 @@ In order for the sensor array to detect when an incoming projectile has been lau
 
 According to the atmega 2560's data sheet in order for an input pin to change from low to high must be at least 3 volts [10]. Using this voltage the required resistance to change the input is 66.667k ohms. 
 
-To calculate the intensity of the lasers used the calculation required is $ I = P / A. For the Ky-008 laser with a diameter of 6mm and 5 mw the intensity is 0.17687 mw/mm^2. This is also equal to 17.687 mw/cm^2. 
+To calculate the intensity of the lasers used the calculation required is $I = P / A$ . For the Ky-008 laser with a diameter of 6mm and 5 mw the intensity is 0.17687 mw/mm^2. This is also equal to 17.687 mw/cm^2. Finally, to turn power into lumens a formula $V(x) = 1.019e^(-285.4(x-0.559)^2)$ where x is the wavelength of the laser in this case it is .650 [19]. In this case the amount of lumens = 0.9589 * 17.687. This means the total amount of lumens from this laser is calculated to be 1.696 lumens/cm^2. Finally, because photoresistors calculate resistance into flux the final conversion is from lumens/cm^2 to lumens/m^2. This means that laser will produce a 16,960 lux. To be conservative I can estimate half of this lux at 8480 lux.
 ### Battery
 Due to the constraint of having to use battery power all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
 
@@ -80,3 +80,4 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
 [17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
 [18] "Chanzon 5mm 1 Ω ohm Photoresistor LDR Resistor 5528 GL5528 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
+[19] "Light Emitting Diode Drivers Selection Guide" , ThorLabs.
