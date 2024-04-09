@@ -15,14 +15,16 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 <sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display.
 
-<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. For the sake of this project, we have defined real-time to be less than one second. 
+<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. For the sake of this project, we have defined real-time to be less than one second. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. 
 
-<sup>3</sup> Reason for constraint 3 and why it is important
+<sup>3</sup> This constraint works alongside the previous one to display the data to TTU police in an appropriate manner. It will take slightly longer to display the data on the website but in a successful implementation, this will still take less than one second. 
 
-<sup>4</sup> Reason for constraint 4 and why it is important
+<sup>4</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than one second. 
 
-<sup>5</sup> Reason for constraint 5 and why it is important
+<sup>5</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of the detected drone.
 
+>[!NOTE]
+> Detected seems wrong in the last sentence, couldn't think of the right word. 
 
 ## Schematic
 
