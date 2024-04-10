@@ -23,6 +23,7 @@ Constantly request update for drone detection that deal with packet lost or poor
 The website and camera subsystem will request/pull data from the database subsystem whenever a drone is detected.
 
 ## Schematic
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/3ba8fc14-7e0f-4cbe-b26b-8a761d125e5b)
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
 
 ## Analysis
