@@ -50,7 +50,7 @@ SQL will be used to format data inside the database storage, then python or C++ 
 <td>
     Once a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.<br />
     &nbsp;&nbsp;&nbsp;When a drone is not detected:<br /> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reply with a negative boolean value.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reply with a negative boolean value.<br /> 
     &nbsp;&nbsp;&nbsp;When a drone is detected:<br /> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.<br />
 </td>
