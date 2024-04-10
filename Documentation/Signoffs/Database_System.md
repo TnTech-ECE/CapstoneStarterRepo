@@ -25,6 +25,29 @@ The website and camera subsystem will request/pull data from the database subsys
 ## Schematic
 
 ## Analysis
+The following data will be pull by Website subsystem if avaiable, Drone remote ID, location/Altitude, Veloctiy, control station location/elevation, operation time mark, emergency status, Drone/Control station image. Database system will be implmented using a SQL(Structured Query Language), python and c++, and test case senarios for the Database subsystem are provided below.
+
+## SQL, python and C++
+SQL will be used to format data inside the database storage, then python or C++ will be implemented to handle the data receiving/requesting.
+
+## Test Case Senario
+The database application will constaly request update from the receiver subsystem whether a drone is detected.
+When a drone is not detected:
+    Wait a certain time period before requesting another update.
+When a drone is detected:
+    Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.
+
+Once a drone is detected within the campus area, the application will forward a alert to the website subsystem that will ask TTU campus police to provide Drone authroization.
+When Drone operation authroization is provided:
+    Update the drone operaton authorization status.
+When Drone operation authroization is not provided:
+    Wait a certain period then reforward another alert.
+
+Once a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.
+When a drone is not detected:
+    Reply with a negative boolean value.
+When a drone is detected:
+    The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
