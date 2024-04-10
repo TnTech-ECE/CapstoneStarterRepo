@@ -3,6 +3,7 @@
  This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball as it travels down the fishing line towards the interceptor body. 
  To accomplish this task this subsystem will take in the projectiles location data from the mmWave Radar to do the calculations neccisary to obtain the velocity and acceleration. 
  This subsystem will then wirelessly transmit those values to the aiming subsystem for further use of this data.
+
 ## Constraints
 * C8: Design a sensor array that operates on battery power.
     * This comes from the requirements set forth in the rulebook by devcom.
@@ -15,10 +16,9 @@
 * C19: The Design shall implement the best remote battery power solution to limit the interceptor's environmental impact.
     * This is a requirement for lessening enviornmental impact of our interceptor.
 
-
 ## Schematics
 <p align = "center">
-<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1.pdf width='250'>
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png width='250'>
 </p>
 ## Analysis
 ### Detection distance
