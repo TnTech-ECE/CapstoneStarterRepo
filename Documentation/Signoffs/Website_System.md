@@ -24,6 +24,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 <sup>5</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make important decisions about what order to operate in.
 
 ## Schematic
+![image]()
 
 ## Analysis
 
