@@ -23,11 +23,12 @@ According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory
 ### Object Detection 
 In order for the sensor array to detect when an incoming projectile has been launch the array will have a laser setup below each projectile path, and a photoresistor above each projectile path. All photresistors are powered by the Atmega 2560's 5 volt rail. Then all photoresistors are attatched to a 100k ohm pull down resistor. This results in when the photoresistor has contact with the laser the photoresistor has a small resistance resulting in the voltage before the pull down resistor to be near 5 volts. On the other hand, when a projectile is blocking the laser the photoresistor has a large resistance resulting in the voltage before the pull down resistor to be near 0.
 
-According to the atmega 2560's data sheet in order for an input pin to change from low to high must be at least 3 volts [10]. Using this voltage the required resistance to change the input is 66.667k ohms. 
+According to the atmega 2560's data sheet in order for an input pin to change from low to high must be at least 3 volts [10]. Using this voltage the required resistance to change the input is 66.667k ohms. According to the photo resistor's datasheet the GL5539's resistace drops below 66.667k ohms at a lux between 5-25 [20]. This means that when the laser is shown the resistance will be less and when a projectile is blocking the laser it will not.
 
 To calculate the intensity of the lasers used the calculation required is $I = P / A$ . For the Ky-008 laser with a diameter of 6mm and 5 mw the intensity is 0.17687 mw/mm^2. This is also equal to 17.687 mw/cm^2. Finally, to turn power into lumens a formula $V(x) = 1.019e^(-285.4(x-0.559)^2)$ where x is the wavelength of the laser in this case it is .650 [19]. In this case the amount of lumens = 0.9589 * 17.687. This means the total amount of lumens from this laser is calculated to be 1.696 lumens/cm^2. Finally, because photoresistors calculate resistance into flux the final conversion is from lumens/cm^2 to lumens/m^2. This means that laser will produce a 16,960 lux. To be conservative I can estimate half of this lux at 8480 lux.
 
-To determine the lux of the photoresistor when the laser is being blocked by a projectile. Firstly, the photresistor is expected to be placed inside a cylinder that has a hight of 4 inches and a radius of 1 inch. Also, there will be a hemisphere on top of the cylinder with a 10mm radius hole cut out of it. This results in a surface area 31.4159 in^2 without the hole and 0.9738 in^2. If we take the ratio (0.9738/31.4159)*100 is 3.1 percent. This means we can roughly estimate that the amount of light that the photoresistor receives from ambient light is about 3 percent.
+To determine the lux of the photoresistor when the laser is being blocked by a projectile. Firstly, the photresistor is expected to be placed inside a cylinder that has a hight of 6 inches and a radius of 1 inch. Also, there will be a hemisphere on top of the cylinder with a 5mm radius hole cut out of it. This results in a surface area 43.9823 in^2 without the hole and 0.2435 in^2. If we take the ratio (0.2435/43.9823)*100 is 0.554 percent. This means we can roughly estimate that the amount of light that the photoresistor receives from ambient light is about 0.554 percent. Finally, according to Thorlux Lighting the average classroom has a lux of 300 [19] . This means that the ambient lighting can roughly be expected to be 1.66 lux.
+
 ### Battery
 Due to the constraint of having to use battery power all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
 
@@ -59,7 +60,7 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 | Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
 | 100k Ohm Resistors 25 Pack [16] | 25EP514100K | 1 | $5.78 | $5.78 |
 | 32Pcs of PCB board [17] | NA | 1 | $9.99 | $9.99 | 
-| 20 Pcs Photoresistors [18] | GL5528 | 1 | $5.99 | $5.99 |
+| 20 Pcs Photoresistors [18] | GL5539 | 1 | $5.99 | $5.99 |
 | Total | | | | $80.62 |
 
 
@@ -81,5 +82,6 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 [15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500. \
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
 [17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
-[18] "Chanzon 5mm 1 Ω ohm Photoresistor LDR Resistor 5528 GL5528 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
-[19] "Light Emitting Diode Drivers Selection Guide" , ThorLabs.
+[18] "Chanzon 5mm 5 Ω ohm Photoresistor LDR Resistor 5539 GL5539 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
+[19] "Light Emitting Diode Drivers Selection Guide" , ThorLabs. \
+[20] "GL55 Series Photoresistor", GL5539.
