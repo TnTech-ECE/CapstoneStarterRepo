@@ -30,9 +30,9 @@ The purpose of the website subsystem is to allow a designated user to access the
 The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
 
 ### Google Maps API
-We have decided to use Google's Maps JacaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. 
+We have decided to use Google's Maps JavaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact geographical location where the drone is detected. 
 
-With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact geographical location where the drone is detected. 
+After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The program will then prompt the database for all sets of data that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
