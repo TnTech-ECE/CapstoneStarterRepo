@@ -4,7 +4,7 @@ The Launching and Firing subsystem is the system that will fire the intercepting
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
 |------|--------------------|------------------------|------------|
-| 1. | NEC 310.15(B) | The Launching and Firing subsystem shall use appropriate wiring for all connections within the subsystem as according to the ampacity limits listed in the NEC 310.15(B) table | NEC 310.15(B) |
+| 1. | NEC 310.15(B)(16) | The Launching and Firing subsystem shall use appropriate wiring for all connections within the subsystem as according to the ampacity limits listed in the NEC 310.15(B)(16) table | NEC 310.15(B)(16) |
 | 2. | Fire without human interaction | The Launching and Firing subsystem shall fire without any human interaction with the field of play or the launching apparatus itself | DEVCOM competition rulebook |
 | 3. | Fit within a cubic foot of space | The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space | DEVCOM competition rulebook |
 | 4. | Safe operating | The Launching and Firing subsystem shall comply with the DEVCOM safety constaints given in the DEVCOM rulebook | DEVCOM competition rulebook |
@@ -24,7 +24,7 @@ Wiring Chart to come
 The Launching and Firing subsystem shall use xx AWG wire for the subsystems electrical connections. This wire has an ampacity rating of xx amps over a distance of xx inches. This wire size was selected by considering the largest ampacity draw that exists in the subsystem. For this the team decided to use the stall current of the xxxx DC motor used in this subsystem to apply mechanical power to the firing mechanism.
 
 **Constraint Solution 2:**
-To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. 
+To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. The relay will be connected to pin 1 of the Raspberry Pi 5 from the aiming subsystem and will pull 100mA at max (while operating) which is within the Raspberry Pi 5's ampacity limits for that pin.
 
 **Constraint Solution 3:**
 The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space. For this constraint, the mechanical engineering team and the electrical engineering team will be working together to ensure that the total design remains within the cubic foot of space allowed. For the Launching and Firing subsystem, the mechanical engineering team constrained the DC motor choice to have no more than 3 inches in length to fit within their current design.
@@ -51,6 +51,6 @@ The mechanical engineering team's current plan is to fire a round after a 20 deg
 |------|-------------|-------------|--------------|----------|-------|-------------|
 | Motor | TBD  | N/A | TBD | 1 | $ | $ |
 | Wiring needed? | Wires | N/A | 	TBD | 1 | $ | $ |
-| Relay | For signal | TBD | TBD | 1 | $ | $ |
+| Power Relay FeatherWing | Takes the signal from the aiming subsystem and allows DC motor to operate or not | 3191 | Adafruit  | 1 | $9.95 | $9.95 |
 |      |                                             |     |             |   |       | $ Total |
 
