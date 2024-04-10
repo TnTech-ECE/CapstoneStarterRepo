@@ -23,7 +23,7 @@ distance, speed, and position of the target as it slides down the fishing line.
 | 7   | The sensor shall read ample data for a maximum golf ball speed of 6 m/s | Conceptual Design|
 | 8   | The post sensors shall receive data to calculate height and wire position | Conceptual Design|
 | 9   | The device sensors shall receive data to calculate the speed       | Conceptual Design|
-| 10  | The sensors shall have range large enough to cover the gameboard   | Conceptual Design|
+| 10  | The sensors shall have a range large enough to cover the gameboard   | Conceptual Design|
 | 11  | The sensors shall be able to detect plastic                        | System Constraint|
 
 1. The sensors shall be wirelessly connected to the processor [Conceptual Design].
@@ -34,12 +34,12 @@ Needs to be powered by a 5-volt source, regardless of placement because that is 
 sensor requires.
 5. A sensor shall fit within 1'x1'x1' area [Conceptual Design].
 There will be a sensor placed on the launcher itself therefore it needs to be small enough to fit.
-6. Post sensor will be powered by a battery [Conceptual Design].
-The sensor’s connected to the post will be battery powered because there are no available outlets for
+6. The post sensor will be powered by a battery [Conceptual Design].
+The sensors connected to the post will be battery-powered because there are no available outlets for
 power.
 7. Must be mounted to or from a sensor stand [Conceptual Design].
 The non device sensors will be mounted to the sensor posts.
-8. Device sensor will be powered by the device [System constraint].
+8. The device sensor will be powered by the device [System constraint].
 The device sensor will be connected to the device and therefore powered by that device.
 9. The sensor shall read ample data for a maximum golf ball speed of 6 m/s [Conceptual Design].
 The golf ball has a maximum calculated speed of 6 m/s. The sensor needs to track an ample number of
@@ -63,14 +63,14 @@ The sensors have to be able to detect the plastic golf ball from about 4-6 feet 
 
 ![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
 
-Based on the specification sheets for the LDK130 IC’s that are included in the board, the input voltage for
+Based on the specification sheets for the LDK130 ICs that are included in the board, the input voltage for
 the voltage enable input can range from a low of -0.3v to a high of VI + 0.3. Therefore, in this case it
 would be appropriate to use the 5v from the battery power system as seen below.
 
 ![Schematic](../Images/Sensor_subsystem/schematic.png)
 
 The functionality of the board itself and its individual pieces can be found in the data sheets in the
-references section. These specific references are the data sheet for the SATEL-VL53L8 as well as
+references section. These specific references are the datasheet for the SATEL-VL53L8 as well as
 the data sheets for the vl53l8CX, and the LDK130 series chip.
 
 
@@ -79,20 +79,20 @@ the data sheets for the vl53l8CX, and the LDK130 series chip.
 Based on the constraints given, the team chose the VL53L8CX time of flight sensor. This sensor
 was chosen because it is able to detect plastic, has a range of about thirteen feet, has a wide field of
 view, has low power consumption requirements, has a sampling frequency that can take multiple
-measurements of the ball’s trajectory, and can be used to determine distance for both height and location.
+measurements of the ball’s trajectory, and can be used to determine the distance for both height and location.
 After determining the sensor, a SATEL-VL53L8 board was chosen to integrate with the sensor. This
 board allows for integration with a microcontroller that will be used in the communication system to
 transmit the data. It also provides its own power regulation for the sensor therefore only requiring a 5-volt
 input from the battery or device power systems. The exact specifications and advantages of the device
 that meet the project specifications and expected functionality will be further discussed.
 
-First of all, the team plans to use this sensor because of its ability to detect plastic objects, but the datasheet does not specifiy the minimum size an object can be detected. This is because time of flight sensors use the reflectivity of the object being tracked, so the minimum size that can be detected will vary based on the object's material. The datasheet does note the wavelength of light the sensor laser uses which is 940 nm. It is also noted by the manufactor that the object has to be large enough for the photons of the light to reflect off of as a general minimum size for the object. This means the object size can vary based on reflectivy, but objects that are too small for light to bounce off of will not be detectable at all. Plastic golf balls are large enough to reflect light because the golf ball can have a glare. However, the team still had to determine that the golf ball is reflective enough to be detected by the sensor at the planned distance. In order to this, a plastic training golf ball was placed under fluorescent light. A noticeable glare was observed by several people when placed under the light from approximately seven and a half feet away. The highest wavelength of fluorescent light is 700 nm. The wavelength of the sensor's laser is 940 nm. Studies have shown that plastic's reflectivity increases with wavelength under about 1200 nm to 1400 nm before starting to decrease. This means the golf ball should be more reflective to the sensor because of the higher wavelength. Based on this information, the team has determined that the golf ball is reflective enough at the distance it will be from the sensor for the object to be detectable. Next, the team focus on determining if the sensor can sense the speeds the golf ball will reach.
+First of all, the team plans to use this sensor because of its ability to detect plastic objects, but the datasheet does not specify the minimum size an object can be detected. This is because the time of flight sensors use the reflectivity of the object being tracked, so the minimum size that can be detected will vary based on the object's material. The datasheet does note the wavelength of light the sensor laser uses which is 940 nm. It is also noted by the manufactor that the object has to be large enough for the photons of the light to reflect off of as a general minimum size for the object. This means the object size can vary based on reflectivity, but objects that are too small for light to bounce off of will not be detectable at all. Plastic golf balls are large enough to reflect light because the golf ball can have a glare. However, the team still had to determine that the golf ball is reflective enough to be detected by the sensor at the planned distance. In order to do this, a plastic training golf ball was placed under fluorescent light. A noticeable glare was observed by several people when placed under the light from approximately seven and a half feet away. The highest wavelength of fluorescent light is 700 nm. The wavelength of the sensor's laser is 940 nm. Studies have shown that plastic's reflectivity increases with wavelength under about 1200 nm to 1400 nm before starting to decrease. This means the golf ball should be more reflective to the sensor because of the higher wavelength. Based on this information, the team has determined that the golf ball is reflective enough at the distance it will be from the sensor for the object to be detectable. Next, the team focuses on determining if the sensor can sense the speeds the golf ball will reach.
 
 The team plans on using two sensors to determine the golf ball’s height, line position, and speed.
 One sensor will be located on the stand closest to where the golf ball starts its trajectory. This sensor can
 be used to determine the height because it will be closest to the original height. It is important to do the
 measurements for distance and height because the closer the sensor is to the ball’s location the higher the
-accuracy. At about six feet, the approximation of worst-case scenario of distance to the fishing line, the
+accuracy. At about six feet, the approximation of the worst-case scenario of distance to the fishing line, the
 sensor has a four percent tolerance for eighty-eight percent reflective objects. This will provide a ±2.88
 inch offset for where the golf ball may actually be which is fine because the gap between the fishing lines
 is four inches horizontally and seven inches vertically. Since the offset is smaller than the gaps, the sensor
@@ -101,7 +101,7 @@ being used. This measurement also leaves enough room for the error to increase d
 conditions and still function. The second sensor will be placed on the interceptor device itself. This will
 allow the sensor to have the same angle on the golf ball regardless of where the ball is on the fishing line.
 This will be used to determine the speed using multiple samples from the sensor as the ball moves.
-Ideally, the speed, position, and height will be confirmed by cross referencing the data both sensors get to
+Ideally, the speed, position, and height will be confirmed by cross-referencing the data both sensors get to
 account for the four percent error. This error approximation comes from the datasheets provided
 specifications when the sensor is acting in 4x4 resolution mode at 30 HZ which is ideal to obtain several
 samples for location and speed calculations.
@@ -114,13 +114,13 @@ frequency gives a clock period of 16.67 ms.
 
 ![Clock Period formula](../Images/Sensor_subsystem/clock_period.png)
 
-This means the VL53L8CX will receive another data sample every 16.67 ms. From the conceptual design
+This means the VL53L8CX will receive another data sample every 16.67 ms. From the conceptual design,
 we can assume the max speed of the golf ball is 6 m/s. If the golf ball is traveling at this speed, it will go
 236.448 inch/sec:
 
 ![Speed formula](../Images/Sensor_subsystem/speed.png)
 
-This means the golf ball will pass by the firing machine after .25376 seconds, or 253.76 ms. This will
+This means the golf ball will pass by the firing machine after .25376 seconds or 253.76 ms. This will
 allow for 14 samples to be taken before the projectile reaches the interceptor when operating at the
 maximum frequency. However, the mode that the device will be operating on based off the information on
 the datasheet will operate at 30 HZ. This will result in a clock period of 33.33 ms. This will halve the
@@ -136,8 +136,8 @@ frequency of 1 MHz of I
 EXT_MISO, NCS, and EXT_MCLK_SCL are used for serial data in, serial data out, chip select, and
 serial clock respectively. The board will also have to have the pins LPn and EXT_SPI_I2C_N have to be
 set to a high logic level. Based on the schematic provided by the datasheet from the SATEL-VL53L8, it is
-known that the pin LPn is set high by default because of the pull up resistor to IOVDD, however a
-connection from the EXT_IOVDD pin to the EXT_SPI_I2C_N pin will be required because a pull down
+known that the pin LPn is set high by default because of the pull-up resistor to IOVDD, however, a
+connection from the EXT_IOVDD pin to the EXT_SPI_I2C_N pin will be required because a pull-down
 resistor sets this pin to a low logic level.
 
 ### **Bill of Materials:**
