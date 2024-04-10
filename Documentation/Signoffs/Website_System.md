@@ -29,10 +29,15 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
 
+### HTML/CSS and JavaScript
+
+The languages chosen to implement this program will be HTML, CSS, and JavaScript. HTML will be used initially to create the framework of the webpage, where CSS will then be utilized to make the page look more presentable and coherent with Tech's current website theme. JavaScript will be implemented where necessary to make the webpage responsive to user inputs. In our case, that would to allow the user to select a drone to view details on, view locations on the map, promote a drone's priority status, and other such tasks.
+
 ### Google Maps API
 We have decided to use Google's Maps JavaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact geographical location where the drone is detected. 
 
-After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The program will then prompt the database for all sets of data that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID.
+After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
+
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
