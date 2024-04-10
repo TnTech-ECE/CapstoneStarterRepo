@@ -13,7 +13,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 - Constaint 5: Design a system that complies with the ANSI Z136.1 Standard
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
 - Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
-  - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem.
+  - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem. Additonally, in order to read sensor data quickly the microcontroller must have atleast 15 pinchange interupts to allow microcontroller to not continously loop.
 ## Schematic
 ![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/e07acf35-f173-472a-92ad-ec09fcd796f9)
 
@@ -48,7 +48,7 @@ The choice of a lithium ion battery was a multifactor choice. The first and most
 The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less thaThn .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe.
 
 ### Microcontroller Verification
-Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors. Also, the microcontroller must supply 3.3 Volts and ground to the esp wireless communicator. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. 
+Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors. Also, the microcontroller must supply 3.3 Volts and ground to the esp wireless communicator. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10].
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
@@ -61,7 +61,8 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 | 100k Ohm Resistors 25 Pack [16] | 25EP514100K | 1 | $5.78 | $5.78 |
 | 32Pcs of PCB board [17] | NA | 1 | $9.99 | $9.99 | 
 | 20 Pcs Photoresistors [18] | GL5539 | 1 | $5.99 | $5.99 |
-| Total | | | | $80.62 |
+| 6 sets of Terminal Blocks [21] | NA | 1 | $13.99 | $13.99 |
+| Total | | | | $94.61 |
 
 
 ## Refrences
@@ -84,4 +85,5 @@ Current requirements of the microcontroller is the ability to send 5V rail to ea
 [17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
 [18] "Chanzon 5mm 5 Ω ohm Photoresistor LDR Resistor 5539 GL5539 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
 [19] "Light Emitting Diode Drivers Selection Guide" , ThorLabs. \
-[20] "GL55 Series Photoresistor", GL5539.
+[20] "GL55 Series Photoresistor", GL5539. \
+[21] "Terminal Block 10 Position, 12PCS 6 Set Terminal Block Strip & Ground Terminal Block, Screw Terminal Block with Cover, Pluggable PCB Terminal Blocks, Busbar Terminal Blocks 600V 15A Dual Row Insulated", Amazon.com.
