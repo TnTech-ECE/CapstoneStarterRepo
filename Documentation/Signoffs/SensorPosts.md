@@ -18,7 +18,7 @@
 
 ## Schematics
 <p align = "center">
-<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png width='250'>
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png width='300'>
 </p>
 ## Analysis
 ### Detection distance
