@@ -36,7 +36,7 @@ SQL will be used to format data inside the database storage, then python or C++ 
     When a drone is not detected:<br /> 
         Wait a certain time period before requesting another update.<br /> 
     When a drone is detected:<br /> 
-        Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.
+        Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
 </td>
 
 <td>
@@ -44,7 +44,7 @@ SQL will be used to format data inside the database storage, then python or C++ 
     When Drone operation authroization is provided:<br /> 
         Update the drone operaton authorization status.<br /> 
     When Drone operation authroization is not provided:<br /> 
-        Wait a certain period then reforward another alert.<br />
+        Wait a certain period then reforward another alert.<br /><br />
 </td>
 
 <td>
@@ -52,7 +52,7 @@ SQL will be used to format data inside the database storage, then python or C++ 
     When a drone is not detected:<br /> 
         Reply with a negative boolean value.
     When a drone is detected:<br /> 
-        The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.
+        The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.<br />
 </td>
 
 ## BOM
