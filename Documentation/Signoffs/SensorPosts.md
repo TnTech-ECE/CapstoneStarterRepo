@@ -4,11 +4,16 @@
  To accomplish this task this subsystem will take in the projectiles location data from the mmWave Radar to do the calculations neccisary to obtain the velocity and acceleration. 
  This subsystem will then wirelessly transmit those values to the aiming subsystem for further use of this data.
 ## Constraints
-* C8: Design a sensor array that operates on battery power
-* C14: Design a system with a maximum sensor input delay of 100ms
+* C8: Design a sensor array that operates on battery power.
+    * This comes from the requirements set forth in the rulebook by devcom.
+* C14: Design a system with a maximum sensor input delay of 100ms.
+    * This comes from a timing contraint for intercepting the projectile.
 * C15: The Interceptor project shall have solders that conform to the IPC-J-STD.
+    * This is a wiring standard set by the team for safe operations.
 * C16: The Interceptor project shall have a safe wiring scheme for all components of the project.
+    * This is a safety requirement set by the team for safe operations.
 * C19: The Design shall implement the best remote battery power solution to limit the interceptor's environmental impact.
+    * This is a requirement for lessening enviornmental impact of our interceptor.
 
 
 ## Schematics
