@@ -2,15 +2,17 @@
 ## Functionality
 
 ## Constraints
-| No.| Contraint | Origin |
+| No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 |           |        |              
-|  2 |           |        |                          
-|  3 |           |        |              
+|  1 | Shall reliably capture an image of a drone in-flight or the pilot | Project Proposal|             
+|  2 | Shall capture an image reliably from X meters away| Design Constraint|                          
+|  3 | Shall limit image capture to once every X seconds to preserve data and avoid redundant photos| Design Constraint|
+|  4 | Shall track drone across contiguous airspace using Remote ID location data | Design Constraint|
+|  5 | Shall resist weather and external conditions to a reasonable degree| Project Supervisor|
 
-<sup>1</sup> Reason for contraint 1 and why it is important
+<sup>1</sup> Capturing an image of the drone is a large part of evidence collection and can assist campus police in stopping unauthorized drone flight
 
-<sup>2</sup> Reason for contraint 2 and why it is important
+<sup>2</sup> Limiting image capture to a x meters ensures that images are sharp, clear, and properly utilize our data storage
 
 <sup>3</sup> Reason for contraint 3 and why it is important
 
