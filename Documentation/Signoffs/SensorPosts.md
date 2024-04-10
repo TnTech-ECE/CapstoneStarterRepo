@@ -18,8 +18,9 @@
 
 ## Schematics
 <p align = "center">
-<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png width='300'>
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png width='400'>
 </p>
+
 ## Analysis
 ### Detection distance
 To find the maximum distance the radar will be able to detect the a few calculations where needed. 
