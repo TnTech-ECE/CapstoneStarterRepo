@@ -23,6 +23,7 @@ Constantly request update for drone detection that deal with packet lost or poor
 The website and camera subsystem will request/pull data from the database subsystem whenever a drone is detected.
 
 ## Schematic
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
 
 ## Analysis
 The following data will be pull by Website subsystem if avaiable, Drone remote ID, location/Altitude, Veloctiy, control station location/elevation, operation time mark, emergency status, Drone/Control station image. Database system will be implmented using a SQL(Structured Query Language), python and c++, and test case senarios for the Database subsystem are provided below.
