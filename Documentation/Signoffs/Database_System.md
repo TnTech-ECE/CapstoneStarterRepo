@@ -31,29 +31,17 @@ The following data will be pull by Website subsystem if avaiable, Drone remote I
 SQL will be used to format data inside the database storage, then python or C++ will be implemented to handle the data receiving/requesting.
 
 ## Test Case Senario
-<td>
-<p>The database application will constaly request update from the receiver subsystem whether a drone is detected.<br />  
-&nbsp;When a drone is not detected:<br />  
-    &nbsp;&nbsp;&nbsp;&nbsp;Wait a certain time period before requesting another update.<br /> 
-&nbsp;When a drone is detected:<br /> 
-    &nbsp;&nbsp;&nbsp;&nbsp;Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
-</td>
+The database application will constaly request update from the receiver subsystem whether a drone is detected.<br />  
+When a drone is not detected: Wait a certain time period before requesting another update.<br /> 
+When a drone is detected: Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
 
-<td>
-<p>Once a drone is detected within the campus area, the application will forward a alert to the website subsystem that will ask TTU campus police to provide Drone authroization.<br />
-&nbsp;When Drone operation authroization is provided:<br /> 
-    &nbsp;&nbsp;&nbsp;&nbsp;Update the drone operaton authorization status.<br /> 
-&nbsp;When Drone operation authroization is not provided:<br /> 
-    &nbsp;&nbsp;&nbsp;&nbsp;Wait a certain period then reforward another alert.<br /><br />
-</td>
+When a drone is detected within the campus area, the application will forward a alert to the website subsystem that will ask TTU campus police to provide Drone authroization.<br />
+When Drone operation authroization is provided: Update the drone operaton authorization status.<br /> 
+When Drone operation authroization is not provided: Wait a certain period then reforward another alert.<br /><br />
 
-<td>
-<p>Once a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.<br />
-&nbsp;When a drone is not detected:<br /> 
-    &nbsp;&nbsp;&nbsp;&nbsp;Reply with a negative boolean value.<br /> 
-&nbsp;When a drone is detected:<br /> 
-    &nbsp;&nbsp;&nbsp;&nbsp;The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.<br />
-</td>
+When a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.<br />
+When a drone is not detected: Reply with a negative boolean value.<br /> 
+When a drone is detected: The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.<br />
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
