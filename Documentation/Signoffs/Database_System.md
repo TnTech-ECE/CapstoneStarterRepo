@@ -32,11 +32,11 @@ SQL will be used to format data inside the database storage, then python or C++ 
 
 ## Test Case Senario
 <td>
-    The database application will constaly request update from the receiver subsystem whether a drone is detected.<br />
-    <\t>When a drone is not detected:<br /> 
-        <\t><\t>Wait a certain time period before requesting another update.<br /> 
-    <\t>When a drone is detected:<br /> 
-        <\t><\t>Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
+    The database application will constaly request update from the receiver subsystem whether a drone is detected.\<br />
+    When a drone is not detected:\\<br /> 
+        Wait a certain time period before requesting another update.<br /> 
+    When a drone is detected:\<br /> 
+        Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
 </td>
 
 <td>
