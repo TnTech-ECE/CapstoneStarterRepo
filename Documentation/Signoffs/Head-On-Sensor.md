@@ -34,10 +34,12 @@ To the constraint of a 100ms to report the relative location of the golf ball th
 | Item | Description | Part Number | Brand | Quantity | Price | Total |
 | --- | --- | --- | --- | --- | --- | --- | 
 |Camera|Camera that connects to Raspberry Pi through the pcie port giving VGA video quality at 90 FPS [3]|Raspberry Pi Camera V2|AdaFruit|1|$30.99|$30.99|
-|Total| | | | | | |$30.99|
+|Total| | | | | | $30.99  | $30.99 |
 
 ## Refrences
 [1]  “S3I Paper Wad Interceptor Challenge 2024 V3.3.”
+
 [2]  A. Rosebrock, "Ball Tracking with OpenCV," 14September 2015. [Online]. Available:https://pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/. [Accessed 09 04 2024].
+
 [3]  Techinn, “Raspberry Pi Camera V2 Green | Techinn,” tradeinn. https://www.tradeinn.com/techinn/en/raspberry-pi-camera-v2/137489672/p?utm_source=google_products&utm_medium=merchant&id_producte=10405867&country=us&srsltid=AfmBOoq27xq9YAKxXr5o72__pFO3w7NJPo-mX6B66ac9EpWs7bKzp9HcMUc (accessed Apr. 10, 2024).
 
