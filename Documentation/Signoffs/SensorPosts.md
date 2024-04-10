@@ -33,7 +33,7 @@ Using 0.02124202 meters (average radius of a golf ball) for the rarget radius gi
 Now that an RCS value has been found the max radar range calculator [2] can be used to find the maximum range the radar can be used to detect the golfball. 
 This calculator uses the equation 
 
-$$ Range = \sqrt[4]{p_r * \sigma * c^2 * G_r^2\over 4\pi^3 * f_o^2 * P_min} $$
+$$ Range = \sqrt[4]{p_r * \sigma * c^2 * G_r^2\over 4\pi^3 * f_o^2 * P_{min}} $$
 
 In this equation plug in the Radar Output Power or Equivalent Transmit Power lower end of the range 9 dBm, operating frequency of 24 GHz the RCS of 0.0014175, since we do not have a data sheet we make assumptions for the two remaing unkowns. 
 The antena gain is assumed to be 1.5 because that is the gain of a resonant dipole antenas[3] and the minimum detecitible signal is assumed to be -90 dBm. 
