@@ -32,21 +32,21 @@ SQL will be used to format data inside the database storage, then python or C++ 
 
 ## Test Case Senario
 The database application will constaly request update from the receiver subsystem whether a drone is detected.
-When a drone is not detected:
+When a drone is not detected:<br /> 
     Wait a certain time period before requesting another update.
-When a drone is detected:
+When a drone is detected:<br /> 
     Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.
 
 Once a drone is detected within the campus area, the application will forward a alert to the website subsystem that will ask TTU campus police to provide Drone authroization.
-When Drone operation authroization is provided:
+When Drone operation authroization is provided:<br /> 
     Update the drone operaton authorization status.
-When Drone operation authroization is not provided:
+When Drone operation authroization is not provided:<br /> 
     Wait a certain period then reforward another alert.
 
 Once a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.
-When a drone is not detected:
+When a drone is not detected:<br /> 
     Reply with a negative boolean value.
-When a drone is detected:
+When a drone is detected:<br /> 
     The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.
 
 ## BOM
