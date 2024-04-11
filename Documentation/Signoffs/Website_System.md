@@ -1,8 +1,6 @@
 # Website_System
 ## Functionality
 The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a specific rate which will allow any new drones to be discovered by the police in as close to real time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
->[!NOTE]
-> Change "specific rate" in the above paragraph
 
 ## Constraints
 | No.| Constraint | Origin |
@@ -32,28 +30,23 @@ The implementation of the website subsystem will require a few different process
 
 ### HTML/CSS and JavaScript
 
-The languages chosen to implement this program will be HTML, CSS, and JavaScript. HTML will be used initially to create the framework of the webpage, where CSS will then be utilized to make the page look more presentable and coherent with Tech's current website theme. JavaScript will be implemented where necessary to make the webpage responsive to user inputs. In our case, that would to allow the user to select a drone to view details on, view locations on the map, promote a drone's priority status, and other such tasks.
+The languages chosen to implement this program will be HTML, CSS, and JavaScript. HTML will be used initially to create the framework of the webpage, where CSS will then be utilized to make the page look more presentable and coherent with Tech's current website theme. JavaScript will be implemented where necessary to make the webpage responsive to user inputs. In our case, that would allow the user to select a drone to view details on, view locations on the map, promote a drone's priority status, and other such tasks.
 
 ### Google Maps API
-We have decided to use Google's Maps JavaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact geographical location where the drone is detected. 
+We have decided to use Google's Maps JavaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. This amount of money covers nearly 30,000 map loads per month.[^1] With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact location where the drone is detected. 
 
 After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
+
+For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website in a directory set aside for the police, or at least on a machine that they have. 
 
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
-|          |             |          |                |            |
+|Server    |            -|         1|             N/A|         N/A|
 |Total     |             |          |                |            |
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-Here is a simple footnote[^1].
-[^1]: Reference 1
-[^2]: Reference 2 
-[^3]: Reference 3
+[^1]: (https://mapsplatform.google.com/pricing/)
 <!--etc.-->
