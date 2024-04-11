@@ -14,6 +14,8 @@ Reducing maintenace is important to reduce the extra work for the function of th
 ## Schematic
 
 
+<img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00">
+
 
 ## Analysis
 The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port. To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium ion battery in the Waveshare Solar Power Management Module. From this module, the Micro-USB 5 V output port will be connected to the Arduino Nano ESP32 with the USB C to Micro USB cable. 
