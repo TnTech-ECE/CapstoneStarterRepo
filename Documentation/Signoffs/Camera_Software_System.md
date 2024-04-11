@@ -24,18 +24,20 @@ The camera software system will be reponsible for controlling the camera hardwar
 The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
 ### Flowchart breakdown
 #### Input data
-This data will be obtained from the RID signal and sent to the camera system. 
+This data will be obtained from the RID signal if possible and sent to the camera system [^3]. 
 - Drone Location
   - Latitude (deg * 10^7) with a minimum limit of ~ 11 mm
   - Longitude (deg * 10^7) with a minimum limit of ~ 11 mm
 - Drone geodetic altitude (meters) with a minimum resolution of 1 m 
 - Drone speed (m/s) with a maximum of 254.25 m/s and minimim resolution of 0.25 m/s
 - Direction (0-359 degrees) expressed clockwise from true north with a minimum resolution of 1 degree.
--  
-
+- Control Station Location[^2] 
+  - Latitude (deg * 10^7) with a minimum limit of ~ 11 mm
+  - Longitude (deg * 10^7) with a minimum limit of ~ 11 mm
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
-[^2]: Reference 2 
-[^3]: Reference 3
+[^2]: The control station location is an optional part of the UAS RID signal
+[^3]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019).
+
 
 
