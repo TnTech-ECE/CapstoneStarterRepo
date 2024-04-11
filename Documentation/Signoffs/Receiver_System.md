@@ -25,28 +25,25 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 <sup>6</sup> The contiguous campus is approximately 0.636594 km<sup>2</sup> in area and the receivers must be able to cover this area. 
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/0d1d1ad6-30ce-4065-8f34-d38c02ce6f21)
+![image][(https://ibb.co/RNs7thm)]
 
 
 
 
 
 ## Analysis
-### Secondary Receivers
-
+### Receivers
+The  receivers are designed to receive the RID drone signal and send the data to the database subsystem. The Arduino Nano ESP32 has a built in module used to receive and send Bluetooth and WiFi signals on the 2.4 GHz band. These secondary receivers will be placed around the contiguous campus for maximum reception coverage. The receivers will be placed outside to minimize power loss that can be caused by building and maximize the range that the receivers will be able to receive a signal. A resin 3D print will be created and spray prainted white and a protective spray that will help protect it from UV and water damage. This print will have a small opening for the power subsystem to get wires to power the arduino and the USB-C connector. The Arduino Nano ESP32 utilizes a NORA-W106 to receive Bluetooth and WiFi signals. The module has a receiver sensitivity of -98 dBm for and receiver gain of 3 dBi for Bluetooth. It also has a -97 dBm receiver sensitivity for Wifi and gain of 3 dBi. 
 P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>Tx</sub> - L<sub>fs</sub> + G<sub>Rx</sub> - L<sub>Rx</sub>
-### Primary Receiver
-
+The receivers will utilizes a Gravity: Nano I/O Shield (shield)to connect a Adafruit ATWINC1500 WIFI Breakout (WiFi module) WiFi module to conect the Arduino to the Tennessee Tech WiFi, EagleNet. The shield is an attachment so that the Arduino can connect to EagleNet using the WiFi module. The purpose of the WiFi module is to send the data received from the RID signal to the database over WiFi. This will allow the receivers to constantly receive the data and have a connection to the database subsystem to send the signal as quickly as possible. 
 ## BOM
 #### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|HackRF One [^9]        |3583             |1          |$339.95            |$339.95            |
-|Raspberry Pi 5 [^10]         |8GB-9028             |1          |$80.00                |$80.00            |
-|microHDMI to HDMI cable [^11]         |633696492882            |1          |$8.95                |$8.95            |
-|ANT-W63WS1-SMA [^12]         |712-ANT-W63WS1-SMA             |1          |$12.27                |$12.27            |
-|SanDisk 16GB Ultra USB 3.0 Flash Drive [^13]  |  SDCZ48-016G-GAM46    |     1     |   $8.40             |     $8.40       |
-|Total     |             |   5       |                |   $449.57         |
+|Arduino Nano ESP32 [^7]        |ABX00083             |9        |$20.00           |$180            |
+|ESP8266 [^10]         | WRL-17146            |9         |$7.95                |$71.55            |
+
+|Total     |             |   18       |                |   $251.55         |
 
 
 ## References and Links
@@ -64,6 +61,4 @@ P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>Tx</sub> - L<sub>fs</su
 
 [^9]: “Calculate area on map, Google Maps Area Calculator,” CalcMaps, https://www.calcmaps.com/map-area/ (accessed Apr. 5, 2024). 
 
-[^10]: “Gravity: Nano I/O shield,” Arduino Online Shop, https://store-usa.arduino.cc/products/gravity-nano-i-o-shield (accessed Apr. 7, 2024). 
-
-[^11]: Mouser, https://www.mouser.com/datasheet/2/891/0c_esp_wroom_02_datasheet_en-1365805.pdf (accessed Apr. 11, 2024). 
+[^10]: “WIFI module - ESP8266 (4MB Flash),” WRL-17146 - SparkFun Electronics, https://www.sparkfun.com/products/17146 (accessed Apr. 10, 2024). 
