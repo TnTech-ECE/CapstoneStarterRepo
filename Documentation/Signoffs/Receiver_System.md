@@ -25,7 +25,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 <sup>6</sup> The contiguous campus is approximately 0.636594 km<sup>2</sup> in area and the receivers must be able to cover this area. 
 
 ## Schematic
-![image]([url=https://ibb.co/RNs7thm][img]https://i.ibb.co/RNs7thm/Screenshot-2024-04-10-at-23-10-51.png[/img][/url])
+![image](<a href="https://ibb.co/RNs7thm"><img src="https://i.ibb.co/RNs7thm/Screenshot-2024-04-10-at-23-10-51.png" alt="Screenshot-2024-04-10-at-23-10-51" border="0"></a>)
 
 
 
