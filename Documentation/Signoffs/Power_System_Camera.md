@@ -19,9 +19,9 @@ Reducing maintenace is important to reduce the extra work for the function of th
 ## Schematic
 
 ## Analysis
-| Component     | Voltage (V) | Current (A)| Power (W)  |
+| Component| Voltage (V) | Current (A)| Power (W)  |
 | -------- | ------------| -------- |----------------|------------|
-|    DS3218 Digital Servo      |     5        |     0.005 - 2     |   0.024 - 13.6 |           
+|    DS3218 Digital Servo|     5   |     0.005 - 2     |   0.024 - 13.6 |           
 |   DS3225MG       |      5       |      0.005 - 2      |     0.024 - 13.6      |            
 |    ATMega 2560      |     5        |      0.005 - 0.8      |   0.0135 - 4.4   |         
 |     RunCam Phoenix 2 SE     |     5        |    0.2 - 0.08        |     1           |            
