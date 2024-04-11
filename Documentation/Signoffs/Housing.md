@@ -11,8 +11,8 @@ The launcher housing will provide power to the other subsystems connected to the
     * The customer asked for decorative lighting that serves no purpose other than aesthetics. 
 * C12: Design an interceptor which plays an alert noise before firing. The noise played must be louder than 40 dB when within a 10 foot radius of the interceptor. 
     * The customer asked for an alert to be played before the interceptor fired. A sound 40 dB or louder when within 10 feet of the device was chosen as 40 dB is a moderately loud sound [13] and 10 feet is larger than the game board. 
-* C24: Housing will provide 30W of power to the processor and provide at least 300W to the alarm, lighting and motors. 
-    * The selected values of power that the housing must provide are formulated from the maximum power draw of all subsystems on the main interceptor. The Raspberry Pi 5 has a maximum power draw of 30W. The motors have a combined power draw of 241.2W and the LEDs and buzzer have a combined power draw of 21.84W. As such 350W was selected to leave headroom.  
+* C24: Housing will provide 30W of filtered power to the processor and provide at least 300W to the alarm, lighting and motors. 
+    * The selected values of power that the housing must provide are formulated from the maximum power draw of all subsystems on the main interceptor. The Raspberry Pi 5 requires power with little noise and has a maximum power draw of up to 30W. The motors have a combined power draw of 241.2W and the LEDs and buzzer have a combined power draw of 21.84W. As such 350W was selected to leave headroom.  
 
 ## Buildable Schematics
 ### Electrical Schematic 
