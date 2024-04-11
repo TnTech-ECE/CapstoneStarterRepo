@@ -9,7 +9,7 @@ The primary functionality for this system is to provide the required current and
 |  2 |           |        |                          
 |  3 |           |        |              
 
-<sup>1</sup> Reason for contraint 1 and why it is important
+<sup>1</sup> Reason for contraint 1 and why it is important<br />
 Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished. It is less likely for the system to be useful if a worker must constantly change the batteries.
 <sup>2</sup> Reason for contraint 2 and why it is important
 
