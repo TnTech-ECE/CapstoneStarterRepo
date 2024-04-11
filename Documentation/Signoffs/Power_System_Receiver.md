@@ -26,9 +26,9 @@ The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|Waveshare Solar Power Management Module|             |   9     |  $13.99              |     125.91       |
-|Mini Solar Panel 3 Pack     |             |    3      |      $15.78          |      $47.34      |
-|USB C to Micro USB Cable    |             |     9     |        $3.99        |      $35.91      |
+|Waveshare Solar Power Management Module|       B07PBRK8KG      |   9     |  $13.99              |     125.91       |
+|Mini Solar Panel 3 Pack     |     B08THXDWS1        |    3      |      $15.78          |      $47.34      |
+|USB C to Micro USB Cable    |      KXUC-MIC-2F-1P       |     9     |        $3.99        |      $35.91      |
 |Total     |             |          |                |      $209.16      |
 
 ## References
