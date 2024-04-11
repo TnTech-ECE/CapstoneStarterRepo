@@ -26,7 +26,7 @@ The website and camera subsystem will request/pull data from the database subsys
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
 
 ## Analysis
-The following data will be pulled by the Website subsystem if available: Drone remote ID, location/Altitude, Veloctiy, control station location/elevation, operation time mark, emergency status, and Drone/Control station image. The Database system will be implemented using a SQL(Structured Query Language), python and c++. Test case senarios for the Database subsystem are provided below.
+The following data will be pulled by the Website subsystem if available: Drone remote ID, location/Altitude, Velocity, control station location/elevation, operation time mark, emergency status, and Drone/Control station image. The Database system will be implemented using a SQL(Structured Query Language), python and c++. Test case senarios for the Database subsystem are provided below.
 
 ## SQL, python and C++
 SQL will be used to format the data inside of the database storage, then, python or C++ code will be implemented to handle the data receiving/requesting.
