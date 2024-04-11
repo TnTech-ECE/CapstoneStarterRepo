@@ -4,18 +4,22 @@
 The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take. This is expected to be the first sensor data sent to the interceptor. This data provies the required yaw angle to properly intercept the incoming projectiles.
 ## Constraints
 
-- Constrain 1: Create an interceptor capable of functioning on its own without outside interaction. 
+- Constrain 1: The Path Sensor Array shall be autonomous, and will require to no outside interference after initial startup.
   - Reasoning: Do to a constumer requirement the interceptor and all external sensor post must be autonomous after intial startup.
-- Constraint 2: Design a sensor array that can detect approaching objects and relay their locations to the interceptor.
-  - This constraint was developed to meet the requirement to have a sensor that has determines when a projectile has begun to move towards the interceptor. Also, the sensor will determine the path at which the projectile is heading towards to the interceptor.
-- Constraint 3: Design a sensor array that operates on battery power.
-  - All sensor posts must be powered with a standalone powersupply and must not receive power from a outlet. This originated from a constraint provided by the constumer.
-- Constraint 4: The Design shall implement the best remote battery power solution to limit the interceptor’s environmental impact.
+- Constraint 2: The Path Sensor Array shall be capable of detecting which of the possible 15 paths an approaching object is taking and relay this value to the interceptor.
+  - This constraint was developed to meet the requirement, to have a sensor that can determine when a projectile has begun to move towards the interceptor, and determine the path at which the projectile is heading towards to the interceptor.
+- Constraint 3: The Path Sensor Array shall that operates on battery power and is cappable of supplying power to the entire subsystem continously for 30 minutes.
+  - Due to a constraint given by Customer the sensor posts must have independent power from the interceptor.
+  - The Subsystem is required to be capable of supply power for 30 minutes to provide adaquate time to complete the competition.
+- Constraint 4: The Path Sensor Array shall implement the best remote battery power solution to limit the interceptor’s Envirmental Impact by designing a system that requires one set of batteries for the entirety of the project.
   - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
-- Constaint 5: Design a system that complies with the ANSI Z136.1 Standard
+- Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
-- Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
-  - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem. Additonally, in order to read sensor data quickly the microcontroller must have atleast 15 pinchange interupts to allow microcontroller to not continously loop.
+- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 16 I/O pins, 15 Pin change interupts, 5 Volt pin.
+  - This constraint addresses all pins required to properly run the path sensor array.
+    -15 I/O pins are required to read the voltage of the photoresistors and 1 I/O pin is required for Wireless Transmission
+    -15 Pin change interupts are required to quickly register when an projectile is blocking the laser.
+    -5 Volt pin is required to power the photoresistors
 
 ## Schematic
 ![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/8313d55c-906e-486f-aaa0-db5f36f89213)
@@ -56,7 +60,7 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 
 ### Microcontroller Verification
 
-Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors. Also, the microcontroller must supply 3.3 Volts and ground to the esp wireless communicator. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10].
+Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors.According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10].
 
 ## Bill of Materials
 
