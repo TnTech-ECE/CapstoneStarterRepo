@@ -1,6 +1,6 @@
 # Launcher Housing
 ## Functionality 
-The launcher housing will provide power to the other subsystems connected to the main interceptor body, provide a functional E-Stop button, have a lighting system, and have a firing alarm. The power system will be made up of two power supplies, a 36 V to 12 V step down converter, a low level 5 V 2 channel relay, 4 power distribution blocks, and a latching twist to turn on push button. Lighting will be done with two 1 meter long LED strips in purple and gold colors. A 12 V buzzers will be used for the firing alarm.  
+The launcher housing will provide power to the other subsystems connected to the main interceptor body, provide a functional E-Stop button, have a lighting system, and have a firing alarm. The power system will be made up of two power supplies, a 36 V to 12 V step down converter, a low level 5 V 2 channel relay, 4 power distribution blocks, and a latching twist to turn on push button. Lighting will be done with two 1 meter long LED strips in purple and gold colors. A 12 V buzzer will be used for the firing alarm.  
 ## Constraints 
 
 * C5: Include a clearly marked power switch on the interceptor.
