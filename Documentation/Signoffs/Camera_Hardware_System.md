@@ -5,10 +5,11 @@ The Camera Hardware system will be responsible for taking an image of a drone in
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall reliably capture an image of a drone in-flight or the pilot | Project Proposal|             
+|  1 | Shall reliably capture an image of a drone in-flight or the pilot, within contiguous campus airspace | Project Proposal|             
 |  2 | Shall capture a quality image of the drone from X meters away to ensure image quality| Design Constraint|                          
-|  3 | Shall track drone across contiguous airspace using Remote ID location data | Design Constraint|
-|  4 | Shall resist weather and external conditions to a reasonable degree| Project Supervisor|
+|  3 | Shall track drone across contiguous airspace using Remote ID location data | Concept Design|
+|  4 | Shall resist weather and external conditions to a reasonable degree| Maintainence Constraint|
+|  5 | Shall not capture an image of an individual or drone until either trespass into contiguous campus airspace| Ethical Constraint|
 
 <sup>1</sup> Capturing an image of the drone is a large part of evidence collection and can assist campus police in stopping unauthorized drone flight from repeat offenders
 
@@ -18,15 +19,23 @@ The Camera Hardware system will be responsible for taking an image of a drone in
 
 <sup>4</sup> To ensure reliability of system, environmental interference must be limited and mitigated by proper protective measures.
 
-## Schematic
+<sup>5</sup> To ensure privacy of non-offending parties, system must not retain images of their drone or person unless they trespass into contiguous TTU airspace.
 
+## Schematic
+![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)
 ## Analysis
-For this subsystem, the following atomic subsystems, with their justification, will be required.
+For this subsystem, the following components and sub-subsystems will be required.
+
+### Microprocessor
+For the brains of this system, we have chosen the ATmega 2560 Microcontroller Unit. While most members of the group are familiar with this processor, this device was chosen for its reliability in motor and serial device control, along with its small physical foot print and power requirement. With the addition of an ESP8266 module, this controller can easily utilize wireless signals, allowing us to transmit and receive the required data to and from the remainder of the systems in our project. [^1]
 
 ### Servo Motor
-For this subsystem, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^1]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with a feedback signal telling the controller when to stop.
+For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with a feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
+
+By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.
+
 ### Camera
-### Microprocessor
+For this system, we have chosen to use a First Person View (FPV) camera for our image capture. With its 170 degree wide-angle lense, alongside its half-inch CMOS sensor, this camera will give us the required resolution for a clear and crisp image from our specified X meters distance (more research required to determine this range). Additonally, the angle of coverage, alongside the 270 degree rotational angle of the panning servo motor (Specified as MTR 0 in the schematic), we should be able to cover a total radial area of 360 degrees.
 
 
 ## BOM
@@ -43,8 +52,7 @@ For this subsystem, we have chosen to use servo motors for the pan and tilt cont
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-Here is a simple footnote[^1].
-[^1]: Thin Thin Hlaing, Tin Tin Nwet, Soe Myat, "Overview of Differences between Servo and Stepper Motor Technology" - ISSN , https://tinyurl.com/mrd79fpb (Accessed April 10, 2024).
-[^2]: Reference 2 
-[^3]: Reference 3
+[^2]: Arduino, "A000067-datasheet.pdf", https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf (Accessed April 10, 2024)
+[^2]: Thin Thin Hlaing, Tin Tin Nwet, Soe Myat, "Overview of Differences between Servo and Stepper Motor Technology" - ISSN , https://tinyurl.com/mrd79fpb (Accessed April 10, 2024).
 <!--etc.-->
+
