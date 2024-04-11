@@ -15,14 +15,15 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
 - Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
-- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 16 I/O pins, 15 Pin change interupts, 5 Volt pin.
+- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interupts, 5 Volt pin.
   - This constraint addresses all pins required to properly run the path sensor array.
-    -15 I/O pins are required to read the voltage of the photoresistors and 1 I/O pin is required for Wireless Transmission
-    -15 Pin change interupts are required to quickly register when an projectile is blocking the laser.
-    -5 Volt pin is required to power the photoresistors
+    - 15 I/O pins are required to read the voltage of the photoresistors and 2 I/O pin is required for Wireless Transmission TX and RX.
+    - 15 Pin change interupts are required to quickly register when an projectile is blocking the laser.
+    - 5 Volt pin is required to power the photoresistors
 
 ## Schematic
-![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/8313d55c-906e-486f-aaa0-db5f36f89213)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/d90f4950-3756-487e-8ea4-bf54e7a5310c)
+
 
 
 ## Analysis
@@ -60,7 +61,7 @@ The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3].
 
 ### Microcontroller Verification
 
-Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors.According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10].
+Current requirements of the microcontroller is the ability to create a 5 volt rail to each photoresistor as well as a ground rail to all pulldown resistors. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, 2 other I/O Rx and TX pins are required to output the incoming projectile path using serial communication. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10]. Finally, multiple 5 volt and ground pins are availible on the Atmega 2560 [10].
 
 ## Bill of Materials
 
