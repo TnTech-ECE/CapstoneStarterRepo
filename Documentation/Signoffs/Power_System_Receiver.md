@@ -14,7 +14,8 @@ Reducing maintenace is important to reduce the extra work for the function of th
 ## Schematic
 
 
-<img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00">
+<img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00"><br />
+Figure 1: Waveshare Power Management Module Schematic
 
 
 ## Analysis
