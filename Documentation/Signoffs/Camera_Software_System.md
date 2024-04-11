@@ -4,14 +4,15 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall reliably capture an image of an UAS in-flight or the UAS pilot | Project Proposal |   |  2 |           |        |                          
-|  3 |           |        |              
+|  1 | Shall reliably capture an image of an UAS in-flight or the UAS pilot | Project Proposal |   |  2 | Shall only attempt to capture a quality image of the UAS | Tech Police |                    |  3 | Shall limit the number of redundant pictures taken | Design Constraint |              
+|  4 |           |        |              
+|  5 |           |        |              
 
 <sup>1</sup> Reliably capturing an image of the unauthorized UAS will assist the Tech Police in regulating Tech Policy 190 [^1].
 
-<sup>2</sup> Reason for contraint 2 and why it is important
+<sup>2</sup> Image usability is important, and the Tech Police will not be able to use a low quality image.
 
-<sup>3</sup> Reason for contraint 3 and why it is important
+<sup>3</sup> Reducing redundant pictures will save space in the database.
 
 ## Schematic
 
