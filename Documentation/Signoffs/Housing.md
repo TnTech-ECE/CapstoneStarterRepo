@@ -33,7 +33,9 @@ The lighting of the interceptor only needs to be visable to observers. To verify
 The gold LED strip also has a video on its page. This video shows the gold LED strip powered on in a bright department store at timestamp 7:57. The color of the LED strip can be clearly seen both from the campera facing the strip and the reflection of the light produced seen on the other camera. 
 
 ### Buzzer 
-The selected buzzer has a volume output of 68 dB at 61 cm when supplied with 10V. This noise level will increase at 12V. Using the sound attenuation formula  $' SPL_{2} = SPL_{1} - 20log(\frac{R_{2}}{R_{1}}) '$ it can be found that a sound of 68 dB at 61 cm will be 57.46 dB from 6 feet away. As such the selected buzzer is loud enough to serve as the alarm for the interceptor. 
+The selected buzzer has a volume output of 68 dB at 61 cm when supplied with 10V. This noise level will increase at 12V. Using the sound attenuation formula 
+$ SPL_{2} = SPL_{1} - 20log(\frac{R_{2}}{R_{1}}) $ 
+it can be found that a sound of 68 dB at 61 cm will be 57.46 dB from 6 feet away. As such the selected buzzer is loud enough to serve as the alarm for the interceptor. 
 ### Power system 
 The power system analysis is broken into three sections to make it easier to understand what each portion provides power to. Each section provides justification for the power draw of the systems inside it. 
 #### Raspberry Pi Power
