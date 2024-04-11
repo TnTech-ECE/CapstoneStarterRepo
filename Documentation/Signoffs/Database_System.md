@@ -42,7 +42,7 @@ When Drone operation authorization is not provided: Wait a certain period then r
 
 When a drone is detected within the campus area, the following will happen based on the existance of a request from the camera software subsystem.<br />
 When a drone is not detected: Reply with a negative boolean value.<br /> 
-When a drone is detected: The following information is forwarded: drone location/alititude, drone velocity, and control station location/elvation.<br />
+When a drone is detected: The following information is forwarded: drone location/altitude, drone velocity, and control station location/elvation.<br />
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
