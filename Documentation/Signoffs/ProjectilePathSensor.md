@@ -1,7 +1,9 @@
 # Projectile Path Sensor Signoff
+
 ## Subsystem Function
 The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take. This is expected to be the first sensor data sent to the interceptor. This data provies the required yaw angle to properly intercept the incoming projectiles.
 ## Constraints
+
 - Constrain 1: Create an interceptor capable of functioning on its own without outside interaction. 
   - Reasoning: Do to a constumer requirement the interceptor and all external sensor post must be autonomous after intial startup.
 - Constraint 2: Design a sensor array that can detect approaching objects and relay their locations to the interceptor.
@@ -14,13 +16,17 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
 - Constraint 6: Use a processing unit that has the capability to support all required sensors as well as ability to connect to a ESP device.
   - It is expected that 16 I/O ports are required to read the object detection sensor array. The Microprocessor must be capabile of suppling sufficent power. Also, another port to comunicate and power the ESP device required in the wireless communication subsystem. Additonally, in order to read sensor data quickly the microcontroller must have atleast 15 pinchange interupts to allow microcontroller to not continously loop.
+
 ## Schematic
-![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/e07acf35-f173-472a-92ad-ec09fcd796f9)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/8313d55c-906e-486f-aaa0-db5f36f89213)
+
 
 ## Analysis
 ### Autonomous System
+
 According to the Atmega 2560 Datasheet the Atmega has 256K bytes of Flash memory on the chip for program storage [10]. This means after an intial program of the Atmega the program will automatically run on startup. Once the microcontroller is properly programed the only step required to start the projectile path detection system is to turn on the powersupply. Also, this functionality verifies that the microcontroller will also function autonomously even if there is a sudden restart of the Atmega.
 ### Object Detection 
+
 In order for the sensor array to detect when an incoming projectile has been launch, the array will have a laser setup below each projectile path, and a photoresistor above each projectile path. All photresistors are powered by the Atmega 2560's 5 volt rail. Then all photoresistors are attatched to a 100k ohm pull down resistor. So, when the photoresistor has contact with the laser the photoresistor has a small resistance resulting in the voltage before the pull down resistor to be greater than 3 volts. On the other hand, when a projectile is blocking the laser the photoresistor has a large resistance resulting in the voltage before the pull down resistor to be less than 3 volts.
 
 According to the atmega 2560's data sheet in order for an input pin to change from low to high the pin must read a value of at least 3 volts [10]. Using this voltage the required resistance to change the input is 66.667k ohms. According to the photo resistor's datasheet the GL5539's resistace drops below 66.667k ohms at a lux between 5-25 [20]. This means that when the laser beam is not blocked the resistance will be less than 66.667k and when a projectile is blocking the laser it will be greater.
@@ -32,7 +38,6 @@ To determine the lux of the photoresistor when the laser is being blocked by a p
 ### Battery
 Due to the constraint of having to use battery power, all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the reccomend voltage of the atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsumung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. In the table below show the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
 
-###
 
 | Device | Current Draw |
 | ------ | --------------- | 
@@ -42,13 +47,17 @@ Due to the constraint of having to use battery power, all sensors, lasers, and m
 | Total | 561 mA |
 
 ### Broader impact of Battery
+
 The choice of a lithium ion battery was a multifactor choice. The first and most important factor was to have the capability to recharge and reuse the same batteries throughout the project. According to the battery's spreadsheet when the battery is discharged at 20A for 250 cycles the batteries capacity is still nearly 2000 mAh [13]. Due to the significantly less current being discharged from the battery, it is expected that the capacity will decrease less. However, even with using provided data, it is expected to still be able ot provide power to the system for atleast 30 minutes using the 1700 maH cutoff explained above. Another alternative battery solution would have been Alkaline batteries, but due to the single use nature of the batteries many would have to be disposed of during testing. For example a premium AA batter from duracell has a nominal voltage of 1.5 Volts and can last for roughly 3 hours at a constant current of 500 mA [15]. This means a total of 5 AA batteries would have to be disposed of every 3 hours. This decreases cost effiecny as well as increasing the tecnological waste.
 
 ### Complying with Laser Saftey Standards
+
 The Ky-008 sensor is marketed as a low power laser with a 5 mW output power [3]. This laser is a continous with a 650 nm wavelength [3] , and that classifies this laser as a Class 3R [2]. Class 3R lasers are considered safe, but if exposed for a long period injury is possible. According to ANSI Z136.1 the use of a Class 3R laser no Prcedural and Administrative Controls, Training, Medical Surveillance, and LSO is required [2] , and additionally ANSI Z136.1 reccomends an intrabeam viewing time of less thaThn .25 seconds. With the design of the laser array it is expected to have zero intrabeam viewing in order to keep all observers safe. Finally, becuase of the the class 3R laser the sensor requires a warning label [3] the team will add on to the interceptor body.
 
 ### Microcontroller Verification
+
 Current requirements of the microcontroller is the ability to send 5V rail to each photoresistor as well as a ground rail to all pulldown resistors. Also, the microcontroller must supply 3.3 Volts and ground to the esp wireless communicator. According to the atmega 2560 datasheet the maximum current an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, in order to read the voltage 15 I/O ports are required. Additionally, another I/O pin is required to output the incoming projectile path that was read from the detection sensor array. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according the the Atmega 2560's datasheet there is a total of 24 pin change interupts meaning this constraint is also met [10].
+
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
