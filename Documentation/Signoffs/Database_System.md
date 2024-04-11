@@ -52,5 +52,7 @@ When a drone is detected: The following information is forwarded: drone location
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1]: [(https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf)]
+[^1]:((https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf))
+<sup>1</sup>
+“ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). 
 <!--etc.-->
