@@ -6,13 +6,13 @@ The launcher housing will provide power to the other subsystems connected to the
 * C5: Include a clearly marked power switch on the interceptor.
     * In order to verify this constraint is met the interceptor must have a switch or switches that turn the interceptor on and off when flipped. 
 * C6: Include a clearly marked emergency stop option on the interceptor.  
-    * To verify this constraint is met the interceptor must have a labled E-Stop that will prevent power from flowing to all non essential components of the interceptor when pressed. 
-* C10: Design an interceptor that has lights.  
-    * To verify this constraint is met the interceptor must have some form of decorative lighting that is visible when powered on. 
-* C12: Design an interceptor which plays an alert noise before firing.  
-    * To verify this constraint is met the interceptor must play an audible sound before the projectile is fired. To ensure that the sound is audible the sound must be louder than 40 dB, which makes the sound qualify as a moderate sound, when standing within a six foot radius of the interceptor. 
-* C24: Housing will provide sufficient power to the rest of the main interceptor body. 
-    * To verify this constraint is met the housing subsystem must provide power to the lighting, the alarm, the launching motor, the aiming motors, and the on board processing. 
+    * To verify this constraint is met the interceptor must have a labeled E-Stop that will prevent power from flowing to all non essential components of the interceptor when pressed. 
+* C10: Design an interceptor with lights that are visible when powered on.   
+    * The customer asked for decorative lighting that serves no purpose other than aesthetics. 
+* C12: Design an interceptor which plays an alert noise before firing. The noise played must be louder than 40 dB when within a 10 foot radius of the interceptor. 
+    * The customer asked for an alert to be played before the interceptor fired. A sound 40 dB or louder when within 10 feet of the device was chosen as 40 dB is a moderately loud sound [13] and 10 feet is larger than the game board. 
+* C24: Housing will provide 30W of power to the processor and provide up to 350W to the alarm, lighting and motors. 
+    * The selected values of power that the housing must provide are formulated from the maximum power draw of all subsystems on the main interceptor. The Raspberry Pi 5 has a maximum power draw of 30W. The motors have a combined power draw of 241.2W and the LEDs and buzzer have a combined power draw of 21.84W. As such 350W was selected to leave headroom.  
 
 ## Buildable Schematics
 ### Electrical Schematic 
@@ -44,7 +44,7 @@ The power system analysis is broken into three sections to make it easier to und
 The 5V 5.1A power supply [2] manufactured by raspberry pi was selected in order to provide noise free power to the Raspberry Pi 5. It will provide enough power to utilize all the features of the processor as it was designed specifically to power that unit. 
 
 #### 36V Power
-In order to provide power to the other subsystems on the main interceptor body a 36V 9.7A AC-DC power supply was selected [1]. This power supply can provide up to 350W if needed. Due to the turntable motor requiring 30V and up to 4A a power supply of at least 120 W was required to run the turntable motor in a worse case scenario. The selected DC-DC converter has an efficiency of 90% meaning at max power draw it can draw up to 132W. Finally the firing motor operates on 36V and up to 2.7A, placing the worst case power draw at 97.2W. This places the theoretical max power draw from the interceptor body at 349.2W. This is very close to the offered 350W of the power supply however due to the 12V rail only drawing 45.84W at max power draw (Detailed in the 12V power section) there is a large amount of headroom for the power system. Additionally in ideal operation the turntable motor and firing mortars will never operate at the same time further increasing the headroom. 
+In order to provide power to the other subsystems on the main interceptor body a 36V 9.7A AC-DC power supply was selected [1]. This power supply can provide up to 350W if needed. Due to the turntable motor requiring 30V and up to 4A a power supply of at least 120 W was required to run the turntable motor in a worse case scenario. The selected DC-DC converter has an efficiency of 90% meaning at max power draw it can draw up to 132W. Finally the firing motor operates on 36V and up to 2.7A, placing the worst case power draw at 97.2W. This places the theoretical max power draw from the interceptor body at 349.2W. This is very close to the offered 350W of the power supply however due to the 12V rail only drawing 45.84W at max power draw (Detailed in the 12V power section) there is a large amount of headroom for the power system. Additionally operation of the turntable motor and firing mortars will not occur at the same time further increasing the headroom. 
 
 #### 12V Power
 To step down to 12V from 36V the 12V 10A DC-DC step down converter [5] was selected. This converted can supply up to 120W of power to the systems on the 12V rail. The power draw from the LED strips [7] and [8] is 9.6W per meter meaning to power the two LED strips at worse case will take 19.2W. The buzzer [9] has a max current draw of 22mA meaning at 12V the power draw from the buzzer would be 2.64W. The launch angle motor at worse case will draw up to 2A at 12V meaning a power draw of 24W. This puts the total power draw of the 12V rail at 45.84W. As the selected converter can provide 120W maximum it will be more than sufficient to supply the 12V rail with headroom. 
