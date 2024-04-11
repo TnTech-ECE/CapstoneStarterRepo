@@ -25,7 +25,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 <sup>6</sup> The contiguous campus is approximately 0.636594 km<sup>2</sup> in area and the receivers must be able to cover this area. 
 
 ## Schematic
-![image](https://ibb.co/RNs7thm)
+![image](https://postimg.cc/mh1nK4Y0)
 
 
 
@@ -35,7 +35,7 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ### Receivers
 The  receivers are designed to receive the RID drone signal and send the data to the database subsystem. The Arduino Nano ESP32 has a built in module used to receive and send Bluetooth and WiFi signals on the 2.4 GHz band. These secondary receivers will be placed around the contiguous campus for maximum reception coverage. The receivers will be placed outside to minimize power loss that can be caused by building and maximize the range that the receivers will be able to receive a signal. A resin 3D print will be created and spray prainted white and a protective spray that will help protect it from UV and water damage. This print will have a small opening for the power subsystem to get wires to power the arduino and the USB-C connector. The Arduino Nano ESP32 utilizes a NORA-W106 to receive Bluetooth and WiFi signals. The module has a receiver sensitivity of -98 dBm for and receiver gain of 3 dBi for Bluetooth. It also has a -97 dBm receiver sensitivity for Wifi and gain of 3 dBi. 
 P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>Tx</sub> - L<sub>fs</sub> + G<sub>Rx</sub> - L<sub>Rx</sub>
-The receivers will utilizes a Gravity: Nano I/O Shield (shield)to connect a Adafruit ATWINC1500 WIFI Breakout (WiFi module) WiFi module to conect the Arduino to the Tennessee Tech WiFi, EagleNet. The shield is an attachment so that the Arduino can connect to EagleNet using the WiFi module. The purpose of the WiFi module is to send the data received from the RID signal to the database over WiFi. This will allow the receivers to constantly receive the data and have a connection to the database subsystem to send the signal as quickly as possible. 
+The receivers will utilize a ESP8266 (WiFi module) to conect the Arduino to the Tennessee Tech WiFi, EagleNet. The purpose of the WiFi module is to send the data received from the RID signal to the database over WiFi. This will allow the receivers to constantly receive the data and have a connection to the database subsystem to send the signal as quickly as possible. 
 ## BOM
 #### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
