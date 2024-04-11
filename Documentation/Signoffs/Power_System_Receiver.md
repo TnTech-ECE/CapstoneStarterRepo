@@ -1,16 +1,16 @@
 # Power System for Receiver System
 ## Functionality
-The primary functionality for this system is to provide adequate current and power for the receiver subsytem.
+The primary functionality for this system is to provide the required current and power for the receiver subsystem.
 
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 |           |        |              
+|  1 |     The system shall be designed to minimize future maintenance.      |   Shall statements     |              
 |  2 |           |        |                          
 |  3 |           |        |              
 
 <sup>1</sup> Reason for contraint 1 and why it is important
-
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished. It is less likely for the system to be useful if a worker must constantly change the batteries.
 <sup>2</sup> Reason for contraint 2 and why it is important
 
 <sup>3</sup> Reason for contraint 3 and why it is important
