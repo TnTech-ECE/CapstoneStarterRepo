@@ -19,20 +19,20 @@ Reducing maintenace is important to reduce the extra work for the function of th
 ## Schematic
 
 ## Analysis
-| Component     | Voltage (V) | Current (A)| Power (W)   | Total Cost |
+| Component     | Voltage (V) | Current (A)| Power (W) |
 | -------- | ------------| -------- |----------------|------------|
-|    DS3218 Digital Servo      |     5        |     0.005 - 2     |                |            |
-|   DS3225MG       |      5       |          |         0.005 - 2  |            |
-|    ATMega 2560      |     5        |          |      0.005-0.8  |            |
-|     RunCam Phoenix 2 SE     |     5        |    0.2-0.08        |                |            |
-|   Arduino ESP8266    |     2.7-3.6        |     0.1     |       |            |
-|Total     |             |          |                |            |
+|    DS3218 Digital Servo      |     5        |     0.005 - 2     |   0.024 - 13.6 |           
+|   DS3225MG       |      5       |      0.005 - 2      |     0.024 - 13.6      |            
+|    ATMega 2560      |     5        |      0.005 - 0.8      |   0.0135 - 4.4   |         
+|     RunCam Phoenix 2 SE     |     5        |    0.2 - 0.08        |     1           |            
+|   Arduino ESP8266    |     2.7 - 3.6        |     0.1     |   0.27 - 1.152    |            
+|Total     |             |          |                |       1.3315 - 33.712     |
 
 	4.8	6.8		0.024	13.6
-	4.8	6.8	0.005	2	0.024	13.6
-	2.7	5.5		0.0135	4.4
+	4.8	6.8	0.005	2	
+	2.7	5.5		
 	5	12		1	0.96
-	2.7	3.6		0.32	0.27	1.152
+	2.7	3.6		0.32	
 					0	0
 					0	0
 Totals					1.3315	33.712
