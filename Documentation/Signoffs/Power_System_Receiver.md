@@ -8,7 +8,7 @@ The primary functionality for this system is to provide the required current and
 |  1 |     The system shall be designed to minimize future maintenance.      |   Shall statements     |              
        
 
-<sup>1</sup> Reason for contraint 1 and why it is important<br />
+<sup>1</sup> Reason for contraint 1 and why it is important:<br />
 Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished. It is less likely for the system to be useful if a worker must constantly change the batteries.
 
 ## Schematic
