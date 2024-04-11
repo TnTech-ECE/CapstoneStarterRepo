@@ -1,25 +1,24 @@
 # Database System
 ## Functionality
-The database subsystem will store the unpackaged drone remote ID from the receiver subsystem, then provide the camera software and website subsystem their requested data.
-
+The database subsystem will store the unpackaged drone remote ID from the receiver subsystem, send and receive requested data from the camera software subsystem and then send relevant data to the website subsystem.
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | All data recevied shall be contain in cloud database storage. | TTU Campus Police |
+|  1 | All data recevied shall be contained in cloud database storage. | TTU Campus Police |
 |  2 | The database application used to store the drone remote ID shall handle real-time data streaming. | TTU Campus Police |    
 |  3 | Application shall constantly request and receive data from the receiver subsystem. | Design Constraint |
-|  4 | Application shall provide the data when requested by other subsystem. | Design Constraint |
+|  4 | Application shall provide the data when requested by another subsystem. | Design Constraint |
 
-<sup>1</sup> Reason for contraint 1 and why it is important
-TTU campus police requested all the obtained drone remote ID data to be store in a cloud storage.
+<sup>1</sup> 
+The TTU campus police requested all the obtained drone remote ID data to be stored in cloud storage.
 
-<sup>2</sup> Reason for contraint 2 and why it is important
-Other Subsystem's have inputs depended on live information whenever a drone is detected whithin the campus area.
+<sup>2</sup> 
+Other subsystems have inputs dependent on live information whenever a drone is detected whithin the campus area.
 
-<sup>3</sup> Reason for contraint 3 and why it is important
-Constantly request update for drone detection that deal with packet lost or poor network connection.
+<sup>3</sup> 
+Constantly requesting updates for drone detection will ensure that possible packet lost or poor network connection related issues are caught early. It will also ensure that the data supplied to the cloud is current. 
 
-<sup>4</sup> Reason for contraint 3 and why it is important
+<sup>4</sup> 
 The website and camera subsystem will request/pull data from the database subsystem whenever a drone is detected.
 
 ## Schematic
@@ -27,23 +26,23 @@ The website and camera subsystem will request/pull data from the database subsys
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
 
 ## Analysis
-The following data will be pull by Website subsystem if avaiable, Drone remote ID, location/Altitude, Veloctiy, control station location/elevation, operation time mark, emergency status, Drone/Control station image. Database system will be implmented using a SQL(Structured Query Language), python and c++, and test case senarios for the Database subsystem are provided below.
+The following data will be pulled by the Website subsystem if available: Drone remote ID, location/Altitude, Veloctiy, control station location/elevation, operation time mark, emergency status, and Drone/Control station image. The Database system will be implemented using a SQL(Structured Query Language), python and c++. Test case senarios for the Database subsystem are provided below.
 
 ## SQL, python and C++
-SQL will be used to format data inside the database storage, then python or C++ will be implemented to handle the data receiving/requesting.
+SQL will be used to format the data inside of the database storage, then, python or C++ code will be implemented to handle the data receiving/requesting.
 
 ## Test Case Senario
-The database application will constaly request update from the receiver subsystem whether a drone is detected.<br />  
+The database application will constantly request updates from the receiver subsystem whether a drone is detected or not.<br />  
 When a drone is not detected: Wait a certain time period before requesting another update.<br /> 
-When a drone is detected: Then following information is stored, ID, location/altitude, velocity, control station location/elvation, time mark of operation, emergency status.<br /><br />
+When a drone is detected: Then the following information is stored: ID, location/altitude, velocity, control station location/elvation, time mark of operation, and emergency status.<br /><br />
 
-When a drone is detected within the campus area, the application will forward a alert to the website subsystem that will ask TTU campus police to provide Drone authroization.<br />
-When Drone operation authroization is provided: Update the drone operaton authorization status.<br /> 
-When Drone operation authroization is not provided: Wait a certain period then reforward another alert.<br /><br />
+When a drone is detected within the campus area, the application will forward an alert to the website subsystem that will ask TTU campus police to provide the drone authorization.<br />
+When Drone operation authorization is provided: Update the drone operaton authorization status.<br /> 
+When Drone operation authorization is not provided: Wait a certain period then reforward another alert.<br /><br />
 
-When a drone is detected within the campus area, the follwing will happen base on the frequent request from the camera software subsystem.<br />
+When a drone is detected within the campus area, the following will happen based on the existance of a request from the camera software subsystem.<br />
 When a drone is not detected: Reply with a negative boolean value.<br /> 
-When a drone is detected: The following information is forwarded, drone location/alititude, drone velocity, control station location/elvation.<br />
+When a drone is detected: The following information is forwarded: drone location/alititude, drone velocity, and control station location/elvation.<br />
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
