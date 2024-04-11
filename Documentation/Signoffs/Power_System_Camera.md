@@ -19,6 +19,15 @@ Reducing maintenace is important to reduce the extra work for the function of th
 ## Schematic
 
 ## Analysis
+|Component|	Voltage (Low) V	|Voltage (High) V |Current(Low) A	|Current(High) A	|Power Required (Low) W	|Power Required (High) W|
+DS3218 Digital Servo	4.8	6.8	0.005	2	0.024	13.6
+DS3225MG	4.8	6.8	0.005	2	0.024	13.6
+ATMega 2560	2.7	5.5	0.005	0.8	0.0135	4.4
+RunCam Phoenix 2 SE	5	12	0.2	0.08	1	0.96
+Arduino ESP8266	2.7	3.6	0.1	0.32	0.27	1.152
+					0	0
+					0	0
+Totals					1.3315	33.712
 
 
 
