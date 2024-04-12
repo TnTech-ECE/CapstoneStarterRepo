@@ -15,7 +15,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>3</sup> Reducing redundant pictures will save space in the database.
 
-<sup>4</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data tranfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
+<sup>4</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
 
 ## Schematic
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/143036859/1650485d-023f-4dae-b7a3-e5a890cc4e53)
