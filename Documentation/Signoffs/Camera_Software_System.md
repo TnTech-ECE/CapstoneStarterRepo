@@ -1,15 +1,17 @@
 # Camera Software System
-## Functionality
+## Functionality 
 The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to accurately take an image of an UAS in-flight or the UAS pilot and save it to the database for usage by campus police.
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall reliably capture an image of an UAS in-flight or the UAS pilot | Project Proposal |
-|  2 | Shall only attempt to capture a quality image of the UAS | Tech Police |
+|  1 | Shall capture an image of an UAS in-flight or the UAS pilot | Project Proposal |
+|  2 | Shall only attempt to capture an image high enough quality to identify the UAS make or the figure of the UAS user | Tech Police |
 |  3 | Shall limit the number of redundant pictures taken | Design Constraint |  
 |  4 | If information is limited or unfeasable, a picture will not be taken | Tech Police |
+|  5 | If slew rate is too high due to drone proximity, a picture will not be taken | Design Constraint |
+|  6 | Shall only give quality images when the light levels are appropriate 
              
-<sup>1</sup> Reliably capturing an image of the unauthorized UAS will assist the Tech Police in regulating Tech Policy 190 [^1].
+<sup>1</sup> Capturing an image of the unauthorized UAS will assist the Tech Police in regulating Tech Policy 190 [^1]. 
 
 <sup>2</sup> Image usability is important, and the Tech Police will not be able to use a low quality image.
 
@@ -23,6 +25,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 ### Coding Language
 The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
 ### Flowchart breakdown
+algorithm and test cases
 #### Input data
 This data will be obtained from the RID signal if possible and sent to the camera system [^3]. 
 - Drone Location
