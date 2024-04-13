@@ -1,21 +1,21 @@
 # Projectile Path Sensor Signoff
 
 ## Subsystem Function
-The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take. This is expected to be the first sensor data sent to the interceptor. This data provies the required yaw angle to properly intercept the incoming projectiles.
+The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take. This is expected to be the first sensor data sent to the interceptor. This data provies the required yaw angle to properly intercept the incoming projectiles. In order to complete this functionality An array of lasers will be placed over all projectile paths and when a ball breaks a laser beam that data will be received by a microcontroller.
 ## Constraints
 
 - Constrain 1: The Path Sensor Array shall be autonomous, and will require to no outside interference after initial startup.
   - Reasoning: Do to a constumer requirement the interceptor and all external sensor post must be autonomous after intial startup.
 - Constraint 2: The Path Sensor Array shall be capable of detecting which of the possible 15 paths an approaching object is taking and relay this value to the interceptor.
   - This constraint was developed to meet the requirement, to have a sensor that can determine when a projectile has begun to move towards the interceptor, and determine the path at which the projectile is heading towards to the interceptor.
-- Constraint 3: The Path Sensor Array shall that operates on battery power and is cappable of supplying power to the entire subsystem continously for 30 minutes.
+- Constraint 3: The Path Sensor Array shall operate on battery power and must cappable of supplying 7 volts at 600 ma to the entire subsystem for 30 minutes.
   - Due to a constraint given by Customer the sensor posts must have independent power from the interceptor.
   - The Subsystem is required to be capable of supply power for 30 minutes to provide adaquate time to complete the competition.
 - Constraint 4: The Path Sensor Array shall implement the best remote battery power solution to limit the interceptor’s Envirmental Impact by designing a system that requires one set of batteries for the entirety of the project.
   - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
-- Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard
+- Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard for saftey requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a waring sign.
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
-- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interupts, 5 Volt pin.
+- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interupts, 5 Volt pin to receive and send all sensor data.
   - This constraint addresses all pins required to properly run the path sensor array.
     - 15 I/O pins are required to read the voltage of the photoresistors and 2 I/O pin is required for Wireless Transmission TX and RX.
     - 15 Pin change interupts are required to quickly register when an projectile is blocking the laser.
