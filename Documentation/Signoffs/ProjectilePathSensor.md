@@ -24,8 +24,11 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 ## Schematic
 ![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/d90f4950-3756-487e-8ea4-bf54e7a5310c)
 
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/f40888d5-cc51-4942-b1af-76b1d1cfd3df)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/1cd13700-7934-488b-99b6-befc3a75dfb8)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/7471004e-af30-4eee-a227-b0cd110141a3)
 
-![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/96facfa8-11d9-449e-ab93-113b72991137)
+
 
 ## Analysis
 ### Autonomous System
