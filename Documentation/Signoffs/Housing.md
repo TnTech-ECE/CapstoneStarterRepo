@@ -16,7 +16,7 @@ The launcher housing will provide power to the other subsystems connected to the
 
 ## Buildable Schematics
 ### Electrical Schematic 
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/arwatson42-Signoff-Housing/Documentation/Signoffs/Housing_Schematic_Diagram.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/arwatson42-Signoff-Housing/Documentation/Signoffs/Housing_Schematic_Diagram_R2.png)
 The electrical schematic shows the connections between the wall and the power supplies [1] and [2] via the switching extension cord [3]. The schematic then shows the configuration of the E-stop [4]. Connecting each of these to a bus enables the entire interceptor to be powered. The schematic also shows the connection between the Raspberry Pi 5, the relay [5], the LED strips [6] and [7], and the piezo buzzer [8]. The 12V power supply was chosen in order to provide adequate power for the steppers used in the aiming and firing sections while the 5V power supply was chosen in order to provide the raspberry pi with clean reliable power. The switching extension cord was chosen as it permits adequate current draw in addition to having switches which will sever as the interceptors power switches. The E-stop button was chosen in order to minimize potential points of failure within the E-Stop system by minimizing the amount of connections the E-Stop system will need. The low level 5V relay was chosen as it allows the processor to easily control both the buzzer and LED systems. The buzzer was chosen since it emits an adequate sound to alert bystanders while the two LED strips were selected due to the relatively low power draw they have while also being fairly close to the colors of the school. 
 
 ## Analysis
