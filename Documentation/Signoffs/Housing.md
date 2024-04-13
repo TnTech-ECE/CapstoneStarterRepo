@@ -60,7 +60,7 @@ In order to provide power to the other subsystems on the main interceptor body a
 | 16 AWG Wire| CABLE 2COND 16AWG BLK/RED 1M| 30-02855| Tensility International Corp| 1|$5.24 | |
 | Terminal Blocks & Jumpers| Terminal blocks and jumpers to make the voltage busses| ----| ElevsHome |1 |$12.99 | |
 |16 AWG Crimp Connectors | Connectors to connect stranded wire to terminal blocks | 130014| TE Connectivity AMP Connectors| 20| $5.56 | |
-| Total          |                                                                              |                 |                  |              | Total Cost | $177.77|
+| Total          |                                                                              |                 |                  |              | Total Cost | $153.23|
 
 ## References
 [1] 350W Power Supply: https://www.digikey.com/en/products/detail/mean-well-usa-inc/LRS-350N2-36/21531512
