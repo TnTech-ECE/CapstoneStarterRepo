@@ -24,6 +24,7 @@ The intention is to determine the target's location by image recognition. The he
 >
 </p>
 The wiring schematic for this subsystem is simple as the camera's wiring is contained within its ribbon cable. The ribbon cable provides power, ground, and data. The data interface is a camera serial interface also known as MIPI CSI. The Raspberry Pi 5 supports 15 pin 2 lane MIPI-CSI allowing the camera to send two streams of image data to the Pi simultaneously [3]. The camera draws up to 250mA at 3.3 volts [4]. The camera's ribbon cable is 610mm and can be extended with a 15-pin flex cable extender with 1mm pitch.
+
 ## Analysis
 
 ### Algorithm
