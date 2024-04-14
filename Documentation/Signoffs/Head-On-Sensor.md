@@ -30,7 +30,7 @@ The wiring schematic for this subsystem is simple as the camera's wiring is cont
 ### Algorithm
 The image recognition algorithm works by applying a threshold filter to the camera thus rounding each pixel to either black or white. From here a moving window is scanned across the image counting the number of white pixels. The area with the highest number of white pixels is a possible location for the golf ball. This works by cross correlating the threshold filtered image with the desired signal of a white square. This shows the area of the image that has the highest concentration of white.
 
-## Algorithm Flowchart
+### Algorithm Flowchart
 <p align="center">
   <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Head-On-Sensor-Subsystem/Documentation/Images/Flowchart.png"
 >
