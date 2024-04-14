@@ -11,9 +11,9 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 - Constraint 3: The Path Sensor Array shall operate on battery power and must cappable of supplying 7 volts at 600 ma to the entire subsystem for 30 minutes.
   - Due to a constraint given by Customer the sensor posts must have independent power from the interceptor.
   - The Subsystem is required to be capable of supply power for 30 minutes to provide adaquate time to complete the competition.
-- Constraint 4: The Path Sensor Array shall implement the best remote battery power solution to limit the interceptor’s Envirmental Impact by designing a system that requires one set of batteries for the entirety of the project.
+- Constraint 4: The Path Sensor Array shall implement a remote battery power solution that requires one set of batteries for the entirety of the project.
   - This constraint addresses the broader impacts of current enviromental impacts of disposing batteries.
-- Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard for saftey requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a waring sign.
+- Constaint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard for saftey requirements for a Class 3R laser. This inclundes having no intentional ocular exposure and installation of a waring sign.
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This Standards clasifies lasers as well as defines the required PPE while useing lasers.
 - Constraint 6: The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interupts, 5 Volt pin to receive and send all sensor data.
   - This constraint addresses all pins required to properly run the path sensor array.
