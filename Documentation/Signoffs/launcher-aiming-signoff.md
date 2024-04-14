@@ -2,9 +2,9 @@
 ## Functionality
 The Launcher Aiming subsystem will take in signals from the sensor post reciever and head on projectile sensor, determine the position of the target and adjust the launcher's position accordingly. This subsystem will also calculate the timing to fire the projectile and send a signal to the launcher firing subsystem. The launcher's position is controlled by two motors: one to adjust the yaw (turntable) and one to adjust the pitch (launch angle).
 ## Subsystem Constraints 
-* C1: Launcher pitch and yaw must be controllable to a precision of within 0.6 degrees
-* C2: Time to move launcher into aiming position must be less than 0.40 seconds.
-* C3: The launcher pitch actuator must have at least 0.68 Nm of torque to move the launcher turntable and the launcher yaw actuator must have 0.013 Nm of torque to move the launcher barrel. These values were provided by the mechanical engineering group.
+* C1: Launcher pitch and yaw shall be controllable to a precision of within 0.6 degrees
+* C2: Time to move launcher into aiming position shall be less than 0.322 seconds.
+* C3: The launcher pitch actuator shall have at least 0.68 Nm of torque to move the launcher turntable and the launcher yaw actuator must have 0.013 Nm of torque to move the launcher barrel. These values were provided by the mechanical engineering group.
 ## Explanations for C1 and C2
 For C1, the precision of the actuators needs to be taken into account because the less precise that the angle of the launcher is, the less accurate the intercepting shot will be over a distance. In addition, the precision is crucial because the intercepting projectile will have a dispersion from the target associated with it. 
 An experiment was conducted to determine the worst-case dispersion of an intercepting projectile. The specified projectile is a 3-inch long, half-inch diameter cylinder, with an exit velocity of approximately 30 feet per second. The launcher aims to intercept projectiles within 36 inches from the back of a blue square on the game board. Due to difficulty in building an exact launcher, a Nerf dart gun was used, matching the specified projectile size, shape, and velocity. The gun was fixed in position to control spread. Ten shots were fired at a target 36 inches away, with liquid chalk marking impacts. Maximum dispersion between shots was 1.25 inches in diameter. To significantly alter target direction, the center of the dart must hit the outer edge of the target. This is explained in the figure below:
@@ -17,7 +17,7 @@ DEVCOM provided drop times for C2 from their developed game board. The fastest r
 This leaves 0.53 seconds ($t_{intercept}$) for processing, aiming, and launching the projectile shown in the equations below.
 $$t_{intercept} = t_{first detection} - t_{target distance}$$
 $$t_{intercept} = t_{launch} +t_{travel}+t_{sensordelay}+t_{process}+t_{aim}$$
-Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for the launcher projectile to travel 28 inches away at 30 feet per second to intercept the target, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.40 seconds to move the launcher to aim to the target.
+Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for the launcher projectile to travel 28 inches away at 30 feet per second to intercept the target, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.322 seconds to move the launcher to aim to the target.
     
 
 ## Buildable Schematics
