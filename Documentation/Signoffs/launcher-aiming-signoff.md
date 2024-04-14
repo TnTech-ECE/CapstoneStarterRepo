@@ -1,22 +1,23 @@
 # Launcher Aiming
 ## Functionality
 The Launcher Aiming subsystem will take in signals from the sensor post reciever and head on projectile sensor, determine the position of the target and adjust the launcher's position accordingly. This subsystem will also calculate the timing to fire the projectile and send a signal to the launcher firing subsystem. The launcher's position is controlled by two motors: one to adjust the yaw (turntable) and one to adjust the pitch (launch angle).
-## Constraints 
-* C20: Launcher pitch and yaw must be controllable to a precision of within 0.6 degrees
-* C21: Time to move launcher into aiming position must be less than 0.40 seconds.
-* Aiming speed will be calculated from worst-case torque requirements provided by the Mechanical Engineering group
-## Explanations for C20 and C21
-For C20, the precision of the actuators needs to be taken into account because the less precise that the angle of the launcher is, the less accurate the intercepting shot will be over a distance. In addition, the precision is crucial because the intercepting projectile will have a dispersion from the target associated with it. 
+## Subsystem Constraints 
+* C1: Launcher pitch and yaw must be controllable to a precision of within 0.6 degrees
+* C2: Time to move launcher into aiming position must be less than 0.40 seconds.
+* C3: The launcher pitch actuator must have at least 0.68 Nm of torque to move the launcher turntable and the launcher yaw actuator must have 0.013 Nm of torque to move the launcher barrel. These values were provided by the mechanical engineering group.
+## Explanations for C1 and C2
+For C1, the precision of the actuators needs to be taken into account because the less precise that the angle of the launcher is, the less accurate the intercepting shot will be over a distance. In addition, the precision is crucial because the intercepting projectile will have a dispersion from the target associated with it. 
 An experiment was conducted to determine the worst-case dispersion of an intercepting projectile. The specified projectile is a 3-inch long, half-inch diameter cylinder, with an exit velocity of approximately 30 feet per second. The launcher aims to intercept projectiles within 36 inches from the back of a blue square on the game board. Due to difficulty in building an exact launcher, a Nerf dart gun was used, matching the specified projectile size, shape, and velocity. The gun was fixed in position to control spread. Ten shots were fired at a target 36 inches away, with liquid chalk marking impacts. Maximum dispersion between shots was 1.25 inches in diameter. To significantly alter target direction, the center of the dart must hit the outer edge of the target. This is explained in the figure below:
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-Signoff-V3-1/Documentation/Images/ProjectileDispersion.png)
 Factoring in the maximum dispersion diameter of 1.25 inches from the expirement, it was calculated that the maximum tolerance that the interceptor could have is +/- 0.74 degrees from 36 inches away. To be conservative the constraint will be 20 percent tighter allowing for around +/- 0.6 degrees of precision of the pitch and yaw actuators. 
 
-DEVCOM provided drop times for C21 from their developed game board. The fastest recorded drop time was 1.98 seconds on line 8, height 2. Assuming a potential 15% increase in speed at a worst-case drop time of 1.78 seconds, the projectile path sensor, if placed at the front edge of the game board, would detect the target's path in about 0.74 seconds. It takes 1.27 seconds to reach the longest interception point of 28 inches from the back of the blue square in the arena layout. 
+DEVCOM provided drop times for C2 from their developed game board. The fastest recorded drop time was 1.98 seconds on line 8, height 2. Assuming a potential 15% increase in speed at a worst-case drop time of 1.78 seconds, the projectile path sensor, if placed at the front edge of the game board, would detect the target's path in about 0.74 seconds ($t_{firstdetection}$). It takes 1.27 seconds ($t_{targetdistance}$) to reach the longest interception point of 28 inches from the back of the blue square in the arena layout. 
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-Signoff-V3-1/Documentation/Images/Ball_travel_times.png)
-This leaves 0.53 seconds for processing, aiming, and launching the projectile shown in the equations below.
+
+This leaves 0.53 seconds ($t_{intercept}$) for processing, aiming, and launching the projectile shown in the equations below.
 $$t_{intercept} = t_{first detection} - t_{target distance}$$
-$$t_{intercept} = t_{launch} +t_{travel}+t_{delay}+t_{process}+t_{aim}$$
-Considering 0.08 seconds to launch the projectile and 0.078 seconds for the launcher to intercept a projectile from 28 inches away at 30 feet per second, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.40 seconds to move the launcher to the target.
+$$t_{intercept} = t_{launch} +t_{travel}+t_{sensordelay}+t_{process}+t_{aim}$$
+Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for the launcher projectile to travel 28 inches away at 30 feet per second to intercept the target, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.40 seconds to move the launcher to aim to the target.
     
 
 ## Buildable Schematics
@@ -25,9 +26,9 @@ Considering 0.08 seconds to launch the projectile and 0.078 seconds for the laun
 The electrical shematic shows the connections between the microcontroller [1], turntable motor driver [2], turntable motor [3], launch angle motor driver [4], and launch angle motor [5]. The microcontroller - Rasperry Pi 5, was chosen due to it having all the needed pins to drive the stepper motors while having ample processing power for the head-on sensing subsystem. The motors chosen was due to the torque requirements needed to move the launcher based on the launcher's weight and moment of inertia. The motor drivers were recommended by the motor purchasing website to control the motors based on the the motors' current rating.
 ## Analysis
 ### Aiming Speed
-For the turntable motor, it's determined that the launcher's starting yaw angle will be perpendicular to the A-frame of the game board. The maximum yaw angle from this starting position is 62 degrees, ensuring a minimum launch distance of 12 inches from the farthest fishing line. A NEMA 23 class motor, with a recommended operating speed of 100 rpm[6], is chosen and can move 62 degrees in 0.103 seconds, meeting C21 requirements.
+For the turntable motor, it's determined that the launcher's starting yaw angle will be perpendicular to the A-frame of the game board. The maximum yaw angle from this starting position is 62 degrees, ensuring a minimum launch distance of 12 inches from the farthest fishing line. A NEMA 23 class motor, with a recommended operating speed of 100 rpm[6], is chosen and can move 62 degrees in 0.103 seconds, meeting C2 requirements.
 
-For the launch angle motor, the launcher's firing angle ranges from 10 to 60 degrees, with 35 degrees being its midpoint. The maximum vertical movement needed is 25 degrees. A NEMA 8 class motor, with a recommended maximum operating speed of 100 rpm, is selected. With a pulley system ratio of 3:2, the motor needs to move 37.5 degrees to adjust the launcher by 25 degrees. This movement takes 0.06 seconds, also meeting C21.
+For the launch angle motor, the launcher's firing angle ranges from 10 to 60 degrees, with 35 degrees being its midpoint. The maximum vertical movement needed is 25 degrees. A NEMA 8 class motor, with a recommended maximum operating speed of 100 rpm, is selected. With a pulley system ratio of 3:2, the motor needs to move 37.5 degrees to adjust the launcher by 25 degrees. This movement takes 0.06 seconds, also meeting C2.
 ### Torque Requirements
 The Mechanical Engineering group requried 0.68 Nm of torque from the turntable motor in order to move the weight of the turntable. The selected motor's torque has a maximum torque of 0.73 Nm shown in the graph below obtained from the datasheet [7] which satisfies the Mechanical Engineering group's torque requirement.
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-V3/Documentation/Electrical/Schematics/image-3.png)
