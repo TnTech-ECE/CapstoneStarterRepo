@@ -25,6 +25,7 @@ Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for
 ## Buildable Schematics
 ### Electrical Scheamtic
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-V3/Documentation/Electrical/Schematics/image-2.png)
+
 The electrical shematic shows the connections between the microcontroller [1], turntable motor driver [2], turntable motor [3], launch angle motor driver [4], and launch angle motor [5]. The microcontroller - Rasperry Pi 5, was chosen due to it having all the needed pins to drive the stepper motors while having ample processing power for the head-on sensing subsystem. The motors chosen was due to the torque requirements needed to move the launcher based on the launcher's weight and moment of inertia. The motor drivers were recommended by the motor purchasing website to control the motors based on the the motors' current rating.
 ## Analysis
 ### Aiming Speed
@@ -34,6 +35,7 @@ For the launch angle motor, the launcher's firing angle ranges from 10 to 60 deg
 ### Torque Requirements
 The Mechanical Engineering group requried 0.68 Nm of torque from the turntable motor in order to move the weight of the turntable. The selected motor's torque has a maximum torque of 0.73 Nm shown in the graph below obtained from the datasheet [7] which satisfies the Mechanical Engineering group's torque requirement.
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-V3/Documentation/Electrical/Schematics/image-3.png)
+
 For the launch angle motor, the Mechanical Engineers required 0.013 Nm of torque to move the launcher's barrel. The selected motor for should provide ample torque with a maximum torque of 0.14 Nm at 0.6 A shown in the graph below obtained from the datasheet [8].
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-V3/Documentation/Electrical/Schematics/image-4.png)
 ### Precision
