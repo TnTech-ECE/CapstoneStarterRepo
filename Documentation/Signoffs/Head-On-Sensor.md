@@ -55,5 +55,5 @@ To the constraint of a 100ms to report the relative location of the golf ball th
 
 [4] 	"LizUpton", "Rasbperry Pi - Documentation - rpicam_apps_getting_started," 17 01 2024. [Online]. Available: https://github.com/raspberrypi/documentation/blob/4ef432ca21ffe4c0aa3da3276ad39665f7e6a95b/documentation/asciidoc/computers/camera/rpicam_apps_getting_started.adoc#L70. [Accessed 2024 14 04].
 
-[5]  Techinn, “Raspberry Pi Camera V2 Green | Techinn,” tradeinn. https://www.tradeinn.com/techinn/en/raspberry-pi-camera-v2/137489672/p?utm_source=google_products&utm_medium=merchant&id_producte=10405867&country=us&srsltid=AfmBOoq27xq9YAKxXr5o72__pFO3w7NJPo-mX6B66ac9EpWs7bKzp9HcMUc (accessed Apr. 10, 2024).
+[5]  Techinn, “Raspberry Pi Camera V2 Green | Techinn,” tradeinn. https://www.tradeinn.com/techinn/en/raspberry-pi-camera-v2/137489672/p?utm_source=google_products&utm_medium=merchant&id_producte=10405867&country=us&srsltid=AfmBOoq27xq9YAKxXr5o72__pFO3w7NJPo-mX6B66ac9EpWs7bKzp9HcMUc [Accessed Apr. 10, 2024].
 
