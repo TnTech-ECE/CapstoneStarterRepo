@@ -1,15 +1,13 @@
 # Camera Software System
 ## Functionality 
-The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to accurately take an image of an UAS in-flight or the UAS pilot and save it to the database for usage by campus police.
+The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to accurately take an image of an unmanned aircraft system (UAS) in-flight or the UAS pilot and save it to the database for usage by campus police.
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall capture an image of an UAS in-flight or the UAS pilot | Project Proposal |
-|  2 | Shall only attempt to capture an image high enough quality to identify the UAS make or the figure of the UAS user | Tech Police |
-|  3 | Shall limit the number of redundant pictures taken | Design Constraint |  
-|  4 | If information is limited or unfeasable, a picture will not be taken | Tech Police |
-|  5 | If slew rate is too high due to drone proximity, a picture will not be taken | Design Constraint |
-|  6 | Shall only give quality images when the light levels are appropriate 
+|  1 | If the data transmitted from the database to the camera system does not contain the UAS location and the UAS altitude, a picture will not be taken | Design Constraint|
+|  2 | If the UAS's velocity is recieved by the system, the rate of pictures taken will change depending UAS's velocity | Design Constraint |   
+|  3 | If slew rate is too high due to drone proximity, a picture will not be taken | Design Constraint |
+|  4 | Shall only give quality images when the light levels are appropriate | ccc | 
              
 <sup>1</sup> Capturing an image of the unauthorized UAS will assist the Tech Police in regulating Tech Policy 190 [^1]. 
 
@@ -20,14 +18,14 @@ The camera software system will be reponsible for controlling the camera hardwar
 <sup>4</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/143036859/1650485d-023f-4dae-b7a3-e5a890cc4e53)
+
 ## Analysis
 ### Coding Language
 The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
 ### Flowchart breakdown
 algorithm and test cases
 #### Input data
-This data will be obtained from the RID signal if possible and sent to the camera system [^3]. 
+This data will be obtained from the RID signal and sent to the camera system [^3]. 
 - Drone Location
   - Latitude (deg * 10^7) with a minimum limit of ~ 11 mm
   - Longitude (deg * 10^7) with a minimum limit of ~ 11 mm
