@@ -31,7 +31,7 @@ Below is the charachteristics sheet of the Adafruit Featherwing Relay:
 
 
 **Constraint Solution 3:**
-The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space. For this constraint, the mechanical engineering team and the electrical engineering team will be working together to ensure that the total design remains within the cubic foot of space allowed.
+The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space. For this constraint, the mechanical engineering team has allowed a space of 4 inches long with a 3 inch max diameter for the DC motor used. The NC5FN-3550-CVC 12V TRANSMOTEC DC motor has a length of 2.56 inches and a diameter of 1.5 inches which will satisfy this requirement. The relay's placement within the cubic foot of space is much less critical and can fit well within the space allowed by DEVCOM.
 
 **Constraint Solution 4:**
 The Launching and Firing subsystem shall use a 12V DC motor from TRANSMOTEC model number NC5FN-3550-CVC which exhibits the ability to operate the mechanism at a torque of 31 mN-m at 3700 RPM nominally. 28 nN-m is the highest torque required to operate the Fire-Preload sequence of the Launching and Firing subsystem.
