@@ -23,6 +23,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 ## Schematic
 <img src="/Documentation/Images/flow_control_v1.png" >
+
 ## Analysis
 
 The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
@@ -38,6 +39,9 @@ After obtaining an API key, we can implement the API call using the key in the H
 
 For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website in a directory set aside for the police, or at least on a machine that they have. 
 
+### Analysis
+
+To ensure proper operation of the website, a wide variety of test cases may be used for thorough testing. 
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
