@@ -17,7 +17,9 @@ DEVCOM provided drop times for C2 from their developed game board. The fastest r
 This leaves 0.53 seconds ($t_{intercept}$) for processing, aiming, and launching the projectile shown in the equations below.
 $$t_{intercept} = t_{first detection} - t_{target distance}$$
 $$t_{intercept} = t_{launch} +t_{travel}+t_{sensordelay}+t_{process}+t_{aim}$$
-Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for the launcher projectile to travel 28 inches away at 30 feet per second to intercept the target, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.322 seconds to move the launcher to aim to the target.
+Considering it takes 0.08 seconds to launch the projectile and 0.078 seconds for the launcher projectile to travel 28 inches away at 30 feet per second to intercept the target, with a 0.03-second delay in projectile path sensing and an estimated maximum processing time of 0.02 seconds, there's a maximum of 0.322 seconds to move the launcher to aim to the target. 
+
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-Signoff-V3-1/Documentation/Images/Timing_Chart.png)
     
 
 ## Buildable Schematics
