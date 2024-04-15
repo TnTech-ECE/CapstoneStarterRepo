@@ -5,11 +5,10 @@ The Camera Hardware system will be responsible for taking an image of a drone in
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall reliably capture an image of a drone in-flight or the pilot, within contiguous campus airspace | Project Proposal|             
-|  2 | Shall capture a quality image of the drone from X meters away to ensure image quality| Design Constraint|                          
+|  1 | Shall consistently capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot  | Project Proposal|
+|  2 | Shall capture a quality image of the drone from X meters away to ensure image quality of 1080x720p, X ppi.| Design Constraint|                    
 |  3 | Shall track drone across contiguous airspace using Remote ID location data | Concept Design|
-|  4 | Shall resist weather and external conditions to a reasonable degree| Maintainence Constraint|
-|  5 | Shall not capture an image of an individual or drone until either trespass into contiguous campus airspace| Ethical Constraint|
+|  4 | Shall resist weather and external conditions to an IPXX rating (temp) | Maintainence Constraint|
 
 <sup>1</sup> Capturing an image of the drone is a large part of evidence collection and can assist campus police in stopping unauthorized drone flight from repeat offenders
 
