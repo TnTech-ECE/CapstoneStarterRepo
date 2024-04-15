@@ -71,8 +71,6 @@ In order to provide power to the other subsystems on the main interceptor body a
 
 [4] https://www.amazon.com/mxuteuk-Mushroom-Emergency-Warranty-HB2-BS542/dp/B07R4J2Z54/ref=asc_df_B07R4J2Z54/?tag=&linkCode=df0&hvadid=385401161937&hvpos=&hvnetw=g&hvrand=17234533040121678490&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-838156276780&mcid=b2580346654d317cab69a5ee91c65282&ref=&adgrpid=80249224042&gclid=Cj0KCQjwq86wBhDiARIsAJhuphletlr7kWpITR1lMhnkAoI73Gumfzjyz5JZzmfFfv808RJu31RnwMcaApSsEALw_wcB&th=1
 
-[5] DC/DC Converter: https://www.digikey.com/en/products/detail/dfrobot/FIT0170/7067688
-
 [5] 2 Channel Relay: https://www.digikey.com/en/products/detail/sunfounder/TS0010D/18668618?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-18668618_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaItUl1yjb_Qnv_kPcb1fu8AdnITr058gHNPCBow54C-SMXUWBwNeREaAqtQEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaItUl1yjb_Qnv_kPcb1fu8AdnITr058gHNPCBow54C-SMXUWBwNeREaAqtQEALw_wcB
 
 [6] Purple LED Strip: https://www.adafruit.com/product/4117
