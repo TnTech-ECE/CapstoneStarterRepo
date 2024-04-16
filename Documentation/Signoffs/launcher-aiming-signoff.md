@@ -1,6 +1,6 @@
 # Launcher Aiming
 ## Functionality
-The Launcher Aiming subsystem will take in signals from the sensor post reciever and head on projectile sensor, determine the position of the target and adjust the launcher's position accordingly. This subsystem will also calculate the timing to fire the projectile and send a signal to the launcher firing subsystem. The launcher's position is controlled by two motors: one to adjust the yaw (turntable) and one to adjust the pitch (launch angle).
+The Launcher Aiming subsystem will take in signals from the main control unit, and adjust the launcher's position accordingly. The launcher's position is controlled by two motors: one to adjust the yaw (turntable) and one to adjust the pitch (launch angle). In order to acheive the functionality, the subsystem is constrained by the motor precision, speed, and torque.
 ## Subsystem Constraints 
 * C1: Launcher pitch and yaw shall be controllable to a precision of within 0.6 degrees
 * C2: Time to move launcher into aiming position shall be less than 0.322 seconds.
