@@ -3,10 +3,6 @@
 
 ## **Function:**
 
-![Elaboration Photo](../Images/Sensor_subsystem/conceptual.png)
-
-Figure 1: Sensor Subsystem
-
 The goal of this subsystem is to accurately and quickly gather several data points to determine the
 distance, speed, and position of the target as it slides down the fishing line.
 
@@ -16,134 +12,32 @@ distance, speed, and position of the target as it slides down the fishing line.
 |-----|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                        | System Constraint |
 | 2   | The sensor, when mounted, shall not exceed the 1' x 1' x 1' size constraint of the launcher                                                    | Conceptual Design |
-| 3   | The sensor shall be able to retrieve at least 2 data points within 1.95 s                                                                      | Rulebook          |
+| 3   | The sensor shall be able to retrieve at least 2 data points within 1.95 s in order to calculate speed                                          | Rulebook          |
 | 4   | SOMETHING ABOUT RESOLUTION AND LINE DETECTION | Conceptual Design |
-| 5   | The sensor shall be able to retrieve position data from at least 2 points along the fishing line to calculate speed                            | Conceptual Design |
-| 6   | The sensor shall have a range of at least 6 feet                                                                                               | Conceptual Design |
-| 7   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet                                                 | System Constraint |
-| 8   | The sensor shall have a field of view greater than 35.5°                                                                                       | Device Constraint |
+| 5   | The sensor shall have a range of at least 6 feet                                                                                               | Conceptual Design |
+| 6   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet                                                 | System Constraint |
+| 7   | The sensor shall have a field of view greater than 35.5°                                                                                       | Device Constraint |
 
-1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor
-3. The launcher has the constraint of being small enough to fit within a box that is 1' x 1' x 1' in size, therefore the sensor, when mounted directly to the launcher itself cannot exceed these boundaries
-4. 
-5. The sensor must have a resolution great enough to be able to distinguish 
-6. The sensor shall be able to retrieve position data from at least 2 points along the fishing line to calculate speed
-7. The sensor shall have a range of at least 6 feet
-8. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
-9. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 35.5°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
+1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor.
+2. The launcher has the constraint of being small enough to fit within a box that is 1' x 1' x 1' in size. Therefore the sensor, when mounted directly to the launcher itself, cannot exceed these boundaries.
+3. The fastest time recorded from DEVCOM is 1.95 s for the golf ball to reach the bottom of its trajectory. Therefore, the sensor must be able to retrieve data for at least 2 positions so that speed can be calculated.
+4. The sensor must have a resolution great enough to be able to distinguish NOT FINISHED HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+5. The furthest point that the sensor must be able to track and detect is the starting point of each golf ball which is about 6 feet from the launcher
+6. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
+7. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 35.5°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
 
 ## **Buildable Schematic**
 
-![Absolute Maximums](../Images/Sensor_subsystem/maximums.png)
-
-Based on the specification sheets for the LDK130 ICs that are included in the board, the input voltage for
-the voltage enable input can range from a low of -0.3v to a high of VI + 0.3. Therefore, in this case it
-would be appropriate to use the 5v from the battery power system as seen below.
-
 ![Schematic](../Images/Sensor_subsystem/schematic.png)
 
-The functionality of the board itself and its individual pieces can be found in the data sheets in the
-references section. These specific references are the datasheet for the SATEL-VL53L8 as well as
-the data sheets for the vl53l8CX, and the LDK130 series chip.
-
-
 ## **Analysis:**
-
-Based on the constraints given, the team chose the VL53L8CX time of flight sensor. This sensor
-was chosen because it is able to detect plastic, has a range of about thirteen feet, has a wide field of
-view, has low power consumption requirements, has a sampling frequency that can take multiple
-measurements of the ball’s trajectory, and can be used to determine the distance for both height and location.
-After determining the sensor, a SATEL-VL53L8 board was chosen to integrate with the sensor. This
-board allows for integration with a microcontroller that will be used in the communication system to
-transmit the data. It also provides its own power regulation for the sensor therefore only requiring a 5-volt
-input from the battery or device power systems. The exact specifications and advantages of the device
-that meet the project specifications and expected functionality will be further discussed.
-
-First of all, the team plans to use this sensor because of its ability to detect plastic objects, but the datasheet does not specify the minimum size an object can be detected. This is because the time of flight sensors use the reflectivity of the object being tracked, so the minimum size that can be detected will vary based on the object's material. The datasheet does note the wavelength of light the sensor laser uses which is 940 nm. It is also noted by the manufactor that the object has to be large enough for the photons of the light to reflect off of as a general minimum size for the object. This means the object size can vary based on reflectivity, but objects that are too small for light to bounce off of will not be detectable at all. Plastic golf balls are large enough to reflect light because the golf ball can have a glare. However, the team still had to determine that the golf ball is reflective enough to be detected by the sensor at the planned distance. In order to do this, a plastic training golf ball was placed under fluorescent light. A noticeable glare was observed by several people when placed under the light from approximately seven and a half feet away. The highest wavelength of fluorescent light is 700 nm. The wavelength of the sensor's laser is 940 nm. Studies have shown that plastic's reflectivity increases with wavelength under about 1200 nm to 1400 nm before starting to decrease. This means the golf ball should be more reflective to the sensor because of the higher wavelength. Based on this information, the team has determined that the golf ball is reflective enough at the distance it will be from the sensor for the object to be detectable. Next, the team focuses on determining if the sensor can sense the speeds the golf ball will reach.
-
-The team plans on using two sensors to determine the golf ball’s height, line position, and speed.
-One sensor will be located on the stand closest to where the golf ball starts its trajectory. This sensor can
-be used to determine the height because it will be closest to the original height. It is important to do the
-measurements for distance and height because the closer the sensor is to the ball’s location the higher the
-accuracy. At about six feet, the approximation of the worst-case scenario of distance to the fishing line, the
-sensor has a four percent tolerance for eighty-eight percent reflective objects. This will provide a ±2.88
-inch offset for where the golf ball may actually be which is fine because the gap between the fishing lines
-is four inches horizontally and seven inches vertically. Since the offset is smaller than the gaps, the sensor
-should detect enough change in distance for each line to tell them apart as well as which height level is
-being used. This measurement also leaves enough room for the error to increase due to changed
-conditions and still function. The second sensor will be placed on the interceptor device itself. This will
-allow the sensor to have the same angle on the golf ball regardless of where the ball is on the fishing line.
-This will be used to determine the speed using multiple samples from the sensor as the ball moves.
-Ideally, the speed, position, and height will be confirmed by cross-referencing the data both sensors get to
-account for the four percent error. This error approximation comes from the datasheets provided
-specifications when the sensor is acting in 4x4 resolution mode at 30 HZ which is ideal to obtain several
-samples for location and speed calculations.
-
-This system must be able to obtain several accurate samples within the time the golf ball is
-dropped, to the time it enters the designated firing zone. The maximum length between the firing
-mechanism and the start of the board is 60 inches. Because of this, it is imperative the VL53L8CX get
-ample data within that 60-inch range. The VL53L8CX has a frame rate capability of 60 HZ. This
-frequency gives a clock period of 16.67 ms. 
-
-![Clock Period formula](../Images/Sensor_subsystem/clock_period.png)
-
-This means the VL53L8CX will receive another data sample every 16.67 ms. From the conceptual design,
-we can assume the max speed of the golf ball is 6 m/s. If the golf ball is traveling at this speed, it will go
-236.448 inch/sec:
-
-![Speed formula](../Images/Sensor_subsystem/speed.png)
-
-This means the golf ball will pass by the firing machine after .25376 seconds or 253.76 ms. This will
-allow for 14 samples to be taken before the projectile reaches the interceptor when operating at the
-maximum frequency. However, the mode that the device will be operating on based off the information on
-the datasheet will operate at 30 HZ. This will result in a clock period of 33.33 ms. This will halve the
-number of samples to seven samples. However, only two samples are absolutely necessary for the sensing
-to work as intended. Two samples will be needed to determine the speed of the golf ball. More samples
-allow for better estimations and higher accuracy which is why seven samples is a good rate.
-
-There are two different ways that the sensor can send and receive the data it is gathering, I2C
-(Inter-Integrated Circuit) and SPI (Serial Peripheral Interface). Both of these options rely on serial data
-transfer however, SPI runs at a much higher frequency at a maximum of 3 MHz as opposed to the
-frequency of 1 MHz of I
-2C. In order to run this board in SPI mode, the pins EXT_MOSI_SDA,
-EXT_MISO, NCS, and EXT_MCLK_SCL are used for serial data in, serial data out, chip select, and
-serial clock respectively. The board will also have to have the pins LPn and EXT_SPI_I2C_N have to be
-set to a high logic level. Based on the schematic provided by the datasheet from the SATEL-VL53L8, it is
-known that the pin LPn is set high by default because of the pull-up resistor to IOVDD, however, a
-connection from the EXT_IOVDD pin to the EXT_SPI_I2C_N pin will be required because a pull-down
-resistor sets this pin to a low logic level.
 
 ### **Bill of Materials:**
 
 | Device | Quantity | Price | Total |
 | ------ | -------- | ----- | ----- |
-| SATEL-VL53L8 Board (2-pack)| 1 | $27.50 | $27.50 |
+| Intel RealSense D435i | 1 | $303.39 | $303.39 |
 
 ## **References:**
 
-[1] “Datasheet - VL53L8CX - low-power high-performance 8x8 ...,” STMicroelectronics,
-https://www.st.com/resource/en/datasheet/vl53l8cx.pdf (accessed Apr. 4, 2024).
 
-[2] “Data brief - satel-VL53L8 - breakout board based on the ...,” STMicroelectronics,
-https://www.st.com/resource/en/data_brief/satel-vl53l8.pdf (accessed Apr. 4, 2024).
-
-[3] “UM3109-A-GUIDE-FOR-USING-THE-VL53L8CX- ...,” STMicroelectronics,
-https://www.st.com/resource/en/user_manual/um3109-a-guide-for-using-the-vl53l8cxlowpower-highperformance-timeofflight-multizone-ranging-sensor-stmicroelectronics.pdf
-(accessed Apr. 4, 2024).
-
-[4] “LDK130-300 mA low quiescent current very low noise LDO (automotive for SOT23-5L
-package),” STMicroelectronics,
-https://www.st.com/content/ccc/resource/technical/document/datasheet/29/10/f7/87/2f/66/4
-7/f4/DM00076097.pdf/files/DM00076097.pdf/jcr:content/translations/en.DM00076097.pd
-f (accessed Apr. 4, 2024).
-
-[5] “Detect presence of small object moving at supersonic speeds using TOF sensor(s),” Solved: Detect presence of small object moving at superson... - STMicroelectronics Community, https://community.st.com/t5/imaging-sensors/detect-presence-of-small-object-moving-at-supersonic-speeds/td-p/615253 (accessed Apr. 9, 2024). 
-
-[6] “What is glare? and how to minimize it.,” What Is Glare? And How To Minimize It. | Lumen8, https://lumen-8.com.au/news/what-glare-and-how-minimize-it#:~:text=There%20are%20two%20main%20types,computer%20screen%20or%20glossy%20surface (accessed Apr. 9, 2024). 
-
-[7] Center for Devices and Radiological Health, “Compact fluorescent lamps (cfls) – fact sheet/FAQ,” U.S. Food and Drug Administration, https://www.fda.gov/radiation-emitting-products/home-business-and-entertainment-products/compact-fluorescent-lamps-cfls-fact-sheetfaq#:~:text=Since%20CFLs%20are%20designed%20to,(%3E%20700%20nm)%20radiation. (accessed Apr. 9, 2024). 
-
-[8] M. Moshtaghi, E. Knaeps, S. Sterckx, S. Garaba, and D. Meire, “Spectral reflectance of marine macroplastics in the VNIR and SWIR measured in a controlled environment,” Scientific reports, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7940656/ (accessed Apr. 9, 2024). 
-
-[9] “Pull-up resistor and pull-down resistor explained,” Basic Electronics Tutorials,
-https://www.electronics-tutorials.ws/logic/pull-up-resistor.html (accessed Apr. 3, 2024). 
