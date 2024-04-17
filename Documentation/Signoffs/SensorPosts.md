@@ -18,7 +18,7 @@
 
 ## Schematics
 <p align = "center">
-<img src = [https://github.com/JTJones73/Capstone2024-Team2/blob/SensorPosts/Documentation/Images/CapstoneSchematicV1-1.png](https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/CapstoneSchematicV1-1.png) width='400'>
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/CapstoneSchematicV1-1.png width='400'>
 </p>
 
 ## Analysis
