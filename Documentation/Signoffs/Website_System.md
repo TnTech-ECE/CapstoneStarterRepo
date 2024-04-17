@@ -41,9 +41,9 @@ For the website to be accessible at all times, it will need to be hosted on a ma
 
 ### Testing
 
-To ensure proper operation of the website, a wide variety of test cases may be used for thorough testing. The initial test will be conducted using a set of valid and invalid login data. Utilizing this pair of login keys, we will be able to check whether or not the website is accurately allowing only authorized users to access it. Once we have verified that only authorized users can use the site, we will move onto testing the other features of the website. 
+To ensure the website's proper operation, a wide variety of test cases may be used for thorough testing. The initial test will be conducted using a set of valid and invalid login data. Utilizing this pair of login keys, we will be able to check whether or not the website is accurately allowing only authorized users to access it. Once we have verified that only authorized users can use the site, we will move on to testing the other features of the website. 
 
-At this point, we can use a dummy database filled with data that we create to verify the correct operation of the website. 
+At this point in the program's execution, we can use a dummy database filled with data that we create to verify the correct operation of the website. Some of this data will be created to hinder the program, which will result in errors being generated and handled correctly. If the program can sufficiently handle all of the erroneous cases, then it will certainly be able to handle the data received from the database subsystem. 
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
