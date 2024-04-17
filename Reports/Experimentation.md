@@ -20,7 +20,9 @@ The navigation subsystem was tested by what percentage of the time it was able t
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
-The goal was to have the navigation subsystem detect the corner 80% of the time, and it successfully detected 86% of the time. This passes the benchmark required for successful deployment of the navigation sensors. This can be seen by the blue bar being over the orange line. The Navigation sensor had to be significantly closer to the yellow line to accurately detect the line than a 1/2 inch. After this was discovered the navigating went significantly smoother. It was mounted on the front of the bot in the center, as designed. The difference between the original design and the final product was that the navigation sensors were attached to the bottom of the front wheelie bars instead of directly on the chassis. This was done to be able to avoid the sensors getting caught on the small boxes.
+The goal was to have the navigation subsystem detect the corner 80% of the time, and it successfully detected 86% of the time. This passes the benchmark required for successful deployment of the navigation sensors. This can be seen by the blue bar being over the orange line. The Navigation sensor had to be significantly closer to the yellow line to accurately detect the line than a 1/2 inch. After this was discovered the navigating went significantly smoother. It was mounted on the front of the bot in the center, as designed. The difference between the original design and the final product was that the navigation sensors were attached to the bottom of the front wheelie bars instead of directly on the chassis. This was done to be able to avoid the sensors getting caught on the small boxes. The distance from the navigation sensors to the yellow line is shown in the graph below, clearly showing that it had to be significantly closer to the line than originally anticipated.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/67c7f410-a841-43b9-a30d-453d43f206fe)
 
 ### Power
 
