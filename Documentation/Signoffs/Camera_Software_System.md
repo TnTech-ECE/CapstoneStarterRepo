@@ -4,15 +4,18 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | If the data transmitted from the database to the camera system is incomplete (one or multiple pieces of [input data](#input-data) are missing), the system will not act upon the information | Tech Police |
-|  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Stakeholder Constraint | 
-|  3 | The system shall prioritize capturing a picture of the UAS user if the system obtains the location of the UAS user | Tech Police | 
+|  1 | If the [required data](#input-data) transmitted from the database to the camera system is incomplete (one or multiple pieces of required input data are missing), the system will not act upon the required input data | Tech Police |
+|  2 | If the [optional data](#input-data) transmitted from the database to the camera system is incomplete (either latitude or longitude values are missing), the system will not act upon the optional input data | Tech Police |
+|  3 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Stakeholder Constraint | 
+|  4 | The system shall prioritize capturing a picture of the UAS user if the system obtains the location of the UAS user | Tech Police | 
         
-<sup>1</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
+<sup>1</sup> This constraint accounts for situations where the RID signal does not contain all of the required information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture of the UAS, as that image will be unusable to the Tech Police. 
 
-<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture a picture of the unauthorized UAS or UAS user because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
+<sup>2</sup> This constraint accounts for situations where the RID signal does not contain all of the optional information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture of the UAS user, as that image will be unusable to the Tech. Police.
 
-<sup>3</sup> The Tech Police prefer a picture of the UAS user over a picture of the UAS, however the UAS user location data is an optional addition to the RID signal [^2].
+<sup>3</sup> The stakeholders for the project did not specify that the camera system must always capture a picture of the unauthorized UAS or UAS user because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
+
+<sup>4</sup> The Tech Police prefer a picture of the UAS user over a picture of the UAS, however the UAS user location data is an optional addition to the RID signal [^2].
 
 ## Schematic
 <img src= "/Documentation/Images/Camera_Software_System_Flowchart.png">
@@ -35,7 +38,7 @@ Required data:
 Optional data:
 | Data [^2] | Unit | Resolution | 
 | ---- | ---- | ---------- |
-| Control Station Location Latitiude | degrees * 10^7 | ~ 11 mm minimum |
+| Control Station Location Latitude | degrees * 10^7 | ~ 11 mm minimum |
 | Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
 
 ## References
