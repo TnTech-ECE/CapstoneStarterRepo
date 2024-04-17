@@ -1,19 +1,28 @@
 ## Experimentation and Testing
 
-In this document is contained the experimentation and testing of the robot, and an analysis of those results. 
+ This document contains the experimentation and testing of the robot and an analysis of those results. 
 
 ### Start Sensor
 
-The start sensor was tested 30 times, and the target success rate was 80% in under 3 seconds. The results of the tests along with the response time is recorded below. The start sensor needed to be within a certain range of the green LED as described in the detail design papers. This was tested in parallel with the start sensor starting the robot. The placement of the sensor was a lot less specific in testing then stated in the datasheets and detail design. This led to a higher success rate of the sensor starting the robot because the placement was not as important. This became especially clear after the removal of the shroud, leading to a 100% sucees rate in the sensor after the removal.
-
+- Constraint to Test: The start sensor shall detect the start light in under 3 seconds at least 80% of the time.
+- Experimental Process: The robot is placed in the start pad of the board within range of the start light, and the start light is lit. The amount of time until the robot begins movement is recorded. However, if the robot does not start within 3 seconds, it is recorded as a failure.
+- 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/347640dd-8cce-404f-bac4-75ec6ecef214)
 
-As shown above, the start sensor worked 100% of the time, exceeding the required 80%. This also shows that the response time for the sensor was under 1 second, and was probably faster than the recorded time as the time was reliant on human reaction time. The start sensor percentage of successful starts was initially lower, then the shroud was removed from around the sensor. Once the shroud was removed, the distance from the light to the sensor was greatluy increased, and those distances can be seen below.
+- Analysis of Results:
+<br> As shown above, in the 30 trials the start sensor worked 100% of the time, exceeding the required 80%. This also shows that the response time for the sensor was under 1 second, and was probably faster than the recorded time as the stopwatch was reliant on human reaction time. The start sensor percentage of successful tests was initially lower. Once modifications to the code were made during SECON and the shroud was removed from around the sensor, the sensor became much more responsive to the start light and was tested from scratch with the improved code, which resulted in a 100% success rate.
 
+***
+
+- Constraint to Test: The start sensor shall be placed close to 1" from the start light to guarantee functionality.
+- Experimental Process: The robot is placed in the start pad of the board with the start sensor more than 1" from the start light and then the start light is lit. If the start sensor activates properly, then the distance is recorded. 
+  
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/ab4c1910-a1e7-4267-8429-1f1b4b3e1185)
 
-This shows the sensor did not need to be right next to the light in order to function once ambient light was allowed in without the shroud.
+- Analysis of Results:
+<br> As shown above, in the 30 trials the start sensor activated all 30 times whether it was at exactly 1" or as far as 1.4" from the light. This shows that although the estimation for the maximum functional distance was 1" the actual maximum functional distance was closer to 1.4". This allows some human error in the placement of the robot on the board, while still maintaining the functionality of the start sensor. Again this improved sensitivity of the sensor resulted from modifications to the sensor's code and removal of the shroud while at the SECON competition.
 
+***
 ### Navigation
 
 - Constraint to Test: The navigation sensors must be able to detect the yellow line at least 80% of the time.
