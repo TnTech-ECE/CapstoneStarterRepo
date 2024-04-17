@@ -8,19 +8,19 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ## **Constraints:**
 
-| No. | Constraint                                                                                                                                     | Origin            |
-|-----|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                        | System Constraint |
-| 2   | The sensor shall be able to retrieve at least 2 data points within 1.95 s in order to calculate speed                                          | System Constraint |
-| 3   | SOMETHING ABOUT RESOLUTION AND LINE DETECTION | Conceptual Design |
-| 4   | The sensor shall have a range of at least 6 feet                                                                                               | Conceptual Design |
-| 5   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet                                                 | System Constraint |
-| 6   | The sensor shall have a field of view greater than 24.50°                                                                                       | Device Constraint |
+| No. | Constraint                                                                                              | Origin            |
+| --- | ------------------------------------------------------------------------------------------------------- | ----------------- |
+| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                 | System Constraint |
+| 2   | The sensor shall be able to retrieve at least 2 data points within 1.95 s in order to calculate speed   | System Constraint |
+| 3   | The sensor shall have a resolution great enough so that the golf ball spans multiple pixels from 6 feet | Conceptual Design |
+| 4   | The sensor shall have a range of at least 6 feet                                                        | Conceptual Design |
+| 5   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet          | System Constraint |
+| 6   | The sensor shall have a field of view greater than 24.50°                                               | Device Constraint |
 
 1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor.
 
 2. The fastest time recorded from DEVCOM is 1.95 s for the golf ball to reach the bottom of its trajectory. Therefore, the sensor must be able to retrieve data for at least 2 positions so that speed can be calculated.
-3. The sensor must have a resolution great enough to be able to distinguish NOT FINISHED HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+3. The sensor must have a resolution great enough so that the golf ball will %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4. The furthest point that the sensor must be able to track and detect is the starting point of each golf ball which is about 6 feet from the launcher
 5. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
 6. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 24.50°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
@@ -29,15 +29,19 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ![Schematic](../Images/Sensor_subsystem/schematic.png)
 
+*Figure 1: Buildable Schematic of subsystem*
+
 ## **Analysis:**
 
 ### **Field of View**
 
-To start off, the camera or sensor that will be used must have a field of view (FOV) of at least 24.50°. This was found by using the measurements of the gameboard given in the rulebook from DEVCOM.
+To start, the camera or sensor that will be used must have a field of view (FOV) of at least 24.50°. This was found by using the measurements of the gameboard given in the rulebook from DEVCOM.
 
 ![Min FOV](../Images/Sensor_subsystem/field_of_view.png)
 
-In order to find the minimum FOV, the angle, X, needs to be calculated. X gives the maximum angle at which the fishing lines will extend from anchor point 3 to anchor point 2. The FOV needs to be wider than X in order to have every fishing line in the view of the camera. 
+*Figure 2: Diagram of gameboard with measurements showing the angle of outermost fishing lines*
+
+In order to find the minimum FOV, the angle, X, needs to be calculated. X gives the maximum angle at which the fishing lines will extend from anchor point 3 to anchor point 2. The FOV needs to be wider than X in order to have every fishing line in the view of the camera.
 
 ~~~ math
 
@@ -55,7 +59,15 @@ This angle value gives some room for error due to some missing measurements from
 
 ### **Placement of Camera**
 
-According to Intel, the D435 has a minimum depth sensing range of about 28 cm or 11.02 in [2].
+According to Intel, the D435 has a minimum depth sensing range of about 28 cm or 11.02" [2]. Because of this, the camera should be mounted towards the back of the launcher so that the camera will be able to use the depth camera for the maximum amount of time. The camera should also be placed as high up within the 1' X 1' X 1' area for the launcher. Measuring from the 1/4-20 threaded mounting point on the bottom of the camera, it should be mounted 10" from the ground and 2" from the back of the launcher base. This mounting position allows for some room for the USB cable as well as the mounting bracket so that nothing exceeds the boundary of the launcher size constraint. In order to center the fishing lines in the FOV of the camera, the camera should be mounted at about a 21.64° angle from the horizontal. This angle was found using the angle of the fishing line for both variable heights. This angle points the center of the camera at a point directly 46.5" from the ground on the A-frame where anchor point 2 is. This height is in the middle of the 2 variable heights given in the DEVCOM rulebook. Using this height in combination with the camera height and distance from anchor point 2 this angle can be found. The distance from the back of the launcher to anchor 2 is shown in the image above to be 94".
+
+~~~ math
+
+arctan((46.5 - 10) / (94 - 2)) = 21.64°
+
+~~~
+
+Using this angle will allow every line to be visible within the 42° vertical FOV of the RGB camera
 
 ### **Frame Rate**
 
@@ -63,9 +75,9 @@ According to Intel, the D435 has a minimum depth sensing range of about 28 cm or
 
 ## **Bill of Materials:**
 
-| Device               | Quantity | Price   | Total   |
-| -------------------- | -------- | ------- | ------- |
-| Intel RealSense D435 | 1        | $304.07 | $304.07 |
+| Name of Item         | Description  | Used in which subsystem(s) | Part Number      | Manufacturer            | Quantity | Price      | Total   |
+| -------------------- | ------------ | -------------------------- | ---------------- | ----------------------- | -------- | ---------- | ------- |
+| Intel RealSense D435 | Depth Camera | Sensor                     | D435             | Intel                   | 1        | $304.07    | $304.07 |
 
 ## **References:**
 
