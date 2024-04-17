@@ -1,5 +1,5 @@
 ## Functionality
-The Launching and Firing subsystem is the system that will fire the intercepting round when given a signal from the aiming subsystem. This system will also continue to power the DC motor used to operate the firing mechanism and preload the launching apparatus so that each round may fire with minimum delay. This subsystem will use a 12-volt DC brushed motor along with a relay that will use a signal from the aiming subsystem as an input to allow the DC motor to operate. 
+The Launching and Firing subsystem is the system that will fire the intercepting round when given a signal from the aiming subsystem. This system will also control the power to the DC motor used to operate the firing mechanism and preload the launching apparatus so that each round may fire with minimum delay once the aiming subsystem has completed it's processes. This subsystem will use a 12-volt DC brushed motor along with a relay that will use a signal from the aiming subsystem as an input to allow the DC motor to operate. 
 
 ## Specifications and Restraints
 | Number | Constraint | Constraint description | Origin |
