@@ -67,12 +67,15 @@
 ***
 ### Main Control
 
-The main controller code needed to be able to complete the course at least 85% of the time. The table below shows percentage of course traversed each trial.
+- Constraint to Test: The main controller shall direct the robot so that it can complete the course at least 85% of the time.
+- Experimental Process: The robot was powered, set in the start area, and activated. The robot traversed the course and if it did not reach the end then the percentage it reached was measured as a percentage. If it reached the end, it was marked as 100%. This was repeated 30 times.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/a8e9cd95-c6c8-4694-9917-4931f2e0640b)
 
-This shows that the code allowed the course to be completed 87% of the time, which is within the required parameters. The main controller was also responsible for the timers for the second turn and the gap crossing triggers. This meant that the main control was also responsible for the deployment of the team spirit and button push subsystems. The trials for these subsystems were only accounted for when the robot reached those places, as the main control sometimes failed to complete the course, as shown above.
+- Analysis of Results:
+<br> This shows that the main controller directed the robot to complete the course successfully 87% of the time. Which is above the required 85%. The times that it did not complete the course happened most frequently at ~40% and ~85%. The ~40% mark indicates that the robot would have trouble with the descent of the first hill and fail there. This was most likely due to the navigation sensor lifting off the board more than 0.25" before the descent of the hill, thus blinding the robot temporarily but long enough for the robot to get far enough off the line that it could not correct. The ~85% mark indicates that the robot failed at the gap. This was not due to not being able to cross the gap, but rather to not being oriented properly before crossing. The navigation sensor again would lift more than 0.25" off the board when ascending the ramp up to the gap and the robot would be off the line and not able to correct before crossing the gap and so it would run into the wall instead of crossing the gap properly. However, again 87% of the time the robot would be able to overcome these and any other errors and complete the course successfully.
 
+***
 ### Button Push
 
 The button pusher deployed successfully every time the robot crossed the gap or reached the point in the code that deployed it, however it did not push the button every time it deployed. It needed to push the button 85% of the time. The table below shows the success rate of the button pusher.
