@@ -4,13 +4,15 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | If the data transmitted from the database to the camera system does not contain the UAS location and the UAS altitude, a picture will not be taken | Design Constraint|
-|  3 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Design Constraint | 
-|  4 | The system shall prioritize taking a picture of the UAS user over the UAS. | Tech Police | 
+|  1 | If the data transmitted from the database to the camera system does not contain the UAS location and the UAS altitude, a picture will not be taken | Tech Police |
+|  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Stakeholder Constraint | 
+|  3 | The system shall try and capture a picture of the UAS user if the system obtains the location of the UAS user | Tech Police | 
         
 <sup>1</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
 
-<sup>2</sup> The design of the system will not be complex enough to determine the visibility of the UAS based on environmental factors. Therefore, the system cannot be held responsible for these factors obstructing the view of the UAS in pictures taken by the system.  
+<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture a picture of the unauthorized UAS or UAS user because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
+
+<sup>3</sup> The Tech Police prefer a picture of the UAS user over a picture of the UAS. 
 
 ## Schematic
 <img src= "/Documentation/Images/Camera_Software_System_Flowchart.png">
