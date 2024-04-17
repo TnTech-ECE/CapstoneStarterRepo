@@ -10,6 +10,8 @@ The camera software system will be reponsible for controlling the camera hardwar
         
 <sup>1</sup> This constraint accounts for situations where the RID signal does not contain all of the neccessary information or the data transfer encounters an error that corrupts the data. In both situations, the system should ignore the data and not take a picture, as that image will be unusable to the Tech Police. 
 
+<sup>2</sup> The design of the system will not be complex enough to determine the visibility of the UAS based on environmental factors, therefore 
+
 ## Schematic
 <img src= "/Documentation/Images/Camera_Software_System_Flowchart.png">
 
@@ -19,7 +21,7 @@ The software system will utilized the arduino specified in the camera hardware s
 ### Flowchart breakdown
 algorithm and test cases
 #### Input data
-This data will be obtained from the RID signal and sent to the camera system [^3]. 
+Possible input data into the system [^3]. 
 - Drone Location
   - Latitude (deg * 10^7) with a minimum limit of ~ 11 mm
   - Longitude (deg * 10^7) with a minimum limit of ~ 11 mm
