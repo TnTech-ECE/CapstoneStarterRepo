@@ -8,7 +8,11 @@ The start sensor was tested 30 times, and the target success rate was 80% in und
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/347640dd-8cce-404f-bac4-75ec6ecef214)
 
-As shown above, the start sensor worked 100% of the time, exceeding the required 80%. This also shows that the response time for the sensor was under 1 second, and was probably faster than the recorded time as the time was reliant on human reaction time. The start sensor percentage of successful starts was initially lower, then the shroud was removed from around the sensor.
+As shown above, the start sensor worked 100% of the time, exceeding the required 80%. This also shows that the response time for the sensor was under 1 second, and was probably faster than the recorded time as the time was reliant on human reaction time. The start sensor percentage of successful starts was initially lower, then the shroud was removed from around the sensor. Once the shroud was removed, the distance from the light to the sensor was greatluy increased, and those distances can be seen below.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/ab4c1910-a1e7-4267-8429-1f1b4b3e1185)
+
+This shows the sensor did not need to be right next to the light in order to function once ambient light was allowed in without the shroud.
 
 ### Navigation
 
