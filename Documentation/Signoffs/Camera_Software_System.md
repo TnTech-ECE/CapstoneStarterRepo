@@ -12,7 +12,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture a picture of the unauthorized UAS or UAS user because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
 
-<sup>3</sup> The Tech Police prefer a picture of the UAS user over a picture of the UAS. 
+<sup>3</sup> The Tech Police prefer a picture of the UAS user over a picture of the UAS, however the UAS user location data is an optional addition to the RID signal [^2].
 
 ## Schematic
 <img src= "/Documentation/Images/Camera_Software_System_Flowchart.png">
@@ -23,7 +23,8 @@ The software system will utilized the arduino specified in the camera hardware s
 ### Flowchart breakdown
 algorithm and test cases
 #### Input data
-| Data[^2] | Unit | Resolution | 
+Required data:
+| Data [^2] | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Drone Latitude | degrees * 10^7 | ~ 11 mm minimum |
 | Drone Longitude | degrees * 10^7 | ~ 11 mm minimum | 
@@ -31,8 +32,8 @@ algorithm and test cases
 | Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum |
 
-Optional input data:
-| Data[^2] | Unit | Resolution | 
+Optional data:
+| Data [^2] | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Control Station Location Latitiude | degrees * 10^7 | ~ 11 mm minimum |
 | Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
