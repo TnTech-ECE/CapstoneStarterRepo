@@ -23,7 +23,7 @@ The software system will utilized the arduino specified in the camera hardware s
 ### Flowchart breakdown
 algorithm and test cases
 #### Input data
-Possible input data into the system [^3] :
+Input data into the system [^2] :
 | Data | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Drone Latitude | degrees * 10^7 | ~ 11 mm minimum |
@@ -31,13 +31,14 @@ Possible input data into the system [^3] :
 | Drone geodetic altitude | meters | 1 m minimum |
 | Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum |
-| Control Station Location[^2] Latitiude | degrees * 10^7 | ~ 11 mm minimum |
-| Control Station Location[^2] Longitude | degrees * 10^7 | ~ 11 mm minimum |
+
+Optional input data [^2]:
+| Control Station Location Latitiude | degrees * 10^7 | ~ 11 mm minimum |
+| Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
 
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
-[^2]: The control station location is an optional part of the UAS RID signal
-[^3]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019). 
+[^2]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019). 
 
 
 
