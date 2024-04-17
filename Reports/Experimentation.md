@@ -5,7 +5,7 @@
 ### Start Sensor
 
 - Constraint to Test: The start sensor shall detect the start light in under 3 seconds at least 80% of the time.
-- Experimental Process: The robot is placed in the start pad of the board within range of the start light, and the start light is lit. The amount of time until the robot begins movement is recorded. However, if the robot does not start within 3 seconds, it is recorded as a failure.
+- Experimental Process: The robot was placed in the start pad of the board within range of the start light, and the start light was lit. The amount of time until the robot begins movement was recorded. However, if the robot did not start within 3 seconds, it was recorded as a failure. This was repeated 30 times.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/347640dd-8cce-404f-bac4-75ec6ecef214)
 
@@ -15,7 +15,7 @@
 ***
 
 - Constraint to Test: The start sensor shall be placed close to 1" from the start light to guarantee functionality.
-- Experimental Process: The robot is placed in the start pad of the board with the start sensor more than 1" from the start light and then the start light is lit. If the start sensor activates properly, then the distance is recorded. 
+- Experimental Process: The robot was placed in the start pad of the board with the start sensor either at 1" or more than 1" from the start light and then the start light was lit. If the start sensor activated properly, then the distance was recorded. This was repeated 30 times with varying distances.
   
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/ab4c1910-a1e7-4267-8429-1f1b4b3e1185)
 
@@ -25,13 +25,15 @@
 ***
 ### Navigation
 
-- Constraint to Test: The navigation sensors must be able to detect the yellow line at least 80% of the time.
-- Experimental Process: The robot was run 30 times and the number of times the sensors detected the first corner was recorded. This resulted in the successes shown below, in whcih it successfully detected the line 86% of the time.
+- Constraint to Test: The navigation sensors shall be able to detect the yellow line at least 80% of the time.
+- Experimental Process: The robot was started and the amount of times that the first corner in the yellow line was detected properly was recorded. If the robot relied on the safety timer to make the first turn, then it was marked as a failure.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
-- Analysis of Results: The robot was able to detect the corner 86% of the time, or 26 times out of 30. The corner was made on the failed detection runs because of the safety timer, which went off after the robot had passed the corner and did not detect it.
+- Analysis of Results:
+<br> The robot was able to detect the corner 86% of the time, or 26 times out of 30. The orange line represents the constraint of 80%, this visually shows that the navigation sensors work above the required functionality. However, if the sensors failed for any reason, the corner was made based on the safety timer, which went off after a certain amount of time guaranteeing that the robot had passed the corner, but did not detect it. 
 
+***
 - Constraint to Test: The sensors must be within a half inch of the line in order to detect the line.
 - Experimental Process: The sensor was measured in relation to its hieght above the line before each run, and the numbers were recorded. As shown, it was under 0.5 inches each time. 
 
