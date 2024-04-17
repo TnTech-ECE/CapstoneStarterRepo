@@ -14,7 +14,7 @@ The Launching and Firing subsystem is the system that will fire the intercepting
 
 ## Buildable Schematic
 ### Electrical Schematic 
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Signoffs/CapstoneDrawing.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/CapstoneDrawing.png)
 
 As seen in the schematic above, the Adafruit relay will be powered off the 3.3V pin (PIN1) of the Raspberry Pi 5. While the GPIO pins are limited to 50mA, this pin can support 3.3V up to 500mA. The Adafruit 3191 relay only draws 100mA while operating. A signal will be sent from GPIO 6 (PIN31) which shall switch allow the relay to switch from connecting "COMM" and "Normally Connected" to connecting "COMM" to " Normally Closed" allowing the motor to be powered from the 12V bus from the Housing subsystem. This motor shall draw 9A upon startup and when reaching it's stall point and will be wired with 16 AWG wire from the Housing subsystem.
 
@@ -27,7 +27,7 @@ The Launching and Firing subsystem shall use 16 AWG wire for the subsystems elec
 To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. The relay will be connected to pin 1 of the Raspberry Pi 5 from the aiming subsystem and will pull 100mA at max (while operating) which is within the Raspberry Pi 5's ampacity limits for that pin.
 
 Below is the charachteristics sheet of the Adafruit Featherwing Relay:
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Signoffs/RelayCharachteristics.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/RelayCharachteristics.png)
 
 
 **Constraint Solution 3:**
@@ -37,21 +37,21 @@ The Launching and Firing subsystem is required to fit within a cubic foot of spa
 The Launching and Firing subsystem shall use a 12V DC motor from TRANSMOTEC model number NC5FN-3550-CVC which exhibits the ability to operate the mechanism at a torque of 31 mN-m at 3700 RPM nominally. 28 nN-m is the highest torque required to operate the Fire-Preload sequence of the Launching and Firing subsystem.
 
 Below is an image of the TRANSMOTEC motor:
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Signoffs/Transmotec-Image-755.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/Transmotec-Image-755.png)
 
 **Constraint Solution 5:**
 The mechanical engineering team's current plan is to fire a round after a 20 degree rotation of the Launching and Firing DC motor. The rest of the rotation would be used to set the firing mechanism into a preload state, awaiting another signal from the aiming subsystem to fire the next round with a 20 degree turn and the following 340 degrees used to preload the mechanism and so on. The electrical engineering team decided to use a safety designing factor of 2.0 and ensure the motor would have the ability to rotate 40 degrees to release the shot within the time allowed for the response of shooting a round after receiving the signal from the aiming subsystem. Over the cycle of a full rotation, the torque will vary from no-load to a load of 28 mN-m from the mechanical engineering team's calculations. The first part of the rotation (which will fire the round) will have the lowest torque (to use a quote from the ME team, "right next to no-load". The TRANSMOTEC motor has a torque of 31 mN-m at 3700 RPM, which is equivalent to 61.7 rotations per second. The motor will be geared 20:1 meaning to complete a ninth of the output cycle of the firing mechanism, or the first 40 degrees that would fire the round, the input shaft would need to rotate 2.222 times. The motor will operate even faster at a no-load torque, but using the nominally loaded torque of 31 mN-m at 3700 RPMs for this calulation as a second safety factor, we find that this motor can complete the 2.222 rotations in 0.036 seconds (0.0360 = 2.222 * (1/(3700/60))). The Adafruit Relay has a max operate time of 10ms and this time must also be taken under consideration. This motor will be able to complete 40 degrees of the rotation and release a single round after 46 ms at the given torque of 28 mN-m which is within it's worst-case scenario time limit of 80 ms. 
 
 Below is an image of the TRANSMOTEC main motor data:
 
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Signoffs/MOTORDATA.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/MOTORDATA.png)
 
 
 **Constraint Solution 6:**
 The mechanical engineering team's current plan is to fire a round after a 20 degree rotation of the Launching and Firing DC motor. The rest of the rotation would be used to set the firing mechanism into a preload state, awaiting another signal from the aiming subsystem to fire the next round with a 20 degree turn and the following 340 degrees used to preload the mechanism and so on. Over the cycle of a full rotation, thw torque will vary from no-load to a load of 28 mN-m from the mechanical engineering team's calculations. The TRANSMOTEC motor has a torque of 34 mN-m at 3900 RPM, which is equivalent to 61.7 rotations per second. The motor will be geared 20:1 meaning to complete a 340 degrees of the output cycle of the firing mechanism, or the last 340 degrees that would preload the next round, the input shaft would need to rotate 18.9 times.(18.89 =  20 * (340/360)) The motor will operate even faster at a torque of 28 mN-m, but using the nominally loaded torque of 31 mN-m at 3700 RPMs for this calulation as a safety factor, we find that this motor can complete the 340 rotations in 0.31 seconds ( 0.306 = 18.9 * (1/(3700/60))) This motor will be able to complete 340 degrees of the rotation and preload a single round after 301 ms at the given torque of 28 mN-m which is faster than the time required for the rest of the subsystems to detect and aim at the next incoming projectile meaning that this work can be done concurrently to the rest of the system's processes without causing a time constraint on the system as a whole. 
 
 Below is a graph of the TRANSMOTEC motor data
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Signoffs/MOTORDATAGraph.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/MOTORDATAGraph.png)
 
 
 ## BOM
