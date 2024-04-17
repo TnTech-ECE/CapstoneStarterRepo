@@ -4,7 +4,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | If the data transmitted from the database to the camera system is incomplete (one or multiple pieces of [input data](#input-data-[^2]) are missing), the system will not act upon the information | Tech Police |
+|  1 | If the data transmitted from the database to the camera system is incomplete (one or multiple pieces of [input data](#input-data) are missing), the system will not act upon the information | Tech Police |
 |  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Stakeholder Constraint | 
 |  3 | The system shall prioritize capturing a picture of the UAS user if the system obtains the location of the UAS user | Tech Police | 
         
@@ -22,8 +22,8 @@ The camera software system will be reponsible for controlling the camera hardwar
 The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
 ### Flowchart breakdown
 algorithm and test cases
-#### Input data [^2]
-| Data | Unit | Resolution | 
+#### Input data
+| Data[^2] | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Drone Latitude | degrees * 10^7 | ~ 11 mm minimum |
 | Drone Longitude | degrees * 10^7 | ~ 11 mm minimum | 
@@ -32,7 +32,7 @@ algorithm and test cases
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum |
 
 Optional input data:
-| Data | Unit | Resolution | 
+| Data[^2] | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Control Station Location Latitiude | degrees * 10^7 | ~ 11 mm minimum |
 | Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
