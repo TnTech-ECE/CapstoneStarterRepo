@@ -16,11 +16,13 @@ This shows the sensor did not need to be right next to the light in order to fun
 
 ### Navigation
 
-The navigation subsystem was tested by what percentage of the time it was able to detect the first corner of the track when it successfully reached the first corner. This was decided because if the boxes knocked the robot off course the navigation system was unable to do anything to correct the robot if it was not over the line. The orange line on the graph shows the acceptable limit of success.
+- Constraint to Test: The navigation sensors must be able to detect the yellow line at least 80% of the time.
+- Experimental Process: The robot was run 30 times and the number of times the sensors detected the first corner was recorded. This resulted in the successes shown below, in whcih it successfully detected the line 86% of the time.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
-The goal was to have the navigation subsystem detect the corner 80% of the time, and it successfully detected 86% of the time. This passes the benchmark required for successful deployment of the navigation sensors. This can be seen by the blue bar being over the orange line. The Navigation sensor had to be significantly closer to the yellow line to accurately detect the line than a 1/2 inch. After this was discovered the navigating went significantly smoother. It was mounted on the front of the bot in the center, as designed. The difference between the original design and the final product was that the navigation sensors were attached to the bottom of the front wheelie bars instead of directly on the chassis. This was done to be able to avoid the sensors getting caught on the small boxes. The distance from the navigation sensors to the yellow line is shown in the graph below, clearly showing that it had to be significantly closer to the line than originally anticipated.
+- Constraint to Test: The sensors must be within a half inch of the line in order to detect the line.
+- Experimental Process: The sensor was measured in relation to its hieght above the line before each run, and the numbers were recorded. As shown, it was under 0.5 inches each time, however it failed to detect the line when it was above 0.25 inches. It also failed one other time, but the cause of this failure was undetermined.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/67c7f410-a841-43b9-a30d-453d43f206fe)
 
