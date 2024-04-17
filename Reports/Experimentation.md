@@ -20,35 +20,40 @@
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/ab4c1910-a1e7-4267-8429-1f1b4b3e1185)
 
 - Analysis of Results:
-<br> As shown above, in the 30 trials the start sensor activated all 30 times whether it was at exactly 1" or as far as 1.4" from the light. This shows that although the estimation for the maximum functional distance was 1" the actual maximum functional distance was closer to 1.4". This allows some human error in the placement of the robot on the board, while still maintaining the functionality of the start sensor. Again this improved sensitivity of the sensor resulted from modifications to the sensor's code and removal of the shroud while at the SECON competition.
+<br> As shown above, in the 30 trials the start sensor activated all 30 times whether it was at exactly 1" or as far as 1.4" from the light. This indicates that although the estimation for the maximum functional distance was 1" the actual maximum functional distance was closer to 1.4". This allows some human error in the placement of the robot on the board, while still maintaining the functionality of the start sensor. Again this improved sensitivity of the sensor resulted from modifications to the sensor's code and removal of the shroud while at the SECON competition.
 
 ***
 ### Navigation
 
 - Constraint to Test: The navigation sensors shall be able to detect the yellow line at least 80% of the time.
-- Experimental Process: The robot was started and the amount of times that the first corner in the yellow line was detected properly was recorded. If the robot relied on the safety timer to make the first turn, then it was marked as a failure.
+- Experimental Process: The robot was started and the amount of times that the first corner in the yellow line was detected properly was recorded. If the robot relied on the safety timer to make the first turn, then it was marked as a failure. This test was repeated 30 times.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
 - Analysis of Results:
-<br> The robot was able to detect the corner 86% of the time, or 26 times out of 30. The orange line represents the constraint of 80%, this visually shows that the navigation sensors work above the required functionality. However, if the sensors failed for any reason, the corner was made based on the safety timer, which went off after a certain amount of time guaranteeing that the robot had passed the corner, but did not detect it. 
+<br> The robot was able to detect the corner 86% of the time, or 26 times out of 30. The orange line represents the constraint of 80%, this shows that the navigation sensors work above the required functionality. However, if the sensors failed for any reason, the corner was made based on the safety timer, which went off after a certain amount of time guaranteeing that the robot had passed the corner, but did not detect it. This allowed a greater chance that the board could be completed even if the corner was missed by the navigation sensors. 
 
 ***
-- Constraint to Test: The sensors must be within a half inch of the line in order to detect the line.
-- Experimental Process: The sensor was measured in relation to its hieght above the line before each run, and the numbers were recorded. As shown, it was under 0.5 inches each time. 
+- Constraint to Test: The sensors shall be within 0.5" vertically of the line to help ensure detection of the line.
+- Experimental Process: The robot was set in the start area of the board and the height of the sensor from the board was measured before activation, and the numbers were recorded. This experiment was run concurrently with the previous experiment to provide further context to success rates.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/67c7f410-a841-43b9-a30d-453d43f206fe)
 
-- Analysis of Results: Although it was below 0.5 inches each run, it failed to detect the line when it was above 0.25 inches. It also failed one other time, but the cause of this failure was undetermined.
+- Analysis of Results:
+<br> Although the sensor was within 0.5" each run, it failed to detect the line when it was above 0.25". This indicates that the sensor was less responsive than estimated and that a lower placement (within 0.25") would help ensure better detection. There was an additional failure of detection even when within 0.25", however, the cause of this specific failure was undeterminable and attributed to an expected failure rate as actuality does not align with ideal performance sometimes.
 
+***
 ### Power
 
-The power subsystem powered the robot 100% of the time, however there was one major issue with the power system that was discovered during the competition. This was that there was noise being fedback from the motors that would cause the power to the main controller to brownout and reset the code. This led to the motors being stuck in whatever drive mode they were in before the brown out. This was solved by connecting the microcontroller to a 9 Volt battery instead of the main power system, preventing noise to be fed from the motors. After this modification, the micro controller has not browned out, as shown in the table below.
+- Constraint to Test: The power system shall power the microcontroller consistently throughout the run of the board at least 95% of the time.
+- Experimental Process: The robot was powered, set in the start area, and activated. The behavior of the microcontroller was observed as it moved about the board and marked if a brownout occurred.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fd06b150-61d0-4539-b977-8105c2635710)
 
-As shown, of 30 trials, the system did not brown out 30 times. This is exceeded the acceptible rate of 95% of the time, as shown by being over the orange line.
+- Analysis of Results:
+<br> As shown, in 30 trials, the power subsystem powered the microcontroller consistently 100% of the time. This test was developed in response to an issue discovered at the SECON competition where the movement of the robot going down the hills temporarily turned the motors into generators which then fed back power to the microcontroller, disrupted the voltage difference, and resulted in a brownout of the microcontroller which reset its program and inhibited the robot from behaving properly by locking the motors in the drive mode before power disruption. The solution to this problem was to stabilize the microcontroller's voltage difference by powering it through a 9V battery instead of the main power system that the motors were attached to, thus preventing the feedback of power. This significantly improved the functionality of the power system and the robot as a whole. Before the change, the microcontroller would brownout most runs once the hills were descended. Once the solution was implemented we achieved consistent power 100% of the time, which fulfills our constraint of 95% as shown by the orange line.
 
+***
 ### Motors
 
 The motors worked 100% of the time, and correctly executed the code given to them. Sometimes this code was wrong, but that was a fault in the micro controller, not the motors. Below shows the table of the completion times of the robot through the course the times where it successfully navigated the course.
