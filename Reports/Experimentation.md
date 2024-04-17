@@ -56,12 +56,15 @@
 ***
 ### Motors
 
-The motors worked 100% of the time, and correctly executed the code given to them. Sometimes this code was wrong, but that was a fault in the micro controller, not the motors. Below shows the table of the completion times of the robot through the course the times where it successfully navigated the course.
+- Constraint to Test: The motors shall move the tracks in a way that allows the robot to complete the course in under 90 seconds at least 90% of the time.
+- Experimental Process: The robot was powered, set in the start area, and activated. The robot was timed as it made its way around the course, the time was stopped when it passed the button at the end of the course. This was repeated 30 times.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fda5c17e-8859-43e8-a6a4-06c611938467)
 
-This shows that the motors were more than sufficient to power the robot around the track in under a minute and 30 seconds.
+- Analysis of Results:
+<br> As shown, the robot was able to complete the course in under 45 seconds 100% of the time. This is significantly lower than our goal of 90 seconds. This speed would grant us the maximum amount of points for time completion while also allowing time for some minor errors or other tasks (button push/team spirit) to occur and delay the robot slightly while remaining under time. This demonstrates that the motors fulfill the constraint that they shall move the tracks in a way to allow the robot to complete the course in under 90 seconds at least 90% of the time.
 
+***
 ### Main Control
 
 The main controller code needed to be able to complete the course at least 85% of the time. The table below shows percentage of course traversed each trial.
