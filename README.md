@@ -19,7 +19,7 @@ Coming soon :)
 
 ### Team
 
-[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
+[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
 
 [Abe Perkins](www.linkedin.com)
 
