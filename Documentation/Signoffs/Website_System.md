@@ -11,7 +11,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 |  4 | The system shall allow campus police to authorize drones for permitted flights in a specified time frame. | Project Team |  
 |  5 | The system shall increase the alert's urgency if a drone is detected in a private geographical region. | Project Team |  
 
-<sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display.
+<sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display. For the data to get to officers in the field, a dispatcher will relay information regarding the drone to the officer.
 
 <sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. For the sake of this project, we have defined real-time to be less than one second. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. 
 
