@@ -47,9 +47,9 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 - Documentation
-  - [3D Models](Documentation/3D_Models.md)
+  - [3D Models](Documentation/3D_Models)
   - Electrical
-    - [PCB Models](Documentation/Electrical/PCB.md)
+    - [PCB Models](Documentation/Electrical/PCB)
     - [Wiring Schematics]
   - [Meeting Minutes]
 
