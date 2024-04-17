@@ -21,10 +21,14 @@ This shows the sensor did not need to be right next to the light in order to fun
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/b797fe52-b71d-49ee-bb75-8bd39f5c46ce)
 
+- Analysis of Results: The robot was able to detect the corner 86% of the time, or 26 times out of 30. The corner was made on the failed detection runs because of the safety timer, which went off after the robot had passed the corner and did not detect it.
+
 - Constraint to Test: The sensors must be within a half inch of the line in order to detect the line.
-- Experimental Process: The sensor was measured in relation to its hieght above the line before each run, and the numbers were recorded. As shown, it was under 0.5 inches each time, however it failed to detect the line when it was above 0.25 inches. It also failed one other time, but the cause of this failure was undetermined.
+- Experimental Process: The sensor was measured in relation to its hieght above the line before each run, and the numbers were recorded. As shown, it was under 0.5 inches each time. 
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/67c7f410-a841-43b9-a30d-453d43f206fe)
+
+- Analysis of Results: Although it was below 0.5 inches each run, it failed to detect the line when it was above 0.25 inches. It also failed one other time, but the cause of this failure was undetermined.
 
 ### Power
 
