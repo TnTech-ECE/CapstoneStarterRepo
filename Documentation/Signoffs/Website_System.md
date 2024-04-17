@@ -35,7 +35,7 @@ The languages chosen to implement this program will be HTML, CSS, and JavaScript
 ### Google Maps API
 We have decided to use Google's Maps JavaScript API to handle the placement of drones in the correct places on the map. Google allows users to utilize up to $200 monthly worth of Maps API resources for free, with the credit resetting on the first of each month. This amount of money covers nearly 30,000 map loads per month.[^1] With this API, a map can be centered on the campus of TTU, and, using the coordinates retrieved from the Remote ID signal, markers can be placed on the map in the exact location where the drone is detected. 
 
-After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The Maps JavaaScript API allows up to 300 calls per minute per IP address. This means that the absolute maximum number of times the website can call the API is 5 times per second. The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
+After obtaining an API key, we can implement the API call using the key in the HTML5 webpage, where the map will then become usable in the browser. The Maps JavaaScript API allows up to 300 calls per minute per IP address.[^2] This means that the absolute maximum number of times the website can call the API is 5 times per second. The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then be placed in their respective locations on the map where the dispatcher can then select a certain drone and view the related data received from Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
 
 For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website in a directory set aside for the police, or at least on a machine that they have. 
 
@@ -54,4 +54,5 @@ At this point in the program's execution, we can use a dummy database filled wit
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [^1]: (https://mapsplatform.google.com/pricing/)
+[^2]: (https://developers.google.com/maps/documentation/javascript/usage-and-billing)
 <!--etc.-->
