@@ -12,52 +12,25 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ## **Constraints:**
 
-| No. | Constraint                                                          | Origin           |
-|-----|---------------------------------------------------------------------|------------------|
-| 1   | The sensors shall be wirelessly connected to the processor         | Conceptual Design|
-| 2   | The sensors shall be powered by a 5-volt source                    | Device Constraint|
-| 3   | A sensor shall fit within 1'x1'x1' area                            | Conceptual Design|
-| 4   | Post sensor will be powered by a battery                           | Conceptual Design|
-| 5   | Must be mounted to or from a sensor stand                          | Conceptual Design|
-| 6   | Device sensor will be powered by the device                        | System Constraint|
-| 7   | The sensor shall read ample data for a maximum golf ball speed of 6 m/s | Conceptual Design|
-| 8   | The post sensors shall receive data to calculate height and wire position | Conceptual Design|
-| 9   | The device sensors shall receive data to calculate the speed       | Conceptual Design|
-| 10  | The sensors shall have a range large enough to cover the gameboard   | Conceptual Design|
-| 11  | The sensors shall be able to detect plastic                        | System Constraint|
+| No. | Constraint                                                                                                                                     | Origin            |
+|-----|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                        | System Constraint |
+| 2   | The sensor, when mounted, shall not exceed the 1' x 1' x 1' size constraint of the launcher                                                    | Conceptual Design |
+| 3   | The sensor shall be able to retrieve at least 2 data points within 1.95 s                                                                      | Rulebook          |
+| 4   | SOMETHING ABOUT RESOLUTION AND LINE DETECTION | Conceptual Design |
+| 5   | The sensor shall be able to retrieve position data from at least 2 points along the fishing line to calculate speed                            | Conceptual Design |
+| 6   | The sensor shall have a range of at least 6 feet                                                                                               | Conceptual Design |
+| 7   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet                                                 | System Constraint |
+| 8   | The sensor shall have a field of view greater than 35.5°                                                                                       | Device Constraint |
 
-1. The sensors shall be wirelessly connected to the processor [Conceptual Design].
-The post sensors and the device sensors need to be wirelessly connected to the processor because they are
-not close enough to be wired.
-3. The sensors shall be powered by a 5 volt source [Device Constraint].
-Needs to be powered by a 5-volt source, regardless of placement because that is what the board of the
-sensor requires.
-5. A sensor shall fit within 1'x1'x1' area [Conceptual Design].
-There will be a sensor placed on the launcher itself therefore it needs to be small enough to fit.
-6. The post sensor will be powered by a battery [Conceptual Design].
-The sensors connected to the post will be battery-powered because there are no available outlets for
-power.
-7. Must be mounted to or from a sensor stand [Conceptual Design].
-The non device sensors will be mounted to the sensor posts.
-8. The device sensor will be powered by the device [System constraint].
-The device sensor will be connected to the device and therefore powered by that device.
-9. The sensor shall read ample data for a maximum golf ball speed of 6 m/s [Conceptual Design].
-The golf ball has a maximum calculated speed of 6 m/s. The sensor needs to track an ample number of
-data points regardless of the speed.
-10. The post sensors shall receive data to calculate height and wire position [Conceptual Design].
-The post sensors will be responsible for acquiring the data necessary in determining which variable height
-and which variable wire position the golf ball is traveling from. It is ideal for this sensor to assist with
-acquiring speed data as well.
-11. The device sensors shall receive data to calculate the speed [Conceptual Design].
-The device sensors will be responsible for acquiring the data necessary in determining what the speed or
-estimated speed of the golf ball to aid in firing. It is ideal for this sensor to assist with acquiring position
-and height data as well.
-12. The sensors shall have range large enough to cover the gameboard [Conceptual Design].
-The sensors will need to have a range large enough to cover the 60 inches from the start of the board to
-the device, the 64 inches side to side which is the width of the gameboard and must cover up to the
-highest variable height.
-13. The sensors shall be able to detect plastic [System Constraint].
-The sensors have to be able to detect the plastic golf ball from about 4-6 feet away
+1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor
+3. The launcher has the constraint of being small enough to fit within a box that is 1' x 1' x 1' in size, therefore the sensor, when mounted directly to the launcher itself cannot exceed these boundaries
+4. 
+5. The sensor must have a resolution great enough to be able to distinguish 
+6. The sensor shall be able to retrieve position data from at least 2 points along the fishing line to calculate speed
+7. The sensor shall have a range of at least 6 feet
+8. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
+9. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 35.5°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
 
 ## **Buildable Schematic**
 
