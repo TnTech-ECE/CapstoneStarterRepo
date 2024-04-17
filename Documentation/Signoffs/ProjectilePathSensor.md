@@ -23,13 +23,18 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 
 
 ## Schematic
-![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/d90f4950-3756-487e-8ea4-bf54e7a5310c)
+![image](https://github.com/JTJones73/Capstone2024-Team2/assets/158105560/d90f4950-3756-487e-8ea4-bf54e7a5310c) 
+The schematic above shows all electrical connections in this subsystem. All laser modules will be powered by a central terminal block at the end of the sensor post. Additionally, all photoresistors will be powered using a 5-volt terminal block that is powered by the Atmega 2560's 5-volt rail. All other components that are not required to be housed on the sensor post extension will be soldered in a separate housing on the sensor post to limit the wiring on the extension.\
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/LaserHousingFront.jpg" width="500" height="500">
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/LaserHousingBack.jpg" width="500" height="500">
+The two 3D schematics above show the Ky-008 laser module and the housing that will be printed to properly attach the laser to the sensor post extension. The purpose of this housing is to properly mount the laser while also allowing for adjustment of the laser module location. The laser housing will slide through the sensor post-extension rail to guarantee the laser's distance from the extension while still allowing adjustability along the extension.\
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/Photoresistor%201.jpg" width="333" height="500">
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/Photoresistor%202.jpg" width="333" height="500">
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/photoresistor%203.jpg" width="333" height="500">
+The three 3D schematics above show the housing for the photoresistors. Similar to lasers the goal of this housing is to attach the photoresistors to the sensor-post extension. The housing has a constant distance from the extension and an adjustable distance along the extension. This housing and the laser housing increase the accuracy of the laser array by limiting the number of directions the sensors that must be adjusted.  
+
 ## Analysis
+
 ### Autonomous System
 
 According to the Atmega 2560 datasheet, the Atmega has 256K bytes of Flash memory on the chip for program storage [10]. This means after an initial program of the Atmega the program will automatically run on startup. Once the microcontroller is properly programmed the only step required to start the projectile path detection system is to turn on the power supply. Also, this functionality verifies that the microcontroller will also function autonomously even if there is a sudden restart of the Atmega.
