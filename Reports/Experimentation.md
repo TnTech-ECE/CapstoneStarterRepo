@@ -6,7 +6,7 @@
 
 - Constraint to Test: The start sensor shall detect the start light in under 3 seconds at least 80% of the time.
 - Experimental Process: The robot is placed in the start pad of the board within range of the start light, and the start light is lit. The amount of time until the robot begins movement is recorded. However, if the robot does not start within 3 seconds, it is recorded as a failure.
-- 
+
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/347640dd-8cce-404f-bac4-75ec6ecef214)
 
 - Analysis of Results:
