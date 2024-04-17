@@ -22,8 +22,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
 ### Flowchart breakdown
 algorithm and test cases
-#### Input data
-Input data into the system [^2] :
+#### Input data [^2]
 | Data | Unit | Resolution | 
 | ---- | ---- | ---------- |
 | Drone Latitude | degrees * 10^7 | ~ 11 mm minimum |
@@ -32,7 +31,9 @@ Input data into the system [^2] :
 | Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum |
 
-Optional input data [^2]:
+Optional input data:
+| Data | Unit | Resolution | 
+| ---- | ---- | ---------- |
 | Control Station Location Latitiude | degrees * 10^7 | ~ 11 mm minimum |
 | Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
 
