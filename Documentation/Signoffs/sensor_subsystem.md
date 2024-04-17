@@ -15,7 +15,7 @@ distance, speed, and position of the target as it slides down the fishing line.
 | 3   | SOMETHING ABOUT RESOLUTION AND LINE DETECTION | Conceptual Design |
 | 4   | The sensor shall have a range of at least 6 feet                                                                                               | Conceptual Design |
 | 5   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet                                                 | System Constraint |
-| 6   | The sensor shall have a field of view greater than 35.54°                                                                                       | Device Constraint |
+| 6   | The sensor shall have a field of view greater than 24.50°                                                                                       | Device Constraint |
 
 1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor.
 
@@ -23,7 +23,7 @@ distance, speed, and position of the target as it slides down the fishing line.
 3. The sensor must have a resolution great enough to be able to distinguish NOT FINISHED HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 4. The furthest point that the sensor must be able to track and detect is the starting point of each golf ball which is about 6 feet from the launcher
 5. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
-6. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 35.54°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
+6. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 24.50°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
 
 ## **Buildable Schematic**
 
@@ -33,29 +33,21 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ### **Field of View**
 
-To start off, the camera or sensor that will be used must have a field of view (FOV) of at least 35.54°. This was found by using the measurements of the gameboard given in the rulebook from DEVCOM.
+To start off, the camera or sensor that will be used must have a field of view (FOV) of at least 24.50°. This was found by using the measurements of the gameboard given in the rulebook from DEVCOM.
 
-![Min FOV](../Images/Sensor_subsystem/fov.png)
+![Min FOV](../Images/Sensor_subsystem/field_of_view.png)
 
-Breaking down the triangle created from the fishing lines from Anchor 3 to Anchor 2 gives 3 smaller triangles and a rectangle with known sides. From this, a calculation can be made to find an angle that helps find one of the angles of the isosceles triangle at anchor 3.
+In order to find the minimum FOV, the angle, X, needs to be calculated. X gives the maximum angle at which the fishing lines will extend from anchor point 3 to anchor point 2. The FOV needs to be wider than X in order to have every fishing line in the view of the camera. 
 
 ~~~ math
 
-arctan(25/78) = 17.77°
+arctan((56/2)/129) = 12.25° = y
 
 ~~~
 
 ~~~ math
 
-180° - (17.77° + 90°) = 72.23°
-
-~~~
-
-This angle can now be used to find the minimum FOV of the camera.
-
-~~~ math
-
-180° - (72.23° * 2) = 35.54°
+x = 2y = 2(12.25°) = 24.50°
 
 ~~~
 
