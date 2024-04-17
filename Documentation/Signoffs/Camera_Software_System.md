@@ -4,7 +4,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | If the data transmitted from the database to the camera system is incomplete (one or multiple pieces of [input data](#input-data) are missing), the system will not act upon the information |
+|  1 | If the data transmitted from the database to the camera system is incomplete (one or multiple pieces of [input data](#input-data) are missing), the system will not act upon the information | Tech Police |
 |  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or UAS user when determining whether to take a picture | Stakeholder Constraint | 
 |  3 | The system shall prioritize capturing a picture of the UAS user if the system obtains the location of the UAS user | Tech Police | 
         
