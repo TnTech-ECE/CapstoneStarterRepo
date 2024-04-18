@@ -142,6 +142,19 @@
 <br> This shows that of the 26 times the robot reached the stage of the course to push the button, it did so 100% of the time. This proves that the servo was being triggered and the arm was positioned correctly as long as the robot made it to the end of the course it could push the button consistently
 
 ***
+- Constraint to Test: The head of the arm shall be at least 2.5 inches off the ground in order to successfully push the button.
+- Experimental process: The arm hieght was measured before each of the 30 runs and the hieght recorded for the 26 runs that the robot made it to the button.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/e5611a81-e69d-47f1-8831-b1454ba33029)
+
+- Analysis of Results:
+<br> The hieght of the arm did not deviate between runs, as shown above. This led to the successful pushing of the button each of the 26 times.
+
+***
+- Constraint to Test: The servo max torque load will not be exceeded.
+- Experimental Process: The weight of the pin the servo was pulling was bought in order to be able to hold the arm and also not weigh so much as to exceed the torque load. The weight of the pin was 5 grams, and the servo can hold a weight of 12 pounds. This means that the weight and torque load are well within the limits of the servo.
+
+***
 ### Team Spirit
 
 - Constraint to Test: The team spirit subsystem will blink at a visible rate once the robot has crossed the gap at least 80% of the time.
