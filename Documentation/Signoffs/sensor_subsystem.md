@@ -63,14 +63,65 @@ According to Intel, the D435 has a minimum depth sensing range of about 28 cm or
 
 ~~~ math
 
-arctan((46.5 - 10) / (94 - 2)) = 21.64°
+arctan((46.5" - 10") / (94 - 2)) = 21.64°
 
 ~~~
 
 Using this angle will allow every line to be visible within the 42° vertical FOV of the RGB camera
 
+### **Resolution**
+
+The RGB camera supports a maximum resolution of 1920 X 1080. With the FOV of 65° X 42° the area each pixel covers 6' away can be calculated.
+
+FOV width
+
+~~~ math
+
+2 * tan(65° / 2) * (6 * 12) = 91.74
+
+~~~
+
+Pixel width
+
+~~~ math
+
+91.74 / 1920 = 0.048
+
+~~~
+
+FOV height
+
+~~~ math
+
+2 * tan(42° / 2) * (6 * 12) = 55.28
+
+~~~
+
+Pixel height
+
+~~~ math
+
+55.28 / 1080 = 0.051
+
+~~~
+
+Since the diameter of a golf ball is about 1.68", the rgb camera will not have a problem detecting the gol
+
 ### **Frame Rate**
 
+The RGB camera on the D435 has a maximum frame rate of 30 fps at a resolution of 1920 X 1080. The depth camera has a maximum frame rate of 90 fps at a resolution of 1280 X 720. At these frame rates, the RGB camera will be able to sample the position every 33.33 ms, and the depth camera will be able to sample the distance every 11.11 ms.
+
+~~~ math
+
+1 / 30 = 0.0333333
+
+~~~
+
+~~~ math
+
+1 / 90 = 0.0111111
+
+~~~
 
 ### **Data Transfer**
 
