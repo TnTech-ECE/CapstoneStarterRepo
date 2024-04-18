@@ -107,6 +107,15 @@
 <br> As shown, the robot was able to complete the course in under 45 seconds 100% of the time. This is significantly lower than our goal of 90 seconds. This speed would grant us the maximum amount of points for time completion while also allowing time for some minor errors or other tasks (button push/team spirit) to occur and delay the robot slightly while remaining under time. This demonstrates that the motors fulfill the constraint that they shall move the tracks in a way to allow the robot to complete the course in under 90 seconds at least 90% of the time.
 
 ***
+- Constraint to Test: The motors shall support a torque load sufficient enough for the robot to climb the hills without slipping.
+- Experimental Process: The robot was powered up and sent around the course, and each attempt at climbing the first, steeper hill was recorded as a success or a failure. The results of this are shown below.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/2e63da18-0b89-4241-b377-41a294fdeef7)
+
+- Analysis of Results:
+<br> The robot was able to climb up the hill all 30 times successfully. The weight distribution on the robot was important to this success, as if there was too much weight towards the back the robot would pop up and tip over. However this did not happen during testing.
+
+***
 ### Main Control
 
 - Constraint to Test: The main controller shall direct the robot so that it can complete the course at least 85% of the time.
@@ -116,6 +125,10 @@
 
 - Analysis of Results:
 <br> This shows that the main controller directed the robot to complete the course successfully 87% of the time. Which is above the required 85%. The times that it did not complete the course happened most frequently at ~40% and ~85%. The ~40% mark indicates that the robot would have trouble with the descent of the first hill and fail there. This was most likely due to the navigation sensor lifting off the board more than 0.25" before the descent of the hill, thus blinding the robot temporarily but long enough for the robot to get far enough off the line that it could not correct. The ~85% mark indicates that the robot failed at the gap. This was not due to not being able to cross the gap, but rather to not being oriented properly before crossing. The navigation sensor again would lift more than 0.25" off the board when ascending the ramp up to the gap and the robot would be off the line and not able to correct before crossing the gap and so it would run into the wall instead of crossing the gap properly. However, again 87% of the time the robot would be able to overcome these and any other errors and complete the course successfully.
+
+***
+- Constraint to Test: The microcontroller shall run at a clock frequency of 16 MHz.
+- Experimental Process: The microcontroller purchased has an internal clock speed of 16MHz, so the controller meets this specification without further testing.
 
 ***
 ### Button Push
