@@ -43,6 +43,33 @@
 <br> Although the sensor was within 0.5" each run, it failed to detect the line when it was above 0.25". This indicates that the sensor was less responsive than estimated and that a lower placement (within 0.25") would help ensure better detection. There was an additional failure of detection even when within 0.25", however, the cause of this specific failure was undeterminable and attributed to an expected failure rate as actuality does not align with ideal performance sometimes.
 
 ***
+- Constraint to Test: The sensor shall be accessed at a rate of least 20 Hz.
+- Experimental Process: The robot was connected to a laptop and set to run, and the access rate was determined on the serial monitor.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/8c86a4fa-4396-49da-9e2b-c150fae249f8)
+
+
+- Analysis of Results:
+<br> As shown, the sensor was accessed at 8 Megahertz, clearly surpassing the minimum access rate.
+
+***
+- Constraint to Test: The sensors must detect the white line at the start of the gap.
+- Experimental Process: The sensors were not used to detect the white line, ass everything after the first corner was built based on timers, rendering this constraint obsolete.
+
+***
+- Constraint to Test: The sensors must have an operating wavelength of 1mm to 50um.
+- Experimental Process: The sensors used had an operating wavelength within this range, as they were ordered to fit this constraint. No further testing was done.
+
+***
+- Constraint to Test: The sensors must be spaced apart so that at least two o fthe sensors are detecting th eline at any given time.
+- Experimental Process: The lights on the sensors were observed while the robot was running, andthe number of sensors active over the line was recorded and shown below.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/3bf28138-8ab5-4a10-977f-ed01031b5c05)
+
+- Analysis of Results:
+  <br> There were at least 2, sometimes 3, sensors lit at all times along the line. The number would go up significantly upon detecting the first corner, as the line got wider at this point.
+
+***
 ### Power
 
 - Constraint to Test: The power system shall power the microcontroller consistently throughout the run of the board at least 95% of the time.
