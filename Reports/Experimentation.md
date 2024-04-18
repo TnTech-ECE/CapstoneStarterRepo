@@ -70,6 +70,12 @@
   <br> There were at least 2, sometimes 3, sensors lit at all times along the line. The number would go up significantly upon detecting the first corner, as the line got wider at this point.
 
 ***
+- Constraint to Test: The sensors must be placed in the front center of the robot.
+- Experimental Process: The sensors were attached between the front two wheelie bars, ensuring it was centered and on the front of the robot.
+- Analysis of Results:
+<br> The sensors were in the center of teh front of the robot, but due to the hieght constraints of the sensors, they would get hung on the boxes. So it was devised to get the wheelie bars to drop past the blocks in order to prevent this.
+
+***
 ### Power
 
 - Constraint to Test: The power system shall power the microcontroller consistently throughout the run of the board at least 95% of the time.
@@ -79,6 +85,15 @@
 
 - Analysis of Results:
 <br> As shown, in 30 trials, the power subsystem powered the microcontroller consistently 100% of the time. This test was developed in response to an issue discovered at the SECON competition where the movement of the robot going down the hills temporarily turned the motors into generators which then fed back power to the microcontroller, disrupted the voltage difference, and resulted in a brownout of the microcontroller which reset its program and inhibited the robot from behaving properly by locking the motors in the drive mode before power disruption. The solution to this problem was to stabilize the microcontroller's voltage difference by powering it through a 9V battery instead of the main power system that the motors were attached to, thus preventing the feedback of power. This significantly improved the functionality of the power system and the robot as a whole. Before the change, the microcontroller would brownout most runs once the hills were descended. Once the solution was implemented we achieved consistent power 100% of the time, which fulfills our constraint of 95% as shown by the orange line.
+
+***
+- Constraint to Test: The power system will provide enough power to run all the components on the robot.
+- Experimental Process: The robot was powered up, and functionality of all systems was tested 30 times, and the percentage of systems that powered up were recorded as shown below.
+
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/cb997924-9861-4f10-88b4-7376227117b8)
+
+- Analysis of Results:
+<br> As shown above, 100% of the systems powered up all 30 times. This means that the power system was able to supply enough power to all of th eother systems on the robot.
 
 ***
 ### Motors
