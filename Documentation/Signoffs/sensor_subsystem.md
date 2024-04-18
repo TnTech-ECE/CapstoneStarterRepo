@@ -63,7 +63,7 @@ According to Intel, the D435 has a minimum depth sensing range of about 28 cm or
 
 ~~~ math
 
-arctan((46.5" - 10") / (94 - 2)) = 21.64°
+arctan((46.5 - 10) / (94 - 2)) = 21.64°
 
 ~~~
 
@@ -105,7 +105,7 @@ Pixel height
 
 ~~~
 
-Since the diameter of a golf ball is about 1.68", the rgb camera will not have a problem detecting the gol
+Since the diameter of a golf ball is about 1.68", the RGB camera will not have a problem detecting the golf ball because, from the furthest point on the gameboard, there will be around 30 pixels covering the golf ball on both the X and Y axes.
 
 ### **Frame Rate**
 
@@ -123,7 +123,33 @@ The RGB camera on the D435 has a maximum frame rate of 30 fps at a resolution of
 
 ~~~
 
-### **Data Transfer**
+### **Data Transfer and power**
+
+According to the datasheet of the D435, the depth and RGB camera both use 16 bits of data for each pixel. If both of the cameras are running at maximum resolution and frame rate, then the following calculations can be made:
+
+~~~ math
+
+1920 * 1080 * 16 * 30 = 995,328,000
+
+~~~
+
+~~~ math
+
+1280 * 720 * 16 * 90 = 1,327,104,000
+
+~~~
+
+~~~ math
+
+995,328,000 + 1,327,104,000 = 2,322,432,000
+
+~~~
+
+This means that 2.32 Gbps is the absolute minimum data transfer rate for the D435. Data and power will both be supplied by a USB A to USB C 3.1 Gen 1 cable. This means that there will be no problem with transferring data to the Jetson Nano because the transfer rate of USB 3.1 Gen 1 is 5 Gbps.
+
+<!--### **Illumination**-->
+
+
 
 ## **Bill of Materials:**
 
