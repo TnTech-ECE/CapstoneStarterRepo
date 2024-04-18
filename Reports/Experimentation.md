@@ -79,20 +79,20 @@
 ### Button Push
 
 - Constraint to Test: The button pusher must push the button 85% of the time.
-- Experimental Process: The robot was powered, set in the start area, and activated. If it reached the zone after the gap, the button pusher was supposed to deploy and push the button. Once the robot reachd this stage of the course it was counted as a trial of the pusher.
+- Experimental Process: The robot was powered, set in the start area, and activated. If it reached the zone after the gap, the button pusher was supposed to deploy and push the button. Once the robot reached this stage of the course it was counted as a trial of the pusher.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/45f9c7a4-0510-457c-ad99-9dd19ae779ad)
 
 -Analysis of Results:
-<br> This shows that of the 26 times the robot reached the stage of the course to push the button, it did so 100% of the time. This proves that the servo was being triggered and the arm was positioned correctly as long as the robo made it to the end of the course iot could push the button.
+<br> This shows that of the 26 times the robot reached the stage of the course to push the button, it did so 100% of the time. This proves that the servo was being triggered and the arm was positioned correctly as long as the robot made it to the end of the course it could push the button consistently
 
 ***
 ### Team Spirit
 
-- Constraint to Test: The team spirit subsystem will blink at a visible rate once the robot has crossed the gap.
-- Experimental Process: The robot was powered, set in the start area, and activated. If it reached the zone after the gap, the team spirit was supposed to deploy and blink. Once the robot reachd this stage of the course it was counted as a trial of the team spirit.
+- Constraint to Test: The team spirit subsystem will blink at a visible rate once the robot has crossed the gap at least 80% of the time.
+- Experimental Process: The robot was powered, set in the start area, and activated. If it reached the zone after the gap, the team spirit was supposed to deploy and blink. Once the robot reached this stage of the course it was counted as a trial of the team spirit.
 
 ![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/5f764108-d8af-4c67-8b90-d69f989f2182)
 
 - Analysis of Results:
-<br> This shows that of the 26 times the robot reached the deploymenmt zone, the team spirit blinked 100% of the time. The main issue with the team spirit system was its weight, as when the main system was connected to the robot it would tip over on the inclines, so a smaller version was devised for the competition.
+<br> This shows that of the 26 times the robot reached the deployment zone, the team spirit blinked 100% of the time. The main issue with the team spirit system was its weight, as when the main system was connected to the robot it would tip over on the inclines, so a smaller version was devised for the competition due to time constraints that prevented any effort to counterbalance the main team spirit system.
