@@ -56,7 +56,7 @@ Drone authorization status
 ### Flowchart breakdown
 <img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_1.png" width="300" height="100">
 
-Following [contraint 2](##Constraints), the code will determine if the optional control station location data is usable before seeing if the required UAS location data is usable so that the presence of complete controller station location data will take precedance over UAS location data.  
+Following [constraint 2](#Constraints), the code will determine if the optional control station location data is usable before seeing if the required UAS location data is usable so that the presence of complete controller station location data will take precedance over UAS location data.  
 This section of the flowchart also addresses a scenario where the data received from the Database System is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_2.png" width="175" height="80">
