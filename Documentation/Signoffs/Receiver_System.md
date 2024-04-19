@@ -8,22 +8,25 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 |  2 | Shall only utilize RID signal and ignore other signals | Ethical Constraint       |                          
 |  3 | Shall receive data all data from remote ID emitting drones    |  Design constraint |   
 |  4 | Shall track drones on the contiguous TTU campus | TTU Police |
-|  5 | Shall give location of control station if the drone is over the contiguous campus, but the control station is not| TTU Police |
+|  5 | Shall give location of control station if the drone is over the contiguous campus | TTU Police |
 |  6 | Shall cover approximately 0.636594 km<sup>2</sup> | TTU Police|
+|  7 | Shall not send data from a drone not on the contiguous campus | Ethical Police |
+|  8 | Shall send data at some currently unspecified speed | Design Constraint | 
+|  9 | Shall be protected against the weather | Design Constraint | 
 
+<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands. The 5.8 GHz WiFi can be ommitted due to it being an optional transmission and the drone must emit a 2.4 GHz WiFi signal if a WiFi signal is being emitted. [^6].   
 
-<sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands. The 5.8 GHz can be ommitted due to it being an optional transmission and the drone must emit a 2.4 GHz WiFi signal. [^6].   
-
-<sup>2</sup> If the receiver reads data that is not the RID signal, it could be considered a privacy concern. 
+<sup>2</sup> If the receiver reads data that is not the RID signal, it could be considered a privacy concern. The information from those signals are also not applicable to the purpose of this project as they will not allow the receiver to obtain the RID data of a drone. 
 
 <sup>3</sup> If the drone is not emitting the RID signal, the receiver will not be able to pick it up.
 
-<sup>4</sup> Due to a higher density of students on the contiguous campus we have been asked to keep our scope smaller. This will also be easier for maintenance purposes.
+<sup>4</sup> Due to a higher density of students on the contiguous campus we have been asked to keep our scope smaller. This will also be easier for maintenance purposes of the subsystem in the future. 
 
-<sup>5</sup> The campus police are only concerned about drones flying on the contiguous Tech campus. The RID signal tranmits the location of the drone and control station, so if an RID emitting drone is illegally flying on campus then the TTU police will be able to locate the control station as well. 
+<sup>5</sup> The campus police are only concerned about drones flying on the contiguous Tech campus. The RID signal transmits the location of the drone and control station, so if an RID emitting drone is illegally flying on campus then the TTU police will be able to locate the control station as well. 
 
 <sup>6</sup> The contiguous campus is approximately 0.636594 km<sup>2</sup> in area and the receivers must be able to cover this area. 
 
+<sup>7</sup> This is an ethical constraint that may be a privacy concern. The university should not be receiving data from people that are not interfering with the university or people involved in the university. The RID signal holds a lot of data about the drone and control station that 
 ## Schematic
 <img src="/Documentation/Images/Receiver/Schematics/Receiver.png" width="60%" height="60%">
 
