@@ -3,23 +3,14 @@
 ## Subsystem Function
 The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take. This is expected to be the first sensor data sent to the interceptor. This data provides the required yaw angle to properly intercept the incoming projectiles. In order to complete this functionality An array of lasers will be placed over all projectile paths and when a ball breaks a laser beam that data will be received by a microcontroller.
 ## Constraints
-
-- Constrain 1: The Path Sensor Array shall be autonomous, and will require no outside interference after initial startup.
-  - Reasoning: The customer requires the interceptor and all external sensor posts must be autonomous after initial startup.
-- Constraint 2: The Path Sensor Array shall be capable of detecting which of the possible 15 paths an approaching object is taking and relay this value to the interceptor.
-  - This constraint was developed to meet the requirement, to have a sensor that can determine when a projectile has begun to move toward the interceptor and determine the path at which the projectile is heading towards the interceptor.
-- Constraint 3: The Path Sensor Array shall be operated on battery power and must be capable of supplying power to the subsystem for 30 minutes.
-  - Due to a constraint given by the customer the sensor posts must have independent power from the interceptor.
-  - The Subsystem is required to be capable of supplying power for 30 minutes to provide adequate time to complete the competition.
-- Constraint 4: The Path Sensor Array shall limit the waste of batteries.
-  - This constraint addresses the broader impacts of the current environmental impacts of disposing batteries.
-- Constraint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard for safety requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a warning sign.
-  - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This standard classifies lasers as well as defines the required PPE while using lasers.
-- Constraint 6: The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interrupts, and a 5 Volt pin. All these pins are required to receive and send all sensor data.
-  - This constraint addresses all pins required to properly run the path sensor array.
-    - 15 I/O pins are required to read the voltage of the photoresistors and 2 I/O pins are required for Wireless Transmission TX and RX.
-    - 15 Pin change interrupts are required to quickly register when a projectile is blocking the laser.
-    - A 5 Volt pin is required to power the photoresistors
+| Constraint # | Description | Origin |
+| ----- | ------------------------- | -------------------|
+| 1 |  The Path Sensor Array shall be autonomous and will require no outside interference after initial startup. | The customer requires the interceptor and all external sensor posts must be autonomous after initial startup. |
+| 2 | The Path Sensor Array shall be capable of detecting which of the possible 15 paths an approaching object is taking and relay this value to the interceptor. | This constraint was developed by the team, to have a sensor that can determine when a projectile has begun to move toward the interceptor and determine the path at which the projectile is taking. |
+| 3 |  The Path Sensor Array shall be operated on battery power and must be capable of supplying power to the subsystem for 30 minutes. | This constraint originates from a customer and competition requirement, and the 30-minute requirement is to verify the system can operate during the entire competition |
+| 4 | The Path Sensor Array shall limit the waste of batteries. | This constraint originates from the broader impacts of the current environmental impacts of disposing batteries. |
+| 5 | The Path Sensor Array shall comply with the ANSI Z136.1 Standard for safety requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a warning sign. | This constraint is required due to the use of lasers in the sensor array, and the need to meet this standard to keep all spectators safe. | 
+| 6 | The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interrupts, and a 5 Volt pin. All these pins are required to receive and send all sensor data. | The microcontroller must meet this constraint to read the sensor array data for all paths | 
 
 
 ## Schematic
