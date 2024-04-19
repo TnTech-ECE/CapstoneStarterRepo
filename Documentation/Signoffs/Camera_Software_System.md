@@ -70,7 +70,9 @@ The second factor will utilize how recent the last picture was taken and the loc
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_3.png" width="175" height="80">
 
-The code to determine the voltage that should be applied to the motor system so that the camera will face the UAS or control station will depend on the location of the UAS or control station, and the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file.  
+The code to determine the voltage that should be applied to the motor system so that the camera will face the UAS or control station will depend on the location of the UAS or control station, and the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file.
+
+
 
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
