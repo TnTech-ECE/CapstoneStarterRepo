@@ -8,10 +8,10 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
   - Reasoning: The customer requires the interceptor and all external sensor posts must be autonomous after initial startup.
 - Constraint 2: The Path Sensor Array shall be capable of detecting which of the possible 15 paths an approaching object is taking and relay this value to the interceptor.
   - This constraint was developed to meet the requirement, to have a sensor that can determine when a projectile has begun to move toward the interceptor and determine the path at which the projectile is heading towards the interceptor.
-- Constraint 3: The Path Sensor Array shall operate on battery power and must be capable of supplying 7 volts at 600 mA to the entire subsystem for 30 minutes.
+- Constraint 3: The Path Sensor Array shall be operated on battery power and must be capable of supplying power to the subsystem for 30 minutes.
   - Due to a constraint given by the customer the sensor posts must have independent power from the interceptor.
   - The Subsystem is required to be capable of supplying power for 30 minutes to provide adequate time to complete the competition.
-- Constraint 4: The Path Sensor Array shall implement a remote battery power solution that will utilize only one set of batteries for the entirety of the project.
+- Constraint 4: The Path Sensor Array shall limit the waste of batteries.
   - This constraint addresses the broader impacts of the current environmental impacts of disposing batteries.
 - Constraint 5: The Path Sensor Array shall comply with the ANSI Z136.1 Standard for safety requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a warning sign.
   - This constraint is required due to the use of laser sensors to determine when a projectile is launched. This standard classifies lasers as well as defines the required PPE while using lasers.
@@ -50,7 +50,9 @@ According to the atmega 2560's data sheet for an input pin to change from low to
 
 
 ### Battery
-Due to the constraint of having to use battery power, all sensors, lasers, and microcontroller must be ran with a standalone battery power supply. The battery chosen is two Samsung 25R 18650 [2] in series. This results in a 7.2 Volt 2500 mAh battery. This voltage is chosen due to the recommended voltage of the Atmega 2560 being 7-12 Volts[1]. Do to battery voltages decreasing as they discharge, only the mAh before the voltage decreases past 3.5 volts is taken into calculations. According to the Samsung 25R battery data sheet, the battery discharges 1700 mAh before the voltage reaches below 3.5 volts [3]. The table below shows the total battery consumption on the system. In this table we can conclude that the external battery selected can power the sensor array for roughly 3 hours.
+One of the requiremnts of the Devcom interceptor competition is that all components that are not housed on the main interceptor body must be powered remotely. For this sensor array an Atmega 2560 and 15 KY-008 laser modules, and an array of resistors.
+
+According to the Atmega 2560's datasheet the reccomended input voltage is 7-12 Volts and has a maximum current of 200 mA [10].
 
 
 | Device | Current Draw |
