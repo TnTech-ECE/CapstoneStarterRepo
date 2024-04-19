@@ -19,7 +19,7 @@ Coming soon :)
 
 ### Team
 
-[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
+[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
 
 [Abe Perkins](www.linkedin.com)
 
@@ -33,12 +33,14 @@ Coming soon :)
 
 ### Faculty Supervisor
 
-The faculty supervisor for this project is Dr. Jeffrey Austen
+The faculty supervisor for this project is Dr. Jeffrey Austen. He is a professor in the Electrical and Computer Engineering department at Tennessee Technological University with areas of expertise in signal processing and communication systems. He proposed the idea for the drone tracker.    
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 Dr. Jeffrey Austen
+
+Tennessee Technological University Police
+
 
 ### Recognitions
 
@@ -46,8 +48,12 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
+- Documentation
+  - [3D Models](Documentation/3D_Models)
+  - Electrical
+    - [PCB Models](Documentation/Electrical/PCB)
+    - [Wiring Schematics]
+  - [Meeting Minutes]
 
 ### Reports
 
