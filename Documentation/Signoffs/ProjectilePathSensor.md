@@ -58,7 +58,8 @@ The battery that was chosen to power this system is a 6LR61 9-volt battery. Acco
 
 ### Broader impact of Battery
 
-The choice of a lithium-ion battery was chosen for multiple reasons. The first and most important factor was to have the capability to recharge and reuse the same batteries throughout the project. According to the battery's spreadsheet when the battery is discharged at 20A for 250 cycles, the battery's capacity is still nearly 2000 mAh [13]. Due to the significantly less current being discharged from the battery, it is expected that the capacity will decrease less. However, even with using provided data, it is expected to still be able to provide power to the system for at least 30 minutes using the 1700 maH cutoff explained above. Another alternative battery solution would have been Alkaline batteries, but due to the single-use nature of the batteries, many would have to be disposed of during testing. For example, a premium AA batter from Duracell has a nominal voltage of 1.5 Volts and can last for roughly 3 hours at a constant current of 500 mA [15]. This means a total of 5 AA batteries would have to be disposed of every 3 hours. This decreases cost efficiency as well as increases technological waste.
+All common batteries have expensive and environmentally harmful materials because of this, the team has made the constraint to limit the battery waste created by the projectile path sensor array. To ensure this, batteries will only be used during the competition. For all testing, an AC to DC converter will be used to power the projectile path sensor. 
+
 
 ### Complying with Laser Saftey Standards
 
@@ -97,7 +98,7 @@ Current requirements of the microcontroller include the ability to create a 5-vo
 [10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
 [11] 
 [12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
-[13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. \
+[13] 
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
 [15] Energizer, "Industrial (6LR61)", 6LR61.
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
