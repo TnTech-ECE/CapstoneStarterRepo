@@ -50,17 +50,20 @@ According to the atmega 2560's data sheet for an input pin to change from low to
 
 
 ### Battery
-One of the requiremnts of the Devcom interceptor competition is that all components that are not housed on the main interceptor body must be powered remotely. For this sensor array an Atmega 2560 and 15 KY-008 laser modules, and an array of resistors.
+One of the requirements of the Devcom interceptor competition is that all components that are not housed on the main interceptor body must be powered remotely. For this sensor array an Atmega 2560 and 15 KY-008 laser modules, and an array of resistors.
 
-According to the Atmega 2560's datasheet the reccomended input voltage is 7-12 Volts and has a maximum current of 200 mA [10].
+According to the Atmega 2560's datasheet, the recommended input voltage is 7-12 Volts and has a maximum current of 200 mA [10]. The Atmega will be responsible for supplying 5 volts to the photoresistor array. So, that will be accounted for in the maximum current draw of the Atmega. 
 
+The source of the battery's current draw is the laser modules. According to the KY-008 datasheet, the current draw of one laser is 30 mA at 5 Volts [4]. 15 laser modules will require 450 mA at 5 volts. The Atmega2560 5V pin has a maximum output current of 200 mA [10]. Therefore, the Laser modules must be powered separately. To do this an adjustable buck converter will be used to step down 9 volts to 5. The buck converter according to the data sheet has a 88 percent efficiency rate. This is an additional power loss that must be calculated. The table below shows the total current draw of the system. 
+
+The battery that was chosen to power this system is a 6LR61 9-volt battery. According to the datasheet, a constant current draw of 500 mA has a capacity of roughly 300 mAh. This capacity results in an operating time of over 30 minutes meeting the required constraint.
 
 | Device | Current Draw |
 | ------ | --------------- | 
-| Laser Array | 450 mA at 5 Volts and ~ 322 mA at 7 Volts [4]| 
-| Buck Converter| 88% efficency ~39 mA |
+| Laser Array | 450 mA at 5 Volts and ~ 250 mA at 9 Volts [4]| 
+| Buck Converter| 88% efficency ~30 mA |
 | Atmega 2560 | Maximum current 200 mA |
-| Total | 561 mA |
+| Total | 480 mA |
 
 ### Broader impact of Battery
 
@@ -101,11 +104,11 @@ Current requirements of the microcontroller include the ability to create a 5-vo
 [8] "Laser Classification" , Weill Cornell Medicine. 
 [9] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
 [10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
-[11] “Samsung 25R 18650 2500mah 20A battery,” 18650BatteryStore.com, https://www.18650batterystore.com/products/samsung-25r-18650? utm_campaign=21017394957&utm_source=x_c&utm_medium=cpc&utm_content=&utm_term=_&adgroupid=&gad_source=4&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIDVn2o2IZExphwsLASVktA_GrIyjrilURVrJArgcjTx32l40fdsE0aAlPREALw_wcB [accessed Apr. 4, 2024]. \
+[11] 
 [12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
 [13] Samsung, "Introduction of INR18650-25R", INR18650-25R, OCT. 2013. \
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
-[15] Duracell, "Alkaline-Manganese Dioxide Battery", OP1500. \
+[15] Energizer, "Industrial (6LR61)", 6LR61.
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
 [17] "ELEGOO 32 Pcs Double Sided PCB Board Prototype Kit for DIY Soldering with 5 Sizes Compatible with Arduino Kits" , Amazon.com. \
 [18] "Chanzon 5mm 5 Ω ohm Photoresistor LDR Resistor 5539 GL5539 Light-Dependent Photoconductor 20pcs Photo Light Sensitive", Amazon.com \
