@@ -20,8 +20,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 ## Analysis
 ### Coding Language
-The software system will utilized the arduino specified in the camera hardware system. Arduino uses a variant language of C++, therefore all code for this system will be in the C++ language using the arduino specific methods and functions as needed.
-
+Pending the Camera Hardware System signoff.
 
 ### Talking with the Database System
 #### Input data
@@ -76,7 +75,7 @@ The code to determine the voltage that should be applied to the motor system so 
 
 This second block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with whether the UAS is still in view of the camera. This code will stop the system from taking a picture when the UAS or UAS user has moved out of scope of the camera in the time it takes the system to move the camera into the correct position. This block will utilize the information about the camera location and UAS or control station location as well as the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file. This block will be followed by the instruction for the camera to take a picture.
 
-###
+### Psuedo Code
 
 
 
