@@ -50,3 +50,17 @@ Create a subsection addressing each of the above questions in your section of th
 3. Reflecting on the project, improvements could have been made. Better communication between teams from the start which would allow less stress on our end, more regular rule checks, emailing the IEEE people to get accurate rules and understandings of rules, a better start on the presentation (earlier start), and a more robust power system design would have mitigated some challenges. Starting detailed designs earlier would have provided more time for adjustments.
 
 4. Key takeaways include involving the entire team in discussions, leveraging everyone's strengths, and being proactive in seeking help when needed. Learning experiences from the project included gaining proficiency in Blender, understanding of RGB sensors, learning how everyone thinks differently, and utilizing Canva and Excel.
+
+## Liam Counasse
+
+1. The project was successful organizationally and technically with minor issues. Organizationally the project would have been more successful with more inclusion of the mechanical team. This is mainly due to the differing format of the capstone design programs of the mechanical and electrical engineering courses. Any technical issues that occurred were minor and resolved with intuitive programming solutions or further researched into the part in question.
+
+2. The most unanticipated issue which occurred was not having the chassis developed first. Other unexpected issues would be low mechanical lifespans of Arduino relays and the functionality of the motors for the push button system.
+
+3. If the opportunity arose to do it all over again the development of the chassis would be first, the development of the tracks would be second, the motors system would be more collaborative with the mechanical engineering team and prioritized third, the main controller would come last, and the power system would come second to last. Several systems are omitted from this change in order, however, the order of the completion of these systems does not majorly impact the overall success of the project.
+
+4. The ”best practices” which may be identified from the project would be communicating with teammates, asking advice from the instructor and classmates, and researching the subject of the project from technical papers and textbooks.
+
+5. Contact your instructors for assistance but choose instructors which specialize or teach courses over the subject. Review past projects if you find yourself at a loss of how to perform a task. Speak with graduate students as they have completed the course recently. Maintain communication with your team and keep a log of your work.
+
+6. I have acquired skills such as: soldering, KICAD, Blender, importing and creating models in LTspice. I have acquired knowledge of creating analog and digital controls systems and developing PCB.
