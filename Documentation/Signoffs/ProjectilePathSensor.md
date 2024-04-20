@@ -25,6 +25,9 @@ The two 3D schematics above show the Ky-008 laser module and the housing that wi
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/photoresistor%203.jpg" width="333" height="500">
 The three 3D schematics above show the housing for the photoresistors. Similar to lasers the goal of this housing is to attach the photoresistors to the sensor-post extension. The housing has a constant distance from the extension and an adjustable distance along the extension. This housing and the laser housing increase the accuracy of the laser array by limiting the number of directions the sensors that must be adjusted.  
 
+<img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/Rail.jpg" width="650" height="300">
+Above is the rail that will be used for all lasers and sensors. However, the game board is 64 inches long and the most common rail size is 48 inches. So, to account for that the rail will be cut in half and will be combined to be the required length. This means that two rails will be required to hold both the lasers and sensors.
+
 ## Analysis 
 
 ### Autonomous System
@@ -72,22 +75,22 @@ Current requirements of the microcontroller include the ability to create a 5-vo
 
 ### Sensor Path Accuracy
 
-According to the USGA a golf ball must be at least 1.68 inches in diameter [11]. Assuming that the golf balls will be directly in the center of the paths, each path sensor must be at least within  0.84 inches of the path. To meet this constraint housing will be 3d printed for the laser and photoresistor. These housings can be seen in the schematic section above, and finally the use of a rail for the laser and photoresistors will allow for nearly perfect accuracy.
+According to the USGA a golf ball must be at least 1.68 inches in diameter [11]. Assuming that the golf balls will be directly in the center of the paths, each path sensor must be at least within  0.84 inches of the path. To meet this constraint housing will be 3d printed for the laser and photoresistor. These housings can be seen in the schematic section above, and finally, the use of a rail for the laser and photoresistors will allow for nearly perfect accuracy.
 
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
 | ----------------- | ---- | ----| ------| ------ |
 | Elegoo Atmega 2560 [7] | EL-CB-002 | 1 | $20.99 | $20.99 | 
-| Samsung 25R 18650 [11] | 25R | 2 | $3.75 | $7.50 |
-| 18650 Battery Holder [6] | 114090053 | 1 | $1.49 | $1.49 |
-| 8 pack of Lasers [1] | Ky-008 | 2 | $11.99 | $23.98 |
+| 8 pack of lasers [1] | KY-008 |  2 | $11.99 | $23.98 |
+| Rail [6] | NA | 2 | $13.49 | $26.98 | 
+| 9 Volt Battery [13] | 6LR61 | 1 | $12.60 | $12.60 |
 | Adjustable DC-DC Buck Converter [14] | DFR0379 | 1 | $4.90 | $4.90 |
 | 100k Ohm Resistors 25 Pack [16] | 25EP514100K | 1 | $5.78 | $5.78 |
 | 32Pcs of PCB board [17] | NA | 1 | $9.99 | $9.99 | 
 | 20 Pcs Photoresistors [18] | GL5539 | 1 | $5.99 | $5.99 |
 | 6 sets of Terminal Blocks [21] | NA | 1 | $13.99 | $13.99 |
-| Total | | | | $94.61 |
+| Total | | | | $125.20 |
 
 
 ## Refrences
@@ -96,14 +99,14 @@ According to the USGA a golf ball must be at least 1.68 inches in diameter [11].
 [3] ArduinoModules, “KY-008 laser transmitter module,” ArduinoModulesInfo, https://arduinomodules.info/ky-008-laser-transmitter-module/ (accessed Apr. 6, 2024). \
 [4] AZ Delivery, "Ky-008 Laser Trasmitter Modul Datenblatt"m ky-008, 2017. \
 [5] DFRobot, "20W Adjustable DC-DC Buck Converter with Digital Display", DFR0379, Feb, 2017. \
-[6] “114090053,” Digikey, https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/114090053/10451921?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-10451921_sig-Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB&gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaL8WD90igyFKSXdHxOkua8whupC5BGHClnKJqEKValV6_VOdacOF8caAilXEALw_wcB (accessed Apr. 4, 2024). 
+[6] “Gladiator geartrack 48-in light gray composite multipurpose storage rail system in the SLATWALL & Rail Storage Systems Department at Lowes.com,” Lowes.com, https://www.lowes.com/pd/Gladiator-GearTrack-Light-Gray-Composite-Multipurpose-Storage-Rail-System/4196257 (accessed Apr. 20, 2024). 
 [7] “ELEGOO MEGA R3 Board ATmega 2560 + USB Cable Compatible with Arduino IDE Projects RoHS Compliant,” Amazon.com.\
 [8] "Laser Classification" , Weill Cornell Medicine. 
 [9] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
 [10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
 [11] “Golf ball regulations for diameter, weight and beyond,” Golf Ball Regulations for Diameter, Weight and Beyond Golflink.com, https://www.golflink.com/equipment/definition-golf-ball (accessed Apr. 20, 2024). 
 [12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
-[13] 
+[13] "Amazon Basics 8-Pack 9 Volt Alkaline Performance All-Purpose Batteries, 5-Year Shelf Life, Packaging May Vary" , Amazon.com \
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
 [15] Energizer, "Industrial (6LR61)", 6LR61.
 [16] "25EP514100K 100k Ohm Resistors, 1/4 W, 5% (Pack of 25)" , Amazon.com. \
