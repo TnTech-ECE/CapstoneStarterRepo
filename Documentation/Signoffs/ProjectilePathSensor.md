@@ -11,6 +11,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 | 4 | The Path Sensor Array shall limit the waste of batteries. | This constraint originates from the broader impacts of the current environmental impacts of disposing batteries. |
 | 5 | The Path Sensor Array shall comply with the ANSI Z136.1 Standard for safety requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a warning sign. | This constraint is required due to the use of lasers in the sensor array, and the need to meet this standard to keep all spectators safe. | 
 | 6 | The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interrupts, and a 5 Volt pin. All these pins are required to receive and send all sensor data. | The microcontroller must meet this constraint to read the sensor array data for all paths | 
+| 7 | The Path Sensor Array shall be closer than .84 inches from each projectile path | This constraint originates from the size of the projectile. |
 
 
 ## Schematic
@@ -69,6 +70,10 @@ The Ky-008 sensor is marketed as a low-power laser with a 5 mW output power [3].
 
 Current requirements of the microcontroller include the ability to create a 5-volt rail that each photoresistor connects to. Also, a ground rail is required to be connected to all pulldown resistors. According to the Atmega 2560 datasheet, the maximum current of an I/O pin is 20mA [10]. If 100k resistors are used for pulldown resistors the total resistance is 6.667 kOhms and even assuming 0 resistance from photoresistors the max current is 0.75 mA. Also, to read the voltage drop of the photoresistors 15 I/O ports are required. Additionally, 2 other I/O Rx and TX pins are required to output the incoming projectile path using serial communication. The Atmega 2560 has enough pins to support this amount of I/O pins [10]. Also, according to the Atmega 2560's datasheet, there is a total of 24 pin change interrupts meaning this constraint is also met [10]. Finally, multiple 5-volt and ground pins are available on the Atmega 2560 [10].
 
+### Sensor Path Accuracy
+
+According to the USGA a golf ball must be at least 1.68 inches in diameter [11]. Assuming that the golf balls will be directly in the center of the paths, each path sensor must be at least within  0.84 inches of the path.
+
 ## Bill of Materials
 
 | Item | Part Number | Quantity | Price Per Unit | Total Cost |
@@ -96,7 +101,7 @@ Current requirements of the microcontroller include the ability to create a 5-vo
 [8] "Laser Classification" , Weill Cornell Medicine. 
 [9] "Mega 2560 Rev3," docs.arduino.cc, Available: https://docs.arduino.cc/hardware/mega-2560/#features. [accessed Apr. 4, 2024]. \
 [10] Microchip, "ATmega640/V-1280/V-1281/V-2560/V-2561/V" , Atmega2560, Mar. 2025 [Revised May. 2020]. \
-[11] 
+[11] “Golf ball regulations for diameter, weight and beyond,” Golf Ball Regulations for Diameter, Weight and Beyond Golflink.com, https://www.golflink.com/equipment/definition-golf-ball (accessed Apr. 20, 2024). 
 [12] "Red Laser Transmitter Module KY-008" , DevoBOT. \
 [13] 
 [14] "DFR0379", Digikey, https://www.digikey.com/en/products/detail/dfrobot/DFR0379/7087190?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-7087190_sig-Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB&gad_source=1&gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQ9Pm6j-yGthw0P5K98s-lWMAjiXShgotcRxq3evbAAJfUBqy9iAugaAhN0EALw_wcB. \
