@@ -11,7 +11,7 @@ The projectile Path sensor subsystem must detect when a projectile is launched a
 | 4 | The Path Sensor Array shall limit the waste of batteries. | This constraint originates from the broader impacts of the current environmental impacts of disposing batteries. |
 | 5 | The Path Sensor Array shall comply with the ANSI Z136.1 Standard for safety requirements for a Class 3R laser. This includes having no intentional ocular exposure and installation of a warning sign. | This constraint is required due to the use of lasers in the sensor array, and the need to meet this standard to keep all spectators safe. | 
 | 6 | The Path Sensor Array shall implement a microcontroller that has 17 I/O pins, 15 Pin change interrupts, and a 5 Volt pin. All these pins are required to receive and send all sensor data. | The microcontroller must meet this constraint to read the sensor array data for all paths | 
-| 7 | The Path Sensor Array shall be closer than .84 inches from each projectile path | This constraint originates from the size of the projectile. |
+| 7 | The Path Sensor Array shall be closer than .84 inches from each projectile path | This constraint originates from the size of the projectile, and to verify that the sensors will detect a projectile. |
 
 
 ## Schematic
@@ -25,7 +25,7 @@ The two 3D schematics above show the Ky-008 laser module and the housing that wi
 <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Tkasubosk42-Signoff-ProjectilePathSensor/Documentation/Signoffs/ProjectilePathSensorImages/photoresistor%203.jpg" width="333" height="500">
 The three 3D schematics above show the housing for the photoresistors. Similar to lasers the goal of this housing is to attach the photoresistors to the sensor-post extension. The housing has a constant distance from the extension and an adjustable distance along the extension. This housing and the laser housing increase the accuracy of the laser array by limiting the number of directions the sensors that must be adjusted.  
 
-## Analysis
+## Analysis 
 
 ### Autonomous System
 
@@ -72,7 +72,7 @@ Current requirements of the microcontroller include the ability to create a 5-vo
 
 ### Sensor Path Accuracy
 
-According to the USGA a golf ball must be at least 1.68 inches in diameter [11]. Assuming that the golf balls will be directly in the center of the paths, each path sensor must be at least within  0.84 inches of the path.
+According to the USGA a golf ball must be at least 1.68 inches in diameter [11]. Assuming that the golf balls will be directly in the center of the paths, each path sensor must be at least within  0.84 inches of the path. To meet this constraint housing will be 3d printed for the laser and photoresistor. These housings can be seen in the schematic section above, and finally the use of a rail for the laser and photoresistors will allow for nearly perfect accuracy.
 
 ## Bill of Materials
 
