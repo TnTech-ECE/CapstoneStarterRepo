@@ -89,10 +89,10 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 // meaning, if there is a singular event with no event on the
 // opposite loop within this timeframe, that singular event
 // will be thrown out
-#define TIME_TO_STALE_EVENT_MS 2000
+#define TIME_TO_STALE_EVENT_MS 5000
 
 // Delta cannot be changed again until this amount of time has passed since last change
-#define DELTA_TIMEOUT_MS 1000
+#define DELTA_TIMEOUT_MS 2000
 
 // This is how you choose which loop is considered the entrance and exit loop
 // If Loop A is "first" then a vehicle traveling over Loop A then Loop B
@@ -161,11 +161,11 @@ pcnt_channel_handle_t pcnt_1_chan = NULL;
 // > Your device > Activation information)
 
 // AppEUI (sometimes called JoinEUI)
-const char *appEui = "1AB602AC9EF112BF";
+const char *appEui = "1AB602AC9EF112B1";
 // DevEUI
-const char *devEui = "70B3D57ED80029D0";
+const char *devEui = "70B3D57ED8002C5F";
 // AppKey
-const char *appKey = "F64422CFA825B4D89FF6B074027B41C5";
+const char *appKey = "FCFA68D75E3AE2EEDA3AA06E4F37CD8F";
 
 // Pins and other resources
 #define TTN_SPI_HOST      SPI2_HOST
@@ -181,7 +181,7 @@ const char *appKey = "F64422CFA825B4D89FF6B074027B41C5";
 
 // For debugging purposes, choose 0 to not have any LoRaWAN connectivity
 // choose 1 to use LoRaWAN network
-#define DO_LORAWAN 0
+#define DO_LORAWAN 1
 
 
 // Nonvolatile Storage
@@ -229,7 +229,7 @@ void write_current_delta_to_nvs() {
     nvs_close(nvs_handle);
 }
 
-#define TX_INTERVAL 30 // time interval to send messages in seconds
+#define TX_INTERVAL 10 // time interval to send messages in seconds
 //static uint8_t msgData[] = "Hello, world"; // Test message
 
 
@@ -622,6 +622,11 @@ void app_main(void)
     #endif // CONFIG_ESP_TASK_WDT_INIT
 
     initialize_nvs();
+
+    // manually set nvs delta to 0
+    current_delta = 0;
+    write_current_delta_to_nvs();
+
     read_current_delta_from_nvs();
 
     if(DO_LORAWAN)
@@ -649,14 +654,14 @@ void app_main(void)
         ttn_configure_pins(TTN_SPI_HOST, TTN_PIN_NSS, TTN_PIN_RXTX, TTN_PIN_RST, TTN_PIN_DIO0, TTN_PIN_DIO1);
 
         // The below line can be commented after the first run as the data is saved in NVS
-        //ttn_provision(devEui, appEui, appKey);
+        ttn_provision(devEui, appEui, appKey);
 
         // Register callback for received messages
         ttn_on_message(messageReceived);
 
         ttn_set_adr_enabled(true);
-        //ttn_set_data_rate(TTN_DR_US915_SF10);
-        ttn_set_max_tx_pow(20);
+        ttn_set_data_rate(TTN_DR_JOIN_DEFAULT);
+        ttn_set_max_tx_pow(9);
 
         printf("Joining...\n");
         if (ttn_join())
