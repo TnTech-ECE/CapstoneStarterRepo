@@ -29,7 +29,7 @@
 
         Multithreading with FreeRTOS. LoRaWAN runs on core1, other tasks on core0
 
-        Speed estimation.
+        Speed estimation. May not be possible in current setup.
 
     Setup:
         todo
@@ -89,10 +89,10 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 // meaning, if there is a singular event with no event on the
 // opposite loop within this timeframe, that singular event
 // will be thrown out
-#define TIME_TO_STALE_EVENT_MS 5000
+#define TIME_TO_STALE_EVENT_MS 2000
 
 // Delta cannot be changed again until this amount of time has passed since last change
-#define DELTA_TIMEOUT_MS 2000
+#define DELTA_TIMEOUT_MS 5000
 
 // This is how you choose which loop is considered the entrance and exit loop
 // If Loop A is "first" then a vehicle traveling over Loop A then Loop B
@@ -229,7 +229,7 @@ void write_current_delta_to_nvs() {
     nvs_close(nvs_handle);
 }
 
-#define TX_INTERVAL 10 // time interval to send messages in seconds
+#define TX_INTERVAL 60 // time interval to send messages in seconds
 //static uint8_t msgData[] = "Hello, world"; // Test message
 
 
@@ -298,7 +298,7 @@ void get_freq_from_pcnt(pcnt_unit_handle_t pcnt_unit, int *pulse_count, int64_t 
     pcnt_unit_clear_count(pcnt_unit);
 
     // Print the pulse count and frequency along with the loop identifier
-    //printf("\nLoop %c: Pulse Count: %d, Frequency: %lld Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
+    printf("\nLoop %c: Pulse Count: %d, Frequency: %lld Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
 
     /*
     printf("\nLoop %c:", (loop_id == LOOP_A) ? 'A' : 'B');
@@ -373,7 +373,7 @@ void print_speed_mph(int64_t curr_event_timestamp, int64_t last_event_timestamp)
     double speed_fps = distance_feet / time_seconds;
     double speed_mph = speed_fps * 0.681818;
 
-    printf("\nEstimated speed: %.2f miles per hour", speed_mph);
+    //printf("\nEstimated speed: %.2f miles per hour", speed_mph);
 }
 
 
@@ -624,8 +624,8 @@ void app_main(void)
     initialize_nvs();
 
     // manually set nvs delta to 0
-    current_delta = 0;
-    write_current_delta_to_nvs();
+    // current_delta = 0;
+    // write_current_delta_to_nvs();
 
     read_current_delta_from_nvs();
 
