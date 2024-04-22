@@ -16,11 +16,12 @@
 | 5 | The design shall have a mimumum range of 45 inches from the point of placement. | This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window. |
 | 6 | This design shall have a placement to put the radar beam angle within 100*40 $^{\circ}$ . | This constraint is derived from the beam angle specified by the mmWave Radar manufacturer |
 
+</div>
+
 ### Further Explanation
 [5] The constraint stated to have a minimum range of 45 inches. This is to put the detection of the golf ball in the same area as the projectile path subsystem. This is done to reduce the time after the projectiles path has been detected and transmitted so the launcher body is not idle for an extended period of time waiting on the velocity and acceleration to come in to start performing its operations.
 
 [6] The constraint referenced a radar beam angle within 100*40 $^{\circ}$ the radar beam angle is the area where the output can be returned to the anteana of the radar the 100 $^{\circ}$ is how wide in degrees an object can be detected, and 40 $^{\circ}$ is how big the angle up and down is.
-</div>
 
 ## Schematics
 <p align = "center">
