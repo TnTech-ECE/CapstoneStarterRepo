@@ -57,7 +57,7 @@ The Raspberry Pi 5 can communicate wirelessly with the sensor post controllers u
 
 ## Launcher Aiming Control 
 ### Process Diagram
-![alt text](<Launcher Aiming Control Block Diagram-1.png>)
+![alt text](<Launcher Aiming Control Block Diagram.png>)
 ### Process Description
 The launcher aiming system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [3]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
 $$ \theta_{aim} = n_{steps}*\theta_{step} $$
