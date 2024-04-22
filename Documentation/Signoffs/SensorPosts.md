@@ -14,7 +14,7 @@
 | 3 | The design shall have maximum sensor input delay of 100ms. | This comes from a timing contraint for intercepting the projectile. |
 | 4 | The Design shall have an alternative power method to be used during testing. | This is a requirement for lessening enviornmental impact of our interceptor. |
 | 5 | The design shall have a mimumum range of 45 inches from the point of placement. | This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window. |
-| 6 | This design shall have optimal placement within the game board to reduce the cosine effect. | This constraint is derived from increasing the effectivness of the radar. |
+| 6 | This design shall have a placement to be within 100*40 $^{\circ}$ . | This constraint is derived from the beam angle specified by the mmWave Radar manufacturer |
 
 </div>
 
