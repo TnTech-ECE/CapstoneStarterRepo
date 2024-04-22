@@ -5,20 +5,18 @@
  This subsystem will then wirelessly transmit those values to the aiming subsystem for further use of this data.
 
 ## Constraints
-* C1: The design shall be autonomous, and will require no outside interference after initial startup.
-    * The customer requires the interceptor and all external sensor posts must be autonomous after initial startup.
-* C8: The design shall design a sensor array that operates on battery power for a minimum of 30 minutes.
-    * This comes from the requirements set forth in the rulebook by devcom.
-    * further constrained based on the power consumption of this subsystem.
-* C14: The design shall have maximum sensor input delay of 100ms.
-    * This comes from a timing contraint for intercepting the projectile.
-* C19: The Design shall have an alternative power method to be used during testing.
-    * This is a requirement for lessening enviornmental impact of our interceptor.
-* C25: The design shall have a mimumum range of 45 inches from the point of placement.
-    * This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window.
-* C26: This design shall have optimal placement within the game board to reduce the cosine effect.
-    * This constraint is derived from increasing the effectivness of the radar.
+<div align="center">
 
+|Constraint Number | Description | Origin |
+|------------------|-------------|--------|
+| 1 | The design shall be autonomous, and will require no outside interference after initial startup. | The customer requires the interceptor and all external sensor posts must be autonomous after initial startup. |
+| 2 | The design shall design a sensor array that operates on battery power for a minimum of 30 minutes. | This comes from the requirements set forth in the rulebook by devcom. Further constrained based on the power consumption of this subsystem.|
+| 3 | The design shall have maximum sensor input delay of 100ms. | This comes from a timing contraint for intercepting the projectile. |
+| 4 | The Design shall have an alternative power method to be used during testing. | This is a requirement for lessening enviornmental impact of our interceptor. |
+| 5 | The design shall have a mimumum range of 45 inches from the point of placement. | This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window. |
+| 6 | This design shall have optimal placement within the game board to reduce the cosine effect. | This constraint is derived from increasing the effectivness of the radar. |
+
+</div>
 
 ## Schematics
 <p align = "center">
