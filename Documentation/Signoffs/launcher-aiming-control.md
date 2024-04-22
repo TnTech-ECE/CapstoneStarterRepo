@@ -74,7 +74,8 @@ $$ t_{fire} = t_{intercept } - t_{aim} - t_{process} - t_{sensordelay}-t_{launch
 Once the time to fire is up, it sends a signal to the buzzer to indicate it is about to fire and sends the signal is sent to the launcher firing mechanism to fire a projectile.
 
 Once a projectile is fired, the launcher aiming motors move back to the starting reference point. To get back to the starting reference point, simply set the same sumber of pulses to the STEP pin and invert the DIR signal. 
-
+## Bill Of Materials
+* Components needed for this signoff have already been requested other signoffs
 ## References
 [1] https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header
 
