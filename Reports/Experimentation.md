@@ -81,7 +81,7 @@
 - Constraint to Test: The power system shall power the microcontroller consistently throughout the run of the board at least 95% of the time.
 - Experimental Process: The robot was powered, set in the start area, and activated. The behavior of the microcontroller was observed as it moved about the board and marked if a brownout occurred.
 
-![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/fd06b150-61d0-4539-b977-8105c2635710)
+![image](https://github.com/cebttu/CapstoneTeam1/assets/143427017/972097a1-be7b-47cf-bcd2-9e3976ff7603)
 
 - Analysis of Results:
 <br> As shown, in 30 trials, the power subsystem powered the microcontroller consistently 100% of the time. This test was developed in response to an issue discovered at the SECON competition where the movement of the robot going down the hills temporarily turned the motors into generators which then fed back power to the microcontroller, disrupted the voltage difference, and resulted in a brownout of the microcontroller which reset its program and inhibited the robot from behaving properly by locking the motors in the drive mode before power disruption. The solution to this problem was to stabilize the microcontroller's voltage difference by powering it through a 9V battery instead of the main power system that the motors were attached to, thus preventing the feedback of power. This significantly improved the functionality of the power system and the robot as a whole. Before the change, the microcontroller would brownout most runs once the hills were descended. Once the solution was implemented we achieved consistent power 100% of the time, which fulfills our constraint of 95% as shown by the orange line.
