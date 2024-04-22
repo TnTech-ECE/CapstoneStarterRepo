@@ -14,16 +14,13 @@ distance, speed, and position of the target as it slides down the fishing line.
 | 2   | The sensor shall be able to retrieve at least 2 data points within 1.95 s in order to calculate speed   | System Constraint |
 | 3   | The sensor shall have a resolution great enough so that the golf ball spans multiple pixels from 6 feet | Conceptual Design |
 | 4   | The sensor shall have a range of at least 6 feet                                                        | Conceptual Design |
-| 5   | The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet          | System Constraint |
-| 6   | The sensor shall have a field of view greater than 24.50°                                               | Device Constraint |
+| 5   | The sensor shall have a FOV that is wider than 56" from 6' away                                         | Device Constraint |
 
-1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor.
-
-2. The fastest time recorded from DEVCOM is 1.95 s for the golf ball to reach the bottom of its trajectory. Therefore, the sensor must be able to retrieve data for at least 2 positions so that speed can be calculated.
+1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor
+2. The fastest time recorded from DEVCOM is 1.95 s for the golf ball to reach the bottom of its trajectory. Therefore, the sensor must be able to retrieve data for at least 2 positions so that speed can be calculated
 3. The sensor must have a resolution great enough so that the golf ball will span across multiple pixels for image processing to be able to discern where the golf ball is
 4. The furthest point that the sensor must be able to track and detect is the starting point of each golf ball which is about 6 feet from the launcher
-5. The sensor shall be able to detect and track a golf ball-sized object from a maximum of 6 feet
-6. The fishing lines that the golf balls slide down extend from anchor 3, given in the rulebook, to anchor 2 at an angle of 24.50°, therefore the sensor must have a field of view larger than that in order to encompass the entirety of the starting point of each fishing line
+5. Since the width of anchor 2 from the DEVCOM rulebook is 56", the FOV must be wider than 56" at 6' away in order to encompass all the fishing lines
 
 ## **Buildable Schematic**
 
@@ -32,30 +29,6 @@ distance, speed, and position of the target as it slides down the fishing line.
 *Figure 1: Buildable Schematic of subsystem*
 
 ## **Analysis:**
-
-### **Field of View**
-
-To start, the camera or sensor that will be used must have a field of view (FOV) of at least 24.50°. This was found by using the measurements of the gameboard given in the rulebook from DEVCOM.
-
-![Min FOV](../Images/Sensor_subsystem/field_of_view.png)
-
-*Figure 2: Diagram of gameboard with measurements showing the angle of outermost fishing lines*
-
-In order to find the minimum FOV, the angle, X, needs to be calculated. X gives the maximum angle at which the fishing lines will extend from anchor point 3 to anchor point 2. The FOV needs to be wider than X in order to have every fishing line in the view of the camera.
-
-~~~ math
-
-arctan((56/2)/129) = 12.25° = y
-
-~~~
-
-~~~ math
-
-x = 2y = 2(12.25°) = 24.50°
-
-~~~
-
-This angle value gives some room for error due to some missing measurements from DEVCOM however it does act as a maximum angle for the fishing lines as well as the minimum FOV of the camera. Since the camera that was chosen is the Intel RealSense D435, with a FOV of 65° with the RGB camera and a FOV of 87° with the depth-sensing cameras, it will be more than enough to encompass the entirety of the gameboard [1].
 
 ### **Placement of Camera**
 
@@ -71,13 +44,13 @@ Using this angle will allow every line to be visible within the 42° vertical FO
 
 ### **Resolution**
 
-The RGB camera supports a maximum resolution of 1920 X 1080. With the FOV of 65° X 42° the area each pixel covers 6' away can be calculated.
+The RGB camera supports a maximum resolution of 1920 X 1080. With the FOV of 69° X 42° the area each pixel covers 6' away can be calculated.
 
 FOV width
 
 ~~~ math
 
-2 * tan(65° / 2) * (6 * 12) = 91.74
+2 * tan(69° / 2) * (6 * 12) = 98.97
 
 ~~~
 
@@ -85,7 +58,7 @@ Pixel width
 
 ~~~ math
 
-91.74 / 1920 = 0.048
+98.97 / 1920 = 0.052
 
 ~~~
 
@@ -106,6 +79,18 @@ Pixel height
 ~~~
 
 Since the diameter of a golf ball is about 1.68", the RGB camera will not have a problem detecting the golf ball because, from the furthest point on the gameboard, there will be around 30 pixels covering the golf ball on both the X and Y axes.
+
+### **Field of View**
+
+Based on the math provided in the above resolution section, it is known that the FOV of the camera is 98.97" at 6' away. Therefore, the FOV of the camera will be more than wide enough to encompass each fishing line because the width between the 2 furthest lines is 56".
+
+
+
+
+
+
+
+
 
 ### **Frame Rate**
 
