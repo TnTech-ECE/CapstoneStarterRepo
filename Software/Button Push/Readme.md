@@ -1,1 +1,1 @@
-
+The button push code here controls the servo to release the button pushing arm. It sets the home posistion of the servo and then moves it to retract the pin and release the arm. It then waits a second and extends the pin again so that the arm may be reattached.
