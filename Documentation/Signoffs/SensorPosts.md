@@ -130,4 +130,4 @@ After this data is analized adjustments will be made as needed, and the device w
 [def10]: https://copradar.com/chapts/chapt2/ch2d1.html
 [def11]: https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-aa-battery/
 [def12]: https://www.powerstream.com/AA-tests.htm
-[def13]https://schematicsforfree.com/files/Theory%2C%20Education%20%26%20Reference/Reference/Reference%20Data%20for%20Engineers%20Ninth%20Ed.pdf
+[def13]: https://schematicsforfree.com/files/Theory%2C%20Education%20%26%20Reference/Reference/Reference%20Data%20for%20Engineers%20Ninth%20Ed.pdf
