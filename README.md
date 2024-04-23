@@ -9,19 +9,18 @@ tasks to minimize risk during both development and deployment.
 
 ## Capabilities
 
-The project thus far demonstrates the planning and design phases of the engineering process. This includes the initial project proposal and budget, designs of subsystems, 3D renderings of the placement of the individual subsystems, bills of materials, and analysis of the designs produced.
-
-## Salient Outcomes
-
-There are no salient outcomes at this time. We hope to have more interesting outcomes when construction and implementation begin in 2024.
+The project demonstrates the planning and design phases of the engineering process. This includes the initial project proposal and budget, designs of subsystems, 3D renderings of the placement of the individual subsystems, bills of materials, and analysis of the designs produced. It completed all objectives set upon by the team excepting the box sweep subsystem, which was never implemented in the build phase. The robot successfully navigates the course, climbs the hills, crosses the crater, displays team spirit, and pushes the button. It does so in 42 seconds on average, well under the required 1.5 minutes.
 
 
 ## Project Demonstration & Images
-A video demonstration shall be included once the construction and implementation of the project are completed in 2024.
 
-3D Renderings of the Project as designed thus far are included below.
-(include 3D renders)
+Video Demonstration of the robot can be found below.
 
+![VideoDemo](https://youtu.be/-hqi9rafyGQ?si=K_Vgbs53E9UbYPcJ)
+
+An image of the robot as fully designed and built at the competition.
+
+![MEE-3P0](https://github.com/cebttu/CapstoneTeam1/assets/143427017/4ddd982c-771b-4168-a133-3f33ed480cc2)
 
 ## About Us
 
