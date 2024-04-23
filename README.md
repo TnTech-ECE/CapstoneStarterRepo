@@ -86,4 +86,3 @@ An image of the robot as fully designed and built at the competition.
 - [Meeting Minutes](https://github.com/cebttu/CapstoneTeam1/tree/main/Documentation/Meeting%20Minutes)
 
 ### [Software](https://github.com/cebttu/CapstoneTeam1/tree/main/Software)
-- Currently empty, this will be populated once implementation begins in 2024.
