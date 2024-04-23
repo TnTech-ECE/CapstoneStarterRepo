@@ -1,1 +1,1 @@
-
+This file is the main file for the software portion of this project. It requires all te other fiels be downloaded and in the folder with it. It sets up the microcontroller and calls all the functions at the required times to properly run the robot.
