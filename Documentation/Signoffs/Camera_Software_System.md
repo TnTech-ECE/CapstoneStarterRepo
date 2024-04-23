@@ -6,13 +6,13 @@ The camera software system will be reponsible for controlling the camera hardwar
 | -- | --------- |--------|
 |  1 | The only external inputs into the system shall be the location of UAS in the form of latitude and longitude, altitude of UAS, UAS speed, UAS direction of flight, location of the control station in the form of latitude and longitude, and authorization status of the UAS. | Design Constraint |
 |  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or control station when determining whether to take a picture. | Stakeholder Constraint | 
-|  3 | Shall not act upon the external data received if the data’s corresponding authorization status is true. | Tech Police |
+|  3 | The system shall not act upon the external data received if the data’s corresponding authorization status is true. | Tech Police |
 |  4 | If the system receives data for both the control system location and the UAS location, the system shall prioritize capturing a picture of the control system unless the UAS is in a high alert area. | Tech Police |
-|  5 | Shall utilize the external inputs into the system and the known camera location to calculate the camera pointing angles to within one degree of accuracy at minimum. | Design Constraint |
-|  6 | Shall output camera motor controls based on the calculated camera pointing angles as accurately as the hardware allows. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
-|  7 | Shall accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of 3 data points. | Design Constraint |
-|  8 | Shall utilize the location prediction only when it is accurate to adjust the camera pointing angles depending on the average processing time delay. | Design Constraint | 
-|  9 | Shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
+|  5 | The system shall utilize the external inputs into the system and the known camera location to calculate the camera pointing angles to within one degree of accuracy at minimum. | Design Constraint |
+|  6 | THe system shall output camera motor controls based on the calculated camera pointing angles as accurately as the hardware allows. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
+|  7 | The syste shall accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of 3 data points. | Design Constraint |
+|  8 | The system shall utilize the location prediction only when it is accurate to adjust the camera pointing angles depending on the average processing time delay. | Design Constraint | 
+|  9 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
 
 <sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
 
