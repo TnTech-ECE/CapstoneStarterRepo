@@ -4,16 +4,19 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall not account for light levels and/or obstructions to the view of the UAS or control station when determining whether to take a picture | Stakeholder Constraint | 
-|  2 | The system shall prioritize capturing a picture of the UAS user if the system obtains the location of the UAS user | Tech Police |  
-|  3 | The ability of the system to capture a picture of the UAS or control station shall depend on the hardware constraint(s) defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file | Design Constraint(s) | 
+|  1 | The only external inputs into the system shall be the location of UAS in the form of latitude and longitude, altitude of UAS, UAS speed, UAS direction of flight, location of the control station in the form of latitude and longitude, and authorization status of the UAS. | Design Constraint |
+|  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or control station when determining whether to take a picture. | Stakeholder Constraint | 
+|  3 | Shall not act upon the external data received if the data’s corresponding authorization status is true. | Tech Police |
+|  4 | If the system receives data for both the control system location and the UAS location, the system shall prioritize capturing a picture of the control system unless the UAS is in a high alert area. | Tech Police |
+|  5 | Shall utilize the external inputs into the system and the known camera location to calculate the camera pointing angles to within one degree of accuracy at minimum. | Design Constraint |
+|  6 | Shall output camera motor controls based on the calculated camera pointing angles as accurately as the hardware allows. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
+|  7 | Shall accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of 3 data points. | Design Constraint |
+|  8 | Shall utilize the location prediction only when it is accurate to adjust the camera pointing angles depending on the average processing time delay. | Design Constraint | 
+|  9 | Shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
 
+<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
 
-<sup>1</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
-
-<sup>2</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS, however the UAS user location data is an optional addition to the RID signal [^2].
-
-<sup>3</sup> Motor slew rate and camera lense resolution are examples of hardware constraints. 
+<sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters high alert areas that, so far, the Tech Police have specified to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Full_Flowchart.png" width="500" height="800">
