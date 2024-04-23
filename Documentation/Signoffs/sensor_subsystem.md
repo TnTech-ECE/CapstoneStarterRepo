@@ -12,13 +12,13 @@ distance, speed, and position of the target as it slides down the fishing line.
 | --- | ------------------------------------------------------------------------------------------------------- | ----------------- |
 | 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                 | System Constraint |
 | 2   | The sensor shall be able to retrieve at least 2 data points within 1.95 s in order to calculate speed   | System Constraint |
-| 3   | The sensor shall have a resolution great enough so that the golf ball spans multiple pixels from 6 feet | Conceptual Design |
+| 3   | The sensor shall have a resolution great enough so that the golf ball spans 30 pixels from 6 feet       | Conceptual Design |
 | 4   | The sensor shall have a range of at least 6 feet                                                        | Conceptual Design |
 | 5   | The sensor shall have a FOV that is wider than 56" from 6' away                                         | Device Constraint |
 
 1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor
 2. The fastest time recorded from DEVCOM is 1.95 s for the golf ball to reach the bottom of its trajectory. Therefore, the sensor must be able to retrieve data for at least 2 positions so that speed can be calculated
-3. The sensor must have a resolution great enough so that the golf ball will span across multiple pixels for image processing to be able to discern where the golf ball is
+3. The sensor must have a resolution great enough so that the golf ball will span across 30 pixels for image processing to be able to discern where the golf ball is
 4. The furthest point that the sensor must be able to track and detect is the starting point of each golf ball which is about 6 feet from the launcher
 5. Since the width of anchor 2 from the DEVCOM rulebook is 56", the FOV must be wider than 56" at 6' away in order to encompass all the fishing lines
 
