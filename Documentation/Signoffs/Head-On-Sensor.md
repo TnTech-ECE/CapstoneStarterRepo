@@ -5,10 +5,11 @@ The purpose of the head on position sensor is to determine the target's location
 * C7: The sensor apparatus shall detect approaching objects and relay the target's location to the interceptor
    * This subsystem will act in conjunction with other position sensors to be able to effectively track the target in three dimensions. Even though the head on position sensor is connected to the interceptor, and does not require wireless communication, to comply with this constraint it must have a method of relaying the target's position to the aiming subsystem.
 * C23: The head on position sensor shall have a maximum latency of 100ms and provide updates at least 10 times per second.
+* * This is to comply with a project wide constraint that each sensing system shall be able to report its location in less than 100ms after the event took place. More explanation is given below about how time is budgeted to ensure a successiful target interception.
 * C24: The head on position sensor shall be able to detect the target with an accuracy of at least 2 inches when the target is between six and two feet away.
-* * When the target is between six and two feet away from the interceptor the reported location shall not be more than 2 inches away from the target. More leniency is granted for the depth axis. To confirm the accuracy of this subsystem the following equation will be used.
+* * When the target is between six and two feet away from the interceptor the reported location shall not be more than 2 inches away from the target. There are a total of 30 lines the target can be on arranged by two rows of 15 strings with four inches between each string four feet from the interceptor. A 200% factor of safety is added because if the reported location is between two lines the wrong line may be reported. To confirm the error of this subsystem is within specifications the following equation will be used.
 
-Accuracy = $\sqrt{{(x_{\text{reported}} - x_{\text{actual}})^2 + (y_{\text{reported}} - y_{\text{actual}})^2 + z_{\text{actual}}^2}}$
+Accuracy = $\sqrt{{(x_{\text{reported}} - x_{\text{actual}})^2 + (y_{\text{reported}} - y_{\text{actual}})^2 +  (z_{\text{reported}} - z_{\text{actual}})^2}}$
 ### Explanations for C23 and C24
 The fastest the target can cross the game board is 1.78 seconds as given by the customer. Therefore, in order to have a chance to intercept the target the time among subsystems must be properly managed. The following table shows the budgeted delay for all subsystems
 
@@ -29,6 +30,8 @@ The intention is to determine the target's location by using image recognition. 
 </p>
 The wiring schematic for this subsystem is simple as the camera's wiring is contained within its ribbon cable. The ribbon cable provides power, ground, and data. The data interface is a camera serial interface also known as MIPI CSI. The Raspberry Pi 5 supports 15 pin 2 lane MIPI-CSI allowing the camera to send two streams of image data to the Pi simultaneously [3]. The camera draws up to 250mA at 3.3 volts [4]. The camera's ribbon cable is 610mm and can be extended with a 15-pin flex cable extender with 1mm pitch.
 
+### Mounting
+The camera will be mounted on the intereceptor facing the test bed giving a frontal point of view to detect incoming targets. The camera must be in a stationary location so that all reported locations are consistant, permiting the camera to track the target in three dimensions. The Pi Camera V2 has four mounting holes that accept M2 mounting screws which would permit the camera to be securely mounted on the interceptor. 
 ## Analysis
 
 ### Algorithm
