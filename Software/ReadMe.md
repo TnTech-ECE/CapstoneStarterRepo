@@ -1,8 +1,3 @@
-For each of the sets of programs written, create a directory in the software folder. 
+## Software
 
-Each software folder must contain a readme file detailing
-
-1. What the software does
-2. All dependencies
-3. How to Install
-4. How to run/How to use
+Each folder has a readme detailing the processes contained with in, and are organized by subsystem. All software components are dependant on all other software components. To install please donload the ![Arduino IDE](https://www.arduino.cc/en/software) here, download all the files into one folder named main control, and open the main control.ino file. Then compile to the ATMEGA 2560 and run!
