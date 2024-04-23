@@ -63,7 +63,7 @@ In order to provide power to the other subsystems on the main interceptor body a
 | Total          |                                                                              |                 |                  |              | Total Cost | $153.23|
 
 ## References
-[1] 350W Power Supply: https://www.digikey.com/en/products/detail/mean-well-usa-inc/LRS-350N2-36/21531512
+[1] 350W Power Supply: [https://www.digikey.com/en/products/detail/mean-well-usa-inc/LRS-350N2-36/21531512](https://us.rs-online.com/product/mean-well/lrs-350-12/70696563/?gad_source=1&gclid=CjwKCAjw5ImwBhBtEiwAFHDZxw7FhHKBnjxCYL9bz8mnkNarsN38aG_pUJCb3YXUESWjkieoUsRfuRoCyzkQAvD_BwE&gclsrc=aw.ds)
 
 [2] 27W Power Supply: https://www.digikey.com/en/products/detail/raspberry-pi/SC1153/21658276?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_High%20ROAS%20Categories&utm_term=&utm_content=&gad_source=1&gclid=Cj0KCQjw5cOwBhCiARIsAJ5njub_RbX7oVqwdK9EKF0f0Dt8D7Kc9OGP2AeqPFMyzdD_JlyGdP7ucqYaAvCkEALw_wcB
 
