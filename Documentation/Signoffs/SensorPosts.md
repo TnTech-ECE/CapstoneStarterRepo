@@ -1,8 +1,9 @@
 # Sensor Post Array Velocity and Acceleration Signoff
 ## Functionality 
  This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball as it travels down the fishing line towards the interceptor body. 
- To accomplish this task this subsystem will take in the projectiles location data from the mmWave Radar to do the calculations neccisary to obtain the velocity and acceleration. 
- This subsystem will then wirelessly transmit those values to the aiming subsystem for further use of this data.
+ To accomplish this task this subsystem will take in the projectiles location data from a mmWave Radar unit.
+ This unit will detect the presense of an object and will do time of flight calculations to obtain the velocity and acceleration.
+ This subsystem will then wirelessly transmit the values to the aiming subsystem for further use of this data.
 
 ## Constraints
 <div align="center">
@@ -115,6 +116,8 @@ After this data is analized adjustments will be made as needed, and the device w
 
 [12] [AA bettery discharge][def12]: The discharge testing done on differnet types of AA batteries at different discharge ratings.
 
+[13] [Reference Data for Engineers Ninth Edition][def13]: Chapter 36 Radar
+
 [def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
 [def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
 [def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.
@@ -127,3 +130,4 @@ After this data is analized adjustments will be made as needed, and the device w
 [def10]: https://copradar.com/chapts/chapt2/ch2d1.html
 [def11]: https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-aa-battery/
 [def12]: https://www.powerstream.com/AA-tests.htm
+[def13]https://schematicsforfree.com/files/Theory%2C%20Education%20%26%20Reference/Reference/Reference%20Data%20for%20Engineers%20Ninth%20Ed.pdf
