@@ -1,1 +1,1 @@
-
+These files initialize and run the start sensor, and contain all the libraries for the sensor from the manufacturer. They poll the sensor and set the sensitivity for teh sensor to collect green light.
