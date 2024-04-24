@@ -29,7 +29,7 @@ The website and camera subsystem will request/pull data from the database subsys
 ## Analysis
 If a drone remote ID signal is captured by the receiver system, the drone will sent off a block message every second, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1].
 
-The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA. the least significant byte(3 downto 0 bits) will be used to identify the UA type ranging from 0 to 15, A to F will correspond to 10 to 15 respectively, then the second byte(7 downto 4 bits) will identify the ID type, and UAS ID can contain up to max of 20 Bytes padded with NULLS, and the last three bytes being reserved.
+The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA. The first byte is used to identify the ID and UA type, the least significant bits(3 downto 0) will be used to identify the UA type, then bits(7 downto 4 bits) will identify the ID type, both IP and UA have up to 16 type ranging from 0 to 15, A to F will correspond to 10 to 15 respectively, and UAS ID can contain up to max of 20 Bytes padded with NULLS, and the last three bytes being reserved.
 
 UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format), Registration ID, UTM(UUID), specific session ID.
 0. None
