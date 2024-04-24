@@ -10,16 +10,18 @@
 
 |Constraint Number | Description | Origin |
 |------------------|-------------|--------|
-| 1 | The design shall be autonomous, and will require no outside interference after initial startup. | The customer requires the interceptor and all external sensor posts must be autonomous after initial startup. |
+| 1 | The design shall be autonomous, and will require no outside interference after initial startup. | The customer requires the interceptor and all external sensor posts must be autonomous after initial startup. This means that this design should be able to operate on its own for the duration of the competition without any user input. |
 | 2 | The design shall operate on battery power for a minimum of 30 minutes. | This comes from the requirements set forth in the rulebook by devcom, and is further constrained based on the power consumption of this subsystem.|
 | 3 | The design shall have maximum sensor input delay of 100ms. | This comes from a timing contraint for intercepting the projectile. |
 | 4 | The Design shall have an alternative power method to be used during testing. | This is a requirement for lessening enviornmental impact of our interceptor. |
-| 5 | The design shall have a mimumum range of 45 inches from the point of placement. | This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window. |
+| 5 | The design shall have a mimumum range for projectile detection of 45 inches from the point of placement . | This constraint arises from the range of detection for the projectile and time to obtain appropriate data within the time window. |
 | 6 | This design shall have a placement to put the radar beam angle within 100*40 $^{\circ}$ . | This constraint is derived from the beam angle specified by the mmWave Radar manufacturer |
 
 </div>
 
 ### Further Explanation
+[3] The 100ms input delay is the time that was allocated for detection within the critical path time of 1.78 seconds.
+
 [5] The constraint stated to have a minimum range of 45 inches. This is to put the detection of the golf ball in the same area as the projectile path subsystem. This is done to reduce the time after the projectiles path has been detected and transmitted so the launcher body is not idle for an extended period of time waiting on the velocity and acceleration to come in to start performing its operations.
 
 [6] The constraint referenced a radar beam angle within 100*40 $^{\circ}$ the radar beam angle is the area where the output can be returned to the anteana of the radar the 100 $^{\circ}$ is how wide in degrees an object can be detected, and 40 $^{\circ}$ is how big the angle up and down is.
