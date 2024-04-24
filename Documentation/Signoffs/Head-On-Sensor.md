@@ -5,13 +5,13 @@ The purpose of the head on position sensor is to determine the target's location
 * C7: The sensor apparatus shall detect approaching objects and relay the target's location to the interceptor
    * This subsystem will act in conjunction with other position sensors to be able to effectively track the target in three dimensions. Even though the head on position sensor is connected to the interceptor, and does not require wireless communication, to comply with this constraint it must have a method of relaying the target's position to the aiming subsystem.
 * C23: The head on position sensor shall have a maximum latency of 100ms and provide updates at least 10 times per second.
-* * This is to comply with a project wide constraint that each sensing system shall be able to report its location in less than 100ms after the event took place. More explanation is given below about how time is budgeted to ensure a successiful target interception.
+* * This is to comply with a project wide constraint that each sensing system shall be able to report its location in less than 100ms after the event took place. More explanation is given below about how time is budgeted to ensure a successful target interception.
 * C24: The head on position sensor shall be able to detect the target with an accuracy of at least 2 inches when the target is between six and two feet away.
 * * When the target is between six and two feet away from the interceptor the reported location shall not be more than 1.5 inches away from the target. There are a total of 30 lines the target can be on arranged by two rows of 15 strings. At a distance of 4 feet which is the ideal locating zone there are four inches between each line and seven inches between each row. Therefore, at the detection distance of four feet the reported location can be off by 2 inches left or right and 3.5 inches up and down. If the measured signal is outside this window it will be closer to another string causing the system to report and incorrect string. The radius of the target is 0.78 inches, so if the reported location is off by more than 1.56 inches then it must be having a false positive as this would mean the target is outside of the scanned area.
 
 Accuracy = $\sqrt{{(x_{\text{reported}} - x_{\text{actual}})^2 + (y_{\text{reported}} - y_{\text{actual}})^2 +  (z_{\text{reported}} - z_{\text{actual}})^2}}$
 ### Explanations for C23 and C24
-The fastest the target can cross the game board is 1.78 seconds as given by the customer. Therefore, in order to have a chance to intercept the target the time among subsystems must be properly managed. The following table shows the budgeted delay for all subsystems
+The fastest the target can cross the game board is 1.78 seconds as given by the customer. Therefore, in order to have a chance to intercept the target the time among subsystems must be properly managed. The following table shows the budgeted delay for all subsystems.
 
 | Subsystem    | Time |
 | -------- | ------- |
@@ -31,7 +31,7 @@ The intention is to determine the target's location by using image recognition. 
 The wiring schematic for this subsystem is simple as the camera's wiring is contained within its ribbon cable. Four pins from the ribbon cable do connect to the normal GPIO header. GPIO0 and GPIO1 are used for the serial connection between the camera and the Raspberry Pi; GPIO2 and GPIO 3 are used for the camera's enable and webcam activity pins. The ribbon cable provides power, ground, and data. The data interface is a camera serial interface also known as MIPI CSI. The Raspberry Pi 5 supports 15 pin 2 lane MIPI-CSI allowing the camera to send two streams of image data to the Pi simultaneously [3]. The camera draws up to 250mA at 3.3 volts [4]. The camera's ribbon cable is 610mm and can be extended with a 15-pin flex cable extender with 1mm pitch.
 
 ### Mounting
-The camera will be mounted on the intereceptor facing the test bed giving a frontal point of view to detect incoming targets. The camera must be in a stationary location so that all reported locations are consistant, permiting the camera to track the target in three dimensions. The Pi Camera V2 has four mounting holes that accept M2 mounting screws which would permit the camera to be securely mounted on the interceptor. 
+The camera will be mounted on the interceptor facing the test bed giving a frontal point of view to detect incoming targets. The camera must be in a stationary location so that all reported locations are consistent, permitting the camera to track the target in three dimensions. The Pi Camera V2 has four mounting holes that accept M2 mounting screws which would permit the camera to be securely mounted on the interceptor. 
 ## Analysis
 
 ### Algorithm
@@ -50,10 +50,10 @@ For the constraint of a 100ms to report the relative location of the golf ball t
 ## Bill of Materials
 | Item | Description | Part Number | Brand | Quantity | Price | Total |
 | --- | --- | --- | --- | --- | --- | --- | 
-|Camera|Camera that connects to Raspberry Pi through the pcie port giving VGA video quality at 90 FPS [5]|Raspberry Pi Camera V2|AdaFruit|1|$30.99|$30.99|
+|Camera|Camera that connects to Raspberry Pi through the Raspberry Pi camera port giving VGA video quality at 90 FPS and a resoloution of 480 x 640 [5]|Raspberry Pi Camera V2|AdaFruit|1|$30.99|$30.99|
 |Total| | | | | | $30.99  | $30.99 |
 
-## Refrences
+## References
 [1]  “S3I Paper Wad Interceptor Challenge 2024 V3.3.”
 
 [2]  A. Rosebrock, "Ball Tracking with OpenCV," 14September 2015. [Online]. Available:https://pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/. [Accessed 09 04 2024].
