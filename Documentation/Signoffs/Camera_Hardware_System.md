@@ -1,14 +1,18 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware system will be responsible for taking an image of a drone in-flight or the drone's pilot and saving it to the tracker database for usage by campus police.
+The Camera Hardware system will be responsible for capturing an image of a Unmanned Aerial System (UAS) in-flight or the UAS control station and saving it to be sent to the tracker database for usage by campus police.
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot.  | Project Proposal|
+|  1 | System shall be capable of capturing an image of the UAS in flight or the control station regardless of obstruction or light levels| Stakeholder Constraint|
+|  2 | System shall be capable of s| Design Constraint|
+<!--|  1 | Shall capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot.  | Project Proposal|
 |  2 | Shall capture a quality image of the drone from a maximum of X meters away to ensure image quality of 1080x720p, X ppi.| Design Constraint|                  
 |  3 | Shall track drone across contiguous airspace using Remote ID location data, or will track the pilot if they are closer. | Concept Design|
 |  4 | System shall resist weather and external conditions to an IPXX rating (temp) | Maintainence Constraint|
+|  5 | Servo Motors shall be capable of tracking UAS entities up to speeds of x m/s 
+|  6 | Camera images shall be stored in a raw format to be later saved as Jpeg by the database
 
 <sup>1</sup> Capturing an image of the drone and/or the pilot is a large part of evidence collection and assists campus police in stopping unauthorized drone flight from repeat offenders.
 
@@ -16,7 +20,7 @@ The Camera Hardware system will be responsible for taking an image of a drone in
 
 <sup>3</sup> Drone and control station telemetry data is required to know when the drone or pilot is in range of the camera.
 
-<sup>4</sup> To ensure reliability of system, environmental interference must be limited and mitigated by proper protective measures..
+<sup>4</sup> To ensure reliability of system, environmental interference must be limited and mitigated by proper protective measures.. -->
 
 ## Schematic
 ![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)
