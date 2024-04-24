@@ -86,9 +86,10 @@ This second block with the instruction "determine whether a picture should be ta
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
+<img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
 
 #### Vertical Pointing Angle
-
+<img src= "/Documentation/Images/Camera_Software_System/angle2.png" width="300" height="200">
 
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
