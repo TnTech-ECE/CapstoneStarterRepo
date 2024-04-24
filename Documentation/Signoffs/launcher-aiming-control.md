@@ -39,7 +39,7 @@ C1: The launch aiming control unit shall have the sufficient amount of pins to c
 
 C2: The launcher aiming control unit shall have the ability to have network communication. This is to recieve data between the projectile path sensing and the velocity and acceleration sensing subsystems located on the sensor posts.
 
-C3: The launcher aiming control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
+C3: The launcher aiming control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms [1]. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
 
 
 
@@ -62,11 +62,11 @@ The Raspberry Pi 5 was chosen as the controller for the launcher aiming control 
 | MOSI| 2| 1 |
 | MISO| 2| 1 |
 
-As seen in the table above, the raspberry pi 5 should have the sufficient pins for the to control each subsystem [1]
+As seen in the table above, the raspberry pi 5 should have the sufficient pins for the to control each subsystem [2]
 
 ### C2 Solution:
 
-The Raspberry Pi 5 can communicate wirelessly with the sensor post controllers using UDP packets. This is shown in a tutorial by AranaCorp [2]. 
+The Raspberry Pi 5 can communicate wirelessly with the sensor post controllers using UDP packets. This is shown in a tutorial by AranaCorp [3]. 
 
 ### C3 Solution:
 
@@ -79,7 +79,7 @@ The fastest calculated time from first detection to interception is 530 ms as sh
 ### Process Diagram
 ![alt text](<Launcher Aiming Control Block Diagram.png>)
 ### Process Description
-The launcher aiming system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [3]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
+The launcher aiming system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [4]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
 
 $$ \theta_{aim} = n_{steps}*\theta_{step} $$
 
@@ -97,8 +97,10 @@ Once a projectile is fired, the launcher aiming motors move back to the starting
 ## Bill Of Materials
 * Components needed for this signoff have already been requested other signoffs
 ## References
-[1] https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header
+[1] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4347839/#R26
 
-[2] https://www.aranacorp.com/en/udp-communication-between-raspberry-pi-and-esp32/
+[2] https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header
 
-[3] https://www.pololu.com/category/120/stepper-motor-drivers 
+[3] https://www.aranacorp.com/en/udp-communication-between-raspberry-pi-and-esp32/
+
+[4] https://www.pololu.com/category/120/stepper-motor-drivers 
