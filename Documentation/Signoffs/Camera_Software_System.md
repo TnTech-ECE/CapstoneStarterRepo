@@ -33,20 +33,20 @@ All data received from the database is in the form specified by the [Database Sy
 
 - Required RID data:
 
-| Data [^2] | Unit | Resolution | Data Type |
-| --------- | ---- | ---------- | --------- |
-| Drone latitude | degrees * 10^7 | ~ 11 mm minimum | float |
-| Drone longitude | degrees * 10^7 | ~ 11 mm minimum | float |
-| Drone geodetic altitude | meters | 1 m minimum | float |
-| Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | float |
-| Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | float |
+| Data [^2] | Unit | Resolution | Data Type | 
+| --------- | ---- | ---------- | --------- | 
+| Drone latitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
+| Drone longitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
+| Drone geodetic altitude | meters | 1 m minimum | unsigned integer |
+| Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | unsigned integer |
+| Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | unsigned int |
 
 - Optional RID data:
 
 | Data [^2] | Unit | Resolution |  Data Type |
 | --------- | ---- | ---------- | ---------- |
-| Control station location latitude | degrees * 10^7 | ~ 11 mm minimum | float |
-| Control station location longitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Control station location latitude | degrees * 10^7 | ~ 11 mm minimum | signed int |
+| Control station location longitude | degrees * 10^7 | ~ 11 mm minimum | signed int |
 
 - Other data:
 
