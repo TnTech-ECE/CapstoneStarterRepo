@@ -1,6 +1,6 @@
 # Website_System
 ## Functionality
-The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a specific rate which will allow any new drones to be discovered by the police in as close to real time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
+The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a speed that will allow any new drones logged to be discovered by the police in as close to real-time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
 
 ## Constraints
 | No.| Constraint | Origin |
@@ -52,7 +52,7 @@ A more detailed testing regimen will be developed as the website becomes more an
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|Server    |            -|         1|             N/A|         N/A|
+|Server    |            -|         1|        $30/year|         $30|
 |Total     |             |          |                |            |
 
 ## References
