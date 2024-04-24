@@ -1,36 +1,24 @@
 # Camera Software System
 ## Functionality 
-The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) in-flight or the UAS pilot and save it to the database for usage by campus police.
+The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) in-flight or the control station and send it to the database for usage by campus police.
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The only external inputs into the system shall be the location of UAS in the form of latitude and longitude, altitude of UAS, UAS speed, UAS direction of flight, location of the control station in the form of latitude and longitude, and authorization status of the UAS. | Design Constraint |
-|  2 | The system shall not account for light levels and/or obstructions to the view of the UAS or control station when determining whether to take a picture. | Stakeholder Constraint | 
-|  3 | The system shall not act upon the external data received if the data’s corresponding authorization status is true. | Tech Police |
-|  4 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area. | Tech Police |
-|  5 | The system shall utilize the external inputs into the system and the known camera location to calculate the horizontal camera pointing angle to within 60 degrees accuracy at minimum and the vertical camera pointing angle to within 47.5 degrees accuracy at minimum. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md) |
-|  6 | The system shall output camera motor controls based on the calculated camera pointing angles as accurately as the camera motors allow. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
-|  7 | The system shall accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of at least 3 data points. | Design Constraint |
-|  8 | The system shall utilize the location prediction to adjust the camera pointing angles depending on the average processing time delay only when the location prediction is accurate (ie. when the UAS or control station has been proven to be travelling in a straight-line) | Design Constraint | 
-|  9 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
+|  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station | Stakeholder Constraint | 
+|  2 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area as defined by the Tech Police. | Tech Police |
+|  3 | The system shall output camera motor controls based on the calculated camera pointing angles as accurately as the camera motors allow. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
+|  4 | The system shall only accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of at least 3 data points. | Design Constraint |
+|  5 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
 
-<sup>1</sup> All data will be transferred to the system through the database. Detailed description of the inputs can be found in the [analysis](#input-data). 
+<sup>1</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.
 
-<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.
+<sup>2</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters a high alert area. The Tech Police will be able to specify the location of high alert areas through the [website](Website_System.md). Additionally, the UAS user location data is an optional addition to the RID signal [^2].
 
-<sup>3</sup> The Tech Police will be able to authorize certain UASs for certain time periods through the [website](Website_System.md). A picture of an authorized UAS or control station is not useful as the police have already allowed their flight. 
+<sup>3</sup> This contraint arises from the servo motor specifications. The calculated pointing angles may be more specific than what can be obtained by the motors [^3]. 
 
-<sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters a high alert area. So far, the Tech Police have specified the only high alert areas to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
+<sup>4</sup> Any motion other than straight line motion will be either too complex or impossible to predict. The calculations used to determine if the UAS or control station is moving in a straight line, at least three data points must be utilized.
 
-<sup>5</sup> This accuracy contraint arises from the field of view camera specifications.
-
-<sup>6</sup> This contraint arises from the servo motor specifications. The calculated pointing angles may be more specific than what can be obtained by the motors [^3]. 
-
-<sup>7</sup> Any motion other than straight line motion will be either too complex or impossible to predict. The calculations used to determine if the UAS or control station is moving in a straight line, at least three data points must be utilized.
-
-<sup>8</sup> If the location prediction is not based on straight line-motion, it will not be accurate. When it is not accurate it must not be used to change the camera pointer angles. If it is accurate, the average time delay of the system should be used to ensure the accuracy of the adjusted camera pointer angles.  
-
-<sup>9</sup> Raw files and PNGs will help to maintain the quality of the image captured.
+<sup>5</sup>Raw files and PNGs will help to maintain the quality of the image captured.
 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Full_Flowchart.png" width="500" height="800">
@@ -64,7 +52,7 @@ All data received from the database is in the form specified by the [Database Sy
 
 | Data |  Data Type |
 | ---- | ---------- |
-| Drone authorization status | bool |
+| High Priority Area | bool |
 
 #### Output Data
 | Data |  Data Type |
@@ -97,6 +85,7 @@ The code to determine the voltage that should be applied to the motor system so 
 This second block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with whether the UAS is still in view of the camera. This code will stop the system from taking a picture when the UAS or UAS user has moved out of scope of the camera in the time it takes the system to move the camera into the correct position. This block will utilize the information about the camera location and UAS or control station location as well as the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file. This block will be followed by the instruction for the camera to take a picture.
 
 ### Camera Positioning
+#### Horizontal Pointing Angle
 
 
 
