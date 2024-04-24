@@ -30,18 +30,21 @@ The Launching and Firing subsystem shall use 16 AWG wire for the subsystems elec
 To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. The relay will be connected to pin 1 of the Raspberry Pi 5 from the aiming subsystem and will pull 100mA at max (while operating) which is within the Raspberry Pi 5's ampacity limits for that pin.
 
 Below is the charachteristics sheet of the Adafruit Featherwing Relay:
+
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/RelayCharachteristics.png)
 
 **Constraint Solution 3:**
 The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space. For this constraint, the mechanical engineering team has allowed a space of 3 inches long (not counting the shaft length) with a 3 inch max diameter for the DC motor used. The DCM 1006 12V DigiKey DC motor has a length of 2.64 inches and a diameter of 1.575 inches which will satisfy this requirement. The relay's placement within the cubic foot of space is much less critical and can fit well within the space allowed by DEVCOM.
 
 Below is a graph of the DigiKey motor lengths
+
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/Digimotorlength.png)
 
 **Constraint Solution 4:**
 The Launching and Firing subsystem shall use a 12V DC motor from DigiKey model number DCM 1006 which exhibits the ability to operate the mechanism at a torque of 3.5 OZ-IN at 4900 RPM nominally. 3.2 OZ-IN is the highest torque required to operate the Fire-Preload sequence of the Launching and Firing subsystem. The DigiKey model number DCM 1006 12V DC motor shall satisfy this requirment.
 
 Below is an image of the DigiKey motor:
+
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/DCM1006image.png)
 
 **Constraint Solution 5:**
