@@ -18,7 +18,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>4</sup> Any motion other than straight line motion will be either too complex or impossible to predict. The calculations used to determine if the UAS or control station is moving in a straight line, at least three data points must be utilized.
 
-<sup>5</sup>Raw files and PNGs will help to maintain the quality of the image captured.
+<sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured.
 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Full_Flowchart.png" width="500" height="800">
@@ -35,8 +35,8 @@ All data received from the database is in the form specified by the [Database Sy
 
 | Data [^2] | Unit | Resolution | Data Type |
 | --------- | ---- | ---------- | --------- |
-| Drone Latitude | degrees * 10^7 | ~ 11 mm minimum | float |
-| Drone Longitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Drone latitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Drone longitude | degrees * 10^7 | ~ 11 mm minimum | float |
 | Drone geodetic altitude | meters | 1 m minimum | float |
 | Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | float |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | float |
@@ -45,20 +45,20 @@ All data received from the database is in the form specified by the [Database Sy
 
 | Data [^2] | Unit | Resolution |  Data Type |
 | --------- | ---- | ---------- | ---------- |
-| Control Station Location Latitude | degrees * 10^7 | ~ 11 mm minimum | float |
-| Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Control station location latitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Control station location longitude | degrees * 10^7 | ~ 11 mm minimum | float |
 
 - Other data:
 
 | Data |  Data Type |
 | ---- | ---------- |
-| High Priority Area | bool |
+| High priority area alert | bool |
 
 #### Output Data
 | Data |  Data Type |
 | ---- | ---------- |
 | Image captured by the camera | raw file or PNG |
-| Camera Status | bool |
+| Camera status | bool |
 
 
 ### Flowchart breakdown
@@ -87,6 +87,7 @@ This second block with the instruction "determine whether a picture should be ta
 ### Camera Positioning
 #### Horizontal Pointing Angle
 
+#### Vertical Pointing Angle
 
 
 ## References
