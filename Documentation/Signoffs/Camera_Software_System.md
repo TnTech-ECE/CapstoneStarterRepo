@@ -14,6 +14,8 @@ The camera software system will be reponsible for controlling the camera hardwar
 |  8 | The system shall utilize the location prediction only when it is accurate to adjust the camera pointing angles depending on the average processing time delay. | Design Constraint | 
 |  9 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
 
+<sup>1</sup> All data will be transferred to the system through the database. Detailed description of the inputs can be found in the [analysis](#input-data). 
+
 <sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
 
 <sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters high alert areas that, so far, the Tech Police have specified to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
