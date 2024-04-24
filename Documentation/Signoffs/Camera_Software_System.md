@@ -25,7 +25,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 ## Analysis
 ### Coding Language
-Pending the Camera Hardware System signoff.
+The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md). It is compatible with multiple different coding languages therefore either C++ or Python will be used. 
 
 ### Talking with the Database System
 #### Input data
