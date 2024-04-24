@@ -4,13 +4,11 @@ The Receiver system will be responsible for receiving and unpacking Remote ID (R
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | Shall only need to receive information within the 2.4 GHz frequency band | Design Constraint|
-|  2 | Shall only utilize RID signal and ignore other signals | Ethical Constraint       |                          
+|  1 | Shall only need to receive information within the 2.4 GHz WiFi and Bluetooth frequency band | Design Constraint|
+|  2 | Shall only decode RID signal and ignore other signals | Ethical Constraint       |                          
 |  3 | Shall receive all RID data from remote ID emitting drones    |  Design constraint |   
-|  4 | Shall track drones on the contiguous TTU campus | TTU Police |
-|  5 | Shall give location of control station if the drone is over the contiguous campus | TTU Police |
-|  6 | Each receiver shall cover a minimum value of some sort | TTU Police|
-|  7 | Shall not receive data from drones not on the contiguous campus | Ethical Police |
+|  4 | Shall have a reception range that covers the contiguous campus and cover upto 20 m off the contiguous campus | TTU Police |
+|  5 | Each receiver shall have a reception range of a minimum value of some sort | TTU Police|
 
 <sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands. The 5.8 GHz frequency band can be ommitted due to it being an optional transmission. The drone must emit a 2.4 GHz WiFi signal if a WiFi signal is being emitted, so this is the frequency band we will choose to focus on. This is due to the 5.8 GHz not being transmitted as far, so more receivers would be required to cover the contiguous campus and, therefore, raise the cost of the project. [^6].   
 
