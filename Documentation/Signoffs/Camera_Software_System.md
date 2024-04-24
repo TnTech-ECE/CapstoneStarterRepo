@@ -16,9 +16,13 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>1</sup> All data will be transferred to the system through the database. Detailed description of the inputs can be found in the [analysis](#input-data). 
 
-<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.   
+<sup>2</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.
+
+<sup>3</sup> The Tech Police will be able to authorize certain UASs for certain time periods through the [website](Website_System.md). A picture of an authorized UAS or control station is not useful as the police have already allowed their flight. 
 
 <sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters high alert areas that, so far, the Tech Police have specified to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
+
+<sup>5</sup> This accuracy contraint arises from the camera pointing angle calculations in the [analysis](#camera-positioning) section. 
 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Full_Flowchart.png" width="500" height="800">
@@ -80,7 +84,7 @@ The code to determine the voltage that should be applied to the motor system so 
 
 This second block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with whether the UAS is still in view of the camera. This code will stop the system from taking a picture when the UAS or UAS user has moved out of scope of the camera in the time it takes the system to move the camera into the correct position. This block will utilize the information about the camera location and UAS or control station location as well as the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file. This block will be followed by the instruction for the camera to take a picture.
 
-### Psuedo Code
+### Camera Positioning
 
 
 
