@@ -41,7 +41,7 @@ C2: The launcher aiming control unit shall have the ability to have network comm
 
 C3: The launcher aiming control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms [1]. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
 
-
+C4: The launcher aiming control unit shall control the pitch and yaw angles of the launcher and compute the time to fire for the launcher firing system. This system will utilize the projectile path sensing, head on sensing, and projectile velocity and accelartion sensing system.
 
 ## Electrical Schematic
 ![alt text](image-5.png)
@@ -75,10 +75,10 @@ The fastest calculated time from first detection to interception is 530 ms as sh
 ![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Images/Timing_Chart.png)
 
   
-## Launcher Aiming Control 
-### Process Diagram
+### C4 Solution: 
+#### Process Diagram
 ![alt text](<Launcher Aiming Control Block Diagram.png>)
-### Process Description
+#### Process Description
 The launcher aiming system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [4]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
 
 $$ \theta_{aim} = n_{steps}*\theta_{step} $$
