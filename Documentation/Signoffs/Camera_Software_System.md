@@ -52,13 +52,13 @@ All data received from the database is in the form specified by the [Database Sy
 
 | Data |  Data Type |
 | ---- | ---------- |
-| High priority area alert | bool |
+| High priority area alert | boolean |
 
 #### Output Data
 | Data |  Data Type |
 | ---- | ---------- |
 | Image captured by the camera | raw file or PNG |
-| Camera status | bool |
+| Camera status | boolean |
 
 
 ### Flowchart breakdown
@@ -88,16 +88,22 @@ This second block with the instruction "determine whether a picture should be ta
 #### Horizontal Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
 
-$\ x = abs{\textrm{Camera longitude}}  - | \textrm{UAS longitude} | $
+$\ x = |\textrm{Camera longitude}|-|\textrm{UAS longitude}| $
 
-y = | Camera latitude | - | UAS latitude | 
+$\ y = |\textrm{Camera latitude}|-|\textrm{UAS latitude}| $
 
-$\ \theta_1 = \tan^-1   $
+$\ \theta_1 = \tan^{-1} (\frac{y}{x}) $
 
-
+$\ \textrm{If x is a negative number: } \theta_1 = \theta_1 + 180 \degree $
 
 #### Vertical Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle2.png" width="300" height="200">
+
+$\ z = |\textrm{Camera altitude}|-|\textrm{UAS altitude}| $
+
+$\ l = \sqrt{x^2+y^2} $
+
+$\ \theta_2 = \tan^{-1} (\frac{z}{l}) $
 
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
