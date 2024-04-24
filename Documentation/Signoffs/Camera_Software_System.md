@@ -20,7 +20,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>3</sup> The Tech Police will be able to authorize certain UASs for certain time periods through the [website](Website_System.md). A picture of an authorized UAS or control station is not useful as the police have already allowed their flight. 
 
-<sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters high alert areas that, so far, the Tech Police have specified to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
+<sup>4</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters a high alert area. So far, the Tech Police have specified the only high alert areas to be dorm room buildings. Additionally, the UAS user location data is an optional addition to the RID signal [^2].
 
 <sup>5</sup> This accuracy contraint arises from the camera pointing angle calculations in the [analysis](#camera-positioning) section. 
 
@@ -33,32 +33,36 @@ Pending the Camera Hardware System signoff.
 
 ### Talking with the Database System
 #### Input data
-All RID data received from the database will be in the form of a floating point variable as specified by the [Database System](Database_System.md) detailed design markdown file.
+All data received from the database is in the form specified by the [Database System](Database_System.md) detailed design markdown file.
 
 - Required RID data:
 
-| Data [^2] | Unit | Resolution | 
-| --------- | ---- | ---------- |
-| Drone Latitude | degrees * 10^7 | ~ 11 mm minimum |
-| Drone Longitude | degrees * 10^7 | ~ 11 mm minimum | 
-| Drone geodetic altitude | meters | 1 m minimum |
-| Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum |
-| Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum |
+| Data [^2] | Unit | Resolution | Data Type |
+| --------- | ---- | ---------- | --------- |
+| Drone Latitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Drone Longitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Drone geodetic altitude | meters | 1 m minimum | float |
+| Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | float |
+| Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | float |
 
 - Optional RID data:
 
-| Data [^2] | Unit | Resolution | 
-| ---- | ---- | ---------- |
-| Control Station Location Latitude | degrees * 10^7 | ~ 11 mm minimum |
-| Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum |
+| Data [^2] | Unit | Resolution |  Data Type |
+| --------- | ---- | ---------- | ---------- |
+| Control Station Location Latitude | degrees * 10^7 | ~ 11 mm minimum | float |
+| Control Station Location Longitude | degrees * 10^7 | ~ 11 mm minimum | float |
 
 - Other data:
 
-Drone authorization status
+| Data |  Data Type |
+| ---- | ---------- |
+| Drone authorization status | bool |
 
 #### Output Data
-- Image captured from the camera
-- Camera Power Status 
+| Data |  Data Type |
+| ---- | ---------- |
+| Image captured by the camera | raw file or PNG |
+| Camera Status | bool |
 
 
 ### Flowchart breakdown
