@@ -35,18 +35,18 @@ All data received from the database is in the form specified by the [Database Sy
 
 | Data [^2] | Unit | Resolution | Data Type | 
 | --------- | ---- | ---------- | --------- | 
-| Drone latitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
-| Drone longitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
-| Drone geodetic altitude | meters | 1 m minimum | unsigned integer |
-| Drone speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | unsigned integer |
+| UAS latitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
+| UAS longitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
+| UAS geodetic altitude | meters | 1 m minimum | unsigned integer |
+| UAS speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | unsigned integer |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | unsigned int |
 
 - Optional RID data:
 
 | Data [^2] | Unit | Resolution |  Data Type |
 | --------- | ---- | ---------- | ---------- |
-| Control station location latitude | degrees * 10^7 | ~ 11 mm minimum | signed int |
-| Control station location longitude | degrees * 10^7 | ~ 11 mm minimum | signed int |
+| Control station location latitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
+| Control station location longitude | degrees * 10^7 | ~ 11 mm minimum | signed integer |
 
 - Other data:
 
@@ -87,6 +87,14 @@ This second block with the instruction "determine whether a picture should be ta
 ### Camera Positioning
 #### Horizontal Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
+
+$\ x = abs{\textrm{Camera longitude}}  - | \textrm{UAS longitude} | $
+
+y = | Camera latitude | - | UAS latitude | 
+
+$\ \theta_1 = \tan^-1   $
+
+
 
 #### Vertical Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle2.png" width="300" height="200">
