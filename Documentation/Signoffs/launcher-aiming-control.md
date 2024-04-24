@@ -2,9 +2,44 @@
 ## Functionality
 The launch aiming control unit handles the different functions within the launcher. This includes controlling the signals for the motors for the launcher aiming subsystem, sending a signal for the buzzer to indicate that the launcher is about to fire, and sending a signal to the launcher firing subsystem indicating to fire.
 ## Constraints
-C1: The launch aiming control unit shall have the sufficient amount of pins to control the each subsystem
+C1: The launch aiming control unit shall have the sufficient amount of pins to connected to the launcher aiming control. The pins for each subsystem in the launcher aiming control unit are listed below:
+### Housing Subsystem
+| Type of Pins | Number |
+|--------------|--------|
+| GPIO | 1 |
+| GND | 1 |
 
-C2: The launch aiming control unit shall have the ability to have network communication. This is to recieve data between the projectile path sensing and the velocity and acceleration sensing subsystems located on the sensor posts.
+### Aiming Subsystem
+| Type of Pins | Number |
+|--------------|--------|
+| VCC | 1 |
+| GPIO | 5 |
+| SCK | 1 |
+| MOSI | 1 |
+| MISO | 1 |
+| GND | 1 |
+### Launching Subsystem
+| Type of Pins | Number |
+|--------------|--------|
+| GPIO | 1 |
+### Head-On Sensing Subsystem
+| Type of Pins | Number |
+|--------------|--------|
+| Camera Ribbon Cable | 1 |
+### Total Pins
+| Type of Pins | Number |
+|--------------|--------|
+| Camera Ribbon Cable | 1 |
+| GPIO | 7 |
+| GND | 2 |
+| SCK | 1 |
+| MOSI | 1 | 
+| MISO | 1 |
+| VCC | 1 |
+
+C2: The launcher aiming control unit shall have the ability to have network communication. This is to recieve data between the projectile path sensing and the velocity and acceleration sensing subsystems located on the sensor posts.
+
+C3: The launcher aiming control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
 
 
 
@@ -12,49 +47,34 @@ C2: The launch aiming control unit shall have the ability to have network commun
 ![alt text](image-5.png)
 
 ## Analysis
-C1 Solution:
+### C1 Solution:
+The Raspberry Pi 5 was chosen as the controller for the launcher aiming control unit. The pin types that are included on the controller vs the pins needed are listed in the table below:
+#### Raspberry Pi 5
+| Type of Pins | Pins Included | Pins Needed|
+|--------------|--------|--------------|
+| Camera Ribbon Cable | 1 | 1 |
+| GPIO | 26| 7 |
+| VCC | 2 | 1 |
+| 3.3 V | 2 | 0 |
+| GND | 8| 2 |
+| ID EEPROM |2| 0 |
+| SCK | 2| 1 |
+| MOSI| 2| 1 |
+| MISO| 2| 1 |
 
-| Housing | Type of Pins | Number |
-|-----------------|--------------|--------|
-|| GPIO | 1 |
-|| GND | 1 |
+As seen in the table above, the raspberry pi 5 should have the sufficient pins for the to control each subsystem [1]
 
-
-| Aiming Subsystem | Type of Pins | Number |
-|-----------------|--------------|--------|
-|| VCC | 1 |
-|| GPIO | 5 |
-|| SCK | 1 |
-|| MOSI | 1 |
-|| MISO | 1 |
-|| GND | 1 |
-
-| Launcher Firing | Type of Pins | Number |
-|-----------------|--------------|--------|
-|| GPIO | 1 |
-
-| Head-On Sensing | Type of Pins | Number |
-|-----------------|--------------|--------|
-|| Camera Ribbon Cable | 1 |
-
-| Raspberry Pi 5 | Type of Pins | Number |
-|-----------------|--------------|--------|
-|| Camera Ribbon Cable | 1 |
-|| GPIO | 26|
-|| VCC | 2 |
-|| 3.3 V | 2 |
-|| GND | 8|
-|| ID EEPROM |2|
-|| SCK | 2|
-|| MOSI| 2|
-|| MISO| 2|
-
-As seen in the tables above, the raspberry pi 5 should have the sufficient pins for the to control each subsystem [1]
-
-C2 Solution:
+### C2 Solution:
 
 The Raspberry Pi 5 can communicate wirelessly with the sensor post controllers using UDP packets. This is shown in a tutorial by AranaCorp [2]. 
 
+### C3 Solution:
+
+The fastest calculated time from first detection to interception is 530 ms as shown in the graphic below.The buzzer will be turned on at the first instance that the projectile path sensing signal is recieved and will be turned off before the the firing signal is sent. Given that the buzzer cannot alert after the launcher is fired and the maximum sensor delay for the path sensing is 30 ms, the maximum time for the buzzer to alert is 342 ms. This is a sufficient amount of time to meet the constraint.
+
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Images/Timing_Chart.png)
+
+  
 ## Launcher Aiming Control 
 ### Process Diagram
 ![alt text](<Launcher Aiming Control Block Diagram.png>)
