@@ -62,11 +62,11 @@ All data received from the database is in the form specified by the [Database Sy
 
 
 ### Flowchart breakdown
-<img src= "/Documentation/Images/Camera_Software_System/.png" width="300" height="100">
+<img src= "/Documentation/Images/Camera_Software_System/Parsed1.png" width="250" height="150">
 
 Following [constraint 2](#Constraints), the code will allow the UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not in high alert areas. This section of the flowchart also addresses a scenario where the data received from the Database System is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
 
-<img src= "/Documentation/Images/Camera_Software_System/.png" width="200" height="95">
+<img src= "/Documentation/Images/Camera_Software_System/Parsed2.png" width="125" height="105">
 This first block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with two factors:
 1. Is the UAS or control station close enough to the camera to take a quality picture? 
 2. Does the system need to take another picture?
@@ -75,9 +75,13 @@ The first factor will utilize the minimum quality picture distance data from the
 
 The second factor will utilize how recent the last picture was taken and the location of the UAS or control station. If a picture was taken under 1 second ago (as that is the maximum time between RID transmissions[^1]) and the location of the UAS or control station is identical to the previous picture location then another picture should not be taken. This factor is an attempt to decrease the number of redundant pictures sent to the database.
 
-<img src= "/Documentation/Images/Camera_Software_System/.png" width="175" height="80">
+<img src= "/Documentation/Images/Camera_Software_System/Parsed3.png" width="175" height="125">
 
 The code to determine the voltage that should be applied to the motor system so that the camera will face the UAS or control station will depend on the location of the UAS or control station, and the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file.
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed4.png" width="130" height="150">
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed5.png" width="130" height="130">
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
