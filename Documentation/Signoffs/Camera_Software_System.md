@@ -25,7 +25,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 ## Analysis
 ### Coding Language
-The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md). It is compatible with multiple different coding languages therefore either C++ or Python will be used. 
+The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md), and it is compatible with multiple different coding languages. Due to programmer's preference, either C++ or Python will be used. 
 
 ### Talking with the Database System
 #### Input data
@@ -64,11 +64,13 @@ All data received from the database is in the form specified by the [Database Sy
 ### Flowchart breakdown
 <img src= "/Documentation/Images/Camera_Software_System/Parsed1.png" width="250" height="150">
 
-Following [constraint 2](#Constraints), the code will allow the UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not in high alert areas. This section of the flowchart also addresses a scenario where the data received from the Database System is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
+Following [constraint 2](#Constraints), the code will allow a UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not flying in a high alert area. This section of the flowchart also addresses the unlikely scenario where the data received from the [Database System](Database_System.md) is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed2.png" width="125" height="105">
-This first block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with two factors:
-1. Is the UAS or control station close enough to the camera to take a quality picture? 
+This block will contain code that is only concerned with two factors:
+
+1. Is the UAS or control station close enough to the camera to take a quality picture?
+  
 2. Does the system need to take another picture?
 
 The first factor will utilize the minimum quality picture distance data from the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file and the difference between the camera location and UAS or control station location. When the UAS or control station is too far away from the camera location, a picture should not be taken. 
@@ -77,11 +79,15 @@ The second factor will utilize how recent the last picture was taken and the loc
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed3.png" width="175" height="125">
 
-The code to determine the voltage that should be applied to the motor system so that the camera will face the UAS or control station will depend on the location of the UAS or control station, and the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file.
+This block contains code that will be associated with [constraint 4](#Constraints). The code will determine if the UAS or control station is moving in a straight line over a span of at least 3 points and will attempt to predict the next position if straight line motion was detected. This prediction as well as the average time delay of the system, and the UAS or control station velocity will be used to alter the camera pointing angles as needed. See the [associated section](#Predicting-UAS-or-Control-Station-Location) for mathematical calulations.  
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed4.png" width="130" height="150">
 
+The camera pointing angles will be calculated using the UAS or control station location and the location of the camera. See the [associated section](#Camera-Positioning) for mathematical calculations. After calculating the camera pointing angles, the code will instruct the motors to move as close to the pointing angles as [constraint 3](#Constraints) indicates the system will allow. Then, the system will take a picture and send it to the database as a raw file or PNG according to [constraint 5](#Constraints). 
+
 <img src= "/Documentation/Images/Camera_Software_System/Parsed5.png" width="130" height="130">
+
+
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
@@ -103,6 +109,11 @@ $\ z = |\textrm{Camera altitude}|-|\textrm{UAS altitude}| $
 $\ l = \sqrt{x^2+y^2} $
 
 $\ \theta_2 = \tan^{-1} (\frac{z}{l}) $
+
+
+### Predicting UAS or Control Station Location
+#### Determining Straight Line Motion
+#### Predicting Future Location
 
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
