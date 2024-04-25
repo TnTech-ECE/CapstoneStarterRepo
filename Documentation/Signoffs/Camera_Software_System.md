@@ -21,7 +21,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 <sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured.
 
 ## Flowchart
-<img src= "/Documentation/Images/Camera_Software_System/Full_Flowchart.png" width="500" height="800">
+<img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="500" height="800">
 
 ## Analysis
 ### Coding Language
