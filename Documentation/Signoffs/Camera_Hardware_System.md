@@ -7,10 +7,21 @@ The Camera Hardware System will be responsible for the hardware capable ofcaptur
 | -- | --------- |--------|
 |  1| System shall be capable of capturing an image of the UAS in flight or the control station regardless of physical obstructions or inadequate light levels| Stakeholder Constraint|
 |  2| System shall capture an image with a frequency corresponding to the drone's velocity| Design and [Camera Software Constraint](Camera_Software_System.md)|
-|  3| Images captured by the system shall be stored and transmitted in either a RAW or PNG format | Design Constraint|
+|  3| Images captured by the system shall be stored and transmitted in either a RAW or PNG format with a minimum resolution of 1080x720p | Design Constraint|
 |  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
-|  5| Serov motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal| Design Constraint|
-|  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics |Design Constraint| 
+|  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal| Design Constraint|
+|  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
+
+<!--|  7| Camera System shall be placed in an easy-accessible area for maintenance personel and locked with lecturn keys for tamper-resistance. | Security Constraint| -->
+
+<sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
+
+<sup>2</sup> Limiting image capture to save storage space is important, but not at the cost of the actual image quality. By linking image capture rate with the drone's speed, we are able to ensure that a quality image has been captured.
+
+<sup>3</sup> 
+<sup>4</sup>
+<sup>5</sup>
+<sup>6</sup>
 
 
 <!--|  1 | Shall capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot.  | Project Proposal|
@@ -50,8 +61,8 @@ For this system, we have chosen to use a First Person View (FPV) camera for our 
 | -------- | ------------| -------- |----------------|------------|
 | Digital Servo, 25 kg torque, 270 degrees Control Angle | DS3218| 1x4| $51.98| $51.98|
 | Digital Servo, 25 kg torque, 180 degrees Control Angle| DS3225MG| 1x4| $54.89| $54.89|
-| Arduino Mega R3 Microcontroller| ATmega 2560| 1x1| $29.99| $29.99|
-| ELP 8MP USB 3.0 Camera| ELP| 1x1| $26.99| $26.99|
+| Raspberry Pi 4B, 8GB Memory| Raspberry Pi| 1x1| $XXX| $XXX|
+| ELP 8MP USB 3.0 Camera| ELP| 1x1| $106.00| $106.00|
 | Arduino Wifi Microcontroller Unit| ESP8266| 1x3| $16.39| $16.39|
 | Camera Pan/Tilt Gimbal| 3D-Printed, Custom| 1x1| $-.--| $-.--|
 | System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|
