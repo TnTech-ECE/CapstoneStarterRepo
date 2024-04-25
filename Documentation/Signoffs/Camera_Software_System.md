@@ -21,7 +21,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 <sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured.
 
 ## Flowchart
-<img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="500" height="800">
+<img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="650" height="1200">
 
 ## Analysis
 ### Coding Language
@@ -62,12 +62,11 @@ All data received from the database is in the form specified by the [Database Sy
 
 
 ### Flowchart breakdown
-<img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_1.png" width="300" height="100">
+<img src= "/Documentation/Images/Camera_Software_System/.png" width="300" height="100">
 
-Following [constraint 2](#Constraints), the code will determine if the optional control station location data is usable before seeing if the required UAS location data is usable so that the presence of complete controller station location data will take precedance over UAS location data. This section of the flowchart also addresses a scenario where the data received from the Database System is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
+Following [constraint 2](#Constraints), the code will allow the UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not in high alert areas. This section of the flowchart also addresses a scenario where the data received from the Database System is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
 
-<img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_2.png" width="200" height="95">
-
+<img src= "/Documentation/Images/Camera_Software_System/.png" width="200" height="95">
 This first block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with two factors:
 1. Is the UAS or control station close enough to the camera to take a quality picture? 
 2. Does the system need to take another picture?
@@ -76,13 +75,9 @@ The first factor will utilize the minimum quality picture distance data from the
 
 The second factor will utilize how recent the last picture was taken and the location of the UAS or control station. If a picture was taken under 1 second ago (as that is the maximum time between RID transmissions[^1]) and the location of the UAS or control station is identical to the previous picture location then another picture should not be taken. This factor is an attempt to decrease the number of redundant pictures sent to the database.
 
-<img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_3.png" width="175" height="80">
+<img src= "/Documentation/Images/Camera_Software_System/.png" width="175" height="80">
 
 The code to determine the voltage that should be applied to the motor system so that the camera will face the UAS or control station will depend on the location of the UAS or control station, and the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file.
-
-<img src= "/Documentation/Images/Camera_Software_System/Parsed_Flowchart_4.png" width="200" height="95"> 
-
-This second block with the instruction "determine whether a picture should be taken", will contain code that is only concerned with whether the UAS is still in view of the camera. This code will stop the system from taking a picture when the UAS or UAS user has moved out of scope of the camera in the time it takes the system to move the camera into the correct position. This block will utilize the information about the camera location and UAS or control station location as well as the specs of the motor and camera as defined in the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file. This block will be followed by the instruction for the camera to take a picture.
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
