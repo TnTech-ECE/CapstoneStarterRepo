@@ -60,6 +60,7 @@ The Location/Vector Message type provides the location, altitude, direction, and
 | 21-22(2) | Timestamp | Unsigned Int | Value = Current UTC Data/time (Hour) + ValueTenths (of seconds) |
 | 23 | [Reserved][Timestamp accuracy] | [7..4][3..0] bits | 0 to 15, A to F will correspond to 10 to 15 respectively. 0 will be unknown(NULL) |
 | 24 | Reserved |  |  |
+
 Sudo code For Timestamp: 
 If Encoded Value > Tenths of seconds since the current hour at time of receipt
 then
