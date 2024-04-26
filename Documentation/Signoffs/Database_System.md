@@ -63,14 +63,10 @@ The Location/Vector Message type provides the location, altitude, direction, and
 
 Sudo code For Timestamp: 
 If Encoded Value > Tenths of seconds since the current hour at time of receipt <br>
-
-then
-
-    Value Tenths = tenths of seconds since previous hour
-    
-else
-
-    ValueTenths = tenths of seconds since current hour
+then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value Tenths = tenths of seconds since previous hour <br>
+else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValueTenths = tenths of seconds since current hour <br>
 
 Table 1: Vertical Accuracy
 | Decimal | Bits | Detail |
