@@ -64,3 +64,42 @@ Create a subsection addressing each of the above questions in your section of th
 5. Contact your instructors for assistance but choose instructors which specialize or teach courses over the subject. Review past projects if you find yourself at a loss of how to perform a task. Speak with graduate students as they have completed the course recently. Maintain communication with your team and keep a log of your work.
 
 6. I have acquired skills such as: soldering, KICAD, Blender, importing and creating models in LTspice. I have acquired knowledge of creating analog and digital controls systems and developing PCB.
+
+## Callie Battenfield
+
+1. I think the project went well after a somewhat rough start. I think our team struggled with communication greatly during the first semester, both within the EE team and especially with the ME team. Once everyone was on the same page (which happened with some facilitation from the professor) everything went much smoother and we ended up with much better solutions and general work than previously designed/discussed. I think we did wonderful by making it within our incredibly strict timeline, although we had some delays that first semester, we more than made up for it this semester. I think technically our subsystems could've had some more collaboration between EE members, we all became a little overprotective of "our" subsystems and could've benefitted from some other perspectives throughout the design/build stages.
+
+- What new knowledge or skills did you acquire throughout capstone.
+2. Our biggest unanticipated problem was the brownout issue that was caused by the main control being on the same power system as the motors. This issue was caused by the motors temporarily being turned into generators on the downslide of the hill and feeding back that excess power and would squash the voltage difference thus halting the function of the main controller. We also had some issues with the competition boards being not to spec and our robot struggled with that as well as lacking practice in navigating over the obstacles that we did not include on our practice board.
+
+3. I would definitely start by getting the MEs involved as much as possible in the design phase. This would've saved a ton of work that ended up being redesigned anyway. I also would've chosen a pre-built chassis from the very start instead of hoping to build a custom one. This would have taken too much time/money and it slowed the design of other systems way down. The chassis also should've been our very first detail design instead of in the middle.
+   
+4. Best Practices:
+  - Communicate with the entire team (EE and ME) as early and as often as possible and in person
+  - Start and finish detail designs early early early so there is time for feedback and changes
+  - Document everything: from meeting attendance to a changelog on designs, a paper trail can make or break a situation
+  - Start with the detail design that affects the most subsystems (in our case: the chassis) FIRST
+  - Have other knowledgeable students and professors look at your project (even if it's going well!) they may see something you haven't noticed
+  - GET EVERYTHING ORDERED BEFORE WINTER BREAK IF AT ALL POSSIBLE, YOU NEED THE BUILD/TEST TIME
+   
+5. Words of Wisdom:
+   - This class is hard but necessary. Just keep trying your best.
+   - Get detail designs checked early and often, changes can be more complicated than initially thought
+   - Be honest in your feedback about anything, lying to simply spare feelings helps no one. Be compassionate and helpful in your feedback but overall be honest.
+   - Stay as flexible as possible when working in a team, things will go wrong, and panicking just wastes energy and time
+   
+6. Knowledge & Skills Acquired:
+   - 3D Modeling
+   - Complex Arduino Coding in C++
+   - Power feedback issues and how to solve them
+   - Leadership/Group Management
+   - KICAD and circuit design
+     
+7. Courses that assisted me:
+   - Intro to programming in C++
+   - Mechatronics
+   - Circuits I/II
+   - Intro to digital systems (boolean logic)
+   - Communicating in the Professions (Engineering Ver.)
+   - Computer-Aided Engineering (MATLAB)
+   - Microcomputer Systems
