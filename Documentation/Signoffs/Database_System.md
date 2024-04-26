@@ -29,7 +29,12 @@ The website and camera subsystem will request/pull data from the database subsys
 ## Analysis
 If a drone remote ID signal is captured by the receiver system, the drone will sent off a block message every second, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1].
 
-The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA. The first byte is used to identify the ID and UA type, the least significant bits(3 downto 0) will be used to identify the UA type, then bits(7 downto 4 bits) will identify the ID type, both IP and UA have up to 16 type ranging from 0 to 15, A to F will correspond to 10 to 15 respectively, and UAS ID can contain up to max of 20 Bytes padded with NULLS, and the last three bytes being reserved.
+The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA.
+| Byte(length)| Data Field | Data type | Detail |
+| -- | --------- |--------|---------|
+|  1 | [ID Type][UA Type] | [7 downto 4][3 downto 0] bits |  |
+|  2-22(20) | UAS ID | [20 Byte(4 bits per character)] | UAS ID within the format of ID Type (Padded with nulls) |    
+|  23-25(3) | Reserved |  |  |
 
 UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format), Registration ID, UTM(UUID), specific session ID.
 0. None
@@ -39,18 +44,39 @@ UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format),
 4. specific seesion ID will be 20 byte, with the the first byte used as the unique identifier, and the remaining 19 bytes provide the session ID.
 
 The Location/Vector Message type provides the location, altitude, direction, and speed of UA. Byte order goes from 24 dwonto 1.
-1. Byte 1 is used for status and flag, bits(7 downto 4) will provide the operational Status, bits(3) is Reserved, bits(2) identify the height type: 0 is above takeoff and 1 is above ground level, bits(1) provide the direction Segment: 0 is less than 180 degree and 1 is greater than or equal to 180, bits(0) provide the speed mulitiplier: 0 will multiply the speed by 0.25 and 1 will multiply the speed by 0.75.
-2. Byte 2 is used to track direction, data type is 0-359 Unsigned Int(Uint) if flag bits(1) is 1 then 180 will need be added to the Encoded Value, other wise the encoded value will be the final value.
-3. Byte 3 is used for speed, data type is Unsigned Int(Uint) and it goes up to max of 254.25 m/s, if flag bits(0) is 0 the Value = EncodedValue * 0.25, if flag bits(0) is 1 then the Value = (EncodedValue * 0.75) + (255 * 0.25).
-4. Byte 4 is used for Vertical speed, data type is Float and up to 62 m/s( positive and engative), (Float) Value = EncodedValue * 0.5.
-5. Byte 8 downto 5 is used for Latitude(4 bytes), data type is Signed Int(double), (double) Value = EncodedValue/(10^7).
-6. Byte 12 downto 9 is used for Longitude(4 bytes), data type and equation used to obtain acutal value is the same as LAtitude.
-7. 
+| Byte(length) | Data Field | Data type | Detail |
+| -- | --------- |--------|---------|
+| 1 | [Status][Reserved][Height Type][Direction Segment][Speed multiplier] | [7 downto 4][3][2][1] bits | bits(7 downto 4) will provide the operational Status, bits(3) is Reserved, bits(2) identify the height type: 0 is above takeoff and 1 is above ground level, bits(1) provide the direction Segment: 0 is less than 180 degree and 1 is greater than or equal to 180, bits(0) provide the speed mulitiplier: 0 will multiply the speed by 0.25 and 1 will multiply the speed by 0.75. |
+| 2 | Track Direction | Unsigned Int | data type is 0-359 Unsigned Int(Uint) if flag bits(1) is 1 then 180 will need be added to the Encoded Value, other wise the encoded value will be the final value. |
+| 3 | Speed | Unsigned Int | If flag bits(0) is 0 the Value = EncodedValue * 0.25, if flag bits(0) is 1 then the Value = (EncodedValue * 0.75) + (255 * 0.25) |
+| 4 | Vertical | Float | (Float) Value = EncodedValue * 0.5 |
+| 5-8(4) | Latitude | Signed Int(double) | (double) Value = EncodedValue/(10^7) |
+| 9-12(4) | Longitude | Signed Int(double) | (double) Value = EncodedValue/(10^7) |
+| 13-14(2) | Pressure Altitude | Unsinged Int(Float) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
+| 15-16(2) | Geodetic Altitude | Unsinged Int(Float) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
+| 17-18(2) | Height | Unsinged Int(Float) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
+| 19 | [Vertical(Geodetic) Accuracy][Horizontal Accuracy] | [7 downto 4][3 downto 0] bits |  |
+| 20 | [Baro Altitude][Speed] | [7 downto 4][3 downto 0] bits |  |
+| 21-22(2) | Timestamp | Unsigned Int | Value = Current UTC Data/time (Hour) + ValueTenths (of seconds) |
+| 23 | [Reserved][Timestamp accuracy] | [7 downto 4][3 downto 0] bits | 0 to 15, A to F will correspond to 10 to 15 respectively. 0 will be unknown(NULL) |
+| 24 | Reserved |  |  |
 
-
-
-
-
+Table 1: For Vertical Accuracy
+| Decimal | Bits | Detail |
+| 0 | 0000 | greater than or equal to 18.52 km (10 NM) or Unknowkn |
+| 1 | 0001 | less than 18.52 km (10 NM) |
+| 2 | 0010 | less than 7.408 km (4 NM) |
+| 3 | 0011 | less than 3.704 km (2 NM) |
+| 4 | 0100 | less than 1852 m (1 NM) |
+| 5 | 0101 | less than 926 m (0.5 NM) |
+| 6 | 0110 | less than 555.6 m (0.3 NM) |
+| 7 | 0111 | less than 185.2 m (0.1 NM) |
+| 8 | 1000 | less than 92.6 m (0.05 NM)|
+| 9 | 1001 | less than 30 m|
+| 10 | 1010 | less than 10 m |
+| 11 | 1011 | less than 3 m |
+| 12 | 1100 | less than 1 m |
+| 13 | --------- |--------|
 
 
 The following data will be pulled by the Website subsystem if available: Drone remote ID, location/Altitude, Velocity, control station location/elevation, operation time mark, emergency status, and Drone/Control station image. The Database system will be implemented using a SQL(Structured Query Language), python and c++. Test case senarios for the Database subsystem are provided below.
