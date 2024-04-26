@@ -31,8 +31,9 @@ If a drone enter a pority zone selected by the user, then information related to
 
 
 ## Analysis
+Once the database subsystem receive a data package from the receiver subsystem, it will break the Message Block inside the datapackage and store inside the SQL database, and request drone operation access authority from the website subsystem and forward UID and control station data to the camera software subsystem, then camera softerware subsystem will return a image. All data will be store inside a SQL database which is implemented on Raspberry Pi using MySQL which will act as a local storage, and this coding language used to implement this will be Structured Query Language (SQL), and rest the code that take care of transferring the data will be implemented using either C/C++ or python.
 
-
+## SQL database
 
 ## Block Message
 If a drone remote ID signal is captured by the receiver system, database subsystem will receive a packaged data from the receiver system, inside the package there are multiple block message, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[^1].
@@ -196,12 +197,29 @@ Table 7: Class
 | 7 | 0111 | Class 6 |
 | 8..15 | 1000..0111 | Reserved |
 
+## Interaction with the Website Subsystem
+Whenever data package is received, database application will begin unpacking the data and storing in the database then request website with for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
+| Data | Data type | Detail |
+| Authorize Permission | Boolean | should return either a '0'(False) or '1'(True) |
+
+
+## Interaction with the Camera Software Subsystem
+When drone operation permission is deny or when a dron is inside the prioty zone marked by the user, it will forward the following data to the Camera software subsystem, and Control Station latitude/longitude is optional.
+| Data | Data type | Detail |
+| UAS latitude | Signed Int(Sint16_t)(double) |  |
+| UAS Longitude | Signed Int(Sint16_t)(double) |  |
+| UAS geodetic Altitude |Unsigned Int(Uint16_t)(double) |  |
+| UAS speed |Unsigned Int(Uint8_t) | unit is m/s |
+| UAS vertical speed | Signed Int(Uint8_t)(float) |  |
+| Direction |Unsigned Int(Uint8_t) | 0-359(degree) |
+| Control station latitude |Signed Int(Sint32_t)(double) |  |
+| Control station Longitude |Signed Int(Sint32_t)(double) |  |
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-| Cloud server | N/A | 1 | N/A | N/A |
-|Total     |             |          |                |            |
+| Raspberry Pi 5 | 2648-SC1112-ND | 1 | $80 | $80 |
+|Total     |             |          |                |     $80    |
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
