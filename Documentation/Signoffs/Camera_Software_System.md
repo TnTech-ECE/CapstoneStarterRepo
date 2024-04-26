@@ -6,19 +6,19 @@ The camera software system will be reponsible for controlling the camera hardwar
 | -- | --------- |--------|
 |  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
 |  2 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area as defined by the Tech Police. | Tech Police |
-|  3 | The system shall output camera motor controls based on the calculated camera pointing angles as accurately as the camera motors allow. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
-|  4 | The system shall only accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of at least 3 data points. | Design Constraint |
+|  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but will not be performed if the UAS or control station is moving in other trajectory. | Design Constraint |
+|  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line | Design Constraint |
 |  5 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
 
 <sup>1</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.
 
 <sup>2</sup> The Tech Police prefer a picture of the UAS control station over a picture of the UAS unless the UAS enters a high alert area. The Tech Police will be able to specify the location of high alert areas through the [website](Website_System.md). Additionally, the UAS user location data is an optional addition to the RID signal [^2].
 
-<sup>3</sup> This contraint arises from the servo motor specifications. The calculated pointing angles may be more specific than what can be obtained by the motors [^3]. 
+<sup>3</sup> Any motion other than straight line motion will be either too complex or impossible to predict. 
 
-<sup>4</sup> Any motion other than straight line motion will be either too complex or impossible to predict. The calculations used to determine if the UAS or control station is moving in a straight line, at least three data points must be utilized.
+<sup>4>/sup> Two data points alone do not provide enough information to accurately determine the motion of the UAS or control station. 
 
-<sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured.
+<sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured. 
 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Camera_Software_System_Flowchart.png" width="600" height="1200">
