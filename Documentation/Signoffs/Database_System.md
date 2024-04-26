@@ -6,7 +6,7 @@ The database subsystem will receive the drone remote ID package capture by the r
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1 | The system shall breakdown any received data package and organize it in a structured format for usability | Design Constraint |
-|  2 | The system shall complete the user's requet of from the website subsystem | Design Constraint |
+|  2 | The system shall complete the user's requet from the website subsystem | Design Constraint |
 |  3 | The system shall request authorized drone operation access from the website subsystem if a drone signal is received from the receiver subsystem  | Design Constraint |
 |  4 | The system shall forward the necessary datas to the camera software subsystem if authrozied access is denied | Design Constraint |
 |  5 | The system shall forward the necessary datas to the camera software subsystem if a drone is detected inside of priority zones selected by the user | Design Constraint |
@@ -32,8 +32,6 @@ If a drone enter a pority zone selected by the user, then information related to
 
 ## Analysis
 Once the database subsystem receive a data package from the receiver subsystem, it will break the Message Block inside the datapackage and store inside the SQL database, and request drone operation access authority from the website subsystem and forward UID and control station data to the camera software subsystem, then camera softerware subsystem will return a image. All data will be store inside a SQL database which is implemented on Raspberry Pi using MySQL which will act as a local storage, and this coding language used to implement this will be Structured Query Language (SQL), and rest the code that take care of transferring the data will be implemented using either C/C++ or python.
-
-## SQL database
 
 ## Block Message
 If a drone remote ID signal is captured by the receiver system, database subsystem will receive a packaged data from the receiver system, inside the package there are multiple block message, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[^1].
