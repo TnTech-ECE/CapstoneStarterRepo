@@ -1,6 +1,6 @@
 # Database System
 ## Functionality
-The database subsystem will receive the drone remote ID package capture by the receiver substem, then it will forward the necessary data to the camera software and website subsystem depending on the user input from the website subsystem.
+The database subsystem will receive the drone remote ID package capture by the receiver subsystem, then it will forward the necessary data to the camera software and website subsystem depending on the user input from the website subsystem.
 
 ## Constraints
 | No.| Constraint | Origin |
