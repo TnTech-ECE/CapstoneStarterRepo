@@ -1,15 +1,18 @@
 # Website_System
 ## Functionality
-The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a speed that will allow any new drones logged to be discovered by the police in as close to real-time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
+The purpose of the website subsystem is to allow a designated user to access the drone data stored in the database subsystem. The website will check the database for new information at a speed that will allow any new drones logged to be discovered by the police in as close to real-time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. 
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1 | The database must be accessed through a website as opposed to a mobile phone application. | Campus Police |
-|  2 | The system shall notify campus police in 'real-time' upon detection of a drone in flight. | Project Team |                          
-|  3 | The data shall be displayed in 'real-time' and in a concise manner to a securely constructed website for campus police dispatchers         | Project Team / Campus Police |  
-|  4 | The system shall allow campus police to authorize drones for permitted flights in a specified time frame. | Project Team |  
-|  5 | The system shall increase the alert's urgency if a drone is detected in a private geographical region. | Project Team |  
+|  2 | For the sake of this project, real-time is defined as less-than or equal to one second. | Project Team |
+|  3 | The system shall notify campus police and display data in 'real-time' on the website. | Project Team / Campus Police |
+|  4 | The drone information will be displayed to the website concisely, allowing for utilization with minimized training. A user-selected option may be implemented to view all detected drone flights (authorized and unauthorized) to reduce clutter. | Project Team |
+|  5 | The website will be constructed securely, within reason. | Project Team |
+|  6 | The website will be constructed to comply with standards put into place by the W3C (World Wide Web Consortium). | Project Team / Supervisor |
+|  7 | The system shall allow campus police to authorize drones for permitted flights in a specified time frame. | Project Team |  
+|  8 | The system shall increase the alert's urgency if a drone is detected in any designated geographical region. | Project Team |  
 
 <sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display. For the data to get to officers in the field, a dispatcher will relay information regarding the drone to the officer.
 
