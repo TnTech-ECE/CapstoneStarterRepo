@@ -1,32 +1,39 @@
 # Database System
 ## Functionality
-The database subsystem will receive the drone remote ID package capture by the receiver substem, then it will forward the requested data to the camera software and website subsystem.
+The database subsystem will receive the drone remote ID package capture by the receiver substem, then it will forward the necessary data to the camera software and website subsystem depending on the user input from the website subsystem.
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | All data recevied shall be contained in a database storage. | TTU Campus Police |
-|  2 | The database application used to store the drone remote ID shall handle real-time data streaming. | Design Constraint |    
-|  3 | Application shall constantly request and receive data from the receiver subsystem. | Design Constraint |
-|  4 | Application shall provide the data when requested by another subsystem. | Design Constraint |
+|  1 | The system shall breakdown the received data package and organize it in a structured format for usability | Design Constraint |
+|  2 | The system shall complete the user's requet of feteching datas from the website | Design Constraint |
+|  3 | The system shall request authorized drone operation access from the website subsystem if a drone signal is received from the receiver subsystem  | Design Constraint |
+|  4 | The system shall forward the necessary datas to the camera software subsystem if authrozied access is denied | Design Constraint |
+|  5 | The system shall forward the necessary datas to the camera software subsystem if a drone is detected inside of priority zones selected by the user | Design Constraint |
 
 <sup>1</sup> 
-The TTU campus police requested all the obtained drone remote ID data to be stored in cloud storage.
+When a data package is received from the receiver subsystem, only the important data shall be stored in the database, like location, altitude, speeed, etc.
 
 <sup>2</sup> 
-Other subsystems have inputs dependent on live information whenever a drone is detected whithin the campus area.
+Whenever the user open a link to observe datas, the database subsystem shall be able to provide the requested datas from the website's request.
 
 <sup>3</sup> 
-Constantly requesting updates for drone detection will ensure that possible packet lost or poor network connection related issues are caught early. It will also ensure that the data supplied to the cloud is current. 
+When data package is received, and drone is within the contiguous campus area it should alert authority and request a drone operation acess permission.
 
 <sup>4</sup> 
-The website and camera subsystem will request/pull data from the database subsystem whenever a drone is detected.
+If drone operation acess permission is denied by authority, then information related to the UA or UA pilot shall be send to the camera software system.
+
+<sup>5</sup> 
+If a drone enter a pority zone selected by the user, then information related to the UA or UA pilot shall be send to the camera software system.
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/3ba8fc14-7e0f-4cbe-b26b-8a761d125e5b)
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
+
 
 ## Analysis
+
+
+
+## Block Message
 If a drone remote ID signal is captured by the receiver system, database subsystem will receive a packaged data from the receiver system, inside the package there are multiple block message, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[^1].
 
 Note: For all block message, it will be in big endian format, unless specify to be little endian(LE) format.
@@ -36,7 +43,8 @@ The Basic ID message will provides UAS ID, and characterizes the type of ID, and
 | -- | --------- |--------|---------|
 |  1 | [ID Type][UA Type] | [7..4][3..0] bits | UA Type detail will be in table 1. |
 |  2..22(20) | UAS ID | [20 Byte(4 bits per character)] | UAS ID within the format of ID Type (Padded with nulls) |    
-|  23..25(3) | Reserved |  |  |
+|  23..24(3) | Reserved |  |  |
+
 
 UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format), Registration ID, UTM(UUID), specific session ID.
 0. None
@@ -44,6 +52,7 @@ UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format),
 2. Registration ID shall be in the following format: [ICAO Nationality Mark].[CAA Assigned ID], ASCII encoded. The ICAO Nationality Mark is only uppercase Letters(A-Z), follow by a dot then digits(0-9) and CAA Assigned ID will be in digits (0-9).
 3. UTM will provide a 128-bits universal unique ID the length of group is 8-4-4-4-12 that include a combination of letters and digit (0-9), and the UUID are fixed length.
 4. specific seesion ID will be 20 byte, with the the first byte used as the unique identifier, and the remaining 19 bytes provide the session ID.
+
 
 Table 1: UA Type
 | Decimal | Bits | Detail |
@@ -64,6 +73,7 @@ Table 1: UA Type
 | 13 | 1101 | Tethered Powered Aircraft |
 | 14 | 1110 | Ground Obstacle |
 | 15 | 1111 | Other |
+
 
 The Location/Vector Message type provides the location, altitude, direction, and speed of UA.
 | Byte(length) | Data Field | Data type | Detail |
@@ -91,6 +101,7 @@ then <br>
 else <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValueTenths = tenths of seconds since current hour <br>
 
+
 Table 2: Operational Status
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
@@ -100,6 +111,7 @@ Table 2: Operational Status
 | 3 | 0011 | Emergency |
 | 4 | 0100 | Remote ID System Failure |
 | 5..15 | 0101..1111 | Reserved |
+
 
 Table 3: Vertical Accuracy
 | Decimal | Bits | Detail |
@@ -112,6 +124,7 @@ Table 3: Vertical Accuracy
 | 5 | 0101 | less than 3 m |
 | 6 | 0110 | less than 1 m |
 | 7..15 | 0111..1111 | Reserved |
+
 
 Table 4: Horizontal Accuracy
 | Decimal | Bits | Detail |
@@ -131,6 +144,7 @@ Table 4: Horizontal Accuracy
 | 12 | 1100 | less than 1 m |
 | 13 | 1101..1111 |Reserved|
 
+
 Table 5: Speed Accuracy
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
@@ -140,6 +154,7 @@ Table 5: Speed Accuracy
 | 3 | 0011 | less than 1 m/s |
 | 4 | 0100 | less than 0.3 m/s |
 | 5..15 | 0101..1111 | Reserved |
+
 
 The System Message type provides the Operator Latitude, Operator Longitude, AreadCount, Area Radius, Area Ceiling, Area floor, UA classification, Operator Altitude, Timestamp.
 | Byte(length) | Data Field | Data type | Detail |
@@ -156,6 +171,7 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 | 20..23(4) | Timestamp | Unsigned Int(UInt32) | Time is in the following format =  00:00:00 01/01/1970 |
 | 24 | Reserved |  |  |
 
+
 Table 6: Category
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
@@ -164,6 +180,7 @@ Table 6: Category
 | 2 | 0010 | Specific |
 | 3 | 0011 | Certified |
 | 4..15 | 0100..1111 | Reserved |
+
 
 Table 7: Class
 | Decimal | Bits | Detail |
@@ -177,7 +194,6 @@ Table 7: Class
 | 6 | 0110 | Class 5 |
 | 7 | 0111 | Class 6 |
 | 8..15 | 1000..0111 | Reserved |
-
 
 
 ## BOM
