@@ -27,6 +27,7 @@ If drone operation acess permission is denied by authority, then information rel
 If a drone enter a pority zone selected by the user, then information related to the UA or UA pilot shall be send to the camera software system.
 
 ## Schematic
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/5b6f99ab-53b6-4579-a206-89b2a3e235b2)
 
 
 ## Analysis
