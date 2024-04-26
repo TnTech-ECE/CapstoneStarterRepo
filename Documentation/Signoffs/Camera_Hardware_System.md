@@ -45,7 +45,7 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 <sup>4</sup> To ensure reliability of system, environmental interference must be limited and mitigated by proper protective measures.. -->
 
 ## Schematic
-![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)
+In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)-->
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
