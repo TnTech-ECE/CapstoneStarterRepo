@@ -6,7 +6,7 @@ The database subsystem will receive the drone remote ID package capture by the r
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1 | The system shall breakdown any received data package and organize it in a structured format for usability | Design Constraint |
-|  2 | The system shall complete the user's requet from the website subsystem | Design Constraint |
+|  2 | The system shall complete the user's data pull requet from the website subsystem | Design Constraint |
 |  3 | The system shall request authorized drone operation access from the website subsystem if a drone signal is received from the receiver subsystem  | Design Constraint |
 |  4 | The system shall forward the necessary datas to the camera software subsystem if authrozied access is denied | Design Constraint |
 |  5 | The system shall forward the necessary datas to the camera software subsystem if a drone is detected inside of priority zones selected by the user | Design Constraint |
