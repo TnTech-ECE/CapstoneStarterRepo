@@ -217,6 +217,12 @@ When drone operation permission is deny or when a drone is inside the prioty zon
 | Control station latitude |Signed Int(Sint32_t)(double) |  |
 | Control station Longitude |Signed Int(Sint32_t)(double) |  |
 
+The received data from the camera are the following:
+| Data | Data type | Detail |
+| -------- | ------------| -------- |
+| Image | raw file or PNG | There can be mulitple Image |
+| Camera power status | boolean | '0' indicate power is low |
+
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
@@ -227,6 +233,6 @@ When drone operation permission is deny or when a drone is inside the prioty zon
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). 
+[1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
 [2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024).
 <!--etc.-->
