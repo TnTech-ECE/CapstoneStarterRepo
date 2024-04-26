@@ -1,6 +1,6 @@
 # Website_System
 ## Functionality
-The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a speed that will allow any new drones logged to be discovered by the police in as close to real-time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. For the sake of this project, we have defined real-time to be less than one second. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
+The purpose of the website subsystem is to allow a designated user to access the drone data stored in our database subsystem. The website will check the database for new information at a speed that will allow any new drones logged to be discovered by the police in as close to real-time as possible. The accessed data will be displayed to the user in a clean, concise manner that allows for the timely, efficient management of dispatcher resources. The full functionality of this subsystem is subsequently reliant on the completion of all other subsystems.
 
 ## Constraints
 | No.| Constraint | Origin |
@@ -13,7 +13,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 <sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display. For the data to get to officers in the field, a dispatcher will relay information regarding the drone to the officer.
 
-<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. 
+<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. For the sake of this project, we have defined real-time to be less than one second. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. 
 
 <sup>3</sup> This constraint works alongside the previous one to display the data to TTU police in an appropriate manner. It will take slightly longer to display the data on the website but in a successful implementation, this will still take less than one second. 
 
