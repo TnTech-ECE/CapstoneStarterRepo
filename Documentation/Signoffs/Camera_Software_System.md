@@ -118,6 +118,5 @@ $\ \theta_2 = \tan^{-1} (\frac{z}{l}) $
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
 [^2]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019). 
-[^3]: Ultimately, the FOV of the camera will render these motor hardware constraints negligible. 
 
 
