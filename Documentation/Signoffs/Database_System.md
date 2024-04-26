@@ -200,12 +200,14 @@ Table 7: Class
 ## Interaction with the Website Subsystem
 Whenever data package is received, database application will begin unpacking the data and storing in the database then request website with for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
 | Data | Data type | Detail |
+| -------- | ------------| -------- |
 | Authorize Permission | Boolean | should return either a '0'(False) or '1'(True) |
 
 
 ## Interaction with the Camera Software Subsystem
 When drone operation permission is deny or when a dron is inside the prioty zone marked by the user, it will forward the following data to the Camera software subsystem, and Control Station latitude/longitude is optional.
 | Data | Data type | Detail |
+| -------- | ------------| -------- |
 | UAS latitude | Signed Int(Sint16_t)(double) |  |
 | UAS Longitude | Signed Int(Sint16_t)(double) |  |
 | UAS geodetic Altitude |Unsigned Int(Uint16_t)(double) |  |
