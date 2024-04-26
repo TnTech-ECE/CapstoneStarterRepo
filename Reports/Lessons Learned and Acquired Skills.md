@@ -75,12 +75,12 @@ Create a subsection addressing each of the above questions in your section of th
 3. I would definitely start by getting the MEs involved as much as possible in the design phase. This would've saved a ton of work that ended up being redesigned anyway. I also would've chosen a pre-built chassis from the very start instead of hoping to build a custom one. This would have taken too much time/money and it slowed the design of other systems way down. The chassis also should've been our very first detail design instead of in the middle.
    
 4. Best Practices:
-  - Communicate with the entire team (EE and ME) as early and as often as possible and in person
-  - Start and finish detail designs early early early so there is time for feedback and changes
-  - Document everything: from meeting attendance to a changelog on designs, a paper trail can make or break a situation
-  - Start with the detail design that affects the most subsystems (in our case: the chassis) FIRST
-  - Have other knowledgeable students and professors look at your project (even if it's going well!) they may see something you haven't noticed
-  - GET EVERYTHING ORDERED BEFORE WINTER BREAK IF AT ALL POSSIBLE, YOU NEED THE BUILD/TEST TIME
+   - Communicate with the entire team (EE and ME) as early and as often as possible and in person
+   - Start and finish detail designs early early early so there is time for feedback and changes
+   - Document everything: from meeting attendance to a changelog on designs, a paper trail can make or break a situation
+   - Start with the detail design that affects the most subsystems (in our case: the chassis) FIRST
+   - Have other knowledgeable students and professors look at your project (even if it's going well!) they may see something you haven't noticed
+   - GET EVERYTHING ORDERED BEFORE WINTER BREAK IF AT ALL POSSIBLE, YOU NEED THE BUILD/TEST TIME
    
 5. Words of Wisdom:
    - This class is hard but necessary. Just keep trying your best.
