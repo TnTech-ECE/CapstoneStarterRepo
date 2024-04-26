@@ -16,7 +16,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 
 <sup>3</sup> Any motion other than straight line motion will be either too complex or impossible to predict. 
 
-<sup>4>/sup> Two data points alone do not provide enough information to accurately determine the motion of the UAS or control station. 
+<sup>4</sup> Two data points alone do not provide enough information to accurately determine the motion of the UAS or control station. 
 
 <sup>5</sup> Raw files and PNGs will help to maintain the quality of the image captured. 
 
