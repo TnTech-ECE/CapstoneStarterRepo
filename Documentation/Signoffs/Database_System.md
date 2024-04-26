@@ -27,7 +27,7 @@ The website and camera subsystem will request/pull data from the database subsys
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/fab463f7-9778-4e9d-abe5-add71418a55c)
 
 ## Analysis
-If a drone remote ID signal is captured by the receiver system, the drone will sent off a block message every second, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1].
+If a drone remote ID signal is captured by the receiver system, the drone will sent off a block message every second, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[^1].
 
 The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA.
 | Byte(length)| Data Field | Data type | Detail |
@@ -38,7 +38,7 @@ The Basic ID message will provides UAS ID, and characterizes the type of ID, and
 
 UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format), Registration ID, UTM(UUID), specific session ID.
 0. None
-1. According to ANSI(Approved American National Standards), the serial number have the following format, SN = [4 Character manufacturer(MFR) cdoe][1 Character length code][15 Character MFR's serial nmumber]. The MFR code include a combination of digits and uppercase letters, except the letters O and I. The length code is a single character that range from 1 to 15, A to F will correspond to 10 to 15 respectively. MFR's serial number length is determine by the charcter length code, which include combination of digits and uppercase letters, except the letters O and I, but may include all digits[2].
+1. According to ANSI(Approved American National Standards), the serial number have the following format, SN = [4 Character manufacturer(MFR) cdoe][1 Character length code][15 Character MFR's serial nmumber]. The MFR code include a combination of digits and uppercase letters, except the letters O and I. The length code is a single character that range from 1 to 15, A to F will correspond to 10 to 15 respectively. MFR's serial number length is determine by the charcter length code, which include combination of digits and uppercase letters, except the letters O and I, but may include all digits[^2].
 2. Registration ID shall be in the following format: [ICAO Nationality Mark].[CAA Assigned ID], ASCII encoded. The ICAO Nationality Mark is only uppercase Letters(A-Z), follow by a dot then digits(0-9) and CAA Assigned ID will be in digits (0-9).
 3. UTM will provide a 128-bits universal unique ID the length of group is 8-4-4-4-12 that include a combination of letters and digit (0-9), and the UUID are fixed length.
 4. specific seesion ID will be 20 byte, with the the first byte used as the unique identifier, and the remaining 19 bytes provide the session ID.
@@ -62,10 +62,14 @@ The Location/Vector Message type provides the location, altitude, direction, and
 | 24 | Reserved |  |  |
 
 Sudo code For Timestamp: 
-If Encoded Value > Tenths of seconds since the current hour at time of receipt
+If Encoded Value > Tenths of seconds since the current hour at time of receipt <br>
+
 then
+
     Value Tenths = tenths of seconds since previous hour
+    
 else
+
     ValueTenths = tenths of seconds since current hour
 
 Table 1: Vertical Accuracy
