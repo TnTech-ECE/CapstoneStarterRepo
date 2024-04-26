@@ -31,10 +31,10 @@ If a drone enter a pority zone selected by the user, then information related to
 
 
 ## Analysis
-Once the database subsystem receive a data package from the receiver subsystem, it will break the Message Block inside the datapackage and store inside the SQL database, and request drone operation access authority from the website subsystem and forward UID and control station data to the camera software subsystem, then camera softerware subsystem will return a image. All data will be store inside a SQL database which is implemented on Raspberry Pi using MySQL which will act as a local storage, and this coding language used to implement this will be Structured Query Language (SQL), and rest the code that take care of transferring the data will be implemented using either C/C++ or python.
+Once the database subsystem receive a data package from the receiver subsystem, it will break the Message Block inside the datapackage and store inside the SQL database, and request drone operation access authority from the website subsystem and forward UID and control station data to the camera software subsystem, then camera softerware subsystem will return a image. All data will be store inside a SQL database which is implemented on Raspberry Pi using MySQL which will act as a local storage, and the coding language used to implement this will be Structured Query Language (SQL), and rest the code that take care of transferring the data will be implemented using either C/C++ or python.
 
 ## Block Message
-If a drone remote ID signal is captured by the receiver system, database subsystem will receive a packaged data from the receiver system, inside the package there are multiple block message, the block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[^1].
+Inside the data package from the receiver subsystem, there will contain multiple blocks of message. The block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1].
 
 Note: For all block message, it will be in big endian format, unless specify to be little endian(LE) format.
 
@@ -94,7 +94,7 @@ The Location/Vector Message type provides the location, altitude, direction, and
 | 24 | Reserved |  |  |
 
 
-Sudo code For Timestamp: 
+Sudo code For Timestamp for Location/Vector Message type: 
 If Encoded Value > Tenths of seconds since the current hour at time of receipt <br>
 then <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value Tenths = tenths of seconds since previous hour <br>
@@ -196,14 +196,16 @@ Table 7: Class
 | 8..15 | 1000..0111 | Reserved |
 
 ## Interaction with the Website Subsystem
-Whenever data package is received, database application will begin unpacking the data and storing in the database then request website with for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
+Whenever data package is received, database application will begin unpacking the data and storing in the database then request website for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | Authorize Permission | Boolean | should return either a '0'(False) or '1'(True) |
 
+If the user from the website subsystem want to access the data inside the SQL database, UAS ID will be provided with the assoicated data, latitude, Longitude, Geodetic Altitude, Speed, etc..
+
 
 ## Interaction with the Camera Software Subsystem
-When drone operation permission is deny or when a dron is inside the prioty zone marked by the user, it will forward the following data to the Camera software subsystem, and Control Station latitude/longitude is optional.
+When drone operation permission is deny or when a drone is inside the prioty zone marked by the user, it will forward the following data to the Camera software subsystem, and Control Station latitude/longitude if avaiable.
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | UAS latitude | Signed Int(Sint16_t)(double) |  |
@@ -219,7 +221,9 @@ When drone operation permission is deny or when a dron is inside the prioty zone
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
 | Raspberry Pi 5 | 2648-SC1112-ND | 1 | $80 | $80 |
-|Total     |             |          |                |     $80    |
+| GeeekPi N04 M.2 NVMe to PCIe Adapter | B0CRK4YB4C(ASIN) | 1 | $14.39 | $14.39 |
+| Patriot P300 M.2 128GB | ‎P300P128GM28 | 1 | $17.99 | $17.99 |
+|Total     |             |          |                |     $112.38    |
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
