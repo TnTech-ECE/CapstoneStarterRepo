@@ -65,7 +65,7 @@ For this system, we have chosen to use a First Person View (FPV) camera for our 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-| Raspberry Pi 4B, 8GB Memory| Raspberry Pi| 1x1| $75.00| $75.00|
+| Raspberry Pi 4B, 8GB Memory| SC0195(9)| 1x1| $75.00| $75.00|
 | Digital Servo, 25 kg torque, 270 degrees Control Angle | DS3218| 1x4| $51.98| $51.98|
 | Digital Servo, 25 kg torque, 180 degrees Control Angle| DS3225MG| 1x4| $54.89| $54.89|
 | ELP 8MP USB 3.0 Camera| ELP| 1x1| $106.00| $106.00|
