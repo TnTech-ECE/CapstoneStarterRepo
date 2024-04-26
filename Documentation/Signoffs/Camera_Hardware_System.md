@@ -6,11 +6,11 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1| System shall be capable of capturing an image of the UAS in flight or the control station| Stakeholder Constraint|
-|  2| System shall capture an image with a frequency corresponding to the drone's velocity (pending)| Design and [Camera Software Constraint](Camera_Software_System.md)|
-|  3| Images captured by the system shall be stored and transmitted in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
-|  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
-|  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
-|  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
+<!--|  2| System shall capture an image with a frequency corresponding to the drone's velocity (pending)| Design and [Camera Software Constraint](Camera_Software_System.md)|-->
+|  2| Images captured by the system shall be stored and transmitted in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
+|  3| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
+|  4| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
+|  5| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
 <!--|  X| System shall not take physical obstructions or lack of light into account for capturing images of UAS or the control station| Stakeholder Constraint|
 |  X| System Camera zoom and focus shall not be controllable by system software| Design Constraint|
 
@@ -18,15 +18,15 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
 
-<sup>2</sup> Limiting image capture rates to save storage space is important, but not at the cost of the actual image quality. By linking image capture rate with the drone's speed, the system will be able to ensure that a quality image has been captured by taking more or less images per minute as the drone speeds and slows down.
+<!--<sup>2</sup> Limiting image capture rates to save storage space is important, but not at the cost of the actual image quality. By linking image capture rate with the drone's speed, the system will be able to ensure that a quality image has been captured by taking more or less images per minute as the drone speeds and slows down.-->
 
-<sup>3</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Along with this, secondary image processing can convert this to a smaller format for long-term storage if and when required.
+<sup>2</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Along with this, secondary image processing can convert this to a smaller format for long-term storage if and when required.
 
-<sup>4</sup> The level of servo precision will become increasingly important for quality image capture as the zoom increases and the field of view (FOV) decreases.
+<sup>3</sup> The level of servo precision will become increasingly important for quality image capture as the zoom increases and the field of view (FOV) decreases.
 
-<sup>5</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
+<sup>4</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
 
-<sup>6</sup> Protection of sensitive electronics and exposed circuit contacts from water is essential for ensuring the safety of the system, building, and personnel in proximity.
+<sup>5</sup> Protection of sensitive electronics and exposed circuit contacts from water is essential for ensuring the safety of the system, building, and personnel in proximity.
 
 
 <!--|  1 | Shall capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot.  | Project Proposal|
