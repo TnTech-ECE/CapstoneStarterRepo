@@ -5,7 +5,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 | No.| Contraint | Origin |
 | -- | --------- |--------|
 |  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
-|  2 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area as defined by the Tech Police. | Tech Police |
+|  2 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area as defined by the Tech Police. In that case, the system will prioritize capturing a picture of the UAS. | Tech Police |
 |  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but will not be performed if the UAS or control station is moving in other trajectory. | Design Constraint |
 |  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line | Design Constraint |
 |  5 | The system shall output the picture taken to the database as either a raw file or PNG | Design Constraint | 
