@@ -6,7 +6,7 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1| System shall be capable of capturing an image of the UAS in flight or the control station| Stakeholder Constraint|
-|  2| System shall capture an image with a frequency corresponding to the drone's velocity| Design and [Camera Software Constraint](Camera_Software_System.md)|
+|  2| System shall capture an image with a frequency corresponding to the drone's velocity (pending)| Design and [Camera Software Constraint](Camera_Software_System.md)|
 |  3| Images captured by the system shall be stored and transmitted in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
 |  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
