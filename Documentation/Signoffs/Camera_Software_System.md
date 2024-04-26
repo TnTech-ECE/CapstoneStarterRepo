@@ -4,7 +4,7 @@ The camera software system will be reponsible for controlling the camera hardwar
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station | Stakeholder Constraint | 
+|  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
 |  2 | If the system receives data for both the control station location and the UAS location, the system shall prioritize capturing a picture of the control station unless the UAS is in a high alert area as defined by the Tech Police. | Tech Police |
 |  3 | The system shall output camera motor controls based on the calculated camera pointing angles as accurately as the camera motors allow. | Design Constraint and [Camera Hardware Constraint](Camera_Hardware_System.md)|
 |  4 | The system shall only accurately predict the location of the UAS or control station when the motion of the UAS or control station follows a straight line over a span of at least 3 data points. | Design Constraint |
