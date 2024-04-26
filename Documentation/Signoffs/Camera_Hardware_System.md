@@ -6,14 +6,13 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1| System shall be capable of capturing an image of the UAS in flight or the control station| Stakeholder Constraint|
-<!--|  2| System shall capture an image with a frequency corresponding to the drone's velocity (pending)| Design and [Camera Software Constraint](Camera_Software_System.md)|-->
 |  2| Images captured by the system shall be stored and transmitted in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
 |  3| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  4| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  5| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
 <!--|  X| System shall not take physical obstructions or lack of light into account for capturing images of UAS or the control station| Stakeholder Constraint|
 |  X| System Camera zoom and focus shall not be controllable by system software| Design Constraint|
-
+<!--|  2| System shall capture an image with a frequency corresponding to the drone's velocity (pending)| Design and [Camera Software Constraint](Camera_Software_System.md)|-->
 |  7| Camera System shall be placed in an easy-accessible area for maintenance personel and locked with lecturn keys for tamper-resistance. | Security Constraint| -->
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
