@@ -11,10 +11,10 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 |  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 0.02° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
-|  X| System shall not take physical obstructions or lack of light into account for capturing images of UAS or the control station| Stakeholder Constraint|
+<!--|  X| System shall not take physical obstructions or lack of light into account for capturing images of UAS or the control station| Stakeholder Constraint|
 |  X| System Camera zoom and focus shall not be controllable by system software| Design Constraint|
 
-<!--|  7| Camera System shall be placed in an easy-accessible area for maintenance personel and locked with lecturn keys for tamper-resistance. | Security Constraint| -->
+|  7| Camera System shall be placed in an easy-accessible area for maintenance personel and locked with lecturn keys for tamper-resistance. | Security Constraint| -->
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
 
@@ -24,7 +24,7 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 
 <sup>4</sup> The level of servo precision will become increasingly important for quality image capture as the zoom increases and the field of view (FOV) decreases.
 
-<sup>5</sup> Rapid response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame
+<sup>5</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
 
 <sup>6</sup> Protection of sensitive electronics and exposed circuit contacts from water is essential for ensuring the safety of the system, building, and personnel in proximity.
 
@@ -50,8 +50,7 @@ The Camera Hardware System will be responsible for the design of hardware capabl
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Microprocessor
-The central processor chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor, 8 GB of RAM, 
-[^1]
+The central processor chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and security purposes. The contents of the status package will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is sent.<!--[More fluff here]-->
 
 ### Servo Motor
 For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with a feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
@@ -59,7 +58,7 @@ For this system, we have chosen to use servo motors for the pan and tilt control
 By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.
 
 ### Camera
-For this system, we have chosen to use a First Person View (FPV) camera for our image capture. With its 170 degree wide-angle lense, alongside its half-inch CMOS sensor, this camera will give us the required resolution for a clear and crisp image from our specified X meters distance (more research required to determine this range). Additonally, the angle of coverage, alongside the 270 degree rotational angle of the panning servo motor (Specified as MTR 0 in the schematic), we should be able to cover a total radial area of 360 degrees.
+The camera selected for this application is an ELP 8MP camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 - 12 mm 
 
 
 ## BOM
