@@ -57,8 +57,8 @@ Note: For all block message, it will be in big endian format, unless specify to 
 The Basic ID message will provides UAS ID, and characterizes the type of ID, and identifies the type of UA.
 | Byte(length)| Data Field | Data type | Detail |
 | -- | --------- |--------|---------|
-|  1 | [ID Type][UA Type] | [7..4][3..0] bits | UA Type detail will be in table 1. |
-|  2..22(20) | UAS ID | [20 Byte(4 bits per character)] | UAS ID within the format of ID Type (Padded with nulls) |    
+|  1 | [ID Type][UA Type] | [7..4][3..0] bits | UA type will not be stored in the database since it is not necessary for tracking. |
+|  2..22(20) | UAS ID | [20 Byte(4 bits per character)] | UAS ID within the format of ID Type (Padded with nulls), explained below |    
 |  23..24(3) | Reserved |  |  |
 
 
@@ -68,27 +68,6 @@ UAS ID consists of four options: Serial number(CTA-2063-A Serial Number format),
 2. Registration ID shall be in the following format: [ICAO Nationality Mark].[CAA Assigned ID], ASCII encoded. The ICAO Nationality Mark is only uppercase Letters(A-Z), follow by a dot then digits(0-9) and CAA Assigned ID will be in digits (0-9).
 3. UTM will provide a 128-bits universal unique ID the length of group is 8-4-4-4-12 that include a combination of letters and digit (0-9), and the UUID are fixed length.
 4. specific seesion ID will be 20 byte, with the the first byte used as the unique identifier, and the remaining 19 bytes provide the session ID.
-
-
-Table 1: UA Type
-| Decimal | Bits | Detail |
-| -- | --------- |--------|
-| 0 | 0000 | None/Not Declared |
-| 1 | 0001 | Aeroplane |
-| 2 | 0010 | Helicopter (or Multirotor) |
-| 3 | 0011 | Gyroplane |
-| 4 | 0100 | Hybrid Lift |
-| 5 | 0101 | Ornithopter |
-| 6 | 0110 | Glider |
-| 7 | 0111 | Kite |
-| 8 | 1000 | Free Ballon|
-| 9 | 1001 | Captive Ballon |
-| 10 | 1010 | Airship (such as a blimp) |
-| 11 | 1011 | Free Fall/Parachute (unpowered) |
-| 12 | 1100 | Rocket |
-| 13 | 1101 | Tethered Powered Aircraft |
-| 14 | 1110 | Ground Obstacle |
-| 15 | 1111 | Other |
 
 
 The Location/Vector Message type provides the location, altitude, direction, and speed of UA.
@@ -103,8 +82,8 @@ The Location/Vector Message type provides the location, altitude, direction, and
 | 13..14(2) | Pressure Altitude | Unsinged Int(Float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
 | 15..16(2) | Geodetic Altitude | Unsinged Int(Float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
 | 17..18(2) | Height | Unsinged Int(Float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
-| 19 | [Vertical(Geodetic) Accuracy][Horizontal Accuracy] | [7..4][3..0] bits | Detail in Table 3 and 4 |
-| 20 | [Baro Altitude Accuracy][Speed accuracy] | [7..4][3..0] bits | Baro Altitude accuracy is in detail in Table 3, and speed accuarcy is in Table 5. |
+| 19 | [Vertical(Geodetic) Accuracy][Horizontal Accuracy] | [7..4][3..0] bits | Detail in Table 2 and 3 |
+| 20 | [Baro Altitude Accuracy][Speed accuracy] | [7..4][3..0] bits | Baro Altitude accuracy is in detail in Table 2, and speed accuarcy is in Table 4. |
 | 21..22(2) | Timestamp | Unsigned Int(LE) | Value = Current UTC Data/time (Hour) + ValueTenths (of seconds) |
 | 23 | [Reserved][Timestamp accuracy] | [7..4][3..0] bits | 0 to 15, A to F will correspond to 10 to 15 respectively. 0 will be unknown(NULL) |
 | 24 | Reserved |  |  |
@@ -118,7 +97,7 @@ else <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ValueTenths = tenths of seconds since current hour <br>
 
 
-Table 2: Operational Status
+Table 1: Operational Status
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
 | 0 | 0000 | Undeclared |
@@ -129,7 +108,7 @@ Table 2: Operational Status
 | 5..15 | 0101..1111 | Reserved |
 
 
-Table 3: Vertical Accuracy
+Table 2: Vertical Accuracy
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
 | 0 | 0000 | greater than or equal to 150 m or Unknowkn |
@@ -142,7 +121,7 @@ Table 3: Vertical Accuracy
 | 7..15 | 0111..1111 | Reserved |
 
 
-Table 4: Horizontal Accuracy
+Table 3: Horizontal Accuracy
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
 | 0 | 0000 | greater than or equal to 18.52 km (10 NM) or Unknowkn |
@@ -161,7 +140,7 @@ Table 4: Horizontal Accuracy
 | 13 | 1101..1111 |Reserved|
 
 
-Table 5: Speed Accuracy
+Table 4: Speed Accuracy
 | Decimal | Bits | Detail |
 | -- | --------- |--------|
 | 0 | 0000 | greater than or equal to 10 m/s or Unknowkn |
@@ -182,34 +161,11 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 | 12 | Area Radius | Unsigned Int | Radius of cylindrical area of group or formation * 10 m (default 0) centered on Location/Vector Message position |
 | 13..14(2) | Area Ceiling | Unsigned Int(float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
 | 15..16(2) | Area Floor | Unsigned Int(float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
-| 17 | UA Classification | [7..4][3..0] | When Classification Type is 1, encoded as table 6 and 7 |
+| 17 | UA Classification | [7..4][3..0] | will not be stored in the database since it is not necessary for tracking. |
 | 18..19(2) | Operator Altitude | Unsigned Int(float)(LE) | (float) Value = (EncodedValue * 0.5) - 1000, If decoded Value = -1000, then real value is unknown |
 | 20..23(4) | Timestamp | Unsigned Int(UInt32) | Time is in the following format =  00:00:00 01/01/1970 |
 | 24 | Reserved |  |  |
 
-
-Table 6: Category
-| Decimal | Bits | Detail |
-| -- | --------- |--------|
-| 0 | 0000 | Undefined |
-| 1 | 0001 | Open |
-| 2 | 0010 | Specific |
-| 3 | 0011 | Certified |
-| 4..15 | 0100..1111 | Reserved |
-
-
-Table 7: Class
-| Decimal | Bits | Detail |
-| -- | --------- |--------|
-| 0 | 0000 | Undefined |
-| 1 | 0001 | Class 0 |
-| 2 | 0010 | Class 1 |
-| 3 | 0011 | Class 2 |
-| 4 | 0100 | Class 3 |
-| 5 | 0101 | Class 4 |
-| 6 | 0110 | Class 5 |
-| 7 | 0111 | Class 6 |
-| 8..15 | 1000..0111 | Reserved |
 
 ## Interaction with the Website Subsystem
 Whenever data package is received, database application will begin unpacking the data and storing in the database then request website for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
