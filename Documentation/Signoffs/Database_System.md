@@ -212,6 +212,7 @@ The following is the pseudocode code used to compare for the pority zone: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; {{min_latitude, min_longitude}...{max_latitude, max_longitude}} <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< Drone_latitude < max_latitude) and if(min_longitude< Drone_Longitude < max_longitude) = TRUE; <br>
 <br>
+
 The received data from the camera are the following:
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
