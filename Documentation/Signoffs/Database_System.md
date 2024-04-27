@@ -1,30 +1,46 @@
 # Database System
 ## Functionality
-The database subsystem will receive the drone remote ID package capture by the receiver subsystem, then it will forward the necessary data to the camera software and website subsystem depending on the user input from the website subsystem.
+This system will receive data packages from the receiver or camera system, then the system will unpack the data and store it inside a SQL databse, and the database will be host locally on a raspberry pi. Once the data is organized in a structured format, then the system will determine wheater a drone is pre-authorize. If not authorize, then a request will be sent to the website system that ask the user for a operation authority access or if the drone is within pority zones that was pre marked by a user then it will forward the the following data to the camera system for tracking: Drone location, Drong speed, Control station location. Also, the database system will also provide data access for the website system.
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall breakdown any received data package and organize it in a structured format for usability | Design Constraint |
-|  2 | The system shall complete the user's data pull requet from the website subsystem | Design Constraint |
-|  3 | The system shall request authorized drone operation access from the website subsystem if a drone signal is received from the receiver subsystem  | Design Constraint |
-|  4 | The system shall forward the necessary data to the camera software subsystem if authrozied access is denied | Design Constraint |
-|  5 | The system shall forward the necessary data to the camera software subsystem if a drone is detected inside of priority zones selected by the user | Design Constraint |
+|  1 | The system shall fulfill data request from the website system | Design Constraint |
+|  2 | The system shall checck for pre-authroized access for any drone's new flight session  | Design Constraint |
+|  3 | For any drone without access permission, the system shall request authroized access from the website system. If access permission is denied the system shall forward any tracking information to the camera system | Design Constraint |
+|  4 | If a drone enter a pre-marked prioty zone, the system shall forward any tracking information to the camera system  | Design Constraint |
+|  5 | The system shall indicate the health status of Camera system | Design Constraint |
+|  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
+|  7 | The database shall be encrypted using a password | Design Constraint |
+|  8 | The system shall only send and receve data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
+|  9 | The raspberry pi shall have a housing that prevent direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
-When a data package is received from the receiver, website or camera subsystem, it shall store all the infomration in a structured format so it can be easily accesss when datas is being request by user.
+The database system will receive a access request when user click on a link from the website, once the access request is recevied the requested item will be pull from the database and send to the website system.
 
 <sup>2</sup> 
-Whenever the user open a link to observe datas, the database subsystem shall be able to provide the specified requested datas from the website.
+When a new data package is received from the receiver system, the database will take the UAS ID and check for pre-authroized access.
 
 <sup>3</sup> 
-When data package is received, and drone is within the contiguous campus area it should alert authority and request a drone operation acess permission.
+When a drone is deteced by the receiver, if the drone does not have pre-authroized acess, the database system will send a notification to the website system that ask for authrozied acess, if the user deny the acess, then the Drone location, Drong speed, Control station location will be send to the camera system.
 
 <sup>4</sup> 
-If drone operation acess permission is denied by authority, then information related to the UA or UA pilot shall be send to the camera software system.
+regardless if a drone have aurhtoized permission or not the Drone location, Drong speed, Control station location will be send to the camera system.
 
 <sup>5</sup> 
-If a drone enter a pority zone selected by the user, then information related to the UA or UA pilot shall be send to the camera software system.
+A status indication that provide simple breakdown on the health of the camera.
+
+<sup>6</sup> 
+If no time limit is selected by the user, the database will only store the data for 90 days.
+
+<sup>7</sup> 
+The password is used to for security reason that prevent unwanted access to the database.
+
+<sup>8</sup> 
+The raspberry pi 5 support both Dual-band 802.11ac Wi-Fi and Gigabit Ethernet[3]. Ethernet connection will be the priority option.
+
+<sup>9</sup> 
+Even though the raspberry pi is going to be insdie the building, a case will be designed to prevent any direct physical contact. For exmaple, the storage drive won't be easily accessed by random.
 
 ## Schematic
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/5b6f99ab-53b6-4579-a206-89b2a3e235b2)
@@ -234,5 +250,6 @@ The received data from the camera are the following:
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
-[2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024).
+[2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
+[3] “Raspberry Pi 5,” https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
 <!--etc.-->
