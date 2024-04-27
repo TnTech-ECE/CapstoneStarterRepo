@@ -43,14 +43,30 @@ The raspberry pi 5 support both Dual-band 802.11ac Wi-Fi and Gigabit Ethernet[3]
 Even though the raspberry pi is going to be insdie the building, a case will be designed to prevent any direct physical contact. For exmaple, the storage drive won't be easily accessed by random.
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/5b6f99ab-53b6-4579-a206-89b2a3e235b2)
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
 
 
 ## Analysis
-Once the database subsystem receive a data package from the receiver subsystem, it will break the Message Block inside the datapackage and store inside the SQL database, and request drone operation access authority from the website subsystem and forward UID and control station data to the camera software subsystem, then camera softerware subsystem will return a image. All data will be store inside a SQL database which is implemented on Raspberry Pi using MySQL which will act as a local storage, and the coding language used to implement this will be Structured Query Language (SQL), and rest the code that take care of transferring the data will be implemented using either C/C++ or python.
+Once the database ystem receive a data package from the receiver system, it will break down the Message Block inside the datapackage and store the relevant information inside the SQL database. Once all the data is organized in a structured format, and take the UAS ID and check for authority access, if none are found then forward a authority access request to the website system. If access is denied or drone is within the pority zone pre-marked by the user, then data related to the Drone location, Drong speed, Control station location will be forwared to the camera software system, and the camera softerware system will return a image. All data received from other system will be store inside a SQL database which is implemented on Raspberry Pi using MySQL, and rest of the code that take care of transferring data will be implemented using either C/C++ or python.
+
+## Implmenting the MySQL database on Raspberry Pi
+1) Open a Terminal Window
+1) Ensure the Raspberry Pi is up to date: <br>
+sudo apt update <br>
+sudo apt upgrade <br>
+2) Then install MySQL and secure your MySQL installation: <br>
+sudo apt install mysql-server <br>
+sudo mysql_secure_installation <br>
+3) Access MySQL as the root user, then create a new database user and provide username and password: <br>
+CREATE USER 'username_example'@'localhost' IDENTIFIED BY 'password_example'; <br>
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION; <br>
+FLUSH PRIVILEGES; <br>
+4) Create a new database:
+CREATE DATABASE example_name; <br>
+
 
 ## Block Message
-Inside the data package from the receiver subsystem, there will contain multiple blocks of message. The block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it could contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the following is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1].
+Inside the data package from the receiver system, there will contain multiple blocks of message. The block message is 25 bytes in length with a 1 byte header followed by 24 bytes of data. When the block message is decoded, the 1 byte message header will specify the message type, and it will contain the following datas: Basic ID message(0x0), Location/Vector Message(0x1), and the rest is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1]. Only System Message will be decoded, since the rest of the Optional message type does not provide any information for tracking.
 
 Note: For all block message, it will be in big endian format, unless specify to be little endian(LE) format.
 
@@ -166,18 +182,20 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 | 20..23(4) | Timestamp | Unsigned Int(UInt32) | Time is in the following format =  00:00:00 01/01/1970 |
 | 24 | Reserved |  |  |
 
+## Data processing within the database
+The following be
 
-## Interaction with the Website Subsystem
+## Interaction with the Website System
 Whenever data package is received, database application will begin unpacking the data and storing in the database then request website for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | Authorize Permission | Boolean | should return either a '0'(False) or '1'(True) |
 
-If the user from the website subsystem want to access the data inside the SQL database, UAS ID will be provided with the assoicated data, latitude, Longitude, Geodetic Altitude, Speed, etc..
+If the user from the website system want to access the data inside the SQL database, UAS ID will be provided with the assoicated data, latitude, Longitude, Geodetic Altitude, Speed, etc..
 
 
-## Interaction with the Camera Software Subsystem
-When drone operation permission is deny or when a drone is inside the prioty zone marked by the user, it will forward the following data to the Camera software subsystem, and Control Station latitude/longitude if avaiable.
+## Interaction with the Camera Software System
+When drone operation permission is deny or when a drone is inside the prioty zone marked by the user, it will forward the following data to the Camera software system, and Control Station latitude/longitude if avaiable.
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | UAS latitude | Signed Int(Sint16_t)(double) |  |
@@ -188,12 +206,13 @@ When drone operation permission is deny or when a drone is inside the prioty zon
 | Direction |Unsigned Int(Uint8_t) | 0-359(degree) |
 | Control station latitude |Signed Int(Sint32_t)(double) |  |
 | Control station Longitude |Signed Int(Sint32_t)(double) |  |
+| High priority area alert | Boolean | indication of drone within high priority area |
 
 The received data from the camera are the following:
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | Image | raw file or PNG | There can be mulitple Image |
-| Camera power status | boolean | '0' indicate power is low |
+| Camera Health status | boolean | '0' indicate power is low |
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
@@ -208,4 +227,5 @@ The received data from the camera are the following:
 [1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
 [2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
 [3] “Raspberry Pi 5,” https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
+[4] “How to Install MySQL on a Raspberry Pi,” www.basedash.com. https://www.basedash.com/blog/how-to-install-mysql-on-a-raspberry-pi (accessed Apr. 26, 2024). <br>
 <!--etc.-->
