@@ -182,11 +182,6 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 | 20..23(4) | Timestamp | Unsigned Int(UInt32) | Time is in the following format =  00:00:00 01/01/1970 |
 | 24 | Reserved |  |  |
 
-## Data processing within the database
-The following is the pseudocode code used to compare for the pority zone: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; {{min_latitude, min_longitude}...{max_latitude, max_longitude}} <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< x < max_latitude) and if(min_longitude< y < max_longitude) = TRUE; <br>
-
 
 ## Interaction with the Website System
 Whenever data package is received, database application will begin unpacking the data and storing in the database then request website for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
@@ -195,7 +190,6 @@ Whenever data package is received, database application will begin unpacking the
 | Authorize Permission | Boolean | should return either a '0'(False) or '1'(True) |
 
 If the user from the website system want to access the data inside the SQL database, UAS ID will be provided with the assoicated data, latitude, Longitude, Geodetic Altitude, Speed, etc..
-
 
 ## Interaction with the Camera Software System
 When drone operation permission is deny or when a drone is inside the prioty zone pre-marked by the user, it will forward the following data to the Camera software system, and Control Station latitude/longitude if avaiable.
@@ -210,6 +204,10 @@ When drone operation permission is deny or when a drone is inside the prioty zon
 | Control station latitude |Signed Int(Sint32_t)(double) |  |
 | Control station Longitude |Signed Int(Sint32_t)(double) |  |
 | High priority area alert | Boolean | indication of drone within high priority area |
+<br>
+The following is the pseudocode code used to compare for the pority zone: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; {{min_latitude, min_longitude}...{max_latitude, max_longitude}} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< Drone_latitude < max_latitude) and if(min_longitude< Drone_Longitude < max_longitude) = TRUE; <br>
 
 The received data from the camera are the following:
 | Data | Data type | Detail |
