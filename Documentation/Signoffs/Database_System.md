@@ -13,7 +13,7 @@ This system will receive data packages from the receiver or camera system, then 
 |  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
 |  7 | The database shall be encrypted using a password | Design Constraint |
 |  8 | The system shall only send and receve data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
-|  9 | The raspberry pi shall have a housing that prevent direct physical interaction with the hardware | Design Constraint |
+|  9 | The raspberry pi shall have a well ventilated casing that prevent direct physical interaction with the hardware | Design Constraint/Raspberry Pi WARNINGS |
 
 <sup>1</sup> 
 The database system will receive a access request when user click on a link from the website, once the access request is recevied the requested item will be pull from the database and send to the website system.
@@ -48,6 +48,9 @@ Even though the raspberry pi is going to be insdie the building, a case will be 
 
 ## Analysis
 Once the database ystem receive a data package from the receiver system, it will break down the Message Block inside the datapackage and store the relevant information inside the SQL database. Once all the data is organized in a structured format, and take the UAS ID and check for authority access, if none are found then forward a authority access request to the website system. If access is denied or drone is within the pority zone pre-marked by the user, then data related to the Drone location, Drong speed, Control station location will be forwared to the camera software system, and the camera softerware system will return a image. All data received from other system will be store inside a SQL database which is implemented on Raspberry Pi using MySQL, and rest of the code that take care of transferring data will be implemented using either C/C++ or python.
+
+## Setting up the Raspberry Pi
+The device will be powered by 5V/5A DC power via USB-C, power supply is included in the kit, and A external monitor is needed to monitor the device.
 
 ## Implmenting the MySQL database on Raspberry Pi
 1) Open a Terminal Window
