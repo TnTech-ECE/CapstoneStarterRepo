@@ -183,7 +183,10 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 | 24 | Reserved |  |  |
 
 ## Data processing within the database
-The following be
+The following is the sudo code used to compare for the pority zone: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; <{latitude, longitude}>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< x < max_latitude) and if(min_longitude< x < max_longitude) = TRUE; <br>
+
 
 ## Interaction with the Website System
 Whenever data package is received, database application will begin unpacking the data and storing in the database then request website for a drone operation access permission. The output return from the website shall be in Boolean which indicate if access is given or not.
@@ -195,7 +198,7 @@ If the user from the website system want to access the data inside the SQL datab
 
 
 ## Interaction with the Camera Software System
-When drone operation permission is deny or when a drone is inside the prioty zone marked by the user, it will forward the following data to the Camera software system, and Control Station latitude/longitude if avaiable.
+When drone operation permission is deny or when a drone is inside the prioty zone pre-marked by the user, it will forward the following data to the Camera software system, and Control Station latitude/longitude if avaiable.
 | Data | Data type | Detail |
 | -------- | ------------| -------- |
 | UAS latitude | Signed Int(Sint16_t)(double) |  |
