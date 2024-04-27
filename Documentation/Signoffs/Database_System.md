@@ -184,8 +184,8 @@ The System Message type provides the Operator Latitude, Operator Longitude, Area
 
 ## Data processing within the database
 The following is the sudo code used to compare for the pority zone: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; <{latitude, longitude}>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< x < max_latitude) and if(min_longitude< x < max_longitude) = TRUE; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double matrix[256 = number of row][2 = number of Column]; {{min_latitude, min_longitude}...{max_latitude, max_longitude}}> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(min_latitude< x < max_latitude) and if(min_longitude< y < max_longitude) = TRUE; <br>
 
 
 ## Interaction with the Website System
