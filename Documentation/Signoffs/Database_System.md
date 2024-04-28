@@ -13,7 +13,7 @@ This system will receive data packages from the receiver or camera system, then 
 |  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
 |  7 | The database shall be encrypted using a password | Design Constraint |
 |  8 | The system shall only send and receve data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
-|  9 | The raspberry pi shall have a well ventilated casing that prevent direct physical interaction with the hardware | Design Constraint/Raspberry Pi WARNINGS |
+|  9 | The raspberry pi shall have a well ventilated casing that prevent direct physical interaction with the hardware | Hardware Constraint |
 
 <sup>1</sup> 
 The database system will receive a access request when user click on a link from the website, once the access request is recevied the requested item will be pull from the database and send to the website system.
