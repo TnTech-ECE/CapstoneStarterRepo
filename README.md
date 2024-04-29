@@ -27,7 +27,7 @@ Coming soon :)
 
 [Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
 
-[JieJun Stowell](www.linkedin.com)
+[JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
 
 [Austin Williams](https://www.linkedin.com/in/austingwilliams/) is an electrical engineering major with a concentration in Power Systems. He is interested in power transmission and operations.
 
