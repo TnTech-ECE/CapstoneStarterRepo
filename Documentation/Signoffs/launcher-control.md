@@ -1,8 +1,8 @@
-# Launcher Aiming Control Unit
+# Launcher Control Unit
 ## Functionality
-The launch aiming control unit handles the different functions within the launcher. This includes controlling the signals for the motors for the launcher aiming subsystem, sending a signal for the buzzer to indicate that the launcher is about to fire, and sending a signal to the launcher firing subsystem indicating to fire.
+The launch control unit handles the different functions within the launcher. This includes controlling the signals for the motors for the launcher aiming subsystem, sending a signal for the buzzer to indicate that the launcher is about to fire, and sending a signal to the launcher firing subsystem indicating to fire.
 ## Constraints
-C1: The launch aiming control unit shall have at least 7 GPIO pins, 2 Ground pins, 1 SCK pin, 1 MISO pin, 1 MOSI pin, 1 VCC pin, 1 Camera Ribbon Cable to connected to the launcher aiming control to supply the needed amount of pins for each subsystem. The needed pins for each subsystem in the launcher aiming control unit are listed below:
+C1: The launch control unit shall have at least 7 GPIO pins, 2 Ground pins, 1 SCK pin, 1 MISO pin, 1 MOSI pin, 1 VCC pin, 1 Camera Ribbon Cable to connected to the launcher  control to supply the needed amount of pins for each subsystem. The needed pins for each subsystem in the launcher  control unit are listed below:
 ### Housing Subsystem
 | Type of Pins | Number |
 |--------------|--------|
@@ -37,18 +37,18 @@ C1: The launch aiming control unit shall have at least 7 GPIO pins, 2 Ground pin
 | MISO | 1 |
 | VCC | 1 |
 
-C2: The launcher aiming control unit shall have the ability to have network communication. This is to recieve data between the projectile path sensing and the velocity and acceleration sensing subsystems located on the sensor posts.
+C2: The launcher control unit shall have the ability to have network communication. This is to recieve data between the projectile path sensing and the velocity and acceleration sensing subsystems located on the sensor posts.
 
-C3: The launcher aiming control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms [1]. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
+C3: The launcher control unit shall play an alert noise before firing. This constraint originated from the DEVCOM Rulebook. According to a study published in the NIH journal, the minimum duration to modify human behavior is 200 ms [1]. In order to ensure bystanders are alerted, the minimum duration of the alert noise shall be 200 ms.
 
-C4: The launcher aiming control unit shall control the pitch and yaw angles of the launcher and compute the time to fire for the launcher firing system. This system will utilize the projectile path sensing, head on sensing, and projectile velocity and accelartion sensing system.
+C4: The launcher control unit shall control the pitch and yaw angles of the launcher and compute the time to fire for the launcher firing system. This system will utilize the projectile path sensing, head on sensing, and projectile velocity and accelartion sensing system.
 
 ## Electrical Schematic
 ![alt text](image-5.png)
 
 ## Analysis
 ### C1 Solution:
-The Raspberry Pi 5 was chosen as the controller for the launcher aiming control unit. The pin types that are included on the controller vs the pins needed are listed in the table below:
+The Raspberry Pi 5 was chosen as the controller for the launcher control unit. The pin types that are included on the controller vs the pins needed are listed in the table below:
 #### Raspberry Pi 5
 | Type of Pins | Pins Included | Pins Needed|
 |--------------|--------|--------------|
@@ -79,11 +79,11 @@ The fastest calculated time from first detection to interception is 530 ms as sh
 #### Process Diagram
 ![alt text](<Launcher Aiming Control Block Diagram.png>)
 #### Process Description
-The launcher aiming system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [4]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
+The launcher control system recieves inputs from the projectile path sensing system and the head-on sensing system to locate what fishing line the target is traveling on and at what height. Once the controller has determined the path and height, it sends signals to the stepper motor drivers to adjust the position of the launcher. The launcher aiming system is controlled by sending pulses to the STEP pin of the drivers and sending a signal to the DIR pin to indicate direction. It is important to note that the vendor of the stepper motor drivers explicitly states that the motor position can be controlled precisely without a feedback system in place [4]. Since each step signal corresponds to a degree step to the stepper motors for the launcher aiming system, the posistion of the launcher in reference to  the starting position can be determined based on the number of step pulses sent to the driver.
 
 $$ \theta_{aim} = n_{steps}*\theta_{step} $$
 
-To calculate the time to fire, the launcher aiming takes inputs from the projectile velocity and accelartion sensing and finds the time to fire in the equations below:
+To calculate the time to fire, the launcher control takes inputs from the projectile velocity and accelartion sensing and finds the time to fire in the equations below:
 
 $$ x_{travel} = x_{target} - x_{intercept} $$
 
