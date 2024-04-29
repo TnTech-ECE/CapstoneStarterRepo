@@ -32,13 +32,8 @@
         Speed estimation. May not be possible in current setup.
 
     Setup:
-        todo
-
         TTN library getting started guide: https://github.com/manuelbl/ttn-esp32/wiki/Get-Started
         I have included the version of the library I used for this project in the components folder.
-
-    Work Needed:
-        Make secrets.h for TTN OTAA keys.
 */
 
 

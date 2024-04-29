@@ -29,16 +29,11 @@
 
         Multithreading with FreeRTOS. LoRaWAN runs on core1, other tasks on core0
 
-        Speed estimation.
+        Speed estimation. May not be possible in current setup.
 
     Setup:
-        todo
-
         TTN library getting started guide: https://github.com/manuelbl/ttn-esp32/wiki/Get-Started
         I have included the version of the library I used for this project in the components folder.
-
-    Work Needed:
-        Make secrets.h for TTN OTAA keys.
 */
 
 
@@ -66,8 +61,8 @@
 static esp_task_wdt_user_handle_t pcnt_task_twdt_user_hdl;
 static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 
-#define PCNT_INPUT_PIN_1 34
-#define PCNT_INPUT_PIN_2 35
+#define PCNT_INPUT_PIN_1 34     // Connect Loop A here 
+#define PCNT_INPUT_PIN_2 35     // Connect Loop B here
 
 // The number of elements in the array used to calculate average frequency
 // Use a lower number to have it more reactive to change, 
@@ -92,7 +87,7 @@ static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 #define TIME_TO_STALE_EVENT_MS 2000
 
 // Delta cannot be changed again until this amount of time has passed since last change
-#define DELTA_TIMEOUT_MS 1000
+#define DELTA_TIMEOUT_MS 5000
 
 // This is how you choose which loop is considered the entrance and exit loop
 // If Loop A is "first" then a vehicle traveling over Loop A then Loop B
@@ -181,7 +176,7 @@ const char *appKey = "F64422CFA825B4D89FF6B074027B41C5";
 
 // For debugging purposes, choose 0 to not have any LoRaWAN connectivity
 // choose 1 to use LoRaWAN network
-#define DO_LORAWAN 0
+#define DO_LORAWAN 1
 
 
 // Nonvolatile Storage
@@ -229,7 +224,7 @@ void write_current_delta_to_nvs() {
     nvs_close(nvs_handle);
 }
 
-#define TX_INTERVAL 30 // time interval to send messages in seconds
+#define TX_INTERVAL 60 // time interval to send messages in seconds
 //static uint8_t msgData[] = "Hello, world"; // Test message
 
 
@@ -298,7 +293,7 @@ void get_freq_from_pcnt(pcnt_unit_handle_t pcnt_unit, int *pulse_count, int64_t 
     pcnt_unit_clear_count(pcnt_unit);
 
     // Print the pulse count and frequency along with the loop identifier
-    //printf("\nLoop %c: Pulse Count: %d, Frequency: %lld Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
+    printf("\nLoop %c: Pulse Count: %d, Frequency: %lld Hz, at time: %lld", (loop_id == LOOP_A) ? 'A' : 'B', *pulse_count, *freq, curr_time_us);
 
     /*
     printf("\nLoop %c:", (loop_id == LOOP_A) ? 'A' : 'B');
@@ -373,7 +368,7 @@ void print_speed_mph(int64_t curr_event_timestamp, int64_t last_event_timestamp)
     double speed_fps = distance_feet / time_seconds;
     double speed_mph = speed_fps * 0.681818;
 
-    printf("\nEstimated speed: %.2f miles per hour", speed_mph);
+    //printf("\nEstimated speed: %.2f miles per hour", speed_mph);
 }
 
 
@@ -622,6 +617,11 @@ void app_main(void)
     #endif // CONFIG_ESP_TASK_WDT_INIT
 
     initialize_nvs();
+
+    // manually set nvs delta to 0
+    // current_delta = 0;
+    // write_current_delta_to_nvs();
+
     read_current_delta_from_nvs();
 
     if(DO_LORAWAN)
@@ -649,14 +649,14 @@ void app_main(void)
         ttn_configure_pins(TTN_SPI_HOST, TTN_PIN_NSS, TTN_PIN_RXTX, TTN_PIN_RST, TTN_PIN_DIO0, TTN_PIN_DIO1);
 
         // The below line can be commented after the first run as the data is saved in NVS
-        //ttn_provision(devEui, appEui, appKey);
+        ttn_provision(devEui, appEui, appKey);
 
         // Register callback for received messages
         ttn_on_message(messageReceived);
 
         ttn_set_adr_enabled(true);
-        //ttn_set_data_rate(TTN_DR_US915_SF10);
-        ttn_set_max_tx_pow(20);
+        ttn_set_data_rate(TTN_DR_JOIN_DEFAULT);
+        ttn_set_max_tx_pow(9);
 
         printf("Joining...\n");
         if (ttn_join())
