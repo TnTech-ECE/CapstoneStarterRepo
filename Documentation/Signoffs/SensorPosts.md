@@ -37,15 +37,15 @@
 <img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Horizontal.png width='400'>
 </p>
 
-The choice to bridge the center senor posts and place the radar system was done to account for the horizontal portion of the beam angle to cover the entirety of anchor 2 as seen above the 83 $^{\circ}$ is less than the maximum of 100 $^{\circ}$. This will also ensure that the maximum distance calulations are within limits for the worst case senerios of the ball being on the edges of the game board which will not be hapening. The minimum detectible distance comes from sensor post 1 being placed roughly 24 inches infrot of sensor post 2 (position picuted above) this would put the worst possible distance of the golf ball away at 40 inches. The distance is raised slightly because we want to detect the golf ball as soon as possible to allow for maximum time for aiming and firing.
+The choice to bridge the center senor posts and place the radar system was done to account for the horizontal portion of the beam angle to cover the entirety of anchor 2 as seen above the 83 $^{\circ}$ is less than the maximum of 100 $^{\circ}$. This will also ensure that the maximum distance calulations are within limits for the worst case senerios of the ball being on the edges of the game board which will not be hapening. The minimum detectible distance comes from sensor post 1 being placed roughly 24 inches infrot of sensor post 2 (position picuted above) this would put the worst possible distance of the golf ball away at 40 inches. The distance is raised slightly because we want to detect the golf ball as soon as possible to allow for maximum time for aiming and firing. Also having the radar infront of the interceptor body reduces the cosine effect [10] on the radar giving us a more accurate velocity and acceleration.
 
 <p align = "center">
 <img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Vertical.png width='400'>
 </p>
 
 The vertical portion of the beam angle is so much of a problem as it is well withing the 40 $^{\circ}$. 
-But we will mount the sensor where it is angled up at a 49 $^{\circ}$ angle to better encapulate the flight path of the golf ball.
-Also having the radar infront of the interceptor body reduces the cosine effect [10] on the radar giving us a more accurate velocity and acceleration.
+But we will mount the sensor where it is angled up at a 45 $^{\circ}$ angle to better encapulate the flight path of the golf ball. This angle will also allow for line sag as the tension of the lines may vary.
+
 ### Detection distance
 To find the maximum distance the radar will be able to detect the projectile a few calculations are needed. 
 The first being the Radar Cross Section (RCS) which is a measure of how reflective an object is to radar waves, and is related to the probability of the radars signal being returned to the radar after hitting the projectile. 
