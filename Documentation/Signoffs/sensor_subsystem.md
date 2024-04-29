@@ -78,7 +78,7 @@ Pixel height
 
 ~~~
 
-Since the diameter of a golf ball is about 1.68", the RGB camera will not have a problem detecting the golf ball because, from the furthest point on the gameboard, there will be around 30 pixels covering the golf ball on both the X and Y axes.
+Since the diameter of a golf ball is about 1.68", the camera will be able to capture the golf ball in a 30 X 30 pixel square which is more than large enough for the image processing system to be able to detect the golf ball.
 
 ### **Field of View**
 
