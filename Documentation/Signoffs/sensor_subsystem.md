@@ -13,13 +13,13 @@ distance, speed, and position of the target as it slides down the fishing line.
 | 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                                                                                     | System Constraint |
 | 2   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  | System Constraint |
 | 3   | The sensor shall have a resolution no larger than 1920 X 1080 due to constraints from the image processing system                                                                                           | Conceptual Design |
-| 4   | The sensor shall be able to gather depth data from at most 6' away which is the length of the gameboard                                                                                                     | Conceptual Design |
+| 4   | The sensor shall be able to gather depth data from at most 6' and at least 1' away which is the length of the gameboard                                                                                     | Conceptual Design |
 | 5   | The sensor shall have a FOV that is wider than 56" from 6' away which is the width of anchor 2 and the length of the gameboard                                                                              | Device Constraint |
 
 1. The sensor requires a USB connection for both data and power therefore it also requires a direct connection to the Jetson Nano processor
 2. The frame rate must be fast enough to get 2 frames of data within 0.0667s or about 30 fps. Because this is the maximum frame rate for the image processing system
 3. The sensor shall have a maximum resolution of 1920 X 1080 due to the speed and processing power of the image processing subsystem
-4. The depth camera should be able to get the distance of an object from at most 6' away which is the length of the gameboard
+4. The depth camera should be able to get the distance of an object from at most 6' and at least 1' away which is the length of the gameboard
 5. Since the width of anchor 2 from the DEVCOM rulebook is 56", the FOV must be wider than 56" at 6' away in order to encompass all the fishing lines
 
 ## **Buildable Schematic**
