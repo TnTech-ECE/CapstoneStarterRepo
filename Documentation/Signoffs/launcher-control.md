@@ -1,6 +1,6 @@
 # Launcher Control Unit
 ## Functionality
-The launch control unit handles the different functions within the launcher. This includes controlling the signals for the motors for the launcher aiming subsystem, sending a signal for the buzzer to indicate that the launcher is about to fire, and sending a signal to the launcher firing subsystem indicating to fire.
+The launcher control unit handles the different functions within the launcher. This includes controlling the signals for the motors for the launcher aiming subsystem, sending a signal for the buzzer to indicate that the launcher is about to fire, and sending a signal to the launcher firing subsystem indicating to fire.
 ## Constraints
 C1: The launch control unit shall have at least 7 GPIO pins, 2 Ground pins, 1 SCK pin, 1 MISO pin, 1 MOSI pin, 1 VCC pin, 1 Camera Ribbon Cable to connected to the launcher  control to supply the needed amount of pins for each subsystem. The needed pins for each subsystem in the launcher  control unit are listed below:
 ### Housing Subsystem
