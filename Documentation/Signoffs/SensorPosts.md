@@ -32,6 +32,20 @@
 </p>
 
 ## Analysis
+### Radar Placement
+<p align = "center">
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Horizontal.png width='400'>
+</p>
+
+The choice to bridge the center senor posts and place the radar system was done to account for the horizontal portion of the beam angle to cover the entirety of anchor 2 as seen above the 83 $^{\circ}$ is less than the maximum of 100 $^{\circ}$. This will also ensure that the maximum distance calulations are within limits for the worst case senerios of the ball being on the edges of the game board which will not be hapening. The minimum detectible distance comes from sensor post 1 being placed roughly 24 inches infrot of sensor post 2 (position picuted above) this would put the worst possible distance of the golf ball away at 40 inches. The distance is raised slightly because we want to detect the golf ball as soon as possible to allow for maximum time for aiming and firing.
+
+<p align = "center">
+<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Vertical.png width='400'>
+</p>
+
+The vertical portion of the beam angle is so much of a problem as it is well withing the 40 $^{\circ}$. 
+But we will mount the sensor where it is angled up at a 49 $^{\circ}$ angle to better encapulate the flight path of the golf ball.
+Also having the radar infront of the interceptor body reduces the cosine effect [10] on the radar giving us a more accurate velocity and acceleration.
 ### Detection distance
 To find the maximum distance the radar will be able to detect the projectile a few calculations are needed. 
 The first being the Radar Cross Section (RCS) which is a measure of how reflective an object is to radar waves, and is related to the probability of the radars signal being returned to the radar after hitting the projectile. 
@@ -49,23 +63,6 @@ In this equation plug in the Radar Output Power or Equivalent Transmit Power low
 The antena gain is assumed to be 1.5 dB because that is the gain of a resonant dipole antenas[3] and the minimum detecitible signal is assumed to be -90 dBm. 
 With these values we get a maximum detection distance of 1.188 m or 46.77 inches. 
 By connecting the center sensor posts together and placing the radar apperatus in the center this maximum distance to the edge of the game board is 49.67 from where the radar will be operating from so at the worst case the radar will reach 95% of the way to the furthast edge in the worst case.
-
-### Radar Placement
-
-<p align = "center">
-<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Horizontal.png width='400'>
-</p>
-
-The choice to bridge the center senor posts and place the radar system in the middle of the game board is to reduce the maximum distance from the edge of the gameboard from the radar. 
-This was also done to account for the horizontal portion of the beam angle to engluf the entirety of anchor 2 as seen above the 83 $^{\circ}$ is less than the maximum of 100 $^{\circ}$.
-
-<p align = "center">
-<img src = https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Images/Vertical.png width='400'>
-</p>
-
-The vertical portion of the beam angle is so much of a problem as it is well withing the 40 $^{\circ}$. 
-But we will mount the sensor where it is angled up at a 49 $^{\circ}$ angle to better encapulate the flight path of the golf ball.
-Also having the radar infront of the interceptor body reduces the cosine effect [10] on the radar giving us a more accurate velocity and acceleration.
 
 ### Battery
 To ensure that the battery will last greater than 30 minutes. 
