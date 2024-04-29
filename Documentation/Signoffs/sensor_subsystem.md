@@ -8,13 +8,13 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ## **Constraints:**
 
-| No. | Constraint                                                                                                                                    | Origin            |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                       | System Constraint |
-| 2   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed                                        | System Constraint |
-| 3   | The sensor shall have a resolution great enough so that the golf ball spans 30 pixels from 6 feet (the size of a golf ball from 6 feet)       | Conceptual Design |
-| 4   | The sensor shall be able to gather depth data from at least 6' away                                                                           | Conceptual Design |
-| 5   | The sensor shall have a FOV that is wider than 56" from 6' away                                                                               | Device Constraint |
+| No. | Constraint                                                                                                                                          | Origin            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor                                                                             | System Constraint |
+| 2   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed                                              | System Constraint |
+| 3   | The sensor shall have a resolution great enough so that the golf ball spans 30 pixels from 6 feet (the number of pixels of a golf ball from 6 feet) | Conceptual Design |
+| 4   | The sensor shall be able to gather depth data from at least 6' away which is the length of the gameboard                                            | Conceptual Design |
+| 5   | The sensor shall have a FOV that is wider than 56" from 6' away which is the length of the gameboard                                                | Device Constraint |
 
 1. The sensor requires a USB connection for both data and power therefore also requiring a direct connection to the Jetson Nano processor
 2. The frame rate must be fast enough to get 2 frames of data within 0.0667s or about 30 fps. This allows for a maximum time for calculations as well as sticking with a common frame rate for most cameras
