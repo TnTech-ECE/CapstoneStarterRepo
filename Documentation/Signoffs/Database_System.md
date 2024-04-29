@@ -220,7 +220,7 @@ The received data from the camera are the following:
 | Camera Health status | boolean | '0' indicate power is low |
 
 ## Testing
-To test the actual written code, a dummy data table will be created strictly for testing different scenarios with preset values.
+To test the actual written code, a dummy data table fill with preset values will be created strictly for testing different scenarios.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
