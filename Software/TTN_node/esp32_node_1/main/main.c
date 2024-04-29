@@ -66,8 +66,8 @@
 static esp_task_wdt_user_handle_t pcnt_task_twdt_user_hdl;
 static esp_task_wdt_user_handle_t dir_logic_task_twdt_user_hdl;
 
-#define PCNT_INPUT_PIN_1 34
-#define PCNT_INPUT_PIN_2 35
+#define PCNT_INPUT_PIN_1 34     // Connect Loop A here 
+#define PCNT_INPUT_PIN_2 35     // Connect Loop B here
 
 // The number of elements in the array used to calculate average frequency
 // Use a lower number to have it more reactive to change, 
