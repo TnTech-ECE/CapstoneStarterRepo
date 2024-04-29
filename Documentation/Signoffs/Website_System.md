@@ -11,7 +11,7 @@ The purpose of the website subsystem is to allow a designated user to access the
 |  4 | The drone information will be displayed to the website concisely, allowing for utilization with minimized training. A user-selected option may be implemented to view all detected drone flights (authorized and unauthorized) to reduce clutter. | Project Team |
 |  5 | The website will be constructed securely, within reason. | Project Team |
 |  6 | The website will be constructed to comply with standards put into place by the W3C (World Wide Web Consortium). | Project Team / Supervisor |
-|  7 | The system shall allow campus police to authorize drones for permitted flights in a specified time frame. | Project Team |  
+|  7 | The system shall allow campus police to authorize specific drones for permitted flights in a specified time frame. | Project Team |  
 |  8 | The system shall increase the alert's urgency if a drone is detected in any designated geographical region. | Project Team |  
 
 <sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display. For the data to get to officers in the field, a dispatcher will relay information regarding the drone to the officer.
@@ -48,7 +48,7 @@ After obtaining an API key, we can implement the API call using the key in the H
 
 The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then have a Google Maps marker placed on their respective locations. The dispatcher can then select a certain drone and view the related data received from the Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
 
-For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website in a directory set aside for the police, or at least on a machine that they have where the maximum uptime will be obtained. The cost of this service is to be integrated into the subsystem's budget. This is not expected to cost a significant amount of money, likely less than $30 per year that the site is hosted. 
+For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website on a Raspberry Pi 5, the same machine that is hosting our database server. This will make the access of data from the database much easier. The cost of this service is to be integrated into the subsystem's budget, and is not expected to cost a significant amount of money, likely less than $30 per year that the site is hosted. 
 
 ### Testing
 
@@ -56,12 +56,16 @@ To ensure the website's proper operation, a wide variety of test cases will be u
 
 At this point in the program's execution, we can use a dummy database filled with data that we create to verify the correct operation of the website. Some of this data will be created to hinder the program, which will result in errors being generated and handled correctly. If the program can sufficiently handle all of the erroneous cases, then it will certainly be able to handle the data received from the database subsystem. 
 
-A more detailed testing regimen will be developed as the website becomes more and more refined. This process is iterative, and functionality, while laid out amicably above, is not definitive yet. There are some processes that the team is not entirely sure if they want to include, and will be more along the lines of quality-of-life features. Rigorous testing procedures for these features will be created alongside the features themselves, demonstrating the precise execution of our code.
+To be certain that our [constraints](#constraints) are met, experiments will be conducted and data will be collected to prove that the subsystem operates as we have declared it will. The first three constraints can be validated by launching a Remote ID compliant drone and seeing how long it takes our system to detect it. Constraint four is difficult to quantify, and will instead be tested by asking someone from campus police to demo the website. Feedback received from the user will be used to adapt the website to their liking. The next constraint is more difficult to prove. One way that the team has discussed proving this constraint has been met is by asking CEROC (the Cybersecurity Education, Research, and Outreach Center) here at Tennessee Tech to try to break into our website. This activity will provide validation that a "reasonable level" of security has been met. 
+
+Constraint number six will be tested by running our website through the [Markup Validation Service](https://validator.w3.org/#validate_by_uri) provided by w3.org. This validator will display any errors that may prevent the website from operating properly on certain browsers/systems. The final two constraints can again be tested utilizing a Remote ID compliant drone. By using a drone whose serial number is known, we can provide authorization to it and see if our system behave as expected when an authorized drone is detected. After revoking this drone's authorization, we can then test our status elevation system by flying the drone into a designated area. If the drone is shown as having an elevated status, then the team will know that the constraint has been met and that our system functions as intended.
+
+A more detailed testing regimen will be developed as the website becomes more and more refined. This process is iterative, and functionality, while laid out amicably above, is not definite yet. There are some processes that the team is not entirely sure if they want to include, and will be more along the lines of quality-of-life features. Rigorous testing procedures for these features will be created alongside the features themselves, demonstrating the precise execution of our code.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-|Server    |            -|         1|        $30/year|         $30|
+|Domain    |            -|         1|        $30/year|         $30|
 |Total     |             |          |                |            |
 
 ## References
