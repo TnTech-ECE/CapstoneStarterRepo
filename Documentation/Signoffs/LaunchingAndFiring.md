@@ -24,10 +24,10 @@ As seen in the schematic above, the Adafruit relay will be powered off the 3.3V 
 ## Analysis 
 
 **Constraint Solution 1:**
-The Launching and Firing subsystem shall use 16 AWG wire for the subsystems electrical connections. This wire has an ampacity rating of 10 amps over a distance of 12 inches. This wire size was selected by considering the largest ampacity draw that exists in the subsystem. For this the team decided to use the start/stall current (9.8 amps) of the 12V DC motor used in this subsystem to apply mechanical power to the firing mechanism. Since the housing subsystem will have extra 16 AWG wire, that wire will be sufficient to use for this application. 
+The Launching and Firing subsystem shall use 16 AWG wire for the subsystems electrical connections. This wire has an ampacity rating of 10 amps over a distance of 12 inches. This wire size was selected by considering the largest ampacity draw that exists in the subsystem. For this the team decided to use the start/stall current (9.8 amps) of the 12V DC motor used in this subsystem to apply mechanical power to the firing mechanism. Using a table [4] that seems to simplify and directly quotes the NEC 310.15(B)(16), the team decided to use 14 AWG wire[5] than can handle over 15 Amps, leaving plenty of capacity in the wire, this wire will be sufficient to use for this application. 
 
 **Constraint Solution 2:**
-To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. The relay will be connected to pin 1 of the Raspberry Pi 5 from the aiming subsystem and will pull 100mA at max (while operating) which is within the Raspberry Pi 5's ampacity limits for that pin.
+To allow the firing mechanism to operate without human interaction, a signal shall be generated from the Aiming subsystem when that subsystem has finished the aiming processes that will be used as a relay signal to operate the firing mechanism autonomously. The relay[3] will disconnect the 12-volt supply from the DC motor when the signal is not active, or low, and will connect the 12-volt supply to the DC motor when the signal is activated, or high, allowing the motor to operate. The relay will be connected to pin 1 of the Raspberry Pi 5 from the aiming subsystem and will pull 100mA at max (while operating) which is within the Raspberry Pi 5's ampacity limits for that pin. The relay, the Adafruit Power Relay FeatherWing G5LE-G is rated for 10 Amp resistive loads at 12 Volts DC. This is over the motor's stall ampacity and it also useful to consider that the team will be operating the motor at much ampacity than this at all times however this relay can handle 10 amps at 12 volts regardless.
 
 Below is the charachteristics sheet of the Adafruit Featherwing Relay[3]:
 
@@ -68,7 +68,9 @@ The mechanical engineering team's current plan is to fire a round after a 20 deg
 |------|-------------|-------------|--------------|----------|-------|-------------|
 | 12V DC Motor | Brushed DC motor used to operate firing mechanism | DCM 1006 | DigiKey | 1 | $72.00 | $72.00 |
 | Power Relay FeatherWing | Takes the signal from the aiming subsystem and allows DC motor to operate or not | 3191 | Adafruit  | 1 | $9.95 | $9.95 |
-|      |                                             |     |             |   |       | $81.95 Total |
+| 14 AWG Copper Wire  | 3 ft red and 3 ft Black Flexible 14 AWG Stranded Tinned Copper Wire | ‎SW14G40008F3RB | BNTECHGO | 1 | $6.88 | $6.88 |
+|      |                                             |     |             |   |       | $88.83 Total |
+
 
 ## References
 [1] PMDC Motor Reliability study: [http://mtc-m16c.sid.inpe.br/col/sid.inpe.br/mtc-m18/2011/04.11.15.04/doc/LADC%202011_A_RELIABLE_COMPUTATIONAL_SYSTEM_FINAL_ENTREGA.pdf]
@@ -76,3 +78,7 @@ The mechanical engineering team's current plan is to fire a round after a 20 deg
 [2] PMDC Motor DCM 1006: [https://www.digikey.com/en/products/detail/multi-products-company-inc/DCM-1006/15668239]
 
 [3] Adafruit Relay: [https://www.adafruit.com/product/3191#technical-details]
+
+[4] Wire Size Calculator : [http://wiresizecalculator.net]
+
+[5] 14 AWG Wire [https://www.amazon.com/BNTECHGO-Silicone-Flexible-Strands-Stranded/dp/B017U6PGLO/ref=sr_1_3?crid=1CARC34IQUV3C&dib=eyJ2IjoiMSJ9.7NHwddBxpP9ohul-VQ5JW-ot8hyUft8gY27w8Tiazbp_KPNX_Q_-tpVYQXg-GDaspyYwjz8YxACLmVWO7dr37psSS-rQDs3eNSk7kPiFs1OJJrx5pUxRBtY7IPUYDXQM6Jn_xADS4JwfL1PySMOZjK-_-qrIK_c2HMbwBrB3bVV39GOs0K3iI-o6cjP94wFnNwz0PklXo03qhmMMD3aTkRh5tOqnEyZqi0f2hZOvctXZTJlFMZzwCu7agP1UY7PCImlwGKoABNj1YlXtGUVGwnEEGNoPMwwEYMRs1oVs-M8.UzG9r-N0GhTA8gsx34GOLnMLXhCVnxxTo49A9A_oaiA&dib_tag=se&keywords=14+gauge+wire&qid=1714451115&sprefix=14+gauge+wire%2Caps%2C161&sr=8-3]
