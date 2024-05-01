@@ -1,7 +1,6 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware System will be responsible for the design of hardware capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database for use by campus police.
-
+The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage.
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
