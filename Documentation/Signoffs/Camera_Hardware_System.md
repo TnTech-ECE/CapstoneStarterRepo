@@ -5,40 +5,31 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1| System shall capture an image of the UAS in flight or the control station| Stakeholder Constraint|
-|  2| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
-|  3| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± X° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
-|  4| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
-|  5| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Design Constraint|
-|  6| System Camera zoom and focus shall not be controllable by system software| Design Constraint|
-|  7| Camera System shall be placed in an area for maintenance personel and locked with lecturn keys for tamper-resistance. | Security Constraint|
-|  8| Camera System shall not draw more than X Watts of power, with 5 - 8 Volts and X Amps being needed for the entire system | Power Constraint|
-
+|  2| System shall not take into consideration light levels or physical obstructions when capturing images|Design Constraint|
+|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
+|  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± X° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
+|  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
+|  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
+|  7| Camera zoom and focus shall not be controllable by system software| Design Constraint|
+|  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system | Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
+|  9| Camera system shall utilize IEEE standard 802.11[^x] and Tennessee Tech Policy 856 [^x]| Communication Design Constraint|
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
 
-<sup>2</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Along with this, secondary image processing can convert this to a smaller format for long-term storage if and when required.
+<sup>3</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Setting minimum resolution to 1080px720p ensures captured images are higher quality.
 
-<sup>3</sup> The level of servo precision will become increasingly important for quality image capture as the zoom increases and the field of view (FOV) decreases.
+<sup>4</sup> Precise setting of servo angles ensures that drone is in the center of the frame when a picture is captured.
 
-<sup>4</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
+<sup>5</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
 
-<sup>6</sup> Protection of sensitive electronics and exposed circuit wiring/contacts from incoming water is essential for ensuring the safety of the system, building, and personnel in proximity.
+<sup>6</sup> Protection of sensitive electronics and exposed circuit wiring/contacts from incoming water is essential for ensuring the safety of the system, along with nearby personnel and property.
 
+<sup>7</sup> Camera zoom, focus, and ISO will be set once upon install to ensure consistency in image quality with the surveyed area.
 
-<!--|  1 | Shall capture an image of an Unmanned Aerial System (UAS) in-flight or the UAS pilot.  | Project Proposal|
-|  2 | Shall capture a quality image of the drone from a maximum of X meters away to ensure image quality of 1080x720p, X ppi.| Design Constraint|                  
-|  3 | Shall track drone across contiguous airspace using Remote ID location data, or will track the pilot if they are closer. | Concept Design|
-|  4 | System shall resist weather and external conditions to an IPXX rating (temp) | Maintainence Constraint|
-|  5 | Servo Motors shall be capable of tracking UAS entities up to speeds of x m/s 
-|  6 | Camera images shall be stored in a raw format to be later saved as Jpeg by the database
+<sup>8</sup> Limiting power draw ensures that the power delivery system will be able to keep up with this system without overcurrent or brown-out issues.
 
-<sup>1</sup> Capturing an image of the drone and/or the pilot is a large part of evidence collection and assists campus police in stopping unauthorized drone flight from repeat offenders.
+<sup>9</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.
 
-<sup>2</sup> Limiting image capture to X meters ensures that images are sharp, clear, and properly utilize our data storage.
-
-<sup>3</sup> Drone and control station telemetry data is required to know when the drone or pilot is in range of the camera.
-
-<sup>4</sup> To ensure reliability of system, environmental interference must be limited and mitigated by proper protective measures.. -->
 
 ## Schematic
 In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)-->
@@ -54,7 +45,7 @@ For this system, we have chosen to use servo motors for the pan and tilt control
 By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.
 
 ### Camera
-The camera selected for this application is an ELP 8MP camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 - 12 mm 
+The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
 
 
 ## BOM
@@ -70,7 +61,7 @@ The camera selected for this application is an ELP 8MP camera containing a Sony 
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed April 14, 2024)
-[^2]: Thin Thin Hlaing, Tin Tin Nwet, Soe Myat, "Overview of Differences between Servo and Stepper Motor Technology" - ISSN , https://tinyurl.com/mrd79fpb (Accessed April 10, 2024).
+[^1]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed April 14, 2024)
+[^2]: Thin Thin Hlaing, Tin Tin Nwet, Soe Myat, "Overview of Differences between Servo and Stepper Motor Technology" - ISSN , [Article](https://irjaes.com/wp-content/uploads/2020/10/IRJAES-V4N3P86Y19.pdf) (Accessed April 10, 2024).
 <!--etc.-->
 
