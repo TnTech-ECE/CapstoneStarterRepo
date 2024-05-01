@@ -9,7 +9,7 @@ The camera software system will be reponsible for using the data aquired by the 
 |  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but is not required if the UAS or control station is moving in other trajectory. | Design Constraint |
 |  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line. | Design Constraint |
 |  5 | The system shall output the picture taken to the database as either a raw file or PNG. | Design Constraint | 
-|  6 | The system shall communicate with the database system according to IEEE standards [^3] and Tennessee Tech Policy [^4] | Standards |
+|  6 | The system shall communicate with the database system according to IEEE standard 802.11 [^3] and Tennessee Tech Policy 856 [^4] | Standards |
 
 <sup>1</sup> The stakeholders for the project did not specify that the camera system must always capture an image of the unauthorized UAS or UAS user in 100% of pictures taken by the system because the most important information, as specified by the Tech Police, is the information contained in the RID signal and not the image captured. Therefore, the system will be not be constrained to determining the visibility of the UAS based on environmental factors before taking a picture, and cannot be held responsible for these factors obstructing the view of the UAS in pictures.
 
@@ -148,7 +148,7 @@ $\ y_p = y_3 + ((\frac{v_3}{v_2}) * (y_3 - y_2)) $
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
 [^2]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019). 
 [^3]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, Available: https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/ [Accessed Feb. 19, 2024].
-[^4]: “856 data security and handling policy,” Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed April. 29, 2024].
+[^4]: “856 data security and handling policy,” Tennessee Technological University, Available: https://www.tntech.edu/policies/ [Accessed April. 29, 2024].
 [^5]: The error margines can be adjusted as needed.
 
 
