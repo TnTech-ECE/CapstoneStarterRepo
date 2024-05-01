@@ -1,12 +1,12 @@
 # Camera Software System
 ## Functionality 
-The camera software system will be reponsible for controlling the camera hardware system, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) in-flight or the control station and send it to the database for usage by campus police.
+The camera software system will be reponsible for using the data aquired by the receiver to generate signals that will control the camera hardware system's motor servos and camera activation status, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) or the control station. The system will then aquire the image from the camera hardware, format it, and sent it to the database for usage by campus police. The system will also send an alert signal if there are detected errors in the system.    
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall not successfully capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
+|  1 | The system is not expected to capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
 |  2 | If the system receives data for the control station location, the system shall prioritize capturing a picture of the control station unless the corresponding UAS is in a high alert area as defined by the Tech Police. In that case, the system will prioritize capturing a picture of the UAS. | Tech Police |
-|  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but will not be performed if the UAS or control station is moving in other trajectory. | Design Constraint |
+|  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but is not required if the UAS or control station is moving in other trajectory. | Design Constraint |
 |  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line. | Design Constraint |
 |  5 | The system shall output the picture taken to the database as either a raw file or PNG. | Design Constraint | 
 |  6 | The system shall communicate with the database system according to IEEE standards [^3] and Tennessee Tech Policy [^4] | Standards |
@@ -98,9 +98,9 @@ The code located in this block will utilize all available sensors or software fe
 #### Horizontal Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
 
-$\ x = |\textrm{Camera longitude}|-|\textrm{UAS longitude}| $
+$\ x = |\textrm{UAS longitude}|-|\textrm{Camera longitude}| $
 
-$\ y = |\textrm{Camera latitude}|-|\textrm{UAS latitude}| $
+$\ y = |\textrm{UAS latitude}|-|\textrm{Camera latitude}| $
 
 $\ \theta_1 = \tan^{-1} (\frac{y}{x}) $
 
@@ -109,7 +109,7 @@ $\ \textrm{If x is a negative number: } \theta_1 = \theta_1 + 180 \degree $
 #### Vertical Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle2.png" width="300" height="200">
 
-$\ z = |\textrm{Camera altitude}|-|\textrm{UAS altitude}| $
+$\ z = |\textrm{UAS altitude}|-|\textrm{Camera altitude}| $
 
 $\ l = \sqrt{x^2+y^2} $
 
