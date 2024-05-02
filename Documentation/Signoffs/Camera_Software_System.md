@@ -81,7 +81,7 @@ The second factor will utilize how recent the last picture was taken and the loc
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed3.png" width="175" height="125">
 
-This block contains code that will be associated with [constraint 4](#Constraints). The code will determine if the UAS or control station is moving in a straight line over a span of at least 3 points and will attempt to predict the next position if straight line motion was detected. This prediction as well as the average time delay of the system, and the UAS or control station velocity will be used to alter the camera pointing angles as needed. See the [associated section](#Predicting-UAS-or-Control-Station-Location) for mathematical calulations.  
+This block contains code that will be associated with [constraint 4](#Constraints). The code will determine if the UAS or control station is moving in a straight line over a span of at least 3 points and will attempt to predict the next position if straight line motion was detected. This prediction as well as the average time delay of the system, and the UAS or control station velocity will be used to alter the camera pointing angles as needed. See the [associated section](#Predicting-UAS-or-Control-Station-Location) for mathematical calculations.  
 
 <img src= "/Documentation/Images/Camera_Software_System/Parsed4.png" width="130" height="150">
 
