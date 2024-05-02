@@ -37,12 +37,14 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
 ## Schematic
-In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)-->
+In Revision <!--<img src= "/Documentation/Images/Camera Hardware System/Schematic_Rev2.png" width="1000" height="600">-->
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Single-Board Computer (SPU)
-For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 programmable pins, 2 of which will be used to host and communicate with the servo motors required for the project.
+For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 programmable pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
+
+<img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="1000" height="600">
 
 #### SPU - Use and Analysis
 From the schematic, pins one and two from the sixteen available General Purpose Input-Output (GPIO) pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. These signals' generation and processing, will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
