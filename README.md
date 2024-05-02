@@ -34,7 +34,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Colby Drake][def3] is a electrical engineering major at Tennessee Tech. He has an interest in programming and power systems. Colby is responsible for the launcher aiming subsystem.
 
-[Jonah Burke][def4]
+[Jonah Burke][def4] is an electrical engineering major at Tennessee Tech. He has an interest in power systems. Jonah is responsible for the launcher firing subsystem.
 
 [Tyler Kasuboski][def5]
 
