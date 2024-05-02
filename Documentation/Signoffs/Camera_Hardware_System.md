@@ -42,13 +42,10 @@ In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-P
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Single-Board Computer (SPU)
-For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. With advanced control capabilities for periphrials, along with the ability to be loaded with any mainstream operating system necessary, this controller will be the center of this subsystem[^3].
-
-#### SPU - Background Info
-The Raspberry 4B, as specified in the datasheet[^3], contains many hardware specifications that will enable this system to run at high speeds. The presence of multiple   , will meet and exceed our parameters for processing speed, reliability, and data transmission.
+For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 programmable pins, 2 of which will be used to host and communicate with the servo motors required for the project.
 
 #### SPU - Use and Analysis
-This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
+From the schematic, pins one and two from the sixteen available General Purpose Input-Output (GPIO) pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. These signals' generation and processing, will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
 
 ### Servo Motor
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
@@ -57,10 +54,7 @@ For the pan and tilt control of this subsystem, brushless DC servo motors will b
 Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
 
 #### Servo - Use And Analysis
-Gonna totally use it
-<!--For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with an internal feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
-
-By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.-->
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having a 270° range of motion (ROM) and the other having the traditional 180° ROM seen in many other servos. These servo motors have a pulse-width range of 500 ~ 2500 micro seconds (μs) with a deadband of 3 μs[^8]. This means that the servo will not respond to a change in pulse-width smaller than 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame. At a pulse-width of 1500 μs, the servos will return to their neutral position at 90° and 135° respectively for both motor types.
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
@@ -73,13 +67,13 @@ The camera selected for this application is an ELP 8MP USB 3.0 camera containing
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-| Raspberry Pi 4B, 8GB Memory| SC0195(9)| 1x1| $75.00| $75.00|
-| Digital Servo, 25 kg torque, 270 degrees Control Angle | DS3218| 1x4| $51.98| $51.98|
-| Digital Servo, 25 kg torque, 180 degrees Control Angle| DS3225MG| 1x4| $54.89| $54.89|
-| ELP 8MP USB 3.0 Camera| ELP| 1x1| $106.00| $106.00|
-| Camera Pan/Tilt Gimbal| 3D-Printed, Custom| 1x1| $-.--| $-.--|
+| Raspberry Pi 4B, 8GB Memory| RPI4-MODBP-8GB| 1x1| $75.00| $75.00|
+| Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
+| Digital Servo, 20 kg torque, 180 degrees Control Angle| DS3218| 1x1| $14.66| $14.66|
+| ELP 8MP USB 3.0 Camera| ELP-USB4KHDR01-UFV| 1x1| $106.00| $106.00|
+| Camera Pan/Tilt Servo Bracket| Generic| 1x1| $9.99| $9.99|
 | System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|
-|Total     |             |          |                | $180.24|
+|Total     |             |          |                | $220.31|
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
@@ -90,5 +84,6 @@ The camera selected for this application is an ELP 8MP USB 3.0 camera containing
 [^5]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
 [^6]: [What is a Stepper Motor?](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
 [^7]: [Sony IMX317 Datasheet](https://www.sony-semicon.com/files/62/pdf/p-13_IMX317CQC_Flyer.pdf) (Accessed May 2, 2024)
+[^8]: [Servo Datasheet](https://images-na.ssl-images-amazon.com/images/I/81Lbgu+nG6L.pdf) (Accessed May 2, 2024)
 <!--etc.-->
 
