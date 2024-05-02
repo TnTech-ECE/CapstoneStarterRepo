@@ -37,7 +37,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
 ## Schematic
-In Revision <!--<img src= "/Documentation/Images/Camera Hardware System/Schematic_Rev2.png" width="1000" height="600">-->
+<img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="1200" height="770">
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
