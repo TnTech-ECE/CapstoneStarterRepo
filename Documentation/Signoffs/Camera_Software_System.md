@@ -26,7 +26,6 @@ The camera software system will be reponsible for using the data aquired by the 
 ## Flowchart
 <img src= "/Documentation/Images/Camera_Software_System/Camera_Software_System_Flowchart.png" width="600" height="1200">
 
-## Analysis
 ### Coding Language
 The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md), and it is compatible with multiple different coding languages. Due to programmer's preference, either C++ or Python will be used. 
 
@@ -92,7 +91,7 @@ The camera pointing angles will be calculated using the UAS or control station l
 
 The code located in this block will utilize all available sensors or software feedback mechanisms to determine whether the system needs to send an alert to the Tech Police. 
 
-
+## Analysis
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
@@ -128,7 +127,7 @@ $\ m_1 = \frac{y_2 - y_1}{x_2 - x_1}, m_2 = \frac{y_3 - y_2}{x_3 - x_2} $
 
 If 
 $\ .95 \leq \frac{m_1}{m_2} \leq 1.05 $ 
-is true, straight line motion exists within 5% error margines [^5]. 
+is true, straight line motion exists within 5% error margines. 
 
 #### Predicting Future Location
 Given straight line motion, and the velocities:
@@ -144,12 +143,14 @@ where:
 $\ x_p = x_3 + ((\frac{v_3}{v_2}) * (x_3 - x_2)) $
 
 $\ y_p = y_3 + ((\frac{v_3}{v_2}) * (y_3 - y_2)) $
+
+## BOM
+none
 ## References
 [^1]: "190 unmanned aircraft systems," Tennessee Technological University, Available: https://tntech.navexone.com/content/dotNet/documents/ [Accessed Mar. 7, 2024].
 [^2]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019). 
 [^3]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, Available: https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/ [Accessed Feb. 19, 2024].
 [^4]: “856 data security and handling policy,” Tennessee Technological University, Available: https://www.tntech.edu/policies/ [Accessed April. 29, 2024].
-[^5]: The error margines can be adjusted as needed.
 
 
 
