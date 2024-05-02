@@ -1,35 +1,39 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage.
+The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when stability is re-achieved.
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1| System shall capture an image of the UAS in flight or the control station| Stakeholder Constraint|
-|  2| System shall not take into consideration light levels or physical obstructions when capturing images|Design Constraint|
-|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p | Design Constraint|
-|  4| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± X° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
-|  5| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
-|  6| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
-|  7| Camera zoom and focus shall not be controllable by system software| Design Constraint|
-|  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system | Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
-|  9| Camera system shall utilize IEEE standard 802.11[^x] and Tennessee Tech Policy 856 [^x]| Communication Design Constraint|
+|  2| System shall not take into consideration light levels or physical obstructions when capturing images|Stakeholder Constraint|
+|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Design Constraint|
+|  4| Camera zoom, focus, and light sensitivity (ISO) shall not be controllable by system software| Design Constraint|
+|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± X° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
+|  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
+|  7| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
+|  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
+|  9| Camera system shall utilize IEEE standard 802.11[^x] and Tennessee Tech Policy 856 [^x]| Standard|
+| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
 
-<sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image. Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary system, collecting visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
+<sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
+
+<sup>2</sup> Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary information collection, accumulating visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
 
 <sup>3</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Setting minimum resolution to 1080px720p ensures captured images are higher quality.
 
-<sup>4</sup> Precise setting of servo angles ensures that drone is in the center of the frame when a picture is captured.
+<sup>4</sup> Camera zoom, focus, and ISO will be set once upon install to ensure consistency in image quality with the surveyed area.
 
-<sup>5</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
+<sup>5</sup> Precise setting of servo angles ensures that drone is in the center of the image frame when a picture is captured.
 
-<sup>6</sup> Protection of sensitive electronics and exposed circuit wiring/contacts from incoming water is essential for ensuring the safety of the system, along with nearby personnel and property.
+<sup>6</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
 
-<sup>7</sup> Camera zoom, focus, and ISO will be set once upon install to ensure consistency in image quality with the surveyed area.
+<sup>7</sup> Protection of sensitive electronics and exposed circuit wiring/contacts from incoming water is essential for ensuring the safety of the system, along with nearby personnel and property.
 
-<sup>8</sup> Limiting power draw ensures that the power delivery system will be able to keep up with this system without overcurrent or brown-out issues.
+<sup>8</sup> Limiting power draw ensures that the power delivery system will be able to keep up with this system without overcurrent or brown-out incidents.
 
 <sup>9</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.
 
+<sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
 ## Schematic
 In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-Project/assets/158204925/2343008d-0690-4712-a40f-2eaa0785611a)-->
@@ -37,12 +41,13 @@ In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-P
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Microprocessor
-The central processor chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and security purposes. The contents of the status package will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is sent.<!--[More fluff here]-->
+The central processor chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
 
-### Servo Motor
-For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with a feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
+### Servo Motor\
+For the pan and tilt control of this subsystem, servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring. Servo motors contain an internal
+<!--For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with an internal feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
 
-By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.
+By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.-->
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
