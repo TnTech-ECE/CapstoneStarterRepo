@@ -57,7 +57,17 @@ For the pan and tilt control of this subsystem, brushless DC servo motors will b
 Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
 
 #### Servo - Use And Analysis
-The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° ROM seen in many other servos, and the other having a 270° range of motion (ROM). These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs) with a deadband of 3 μs[^8]. This means that the servo will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame. At a pulse-width of 1500 μs, the 180° and 270° servos will return to their neutral, or half-way, positions at 90° and 135° respectively. To turn this range into a direct correlation, for every additional 1000 μs to a maximum of 2500 μs added to the PWM signal's duty cycle, the 180 degree servo will move 90°, and the 270 degree servo will move 135°. Per μs, the servo will move approximately 0.072°/μs. However, with a deadband of 3 μs from the motor spec sheet, we will only be able to step 0.288° at a time.
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where t_max is the upper limit of the pulse duty cycle time, t_min is the lower limit, and \tau_DBand is the deadband limit from the spec sheet:
+
+$\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * (\tau_{DBand} + 1) $
+
+This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1.
+
+
+<img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="1000" height="600">
+
+
+
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
