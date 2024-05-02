@@ -7,7 +7,7 @@ The camera software system will be reponsible for using the data acquired by the
 |  1 | The system is not expected to capture an image of the UAS or control station if light levels and/or obstructions hinder the camera's view of the UAS or control station. | Stakeholder Constraint | 
 |  2 | If the system receives data for the control station location, the system shall prioritize capturing a picture of the control station unless the corresponding UAS is in a high alert area as defined by the Tech Police. In that case, the system will prioritize capturing a picture of the UAS. | Tech Police |
 |  3 | Location prediction shall be performed when the UAS or control station is moving in a straight line, but is not required if the UAS or control station is moving in other trajectory. | Design Constraint |
-|  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line. | Design Constraint |
+|  4 | The system shall use at least three data points to determine if the UAS or control station is moving in a straight line within a 5% error margin. | Design Constraint |
 |  5 | The system shall output the picture taken to the database as either a raw file or PNG. | Design Constraint | 
 |  6 | The system shall communicate with the database system according to IEEE standard 802.11 [^3] and Tennessee Tech Policy 856 [^4] | Standards |
 
