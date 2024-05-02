@@ -4,7 +4,7 @@ The purpose of the project is to successfully track and intercept a golf ball. T
 
 ## Executive Summary
 
-The golf ball interceptor is expected to track and intercept a golf ball traveling down predetermined trajectories. An interception occurs when a counter projectile is fired, causing a notable change of trajectory. 
+The golf ball interceptor is expected to track and intercept a golf ball traveling down predetermined trajectories. An interception occurs when a counter projectile is fired, causing a notable change of trajectory. The success of this project is based on how effectively it can locate and intercept an incoming projectile. The system will work in three stages with the first being detection where the projectile is detected alerting the subsystems to begin locating the target. The next stage is locating where data from the various sensors are used to locate the incoming projectile. The final stage is interception where data from the previous steps is used to send a counter projectile to disrupt the projectile's path.
 
 ## Current Team Goals and Updates
 
