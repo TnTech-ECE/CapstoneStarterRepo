@@ -1,6 +1,7 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when stability is re-achieved.
+The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when applicable.
+
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
@@ -40,10 +41,13 @@ In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-P
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
-### Micro-Controller Unit (MCU)
-#### MCU - Background Info
-The MCU chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^3].
-#### MCU - Use and Analysis
+### Single-Board Computer (SPU)
+For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. With advanced control capabilities for periphrials, along with the ability to be loaded with any mainstream operating system necessary, this controller will be the center of this subsystem[^3].
+
+#### SPU - Background Info
+The Raspberry 4B, as specified in the datasheet[^3], contains many hardware specifications that will enable this system to run at high speeds. The presence of multiple   , will meet and exceed our parameters for processing speed, reliability, and data transmission.
+
+#### SPU - Use and Analysis
 This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
 
 ### Servo Motor
@@ -62,6 +66,8 @@ By feeding the motors a PWM signal proportional to the direction and altitude of
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
 
 ### Enclosure
+
+### Error Checking
 
 
 ## BOM
