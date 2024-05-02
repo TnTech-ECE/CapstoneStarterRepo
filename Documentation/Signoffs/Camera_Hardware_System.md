@@ -37,7 +37,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
 ## Schematic
-<img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="1200" height="770">
+<img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
 
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
@@ -45,7 +45,7 @@ For this subsystem, the following components and atomic-subsystems will be requi
 ### Single-Board Computer (SPU)
 For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
 
-<img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="1000" height="600">
+<img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="509" height="293">
 
 #### SPU - Use and Analysis
 From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. The generation and processing of signals for these devices will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
@@ -64,7 +64,7 @@ $\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} 
 This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1.
 
 
-<img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="1000" height="600">
+<img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 
 
