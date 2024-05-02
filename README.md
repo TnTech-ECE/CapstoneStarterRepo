@@ -53,17 +53,17 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-[Project Proposal]()
-  * [Revision]()
-  * The project purposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
-[Conceptual Design]()
-  * This document shows the expectations of each subsystem and how they are expected to work together to achieve the goals outlined in the project purposal.
-[Housing]()
-  * 
-[Projectile Path Sensor]()
-  * 
-[Launcher Aiming]()
-  * 
+[Project Proposal](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Project%20Proposal.pdf)
+  * [Revision](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Project%20Proposal%20Revised-%20Correct%20Template.pdf)
+  * The project proposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
+[Conceptual Design](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Conceptual%20Design.pdf)
+  * This document shows the expectations of each subsystem and how they are expected to work together to achieve the goals outlined in the project proposal.
+[Housing](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/Housing.md)
+  * The launcher housing will provide power to the other subsystems connected to the main interceptor body, provide a functional E-Stop button, have a lighting system, and have a firing alarm.
+[Projectile Path Sensor](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/ProjectilePathSensor.md)
+  * The projectile Path sensor subsystem must detect when a projectile is launched and determine which of the 15 possible paths the projectile will take.
+[Launcher Aiming](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/launcher-aiming-signoff.md)
+  * The Launcher Aiming subsystem will take in signals from the main control unit, and adjust the launcher's position accordingly.
 ### Reports
 
 In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
