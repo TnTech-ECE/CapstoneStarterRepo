@@ -44,7 +44,8 @@ For this system, five volts is required for all components, so the five volt pow
 | -------- | ------------| -------- |----------------|------------|
 |     DC 5 V 20 A 100 W Power Supply    |    B07Q2WQ8DS         |     2     |       $19.99         |     $39.98      |
 |     Gratury Junction Box, IP67 Waterproof Plastic Enclosure    |    G         |     2     |       $22.94       |     $45.88      |
-|Total     |             |          |                |     $85.86      |
+|     16 AWG Wire   |    NA         |     1     |       $15.88       |     $15.88      |
+|Total     |             |          |                |     $101.74      |
 
 ## References
 
@@ -54,3 +55,6 @@ Amazon: https://www.amazon.com/Switching-Transformer-Converter-Security-Computer
 
 Gratury Junction Box, IP67 Waterproof Plastic Enclosure for Electrical Project, Hinged Grey Cover, Includes Mounting Plate and Wall Bracket 220×170×110mm (8.6"×6.7"×4.3")<br/>
 Amazon: https://www.amazon.com/Gratury-Stainless-Waterproof-Electrical-290×190×140mm/dp/B08281V2RL/ref=sr_1_4?crid=LMQOP431K6NJ&dib=eyJ2IjoiMSJ9.mBk353sclXazbCevDTRupgAnYR4LoPZNXM82VDLejHAkZZhBihGzzSIPHEZ7VyvR2dwCGLaCZtSwFbcA7Ez9K8uovhESl5ULmJ0vOLIi951C07Gc7aK8CLQuCDeOODVOJ5hSfbXTqar76IERBoDECwXYaXLz5wbC7g83sBPWlUSKrOZAh5W-qVV30GRbj2wtLyauQ6l7Ijcn5NThkuDVg3xIlTF66X38ykmcbk4g1QhQw82UWXM0zwdELlYO-Be-ScS8HeW0MSriiczL3RZeL7zlOc7WEgWrwNUzFU2JslQ.ZC2gR9KkI_a1xzkicc4oTMWxYHqfe9ajQmNEM1wUL6w&dib_tag=se&keywords=NEMA%2Bip67%2Bbox&qid=1714691719&s=hi&sprefix=nema%2Bip67%2Bbox%2Ctools%2C208&sr=1-4&th=1<br/>
+
+16 awg Silicone Electrical Wire 2 Conductor Parallel Wire line 60ft [Black 30ft Red 30ft] 16 Gauge Soft and Flexible Hook Up Oxygen Free Strands Tinned Copper Wire <br/>
+Amazon: https://www.amazon.com/Silicone-Electrical-Conductor-Parallel-Flexible/dp/B07FMLVF84/ref=sr_1_8?dib=eyJ2IjoiMSJ9.2IdwD35CCLpenfFhIef8bFJRoAVClHHhYCeTX1FM6NKVCsAo_gm5ffLKvcndI2-sfKXhvQRM2T2qwS6ZTu1UB72TCH2vL2oiC1K26hOYacnuvWIZAHny2hhW-KgmAJZ3j3gEjDkIK_mviyK78LNrExJvlVd-nT7RaH3dacUpRfwhVGMP0Y5Eq38f8QO5Y6aYnRhtfhdVyoDk8g-415_Z67tJAWsJYYGin7ydtyyc2gx-hAAupkcEvgkIMBkOgvz1276c8qufbNsNUoRXAxo8xW7pChLhA1_Ikqd5Qn4ITyE.mBL16U3BJIIPIYnoN9O10hhO9Z6R1QkfBhchkv26ffY&dib_tag=se&hvadid=557204068733&hvdev=c&hvlocphy=9013088&hvnetw=g&hvqmt=e&hvrand=5511484594165708181&hvtargid=kwd-11038717084&hydadcr=18888_13353548&keywords=16+awg+copper+wire&qid=1714693636&sr=8-8
