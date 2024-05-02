@@ -22,7 +22,7 @@ The primary functionality for the receiver power system is to reliably meet the 
 
 
 ## Schematic
-[Receiver_Power.pdf](https://github.com/mrnye42/Drone-Tracker-Project/files/15194400/Receiver_Power.pdf)
+<img width="870" alt="Screenshot 2024-05-02 at 4 54 11 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/1ffb0a4e-4733-451e-a968-a7d6f8d49529"><br />
 Figure 1: Electrical Schematic<br />
 The above schematic is a simple proof of concept of the connections for the system. The schematic will be detailed with the signoff of the receiver system, since the design of this power system will lag the receiver system's design in case of changes required.<br />
 
