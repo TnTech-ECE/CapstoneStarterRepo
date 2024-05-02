@@ -30,7 +30,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Adam Morrow][def1] is a senior in computer enginering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is respoinsible for the Sesoor Post Velocity and Acceleration subsystem.
 
-[Allen Watson][def2]
+[Allen Watson][def2] is an electrical engineering major at Tennessee Technological University. He is interested in power systems. Allen is responsible for the launcher housing subsystem. 
 
 [Colby Drake][def3] is a electrical engineering major at Tennessee Tech. He has an interest in programming and power systems. Colby is responsible for the launcher aiming subsystem.
 
