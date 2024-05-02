@@ -40,17 +40,26 @@ In Revision <!--![V1_rev0_Screenshot](https://github.com/mrnye42/Drone-Tracker-P
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
-### Microprocessor
-The central processor chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
+### Micro-Controller Unit (MCU)
+#### MCU - Background Info
+The MCU chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
 
-### Servo Motor\
-For the pan and tilt control of this subsystem, servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring. Servo motors contain an internal
+### Servo Motor
+For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring.
+
+#### Servo - Background Info
+Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^2]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^3]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
+
+#### Servo - Use And Analysis
+Gonna totally use it
 <!--For this system, we have chosen to use servo motors for the pan and tilt control of our camera. Servo motors, compared to stepper motors, are much more precise and have higher holding torques [^2]. By using a Pulse-Width Modulated (PWM) signal, we can specify the servo angle to an almost exact number, with an internal feedback signal telling the controller when to stop. Servo motors contain a microcontroller and potentiometer to control the feedback and output response.
 
 By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.-->
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
+
+### Enclosure
 
 
 ## BOM
@@ -66,7 +75,9 @@ The camera selected for this application is an ELP 8MP USB 3.0 camera containing
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed April 14, 2024)
-[^2]: Thin Thin Hlaing, Tin Tin Nwet, Soe Myat, "Overview of Differences between Servo and Stepper Motor Technology" - ISSN , [Article](https://irjaes.com/wp-content/uploads/2020/10/IRJAES-V4N3P86Y19.pdf) (Accessed April 10, 2024).
+[^1]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
+[^2]:  [What is a Servo?]([https://irjaes.com/wp-content/uploads/2020/10/IRJAES-V4N3P86Y19.pdf](https://www.electrical4u.com/what-is-servo-motor/)) (Accessed May 2, 2024)
+[^3]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
+[^4]: [What is a Stepper Motor?](https://www.monolithicpower.com/en/stepper-motors-basics-types-uses) (Accessed May 2, 2024)
 <!--etc.-->
 
