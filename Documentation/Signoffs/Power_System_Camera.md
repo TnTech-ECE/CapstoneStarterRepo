@@ -32,7 +32,7 @@ Figure 1: Example Circuit for 5 Volt Power Supply<br/>
 | Pan Servo DS3218mg 270deg  | 5 - 6.8 | 1.5-2.2 | 7.5 - 14.96|
 |  ELP 4K USB Camera Manual Zoom 2.8-12mm Variable Focus USB2.0 Web Camera IMX317 8MP | 5 | 0.15 | 0.75 | 
 
-<br />Table 1: Power Requirements.<br />
+Table 1: Power Requirements.<br />
 
 For this system, five volts is required for all components, so the five volt power supplies will be able to provide power to all the components. The worst case power draw from the system is 45.67 W, so the chosen 100 W power supplies will meet those requirements with plenty of wattage to spare. The cost reduction from a lower wattage power supply is minimal, so we will have some extra power to account for additional functionality added to the camera system. <br />
 
