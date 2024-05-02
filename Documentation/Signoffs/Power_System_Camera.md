@@ -29,12 +29,13 @@ Figure 2: 3.3 V Buck Converter Schematic
 
 
 ## Analysis
-| No.| Contraint | Origin |
-| -- | --------- |--------|
-|  1 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
-|  2 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
-|  3 | The system shall be able to supply enough power to the camera system for its full functionality | Design Team | 
-|  4 | The system shall not be impacted by the back electromotive force (EMF) from the motors. | Design Team | 
+| Component| Voltage (V) | Current (A) | Power (W) |
+| -- | --------- |--------|--------|
+|  Raspberry Pi 4B 8GB w/ Wi-Fi | 5 | 2.5-3 | 12.5 - 15 |
+|  Tilt Servo DS3218 180deg | 5-6.8 | 1.8-2.2 | 9 - 14.96 |
+| Pan Servo DS3218mg 270deg  | 5 - 6.8 | 1.5-2.2 | 7.5 - 14.96|
+|  ELP 4K USB Camera Manual Zoom 2.8-12mm Variable Focus USB2.0 Web Camera IMX317 8MP | 5 | 0.15 | 0.75 | <br />
+
 <img width="927" alt="Screenshot 2024-04-10 at 11 43 50 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/16aafaba-a298-4374-b1f2-70e1acb4ad17"> <br />
 Table 1: Power Calculations
 
