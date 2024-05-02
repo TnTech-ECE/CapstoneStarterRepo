@@ -57,7 +57,7 @@ Use this space to recognize anyone that you feel has had an impact on the projec
   * [Revision](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Project%20Proposal%20Revised-%20Correct%20Template.pdf)
   * The project proposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
 
-[Conceptual Design](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Conceptual%20Design.pdf)
+[Conceptual Design](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Conceptual%20Design_FinalDraft.pdf)
   * This document shows the expectations of each subsystem and how they are expected to work together to achieve the goals outlined in the project proposal.
 
 [Housing](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/Housing.md)
