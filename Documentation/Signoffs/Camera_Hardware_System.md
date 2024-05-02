@@ -43,12 +43,12 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Single-Board Computer (SPU)
-For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 programmable pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
+For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and periphrial support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
 
 <img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="1000" height="600">
 
 #### SPU - Use and Analysis
-From the schematic, pins one and two from the sixteen available General Purpose Input-Output (GPIO) pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. These signals' generation and processing, will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
+From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. The generation and processing of signals for these devices will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
 
 ### Servo Motor
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
@@ -57,12 +57,13 @@ For the pan and tilt control of this subsystem, brushless DC servo motors will b
 Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
 
 #### Servo - Use And Analysis
-The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having a 270° range of motion (ROM) and the other having the traditional 180° ROM seen in many other servos. These servo motors have a pulse-width range of 500 ~ 2500 micro seconds (μs) with a deadband of 3 μs[^8]. This means that the servo will not respond to a change in pulse-width smaller than 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame. At a pulse-width of 1500 μs, the servos will return to their neutral position at 90° and 135° respectively for both motor types.
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° ROM seen in many other servos, and the other having a 270° range of motion (ROM). These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs) with a deadband of 3 μs[^8]. This means that the servo will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame. At a pulse-width of 1500 μs, the 180° and 270° servos will return to their neutral, or half-way, positions at 90° and 135° respectively. To turn this range into a direct correlation, for every additional 1000 μs to a maximum of 2500 μs added to the PWM signal's duty cycle, the 180 degree servo will move 90°, and the 270 degree servo will move 135°. Per μs, the servo will move approximately 0.072°/μs. However, with a deadband of 3 μs from the motor spec sheet, we will only be able to step 0.288° at a time.
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
 
 ### Enclosure
+
 
 ### Error Checking
 
