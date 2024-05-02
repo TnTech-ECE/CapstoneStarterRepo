@@ -38,6 +38,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 ## Schematic
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="1200" height="770">
+
 ## Analysis
 For this subsystem, the following components and atomic-subsystems will be required.
 
