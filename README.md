@@ -8,7 +8,7 @@ The golf ball interceptor is expected to track and intercept a golf ball traveli
 
 ## Current Team Goals and Updates
 
-The team is in the design phase of the project. This is midpoint of the senior design project, and the goal is complete the design of all subsystems soon which will bring the team to the next stage which implementation and part ordering. 
+The team is in the design phase of the project. This is midpoint of the senior design project, and the goal is complete the design of all subsystems soon which will bring the team to the next stage which is implementation and part ordering. 
 
 ## Known Difficulties and Limitations
 
