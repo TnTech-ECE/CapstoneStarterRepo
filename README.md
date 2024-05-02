@@ -1,14 +1,14 @@
 # Golf Ball Interceptor
 
+The purpose of the project is to successfully track and intercept a golf ball. This is a senior design project for electrical engineers expecting to graduate in December 2024 at Tennessee Technological University. This project is funded by DEVCOM, and its purpose is to demonstrate the capabilities of projectile interception to prospective STEM students.
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+The golf ball interceptor is expected to track and intercept a golf ball traveling down predetermined trajectories. An interception occurs when a counterprojectile is fired, causing a notable change of trajectory. 
 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
 
 ## Salient Outcomes
@@ -27,7 +27,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-[Adam Morrow][def1] is a senior in computer enginering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is respoinsible for the Sensor Post Velocity and Acceleration subsystem.
+[Adam Morrow][def1] is a senior in computer engineering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is responsible for the Sesoor Post Velocity and Acceleration subsystem.
 
 [Allen Watson][def2] is an electrical engineering major at Tennessee Technological University. He is interested in power systems. Allen is responsible for the launcher housing subsystem. 
 
@@ -37,7 +37,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Tyler Kasuboski][def5]
 
-[James Jones][def6]
+[James Jones][def6] is an electrical engineering major at Tennessee Tech. He has an interest in digital signal processing. James is responsible for the head on position subsystem, and the networking subsystem.
 
 ### Faculty Supervisor
 
@@ -45,7 +45,7 @@ Jesse Roberts
 
 ### Stakeholders
 
-The stakeholder in this project is [DEVCOM][def7] - DEVCOM is the US Army Combat Capabilities Development Command who are focused on empowering America's Soldiers.
+The stakeholder in this project is [DEVCOM][def7] - DEVCOM is the US Army Combat Capabilities Development Command, who are focused on empowering America's Soldiers.
 
 ### Recognitions
 
@@ -53,9 +53,17 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
-
+[Project Purposal]()
+  * [Revision]()
+  * The project purposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
+[Conceptual Design]()
+  * This document shows the expectations of each subsystem and how they are expected to work together to achieve the goals outlined in the project purposal.
+[Housing]()
+  * 
+[Projectile Path Sensor]()
+  * 
+[Launcher Aiming]()
+  * 
 ### Reports
 
 In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
@@ -66,7 +74,9 @@ In the documentaion section information regarding the documentation that is requ
 
 ### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+* OpenCV: This is the computer vision software used by the head on position subsystem to track the golf ball.
+* Arduino IDE: This is the development  environment used to program the Arduino Mega for the projectile path subsystem and the ESP8266's for the networking subsystem.
+* Raspberry Pi OS: The Linux operating system used to interface with the interceptor's controller, allowing for aiming, launching, and head on positoning calculations.
 
 
 [def1]: https://www.linkedin.com/in/adam-morrow-7449a7238/
