@@ -28,7 +28,17 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+[Adam Morrow][def1] is a senior in computer enginering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is respoinsible for the Sesoor Post Velocity and Acceleration subsystem.
+
+[Allen Watson][def2]
+
+[Colby Drake][def3]
+
+[Jonah Burke][def4]
+
+[Tyler Kasuboski][def5]
+
+[James Jones][def6]
 
 ### Faculty Supervisor
 
@@ -36,7 +46,7 @@ Jesse Roberts
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The stakeholder in this project is [DEVCOM][def7] - DEVCOM is the US Army Combat Capabilities Development Command who are focused on empowering America's Soldiers.
 
 ### Recognitions
 
@@ -58,3 +68,12 @@ In the documentaion section information regarding the documentation that is requ
 ### Software
 
 In the software directory of the repo information regarding how each team is expected to document software can be found.
+
+
+[def1]: https://www.linkedin.com/in/adam-morrow-7449a7238/
+[def2]: https://www.linkedin.com/feed/
+[def3]:https://www.linkedin.com/in/colby-drake-16379b1b9/
+[def4]:https://www.linkedin.com/in/jonah-burke-a169a21a1/
+[def5]:https://www.linkedin.com/in/tyler-kasuboski/
+[def6]:https://www.linkedin.com/in/jtjones73/
+[def7]: https://devcom.army.mil
