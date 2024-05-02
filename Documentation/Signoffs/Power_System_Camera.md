@@ -1,15 +1,23 @@
 # Power System for Camera System
 ## Functionality
-The primary functionality for this system is to provide the required current and power for the camera subsystem.
+The primary functionality for the camera power system is to reliably meet the power requirements for the camera system's components. The system will supply 5 V and 3.3 V to the camera system.
 
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 |    The system shall be designed to minimize future maintenance.       |    Shall Statements    |              
-      
+|  1 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
+|  2 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
+|  3 | The system shall be able to supply enough power to the camera system for its full functionality | Design Team | 
+|  4 | The system shall not be impacted by the back electromotive force (EMF) from the motors. | Design Team | 
 
-<sup>1</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished. For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+      
+<sup>1</sup> ASTM B258-18 is a standard for the proper wire gauge for electrical conductors. It is important to adhere to this standard to ensure the system is safe and avoid overheating, short circuits, and fires.  <br />
+
+<sup>2</sup> The system will be located outdoors, so it is essential that the electrical components will be protected from environemental weather hazards and damage. The IP67 rating protect the system from cover rain, snow, dust, wind, and UV. <br />
+
+<sup>3</sup> This statement is obviously the most important, because the power system must supply the proper power for the camera system to acheive its functionality for the project. <br />
+
+<sup>4</sup> It is important to avoid back EMF from motors to ensure the system's health, because the current spikes caused by the back EMF could damage the power supply if left unaccounted for. <br />
 
 ## Schematic
 ![5V-power-supply-circuit-diagram](https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/8b9796c8-cb32-4588-9f21-ac271578669a)<br/>
@@ -21,7 +29,12 @@ Figure 2: 3.3 V Buck Converter Schematic
 
 
 ## Analysis
-
+| No.| Contraint | Origin |
+| -- | --------- |--------|
+|  1 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
+|  2 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
+|  3 | The system shall be able to supply enough power to the camera system for its full functionality | Design Team | 
+|  4 | The system shall not be impacted by the back electromotive force (EMF) from the motors. | Design Team | 
 <img width="927" alt="Screenshot 2024-04-10 at 11 43 50 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/16aafaba-a298-4374-b1f2-70e1acb4ad17"> <br />
 Table 1: Power Calculations
 
