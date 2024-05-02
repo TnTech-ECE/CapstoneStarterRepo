@@ -47,11 +47,11 @@ The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an
 
 ## References
 [1] “NEMA Enclosure Types,” NEMA, https://www.nema.org/. <br />
-[2] “Standard specification for standard nominal diameters and cross-sectional areas of AWG sizes of solid round wires used as electrical conductors,” ASTM International, https://www.astm.org/b0258-18.html. 
+[2] “Standard specification for standard nominal diameters and cross-sectional areas of AWG sizes of solid round wires used as electrical conductors,” ASTM International, https://www.astm.org/b0258-18.html. <br /><br />
 
 
 
-Part List:
+Part List:<br />
 Arduino® Nano ESP32: https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf<br />
 
 Waveshare Solar Power Management Module: <br />
