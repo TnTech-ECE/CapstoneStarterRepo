@@ -1,6 +1,6 @@
 # Camera Software System
 ## Functionality 
-The camera software system will be reponsible for using the data aquired by the receiver to generate signals that will control the camera hardware system's motor servos and camera activation status, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) or the control station. The system will then aquire the image from the camera hardware, format it, and sent it to the database for usage by campus police. The system will also send an alert signal if there are detected errors in the system.    
+The camera software system will be reponsible for using the data acquired by the receiver to generate signals that will control the camera hardware system's motor servos and camera activation status, ensuring that the system is able to take an image of an unmanned aircraft system (UAS) or the control station. The system will then acquire the image from the camera hardware, format it, and sent it to the database for usage by campus police. The system will also send an alert signal if there are detected errors in the system.    
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
