@@ -1,6 +1,5 @@
 # Golf Ball Interceptor
 
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
 ## Executive Summary
 
@@ -28,7 +27,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-[Adam Morrow][def1] is a senior in computer enginering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is respoinsible for the Sesoor Post Velocity and Acceleration subsystem.
+[Adam Morrow][def1] is a senior in computer enginering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is respoinsible for the Sensor Post Velocity and Acceleration subsystem.
 
 [Allen Watson][def2] is an electrical engineering major at Tennessee Technological University. He is interested in power systems. Allen is responsible for the launcher housing subsystem. 
 
