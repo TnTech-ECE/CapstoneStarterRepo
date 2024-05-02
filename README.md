@@ -4,8 +4,15 @@ The purpose of the project is to successfully track and intercept a golf ball. T
 
 ## Executive Summary
 
-The golf ball interceptor is expected to track and intercept a golf ball traveling down predetermined trajectories. An interception occurs when a counterprojectile is fired, causing a notable change of trajectory. 
+The golf ball interceptor is expected to track and intercept a golf ball traveling down predetermined trajectories. An interception occurs when a counter projectile is fired, causing a notable change of trajectory. 
 
+## Current Team Goals and Updates
+
+The team is in the design phase of the project. This is midpoint of the senior design project, and the goal is complete the design of all subsystems soon which will bring the team to the next stage which implementation and part ordering. 
+
+## Known Difficulties and Limitations
+
+The most difficult aspect of this project is time. The target is only in flight for as little as 1.78 seconds. This does not give the systems much time to locate and intercept the incoming target, and as a result, time is having to be budgeted very conservatively.
 
 ## Capabilities
 
@@ -18,23 +25,20 @@ The golf ball interceptor is expected to track and intercept a golf ball traveli
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
 1. Redundant methods of tracking the incoming target
-2. Image proccessing algorithm that is capable of tracking the projectile in 3-dimensions
+2. Image processing algorithm that is capable of tracking the projectile in 3-dimensions
 
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
-
-Below the video link show some well-taken, appropriately sized images of the project.
+The project is still in the design stage, and there are currently no images or videos of demonstrations.
 
 
 ## About Us
 
 ### Team
 
-[Adam Morrow][def1] is a senior in computer engineering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is responsible for the Sesoor Post Velocity and Acceleration subsystem.
+[Adam Morrow][def1] is a senior in computer engineering major at Tennessee Technological University. He is interested in computer hardware and embedded systems. Adam is responsible for the Sensor Post Velocity and Acceleration subsystem.
 
 [Allen Watson][def2] is an electrical engineering major at Tennessee Technological University. He is interested in power systems. Allen is responsible for the launcher housing subsystem. 
 
@@ -56,7 +60,7 @@ The stakeholder in this project is [DEVCOM][def7] - DEVCOM is the US Army Combat
 
 ### Recognitions
 
-* The team would like to extend their appreciation to Professor Jesse Roberts at Tennessee Tech. Professor Roberts is an instrucutor at Tennessee Tech and he is pursuing his PHD focusing on Artificial Intelligence at Vanderbilt University. Professor Roberts gives the team his professional input holding us to a high standard of excellence.
+* The team would like to extend their appreciation to Professor Jesse Roberts at Tennessee Tech. Professor Roberts is an instructor at Tennessee Tech and he is pursuing his PHD focusing on Artificial Intelligence at Vanderbilt University. Professor Roberts gives the team his professional input holding us to a high standard of excellence.
 
 
 ## Repo Organization
@@ -83,11 +87,22 @@ In the reports section of this repository information about the individual expec
 [Launcher Aiming](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/launcher-aiming-signoff.md)
   * The Launcher Aiming subsystem will take in signals from the main control unit, and adjust the launcher's position accordingly.
 
+### Subsystems in Progress
+
+[Head on Position Sensor](https://github.com/JTJones73/Capstone2024-Team2/blob/Head-On-Sensor-Subsystem/Documentation/Signoffs/Head-On-Sensor.md)
+ * The purpose of the head on position sensor is to determine the target's location relative to the interceptor by using cameras and an image processing algorithm.
+
+[Networking](https://github.com/JTJones73/Capstone2024-Team2/blob/JTJones73-Networking-Subsytem/Documentation/Signoffs/Networking.md)
+  * The purpose of the networking subsystem is to allow sensors to wirelessly communicate reliable with minimum setup and user input.
+
+[Sensor Posts Velocity Sensor](https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Signoffs/SensorPosts.md)
+ * This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball as it travels down the fishing line towards the interceptor body.
 ### Software
 
 * OpenCV: This is the computer vision software used by the head on position subsystem to track the golf ball.
 * Arduino IDE: This is the development  environment used to program the Arduino Mega for the projectile path subsystem and the ESP8266's for the networking subsystem.
-* Raspberry Pi OS: The Linux operating system used to interface with the interceptor's controller, allowing for aiming, launching, and head on positoning calculations.
+* Raspberry Pi OS: The Linux operating system used to interface with the interceptor's controller, allowing for aiming, launching, and head on positioning calculations.
+* KiCad: KiCad is an open source circuit design tool useful for designing PCB's and schematics.
 
 
 [def1]: https://www.linkedin.com/in/adam-morrow-7449a7238/
