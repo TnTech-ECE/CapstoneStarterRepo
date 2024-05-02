@@ -9,11 +9,18 @@ The golf ball interceptor is expected to track and intercept a golf ball traveli
 
 ## Capabilities
 
+1. Automatic operation without additional input
+2. Reliably intercept an incoming target
+3. Able to locate and predict the trajectory of the incoming target
+4. Effective use of batteries with attention to environmental impact
+5. Wireless sensor posts that work independently and wirelessly without the need of wires
 
 
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+1. Redundant methods of tracking the incoming target
+2. Image proccessing algorithm that is capable of tracking the projectile in 3-dimensions
 
 
 ## Project Demonstration & Images
@@ -53,12 +60,18 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
+### Reports
+
 [Project Proposal](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Project%20Proposal.pdf)
   * [Revision](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Project%20Proposal%20Revised-%20Correct%20Template.pdf)
   * The project proposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
 
 [Conceptual Design](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Reports/Capstone%20Team%20Two%20Conceptual%20Design_FinalDraft.pdf)
   * This document shows the expectations of each subsystem and how they are expected to work together to achieve the goals outlined in the project proposal.
+
+In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+
+### Documentation
 
 [Housing](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/Housing.md)
   * The launcher housing will provide power to the other subsystems connected to the main interceptor body, provide a functional E-Stop button, have a lighting system, and have a firing alarm.
@@ -68,14 +81,6 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 [Launcher Aiming](https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Signoffs/launcher-aiming-signoff.md)
   * The Launcher Aiming subsystem will take in signals from the main control unit, and adjust the launcher's position accordingly.
-
-### Reports
-
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
-
-### Documentation
-
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
 
 ### Software
 
