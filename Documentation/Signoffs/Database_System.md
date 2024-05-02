@@ -43,6 +43,9 @@ The Raspberry Pi 5 supports both Dual-band 802.11ac Wi-Fi and Gigabit Ethernet[3
 Even though the Raspberry Pi is going to be inside the building, a case will be designed to prevent any direct physical contact. For example, the storage drive won't be easily accessed by random.
 
 ## Schematic
+![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/01cd0112-f276-4ddb-9253-85a3b34842e7)
+This Figure show the Hardware connection
+
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
 
 
