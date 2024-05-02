@@ -46,7 +46,7 @@ The project is still in the design stage, and there are currently no images or v
 
 [Jonah Burke][def4] is an electrical engineering major at Tennessee Tech. He has an interest in power systems. Jonah is responsible for the launcher firing subsystem.
 
-[Tyler Kasuboski][def5]
+[Tyler Kasuboski][def5] is an electrical engineering major at Tennessee Technological University. He is interested in microcontrollers and power. Tyler is responsible for the projectile path sensor.
 
 [James Jones][def6] is an electrical engineering major at Tennessee Tech. He has an interest in digital signal processing. James is responsible for the head on position subsystem, and the networking subsystem.
 
