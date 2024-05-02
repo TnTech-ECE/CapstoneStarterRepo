@@ -32,7 +32,7 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 [Allen Watson][def2]
 
-[Colby Drake][def3]
+[Colby Drake][def3] is a electrical engineering major at Tennessee Tech. He has an interest in programming and power systems. Colby is responsible for the launcher aiming subsystem.
 
 [Jonah Burke][def4]
 
