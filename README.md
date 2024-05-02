@@ -53,7 +53,7 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-[Project Purposal]()
+[Project Proposal]()
   * [Revision]()
   * The project purposal shows the team's initial thoughts, applicable constraints, and the formulated problem.
 [Conceptual Design]()
