@@ -56,7 +56,8 @@ The stakeholder in this project is [DEVCOM][def7] - DEVCOM is the US Army Combat
 
 ### Recognitions
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+* The team would like to extend their appreciation to Professor Jesse Roberts at Tennessee Tech. Professor Roberts is an instrucutor at Tennessee Tech and he is pursuing his PHD focusing on Artificial Intelligence at Vanderbilt University. Professor Roberts gives the team his professional input holding us to a high standard of excellence.
+
 
 ## Repo Organization
 
