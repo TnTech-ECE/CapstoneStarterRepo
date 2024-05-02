@@ -14,15 +14,15 @@ The power system for the receiver will meet the power requirements for the compo
        
 
 <sup>1</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.<br />
 <sup>2</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+Reason <br />
 <sup>3</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+Reason <br />
 <sup>4</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+Reason <br />
 <sup>5</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+Reason <br />
 
 ## Schematic
 
