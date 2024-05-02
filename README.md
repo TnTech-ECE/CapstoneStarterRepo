@@ -1,6 +1,6 @@
 # Golf Ball Interceptor
 
-The purpose of the project is to successfully track and intercept a golf ball. This is a senior design project for electrical engineers expecting to graduate in December 2024 at Tennessee Technological University. This project is funded by DEVCOM, and its purpose is to demonstrate the capabilities of projectile interception to prospective STEM students.
+The purpose of the project is to successfully track and intercept a golf ball. This is a senior design project for electrical and computer engineers at Tennessee Technological University expecting to be completed December 2024. This project is funded by DEVCOM, and its purpose is to demonstrate the capabilities of projectile interception to prospective STEM students.
 
 ## Executive Summary
 
