@@ -12,7 +12,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
 |  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
-|  9| Camera system shall utilize IEEE standard 802.11[^x] and Tennessee Tech Policy 856 [^x]| Standard|
+|  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
 | 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
@@ -25,7 +25,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>5</sup> Precise setting of servo angles ensures that drone is in the center of the image frame when a picture is captured.
 
-<sup>6</sup> Rapid input response of servo motors ensures that the camera has a chance to capture the image before the UAS moves out of frame.
+<sup>6</sup> Rapid input response of servo motors ensures that the camera has a chance to capture a stable image before the UAS moves out of frame.
 
 <sup>7</sup> Protection of sensitive electronics and exposed circuit wiring/contacts from incoming water is essential for ensuring the safety of the system, along with nearby personnel and property.
 
@@ -42,13 +42,15 @@ For this subsystem, the following components and atomic-subsystems will be requi
 
 ### Micro-Controller Unit (MCU)
 #### MCU - Background Info
-The MCU chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^1]. This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
+The MCU chosen for this project is the Raspberry Pi 4B. This microcontroller, with a 4 core, 1.5 GHz ARM processor 8 GB of RAM and on-board wifi/bluetooth, will meet and exceed our parameters for processing speed, reliability, and data transmission[^3].
+#### MCU - Use and Analysis
+This board will be used to interface with each powered device in this subsystem, as well as sending a status monitioring package to the website for maintenance and reliability purposes. The contents of the status package, along with all applicable data for the control of this system, will be defined in the [Camera Software System](Camera_Software_System.md), along with how often it is transcieved.<!--[More fluff here]-->
 
 ### Servo Motor
-For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring.
+For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
 
 #### Servo - Background Info
-Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^2]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^3]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
+Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
 
 #### Servo - Use And Analysis
 Gonna totally use it
@@ -57,7 +59,7 @@ Gonna totally use it
 By feeding the motors a PWM signal proportional to the direction and altitude of the drone or user, we can direct the camera to point directly at the intended target and capture an image for Campus Police to utilize at their discretion.-->
 
 ### Camera
-The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317 Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
+The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and a field of view of
 
 ### Enclosure
 
@@ -75,9 +77,12 @@ The camera selected for this application is an ELP 8MP USB 3.0 camera containing
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
-[^2]:  [What is a Servo?]([https://irjaes.com/wp-content/uploads/2020/10/IRJAES-V4N3P86Y19.pdf](https://www.electrical4u.com/what-is-servo-motor/)) (Accessed May 2, 2024)
-[^3]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
-[^4]: [What is a Stepper Motor?](https://www.monolithicpower.com/en/stepper-motors-basics-types-uses) (Accessed May 2, 2024)
+[^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, Available: https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/ (Accessed Feb. 19, 2024).
+[^2]: “856 data security and handling policy,” Tennessee Technological University, Available: https://www.tntech.edu/policies/ (Accessed May 2, 2024).
+[^3]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
+[^4]: [What is a Servo?](https://www.electrical4u.com/what-is-servo-motor/) (Accessed May 2, 2024)
+[^5]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
+[^6]: [What is a Stepper Motor?](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
+[^7]: [Sony IMX317 Datasheet](https://www.sony-semicon.com/files/62/pdf/p-13_IMX317CQC_Flyer.pdf) (Accessed May 2, 2024)
 <!--etc.-->
 
