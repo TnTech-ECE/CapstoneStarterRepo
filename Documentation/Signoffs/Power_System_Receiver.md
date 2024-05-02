@@ -1,14 +1,27 @@
 # Power System for Receiver System
 ## Functionality
 The primary functionality for this system is to provide the required current and power for the receiver subsystem.
+The power system for the receiver will meet the power requirements for the components 
 
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 |     The system shall be designed to minimize future maintenance.      |   Shall statements     |              
+|  1 |     The system shall be designed to minimize future maintenance.      |   Shall statements     |
+|  2 |  Fill in here | Origin |
+|  3 |  Fill in here | Origin |
+|  4 |  Fill in here | Origin |
+|  5 |  Fill in here | Origin |
        
 
 <sup>1</sup> Reason for contraint 1 and why it is important:<br />
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+<sup>2</sup> Reason for contraint 1 and why it is important:<br />
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+<sup>3</sup> Reason for contraint 1 and why it is important:<br />
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+<sup>4</sup> Reason for contraint 1 and why it is important:<br />
+Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
+<sup>5</sup> Reason for contraint 1 and why it is important:<br />
 Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.
 
 ## Schematic
