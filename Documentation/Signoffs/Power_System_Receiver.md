@@ -1,38 +1,36 @@
 # Power System for Receiver System
 ## Functionality
-The primary functionality for this system is to provide the required current and power for the receiver subsystem.
-The power system for the receiver will meet the power requirements for the components 
+The primary functionality for the receiver power system is to reliably meet the power requirements for the receiver system's components. The system will supply 5 V to the receiver system.
 
 ## Constraints
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 |     The system shall be designed to minimize future maintenance.      |   Shall statements     |
-|  2 |  Fill in here | Origin |
-|  3 |  Fill in here | Origin |
-|  4 |  Fill in here | Origin |
-|  5 |  Fill in here | Origin |
+|  1 | The system shall be designed to minimize future maintenance.      |   Broader Implications    |
+|  2 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
+|  3 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
+|  4 | The system shall be able to supply enough power to the receiver system for its full functionality | Design Team |
        
 
-<sup>1</sup> Reason for contraint 1 and why it is important:<br />
-Reducing maintenace is important to reduce the extra work for the function of the drone tracker system after the project is finished.For example, it is less likely for the system to be useful if a worker must constantly change the batteries.<br />
-<sup>2</sup> Reason for contraint 1 and why it is important:<br />
-Reason <br />
-<sup>3</sup> Reason for contraint 1 and why it is important:<br />
-Reason <br />
-<sup>4</sup> Reason for contraint 1 and why it is important:<br />
-Reason <br />
-<sup>5</sup> Reason for contraint 1 and why it is important:<br />
-Reason <br />
+<sup>1</sup> Reducing maintenace is important to reduce the workload for the continuing function of the drone tracker system after the project is completed. For example,the system will be less useful if a worker must constantly change the batteries, so solar energy will be used to charge batteries that will last for at least (time period). <br />
+
+<sup>2</sup> ASTM B258-18 is a standard for the proper wire gauge for electrical conductors. It is important to adhere to this standard to ensure the system is safe and avoid overheating, short circuits, and fires.  <br />
+
+<sup>3</sup> The system will be located outdoors, so it is essential that the electrical components will be protected from environemental weather hazards and damage. The IP67 rating protect the system from cover rain, snow, dust, wind, and UV. <br />
+
+<sup>4</sup> This statement is obviously the most important, because the power system must supply the proper power for the receiver system to acheive its functionality for the project. <br />
+
+
 
 ## Schematic
 
+Figure 1: Electrical Schematic
 
-<img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00"><br />
-Figure 1: Waveshare Power Management Module Schematic
+<img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00"> <br />
+Figure 2: Waveshare Power Management Module Schematic
 
 
 ## Analysis
-The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port. To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium ion battery in the Waveshare Solar Power Management Module. From this module, the Micro-USB 5 V output port will be connected to the Arduino Nano ESP32 with the USB C to Micro USB cable. 
+The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port, because this gives the microcontroller additional functionality that may be utilized in the receiver system's design. To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium ion battery in the Waveshare Solar Power Management Module. From this module, the Micro-USB 5 V output port will be connected to the Arduino Nano ESP32 with the USB C to Micro USB cable. 
 
 
 
@@ -41,27 +39,31 @@ The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an
 | -------- | ------------| -------- |----------------|------------|
 |Waveshare Solar Power Management Module|       B07PBRK8KG      |   9     |  $13.99              |     125.91       |
 |Mini Solar Panel 3 Pack     |     B08THXDWS1        |    3      |      $15.78          |      $47.34      |
-|USB C to Micro USB Cable    |      KXUC-MIC-2F-1P       |     9     |        $3.99        |      $35.91      |
-|Total     |             |          |                |      $209.16      |
+|USB A to USB C 2 Pack  |    ‎B09R7NPWQR       |     5     |        $10.00        |      $50.00     |
+|Joinfworld 6x6x4 Outdoor Electrical Box Weatherproof Junction Box | ‎ BG595935T | 9 | $19.99 | 179.91 |
+|Total     |             |          |                |      $403.16   |
 
 ## References
+[1] “NEMA Enclosure Types,” NEMA, https://www.nema.org/. <br />
+[2] “Standard specification for standard nominal diameters and cross-sectional areas of AWG sizes of solid round wires used as electrical conductors,” ASTM International, https://www.astm.org/b0258-18.html. 
+
+
+
+Part List:
 Arduino® Nano ESP32: https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf<br />
 
 Waveshare Solar Power Management Module: <br />
 Amazon: https://www.amazon.com/Waveshare-Management-Protection-Low-Power-Environmental/dp/B094FWZVFH<br />
 Datasheet: https://www.waveshare.com/wiki/Solar_Power_Manager
 
-USB C to Micro USB Cable 2 Feet, Flexible Micro USB to USB-C Cord, Supports Fast Charging & Data Sync, Compatible with MacBook Pro, Samsung Galaxy, Pixel 3, LG and More<br />
-Amazon: https://www.amazon.com/Flexible-Supports-Charging-Compatible-MacBook/dp/B0BX5G8WNZ/ref=sr_1_6?crid=1TOHLUWT0WY9M&dib=eyJ2IjoiMSJ9.85K-eyJjWT0MAs6p-6W9GZd_tltQKnkawzOzwGa3f4DkL7c6tbx9pjwAjz-M0H1oQVyrU0sTVHH34YOno1rP-K3FrGHR5pmDgqim3GW8x4Xp1xfI78QZ9exNM-L3sB2W4OBj8u-c8lcc0H70S9r2gHtJiK6pkvBbgH6nxKIUFjLK9TsDdH4tZ4l6Hi45N0Ow2NJA9kIMkgdDbHVEGnqd5RiJBCjPh-BmcBgSZa9gFztziFxHDeig7nSM7RrCV7-Al4Uem3M61_1NoL3C0fF-G65t8KcobMT8ntlwHnEvrpY.rq3kky1EQ8HcZBkTAwWWnfrFAR_kbm-jQtrc9jabZ90&dib_tag=se&keywords=micro%2Busb%2Bto%2Busb%2Bc&qid=1712803855&s=electronics&sprefix=micro%2Busb%2Bto%2Busb%2Bc%2Celectronics%2C117&sr=1-6&th=1
+CONMDEX Android Auto USB C Cable 10Gbps [2ft, 2-Pack] USB 3.1 Gen 2 USB A to USB C Cable, Short 3A Type C Charger Fast Charging Data Transfer Cord for iPhone 15 Plus 15 Pro Samsung Galaxy S23, Black<br />
+Amazon: https://www.amazon.com/Upgrade-CONMDEX-Android-Charging-Samsung/dp/B09R7NPWQR/ref=sr_1_4?crid=1RYXFJ3ZNTWM9&dib=eyJ2IjoiMSJ9.qctCTJVEe1768CuG4mh7m_vkAYYCq2hCOJFCpJIBQThD4d6zcW81c0jlf6OTpSBLx5yZDH_9LVfGEuPEkfKrLUklckMEawejurncaNdPPwY2CTWARIxXVtKaQeIslUUL4HTyvKu9nxxQVj4DCGzrF56nyDn4IwJ-QrFPtq9MlxSeZosnUIB081t4LH3etFs8-DYivWgZnOgXbPPTNKxBk9RGEhTaiHIJmqwsm1bQpdYRbi6u5yjTuLqxDzTV2qBtEMjWiDLBe4m8RlJDhJvRcyc_bOhPB1XBaoI1V1iusoA.4YeaL1-6BJmfX4pRc94yddfdhQbfQ5AQq7_uxuX4fVU&dib_tag=se&keywords=Usb%2Bto%2Busb%2Bc%2B2%2Bft&qid=1714683565&s=electronics&sprefix=usb%2Bto%2Busb%2Bc%2B2%2B%2Celectronics%2C208&sr=1-4&th=1
 
 
 3Pcs Mini Solar Panel DC 6V Polysilicon Solar Cell Charger Module Solar DIY System Kits with 30cm Cable<br />
 Amazon: https://www.amazon.com/Solar-Polysilicon-Charger-Module-System/dp/B08THXDWS1/ref=pd_ci_mcx_pspc_dp_d_2_i_0?pd_rd_w=xgPjN&content-id=amzn1.sym.568f3b6b-5aad-4bfd-98ee-d827f03151e4&pf_rd_p=568f3b6b-5aad-4bfd-98ee-d827f03151e4&pf_rd_r=5HKNCZ0HYSFKPMPD4RHJ&pd_rd_wg=kC7Hx&pd_rd_r=92a4fce3-dadb-4bf2-a13d-e899e8fc5157
 
+Joinfworld 6x6x4 Outdoor Electrical Box Weatherproof Junction Box.<br />
+Amazon: https://www.amazon.com/Joinfworld-Electrical-Weatherproof-Waterproof-Electronics/dp/B0CHHJ49QN/ref=sr_1_10?dib=eyJ2IjoiMSJ9.K8G1wFmrAJsX4FBA55HSm7NZ_GKN5SPVUqAsIZlhuCcjFsf1RDn8byXREQ0s8PfCauO7c4PTc5A437ZjnWJWy2-UPdnBYnclRdZs7IskDOWobyZXINfs_FbTwsSdBBX6376kcS3TCzt03gRaK8rahKuGCoPtBZiMKi2Pq7eB11Z71PXFdY900GJAFpVnnwoJLsU_gdcpaEayblkZK02j6fTxpvfLWQCLOST2tW_HaamijlOGOe8n6nxctEMAGZ2QGEV36m7JlXhlUkxz-DiyVhzgkjzmJVQ4GSkfpmpMOI8.TnzKmygqGJtkollqDS7D4qUERq1jfc5i0ZzSMlmDt8Q&dib_tag=se&hvadid=237377448938&hvdev=c&hvlocphy=9013088&hvnetw=g&hvqmt=e&hvrand=16258796136295452947&hvtargid=kwd-338603829814&hydadcr=26287_9742884&keywords=nema%2B3r%2Brainproof%2Benclosure&qid=1714678494&sr=8-10&th=1 
 
-<!-- This is how to do footnotes for the references: --> 
-Here is a simple footnote[^1].
-[^1]: Reference 1
-[^2]: Reference 2 
-[^3]: Reference 3
-<!--etc.-->
+
