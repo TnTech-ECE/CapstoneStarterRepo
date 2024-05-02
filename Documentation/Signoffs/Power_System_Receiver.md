@@ -22,15 +22,17 @@ The primary functionality for the receiver power system is to reliably meet the 
 
 
 ## Schematic
-
-Figure 1: Electrical Schematic
+[Receiver_Power.pdf](https://github.com/mrnye42/Drone-Tracker-Project/files/15194400/Receiver_Power.pdf)
+Figure 1: Electrical Schematic<br />
+The above schematic is a simple proof of concept of the connections for the system. The schematic will be detailed with the signoff of the receiver system, since the design of this power system will lag the receiver system's design in case of changes required.<br />
 
 <img width="984" alt="Screenshot 2024-04-10 at 9 43 25 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/e893c923-8836-458a-af27-fb9d5f76ec00"> <br />
-Figure 2: Waveshare Power Management Module Schematic
+Figure 2: Waveshare Power Management Module Schematic<br />
+The above figure details the electronics and circuitry found in the Waveshare Power Management Module.<br />
 
 
 ## Analysis
-The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port, because this gives the microcontroller additional functionality that may be utilized in the receiver system's design. To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium ion battery in the Waveshare Solar Power Management Module. From this module, the Micro-USB 5 V output port will be connected to the Arduino Nano ESP32 with the USB C to Micro USB cable. 
+The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port, because this gives the microcontroller additional functionality that may be utilized in the receiver system's design. To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium ion battery in the Waveshare Solar Power Management Module. From this module, the Micro-USB 5 V output port will be connected to the Arduino Nano ESP32 with the USB C to Micro USB cable. <br />
 
 
 
