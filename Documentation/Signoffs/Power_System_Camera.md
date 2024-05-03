@@ -19,8 +19,11 @@ The primary functionality for the camera power system is to reliably meet the po
 
 
 ## Schematic
-![5V-power-supply-circuit-diagram](https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/8b9796c8-cb32-4588-9f21-ac271578669a)<br/>
-Figure 1: Example Circuit for 5 Volt Power Supply<br/>
+<img width="1068" alt="Screenshot 2024-05-02 at 7 14 50 PM" src="https://github.com/mrnye42/Drone-Tracker-Project/assets/158224821/7252949e-e0d9-45f6-8259-16c696b38bbd">
+<br />
+Figure 1: Camera Power Schematic.<br />
+The above schematic shows connections for the system. The schematic will be detailed with the signoff of the camera system, since the design of this power system will lag the camera system's design in case of changes required.
+
 
 
 
@@ -35,6 +38,8 @@ Figure 1: Example Circuit for 5 Volt Power Supply<br/>
 Table 1: Power Requirements.<br />
 
 For this system, five volts is required for all components, so the five volt power supplies will be able to provide power to all the components. The worst case power draw from the system is 45.67 W, so the chosen 100 W power supplies will meet those requirements with plenty of wattage to spare. The cost reduction from a lower wattage power supply is minimal, so we will have some extra power to account for additional functionality added to the camera system. <br />
+
+16 AWG wire is required to comply with ASTM B258-18. Since the maximum amperage for 16 gauge wire is 3.7 A and the maximum amperage for our system is 3 A, the design is in compliance. <br />
 
 
 
