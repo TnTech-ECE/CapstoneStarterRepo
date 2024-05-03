@@ -11,7 +11,7 @@ The primary functionality for the receiver power system is to reliably meet the 
 |  4 | The system shall be able to supply enough power to the receiver system for its full functionality | Design Team |
        
 
-<sup>1</sup> Reducing maintenace is important to reduce the workload for the continuing function of the drone tracker system after the project is completed. For example,the system will be less useful if a worker must constantly change the batteries, so solar energy will be used to charge batteries that will last for at least (time period). <br />
+<sup>1</sup> Reducing maintenace is important to reduce the workload for the continuing function of the drone tracker system after the project is completed. For example,the system will be less useful if a worker must constantly change the batteries, so solar energy will be used to charge batteries that will last for at least three years. <br />
 
 <sup>2</sup> ASTM B258-18 is a standard for the proper wire gauge for electrical conductors. It is important to adhere to this standard to ensure the system is safe and avoid overheating, short circuits, and fires.  <br />
 
