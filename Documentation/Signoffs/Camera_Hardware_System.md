@@ -18,9 +18,9 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
 
-<sup>2</sup> Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary information collection, accumulating visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building a visual evidence case against repeat offenders.
+<sup>2</sup> Stakeholders did not specify whether or not we should account for visual obstructions such as light or physical structures in 100% of our pictures due to the importance placed on the Remote ID data being collected instead. This system is to serve as a supplementary information collector, accumulating visual evidence to assist Tech Police in stopping non-authorized UAS pilots and building up evidence against repeat offenders.
 
-<sup>3</sup> By storing the photo in a RAW file format, we are able to preserve as much image quality as possible. Setting minimum resolution to 1080px720p ensures captured images are higher quality.
+<sup>3</sup> By storing the photo in either a RAW or PNG file format, we are able to preserve as much image quality as possible. Setting minimum resolution to 1080px720p ensures captured images are higher quality.
 
 <sup>4</sup> Camera zoom, focus, and ISO will be set once upon install to ensure consistency in image quality with the surveyed area.
 
@@ -54,20 +54,17 @@ From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be 
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
 
 #### Servo - Background Info
-Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor horn's position.
+Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor's horn.
 
 #### Servo - Use And Analysis
-The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where t_max is the upper limit of the pulse duty cycle time, t_min is the lower limit, and \tau_DBand is the deadband limit from the spec sheet:
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
 
-$\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * (\tau_{DBand} + 1) $
+$\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * ( \tau_{DBand} + 1) $
 
 This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1.
 
 
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
-
-
-
 
 ### Camera
 The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. In the team's experience, these cameras tend to have an FOV rating of X degrees
