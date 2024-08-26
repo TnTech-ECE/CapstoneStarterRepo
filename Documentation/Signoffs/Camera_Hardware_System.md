@@ -48,7 +48,7 @@ For the control and communication aspects of this system, a Raspberry Pi 4B Sing
 <img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="509" height="293">
 
 #### SPU - Use and Analysis
-From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a USB 3.0 port will be used to communicate with the camera. The generation and processing of signals for these devices will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
+From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a<!-- Rasberry Pi Camera will be connected via the CSI port of the SPU --> USB 3.0 port will be used to communicate with the camera. The generation and processing of signals for these devices will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
 
 ### Servo Motor
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
@@ -67,7 +67,7 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is an ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. In the team's experience, these cameras tend to have an FOV rating of X degrees
+The camera selected for this application is an<!-- Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of  --> ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. In the team's experience, these cameras tend to have an FOV rating of X degrees
 
 ### Enclosure
 
