@@ -24,7 +24,7 @@ distance, speed, and position of the target as it slides down the fishing line.
 
 ## **Buildable Schematic**
 
-![Schematic](Documentation/Images/Sensor_subsystem/buildable.png)
+![Schematic](../../Documentation/Images/Sensor_subsystem/the_best_schematic.png)
 
 *Figure 1: Buildable Schematic of subsystem*
 
