@@ -67,12 +67,14 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is an<!-- Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of  --> ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. In the team's experience, these cameras tend to have an FOV rating of X degrees
+The camera selected for this application is an<!-- Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of  --> ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values.
+
 
 ### Enclosure
-
+<!-- Box for electronics and clear top for camera -->
 
 ### Error Checking
+The system will use a network status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
 
 
 ## BOM
@@ -83,9 +85,8 @@ The camera selected for this application is an<!-- Arducam 5MP OV5647 Camera wit
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| DS3218| 1x1| $14.66| $14.66|
 | ELP 8MP USB 3.0 Camera| ELP-USB4KHDR01-UFV| 1x1| $106.00| $106.00|
 | Camera Pan/Tilt Servo Bracket| Generic| 1x1| $9.99| $9.99|
-| System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|
 |Total     |             |          |                | $220.31|
-
+<!--| System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|-->
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, Available: https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/ (Accessed Feb. 19, 2024).
