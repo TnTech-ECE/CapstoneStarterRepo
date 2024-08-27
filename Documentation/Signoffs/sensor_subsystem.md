@@ -46,7 +46,7 @@ The numbers used in this calculation are based on the distance from the back of 
 
 The RGB camera supports a maximum resolution of 1920 X 1080. With the FOV of 69° X 42° the area each pixel covers 6' away can be calculated.
 
-FOV width
+FOV width (inches):
 
 ~~~ math
 
@@ -54,7 +54,7 @@ FOV width
 
 ~~~
 
-Pixel width
+Pixel width (inches):
 
 ~~~ math
 
@@ -62,7 +62,7 @@ Pixel width
 
 ~~~
 
-FOV height
+FOV height (inches):
 
 ~~~ math
 
@@ -70,7 +70,7 @@ FOV height
 
 ~~~
 
-Pixel height
+Pixel height (inches):
 
 ~~~ math
 
@@ -126,15 +126,12 @@ According to the datasheet of the D435, the depth and RGB camera both use 16 bit
 
 This means that 2.32 Gbps is the absolute minimum data transfer rate for the D435. Data and power will both be supplied by a USB A to USB C 3.1 Gen 1 cable. This means that there will be no problem with transferring data to the Jetson Nano because the transfer rate of USB 3.1 Gen 1 is 5 Gbps.
 
-<!--### **Illumination**-->
-
-
 
 ## **Bill of Materials:**
 
 | Name of Item         | Description  | Used in which subsystem(s) | Part Number      | Manufacturer            | Quantity | Price      | Total   |
 | -------------------- | ------------ | -------------------------- | ---------------- | ----------------------- | -------- | ---------- | ------- |
-| Intel RealSense D435 | Depth Camera | Sensor                     | D435             | Intel                   | 1        | $304.07    | $304.07 |
+| Intel RealSense D435 | Depth Camera | Sensor                     | D435             | Intel                   | 1        | $314.00    | $314.00 |
 
 ## **References:**
 
