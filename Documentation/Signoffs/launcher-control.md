@@ -83,7 +83,13 @@ The launcher control system recieves inputs from the projectile path sensing sys
 
 $$ \theta_{aim} = n_{steps}*\theta_{step} $$
 
-To calculate the time to fire, the launcher control takes inputs from the projectile velocity and accelartion sensing and finds the time to fire in the equations below:
+The time to fire is the delay between when the launcher is moved to the and when it fires. Given that the interceptor is under a tight time window to intercept, it was iperative to move the launcher to the string that the projectile is moving on as soon as the signal from the projectile path sensing system dectects a projectile. To find the time at which the launcher is aimed, $t_{aim}$ it can be determined by the operating speed of the motors which is 100 rpm shown in the equations below:
+
+$$ \omega_{stepper} = \frac{100 rpm}{60 s} $$
+
+$$ t_{aim} = \frac{\theta_{aim}}{\omega_{stepper}} $$
+
+Once aimed, the launcher will wait a certain amount of time to fire its intercepting projectile ($t_{fire}$) for the incoming projectile to reach the range of the launcher to intercept. To calculate the time to fire, the launcher control takes inputs from the projectile velocity and accelartion sensing and finds the time to fire in the equations below:
 
 $$ x_{travel} = x_{target} - x_{intercept} $$
 
