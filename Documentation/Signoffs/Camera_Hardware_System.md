@@ -14,7 +14,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
 |  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
-| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
+<!--| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|-->
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
 
@@ -34,7 +34,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>9</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.
 
-<sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
+<!--<sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.-->
 
 ## Schematic
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
@@ -61,20 +61,23 @@ The servos used in this system will be the ZOSKAY DS3218 20KG digital servo moto
 
 $\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * ( \tau_{DBand} + 1) $
 
-This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1.
+This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1. The chart below shows the range of motion for both devices.
 
 
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is an<!-- Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of  --> ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values.
+The camera selected for this application is an Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of <!--ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. -->
 
 
 ### Enclosure
-<!-- Box for electronics and clear top for camera -->
+<!-- Box for electronics and clear top for camera --> 
+To protect the sensitive electronics required for the control of this system, (two)* enclosures will be utilized, both sourced from Polycase
 
-### Error Checking
-The system will use a network status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
+*Sensitive to team review
+
+<!--### Error Checking
+The system will use a network status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.-->
 
 
 ## BOM
@@ -89,8 +92,8 @@ The system will use a network status indicator system to check for any errors. A
 <!--| System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|-->
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, Available: https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/ (Accessed Feb. 19, 2024).
-[^2]: “856 data security and handling policy,” Tennessee Technological University, Available: https://www.tntech.edu/policies/ (Accessed May 2, 2024).
+[^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, [Available:](https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/) (Accessed Feb. 19, 2024).
+[^2]: “856 data security and handling policy,” Tennessee Technological University, [Available:](https://www.tntech.edu/policies/) (Accessed May 2, 2024).
 [^3]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
 [^4]: [What is a Servo?](https://www.electrical4u.com/what-is-servo-motor/) (Accessed May 2, 2024)
 [^5]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
