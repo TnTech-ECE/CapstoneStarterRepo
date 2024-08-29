@@ -24,7 +24,7 @@ The camera software system will be reponsible for using the data acquired by the
 <sup>6</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.   
 
 ## Flowchart
-<img src= "/Documentation/Images/Camera_Software_System/Camera_Software_System_Flowchart.png" width="600" height="1200">
+<img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="600" height="1000">
 
 ### Coding Language
 The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md), and it is compatible with multiple different coding languages. Due to programmer's preference, either C++ or Python will be used. 
@@ -91,8 +91,6 @@ The camera pointing angles will be calculated using the UAS or control station l
 
 The code located in this block will utilize all available sensors or software feedback mechanisms to determine whether the system needs to send an alert to the Tech Police. 
 
-## Analysis
-
 ### Camera Positioning
 #### Horizontal Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
@@ -143,6 +141,8 @@ where:
 $\ x_p = x_3 + ((\frac{v_3}{v_2}) * (x_3 - x_2)) $
 
 $\ y_p = y_3 + ((\frac{v_3}{v_2}) * (y_3 - y_2)) $
+
+## Analysis
 
 ## BOM
 none
