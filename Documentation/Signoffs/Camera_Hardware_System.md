@@ -1,6 +1,6 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware System is responsible for the design of a 2 degree of freedom, steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. <!--This system will also monitor itself for errors and report them to the database when applicable.-->
+The Camera Hardware System is responsible for the design of a 2 degree of freedom, steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when applicable.
 
 ## Constraints
 | No.| Constraint | Origin |
@@ -14,7 +14,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
 |  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
-<!--| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|-->
+| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
 
@@ -34,7 +34,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>9</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.
 
-<!--<sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.-->
+<sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
 ## Schematic
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
@@ -48,7 +48,7 @@ For the control and communication aspects of this system, a Raspberry Pi 4B Sing
 <img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="509" height="293">
 
 #### SPU - Use and Analysis
-From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a<!-- Rasberry Pi Camera will be connected via the CSI port of the SPU --> USB 3.0 port will be used to communicate with the camera. The generation and processing of signals for these devices will be handled and defined by the [Camera Software System](Camera_Software_System.md). This Unit will also be capable of generating and sending a status monitioring package to the website for maintenance and reliability purposes.
+From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a Rasberry Pi Camera will be connected via the CSI port of the SPU.<!-- USB 3.0 port will be used to communicate with the camera.--> The generation and processing of signals for these devices, along with the generation of a system status monitoring signal, will be handled and defined by the [Camera Software System](Camera_Software_System.md).
 
 ### Servo Motor
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
@@ -67,7 +67,7 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is an <!--Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of| ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. -->
+The camera selected for this application is a [temp] camera with a variable lens attached. This lens has a variable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to each specific deployment area when installed. <!--Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of| ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. -->
 
 
 ### Enclosure
