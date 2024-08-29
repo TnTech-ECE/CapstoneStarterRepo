@@ -1,6 +1,6 @@
 # Camera Hardware System
 ## Functionality
-The Camera Hardware System is responsible for the design of a 2 degree of freedom steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when applicable.
+The Camera Hardware System is responsible for the design of a 2 degree of freedom, steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. <!--This system will also monitor itself for errors and report them to the database when applicable.-->
 
 ## Constraints
 | No.| Constraint | Origin |
