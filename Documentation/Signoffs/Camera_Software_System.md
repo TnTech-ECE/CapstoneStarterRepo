@@ -23,7 +23,7 @@ The camera software system will be reponsible for using the data acquired by the
 
 <sup>6</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.   
 
-## Flowchart
+## Flowchart and Details
 <img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="600" height="1000">
 
 ### Coding Language
