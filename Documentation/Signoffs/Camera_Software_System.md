@@ -87,7 +87,7 @@ This block contains code that will be associated with [constraint 4](#Constraint
 
 The camera pointing angles will be calculated using the UAS or control station location and the location of the camera. See the [associated section](#Camera-Positioning) for mathematical calculations. After calculating the camera pointing angles, the code will instruct the motors to move as close to the pointing angles as the [hardware](Camera_Hardware_System.md) will allow. Then, the system will take a picture and send it to the database as a raw file or PNG according to [constraint 5](#Constraints). 
 
-<img src= "/Documentation/Images/Camera_Software_System/Parsed5.png" width="130" height="130">
+<img src= "/Documentation/Images/Camera_Software_System/Parsed5revised.png" width="130" height="130">
 
 The code located in this block will utilize all available sensors or software feedback mechanisms to determine whether the system needs to send an alert to the Tech Police. 
 
