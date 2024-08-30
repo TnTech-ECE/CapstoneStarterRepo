@@ -70,6 +70,7 @@ All data received from the database is in the form specified by the [Database Sy
 | UAS geodetic altitude | meters | 1 m minimum | unsigned integer |
 | UAS speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | unsigned integer |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | unsigned int |
+| Timestamp	|  |   | unsigned integer |
 
 - Optional RID data:
 
@@ -98,7 +99,7 @@ All data received from the database is in the form specified by the [Database Sy
 | ------------- | -------- | -------------------- |
 | Receive_request | This function will receive a data transfer request from the database as an input and will approve the request | Will only be utilized if the [Database System](Database_System.md) specifies a need for authentication |
 | Send_request | This function will recieve an input indicating that there is data to send. After receiving this input, the function will send a data transfer request to the database.| Will only be utilized if the [Database System](Database_System.md) specifies a need for authentication |
-| Database_sender | This function will receive the image captured by the camera, the camera status boolean , and the output from the database stating whether the data is ready to be sent or not (only if utilized by the [Database System](Database_System.md)). Then, the system will send the image and camera status boolean to the database| -- |
+| Send_data | This function will receive the image captured by the camera, the camera status boolean , and the output from the database stating whether the data is ready to be sent or not (only if utilized by the [Database System](Database_System.md)). Then, the system will send the image and camera status boolean to the database| -- |
 | Store_data | This function will receive the RID data from the Database system. It will then store the data in an array. | This data array will contain  
 
 
