@@ -31,15 +31,23 @@
 ### Velocity and Acceleration Measurements
 This device will fuction in multiple parts. One part is having two servo's for aiming the ToF sensor up/down and left/right based of the path  detected by the projectile path sensing subsystem. The resoning for this is due to the sensor having a feild of view of 25 degrees[3] so the sensor needs to be aimed in the general direction of the projectile for detection. Using the set path we can keep the sensor aimed in the projectiles direction as needed. After the mesurements are taken the sensor will be returned to its default position and await the next detected path. This will allow the device to operate without any input or intervention from user.
 The next part of this subsystem is the velocity and acceleration calculations. The formula for Velocity is 
+
 $$ Velocity = {\Delta Distance \over \Delta Time} $$
+
 Where distance is the distance travled divided by the time it took to go that distance. Using this formula the following can be obtained
+
 $$ Velocity = { |d_1 - d_2| \over |t_1 - t_2|}$$
+
 In this formula the values for d will be the distance measurements from the time of flight sensors, and t will be the time stamps taken when those measurements are saved. Using the found velocities the acceleration of the projectile can be calculated by the following formula.
+
 $$ Acceleration = {\Delta Velocity \over \Delta Time} $$
+
 Breaking the formula down further 
-$$ Acceleration = { |v_1 - v_2| \over |t_1 - t_2|}$$
+
+$$ Acceleration = { |v_1 - v_2| \over |t_1 - t_2|} $$
+
 The values for v will be the saved velocities calculated before and t will be the corilating times saved when calculated. 
-Some notes about this approch it is assumed that the inital velocity of the projectile is 0 or close to it and is under a constant acceleration. These assumptions will allow for simpliar calculations and may be adjusted for futher accuracy if needed.
+Some notes about this approch it is assumed that the inital velocity of the projectile is 0 or close to it and is under a constant acceleration. These assumptions will allow for simpler calculations and may be adjusted for futher accuracy if needed.
 
 ### Battery
 To ensure that the battery will last greater than 30 minutes. 
@@ -47,11 +55,17 @@ The ToF Sensor 18 mA maximum operating current [7].
 ESP32 has has an maximum operating current of 240 mA [3].
 Rounding the ToF operating current up and adding the operating current of both devices together to get a maximum current consumption of 260 mA. 
 Using the formula from the batter life calculator from [8]
+
 $$ Battery Life = Battery Capacity / Load Current $$
-We can rearage this to be 
+
+Rearaging the formula to 
+
 $$ Battery Capacity = Battery Life * Load Current $$ 
-Using this we can put in our desired batter life of half an hour and swap in the current consumption for load current to get 
+
+Using this the desired batter life of half an hour can be put in and swaping in the current consumption for load current to get
+
 $$ Battery Capacity = 0.5 * 260 mA $$ 
+
 This will give a minimum battery capacity of 130 mAh. The 650 mAh batter chosen more than meets this minimum capacity and will give 2.5 hours of battery life for device operation.
 
 ### Microcontroller
