@@ -1,7 +1,7 @@
 # Sensor Post Array Velocity and Acceleration Signoff
 ## Functionality
- This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball (Projectile) as it travels down the fishing line towards the interceptor body. 
- To accomplish this task this subsystem will measure the golf balls distance from the chosen time of flight (ToF) sensor as it travels down the fishing line. By sampling the distances we can use the distance traveled over the amount of time to calculate the velocity of the practice golf ball. Using the calculated velocity and the time taken between measurements the acceleration of the practice golf ball can be calculated.
+This portion of the sensor post array will be responsible for obtaining the velocity and acceleration of the practice golf ball (projectile) as it travels down the fishing line towards the interceptor body.
+To accomplish this task, this subsystem will measure the golf ball's distance from the chosen time of flight (ToF) sensor as it travels down the fishing line. By sampling the distances, the values can be used to calculate the distance traveled over the amount of time. Which can in turn be used to calculate the velocity of the practice golf ball. Using the calculated velocity and the time taken between measurements, the acceleration of the practice golf ball can be calculated.
 
 ## Constraints
 <div align="center">
@@ -29,51 +29,51 @@
 
 ## Analysis
 ### Velocity and Acceleration Measurements
-This device will fuction in multiple parts. One part is having two servo's for aiming the ToF sensor up/down and left/right based of the path  detected by the projectile path sensing subsystem. The resoning for this is due to the sensor having a feild of view of 25 degrees[3] so the sensor needs to be aimed in the general direction of the projectile for detection. Using the set path we can keep the sensor aimed in the projectiles direction as needed. After the mesurements are taken the sensor will be returned to its default position and await the next detected path. This will allow the device to operate without any input or intervention from user.
-The next part of this subsystem is the velocity and acceleration calculations. The formula for Velocity is 
+This device will function in multiple parts. One part is having two servomotors for aiming the ToF sensor up/down and left/right based on the path detected by the projectile path sensing subsystem. The reason for this is due to the sensor having a field of view of 25 degrees [3], so the sensor needs to be aimed in the general direction of the projectile for detection. Using the set path, we can keep the sensor aimed in the projectiles direction as needed. After the measurements are taken, the sensor will be returned to its default position and await the next detected path. This will allow the device to operate without any input or intervention from the user.
+The next part of this subsystem is the velocity and acceleration calculations. The formula for velocity is
 
 $$ Velocity = {\Delta Distance \over \Delta Time} $$
 
-Where distance is the distance travled divided by the time it took to go that distance. Using this formula the following can be obtained
+Where distance is the distance traveled divided by the time it took to go that distance. Using this formula, the following can be obtained:
 
 $$ Velocity = { |d_1 - d_2| \over |t_1 - t_2|}$$
 
-In this formula the values for d will be the distance measurements from the time of flight sensors, and t will be the time stamps taken when those measurements are saved. Using the found velocities the acceleration of the projectile can be calculated by the following formula.
+In this formula, the values for d will be the distance measurements from the time of flight sensors, and t will be the time stamps taken when those measurements are saved. Using the found velocities, the acceleration of the projectile can be calculated by the following formula:
 
 $$ Acceleration = {\Delta Velocity \over \Delta Time} $$
 
-Breaking the formula down further 
+Breaking the formula down further
 
 $$ Acceleration = { |v_1 - v_2| \over |t_1 - t_2|} $$
 
-The values for v will be the saved velocities calculated before and t will be the corilating times saved when calculated. 
-Some notes about this approch it is assumed that the inital velocity of the projectile is 0 or close to it and is under a constant acceleration. These assumptions will allow for simpler calculations and may be adjusted for futher accuracy if needed.
+The values for v will be the saved velocities calculated before, and t will be the corilating times saved when calculated.
+In some notes about this approach, it is assumed that the initial velocity of the projectile is 0 or close to it and is under constant acceleration. These assumptions will allow for simpler calculations and may be adjusted for further accuracy if needed.
 
 ### Battery
-To ensure that the battery will last greater than 30 minutes. 
-The ToF Sensor 18 mA maximum operating current [7].
-ESP32 has has an maximum operating current of 240 mA [3].
-Rounding the ToF operating current up and adding the operating current of both devices together to get a maximum current consumption of 260 mA. 
+To ensure that the battery will last greater than 30 minutes.
+The ToF Sensor has a maximum operating current of 18 mA [7].
+ESP32 has a maximum operating current of 240 mA [3].
+Rounding the ToF operating current up and adding the operating current of both devices together to get a maximum current consumption of 260 mA.
 Using the formula from the batter life calculator from [8]
 
 $$ Battery Life = Battery Capacity / Load Current $$
 
-Rearaging the formula to 
+Rearaging the formula to
 
-$$ Battery Capacity = Battery Life * Load Current $$ 
+$$ Battery Capacity = Battery Life * Load Current $$
 
-Using this the desired batter life of half an hour can be put in and swaping in the current consumption for load current to get
+Using this, the desired battery life of half an hour can be put in and swapped in the current consumption for load current to get
 
-$$ Battery Capacity = 0.5 * 260 mA $$ 
+$$ Battery Capacity = 0.5 * 260 mA $$
 
-This will give a minimum battery capacity of 130 mAh. The 650 mAh batter chosen more than meets this minimum capacity and will give 2.5 hours of battery life for device operation.
+This will give a minimum battery capacity of 130 mAh. The 650 mAh battery chosen more than meets this minimum capacity and will give 2.5 hours of battery life for device operation.
 
 ### Microcontroller
-The ESP32-E has a built in WiFi module allowing for wireless communication which reduces the amount of microcrontrollers that are needed.  This microcontroller is different than the ESP8266 that is being used in the networking subsystem but meets the requirements of using 802.11 WiFi to communicate in the same mannor as the other networking devices[2]. The ESP32 has been tested and the VL53L3CX ToF Sensor will be able to operate using this mircrocontroller[5].
+The ESP32-E has a built-in WiFi module allowing for wireless communication, which reduces the amount of microcontrollers that are needed. This microcontroller is different than the ESP8266 that is being used in the networking subsystem but meets the requirements of using 802.11 WiFi to communicate in the same manner as the other networking devices [2]. The ESP32 has been tested, and the VL53L3CX ToF Sensor will be able to operate using this microcontroller [5].
 
 ## Implementation and Testing
 ### Testing
-The ToF sensor will be tested by first placing the practice golf ball infront of the sensor first at 5 inches away and increasing the distance by 5 inches after every succesful measurement until 80 inches away which would be past the edge of the gameboard. This will allow for a baseline to be made for the accuracy of the measurement and detection of the golf ball. After this testing will begin with detecting the practice golf ball while moving down the fishing line. This testing is to find out how many and quickly we can get the measuremnts on the practice golf ball while it is moving. The next testing will be using the servo-motors to turn and aim the ToF sensor at the ball while it is moving making performace changes as needed.
+The ToF sensor will be tested by first placing the practice golf ball in front of the sensor at 5 inches away and increasing the distance by 5 inches after every successful measurement until it is 80 inches away. Which would be past the edge of the gameboard, giving ample time and distance for detection. This will allow for a baseline to be made for the accuracy of the measurement and detection of the golf ball. After this testing will begin with detecting the practice golf ball while moving down the fishing line. This testing is to find out how many and quickly the measurements on the practice golf ball can be made while it is moving. The next testing will be using the servo-motors to turn and aim the ToF sensor at the ball while it is moving, making performance changes as needed.
 
 ### Bill of Materials (BOM)
 <div align="center">
