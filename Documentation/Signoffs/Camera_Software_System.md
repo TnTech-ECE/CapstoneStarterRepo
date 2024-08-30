@@ -26,6 +26,34 @@ The camera software system will be reponsible for using the data acquired by the
 ## Flowchart and Coding Details
 <img src= "/Documentation/Images/Camera_Software_System/Flowchart.png" width="600" height="1000">
 
+### Flowchart breakdown
+<img src= "/Documentation/Images/Camera_Software_System/Parsed1.png" width="250" height="150">
+
+Following [constraint 2](#Constraints), the code will allow a UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not flying in a high alert area. This section of the flowchart also addresses the unlikely scenario where the data received from the [Database System](Database_System.md) is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed2.png" width="125" height="105">
+This block will contain code that is only concerned with two factors:
+
+1. Is the UAS or control station close enough to the camera to take a quality picture?
+  
+2. Does the system need to take another picture?
+
+The first factor will utilize the minimum quality picture distance data from the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file and the difference between the camera location and UAS or control station location. When the UAS or control station is too far away from the camera location, a picture should not be taken. 
+
+The second factor will utilize how recent the last picture was taken and the location of the UAS or control station. If a picture was taken under 1 second ago (as that is the maximum time between RID transmissions[^1]) and the location of the UAS or control station is identical to the previous picture location then another picture should not be taken. This factor is an attempt to decrease the number of redundant pictures sent to the database.
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed3.png" width="175" height="125">
+
+This block contains code that will be associated with [constraint 4](#Constraints). The code will determine if the UAS or control station is moving in a straight line over a span of at least 3 points and will attempt to predict the next position if straight line motion was detected. This prediction as well as the average time delay of the system, and the UAS or control station velocity will be used to alter the camera pointing angles as needed. See the [associated section](#Predicting-UAS-or-Control-Station-Location) for mathematical calculations.  
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed4.png" width="130" height="150">
+
+The camera pointing angles will be calculated using the UAS or control station location and the location of the camera. See the [associated section](#Camera-Positioning) for mathematical calculations. After calculating the camera pointing angles, the code will instruct the motors to move as close to the pointing angles as the [hardware](Camera_Hardware_System.md) will allow. Then, the system will take a picture and send it to the database as a raw file or PNG according to [constraint 5](#Constraints). 
+
+<img src= "/Documentation/Images/Camera_Software_System/Parsed5revised.png" width="130" height="130">
+
+The code located in this block will utilize all available sensors or software feedback mechanisms to determine whether the system needs to send an alert to the Tech Police. 
+
 ### Coding Language
 The microprocessor that will run the software is defined in the [Camera Hardware system](Camera_Hardware_System.md), and it is compatible with multiple different coding languages. Due to programmer's preference, either C++ or Python will be used. 
 
@@ -62,34 +90,17 @@ All data received from the database is in the form specified by the [Database Sy
 | Image captured by the camera | raw file or PNG |
 | Camera status | boolean |
 
+### Key Variables
 
-### Flowchart breakdown
-<img src= "/Documentation/Images/Camera_Software_System/Parsed1.png" width="250" height="150">
 
-Following [constraint 2](#Constraints), the code will allow a UAS in a high alert area to take precedence over a control station location, but will attempt pictures of a control station if a UAS is not flying in a high alert area. This section of the flowchart also addresses the unlikely scenario where the data received from the [Database System](Database_System.md) is incomplete or insufficient. If there is not enough data to take a picture, the software will not waste time analyzing the data and will instead wait to receive complete data before proceeding past this point. 
+### Functions 
+| Function Name |  Task(s) | Other specifications |
+| ------------- | -------- | -------------------- |
+| Receive_request | This function will receive a data transfer request from the database as an input and will approve the request | Will only be utilized if the [Database System](Database_System.md) specifies a need for authentication |
+| Send_request | This function will recieve an input indicating that there is data to send. After receiving this input, the function will send a data transfer request to the database.| Will only be utilized if the [Database System](Database_System.md) specifies a need for authentication |
+| Database_sender | This function will receive the image captured by the camera, the camera status boolean , and the output from the database stating whether the data is ready to be sent or not (only if utilized by the [Database System](Database_System.md)). Then, the system will send the image and camera status boolean to the database| -- |
+| Store_data | This function will receive the RID data from the Database system. It will then store the data in an array. | This data array will contain  
 
-<img src= "/Documentation/Images/Camera_Software_System/Parsed2.png" width="125" height="105">
-This block will contain code that is only concerned with two factors:
-
-1. Is the UAS or control station close enough to the camera to take a quality picture?
-  
-2. Does the system need to take another picture?
-
-The first factor will utilize the minimum quality picture distance data from the [Camera Hardware System](Camera_Hardware_System.md) detailed design markdown file and the difference between the camera location and UAS or control station location. When the UAS or control station is too far away from the camera location, a picture should not be taken. 
-
-The second factor will utilize how recent the last picture was taken and the location of the UAS or control station. If a picture was taken under 1 second ago (as that is the maximum time between RID transmissions[^1]) and the location of the UAS or control station is identical to the previous picture location then another picture should not be taken. This factor is an attempt to decrease the number of redundant pictures sent to the database.
-
-<img src= "/Documentation/Images/Camera_Software_System/Parsed3.png" width="175" height="125">
-
-This block contains code that will be associated with [constraint 4](#Constraints). The code will determine if the UAS or control station is moving in a straight line over a span of at least 3 points and will attempt to predict the next position if straight line motion was detected. This prediction as well as the average time delay of the system, and the UAS or control station velocity will be used to alter the camera pointing angles as needed. See the [associated section](#Predicting-UAS-or-Control-Station-Location) for mathematical calculations.  
-
-<img src= "/Documentation/Images/Camera_Software_System/Parsed4.png" width="130" height="150">
-
-The camera pointing angles will be calculated using the UAS or control station location and the location of the camera. See the [associated section](#Camera-Positioning) for mathematical calculations. After calculating the camera pointing angles, the code will instruct the motors to move as close to the pointing angles as the [hardware](Camera_Hardware_System.md) will allow. Then, the system will take a picture and send it to the database as a raw file or PNG according to [constraint 5](#Constraints). 
-
-<img src= "/Documentation/Images/Camera_Software_System/Parsed5revised.png" width="130" height="130">
-
-The code located in this block will utilize all available sensors or software feedback mechanisms to determine whether the system needs to send an alert to the Tech Police. 
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
