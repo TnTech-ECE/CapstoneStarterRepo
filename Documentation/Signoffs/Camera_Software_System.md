@@ -94,7 +94,7 @@ All data received from the database is in the form specified by the [Database Sy
 ### Key Variables
 | Variable Name |  Type | Minimum Size | Other specifications |
 | ------------- | ----- | ---- | -------------------- |
-| RID_data | global array variable | 18 | The array should be able to hold two seperate RID data packages from the database because computing the pointing angles and future UAS positioning requires knowing data from two points in time
+| RID_data | global array variable | 18 | The array should be able to hold two seperate RID data packages from the database because computing the pointing angles and future UAS positioning requires knowing data from two points in time. |
 
 ### Functions 
 | Function Name |  Task(s) | Other specifications |
