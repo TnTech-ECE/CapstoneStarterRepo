@@ -70,7 +70,7 @@ All data received from the database is in the form specified by the [Database Sy
 | UAS geodetic altitude | meters | 1 m minimum | unsigned integer |
 | UAS speed | m/s | 254.25 m/s maximum, 0.25 m/s minimum | unsigned integer |
 | Direction | 0-359 degrees expressed clockwise from true north | 1 degree minimum | unsigned int |
-| Timestamp	|  |   | unsigned integer |
+| Timestamp	| Hours + Seconds | .01 second maximum | unsigned integer |
 
 - Optional RID data:
 
