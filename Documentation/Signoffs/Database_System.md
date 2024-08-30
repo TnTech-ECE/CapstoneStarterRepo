@@ -209,6 +209,7 @@ When drone operation permission is denied or when a drone is inside the priority
 | Direction |Unsigned Int(Uint8_t) | 0-359(degree) |
 | Control station latitude |Signed Int(Sint32_t)(double) |  |
 | Control station Longitude |Signed Int(Sint32_t)(double) |  |
+| Timestamp	| Unsigned Int(Uint8_t) | Hour + sescond |
 | High priority area alert | Boolean | indication of drone within high priority area |
 <br>
 The following is the pseudocode code used to compare for the priority zone: <br>
