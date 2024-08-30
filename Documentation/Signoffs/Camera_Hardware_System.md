@@ -68,19 +68,23 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 
 ### Camera
 The camera selected for this application is a [temp] camera with a variable lens attached. This lens has a variable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to each specific deployment area when installed. <!--Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of| ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. -->
+[]image
 
 
 ### Enclosure
 <!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. A singular hole will be bored into the side of the enclosure in order to allow the power wires to enter, and will be properly sealed with rubber gromits, along with RTV gasket maker or silicone caulk to fully seal from water penetration.
+To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. 
 
+[]image
 <!--*Sensitive to team review-->
 
 ### Error Checking
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
 
 ## System Construction
-The system will be built to provide protection from weather elements, while still allowing for communications and visual Line of Sight to function properly.
+The system will be built to provide protection from weather elements, while still allowing for communications and visual Line of Sight to function properly. TO ensure reliability, especially when servicing the system, stainless steel screws will be used to hold the case together, ensuring that they will still be removeable after being exposed to the elements over an extended period. A singular hole will be bored into the side of the enclosure in order to allow the power wires to enter, and will be properly sealed with rubber gromits, along with RTV gasket maker or silicone caulk to fully seal from water penetration.
+
+[]bp
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
