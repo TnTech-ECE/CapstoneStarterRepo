@@ -43,7 +43,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 For this subsystem, the following components and atomic-subsystems will be required.
 
 ### Single-Board Computer (SPU)
-For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer will be utilized. This board, as specified in the datasheet[^3], contains many processing and peripheral support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
+For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer (or Single Processing Unit) will be utilized. This board, as specified in the datasheet[^3], contains many processing and peripheral support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
 
 <img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="509" height="293">
 
@@ -72,13 +72,15 @@ The camera selected for this application is a [temp] camera with a variable lens
 
 ### Enclosure
 <!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, (two)* enclosures will be utilized, both sourced from Polycase
+To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. A singular hole will be bored into the side of the enclosure in order to allow the power wires to enter, and will be properly sealed with rubber gromits, along with RTV gasket maker or silicone caulk to fully seal from water penetration.
 
-*Sensitive to team review
+<!--*Sensitive to team review-->
 
-<!--### Error Checking
-The system will use a network status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.-->
+### Error Checking
+The system will use a network-driven status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
 
+## System Construction
+The system will be built to provide protection from weather elements, while still allowing for communications and visual Line of Sight to function properly.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
