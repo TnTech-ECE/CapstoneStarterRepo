@@ -13,7 +13,7 @@ This system will receive data packages from the receiver or camera system, then 
 |  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
 |  7 | The database shall be encrypted using a password | Design Constraint |
 |  8 | The system shall only send and receive data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
-|  9 | The Raspberry Pi shall have a well-ventilated casing that prevents direct physical interaction with the hardware | Hardware Constraint |
+|  9 | The Raspberry Pi shall have a casing that prevents direct physical interaction with the hardware | Hardware Constraint |
 
 <sup>1</sup> 
 The database system will receive an access request when the user clicks on a link from the website, once the access request is received the requested item will be pulled from the database and sent to the website system.
@@ -40,7 +40,7 @@ The password is used for security reasons that prevent unwanted access to the da
 The Raspberry Pi 5 supports both Dual-band 802.11ac Wi-Fi and Gigabit Ethernet[3]. Ethernet connection will be the priority option.
 
 <sup>9</sup> 
-Even though the Raspberry Pi is going to be inside the building, a case will be designed to prevent any direct physical contact. For example, the storage drive won't be easily accessed by random.
+Even though the Raspberry Pi is going to be inside the building, a case will be designed to prevent any direct physical contact. For example, the storage drive won't be easily accessed by random person.
 
 ## Schematic
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/01cd0112-f276-4ddb-9253-85a3b34842e7)
@@ -55,20 +55,8 @@ Once the database system receives a data package from the receiver system, it wi
 ## Setting up the Raspberry Pi
 The device will be powered by 5V/5A DC power via USB-C, a power supply is included in the kit, and an external monitor is needed to monitor the device.
 
-## Implementing the MySQL database on Raspberry Pi
-1) Open a Terminal Window
-1) Ensure the Raspberry Pi is up to date: <br>
-sudo apt update <br>
-sudo apt upgrade <br>
-2) Then install MySQL and secure your MySQL installation: <br>
-sudo apt install mysql-server <br>
-sudo mysql_secure_installation <br>
-3) Access MySQL as the root user, then create a new database user and provide username and password: <br>
-CREATE USER 'username_example'@'localhost' IDENTIFIED BY 'password_example'; <br>
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION; <br>
-FLUSH PRIVILEGES; <br>
-4) Create a new database:
-CREATE DATABASE example_name; <br>
+## MySQL database on Raspberry Pi
+
 
 
 ## Block Message
@@ -239,5 +227,4 @@ To test the actual written code, a dummy data table fill with preset values will
 [1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
 [2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
 [3] “Raspberry Pi 5,” https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
-[4] “How to Install MySQL on a Raspberry Pi,” www.basedash.com. https://www.basedash.com/blog/how-to-install-mysql-on-a-raspberry-pi (accessed Apr. 26, 2024). <br>
 <!--etc.-->
