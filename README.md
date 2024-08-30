@@ -1,42 +1,46 @@
-# {Name of the Project} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
-
+# Drone Tracking System
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
-
+Drones have grown exceedingly popular in recent years due to both their novelty and capabilities. Unfortunately, not all drone users prioritize the safety and privacy of others while flying their drones, so to combat a rise in unsafe drone activities, the Federal Aviation Administration (FAA) created a regulation in 2023 requiring drones to emit a remote identification signal. Utilizing this regulation, this team is designing a drone tracking device that will notify the Tennessee Technological University (TTU) Police if an unauthorized drone enters the contiguous campus.
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
+Coming soon :)
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
+Coming soon :)
 
 ## Project Demonstration & Images
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
-
-Below the video link show some well-taken, appropriately sized images of the project.
-
+Coming soon :)
 
 ## About Us
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
+
+[Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
+
+[Sterling Sloan](www.linkedin.com)
+
+[Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
+
+[JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
+
+[Austin Williams](https://www.linkedin.com/in/austingwilliams/) is an electrical engineering major with a concentration in Power Systems. He is interested in power transmission and operations.
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+The faculty supervisor for this project is Dr. Jeffrey Austen. He is a professor in the Electrical and Computer Engineering department at Tennessee Technological University with areas of expertise in signal processing and communication systems. He proposed the idea for the drone tracker.    
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+Dr. Jeffrey Austen
+
+Tennessee Technological University Police
+
 
 ### Recognitions
 
@@ -44,8 +48,12 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
+- Documentation
+  - [3D Models](Documentation/3D_Models)
+  - Electrical
+    - [PCB Models](Documentation/Electrical/PCB)
+    - [Wiring Schematics]
+  - [Meeting Minutes]
 
 ### Reports
 
