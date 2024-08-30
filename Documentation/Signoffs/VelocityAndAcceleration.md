@@ -29,7 +29,7 @@
 
 ## Analysis
 ### Velocity and Acceleration Measurements
-This device will fuction in multiple parts one part is having two servo's for aiming the ToF sensor up/down and left/right based of the path  detected by the projectile path sensing subsystem. The resoning for this is due to the sensor having a feild of view of 25 degrees[3] so the sensor needs to be aimed in the general direction of the projectile for detection. Using the set path we can keep the sensor aimed in the projectiles direction as needed. After the mesurements are taken the sensor will be returned to its default position and await the next detected path. This will allow the device to operate without any input or intervention from user.
+This device will fuction in multiple parts. One part is having two servo's for aiming the ToF sensor up/down and left/right based of the path  detected by the projectile path sensing subsystem. The resoning for this is due to the sensor having a feild of view of 25 degrees[3] so the sensor needs to be aimed in the general direction of the projectile for detection. Using the set path we can keep the sensor aimed in the projectiles direction as needed. After the mesurements are taken the sensor will be returned to its default position and await the next detected path. This will allow the device to operate without any input or intervention from user.
 The next part of this subsystem is the velocity and acceleration calculations. The formula for Velocity is 
 $$ Velocity = {\Delta Distance \over \Delta Time} $$
 Where distance is the distance travled divided by the time it took to go that distance. Using this formula the following can be obtained
