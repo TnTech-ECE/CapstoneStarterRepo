@@ -92,15 +92,25 @@ The ToF sensor will be tested by first placing the practice golf ball infront of
 ### Refrences
 
 [1] [FireBeetle 2 ESP32-E IoT Microcontroller][def1]: FireBeetle 2 ESP32-E (N16R2) Microcontroller (16MB Fl., Wi-Fi & Bluetooth).
+
 [2] [ESP32-WROOM-E Datasheet][def2]: Espressif ESP-WROOM-E and ESP-WROOM-UE Datasheet.
+
 [3] [ESP32 Series Datasheet][def3]: Espressif ESP series datasheet
+
 [4] [FireBeetle 2 ESP32-E Wiki][def4]: Wiki made by DfRobot for the FireBeetle 2 ESP32-E.
+
 [5] [Fermion: VL53L3CX ToF Sensor][def5]: Fermion VL53L3CX ToF Distance Ranging Sensor (25-3000mm).
+
 [6] [VL53L3CX ToF Sensor Wiki][def6]: Wiki made by DfRobot for the VL53L3CX ToF sensor.
+
 [7] [VL53L3CX Datasheet][def7] : Datasheet for the VVL53L3CX made by ST.
+
 [8] [Battery Life Calculator][def8] : DigiKey battery life calculator.
+
 [9] [Adafruit Servomotor][def9]: DC Servomotor 3-6V 3-PIN.
+
 [10] [Paper Wad Intercepotor Rules][def10]: The rulebook for the comptetition.
+
 [11] [3.7V Lipo Battery][def11]: EEMB 3.7V 650mAh Li-Polymer Battery
 
 [def1]: https://www.dfrobot.com/product-2837.html
