@@ -64,23 +64,8 @@ The antena gain is assumed to be 1.5 dB because that is the gain of a resonant d
 With these values we get a maximum detection distance of 1.188 m or 46.77 inches. 
 By connecting the center sensor posts together and placing the radar apperatus in the center this maximum distance to the edge of the game board is 49.67 from where the radar will be operating from so at the worst case the radar will reach 95% of the way to the furthast edge in the worst case.
 
-### Battery
-To ensure that the battery will last greater than 30 minutes. 
-The operating current of the ESP8266 is 80 mA and the operating current for the radar is 90 mA, using the formula
-
-$$ current * duration = mAh $$
-
-The average capacity of a Alkiline AA battery is 2500mAh and the current consumed by the microcontroller and mmWave Radar is 170 mA we can rewrite the formula to be
-
-$$ {mAh\over current} = duration $$
-
-using this formula we get an best case operation time 14.7 hours. 
-But as the battery drains the voltage of the batter will drop to be non-nominal. Since best case operation time is roughly 30 times the desired operation accounting for the voltage drain is not needed in this case.
-To limit the envornmental impact of this subsystem the battery power will not be used during the device testing and will only be used during the competition.
-To further reduce battery waste a common AA battery was chosen so that the leftover batteries can be repurposed after the cometition for future projects. 
-
 ### Microcontroller
-The ESP8266 has a built in WiFi module allowing for wireless communication which reduces the amount of microcrontrollers that are needed. This microcontroller also works with the mmWave radar chosen as shown by DFRobot in a tutorial linked in reference [4]. This tutorial also serves to indicate a response time of 7ms when simply detecting motion.
+The ESP32-E in the Velocity and Acceleration sign off will be used as the micro controller for the mmWave radar. 
 
 ## Implementation and Testing
 ### Testing
@@ -94,11 +79,8 @@ After this data is analized adjustments will be made as needed, and the device w
 
 |Name of item              |Description                                 |Part Number  |Manufacuer  |Quantity  |Price  |Total  |
 |--------------------------|--------------------------------------------|-------------|------------|----------|-------|-------|
-|FireBeetle ESP8266        |Microcontroller with WiFi                   |DFR0489      |DFRobot     | 1        |$7.50  |$7.50  |
 |mmWave Radar 9m           |mmWave Radar by DFRobot 9m Range            |SEN0395      |DFRobot     |1         |$29.00 |$29.00 |
-|AA Battery Holder         |AA Battery Holder with on/off switch 2 pack |N\A          |LampVPath   |1         |$4.99  |$4.99  |
-|Powermax AA battery       |AA alkaline battery 24 pack                 |N\A          |Powermax    |1         |$6.58  |$6.58  |
-|Total                     |                                            |             |            |          |       |$48.07 |
+|Total                     |                                            |             |            |          |       |$29.00 |
 
 </div>
 
@@ -110,36 +92,21 @@ After this data is analized adjustments will be made as needed, and the device w
 
 [3] [Dipole antena wikapidia][def3]: Wiki page on dipole antena.
 
-[4] [FireBeetle ESP8266][def4]: ESP8266 purchase link.
+[4] [Tutorial for mmWave Radar][def5]: mmWave Radar quick setup guides including pin connections.
 
-[5] [Tutorial for mmWave Radar][def5]: mmWave Radar quick setup guides including pin connections.
+[5] [mmWave Radar 9m range][def6]: mmWave radar 9m range purchase link.
 
-[6] [mmWave Radar 9m range][def6]: mmWave radar 9m range purchase link.
+[6] [cosine effect][def10]: The cosine effect reference.
 
-[7] [AA battery holder][def7]: AA battery holder with on/off switch.
+[7] [Reference Data for Engineers Ninth Edition][def13]: Chapter 36 Radar
 
-[8] [FireBeetle 8266 Data sheet][def8]: Firebeteel ESP8266 Datasheet.
-
-[9] [Powermax AA battery][def9]: AA battery made by Powermax.
-
-[10] [cosine effect][def10]: The cosine effect reference.
-
-[11] [AA battery mAh][def11]: The mAh of different types of AA batteries.
-
-[12] [AA bettery discharge][def12]: The discharge testing done on differnet types of AA batteries at different discharge ratings.
-
-[13] [Reference Data for Engineers Ninth Edition][def13]: Chapter 36 Radar
+[8] [Velocity and Acceleration Signoff][def14]: Signoff for the Velocity and Acceleration using Time of Flight.
 
 [def1]: https://www.rfwireless-world.com/calculators/Radar-RCS-calculator.html
 [def2]: https://www.pasternack.com/t-calculator-radar-range.aspx
 [def3]: https://en.wikipedia.org/wiki/Dipole_antenna#:~:text=Neglecting%20electrical%20inefficiency%2C%20the%20antenna,for%20a%20half%2Dwave%20dipole.
-[def4]: https://www.dfrobot.com/product-1634.html
 [def5]: https://wiki.dfrobot.com/mmWave_Radar_Human_Presence_Detection_SKU_SEN0395#target_8
 [def6]: https://www.dfrobot.com/product-2282.html
-[def7]: https://www.amazon.com/LAMPVPATH-Battery-Holder-Switch-Leads/dp/B09T9XZH5M/ref=sr_1_15?crid=1DI3RBEG4H98G&dib=eyJ2IjoiMSJ9.KWBinYDTTbc20vzN002vVchkbNXQp-5v2D86XI3-95p-VuMENoRHfeAidJct7OrxX06dXNvtv9hyKntX4qP5CN-KZ8H5xRj1I6tTFzYYqyR1YJ9W6d2fXQlQdLsDRrz32E79utVSN_qjE8CLlgv9-98gRtoJXYsaud59K_RaV3Im7bMHXzDxNSmgqzKkM3c1Tkq0eubcIW_KO0wIhEPNYkCmeX9sArhjskuAzPj5BlE.JboYqNlsYdeu1gtyeQLdX3owIwS9O69liRJc7nNwwSk&dib_tag=se&keywords=aa%2B3V%2Bbattery%2Bholder&qid=1713395804&sprefix=aa%2B3v%2Bbattery%2Bholder%2Caps%2C99&sr=8-15&th=1
-[def8]: https://www.mouser.com/pdfdocs/DFR0489_Web.pdf
-[def9]: https://www.amazon.com/Powermax-24-Count-Batteries-Recloseable-Packaging/dp/B0BFFNZLYY/ref=sr_1_6?crid=3MEXH5Z9P4WYJ&dib=eyJ2IjoiMSJ9.jt9Z96uuvYjXCPr3cbzKXVMIKk_c0AtfnBg_iW8RnIzdht0cJRFXvMc2ehsyFcojyHHLFEf2pXFSV8cEXS0e7q7huujhoOnV7YYaIN3CHzp8BQnFjiDEHLbmhEpPTTzzCRqjQNmmGc55s8Bd9CLH8C3lnhFJ6MnRMAED1Fch--2XAZgKbPCVdZ-_xPcERkGN2lycxTtxpFtPGAOLrTu5MKGgASBk-rORlfubsBadkYFCnJ0mgpWNlotAtjOgTekmecgXpdfLnoeebRGU3wGYsMK5JsAa3pVp39OK1TCnigA.zYYjypyXzoUN4Lu9K8irTiXmyX-xDlnXKUi-MSe-pFs&dib_tag=se&keywords=aa+batteries&qid=1713396567&sprefix=aa+batteries%2Caps%2C102&sr=8-6
 [def10]: https://copradar.com/chapts/chapt2/ch2d1.html
-[def11]: https://www.microbattery.com/blog/post/battery-bios:-everything-you-need-to-know-about-the-aa-battery/
-[def12]: https://www.powerstream.com/AA-tests.htm
 [def13]: https://schematicsforfree.com/files/Theory%2C%20Education%20%26%20Reference/Reference/Reference%20Data%20for%20Engineers%20Ninth%20Ed.pdf
+[def14]: https://github.com/JTJones73/Capstone2024-Team2/blob/awmorrow42-signoff-SensorPost-VelocityAndAcceleration/Documentation/Signoffs/VelocityAndAcceleration.md
