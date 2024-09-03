@@ -1,46 +1,20 @@
 # Database System
 ## Functionality
-The database subsystem will receive data from the receiver, website and camera subsystem, then store it locally. Data stored will containt the following: pre-authorized drone ID, pre-authorized flight information, pre-marked geographical locations, drone ID, and the location, Latitude, Longitude of the drone and control station. Whenever a drone is detected by the receiver, the database will check for pre-authorized access releated to the received drone ID. If not authorized, then a request will be sent to the website system that asks the user for an authorize request. If authorization denied or drone detected within any pre-marked geographical locations, then the Drone location, speed and Control station location will be sent to the camera subsystem. Also, the database subsystem will provide data access for the website subsystem.
+The database subsystem will receive data from the receiver, website and camera subsystem, then store it locally. Website subsystem will be provided full access to the stored data. Data stored will containt the following: pre-authorized flight information, pre-marked geographical locations, pictures, drone ID, drone speed and the location of the drone and control station. Whenever a drone is detected by the receiver, the database will check for pre-authorized access releated to the received drone ID. If not authorized or drone detected within any pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem.
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall fulfill data requests from the website system | Design Constraint |
-|  2 | The system shall check for pre-authorized access for any drone's new flight session  | Design Constraint |
-|  3 | For any drone without access permission, the system shall request authorized access from the website system. If access permission is denied the system shall forward any tracking information to the camera system | Design Constraint |
-|  4 | If a drone enters a pre-marked priority zone, the system shall forward any tracking information to the camera system  | Design Constraint |
-|  5 | The system shall indicate the health status of Camera system | Design Constraint |
-|  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
-|  7 | The database shall be encrypted using a password | Design Constraint |
-|  8 | The system shall be able to send and receive data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
-|  9 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
+|  1 | The system shall allow the website subsystem to have full access to the stored data | Design Constraint |
+|  2 | The system shall check for pre-authorized access for any drone's new flight session, if no pre-authroized acess found, then the Drone location, speed and Control station location will be sent to the camera subsystem. | Design Constraint |
+|  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem  | Design Constraint |
+|  4 | The system shall indicate the health status of Camera system | Design Constraint |
+|  5 | The system shall store the data for at least 90 days | TTU Policy/Design Constraint |
+|  6 | The system shall use 2.4/5 GHz wifi or Ethernet to receive data from the receiver, website, camera subsystem and only send data to the website, camera subsystem | Design Constraint |
+|  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
-The database system will receive an access request when the user clicks on a link from the website, once the access request is received the requested item will be pulled from the database and sent to the website system.
 
-<sup>2</sup> 
-When a new data package is received from the receiver system, the database will take the UAS ID and check for pre-authorized access.
-
-<sup>3</sup> 
-When a drone is detected by the receiver if the drone does not have pre-authorized access, the database system will send a notification to the website system that asks for authorized access, if the user denies the access, then the Drone location, Drong speed, Control station location will be sent to the camera system.
-
-<sup>4</sup> 
-Regardless if a drone has authorized permission or not the Drone location, drone speed, and Control station location will be sent to the camera system.
-
-<sup>5</sup> 
-A status indication that provides a simple breakdown of the health of the camera.
-
-<sup>6</sup> 
-If no time limit is selected by the user, the database will only store the data for 90 days.
-
-<sup>7</sup> 
-The password is used for security reasons that prevent unwanted access to the database.
-
-<sup>8</sup> 
-The Raspberry Pi 5 supports both Dual-band 802.11ac Wi-Fi and Gigabit Ethernet[3]. Ethernet connection will be the priority option.
-
-<sup>9</sup> 
-Even though the Raspberry Pi is going to be inside the building, a case will be designed to prevent any direct physical contact. For example, the storage drive won't be easily accessed by random person.
 
 ## Schematic
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/01cd0112-f276-4ddb-9253-85a3b34842e7)
