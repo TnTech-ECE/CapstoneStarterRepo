@@ -139,15 +139,33 @@ $\ \theta_2 = \tan^{-1} (\frac{z}{l}) $
 #### Determining Straight Line Motion
 Given 3 points:
 
-$\ p_1 = (x_1 , y_1), p_2 = (x_2 , y_2), p_3 = (x_3 , y_3) $
+$\ p_1 = (x_1 , y_1, z_1), p_2 = (x_2 , y_2, z_2), p_3 = (x_3 , y_3, z_3) $
 
-The corresponding slope values between the points:
+The two directional vectors are:
 
-$\ m_1 = \frac{y_2 - y_1}{x_2 - x_1}, m_2 = \frac{y_3 - y_2}{x_3 - x_2} $
+$\ \overrightarrow{P_1P_2} = (x_1 - x_2, y_1 - y_2, z_1 - z_2) $
 
-If 
-$\ .95 \leq \frac{m_1}{m_2} \leq 1.05 $ 
-is true, straight line motion exists within 5% error margines. 
+$\ \overrightarrow{P_2P_3} = (x_2 - x_3, y_2 - y_3, z_2 - z_3) $
+
+
+And their magnitudes:
+
+$\ |\overrightarrow{P_1P_2}| = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2} $
+
+$\ |\overrightarrow{P_1P_2}| = \sqrt{(x_2 - x_3)^2+(y_2 - y_3)^2+(z_2 - z_3)^2} $
+
+
+If equations 1, 2, and 3, below are all true, straight line motion exists within 5% error margines. 
+
+1.
+$\ (\frac{x_1-x_2}{|\overrightarrow{P_1P_2}|} * .95) \leq \frac{x_2-x_3}{|\overrightarrow{P_2P_3}|} \leq (\frac{x_1-x_2}{|\overrightarrow{P_1P_2}|} * 1.05) $ 
+
+2.
+$\ (\frac{y_1-y_2}{|\overrightarrow{P_1P_2}|} * .95) \leq \frac{y_2-y_3}{|\overrightarrow{P_2P_3}|} \leq (\frac{y_1-y_2}{|\overrightarrow{P_1P_2}|} * 1.05) $ 
+
+3.
+$\ (\frac{z_1-z_2}{|\overrightarrow{P_1P_2}|} * .95) \leq \frac{z_2-z_3}{|\overrightarrow{P_2P_3}|} \leq (\frac{z_1-z_2}{|\overrightarrow{P_1P_2}|} * 1.05) $ 
+
 
 #### Predicting Future Location
 Given straight line motion, and the velocities:
@@ -157,12 +175,14 @@ $\ v_2 = \textrm{velocity value at point } p_2 $
 $\ v_3 = \textrm{velocity value at point } p_3 $
 
 Let the predicted location of the UAS or control station be 
-$\ (x_p , y_p) $ 
+$\ (x_p , y_p, z_p) $ 
 where:
 
 $\ x_p = x_3 + ((\frac{v_3}{v_2}) * (x_3 - x_2)) $
 
 $\ y_p = y_3 + ((\frac{v_3}{v_2}) * (y_3 - y_2)) $
+
+$\ z_p = z_3 + ((\frac{v_3}{v_2}) * (z_3 - z_2)) $
 
 ## Analysis
 
