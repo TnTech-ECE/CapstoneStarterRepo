@@ -1,6 +1,6 @@
 # Database System
 ## Functionality
-This system will receive data packages from the receiver or camera system, then the system will unpack the data and store it inside an SQL database, and the database will be hosted locally on a Raspberry Pi. Once the data is organized in a structured format, then the system will determine whether a drone is pre-authorized. If not authorized, then a request will be sent to the website system that asks the user for an operation access request, if the drone is within priority zones that were pre-marked by a user then it will forward the the following data to the camera system for tracking: Drone location, Drong speed, Control station location. Also, the database system will provide data access for the website system.
+The database subsystem will receive data from the receiver, website and camera subsystem, then store it locally. Data stored will containt the following: pre-authorized drone ID, pre-authorized flight information, pre-marked geographical locations, drone ID, and the location, Latitude, Longitude of the drone and control station. Whenever a drone is detected by the receiver, the database will check for pre-authorized access releated to the received drone ID. If not authorized, then a request will be sent to the website system that asks the user for an authorize request. If authorization denied or drone detected within any pre-marked geographical locations, then the Drone location, speed and Control station location will be sent to the camera subsystem. Also, the database subsystem will provide data access for the website subsystem.
 
 ## Constraints
 | No.| Constraint | Origin |
@@ -12,8 +12,8 @@ This system will receive data packages from the receiver or camera system, then 
 |  5 | The system shall indicate the health status of Camera system | Design Constraint |
 |  6 | The system shall store the data for at least 90 days and let the user specify the time limit | TTU Policy/Design Constraint |
 |  7 | The database shall be encrypted using a password | Design Constraint |
-|  8 | The system shall only send and receive data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
-|  9 | The Raspberry Pi shall have a casing that prevents direct physical interaction with the hardware | Hardware Constraint |
+|  8 | The system shall be able to send and receive data packages using 2.4/5 GHz wifi or Ethernet | Design Constraint |
+|  9 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
 The database system will receive an access request when the user clicks on a link from the website, once the access request is received the requested item will be pulled from the database and sent to the website system.
@@ -55,7 +55,7 @@ Once the database system receives a data package from the receiver system, it wi
 ## Setting up the Raspberry Pi
 The device will be powered by 5V/5A DC power via USB-C, a power supply is included in the kit, and an external monitor is needed to monitor the device.
 
-## MySQL database on Raspberry Pi
+## Database
 
 
 
