@@ -36,11 +36,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
-## Schematic and System Construction
-<img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-
-## Analysis
-For this subsystem, the following components and atomic-subsystems will be required.
+## Theory
 
 ### Single-Board Computer (SPU)
 For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer (or Single Processing Unit) will be utilized. This board, as specified in the datasheet[^3], contains many processing and peripheral support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
@@ -80,6 +76,14 @@ To protect the sensitive electronics required for the control of this system, <!
 
 ### Error Checking
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
+
+## Schematic and System Construction
+<img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
+
+## Analysis
+For this subsystem, the following components and atomic-subsystems will be required.
+
+
 
 ## System Construction
 The system will be built to provide protection from weather elements, while still allowing for communications and visual Line of Sight to function properly. TO ensure reliability, especially when servicing the system, stainless steel screws will be used to hold the case together, ensuring that they will still be removeable after being exposed to the elements over an extended period. A singular hole will be bored into the side of the enclosure in order to allow the power wires to enter, and will be properly sealed with rubber gromits, along with RTV gasket maker or silicone caulk to fully seal from water penetration.
