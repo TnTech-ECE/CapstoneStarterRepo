@@ -98,7 +98,7 @@ All data received from the database is in the form specified by the [Database Sy
 | pic_timestamp | array variable | 5 indexes | The pic_timestamp array will hold the date and time at which the last picture was taken where index 0 - index 4 will contain the month, day, year, military hour, and second respectively. | 
 | take_picture | boolean variable | -- | When the take_picture boolean is high, the system will take a picture. When the boolean is low, the system will not take a picture. This boolean will be set high by the Analyze_data function and set low after a picture is taken |
 | predict_location | boolean variable | -- | When the predict_location boolean is high, the system has detected that there is straight line motion within 5% error margins and the future location of the UAS or control station should be determined. When the boolean is low, no future location calculations will take place. |
-| location_prediction | array | 3 indexes | The location_prediction array will hold the x, y, and z coordinates |
+| location_prediction | array | 3 indexes | The location_prediction array will hold the x, y, and z coordinates of the predicted UAS location |
 ### Functions 
 | Function Name |  Task(s) | Other specifications |
 | ------------- | -------- | -------------------- |
@@ -106,10 +106,10 @@ All data received from the database is in the form specified by the [Database Sy
 | Send_request | This function will recieve an input indicating that there is data to send. After receiving this input, the function will send a data transfer request to the database.| Will only be utilized if the [Database System](Database_System.md) specifies a need for authentication |
 | Send_data | This function will receive the image captured by the camera, the camera status boolean , and the output from the database stating whether the data is ready to be sent or not (only if utilized by the [Database System](Database_System.md)). Then, the system will send the image and camera status boolean to the database| -- |
 | Store_data | This function will receive the RID data from the Database system. It will then store the data in the RID_data array. | -- |
-| Analyze_data | This function will look at the RID_data array and determine if the data is sufficient, whether the system should focus on the UAS or control station and if the system should attempt to capture a picture. Inputs into this function will be the RID_Data array, the high priority area alert boolean, and the pic_timestamp array. The output will be either setting the take_picture boolean high or keeping it low. | Sufficient data contains, at minimum, all of the required RID data |
+| Analyze_data | This function will look at the RID_data array and determine if the data is sufficient, whether the system should focus on the UAS or control station and if the system should attempt to capture a picture. Inputs into this function will be the RID_Data array, the high priority area alert boolean, and the pic_timestamp array. The first output will be either setting the take_picture boolean high or keeping it low. The second output will indicate which subject the system should attempt to take a picture of. | Sufficient data contains, at minimum, all of the required RID data |
 | Determine_SLM | This function will utilize the RID_data array to determine whether the UAS or control station is moving in straight line motion within a 5% error margin. If straight line motion is determined, the function will set the predict_location boolean high  | This function will only execute its calculations when the take_picture boolean is high |
 | Predict_location | This function will utilize the RID_data array to determine the future location of the UAS or control system. This function will output the location data. | This function will only execute its calculations when the take_picture boolean is high and the predict_location boolean is high |
-| Determing_angles | This function will determine the pointing angles for the motor servos. It will utilize the RID_data when the the values of the  
+| Determing_angles | This function will determine the pointing angles for the motor servos. It will utilize the RID_data according to when the the values of the take_picture boolean and the    
 
 
 
