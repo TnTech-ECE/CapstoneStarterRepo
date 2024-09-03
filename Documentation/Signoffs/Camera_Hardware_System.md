@@ -68,7 +68,7 @@ The camera selected for this application is a 12.3MP IMX477 with a pre-installed
 
 ### Enclosure*
 <!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67, while also still allowing the physical camera to image and capture the UAS mid-flight as intended. A small hole will be bored into the side of the box to allow the power cable connections to pass through, and will be immediately patched by a caulk or RTV material to retain the IP67 water rating.
+To protect the sensitive electronics required for the control of this system, <!--(two)* Wc-27F--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67, while also still allowing the physical camera to image and capture the UAS mid-flight as intended. A small hole will be bored into the side of the box to allow the power cable connections to pass through, and will be immediately patched by a caulk or RTV material to retain the IP67 water rating.
 
 []image
 *Sensitive to team review
