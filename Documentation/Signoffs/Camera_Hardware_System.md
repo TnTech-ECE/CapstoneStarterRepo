@@ -63,18 +63,18 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is a 12.3MP IMX477 with a variable lens attached. This varifocal lens has an adjustable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to each specific deployment area when installed. To communicate and control the camera shutter, the camera will be connected using a 3 ft ( 91.44 cm) CSI ribbon cable
-[]image
+The camera selected for this application is a 12.3MP IMX477 with a pre-installed tripod mount a C/CS lens mount to increase the camera's image range and clarity. This camera has a base resolution of []x[], allowing for pictures to be crisp and clear provided ideal conditions. The chosen varifocal lens has an adjustable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to a wider or more narrow view when installed. To communicate and control the camera shutter, the camera will be connected using a 3 ft (91.44 cm) Camera Serial Interface (CSI) ribbon cable to the respective port in the Raspberry Pi. This length was chosen to allow the camera to move as it wishes without risking damaging the connection or the cable. This cable will also be zip-tied as required to restrict excessive movement where it is not necessary.
+[]image, []image
 
-### Enclosure
+### Enclosure*
 <!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67
+To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67, while also still allowing the physical camera to image and capture the UAS mid-flight as intended. A small hole will be bored into the side of the box to allow the power cable connections to pass through, and will be immediately patched by a caulk or RTV material to retain the IP67 water rating.
 
 []image
-<!--*Sensitive to team review-->
+*Sensitive to team review
 
 ### Error Checking
-The system will use a network-driven status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
+The system will use a network-driven status indicator system to check for any errors. A disconnected network connection, a powered-down SPU, communication issues between the camera and SPU, or lost power to either servo motor, will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue. This will be further defined in the [] subsystem 
 
 ## System Design and Construction
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
@@ -101,7 +101,7 @@ For this subsystem, the following components and atomic-subsystems will be requi
 [^4]: [What is a Servo?](https://www.electrical4u.com/what-is-servo-motor/) (Accessed May 2, 2024)
 [^5]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
 [^6]: [What is a Stepper Motor?](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
-[^7]: [Sony IMX317 Datasheet](https://www.sony-semicon.com/files/62/pdf/p-13_IMX317CQC_Flyer.pdf) (Accessed May 2, 2024)
+<!--[^7]: [Sony IMX317 Datasheet](https://www.sony-semicon.com/files/62/pdf/p-13_IMX317CQC_Flyer.pdf) (Accessed May 2, 2024)-->
 [^8]: [Servo Datasheet](https://images-na.ssl-images-amazon.com/images/I/81Lbgu+nG6L.pdf) (Accessed May 2, 2024)
 <!--etc.-->
 
