@@ -1,4 +1,4 @@
-# Camera Hardware System (Theory, Design, Analysis of Design, BOM)
+# Camera Hardware System <!--(Theory, Design, Analysis of Design, BOM)-->
 ## Functionality
 The Camera Hardware System is responsible for the design of a 2 degree of freedom, steerable camera system capable of capturing images of in-flight Unmanned Aerial Systems (UAS) or their control stations and sending them to the database storage. This system will also monitor itself for errors and report them to the database when applicable.
 
@@ -36,7 +36,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
-## Theory
+## Design Theory
 
 ### Single-Board Computer (SPU)
 For the control and communication aspects of this system, a Raspberry Pi 4B Single-Board Computer (or Single Processing Unit) will be utilized. This board, as specified in the datasheet[^3], contains many processing and peripheral support specifications that will enable this system to run at high speeds. Along with 4 USB 2.0 and 3.0 ports, there are also 16 General Purpose Input-Output (GPIO) pins, 2 of which will be used to host and communicate with the servo motors required for the project. The pinout for this SPU can be seen below.
@@ -50,7 +50,7 @@ From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be 
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
 
 #### Servo - Background Info
-Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor's horn.
+Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can then be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor's horn.
 
 #### Servo - Use And Analysis
 The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
@@ -63,13 +63,12 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
 ### Camera
-The camera selected for this application is a [temp] camera with a variable lens attached. This lens has a variable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to each specific deployment area when installed. <!--Arducam 5MP OV5647 Camera with a resolution of 2592 x 1944 pixels. The 23mm focusing lens has a focal length of| ELP 8MP USB 3.0 camera containing a Sony IMX317[^7] Camera sensor. The attached lens has variable manual zoom, focus, and ISO, with a focal length ranging from 2.8 mm - 12 mm and the field of view ranging from unspecified values. -->
+The camera selected for this application is a 12.3MP IMX477 with a variable lens attached. This varifocal lens has an adjustable focal length ranging from [4-12 millimeters], allowing for the system to be tuned to each specific deployment area when installed. To communicate and control the camera shutter, the camera will be connected using a 3 ft ( 91.44 cm) CSI ribbon cable
 []image
-
 
 ### Enclosure
 <!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. 
+To protect the sensitive electronics required for the control of this system, <!--(two)*--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67
 
 []image
 <!--*Sensitive to team review-->
@@ -77,18 +76,12 @@ To protect the sensitive electronics required for the control of this system, <!
 ### Error Checking
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection or a powered-down SPU will cause a flag to be set in the website system, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue.
 
-## Schematic and System Construction
+## System Design and Construction
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-
-## Analysis
-For this subsystem, the following components and atomic-subsystems will be required.
-
-
-
-## System Construction
 The system will be built to provide protection from weather elements, while still allowing for communications and visual Line of Sight to function properly. TO ensure reliability, especially when servicing the system, stainless steel screws will be used to hold the case together, ensuring that they will still be removeable after being exposed to the elements over an extended period. A singular hole will be bored into the side of the enclosure in order to allow the power wires to enter, and will be properly sealed with rubber gromits, along with RTV gasket maker or silicone caulk to fully seal from water penetration.
 
-[]bp
+## Design Analysis
+For this subsystem, the following components and atomic-subsystems will be required.
 
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
