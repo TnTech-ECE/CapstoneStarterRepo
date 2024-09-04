@@ -105,6 +105,7 @@ All data received from the database is in the form specified by the [Database Sy
 | theta_h | signed integer | -- | The theta_h integer is determined by the DetermineAngles function and holds the value of the horizontal camera pointing angle |
 | theta_v | signed integer | -- | The theta_v integer is determined by the DetermineAngles function and holds the value of the vertical camera pointing angle |
 | camera_status | boolean variable | -- | The camera_status boolean will be set high when the CheckSystem function determines that there is an error in the system. |
+
 ### Functions 
 | Function Name |  Task(s) | Other specifications |
 | ------------- | -------- | -------------------- |
