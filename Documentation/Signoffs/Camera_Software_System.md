@@ -121,7 +121,7 @@ All data received from the database is in the form specified by the [Database Sy
 | DetermingAngles | This function will determine the pointing angles for the motor servos. It will execute when the the values of the take_picture boolean is high and both the slm and new_angles booleans are high. The output of this function are the theta_v and theta_h signed integers. After calculating the pointing angles, the function will set the slm and new_angles booleans low. | See [associated section](####Camera-Positioning) for the math associated with this function. | 
 | MoveCamera | This function uses the camera pointing angles and determines the voltage levels to apply to the servo motors. After applying the voltages, MoveCamera will set the camera_set boolean high | -- |
 | TakePicture | This function controls the image capturing capabilities of the camera. It will capture a picture when the camera_set boolean is high, save the time at which the picture is taken in the picture_timestamp array, save the captured image, and set the camera_set and take_picture booleans low. | -- |
-| CheckSystem | This function
+| CheckSystem | This function will receive system inputs such as power status and will use the inputs to determine what the status of the entire camera software system is. If a problem is detected, CheckSystem will set the camera_status boolean high. | -- |
 
 
 
