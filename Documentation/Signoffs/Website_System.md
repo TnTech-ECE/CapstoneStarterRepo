@@ -6,29 +6,26 @@ The purpose of the website subsystem is to allow a designated user to access the
 | No.| Constraint | Origin |
 | -- | --------- |--------|
 |  1 | The database must be accessed through a website as opposed to a mobile phone application. | Campus Police |
-|  2 | For the sake of this project, real-time is defined as less-than or equal to one second. | Project Team |
-|  3 | The system shall notify campus police and display data in 'real-time' on the website. | Project Team / Campus Police |
-|  4 | The drone information will be displayed to the website concisely, allowing for utilization with minimized training. A user-selected option may be implemented to view all detected drone flights (authorized and unauthorized) to reduce clutter. | Project Team |
-|  5 | The website will be constructed securely, within reason. | Project Team |
-|  6 | The website will be constructed to comply with standards put into place by the W3C (World Wide Web Consortium). | Project Team / Supervisor |
-|  7 | The system shall allow campus police to authorize specific drones for permitted flights in a specified time frame. | Project Team |  
-|  8 | The system shall increase the alert's urgency if a drone is detected in any designated geographical region. | Project Team |  
+|  2 | Real-time is defined as less-than or equal to ten seconds. The system shall notify campus police and display data in 'real-time' on the website. | Project Team / Campus Police |
+|  3 | The drone information will be displayed to the website concisely, allowing for utilization with minimized training. A user-selected option may be implemented to view all detected drone flights (authorized and unauthorized) to reduce clutter. | Project Team |
+|  4 | The website will be constructed securely, within reason. | Project Team |
+|  5 | The website will be constructed to comply with standards put into place by the W3C (World Wide Web Consortium). | Project Team / Supervisor |
+|  6 | The system shall allow campus police to authorize specific drones for permitted flights in a specified time frame. | Project Team |  
+|  7 | The system shall increase the alert's urgency if a drone is detected in any designated geographical region. | Project Team |  
 
 <sup>1</sup> For the safety of officers in the field, the campus police department has requested that the obtained Remote ID (RID) data be displayed on a website as opposed to a mobile application. Citing concerns about officers utilizing personal mobile devices in the field, the police captain and dispatcher we met with expressed an explicit desire for a website-based information display. For the data to get to officers in the field, a dispatcher will relay information regarding the drone to the officer.
 
-<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. 
+<sup>2</sup> To allow for the timely dispatch of officers to the location of the detected drone, the campus police department has requested that the system operate as close to real-time as possible. Upon initial detection of a given Remote ID signal, a notification will be issued to the TTU police department. While this is significantly longer than real-time is normally defined to be, we feel that for this project, this is a reasonable amount of time. At world-record speeds, a drone pilot would at most be able to move 0.075 miles away on foot. This gives ample time for the system to detect and report the drone, and allows the dispatcher to provide updates on significant movements. 
 
-<sup>3</sup> This constraint works alongside the previous one to display the data to TTU police in an appropriate manner. It will take slightly longer to display the data on the website but in a successful implementation, this will still take less than one second. 
+<sup>3</sup> To allow for easy integration into the campus police department's workflow, the system will be designed in a way so that minimal training is required for operation. A user should be able to look at the website and obtain a general idea of everything that is there and how to utilize it. Certain toggles to display/hide data may be implemented for the clarity of the website, and these should be intuitive for the user. 
 
-<sup>4</sup> To allow for easy integration into the campus police department's workflow, the system will be designed in a way so that minimal training is required for operation. A user should be able to look at the website and obtain a general idea of everything that is there and how to utilize it. Certain toggles to display/hide data may be implemented for the clarity of the website, and these should be intuitive for the user. 
+<sup>4</sup> To prevent the unauthorized access of data in our database, the website hosting the data must be constructed securely, to a reasonable standard. Of course, nothing can be 100% secure, so it would be remiss to say that our website is "totally secure", but it will be constructed in such a way that it is difficult for malicious entities to gain access.
 
-<sup>5</sup> To prevent the unauthorized access of data in our database, the website hosting the data must be constructed securely, to a reasonable standard. Of course, nothing can be 100% secure, so it would be remiss to say that our website is "totally secure", but it will be constructed in such a way that it is difficult for malicious entities to gain access.
+<sup>5</sup> The W3C is a non-profit organization that works to develop standards for the world wide web. To be certain that our website is accessible, private, and secure, we can utilize validators created by the W3C to verify our website is ready for use on any device.
 
-<sup>6</sup> The W3C is a non-profit organization that works to develop standards for the world wide web. To be certain that our website is accessible, private, and secure, we can utilize validators created by the W3C to verify our website is ready for use on any device.
+<sup>6</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than one second. 
 
-<sup>7</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than one second. 
-
-<sup>8</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make informed decisions about what order to operate in.
+<sup>7</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make informed decisions about what order to operate in.
 
 ## Schematic
 <img src="/Documentation/Images/flow_control_v3.png" >
