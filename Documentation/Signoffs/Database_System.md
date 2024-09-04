@@ -10,7 +10,7 @@ The database subsystem will receive data from the receiver, website and camera s
 |  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem  | Design Constraint |
 |  4 | The system shall indicate the health status of Camera system | Design Constraint |
 |  5 | The system shall store the data for at least 90 days | TTU Policy/Design Constraint |
-|  6 | The Device used to host the database shall support network cappability for sending and receiving data | Design Constraint |
+|  6 | The system shall support data transfer over the network | Design Constraint |
 |  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
