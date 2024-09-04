@@ -49,11 +49,19 @@ From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be 
 ### Servo Motors
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
 
+
+
 #### Servo - Background Info
 Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can then be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor's horn.
 
+
+
 #### Servo - Use And Analysis
-The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. By attaching these to a bracket system as shown below, we will be able to have tilt and pan control of our camera.
+
+<img src= "/Documentation/Images/Camera Hardware System/servo.jpg" width="400" height="334"> <img src= "/Documentation/Images/Camera Hardware System/servo_bracket.jpg" width="340" height="334">
+
+These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
 
 $\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * ( \tau_{DBand} + 1) $
 
@@ -64,7 +72,9 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 
 ### Camera
 The camera selected for this application is a 12.3MP IMX477 with a pre-installed tripod mount a C/CS lens mount to increase the camera's image range and clarity. This camera has a base resolution of 4056x3040 pixels [^7][^8], allowing for pictures to be crisp and clear in almost all conditions. The chosen varifocal lens has a focal length ranging from [4-12 millimeters], allowing for the system to be tuned to a wider or more narrow view when installed. To communicate and control the camera shutter, the camera will be connected using a 3 ft (91.44 cm) Camera Serial Interface (CSI) ribbon cable to the respective port in the Raspberry Pi. This length was chosen to allow the camera to move as it wishes without risking damaging the connection or the cable. This cable will also be zip-tied as required to restrict excessive movement where it is not necessary.
-[]image, []image
+
+<img src= "/Documentation/Images/Camera Hardware System/imx477.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/lens.jpg" width="233" height="353">
+
 
 ### Enclosure*
 <!-- Box for electronics and clear top for camera --> 
