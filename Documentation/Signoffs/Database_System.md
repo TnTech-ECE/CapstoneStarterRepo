@@ -10,7 +10,7 @@ The database subsystem will receive data from the receiver, website and camera s
 |  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem  | Design Constraint |
 |  4 | The system shall indicate the health status of Camera system | Design Constraint |
 |  5 | The system shall store the data for at least 90 days | TTU Policy/Design Constraint |
-|  6 | The system shall use 2.4/5 GHz wifi or Ethernet to receive data from the receiver, website, camera subsystem and only send data to the website, camera subsystem | Design Constraint |
+|  6 | The Device used to host the database shall support network cappability for sending and receiving data | Design Constraint |
 |  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
@@ -18,18 +18,20 @@ The database subsystem will receive data from the receiver, website and camera s
 
 ## Schematic
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/01cd0112-f276-4ddb-9253-85a3b34842e7)
-This Figure show the Hardware connection
+This a exmaple figure show the Hardware connection, will be replaced
 
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
 
 
 ## Analysis
-Once the database system receives a data package from the receiver system, it will break down the Message Block inside the data package and store the relevant information inside the SQL database, then take the UAS ID and check for authority access, if none are found then forward an authority access request to the website system. If access is denied or the drone is within the priority zone pre-marked by the user, then data related to the Drone location, drone speed, and Control station location will be forwarded to the camera software system, and the camera software system will return an image. All data received from another system will be stored inside a SQL database which is implemented on Raspberry Pi using MySQL, and the rest of the code that takes care of transferring data will be implemented using either C/C++ or Python.
+The choice of database used is mySQL, which will be host on a raspberry pi device. The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
 
-## Setting up the Raspberry Pi
-The device will be powered by 5V/5A DC power via USB-C, a power supply is included in the kit, and an external monitor is needed to monitor the device.
+ex: Once the database system receives a data package from the receiver system, it will break down the data package and store the relevant information inside the SQL database.
 
-## Database
+## MySQL
+Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
+
+
 
 
 
