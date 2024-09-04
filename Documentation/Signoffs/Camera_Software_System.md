@@ -106,6 +106,7 @@ All data received from the database is in the form specified by the [Database Sy
 | theta_h | signed integer | -- | The theta_h integer is determined by the DetermineAngles function and holds the value of the horizontal camera pointing angle |
 | theta_v | signed integer | -- | The theta_v integer is determined by the DetermineAngles function and holds the value of the vertical camera pointing angle |
 | camera_status | boolean variable | -- | The camera_status boolean will be set high when the CheckSystem function determines that there is an error in the system. |
+| camera_set | boolean variable | -- | The camera_set boolean will be set high by the MoveCamera function when the camera has been moved into the calculated position and is ready to capture an image |
 
 ### Functions 
 | Function Name |  Task(s) | Other specifications |
@@ -117,7 +118,8 @@ All data received from the database is in the form specified by the [Database Sy
 | AnalyzeData | This function will look at the RID_data array and determine if the data is sufficient, whether the system should focus on the UAS or control station and if the system should attempt to capture a picture. Inputs into this function will be the RID_Data arra and the pic_timestamp array. The first output will be either setting the take_picture boolean high or keeping it low. The second output will indicate which subject the system should attempt to take a picture of by using the picture_subject boolean. | Sufficient data contains, at minimum, all of the required RID data |
 | DetermineSlm | This function will utilize the RID_data array to determine whether the UAS or control station, depending on the value of the function's input boolean picture_subject, is moving in straight line motion within a 5% error margin. If straight line motion is determined, the function will set the predict_location boolean high. This function will only execute its calculations when the take_picture boolean is high. | See [associated section](####Determining-Straight-Line-Motion) for the math associated with this function. |
 | PredictLocation | This function will utilize the RID_data array to determine the future location of the UAS or control system, depending on the value of the picture_subject boolean. This function will only execute when the slm boolean is set high by the DetermineSlm function. | See [associated section](####Predicting-Future-Location) for the math associated with this function. |
-| DetermingAngles | This function will determine the pointing angles for the motor servos. It will execute when the the values of the take_picture boolean is high and both the slm and new_angles booleans are high. The output of this function are the theta_v and theta_h signed integers | See [associated section](####Camera-Positioning) for the math associated with this function. |    
+| DetermingAngles | This function will determine the pointing angles for the motor servos. It will execute when the the values of the take_picture boolean is high and both the slm and new_angles booleans are high. The output of this function are the theta_v and theta_h signed integers | See [associated section](####Camera-Positioning) for the math associated with this function. | 
+| MoveCamera |
 
 
 
