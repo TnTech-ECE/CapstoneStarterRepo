@@ -96,11 +96,13 @@ All data received from the database is in the form specified by the [Database Sy
 | ------------- | --------- | ------------ | -------------------- |
 | RID_data | global array variable | 27 indexes | The RID_data array should be able to hold three seperate RID data packages from the database because computing the future UAS positioning requires knowing data from three points in time. |
 | pic_timestamp | array variable | 5 indexes | The pic_timestamp array will hold the date and time at which the last picture was taken where index 0 - index 4 will contain the month, day, year, military hour, and millisecond respectively. | 
-| take_picture | boolean variable | -- | When the take_picture boolean is high, the system will take a picture. When the boolean is low, the system will not take a picture. This boolean will be set high by the Analyze_data function and set low after a picture is taken |
+| take_picture | boolean variable | -- | When the take_picture boolean is high, the system will take a picture. When the boolean is low, the system will not take a picture. This boolean will be set high by the AnalyzeData function and set low after a picture is taken |
 | picture_subject | boolean variable | -- | The picture_subject variable is high when the system should attempt to take a picture of the UAS and is low when the system should attempt to take a picture of the control station. The staus of this boolean is determined by the AnalyzeData function |
 | slm | boolean variable | -- | When the slm boolean is high, the system has detected that there is straight line motion within 5% error margins and the future location of the UAS or control station should be determined. When the boolean is low, no future location calculations will take place. |
 | can_send | boolean variable | -- | The can_send boolean tells the SendData function that the database is ready to collect data from the system |
-| can_receive |
+| can_receive | boolean variable | -- | The can_receive boolean tells the StoreData function that the RID data package from the database is ready to be collected and analyzed |
+| theta_h | signed integer | -- | The theta_h integer is determined by the DetermineAngles function and holds the value of the horizontal camera pointing angle |
+| theta_v | signed integer | -- | The theta_v integer is determined by the DetermineAngles function and holds the value of the vertical camera pointing angle |
 ### Functions 
 | Function Name |  Task(s) | Other specifications |
 | ------------- | -------- | -------------------- |
