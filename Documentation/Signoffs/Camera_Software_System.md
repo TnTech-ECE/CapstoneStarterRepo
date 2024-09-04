@@ -123,7 +123,8 @@ All data received from the database is in the form specified by the [Database Sy
 | TakePicture | This function controls the image capturing capabilities of the camera. It will capture a picture when the camera_set boolean is high, save the time at which the picture is taken in the picture_timestamp array, save the captured image, and set the camera_set and take_picture booleans low. | -- |
 | CheckSystem | This function will receive system inputs such as power status and will use the inputs to determine what the status of the entire camera software system is. If a problem is detected, CheckSystem will set the camera_status boolean high. | -- |
 
-
+#### Functions Flowchart 
+<img src= "/Documentation/Images/Camera_Software_System/FunctionsFlowchart.png" width="750" height="450">
 
 ### Camera Positioning
 #### Horizontal Pointing Angle
