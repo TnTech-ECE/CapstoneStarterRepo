@@ -9,10 +9,10 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  2| System shall not take into consideration light levels or physical obstructions when capturing images|Stakeholder Constraint|
 |  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Design Constraint|
 |  4| Camera zoom, focus, and light sensitivity (ISO) shall not be controllable by system software| Design Constraint|
-|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± X° range of accuracy [^x]| Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
+|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
-|  7| Camera system enclosure will meet minimum water resistance standard requirements of IPX6 or NEMA 4(X) to protect sensitive electronics| Environmental Constraint|
-|  8| Camera system shall not draw more than 40 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
+|  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or NEMA 4X to protect sensitive electronics| Environmental Constraint|
+|  8| Camera system shall not draw more than 50 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
 | 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
 
