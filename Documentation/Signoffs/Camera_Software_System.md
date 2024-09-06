@@ -200,7 +200,13 @@ $\ z_p = z_3 + ((\frac{v_3}{v_2}) * (z_3 - z_2)) $
 ## Analysis
 ### Proving Camera Pointing Angle Accuracy
 Utilizing the 3D plot function of MATLAB, a simulation of a target in flight and a camera were created. The Figure below shows this simulation where the blue line represents the path of the target, the black circle represents the location of the camera, the yellow circles on the blue path line represent the point in space that the camera is attempting to point to and the dotted lines representing the camera vectors which visually help make it clear that in theory the math is capable of orienting the camera towards the target given its x, y, and z coordinates. The path of the target was chosen arbitrarily with the only requirement being that it traveled in all quadrants around the camera. The location of the camera was also specifically chosen to not lie at the origin to ensure a degree of realism. The MATLAB code and figure are as follows:
-<img src= "/Documentation/Images/Camera_Software_System/Pointing angles matlab graph.fig" width="300" height="200">
+
+<img src= "/Documentation/Images/Camera_Software_System/Pointing angles matlab graph.png" width="500" height="400">
+
+<img src= "/Documentation/Images/Camera_Software_System/Pointing angles matlab graph xy.png" width="500" height="400">
+
+<img src= "/Documentation/Images/Camera_Software_System/Pointing angles matlab graph yz.png" width="500" height="400">
+
 ```Matlab
 clear
 
