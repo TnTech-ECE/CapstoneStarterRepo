@@ -207,6 +207,8 @@ Utilizing the 3D plot function of MATLAB, a simulation of a target in flight and
 
 <img src= "/Documentation/Images/Camera_Software_System/Pointing angles matlab graph yz.png" width="500" height="400">
 
+The MATLAB code analyzes the simulated path of the target, uses the derived [equations](####Camera-Positioning) to calculate the pointing angles. Then, utilizing only those pointing angles, the code reverse engineers the point on the path that the camera will be focussing on and the vector from the camera to that point for intervals along the target's path. 
+
 ```Matlab
 clear
 
