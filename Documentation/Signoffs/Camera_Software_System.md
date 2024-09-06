@@ -130,9 +130,9 @@ All data received from the database is in the form specified by the [Database Sy
 #### Horizontal Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle1.png" width="300" height="200">
 
-$\ x = |\textrm{UAS longitude}|-|\textrm{Camera longitude}| $
+$\ x = \textrm{UAS longitude}-\textrm{Camera longitude} $
 
-$\ y = |\textrm{UAS latitude}|-|\textrm{Camera latitude}| $
+$\ y = \textrm{UAS latitude}-\textrm{Camera latitude} $
 
 $\ \theta_1 = \tan^{-1} (\frac{y}{x}) $
 
@@ -141,7 +141,7 @@ $\ \textrm{If x is a negative number: } \theta_1 = \theta_1 + 180 \degree $
 #### Vertical Pointing Angle
 <img src= "/Documentation/Images/Camera_Software_System/angle2.png" width="300" height="200">
 
-$\ z = |\textrm{UAS altitude}|-|\textrm{Camera altitude}| $
+$\ z = \textrm{UAS altitude}-\textrm{Camera altitude} $
 
 $\ l = \sqrt{x^2+y^2} $
 
