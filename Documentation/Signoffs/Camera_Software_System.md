@@ -198,7 +198,183 @@ $\ y_p = y_3 + ((\frac{v_3}{v_2}) * (y_3 - y_2)) $
 $\ z_p = z_3 + ((\frac{v_3}{v_2}) * (z_3 - z_2)) $
 
 ## Analysis
+### Proving Camera Pointing Angle Accuracy
+Utilizing the 3D plot function of MATLAB, a simulation of a target in flight and a camera were created. The Figure below shows this simulation where the blue line represents the path of the target, the black circle represents the location of the camera, the yellow circles on the blue path line represent the point in space that the camera is attempting to point to and the dotted lines representing the camera vectors which visually help make it clear that in theory the math is capable of orienting the camera towards the target given its x, y, and z coordinates. The path of the target was chosen arbitrarily with the only requirement being that it traveled in all quadrants around the camera. The location of the camera was also specifically chosen to not lie at the origin to ensure a degree of realism. The MATLAB code and figure are as follows:
+```Matlab
+>> clear
 
+%defining path of the UAS or control station
+t = -10:.001:10;
+x = 2.*t.*cos(t);
+y = sin(t).*t.^2+3.*t+5;
+
+%camera coordinates
+cx = -5;
+cy = 4;
+cz = -3;
+
+%plotting path
+p = plot3(x,y,t);
+p.Color = [0.3 0.5 0.8];
+p.LineWidth = 1.5;
+
+hold on
+
+%plotting camera
+c = plot3(cx,cy,cz,'o');
+c.Color = "black";
+c.LineWidth = 5;
+
+t1 = -10:.5:10;
+x1 = 2.*t1.*cos(t1);
+y1 = sin(t1).*t1.^2+3.*t1+5;
+
+%calculating pointing angles
+xp = (x1) - (cx);
+yp = (y1) - (cy);
+theta_1 = atand(yp./xp);
+
+for i = 1:length(t1)
+    if xp(i) < 0 
+        theta_1(i) = theta_1(i) + 180;
+    end
+end    
+
+tp = (t1) - (cz);
+l = sqrt((xp.^2)+(yp.^2));
+theta_2 = atand(tp./l);
+
+r = sqrt((xp.^2)+(yp.^2)+(tp.^2));
+
+%Reverse engineering the pointing angles to prove accuracy:
+
+%polar to cartestian conversions
+xc = (r .* cosd(theta_1) .* cosd(theta_2)) + cx;
+yc = (r .* sind(theta_1) .* cosd(theta_2)) + cy;
+zc = (r .* sind(theta_2)) + cz;
+
+%plotting camera points
+d = plot3(xc,yc,zc,'o');
+d.LineWidth = 1;
+
+%plotting camera vectors
+for i = 1:length(t1)
+
+    a = xc(i);
+    b = yc(i);
+    c = zc(i);
+
+    k = (xc(i) - cx);
+    m = (yc(i) - cy);
+    n = (zc(i) - cz);
+        
+    xl = cx:k/1000:a;
+    yl = cy:m/1000:b;
+    zl = cz:n/1000:c;
+    
+    
+    if k == 0
+        xl = ones([1 1001]).*cx;
+    end
+
+    if m == 0
+        yl = ones([1 1001]).*cy;
+    end
+
+    if n == 0
+        zl = ones([1 1001]).*cz;
+    end
+
+    plot3(xl,yl,zl,'--');
+end
+>> clear
+
+%defining path of the UAS or control station
+t = -10:.001:10;
+x = 2.*t.*cos(t);
+y = sin(t).*t.^2+3.*t+5;
+
+%camera coordinates
+cx = -5;
+cy = 4;
+cz = -3;
+
+%plotting path
+p = plot3(x,y,t);
+p.Color = [0.3 0.5 0.8];
+p.LineWidth = 1.5;
+
+hold on
+
+%plotting camera
+c = plot3(cx,cy,cz,'o');
+c.Color = "black";
+c.LineWidth = 5;
+
+t1 = -10:.5:10;
+x1 = 2.*t1.*cos(t1);
+y1 = sin(t1).*t1.^2+3.*t1+5;
+
+%calculating pointing angles
+xp = (x1) - (cx);
+yp = (y1) - (cy);
+theta_1 = atand(yp./xp);
+
+for i = 1:length(t1)
+    if xp(i) < 0 
+        theta_1(i) = theta_1(i) + 180;
+    end
+end    
+
+tp = (t1) - (cz);
+l = sqrt((xp.^2)+(yp.^2));
+theta_2 = atand(tp./l);
+
+r = sqrt((xp.^2)+(yp.^2)+(tp.^2));
+
+%Reverse engineering the pointing angles to prove accuracy:
+
+%polar to cartestian conversions
+xc = (r .* cosd(theta_1) .* cosd(theta_2)) + cx;
+yc = (r .* sind(theta_1) .* cosd(theta_2)) + cy;
+zc = (r .* sind(theta_2)) + cz;
+
+%plotting camera points
+d = plot3(xc,yc,zc,'o');
+d.LineWidth = 1;
+
+%plotting camera vectors
+for i = 1:length(t1)
+
+    a = xc(i);
+    b = yc(i);
+    c = zc(i);
+
+    k = (xc(i) - cx);
+    m = (yc(i) - cy);
+    n = (zc(i) - cz);
+        
+    xl = cx:k/1000:a;
+    yl = cy:m/1000:b;
+    zl = cz:n/1000:c;
+    
+    
+    if k == 0
+        xl = ones([1 1001]).*cx;
+    end
+
+    if m == 0
+        yl = ones([1 1001]).*cy;
+    end
+
+    if n == 0
+        zl = ones([1 1001]).*cz;
+    end
+
+    plot3(xl,yl,zl,'--');
+end
+>> 
+```
 ## BOM
 none
 ## References
