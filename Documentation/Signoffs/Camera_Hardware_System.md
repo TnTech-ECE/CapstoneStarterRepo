@@ -12,7 +12,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or NEMA 4X to protect sensitive electronics| Environmental Constraint|
-|  8| Camera system shall not draw more than 50 Watts of power, with 5 - 7 Volts and X Amps being needed for the entire system| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
+|  8| Camera system shall not draw more than 50 Watts of power<!--, with 5 - 7 Volts and X Amps being needed for the entire system-->| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
 | 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
 
@@ -91,12 +91,20 @@ bleh bla bleh
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
 | Raspberry Pi 4B, 8GB Memory| RPI4-MODBP-8GB| 1x1| $74.99| $74.99|
-| Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
+| Camera Pan/Tilt Servo Bracket| B0BYNBZHD1| 1x1| $9.99| $9.99|
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| DS3218| 1x1| $14.66| $14.66|
-| Camera| -| 1x1| $.00| $.00|
-| Camera Pan/Tilt Servo Bracket| Generic| 1x1| $9.99| $9.99|
-|Total     |             |          |                | $220.31|
-<!--| System Enclosure| 3D-Printed, Custom| 1x1| $-.--| $-.--|-->
+| Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
+| Raspberry Pi IMX477 12.3 MP High Quality Camera| ‎B09YHN5DBY| 1x1| $59.99| $59.99|
+| 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
+| 3.28 ft / 100 cm CSI Flex Ribbon Cable| B087FDJ2RP| 1x1| $5.49| $5.49|
+| CPU Enclosure| x| 1x1| $-.--| $-.--|
+| Camera Enclosure| x| 1x1| $-.--| $-.--|
+| Enclosure Vent Plugs| x| 1x2| $-.--| $-.--|
+| Enclosure Cable Glands| x| 1x2| $-.--| $-.--|
+| Silicon Caulk| x| 1x1| $-.--| $-.--|
+| Zip-Ties| x| 1x1| $-.--| $-.--|
+|Total     |             |          |                | $-.--|
+
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, [Available:](https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/) (Accessed Feb. 19, 2024).
