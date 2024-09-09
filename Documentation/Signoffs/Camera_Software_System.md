@@ -165,7 +165,7 @@ And their magnitudes:
 
 $\ |\overrightarrow{P_1P_2}| = \sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2} $
 
-$\ |\overrightarrow{P_1P_2}| = \sqrt{(x_2 - x_3)^2+(y_2 - y_3)^2+(z_2 - z_3)^2} $
+$\ |\overrightarrow{P_2P_3}| = \sqrt{(x_2 - x_3)^2+(y_2 - y_3)^2+(z_2 - z_3)^2} $
 
 
 If equations 1, 2, and 3, below are all true, straight line motion exists within 5% error margines. 
