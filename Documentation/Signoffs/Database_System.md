@@ -5,7 +5,7 @@ The database subsystem will receive data from the receiver, website and camera s
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall allow the website subsystem to have full access to the stored data | Design Constraint |
+|  1 | The database shall be stored locally and allow the website subsystem to have full access | Design Constraint |
 |  2 | The system shall check for pre-authorized access for any drone's new flight session, if no pre-authroized acess found, then the Drone location, speed and Control station location will be sent to the camera subsystem. | Design Constraint |
 |  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem  | Design Constraint |
 |  4 | The system shall indicate the health status of Camera system | Design Constraint |
@@ -24,9 +24,10 @@ This a exmaple figure show the Hardware connection, will be replaced
 
 
 ## Analysis
-The choice of database used is mySQL, which will be host on a raspberry pi device. The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
+The choice of database used is mySQL, which will be host on a [raspberry pi 5 device](#Raspberry-pi-5-Setup). The camera used from the camera subsystem have a single image Sensor Resolution	of 4056 x 3040 pixels. Since the image will be in RGB, each pixel will contain 24 bits. A single image from the camera subsystem can contain maximum of 36.99MB.
 
-ex: Once the database system receives a data package from the receiver system, it will break down the data package and store the relevant information inside the SQL database.
+## Raspberry pi 5 Setup
+The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
 
 ## MySQL
 Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
