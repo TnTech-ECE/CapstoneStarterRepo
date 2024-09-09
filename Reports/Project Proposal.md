@@ -1,4 +1,3 @@
-           
 
 ## This Document - Project Proposal Specification
 
@@ -30,19 +29,13 @@ A good project proposal will leave the reader clearly understanding
 
 6. the anticipated timeline (detailed outline of how long the project is likely to take based on the tasks to be completed and the personnel available to complete them).
 
-7. the broader impacts (how will the project and its completion impact the society, economy, environment, culture, public health and safety, et al.).
+7. the broader impacts (how will the project and its completion impact the society, economy, environment, culture, public health and safety, etc).
 
 #### Required Format and Style
 
-##### IEEE Conference Format
-
-The project proposal **must** be completed using the latest revision of the IEEE conference, 2 column format. There are templates available through IEEE for both latex and word.
-
-Overleaf is a free, online latex editor and compiler that facilitates collaboration. However, using overleaf is not required.
-
 ##### Citations
 
-Use the IEEE citation inline method and bibliography style. All sources used to lend information to the project proposal **must** be cited. Many citations are expected, as without citations information that is not common knowledge to those in ECE seems to be the opinion of the team members rather than a substantiated fact.
+All sources used to lend information to the project proposal **must** be cited. Many citations are expected, as without citations information that is not common knowledge to those in ECE seems to be the opinion of the team members rather than a substantiated fact.
 
 ##### Writing Point of View
 
@@ -56,7 +49,7 @@ Best: Each team should primarily write in third person unless a specific situati
 
 #### Required Contribution from Each Team Member
 
-It is up to each team to designate tasks and work together toward the completion of the capstone project. However, each team member must contribute meaningfully to each part of the project. Each team member **must** contribute meaningfully to the writing of project proposal. The work of each team member toward the completion of the project proposal **must** be clearly documented in the individual journal entries.
+It is up to each team to designate tasks and work together toward the completion of the capstone project. However, each team member must contribute meaningfully to each part of the project. Each team member **must** contribute meaningfully to the writing of project proposal. The work of each team member toward the completion of the project proposal **must** be clearly documented at the end of the project proposal.
 
 ### The Introduction
 
@@ -65,7 +58,6 @@ The introduction **must** be the first section in a proposal (and any paper in g
 #### Helping the Reader Know What to Expect
 
 Keep in mind that your readers may not have access to the document you are currently reading. So, toward the end of the introduction, it is best to include a subsection specifically to give the reader some sense of what the proposal is going to tell them moving forward. Then, in each of the sections in the proposal you should tell the reader what to expect from the given section somewhere near the beginning. This isn't a hard rule but is a best practice. In general, this is done at the beginning of sections but not subsections as they are contributors to what you have already said the enclosing section is going to do. 
-
 
  ### Formulating the Problem
 
@@ -81,15 +73,11 @@ As an example, a past project's objective was to build a telemetry system that w
 
 The background information provides context and detail which helps to answer questions like those above and allows the team to define the boundaries of the problem (objective).
 
-
-
 ##### A Quick Example: Including background information
 
 Oil drills don't go straight down because as they go past layers of rock the drill may follow a path of least resistance, so it is necessary to monitor the direction of the drill (This piece of background helps the reader to understand why a drill telemetry system is needed). Monitoring the direction is made difficult by the fact that the rock through which the drill passes is often magnetic, thus preventing magnetic sensing of direction (The more relevant background that is included, the more clearly the problem can be defined). Worse, the drill will generate significant heat (over 150C) at the tip which is where the telemetry system must be located. The drill will also produce continuous vibration that may interfere with the electronics. Therefore, typical electronics wouldn't be suited to the environment.
 
 The problem is further complicated by the need to send information from the tip of the oil drill to the surface will be a non-trivial task due to the depth in the earth, magnetic interference, and heat. Wires running from the tip to the surface will melt or break and wireless transmission is impractical due to the environment. The conventional solution for sending signals from the tip on most oil drills is a method based on changing the rate of runoff flow. As the drill works, it generates runoff. This runoff is pumped to the surface. So, the inlet to the pump can be adjusted to restrict or augment flow. Restricted flow is analogous to a zero and augmented flow is analogous to a one. This method of communication creates a very low speed of data transmission, making it difficult to know the drill position in close to real time. If the positioning information lags, the position control system may become unstable.
-
-
 
 #### Specifications and Constraints
 
@@ -107,8 +95,6 @@ All of the specifications given are very fuzzy. It is the engineer's job to take
 - Formulating the spec using background info: the system shall be less than 1 inch in diameter such that it fits in a 1 inch cylinder (measureable)
 
 So, using background information, engineers are able to formulate fuzzy, verbal specifications into precise constraints.
-
-For further information about this refer to Chapter 4.1 and 4.2 of the Nasa Systems Engineering Handbook. 4.1 deals with eliciting stakeholder expectations. The next section (4.2) deals with constructing "shall" statements (like the one above) and building technical requirements from the stakeholder expectations.
 
 ##### Other sources of constraints: Standards
 
@@ -132,9 +118,6 @@ Design should always be done in a manner that considers potential unintended con
 ##### A little more about constraints
 
 Constraints (regardless of their origin) must be unambiguous and impose measureable requirements on the design. At times, conforming to the constraints can be difficult. However, they are beneficial in that they provide clear expectations. When considering what makes an engineering project a success, the most important factor is whether or not the specifications and constraints were met.
-
-
-
 
 #### Survey of Solutions
 
@@ -186,7 +169,7 @@ Each project proposal **must** include a detailed explanation regarding what res
 
 #### Personnel
 
-Each team should also consider the team members and the skills which are represented. This should be compared to the skills expected to be necessary to complete the project. Some skills will be important for each team member to possess (Example: soldering) while other skills may only be needed by a single team member (Example: 3D printing). Identify skills that must be obtained. Then, provide a plan by which the team intends to close those skill gaps.
+Each team should also consider the team members and the skills which are represented. This should be compared to the skills expected to be necessary to complete the project. Some skills will be important for each team member to possess while other skills may only be needed by a single team member. Identify skills that must be obtained. Then, provide a plan by which the team intends to close those skill gaps.
 
 Do not make the mistake of expecting that the team already knows all the relevant theoretical and technical knowledge necessary to complete the project. This is almost never the case. Even if the task were to design a simple amplification circuit, doing so in practice is always more difficult than expected and typically requires deepening the team's existing understanding.
 
@@ -194,53 +177,40 @@ Do not make the mistake of expecting that the team already knows all the relevan
 
 The last component of a proposal is the proposed timeline. This timeline should be detailed, giving all the important deadlines and tasks to be completed. The timeline should also establish a viable task assignment. This does not mean that the team member listed with the task at this point will definitely complete that task. This timeline is only intended to substantiate that the team has the personnel to complete the set of tasks by the necessary dates. Many specific tasks will likely be unknown at this point. However, those tasks will likely fall into broad categories that will be able to be foreseen.
 
-The timeline should include a professional looking Gantt chart showing the team members, their tasks, and the completion dates. It should also show the milestones (Thanksgiving break, Christmas break, Spring break, and end of the semester).
+The timeline should include a professional looking Gantt chart showing the team members, their tasks, and the completion dates. It should also show milestones which mark significant events or accomplishments that demonstrate progress and completion of specific phases or tasks (design complete, ordering, final presentation, etc).
 
 If it becomes apparent that it is not possible to meet the dates, it will be necessary to limit the scope of the project and appropriately target a subset of the specifications. Then it would be necessary to update the project proposal to reflect the personnel constraint. The process of building the proposal (and the design, later) is extremely iterative.
 
-### Rubric
+### Rubric Questions
 
-Was the project proposal written without grammatical errors? (TA) (-1 per or -5 max) 
+Was the project proposal written without grammatical errors?
 
-Was first person perspective used where not appropriate? (TA) (-1 per or -5 max) 
+Was first person perspective used where not appropriate?
 
-Was the project proposal submitted late? (TA) (-4 per day) 
+Was the project proposal submitted late?
 
-Are claims made or information included that is not appropriately supported by citation? (TA) (-2 per or -8 max)
+Are claims made or information included that is not appropriately supported by citation?
 
-Was a proposal submitted? (TA) (+10)
+Was a proposal submitted?
 
-Was the project proposal submitted in IEEE format? (TA) (+7) 
+Does this proposal clearly present the elevator pitch of the project (persuasive summary) in the introduction?
 
-Was the project proposal submitted as a pdf? (TA) (+5) 
+Does this proposal clearly state the objective/problem?
 
-Does this proposal clearly present the elevator pitch of the project (persuasive summary) in the introduction? (coordinator) (+8 max) 
+Does this proposal sufficiently discuss the background information necessary to understand any and all objectives, specifications, constraints, context, desired outcomes, and measures of success?
 
-Does this proposal clearly state the objective/problem? (supervisor) (+7 max) 
+Does this proposal clearly formulate and consider all constraints arising from stakeholders, standards, and broader considerations?
 
-Does this proposal sufficiently discuss the background information necessary to understand any and all objectives, specifications, constraints, context, desired outcomes, and measures of success? (supervisor) (+10 max)
+Does the proposal significantly discuss existing solutions and relevant literature?
 
-Does this proposal clearly formulate and consider all constraints arising from stakeholders, standards, and broader considerations? (supervisor) (+10 max) 
+Is the formulated problem summarized well?
 
-Does the proposal significantly discuss existing solutions and relevant literature? (supervisor) (+7 max) 
+Does the proposal consider unknowns and sources of risk and how to address them?
 
-Is the formulated problem summarized well? (coordinator) (+3 max) 
+Does the proposal consider the broader implications?
 
-Does the proposal consider unknowns and sources of risk and how to address them? (coordinator) (+5 max) 
+Does the proposal develop appropriate measures of success that are justified based on the constraints?
 
-Does the proposal consider the broader implications? (coordinator) (+7 max)
+Is the feasibility of the project considered (resources, personnel, and timeline)?
 
-Does the proposal develop appropriate measures of success that are justified based on the constraints? (supervisor) (+7 max)
-
-Is the feasibility of the project considered (Resources, personnel, and timeline)? (coordinator) (+7 max) 
-
-Does the project proposal work together to establish that the project (objective, background, desired outcomes, measures of success, required resources, timeline, feasibility, and broader impacts) is worth undertaking and that they are the right group to undertake the project? (supervisor) (+7 max) 
-
-
-### Revision
-
-The environment in this class is intentionally geared to be similar to industry experience, though not identical. So, a grade will be calculated. You are to address the issues that are identified and re-submit to regain **up to** 50% of the lost points. Changes to the document must be in a different color otherwise they will not be counted toward the improvements.
-
-### Feedback in ilearn
-
-Each team has 1 week from the date the feedback is given to address the problems identified and resubmit to reclaim up to half of the lost points.
+Does the project proposal work together to establish that the project (objective, background, desired outcomes, measures of success, required resources, timeline, feasibility, and broader impacts) is worth undertaking?
