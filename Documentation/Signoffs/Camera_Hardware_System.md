@@ -44,7 +44,7 @@ For the control and communication aspects of this system, a Raspberry Pi 4B Sing
 <img src= "/Documentation/Images/Camera Hardware System/Raspberry_Pi_4B_GPIO_Pinout.png" width="509" height="293">
 
 #### SPU - Use and Analysis
-From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a Rasberry Pi Camera will be connected via the CSI port of the SPU.<!-- USB 3.0 port will be used to communicate with the camera.--> The generation and processing of signals for these devices, along with the generation of a system status monitoring signal, will be handled and defined by the [Camera Software System](Camera_Software_System.md).
+From the schematic, pins 32 and 33 from the sixteen available GPIO pins will be used to send PWM signals to the servo motors, while a Rasberry Pi Camera will be connected via the CSI port of the SPU. The generation and processing of signals for these devices, along with the generation of a system status monitoring signal, will be handled and defined by the [Camera Software System](Camera_Software_System.md).
 
 ### Servo Motors
 For the pan and tilt control of this subsystem, brushless DC servo motors will be used due to their accuracy, high holding torques, and ease of control/wiring in comparison to a stepper motor.[^6]
@@ -70,19 +70,17 @@ The camera selected for this application is a 12.3MP IMX477 with a pre-installed
 
 <img src= "/Documentation/Images/Camera Hardware System/imx477.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/lens.jpg" width="233" height="353">
 
-### Enclosure*
-<!-- Box for electronics and clear top for camera --> 
-To protect the sensitive electronics required for the control of this system, <!--(two)* Wc-27F--> a half-opaque, half transparent polycarbonate enclosure will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within it. This box will be rated to protect from water up to a rating of IP67, while also still allowing the physical camera to image and capture the UAS mid-flight as intended. A small hole will be bored into the side of the box to allow the power cable connections to pass through, and will be immediately patched by a caulk or RTV material to retain the IP67 water rating.
+### Enclosure
+To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP67, exceeding our initial constraint of IP65. On each box, two holes will be bored into the side to allow the installation of a vent and cable gland pieces to be installed. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow unintended water vapor and/or pressure to escape, keeping the system dry. These add-ons will be followed up with caulk or RTV material to doubly ensure that the enclosures retain their IP67 water rating. Inside each enclosure will be a dessicant pack, made to also absorb any moisture that could potentially seep into the box.
 
 []image
-*Sensitive to team review
 
 ### Error Checking
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection, a powered-down SPU, communication issues between the camera and SPU, or lost power to either servo motor, will cause a boolean flag to be set high, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue. This will be further defined in the [Camera Software System](Camera_Software_System.md).
 
 ## System Design and Construction
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. To increase reliability, especially when servicing the system, stainless steel screws will be used to hold the case together, ensuring that they will still be removeable after being exposed to the elements over an extended period. Two holes will be bored into the side of the enclosure: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with RTV gasket maker or silicone caulk to fully seal from water penetration, protecting our systems.
+The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. To increase reliability, especially when servicing the system, stainless steel screws will be used throughout the system. This metal type ensures that the screws will still be removeable after being exposed to the elements over an extended period, while being conductive enough to allow strong grounding and connection points when terminating wires. Two holes will be bored into the side of the enclosure: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with RTV gasket maker or silicone caulk to fully seal from water penetration, protecting our systems.
 
 ## Design Analysis
 -
