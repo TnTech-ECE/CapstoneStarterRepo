@@ -17,7 +17,7 @@ This subsystem will use a 12-volt DC brushed motor along with a relay that will 
 
 ## Buildable Schematic
 ### Electrical Schematic 
-![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/Electrical Schematic.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/jlburke42-signoff-Launching-and-Firing/Documentation/Images/Electrical_Schematic.png)
 
 As seen in the schematic above, the Adafruit relay will be powered off the 3.3V pin (PIN1) of the Raspberry Pi 5. While the GPIO pins are limited to 50mA, this pin can support 3.3V up to 500mA. The Adafruit 3191 relay only draws 100mA while operating. A signal will be sent from GPIO 6 (PIN31) which shall switch allow the relay to switch from connecting "COMM" and "Normally Connected" to connecting "COMM" to " Normally Closed" allowing the motor to be powered from the 12V bus from the Housing subsystem. This motor shall draw 9A upon startup and when reaching it's stall point and will be wired with 16 AWG wire from the Housing subsystem.
 
