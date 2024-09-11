@@ -297,7 +297,6 @@ for i = 1:length(t1)
     plot3(xl,yl,zl,'--');
 end
 ```
-### Proving Straight Line Motion Predictions
 ## BOM
 none
 ## References
