@@ -71,7 +71,7 @@ The camera selected for this application is a 12.3MP IMX477 with a pre-installed
 <img src= "/Documentation/Images/Camera Hardware System/imx477.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/lens.jpg" width="233" height="353">
 
 ### Enclosures
-To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP67, exceeding our initial constraint of IP65. On each box, two holes will be bored into the side to allow the installation of a vent and cable gland pieces to be installed. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow unintended water vapor and/or pressure to escape, keeping the system dry. These add-ons will be followed up with caulk or RTV material to doubly ensure that the enclosures retain their IP67 water rating. Inside each enclosure will be a dessicant pack, made to also absorb any moisture that could potentially seep into the box.
+To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP67, exceeding our initial constraint of IP65. On each box, two holes will be bored into the side to allow the installation of a vent and cable gland pieces to be installed. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow pressure buildup caused by temperature cycling to escape, keeping the system sealed. These add-ons will be followed up with caulk or RTV material to doubly ensure that the enclosures retain their IP67 water rating. Inside each enclosure will be a dessicant pack, made to also absorb any moisture that could potentially seep into the box.
 
 []image
 
@@ -79,19 +79,21 @@ To protect the sensitive electronics required for the control of this system, tw
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection, a powered-down SPU, communication issues between the camera and SPU, or lost power to either servo motor, will cause a boolean flag to be set high, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue. This will be further defined in the [Camera Software System](Camera_Software_System.md).
 
 ## System Design and Construction
-The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. The below specifications will be utilized:
+The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function.
 
 ### Enclosure and Housings
-For the enclosures, two polycarbonate cases rated at a minimum of IP66 will be utilized. The first enclosure, labeled B0, will be used to house the Raspberry Pi SPU, and will be used as a termination point for the electrical connections of the system. This enclosure, with exterior dimensions of () and interior dimensions of (), will be more than enough to house our system.
+To satisfy both the visual requirements of the camera, while also protecting the sensitive components, two seperate polycarbonate cases rated at a minimum of IP66 will be utilized. The first enclosure, labeled B0, will be used to both house the Raspberry Pi SPU, and terminate the electrical connections of the system. This enclosure, with exterior dimensions of (4.53 x 2.56 x 1.57) inches and interior dimensions of (4.21 x 2.24 x 1.38) inches, will be able to contain our SPU (3.46 x 2.28 x 0.77) inches along with any additional terminations. The ~1mm difference will ensure a snug fit, further protecting the SPU from movement and impact damage in the unlikely event of a failure in the mounting bolts. A CG-34 Cable Gland capable of handling 0.105 - 0.315 inch (2.7 - 8 mm) diameter wires will be installed to allow the SPU and servo motor power wires, the camera's CSI ribbon wire, and the PWM pins for the servos to enter/exit the enclosure. Along with this, a vent will be installed to allow excessive pressure to bleed out from the inside of the case. Both connections will be reinforced with electronics grade silicon sealant to ensure that no moisture can enter the electronic's case, and the enclosure will have desiccant packs to draw out any moisture that manages to get past these protections.
 
-The second polycarbonate case, labeled B1, will be used to house the camera and its attached lens, allowing the system to see out of the clear cover for capturing images.
-<!--To increase reliability, especially when servicing the system, stainless steel screws will be used throughout the system. Two holes will be bored into the side of the enclosures: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with electronics grade silicone caulk to fully seal from water penetration, protecting our systems. This caulk, while water-curing, is designed to prevent the ingress of additional moisture once it is set, and is safe to interact with several metals and compounds-->
+The second polycarbonate case, labeled B1, will be used to house the camera and its telephoto lens. This enclosure, with exterior dimensions of (4.40 x 4.40 x 4.33) inches and interior dimensions of (3.75 x 3.75 x 4.00) inches, will be able to contain our camera + lens assembly when installed vertically (1.50 x 1.50 x 2.42) inches. With it installed dead-center of the enclosure, along with having enough space for the CG-34 Cable Gland and UA-006 Pressure Vent, there will be more than enough space for a future upgrade of the camera module, along with the desiccant packs used to prevent any unintended moisture ingress from the environment.
+
+For both enclosures, stainless steel screws will be used extensively throughout, allowing for solid electrical connections along with ample protection from environmental factors. For permanent mounting of the boxes to the deployment location, the fastener material will be dependant on the substrate present. Concrete, lumber, and various other material will have vastly different anti-corrosion requirements and must be evaluated on a case-by-case basis.
 
 ### Electrical
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
 
 ## Design Analysis
-<!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.-->
+<!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
+Using EG silicon sealant will make service harder if fail-->
 
 ## BOM
 | Item     | Part Number | Quantity (pkg x ordered) | Price/Unit     | Total Cost |
@@ -101,7 +103,7 @@ The second polycarbonate case, labeled B1, will be used to house the camera and 
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| DS3218| 1x1| $14.66| $14.66|
 | Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
 | Raspberry Pi IMX477 12.3 MP High Quality Camera| SC1220| 1x1| $59.99| $59.99|
-| 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
+| Arducam 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
 | 3.28 ft / 100 cm CSI Flex Ribbon Cable| B087FDJ2RP| 1x1| $5.49| $5.49|
 | Polycase Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
 | Polycase Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
