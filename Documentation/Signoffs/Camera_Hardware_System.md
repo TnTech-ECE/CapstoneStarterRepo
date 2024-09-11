@@ -81,15 +81,17 @@ The system will use a network-driven status indicator system to check for any er
 ## System Design and Construction
 The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function.
 
-### Enclosure and Housings
+### Design - Enclosure and Housings
 To satisfy both the visual requirements of the camera, while also protecting the sensitive components, two seperate polycarbonate cases rated at a minimum of IP66 will be utilized. The first enclosure, labeled B0, will be used to both house the Raspberry Pi SPU, and terminate the electrical connections of the system. This enclosure, with exterior dimensions of (4.53 x 2.56 x 1.57) inches and interior dimensions of (4.21 x 2.24 x 1.38) inches, will be able to contain our SPU (3.46 x 2.28 x 0.77) inches along with any additional terminations. The ~1mm difference will ensure a snug fit, further protecting the SPU from movement and impact damage in the unlikely event of a failure in the mounting bolts. A CG-34 Cable Gland capable of handling 0.105 - 0.315 inch (2.7 - 8 mm) diameter wires will be installed to allow the SPU and servo motor power wires, the camera's CSI ribbon wire, and the PWM pins for the servos to enter/exit the enclosure. Along with this, a vent will be installed to allow excessive pressure to bleed out from the inside of the case. Both connections will be reinforced with electronics grade silicon sealant to ensure that no moisture can enter the electronic's case, and the enclosure will have desiccant packs to draw out any moisture that manages to get past these protections.
 
 The second polycarbonate case, labeled B1, will be used to house the camera and its telephoto lens. This enclosure, with exterior dimensions of (4.40 x 4.40 x 4.33) inches and interior dimensions of (3.75 x 3.75 x 4.00) inches, will be able to contain our camera + lens assembly when installed vertically (1.50 x 1.50 x 2.42) inches. With it installed dead-center of the enclosure, along with having enough space for the CG-34 Cable Gland and UA-006 Pressure Vent, there will be more than enough space for a future upgrade of the camera module, along with the desiccant packs used to prevent any unintended moisture ingress from the environment.
 
 For both enclosures, stainless steel screws will be used extensively throughout, allowing for solid electrical connections along with ample protection from environmental factors. For permanent mounting of the boxes to the deployment location, the fastener material will be dependant on the substrate present. Concrete, lumber, and various other material will have vastly different anti-corrosion requirements and must be evaluated on a case-by-case basis.
 
-### Electrical
+### Design - Electrical
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
+
+### Construction
 
 ## Design Analysis
 <!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
