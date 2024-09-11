@@ -33,7 +33,7 @@ Coming soon :)
 
 ### Faculty Supervisor
 
-The faculty supervisor for this project is Dr. Jeffrey Austen. He is a professor in the Electrical and Computer Engineering department at Tennessee Technological University with areas of expertise in signal processing and communication systems. He proposed the idea for the drone tracker.    
+
 
 ### Stakeholders
 
@@ -48,12 +48,6 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-- Documentation
-  - [3D Models](Documentation/3D_Models)
-  - Electrical
-    - [PCB Models](Documentation/Electrical/PCB)
-    - [Wiring Schematics]
-  - [Meeting Minutes]
 
 ### Reports
 
