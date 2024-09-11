@@ -83,7 +83,7 @@ The system will use a network-driven status indicator system to check for any er
 The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. To increase reliability, especially when servicing the system, stainless steel screws will be used throughout the system. Two holes will be bored into the side of the enclosures: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with RTV gasket maker or silicone caulk to fully seal from water penetration, protecting our systems.
 
 ## Design Analysis
--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
+<!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.-->
 
 ## BOM
 | Item     | Part Number | Quantity (pkg x ordered) | Price/Unit     | Total Cost |
