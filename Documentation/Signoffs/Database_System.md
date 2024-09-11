@@ -17,14 +17,14 @@ The database subsystem will receive data from the receiver, website and camera s
 
 
 ## Schematic
-![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/01cd0112-f276-4ddb-9253-85a3b34842e7)
-This a exmaple figure show the Hardware connection, will be replaced
 
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
 
 
 ## Analysis
 The choice of database used is mySQL, which will be host on a [raspberry pi 5 device](#Raspberry-pi-5-Setup). The camera used from the camera subsystem have a single image Sensor Resolution	of 4056 x 3040 pixels. Since the image will be in RGB, each pixel will contain 24 bits. A single image from the camera subsystem can contain maximum of 36.99MB.
+
+keep a sepreate database for checking pre-marked geographical locations and pre-authorized access for lower run/process-time speed.
 
 ## Raspberry pi 5 Setup
 The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
