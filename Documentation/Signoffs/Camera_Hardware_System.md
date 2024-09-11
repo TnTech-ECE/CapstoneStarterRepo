@@ -86,22 +86,23 @@ The system shall be built to provide protection from weather elements, while sti
 -Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
 
 ## BOM
-| Item     | Part Number | Quantity | Price/Unit     | Total Cost |
+| Item     | Part Number | Quantity (pkg x ordered) | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
 | Raspberry Pi 4B, 8GB Memory| RPI4-MODBP-8GB| 1x1| $74.99| $74.99|
 | Camera Pan/Tilt Servo Bracket| B0BYNBZHD1| 1x1| $9.99| $9.99|
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| DS3218| 1x1| $14.66| $14.66|
 | Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
-| Raspberry Pi IMX477 12.3 MP High Quality Camera| ‎B09YHN5DBY| 1x1| $59.99| $59.99|
+| Raspberry Pi IMX477 12.3 MP High Quality Camera| SC1220| 1x1| $59.99| $59.99|
 | 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
 | 3.28 ft / 100 cm CSI Flex Ribbon Cable| B087FDJ2RP| 1x1| $5.49| $5.49|
-| CPU Enclosure| x| 1x1| $-.--| $-.--|
-| Camera Enclosure| x| 1x1| $-.--| $-.--|
-| Enclosure Vent Plugs| x| 1x2| $-.--| $-.--|
-| Enclosure Cable Glands| x| 1x2| $-.--| $-.--|
-| Silicon Caulk| x| 1x1| $-.--| $-.--|
-| Zip-Ties| x| 1x1| $-.--| $-.--|
-|Total     |             |          |                | $-.--|
+| WP-21*15 Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
+| ZQ-040404-93 Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
+| Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
+| Enclosure Cable Glands| CG-31| 1x1| $2.23| $2.23|
+| Enclosure Cable Glands| CG-34| 1x1| $5.67| $5.67|
+| 20g Desiccant Packs| B09DSDX4P3| 15x1| $6.99| $6.99|
+| Electronic Grade Silicon Caulk, 2.8oz| ASI 388| 1x1| $9.99| $9.99|
+|Total     |             |          |                | $301.45|
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
