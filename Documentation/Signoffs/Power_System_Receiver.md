@@ -1,4 +1,4 @@
-# Power System
+# Power System for Receiver System
 ## Functionality
 
 ## Constraints
