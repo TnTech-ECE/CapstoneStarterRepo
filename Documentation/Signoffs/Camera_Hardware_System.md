@@ -70,7 +70,7 @@ The camera selected for this application is a 12.3MP IMX477 with a pre-installed
 
 <img src= "/Documentation/Images/Camera Hardware System/imx477.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/lens.jpg" width="233" height="353">
 
-### Enclosure
+### Enclosures
 To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP67, exceeding our initial constraint of IP65. On each box, two holes will be bored into the side to allow the installation of a vent and cable gland pieces to be installed. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow unintended water vapor and/or pressure to escape, keeping the system dry. These add-ons will be followed up with caulk or RTV material to doubly ensure that the enclosures retain their IP67 water rating. Inside each enclosure will be a dessicant pack, made to also absorb any moisture that could potentially seep into the box.
 
 []image
@@ -98,14 +98,14 @@ The system shall be built to provide protection from weather elements, while sti
 | WP-21*15 Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
 | ZQ-040404-93 Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
 | Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
-| Enclosure Cable Glands| CG-31| 1x1| $2.23| $2.23|
-| Enclosure Cable Glands| CG-34| 1x1| $5.67| $5.67|
+| Enclosure Cable Glands, IP67| CG-31| 1x1| $2.23| $2.23|
+| Enclosure Cable Glands, IP67| CG-34| 1x1| $5.67| $5.67|
 | 20g Desiccant Packs| B09DSDX4P3| 15x1| $6.99| $6.99|
 | Electronic Grade Silicon Caulk, 2.8oz| ASI 388| 1x1| $9.99| $9.99|
 |Total     |             |          |                | $301.45|
 
 ## References
-<!-- This is how to do footnotes for the references: --> 
+<!-- This is how to do footnotes for the references: FIX ME --> 
 [^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, [Available:](https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/) (Accessed Feb. 19, 2024).
 [^2]: “856 data security and handling policy,” Tennessee Technological University, [Available:](https://www.tntech.edu/policies/) (Accessed May 2, 2024).
 [^3]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
