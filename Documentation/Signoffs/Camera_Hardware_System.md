@@ -79,8 +79,16 @@ To protect the sensitive electronics required for the control of this system, tw
 The system will use a network-driven status indicator system to check for any errors. A disconnected network connection, a powered-down SPU, communication issues between the camera and SPU, or lost power to either servo motor, will cause a boolean flag to be set high, prompting the responsible area to perform maintainence and troubleshooting to resolve the issue. This will be further defined in the [Camera Software System](Camera_Software_System.md).
 
 ## System Design and Construction
+The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. The below specifications will be utilized:
+
+### Enclosure and Housings
+For the enclosures, two polycarbonate cases rated at a minimum of IP66 will be utilized. The first enclosure, labeled B0, will be used to house the Raspberry Pi SPU, and will be used as a termination point for the electrical connections of the system. This enclosure, with exterior dimensions of () and interior dimensions of (), will be more than enough to house our system.
+
+The second polycarbonate case, labeled B1, will be used to house the camera and its attached lens, allowing the system to see out of the clear cover for capturing images.
+<!--To increase reliability, especially when servicing the system, stainless steel screws will be used throughout the system. Two holes will be bored into the side of the enclosures: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with electronics grade silicone caulk to fully seal from water penetration, protecting our systems. This caulk, while water-curing, is designed to prevent the ingress of additional moisture once it is set, and is safe to interact with several metals and compounds-->
+
+### Electrical
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-The system shall be built to provide protection from weather elements, while still allowing for communications and the camera to properly function. To increase reliability, especially when servicing the system, stainless steel screws will be used throughout the system. Two holes will be bored into the side of the enclosures: One for the power wires, and one for a vent to allow any potential moisture and pressure to escape the sealed enclosure. These two holes will be properly sealed with a cable gland and a vent plug, along with RTV gasket maker or silicone caulk to fully seal from water penetration, protecting our systems.
 
 ## Design Analysis
 <!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.-->
