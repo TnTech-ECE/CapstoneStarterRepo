@@ -95,11 +95,11 @@ The system shall be built to provide protection from weather elements, while sti
 | Raspberry Pi IMX477 12.3 MP High Quality Camera| SC1220| 1x1| $59.99| $59.99|
 | 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
 | 3.28 ft / 100 cm CSI Flex Ribbon Cable| B087FDJ2RP| 1x1| $5.49| $5.49|
-| WP-21*15 Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
-| ZQ-040404-93 Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
-| Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
-| Enclosure Cable Glands, IP67| CG-31| 1x1| $2.23| $2.23|
-| Enclosure Cable Glands, IP67| CG-34| 1x1| $5.67| $5.67|
+| Polycase Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
+| Polycase Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
+| Polycase Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
+| Polycase Enclosure Cable Gland, IP67| CG-31| 1x1| $2.23| $2.23|
+| Polycase Enclosure Cable Gland, IP67| CG-34| 1x1| $5.67| $5.67|
 | 20g Desiccant Packs| B09DSDX4P3| 15x1| $6.99| $6.99|
 | Electronic Grade Silicon Caulk, 2.8oz| ASI 388| 1x1| $9.99| $9.99|
 |Total     |             |          |                | $301.45|
