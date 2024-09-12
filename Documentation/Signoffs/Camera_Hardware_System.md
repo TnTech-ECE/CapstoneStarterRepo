@@ -8,7 +8,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  1| System shall capture an image of the UAS in flight or the control station| Stakeholder Constraint|
 |  2| System shall not take into consideration light levels or physical obstructions when capturing images|Stakeholder Constraint|
 |  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Design Constraint|
-|  4| Camera zoom, focus, and light sensitivity (ISO) shall not be controllable by system software| Design Constraint|
+|  4| Camera zoom, focus, and light sensitivity (ISO) is not required to be controlled by system software| Design Constraint|
 |  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| Environmental Constraint|
@@ -85,7 +85,7 @@ For both enclosures, stainless steel screws will be used extensively throughout,
 
 ### Design - Electrical
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-To satisfy the power requirements of the system, while also protecting the electronics and physical safety of surrounding personnel and property, this system must be properly grounded and rated to conduct the full load amperage (FLA) in the scenario of max power draw. A C-type connector will be required to deliver power to the Raspberry Pi, while the Servo motors will require terminations of +5 VDC and a ground in order to recieve power. The camera will draw power from the CSI ribbon cable connection, but will likely require the Raspberry Pi to draw its full rated amperage in order to make the system work. To make the terminations, all wires will be connected in-line and heat-shrink protected in order to retain a solid connection. 
+To satisfy the power requirements of the system, while also protecting the electronics and physical safety of surrounding personnel and property, this system must be properly grounded and rated to conduct the full load amperage (FLA) in the scenario of max power draw. A C-type connector will be required to deliver power to the Raspberry Pi, while the Servo motors will require terminations of +5 VDC and a ground in order to recieve power. The camera will draw power from the CSI ribbon cable connection, but will likely require the Raspberry Pi to draw its full rated amperage in order to make the system work. To make the terminations, all powered wires will be inter-connected via a screw-terminal distribution block located inside of the PI enclosure B0. The wires for the servo signal connections will be soldered, heat-shrunk, and wrapped to ensure a safe and stable connection. Using a traditional Dupont wiring pin-connector that comes with the Raspberry Pi, this will be connected to the appropriate pins of the Raspberry Pi in order to transmit the PWM signals.
 
 ### Construction
 
