@@ -53,7 +53,7 @@ For the pan and tilt control of this subsystem, brushless DC servo motors will b
 Servo motors are electric motors with an in-house microcontroller running a Process-Integral-Derivative (PID) control loop and a feedback potentiometer/absolute encoder used by the controller to generate the error signal for the PID control loop[^4]. Radio-Controlled servo motors utilize three pin wiring harnesses capable of supplying positive voltage, ground, and a Pulse-Width Modulated (PWM) signal to itself[^5]. While the power pins are typically terminated to an external power supply, the PWM pin is connected to a microcontroller's GPIO pin. This pin can then be programmed to pulse, forming a square wave with its duty cycle controlling the movement and position of the servo motor's horn.
 
 #### Servo - Usage
-The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. By attaching these to a bracket system as shown below, we will be able to have tilt and pan control of our camera.
+The servos used in this system will be the ZOSKAY DS3218 20KG digital servo motors, with one having the traditional 180° range of motion (ROM) seen in many other servos, and the other having a 270° ROM. According to the schematic, the names Servo 0 and Servo 1 will be assigned to the 270° servo motor and 180° servo motor respectively. By attaching these to a bracket system as shown below, we will be able to have tilt and pan control of our camera component.
 
 <img src= "/Documentation/Images/Camera Hardware System/servo.jpg" width="400" height="334"> <img src= "/Documentation/Images/Camera Hardware System/servo_bracket.jpg" width="340" height="334">
 
@@ -85,7 +85,7 @@ For both enclosures, stainless steel screws will be used extensively throughout,
 
 ### Design - Electrical
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
-To satisfy the power requirements of the system, while also protecting the electronics and physical safety of surrounding personnel and property, this system must be properly grounded and rated to conduct the full load amperage (FLA) in the scenario of max power draw. A C-type connector will be required to deliver power to the Raspberry Pi, while the Servo motors will require terminations of +5 VDC and a ground in order to recieve power. The camera will draw power from the CSI ribbon cable connection, but will likely require the Raspberry Pi to draw its full rated amperage in order to make the system work.
+To satisfy the power requirements of the system, while also protecting the electronics and physical safety of surrounding personnel and property, this system must be properly grounded and rated to conduct the full load amperage (FLA) in the scenario of max power draw. A C-type connector will be required to deliver power to the Raspberry Pi, while the Servo motors will require terminations of +5 VDC and a ground in order to recieve power. The camera will draw power from the CSI ribbon cable connection, but will likely require the Raspberry Pi to draw its full rated amperage in order to make the system work. To make the terminations, all wires will be connected in-line and heat-shrink protected in order to retain a solid connection. 
 
 ### Construction
 
@@ -113,8 +113,8 @@ Using EG silicon sealant will make service harder if fail-->
 | Polycase Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
 | Polycase Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
 | Polycase Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
-| Polycase Enclosure Cable Gland, IP67| CG-31| 1x1| $2.23| $2.23|
-| Polycase Enclosure Cable Gland, IP67| CG-34| 1x1| $5.67| $5.67|
+<!--| Polycase Enclosure Cable Gland, IP67| CG-31| 1x1| $2.23| $2.23|-->
+| Polycase Enclosure Cable Gland, IP67| CG-34| 1x2| $5.67| $11.34|
 | 20g Desiccant Packs| B09DSDX4P3| 15x1| $6.99| $6.99|
 | Electronic Grade Silicon Caulk, 2.8oz| ASI 388| 1x1| $9.99| $9.99|
 |Total     |             |          |                | $301.45|
