@@ -22,14 +22,19 @@ The database subsystem will receive data from the receiver, website and camera s
 
 
 ## Analysis
-The choice of database used is mySQL, which will be host on a [raspberry pi 5 device](#Raspberry-pi-5-Setup). The camera used from the camera subsystem have a single image Sensor Resolution	of 4056 x 3040 pixels. Since the image will be in RGB, each pixel will contain 24 bits. A single image from the camera subsystem can contain maximum of 36.99MB.
+The choice of database used is mySQL, which will be host on a [raspberry pi 5](#Raspberry-pi-5-Setup). To look at worst case scenarios of process time it would take to store and retrieve data from the database, result will be calculated base on the CPU and RAM speed/configuration.
+
+In the [Block Message section](#Block-Message), every block message received from the receiver subsystem will be 25 bytes(0.025 Kb). The actual stored data will be much smaller, since not everything inside the block message will be stored in the database. According to the specification of the raspberry pi, it have a quad-core CPU that run at 2.4GHz. Assumming one core are accessed, we can calculate the data rate using the following equation: Data Rate = Data per cycle(Byte) × Clock speed. Since 64-bit version of [MySQL](#MySQL-Setup) will be installed, which mean the CPU will be handlling 64 bits(8 Bytes) per cycle. Performing the following calucation: Data Rate = 8 x 2.4x10^9, and the data rate will result in 19.2 GB/s for a single core process.
+
+
+The camera used from the camera subsystem have a single image Sensor Resolution	of 4056 x 3040 pixels. Since the image will be in RGB, each pixel will contain 24 bits. A single image from the camera subsystem can contain maximum of 36.99MB. So, initally the 
 
 keep a sepreate database for checking pre-marked geographical locations and pre-authorized access for lower run/process-time speed.
 
 ## Raspberry pi 5 Setup
 The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
 
-## MySQL
+## MySQL Setup
 Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
 
 
