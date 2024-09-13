@@ -5,9 +5,9 @@ The purpose of the website subsystem is to allow a designated user to access the
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The database must be accessed through a website as opposed to a mobile phone application. | Campus Police |
-|  2 | Real-time is defined as less-than or equal to ten seconds. The system shall notify campus police and display data in 'real-time' on the website. | Project Team / Campus Police |
-|  3 | The drone information will be displayed to the website concisely, allowing for utilization with minimized training. A user-selected option may be implemented to view all detected drone flights (authorized and unauthorized) to reduce clutter. | Project Team |
+|  1 | The database must be accessed through a website instead of a mobile phone application. | Campus Police |
+|  2 | Real-time is defined as less than or equal to ten seconds. The system shall notify campus police and display data in 'real-time' on the website. | Project Team / Campus Police |
+|  3 | The drone information will be displayed on the website concisely, allowing for utilization with minimized training. To reduce clutter, a user-selected option shall be implemented to view all detected drone flights (authorized and unauthorized). | Project Team |
 |  4 | The website will be constructed securely, within reason. | Project Team |
 |  5 | The website will be constructed to comply with standards put into place by the W3C (World Wide Web Consortium). | Project Team / Supervisor |
 |  6 | The system shall allow campus police to authorize specific drones for permitted flights in a specified time frame. | Project Team |  
@@ -19,13 +19,13 @@ The purpose of the website subsystem is to allow a designated user to access the
 
 <sup>3</sup> To allow for easy integration into the campus police department's workflow, the system will be designed in a way so that minimal training is required for operation. A user should be able to look at the website and obtain a general idea of everything that is there and how to utilize it. Certain toggles to display/hide data may be implemented for the clarity of the website, and these should be intuitive for the user. 
 
-<sup>4</sup> To prevent the unauthorized access of data in our database, the website hosting the data must be constructed securely, to a reasonable standard. Of course, nothing can be 100% secure, so it would be remiss to say that our website is "totally secure", but it will be constructed in such a way that it is difficult for malicious entities to gain access.
+<sup>4</sup> To prevent the unauthorized access of data in our database, the website hosting the data must be constructed securely, to a reasonable standard. Of course, nothing can be 100% secure, so it would be remiss to say that our website is "totally secure", but it will be constructed in such a way that it is difficult for malicious entities to gain access. One such way we can secure our website would be to add a password to it that would allow only authorized users to gain access to it. Another way that we may certify our website is secure is by using Google's Safe Browsing website checker.
 
-<sup>5</sup> The W3C is a non-profit organization that works to develop standards for the world wide web. To be certain that our website is accessible, private, and secure, we can utilize validators created by the W3C to verify our website is ready for use on any device.
+<sup>5</sup> The W3C is a non-profit organization that works to develop standards for the World Wide Web. To be certain that our website is accessible, private, and secure, we can utilize validators created by the W3C to verify our website is ready for use on any device. Our team will subject the website to at least three validators provided by the W3C - the Nu HTML checker, the Link checker, and the CSS validator.  
 
-<sup>6</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than one second. 
+<sup>6</sup> To abstain from sending unnecessary alerts to campus police, we have decided to implement the ability to let campus police whitelist drone serial numbers. This will prevent alerts from being generated when an authorized drone is detected. Adding this check will also increase the execution time for the program, but again, it should still take less than the allocated time. This authorization will set a value in our database that will allow the website to quickly display detected drones based on whether or not they are authorized for flight.
 
-<sup>7</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make informed decisions about what order to operate in.
+<sup>7</sup> Privacy on campus is a big concern for this project. One of the main concerns with drones on campus is that some malicious users may utilize drones to enter or obtain a clear view of private areas. To combat this, we will designate certain areas on campus as high-priority areas and raise the priority level of any drone that enters these locations. This allows police to make informed decisions about what order to operate in. Our team argues that the most malicious drones will likely be flown in these designated "high-risk" areas, and believes that the safety of students located in these areas is of the utmost importance. 
 
 ## Schematic
 <img src="/Documentation/Images/flow_control_v3.png" >
