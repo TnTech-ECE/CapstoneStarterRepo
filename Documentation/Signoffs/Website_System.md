@@ -30,10 +30,6 @@ The purpose of the website subsystem is to allow a designated user to access the
 ## Schematic
 <img src="/Documentation/Images/flow_control_v3.png" >
 
-## Analysis
-
-The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
-
 ### HTML/CSS and JavaScript
 
 The languages chosen to implement this program will be HTML, CSS, and JavaScript. HTML will be used initially to create the framework of the webpage, where CSS will then be utilized to make the page look more presentable and coherent with Tech's current website theme. JavaScript will be implemented where necessary to make the webpage responsive to user inputs. In our case, that would allow the user to select a drone to view details on, view locations on the map, promote a drone's priority status, and other such tasks.
@@ -46,6 +42,10 @@ After obtaining an API key, we can implement the API call using the key in the H
 The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then have a Google Maps marker placed on their respective locations. The dispatcher can then select a certain drone and view the related data received from the Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
 
 For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website on a Raspberry Pi 5, the same machine that is hosting our database server. This will make the access of data from the database much easier. The cost of this service is to be integrated into the subsystem's budget, and is not expected to cost a significant amount of money, likely less than $30 per year that the site is hosted. 
+
+## Analysis
+
+The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
 
 ### Testing
 
