@@ -30,6 +30,9 @@ The purpose of the website subsystem is to allow a designated user to access the
 ## Schematic
 <img src="/Documentation/Images/flow_control_v3.png" >
 
+### Rough Website Design
+<img src="/Documentation/Images/website_beta.png" >
+
 ### HTML/CSS and JavaScript
 
 The languages chosen to implement this program will be HTML, CSS, and JavaScript. HTML will be used initially to create the framework of the webpage, where CSS will then be utilized to make the page look more presentable and coherent with Tech's current website theme. JavaScript will be implemented where necessary to make the webpage responsive to user inputs. In our case, that would allow the user to select a drone to view details on, view locations on the map, promote a drone's priority status, and other such tasks.
