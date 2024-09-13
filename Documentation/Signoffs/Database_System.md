@@ -20,7 +20,7 @@ The following contain the list of data that will be stored inside the base, pre-
 The health status of Camera is there to indicate when the camera system is not functioning but does not specificity the acutal problem of the camera.
 
 <sup>5</sup>
-Following TTU policy 856 disposal procedures of the data with its levels of data security. For public level information, all data must be erased using minimal procedures and security best practices.
+Following TTU policy 856 [^7] disposal procedures of the data with its levels of data security. For public level information, all data must be erased using minimal procedures and security best practices.
 
 <sup>6</sup>
 This is to ensure wifi is accessable, so that it can receive data package from other subsystem.
@@ -224,10 +224,11 @@ To test the actual written code, a dummy data table fill with preset values will
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[^1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, Available: https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
-[^2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
-[^3] “Raspberry Pi 5,” Available: https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
-[^4] "Theoretical Maximum Memory Bandwidth for Intel® Core™ X-Series Processors," Intel, Available: https://www.intel.com/content/www/us/en/support/articles/000056722/processors/intel-core-processors.html (accessed Sep. 12, 2024). <br>
-[^5] "LPDDR4x/LPDDR4 SDRAM," Micron, Available: https://www.mouser.com/datasheet/2/671/z4bm_embedded_lpddr4x_lpddr4-3193428.pdf?srsltid=AfmBOor0oFs9McWlLydE3Mhwnwi_MDB7D7KWG88pNntX05gi9FzJkEo0 (accessed Sep. 12, 2024). <br>
-[^6] "M.2 2242 SATA SSD," Kingston, Avaiable: https://www.kingston.com/en/industrial-ssd/m2-2242-sata?capacity=256gb&form%20factor=m.2%202242&interface=sata&nand=tlc&temperature=commercial (accessed Sep. 12, 2024). <br>
+[^1]: “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, Available: https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
+[^2]: “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
+[^3]: “Raspberry Pi 5,” Available: https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
+[^4]: "Theoretical Maximum Memory Bandwidth for Intel® Core™ X-Series Processors," Intel, Available: https://www.intel.com/content/www/us/en/support/articles/000056722/processors/intel-core-processors.html (accessed Sep. 12, 2024). <br>
+[^5]: "LPDDR4x/LPDDR4 SDRAM," Micron, Available: https://www.mouser.com/datasheet/2/671/z4bm_embedded_lpddr4x_lpddr4-3193428.pdf?srsltid=AfmBOor0oFs9McWlLydE3Mhwnwi_MDB7D7KWG88pNntX05gi9FzJkEo0 (accessed Sep. 12, 2024). <br>
+[^6]: "M.2 2242 SATA SSD," Kingston, Avaiable: https://www.kingston.com/en/industrial-ssd/m2-2242-sata?capacity=256gb&form%20factor=m.2%202242&interface=sata&nand=tlc&temperature=commercial (accessed Sep. 12, 2024). <br>
+[^7]: “856 data security and handling policy,” Tennessee Technological University, Available: https://www.tntech.edu/policies/ [Accessed April. 29, 2024].
 <!--etc.-->
