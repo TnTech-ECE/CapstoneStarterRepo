@@ -10,11 +10,12 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 |  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Design Constraint|
 |  4| Camera zoom, focus, and light sensitivity (ISO) are not required to be controlled by system software| Design Constraint|
 |  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Design Constraint and [Camera Software Constraint](Camera_Software_System.md)|
-|  6| Servo motors shall be capable of reaching required angles in a minimum time of X milliseconds after recieving the appropriate signal(s)| Design Constraint|
+|  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Design Constraint|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| Environmental Constraint|
 |  8| Camera system shall not draw more than 50 Watts of power| Design, Safety, and [Camera Power System Constraint](Power_System_Camera.md)|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| Standard|
 | 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit| Reliability and Maintainance Constraint|
+| 11| Camera system shall not operate in environmental conditions exceeding a temperature range of (0 - 50)° C| Reliability, Maintance, Design Constraint|
 
 <sup>1</sup> Tracking UAS systems while they are in-flight is essential for an accurate and clear image.
 
@@ -35,6 +36,8 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 <sup>9</sup> IEEE standards help to decrease internet traffic and ensure appropriate data transfer rates. Tennessee Tech standards ensure that different security levels of data are appropriately protected.
 
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
+
+<sup>11</sup> Attempting to operate the system in temperature ranges exceeding the devices' temperature limits may cause permanent, irreprable damages to the electronics
 
 ## Design Theory
 
@@ -63,7 +66,7 @@ The camera selected for this application is a 12.3MP IMX477 with a pre-installed
 <img src= "/Documentation/Images/Camera Hardware System/imx477.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/lens.jpg" width="233" height="353">
 
 ### Enclosures
-To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP66, exceeding our initial constraint of IP65. On each box, two knockout holes will be used to allow the installation of both a vent and cable gland. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow pressure buildup caused by temperature cycling to escape, keeping the system sealed. These add-ons will be followed up with caulk to ensure that the enclosures retain the IP66 water rating. Inside each enclosure will be a dessicant pack, made to absorb any moisture that could potentially seep into the box. 
+To protect the sensitive electronics required for the control of this system, two polycarbonate enclosures will be utilized. The Raspberry Pi, along with the remainder of the system, will be enclosed within a fully opaque case, while the camera itself will be mounted inside an enclosure with a clear top, allowing for it to view the outside world and capture the UAS mid-flight as intended. These boxes will be rated to protect from water up to a rating of IP66, exceeding our initial constraint of IP65. On each box, two knockout holes will be used to allow the installation of both a vent and cable gland. The gland will allow power and camera connections to pass through the enclosure, while the vent will be used to allow pressure buildup caused by temperature cycling to escape, keeping the system sealed. These add-ons will be followed up with caulk to ensure that the enclosures retain the IP66 water rating. Inside each enclosure will be a dessicant pack, made to absorb any residual moisture that could potentially seep into the box. 
 
 <!--fuuuuuuuu<img src= "/Documentation/Images/Camera Hardware System/SPU_Case.jpg" width="260" height="353"> <img src= "/Documentation/Images/Camera Hardware System/Cam_Case.jpg" width="260" height="353">-->
 <!--<img src= "/Documentation/Images/Camera Hardware System/Cable_Gland.jpg" width="260" height="353"><img src= "/Documentation/Images/Camera Hardware System/Case_Vent.jpg" width="260" height="353">-->
@@ -104,8 +107,19 @@ Once completed, installation of the system electrical components can begin. For 
 
 ## Design Analysis
 
-### Processor and Camera
-The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11]. 
+### Camera
+The camera selected for this system will be capable of taking images in a RAW12/10/8 or COMP8 (JPEG format) at a resolution of 12.3 Megapixels, and an ADC resolution of 10 - 12 bits [^8]. This gives 1024 grey levels, or storage areas to range the incoming wavelengths of light from pure black to pure white. The more levels present, the more "crisp" the image will appear. This rating is also known as the bit depth. To find the average image size of a picture taken, we can use the equation below [^12]:
+
+$\ S_i = R_i * B_d / 8000$ [^13]
+
+Where Image Size is equal to Image Resolution times Bit Depth divided by 8000. The resultant number can then be converted to the proper SI unit for the number of bytes. For the camera chosen, most images will be at a minimum size of 196.8 Kilobytes and an expected maximum size of 787.2 Kilobytes. This file size will be able to be processed, locally stored, and transmitted by the processor in a matter of milliseconds. The exact time however will be dependant on the wi-fi signal strength of the SPU, which must be determined when the install is conducted.
+
+//
+### Processor
+The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11].
+
+#### Temperature limits
+Both the processor and the camera have a temperature operating range of 0° C to 50° C (32° F to 122° F), severely limiting the capabilities of the system. To mitigate this, while also retaining the waterproof rating of the enclosure, heatsinks are provided with the SPU to be applied to the CPU and the USB controller chip, reducing temperatures onboard and enabling the pi to run constantly. Another mitigation, especially in the intense heat experienced in the southern states, will be to install the system in an area where it can remain in perpetual shade, keeping the system cooler than typically seen in direct sunlight. Mitigations in the cold weather become harder, as temperatures can fall into the negative °F ranges in the winters. So, for especially cold and especially hot conditions, this system will be rendered inoperable and will need to be shut down.
 
 ### Servos and System Power
 These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
@@ -152,5 +166,7 @@ Using EG silicon sealant will make service harder if fail-->
 [^9]: [Servo Datasheet](https://images-na.ssl-images-amazon.com/images/I/81Lbgu+nG6L.pdf) (Accessed May 2, 2024)
 [^10]: [Desiccant FAQ Page](https://dryndry.com/pages/faqs) (Accessed Sept 13, 2024)
 [^11]: [Tom's Hardware Review of RBPi 4B](https://www.tomshardware.com/reviews/raspberry-pi-4) (Accessed Sept 13, 2024)
+[^12]: [Image Size Calculator](https://www.calculatoratoz.com/en/image-file-size-calculator/Calc-36784) (Accessed Sept 13, 2024)
+[^13]: [Bit Depth, Full Well, and Dynamic Range](https://www.photometrics.com/learn/camera-basics/bit-depth) (Accessed Sept 13, 2024)
 <!--etc.-->
 
