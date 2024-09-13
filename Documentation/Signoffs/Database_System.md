@@ -43,11 +43,18 @@ Since the Theoretical maximum Processing rate of RAM is much faster than the dat
 ## Raspberry pi 5 Setup
 The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) guide.
 
+## Network Acess
+Once the Raspberry Pi 5 OS is set up, on the upper right hand side and clicking on the following symbol will bring up a menu that let device connect to wifi. <br>
+![image](https://github.com/user-attachments/assets/a47211ed-970c-4547-b426-8f3271b19deb) <br>
+![image](https://github.com/user-attachments/assets/acb6334d-4ac3-475f-bbd2-cd429fb7491e) <br>
+
+
+
 ## MySQL Setup
-Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
+Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
 
 ## M.2 HAT+
-Following the [M.2 HAT+ installation guide](https://www.raspberrypi.com/documentation/accessories/m2-hat-plus.html) will allow the Raspberry pi 5 to increase its storage capacity. It will only support M.2 SSD 2230 or 2242 form factor.
+Following the [M.2 HAT+ installation guide](https://www.raspberrypi.com/documentation/accessories/m2-hat-plus.html) will allow the Raspberry pi 5 to increase its storage capacity. The M.2 HAT+ will only support M.2 SSD 2230 or 2242 form factor.
 
 ## Raspberry pi 5 Connection breakdown
 ![image](https://github.com/user-attachments/assets/ed25a725-7c42-43eb-bb01-05748570be05) <br>
