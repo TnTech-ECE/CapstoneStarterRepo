@@ -14,6 +14,7 @@ The database subsystem will receive data from the receiver, website and camera s
 |  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
+
 ## Flowchart
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
 
@@ -27,7 +28,7 @@ Shifting the focus to RAM, the Raspberry pi 5 is using LPDDR4x-4267 SDRAM. The f
 Since the Theoretical maximum Processing rate of RAM is much faster than the data processing rate of the CPU, the store and retrieval of data directly from the RAM should not be bottlenecked. However, the Raspberry pi 5 only support upto 8 GB of RAM capacity and the database will only be allocate 4 GB or less because the Website server is also running on the same device which will also take up RAM space. With 4 GB of RAM the database will only be able to hold 108 images, not counting other data stored inside the database. Therefor more storage capacity is needed. Follwing the [M.2 HAT+](#M.2-HAT+) section, storage capactiy can be expanded using M.2 SSD. Using a 256GB M.2 2242 SATA from Kingston[^6], according to their sepecifications, the M.2 SSD will perform up to 550 MB/s read and 510 MB/s write. Comparing the maximum speed of read and write to the CUP's data processing rate, the processing time of retrieving data from the M.2 SSD will increase as the data base get larger.
 
 ## Raspberry pi 5 Setup
-The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
+The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) guide.
 
 ## MySQL Setup
 Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
@@ -41,10 +42,6 @@ The picture below show the front side of the M.2 HAT+, the PCIe port circled in 
 ![image](https://github.com/user-attachments/assets/5edb4456-225b-4b07-9067-6c477ec7b84e) <br>
 The picture below show the USB-c Power jack which will be connected to a [27W USB-C Power Supply](https://datasheets.raspberrypi.com/power-supply/27w-usb-c-power-supply-product-brief.pdf), a power supply that output 5.1V. <br>
 ![image](https://github.com/user-attachments/assets/cdba1b4b-e40d-4b9a-826b-5a96c977f6b1)
-
-
-
-
 
 ## Block Message
 Inside the data package from the receiver system, there will be multiple blocks of message. The block message is 25 bytes in length with a 1-byte header followed by 24 bytes of data. When the block message is decoded, the 1-byte message header will specify the message type, and it will contain the following data: Basic ID message(0x0), Location/Vector Message(0x1), and the rest is optional, Authentication Message(0x2), Self-ID Message(0x3), System Message(0x4), Operator ID(0x5), Message Pack(0xF)[1]. Only System Message will be decoded since the rest of the Optional message type does not provide any information for tracking.
