@@ -43,11 +43,10 @@ Since the Theoretical maximum Processing rate of RAM is much faster than the dat
 ## Raspberry pi 5 Setup
 The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) guide.
 
-## Network Acess
+## Network Access
 Once the Raspberry Pi 5 OS is set up, on the upper right hand side and clicking on the following symbol will bring up a menu that let device connect to wifi. <br>
 ![image](https://github.com/user-attachments/assets/a47211ed-970c-4547-b426-8f3271b19deb) <br>
 ![image](https://github.com/user-attachments/assets/acb6334d-4ac3-475f-bbd2-cd429fb7491e) <br>
-
 
 
 ## MySQL Setup
@@ -221,19 +220,27 @@ The languages chosen to implement this program will be either Python or C++, Pyt
 ## Testing
 To test the actual written code, a dummy data table fill with preset values will be created strictly for testing different scenarios.
 
+## Case
+Following show the size of the case <br>
+![image](https://github.com/user-attachments/assets/d80729da-a689-467e-a400-b44025e74c8a) <br>
+Comparing the physical specification[^3] of raspberry pi 5 to the case, the width of the case is 10mm wider and 7mm long than the raspberry pi 5.
+
+
 ## BOM
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
-| Raspberry Pi 5 | 2648-SC1112-ND | 1 | $80 | $80 |
-| GeeekPi N04 M.2 NVMe to PCIe Adapter | B0CRK4YB4C(ASIN) | 1 | $14.39 | $14.39 |
-| Patriot P300 M.2 128GB | ‎P300P128GM28 | 1 | $17.99 | $17.99 |
-|Total     |             |          |                |     $112.38    |
+| Raspberry Pi 5 | B0CPWH8FL9(ASIN) | 1 | $89.99 | $89.99 |
+| M.2 HAT+ | ‎B0D5CGDJLQ(ASIN) | 1 | $19.99 | $19.99 |
+| KingSpec M.2 SATA SSD | ‎B01MR5O5YS(ASIN) | 1 | $23.39 | $23.39 |
+| GeeekPi Metal Case for Raspberry Pi 5 | B0CMZ84GM8(ASIN) | 1 | $20.52 | $20.52 |
+| JSAUX Micro HDMI to HDMI Adapter | ‎B09LYPXPH6(ASIN) | 1 | $7.19 | $7.19 |
+|Total     |             |          |                |     $161.08    |
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [^1]: “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, Available: https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
 [^2]: “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
-[^3]: “Raspberry Pi 5,” Available: https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
+[^3]: “Raspberry Pi 5,” Available: https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 21, 2024). <br>
 [^4]: "Theoretical Maximum Memory Bandwidth for Intel® Core™ X-Series Processors," Intel, Available: https://www.intel.com/content/www/us/en/support/articles/000056722/processors/intel-core-processors.html (accessed Sep. 12, 2024). <br>
 [^5]: "LPDDR4x/LPDDR4 SDRAM," Micron, Available: https://www.mouser.com/datasheet/2/671/z4bm_embedded_lpddr4x_lpddr4-3193428.pdf?srsltid=AfmBOor0oFs9McWlLydE3Mhwnwi_MDB7D7KWG88pNntX05gi9FzJkEo0 (accessed Sep. 12, 2024). <br>
 [^6]: "M.2 2242 SATA SSD," Kingston, Avaiable: https://www.kingston.com/en/industrial-ssd/m2-2242-sata?capacity=256gb&form%20factor=m.2%202242&interface=sata&nand=tlc&temperature=commercial (accessed Sep. 12, 2024). <br>
