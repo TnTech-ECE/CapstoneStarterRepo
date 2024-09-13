@@ -87,7 +87,7 @@ For both enclosures, stainless steel screws will be used extensively throughout,
 <img src= "/Documentation/Images/Camera Hardware System/Schematic_CamHardware_Rev2.png" width="624" height="386">
 To satisfy the power requirements of the system, while also protecting the electronics and physical safety of surrounding personnel and property, this system must be properly grounded and rated to conduct the full load amperage (FLA) in the scenario of max power draw. A C-type connector will be required to deliver power to the Raspberry Pi, while the Servo motors will require terminations of +5 VDC and a ground in order to recieve power. The camera will draw power from the CSI ribbon cable connection, but will likely require the Raspberry Pi to draw its full rated amperage in order to make the system work. 
 
-To make the terminations, all powered wires will be inter-connected via a screw-terminal distribution block located inside of the PI enclosure B0. The main power cable coming in from the Camera Power System will be pulled into the enclosure via the cable gland installed into the side of the cabinet. The main power wire (Black) will be terminated onto the first terminal of the distribution block. Given that we need to make three wire terminations, with one being the Raspberry Pi's power cable and the other two belonging to the servo motors, we will keep them on seperate terminals in order to avoid disruptions caused by noise. To accomplish this, small jumper wires will be included to jump to two more connections. A similar setup will be created for the ground wires.
+To make the terminations, all powered wires will be inter-connected via a screw-terminal distribution block located inside of the PI enclosure B0. The main power cable coming in from the Camera Power System will be pulled into the enclosure via the cable gland installed into the side of the cabinet. The main power wire (Black) will be terminated onto the first terminal of the distribution block. Given that we need to make three wire terminations, with one being the Raspberry Pi's power cable and the other two belonging to the servo motors, we will keep them on seperate terminals in order to avoid disruptions caused by noise. To accomplish this, small jumper contacts will be included to jump to two more connections. A similar setup will be created for the ground wires.
 
 The wires for the servo signal connections will be soldered, heat-shrunk, and wrapped to ensure a safe and stable connection. Using two traditional Dupont wiring pin-connectors that comes with the Raspberry Pi, this will be connected to the appropriate pins of the Raspberry Pi in order to transmit the PWM signals.
 
@@ -95,11 +95,12 @@ The wires for the servo signal connections will be soldered, heat-shrunk, and wr
 image[]-->
 
 ### Construction
-The full schematics, along with a mock-up of the full system assembly, is displayed below.
+The full physical schematics, along with a mock-up of the full system assembly, is displayed below.
 
 Construction will begin with setting the cable glands and the vent plug. Boring a hole matching the outer diameter of the components into the side of the enclosure as seen below, and deburring any polymer that leaves a sharp edge. After deburring, apply EG silicon to the exterior and interior mating surfaces of the bore hole and install the components, ensuring that a small amount spills out to the sides of the components to ensure that the silicon has made an additional gasket-barrier. 
 
-Once completed, installation of the Raspberry Pi and terminal block can begin. Once installed, (securing the PI with the proper screws)
+Once completed, installation of the Raspberry Pi and terminal block can begin. Once installed, (securing the PI and terminal block with the proper screws), the wires for supplying the SPU and servo motors with power can be brought in and terminated onto the first half of the terminal block
+
 ## Design Analysis
 These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
 
