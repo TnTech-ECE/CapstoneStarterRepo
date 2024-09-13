@@ -22,11 +22,13 @@ The database subsystem will receive data from the receiver, website and camera s
 
 
 ## Analysis
-The choice of database used is mySQL, which will be host on a [raspberry pi 5](#Raspberry-pi-5-Setup). To look at worst case scenarios of process time it would take to store and retrieve data from the database, result will be calculated base on the CPU and RAM speed/configuration.
+The choice of database used is mySQL, which will be host on a [raspberry pi 5](#Raspberry-pi-5-Setup). Looking at the theoretical Maximum performance of processing time it would take to store and retrieve data from the database, result will be calculated base on the CPU and RAM speed/configuration. The actual performance will be lower due to many system variables. To simulate the worst case senerios, system efficiency will be counted during calculation.
 
-In the [Block Message section](#Block-Message), every block message received from the receiver subsystem will be 25 bytes(0.025 Kb). The actual stored data will be much smaller, since not everything inside the block message will be stored in the database. Also, the camera used in the camera subsystem have a image Sensor Resolution of 4056 x 3040 pixels, and each RGB pixel will contain 24 bits. A single image can contain maximum of 36.99MB. According to the specification of the raspberry pi, it have a quad-core CPU that run at 2.4GHz. We can calculate the data rate using the following equation: Data Rate = Data per cycle(Byte) × Clock speed. Since 64-bit version of [MySQL](#MySQL-Setup) will be installed, which mean the CPU will be handlling 64 bits(8 Bytes) per cycle. Performing the following calculation: Data Rate = 8 x (2.4x10^9), and the data rate will result in 19.2 GB/s for a single core process. Since the size of the message block is relatively small, the CPU will have no problem unpacking the message block and store the relevant information inside database. For the image processing, even if the CUP data rate is running at 10% effiency, theoreticaly it can still handle 51 image per second.
+In the [Block Message section](#Block-Message), every block message received from the receiver subsystem will be 25 bytes. The actual stored data will be much smaller, since not everything inside the block message will be stored in the database. The camera used in the camera subsystem have an image Sensor Resolution of 4056 x 3040 pixels, and each RGB pixel will contain 24 bits. A single image can contain maximum of 36.99 MB. According to the specification of the raspberry pi, it have a quad-core CPU that run at 2.4 GHz. We can calculate the theoretical data processing rate using the following equation: Data Processing Rate(Byte/s) = Data per cycle(Byte) × Clock speed x Instruction Per Cycle. Since 64-bit version of [MySQL](#MySQL-Setup) will be installed, which mean the CPU will be handlling 64 bits(8 Bytes) per cycle. Also, the instruction per cycle will be set to 1 since we are looking at the worst case scenarios. Performing the following calculation: Data Processing Bandwidth = 8 x (2.4x10^9) x 1, and the data rate will result in 19.2 GB/s for a single core process. The size of the message block is relatively small compare to the data processing rate, so, the CPU will have no problem unpacking the message block and store the relevant information inside database. For the image processing, even if the CUP data processing rate is running at 10% effiency, it can still handle 51 image per second.
 
-keep a sepreate database for checking pre-marked geographical locations and pre-authorized access for lower run/process-time speed.
+Shifting the focus to RAM, the Raspberry pi 5 is using LPDDR4x-4267 SDRAM. The following equation can calculate the theoretical Maximum Memory Bandwidth[^4]: Memory Bandwidth(Bytes/s) = Memory frequency × Data Rate(# of channels) × Memory Bus Width(Bytes). Using the LPDDR4X/LPDDR4 SDRAM data sheet[^5], memory frequency, data rate can be obtained. The Ram will have frequece of 2133 MHz, 4 channels of Data Rate and the Memory Bus Width will be 8 bytes since the system is running on a 64-bits system. Substitute the values, the Maximum Memory Bandwidth will be 68.256 GB/s.
+
+Since the Theoretical maximum Processing rate of RAM is much faster than the data processing rate of the CPU, the store and retrieval of data directly from the RAM should not be bottlenecked. However, the Raspberry pi 5 only support upto 8 GB of RAM capacity and the database will only be allocate 4 GB or less because the Website server is also running on the same device which will also take up RAM space. With 4 GB of RAM the database will only be able to hold 108 images, not counting other data stored inside the database. Therefor more storage capacity is needed. Follwing the [M.2 HAT+](#M.2-HAT+) section, storage capactiy can be expanded using M.2 SSD. Using a 256GB M.2 2242 SATA from Kingston[^6], according to their sepecifications, the M.2 SSD will perform up to 550 MB/s read and 510 MB/s write. Comparing the maximum speed of read and write to the CUP's data processing rate, the processing time of retrieving data from the M.2 SSD will increase as the data base get larger.
 
 ## Raspberry pi 5 Setup
 The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry pi OS documentation installation](https://www.raspberrypi.com/documentation/computers/os.html) 
@@ -34,8 +36,8 @@ The Raspberry Pi will run the offical Raspberry Pi OS, following the [Raspberry 
 ## MySQL Setup
 Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the recommended way to install, update, and remove software in Raspberry Pi OS."
 
-
-
+## M.2 HAT+
+Following the [M.2 HAT+ installation guide](https://www.raspberrypi.com/documentation/accessories/m2-hat-plus.html) will allow the Raspberry pi 5 to increase its storage capacity. It will only support M.2 SSD 2230 or 2242 form factor.
 
 
 ## Block Message
@@ -203,7 +205,10 @@ To test the actual written code, a dummy data table fill with preset values will
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
-[1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
-[2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
-[3] “Raspberry Pi 5,” https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
+[^1] “ASTM F34111-22a,” Standard Specification for Remote ID and Tracking, Available: https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf (accessed Apr. 11, 2024). <br>
+[^2] “ANSI/CTA-2063-A,” Small Unmanned Aerial Systems Serial Numbers (accessed Apr. 24, 2024). <br>
+[^3] “Raspberry Pi 5,” Available: https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf (accessed Apr. 27, 2024). <br>
+[^4] "Theoretical Maximum Memory Bandwidth for Intel® Core™ X-Series Processors," Intel, Available: https://www.intel.com/content/www/us/en/support/articles/000056722/processors/intel-core-processors.html (accessed Sep. 12, 2024). <br>
+[^5] "LPDDR4x/LPDDR4 SDRAM," Micron, Available: https://www.mouser.com/datasheet/2/671/z4bm_embedded_lpddr4x_lpddr4-3193428.pdf?srsltid=AfmBOor0oFs9McWlLydE3Mhwnwi_MDB7D7KWG88pNntX05gi9FzJkEo0 (accessed Sep. 12, 2024). <br>
+[^6] "M.2 2242 SATA SSD," Kingston, Avaiable: https://www.kingston.com/en/industrial-ssd/m2-2242-sata?capacity=256gb&form%20factor=m.2%202242&interface=sata&nand=tlc&temperature=commercial (accessed Sep. 12, 2024). <br>
 <!--etc.-->
