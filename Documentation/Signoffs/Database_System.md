@@ -1,19 +1,32 @@
 # Database System
 ## Functionality
-The database subsystem will receive data from the receiver, website and camera subsystem, then store it locally. Website subsystem will be provided full access to the stored data. Data stored will containt the following: pre-authorized flight information, pre-marked geographical locations, pictures, drone ID, drone speed and the location of the drone and control station. Whenever a drone is detected by the receiver, the database will check for pre-authorized access releated to the received drone ID. If not authorized or drone detected within any pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem.
+The database subsystem will receive data from the receiver, website and camera subsystem, then store it locally. Website subsystem will be provided full access to the stored data. Data stored will containt the following: pre-authorized flight information, pre-marked geographical locations, images, camera health status, drone ID, drone speed and the location of the drone and control station. Whenever a drone is detected by the receiver, the database will check for pre-authorized access releated to the received drone ID. If not authorized or drone detected within any pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem.
 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
-|  1 | The database shall be stored locally and allow the website subsystem to have full access | Design Constraint |
+|  1 | The database shall be stored locally and allow the website subsystem to edit the pre-authorized flight information, pre-marked geographical locations and have full access to view all other data. | Design Constraint |
 |  2 | The system shall check for pre-authorized access for any drone's new flight session, if no pre-authroized acess found, then the Drone location, speed and Control station location will be sent to the camera subsystem. | Design Constraint |
-|  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem  | Design Constraint |
+|  3 | If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem.  | Design Constraint |
 |  4 | The system shall indicate the health status of Camera system | Design Constraint |
 |  5 | The system shall store the data for at least 90 days | TTU Policy/Design Constraint |
 |  6 | The system shall support data transfer over the network | Design Constraint |
 |  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
+The following contain the list of data that will be stored inside the base, pre-authorized flight information, pre-marked geographical locations, images, camera health status, drone ID, drone speed and the location of the drone and control station.
+
+<sup>4</sup> 
+The health status of Camera is there to indicate when the camera system is not functioning but does not specificity the acutal problem of the camera.
+
+<sup>5</sup>
+Following TTU policy 856 disposal procedures of the data with its levels of data security. For public level information, all data must be erased using minimal procedures and security best practices.
+
+<sup>6</sup>
+This is to ensure wifi is accessable, so that it can receive data package from other subsystem.
+
+<sup>7</sup>
+Since the Device will be inside the building, the case will be used to prevents physical contact with it. However, it does not prevent the power supply from being disconnected by outside soruce.
 
 ## Flowchart
 ![image](https://github.com/user-attachments/assets/60f31ebf-705d-475a-8613-69898a57d2bc)
