@@ -14,12 +14,8 @@ The database subsystem will receive data from the receiver, website and camera s
 |  7 | The Device used to host the database shall have a casing that prevents direct physical interaction with the hardware | Design Constraint |
 
 <sup>1</sup> 
-
-
-## Schematic
-
+## Flowchart
 ![image](https://github.com/mrnye42/Drone-Tracker-Project/assets/113947428/802b122a-8783-4b42-816a-d7d858e90202)
-
 
 ## Analysis
 The choice of database used is mySQL, which will be host on a [raspberry pi 5](#Raspberry-pi-5-Setup). Looking at the theoretical Maximum performance of processing time it would take to store and retrieve data from the database, result will be calculated base on the CPU and RAM speed/configuration. The actual performance will be lower due to many system variables. To simulate the worst case senerios, system efficiency will be counted during calculation.
@@ -38,6 +34,14 @@ Since Raspberry Pi officially suggested that "Advanced Package Tool (APT) is the
 
 ## M.2 HAT+
 Following the [M.2 HAT+ installation guide](https://www.raspberrypi.com/documentation/accessories/m2-hat-plus.html) will allow the Raspberry pi 5 to increase its storage capacity. It will only support M.2 SSD 2230 or 2242 form factor.
+
+## Raspberry pi 5 Connection breakdown
+![image](https://github.com/user-attachments/assets/ed25a725-7c42-43eb-bb01-05748570be05)
+![image](https://github.com/user-attachments/assets/dd500387-5333-4523-8301-8a200df620d3)
+The picture above and below show the PCIe Interface, which will be used to connect the M.2 HAT+ with the M.2 HAT+
+![image](https://github.com/user-attachments/assets/5edb4456-225b-4b07-9067-6c477ec7b84e)
+
+
 
 
 ## Block Message
@@ -191,6 +195,9 @@ The received data from the camera are the following:
 | -------- | ------------| -------- |
 | Image | raw file or PNG | There can be mulitple Image |
 | Camera Health status | boolean | '0' indicate power is low |
+
+## Coding language
+The languages chosen to implement this program will be either Python or C++, Python will be mainly used for code to unpack the data package. C++ will be used if needed.
 
 ## Testing
 To test the actual written code, a dummy data table fill with preset values will be created strictly for testing different scenarios.
