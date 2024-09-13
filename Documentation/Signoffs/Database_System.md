@@ -37,9 +37,11 @@ Following the [M.2 HAT+ installation guide](https://www.raspberrypi.com/document
 
 ## Raspberry pi 5 Connection breakdown
 ![image](https://github.com/user-attachments/assets/ed25a725-7c42-43eb-bb01-05748570be05)
-![image](https://github.com/user-attachments/assets/dd500387-5333-4523-8301-8a200df620d3)
-The picture above and below show the PCIe Interface, which will be used to connect the M.2 HAT+ with the M.2 HAT+
+The picture below show the front side of the M.2 HAT+, the PCIe port circled in red will be used to connect the PCIe port on the Raspberry pi, and M.2 SSD drive will be installed in the NVME port circled in purple.
 ![image](https://github.com/user-attachments/assets/5edb4456-225b-4b07-9067-6c477ec7b84e)
+The picture below show the USB-c Power jack which will be connected to a [27W USB-C Power Supply](https://datasheets.raspberrypi.com/power-supply/27w-usb-c-power-supply-product-brief.pdf), a power supply that output 5.1V.
+![image](https://github.com/user-attachments/assets/cdba1b4b-e40d-4b9a-826b-5a96c977f6b1)
+
 
 
 
