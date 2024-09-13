@@ -89,18 +89,25 @@ To satisfy the power requirements of the system, while also protecting the elect
 
 To make the terminations, all powered wires will be inter-connected via a screw-terminal distribution block located inside of the PI enclosure B0. This connection method will require a wire connector to be crimped and heat-shrink wrapped to each wire landed onto the terminal connections. The main power line coming in from the Camera Power System will be pulled into the enclosure via the cable gland installed into the side of the cabinet. The +5 VDC power wire (Black) will be terminated onto the first terminal of the distribution block. Given that we need to make three wire terminations, with one being the Raspberry Pi's power cable and the other two belonging to the servo motors, we will keep them on seperate terminals in an effort to minimize disruptions caused by servo motor noise. To accomplish this, small jumper wires will be included to jump to two more connections. A similar setup will be created for the ground wires.
 
-The wires for the servo signal connections will be comprised of a 3 conductor, 22 ga. stranded cable connected to the native wires on the servos. To connect to the servo motor wires, the original wires will be cut, stripped, soldered, and heat-shrunk with dielectric grease in order to protect the bare connection. Using two traditional Dupont wiring pin-connectors that comes with the Raspberry Pi, this will be connected to the appropriate pins of the Raspberry Pi in order to transmit the PWM signals. The power wires will have a terminal connector to land onto the distribution block, while the PWM pins will be soldered and heat-shrink wrapped in order to connect to the Raspberry Pi GPIO pins.
+The wires for the servo signal connections will be comprised of a 3 conductor, 22 ga. stranded cable connected to the native wires on the servos. To connect to the servo motor wires, the original wires will be cut, stripped, soldered, and heat-shrunk with dielectric grease in order to protect the bare connection. Using two traditional Dupont wiring pin-connectors that comes with the Raspberry Pi, this will be connected to the appropriate pins of the Raspberry Pi in order to transmit the PWM signals. The power wires will have a terminal connector to land onto the distribution block, while the PWM pins will be soldered and heat-shrink wrapped in order to connect to the Raspberry Pi GPIO pins. These cable conneections are then routed to the servo mounted externally to the control unit.
 <!--The colored schematic will be shown below
 image[]-->
 
 ### Construction
 The full physical schematics, along with a mock-up of the full system assembly, is displayed below.
 
-Construction will begin with setting the internal mounting plates into the enclosure, and securing with the provided screws. This will serve as the mounting surface for our components, allowing us to drill and tap fasteners to ensure the components do not move. After this is set into place, installation of the cable glands and vent plugs will proceed. The chosen enclosures come with M16/M20 knockout plugs, allowing us to install the glands and plugs without compromising the waterproofing rating. After taking a screwdriver to knock out the plug holes and deburring any polymer that leaves a sharp edge, EG silicon will be applied to the exterior and interior mating surfaces of the bore hole. Once placed, the components will be installed and allowed to cure, ensuring that a small amount spills out to the sides of the components to fill in any gaps from potential defects.
+Construction will begin with setting the internal mounting plates into the enclosure, and securing with the provided screws. This will serve as the mounting surface for our components, allowing us to install self-tapping fasteners and PCB standoffs to ensure the components do not move. After this is set into place, installation of the cable glands and vent plugs will proceed. The chosen enclosures come with M16/M20 knockout plugs, allowing us to install the glands and plugs without compromising the waterproofing rating. After taking a screwdriver to knock out the plug holes and deburring any polymer that leaves a sharp edge, EG silicon will be applied to the exterior and interior mating surfaces of the bore hole. Once placed, the components will be installed and allowed to cure, ensuring that a small amount spills out to the sides of the components to fill in any gaps from potential defects.
 
-Once completed, installation of the system electrical components can begin. For the Pi and camera units, four PCB standoff kits will be utilized. For the terminal block, a  To attach them to the mounting surface, these standoffs come with a small piece of 3M adhesive pad, enabling the securing of the PCB without drilling or potentially damaging the PCB. To install, isopropyl alchohol will be used to wipe down the aluminum mounting surface, removing grease, dirt and debris to ensure a solid connection. The kits will be pushed into the four holes of the Pi and camera unit, and will then be installed. Once installed, (securing the PI and terminal block with the proper screws), the wires for supplying the SPU and servo motors with power can be brought in and terminated onto the first half of the terminal block
+Once completed, installation of the system electrical components can begin. For the Pi and camera units, four PCB standoff kits will be utilized. For the terminal block, a  To attach them to the mounting surface, these standoffs come with a small piece of 3M adhesive pad, enabling the securing of the PCB without drilling or potentially damaging the PCB. To install, isopropyl alchohol will be used to wipe down the aluminum mounting surface, removing grease, dirt and debris to ensure a solid connection. The kits will be pushed into the four holes of the Pi and camera unit, and will then be installed. Once installed, (securing the PI and terminal block with the proper screws), the wires for supplying the SPU and servo motors with power can be brought in and terminated onto the first half of the terminal block, while the ground wires will be terminated onto the second half.
+
+
 
 ## Design Analysis
+
+### Processor and Camera
+The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11]. 
+
+### Servos and System Power
 These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
 
 $\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} * ( \tau_{DBand} + 1) $
@@ -108,6 +115,8 @@ $\ \Delta\theta_{min} = \frac{(\theta_{max} - \theta_{min})}{t_{max} - t_{min}} 
 This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° for Servo 1. The chart below shows the range of motion for both devices.
 
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
+
+### 
 <!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
 Using EG silicon sealant will make service harder if fail-->
 
@@ -142,5 +151,6 @@ Using EG silicon sealant will make service harder if fail-->
 [^8]: [Arducam IMX477 Data and Information](https://www.arducam.com/sony/imx477/) (Accessed Sept 4, 2024)
 [^9]: [Servo Datasheet](https://images-na.ssl-images-amazon.com/images/I/81Lbgu+nG6L.pdf) (Accessed May 2, 2024)
 [^10]: [Desiccant FAQ Page](https://dryndry.com/pages/faqs) (Accessed Sept 13, 2024)
+[^11]: [Tom's Hardware Review of RBPi 4B](https://www.tomshardware.com/reviews/raspberry-pi-4) (Accessed Sept 13, 2024)
 <!--etc.-->
 
