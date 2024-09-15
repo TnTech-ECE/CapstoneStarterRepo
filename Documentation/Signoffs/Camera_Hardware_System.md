@@ -137,7 +137,8 @@ The system, with the servo motors and raspberry Pi pulling power directly from t
 | Raspberry Pi 4B, 8 GB Memory| 5| 5| 2.5| 3.0| 12.5| 15.0|
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| 5| 6.8| 1.8| 2.2| 9| 14.96|
 | Digital Servo, 20 kg torque, 270 degrees Control Angle| 5| 6.8| 1.5| 2.2| 7.5| 14.96|
-| Total     |                |                |  5.8 A         |  7.4 A         |  29 W        |  44.92 W     |
+| Raspberry Pi HQ camera| 5| 5| 0.3| 0.3| 1.5| 1.5|
+| Total     |                |                |  6.1 A         |  7.1 A         |  30.5 W        |  46.42 W     |
 
 By supplying a power supply capable of delivering 50 Watts in the event of every component pulling the maximum current at 5 V, we will increase the system reliability and prevent undercurrent events with our Pi processor. One concern can be drawn from seeing the servo motor potentially drawing 6.8 volts in a 5 volt system, but this will not be a concern to worry about here, as the servo motors chosen are designed to run at 5 volts, but can run at a higher voltage if a system is capable of supplying it.
 
@@ -155,15 +156,20 @@ Using EG silicon sealant will make service harder if fail-->
 | Digital Servo, 20 kg torque, 270 degrees Control Angle | DS3218MG| 1x1| $14.66| $14.66|
 | Raspberry Pi IMX477 12.3 MP High Quality Camera| SC1220| 1x1| $59.99| $59.99|
 | Arducam 4-12mm Varifocal Camera Lens, C-Mount| LN048| 1x1| $49.99| $49.99|
-| 3.28 ft / 100 cm CSI Flex Ribbon Cable| B087FDJ2RP| 1x1| $5.49| $5.49|
-| Polycase Polycarbonate Enclosure| WP-21| 1x1| $14.28| $14.28|
-| Polycase Polycarbonate Enclosure, Clear Cover| ZQ-040404-93| 1x1| $36.74| $36.74|
+| CSI Flex Ribbon Cable, 3.28 ft / 100 cm | B087FDJ2RP| 1x1| $5.49| $5.49|
+| Polycase Polycarbonate Enclosure| SK-16| 1x1| $26.93| $26.93|
+| Aluminum Mounting Plate for SK-16| SK-16K| 1x1| $11.21| $11.21|
+| Polycase Polycarbonate Enclosure, Clear Cover| SK-25-03| 1x1| $16.84| $16.84|
+| Aluminum Mounting Plate for SK-25| SK-12K| 1x1| $7.80| $7.80|
+| Mounting Kit for Sk Series enclosures, 4pc.| SK-99| 1x2| $3.36| $6.72|
+| Polycase Enclosure Cable Gland, IP68, M20| CG-32| 1x2| $2.86| $5.72|
 | Polycase Enclosure Vent Plugs, IP67| UA-006| 1x2| $3.89| $7.78|
-<!--| Polycase Enclosure Cable Gland, IP67| CG-31| 1x1| $2.23| $2.23|-->
-| Polycase Enclosure Cable Gland, IP67| CG-34| 1x2| $5.67| $11.34|
+| 6 Ckt. Terminal Block + 24 pc crimp connectors| B09VSYYD66| 2x1| $6.99| $6.99|
+| Cable, 3 Conductor, 22 GA., 16.5 ft, PVC Insulation| B0CDLS4NQ1| 1x1| $8.98| $8.98|
+| PCB 0.25" Adhesive Standoffs| B0C7QQ97GG| 24x1| $6.29| $6.29|
 | 20g Desiccant Packs| B09DSDX4P3| 15x1| $6.99| $6.99|
 | Electronic Grade Silicon Caulk, 2.8oz| ASI 388| 1x1| $9.99| $9.99|
-|Total     |             |          |                | $301.45|
+|Total     |             |          |                | $340.04|
 
 ## References
 <!-- This is how to do footnotes for the references: FIX ME --> 
