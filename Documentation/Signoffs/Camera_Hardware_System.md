@@ -130,6 +130,18 @@ This equation gives us a minimum angle change of 0.54° for Servo 0 and 0.36° f
 
 <img src= "/Documentation/Images/Camera Hardware System/Servo_Angle_Chart.png" width="345" height="225">
 
+The system, with the servo motors and raspberry Pi pulling power directly from the [Camera Power System](Camera_Power_System.md) and a camera drawing power from the Pi's camera connection, will be expected to draw approximately 46.42 Watts at peak power consumption. This can be calculated by multiplying the voltage by the current drawn, and adding the result for a full system draw. The full table can be seen below.
+
+| Component | Min Voltage (V)| Max Voltage (V)| Min Current (A)| Nax Current (A)| Min Power (W)| Max Power (W)|
+| --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ |
+| Raspberry Pi 4B, 8 GB Memory| 5| 5| 2.5| 3.0| 12.5| 15.0|
+| Digital Servo, 20 kg torque, 180 degrees Control Angle| 5| 6.8| 1.8| 2.2| 9| 14.96|
+| Digital Servo, 20 kg torque, 270 degrees Control Angle| 5| 6.8| 1.5| 2.2| 7.5| 14.96|
+| Total     |                |                |  5.8 A         |  7.4 A         |  29 W        |  44.92 W     |
+
+By supplying a power supply capable of delivering 50 Watts in the event of every component pulling the maximum current at 5 V, we will increase the system reliability and prevent undercurrent events with our Pi processor. One concern can be drawn from seeing the servo motor potentially drawing 6.8 volts in a 5 volt system, but this will not be a concern to worry about here, as the servo motors chosen are designed to run at 5 volts, but can run at a higher voltage if a system is capable of supplying it.
+
+
 ### 
 <!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
 Using EG silicon sealant will make service harder if fail-->
