@@ -121,14 +121,14 @@ The camera selected for this system will be capable of taking images in a RAW12/
 
 $\ S_i = R_i * B_d / 8000$ [^13]
 
-Where Image Size is equal to Image Resolution times Bit Depth divided by 8000. The resultant number can then be converted to the proper SI unit for the number of bytes. For the camera chosen, most images will be at a minimum size of 196.8 Kilobytes and an expected maximum size of 787.2 Kilobytes. This file size will be able to be processed, locally stored, and transmitted by the processor in a matter of milliseconds. The exact time however will be dependant on the wi-fi signal strength of the SPU, which must be determined when the install is conducted.
+Where Image Size ($\ I_s$) is equal to Image Resolution ($\ R_i$) times Bit Depth ($\ B_d$) divided by 8000. The resultant number can then be converted to the proper SI unit for the number of bytes. For the camera chosen, most images will be at a minimum size of 196.8 Kilobytes and an expected maximum size of 787.2 Kilobytes. This file size will be able to be processed, locally stored, and transmitted by the processor in a matter of milliseconds. The exact time however will be dependant on the wi-fi signal strength of the SPU, which must be determined when the install is conducted.
 
 //
 ### Processor
-The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11].
+The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11]. These specs will be more than enough to process, store, and transmit the data range required for the system.
 
 #### Temperature limits
-Both the processor and the camera have a temperature operating range of 0° C to 50° C (32° F to 122° F), severely limiting the capabilities of the system. To mitigate this, while also retaining the waterproof rating of the enclosure, heatsinks are provided with the SPU to be applied to the CPU and the USB controller chip, reducing temperatures onboard and enabling the pi to run constantly. Another mitigation, especially in the intense heat experienced in the southern states, will be to install the system in an area where it can remain in perpetual shade, keeping the system cooler than typically seen in direct sunlight. Mitigations in the cold weather become harder, as temperatures can fall into the negative °F ranges in the winters. So, for especially cold and especially hot conditions, this system will be rendered inoperable and will need to be shut down.
+Both the processor and the camera have a temperature operating range of 0° C to 50° C (32° F to 122° F)[^3] [^7] , severely limiting the capabilities of the system. To mitigate this, while also retaining the waterproof rating of the enclosure, heatsinks are provided with the SPU to be applied to the CPU and the USB controller chip, reducing temperatures onboard and enabling the pi to run constantly. Another mitigation, especially in the intense heat experienced in the southern states, will be to install the system in an area where it can remain in perpetual shade, keeping the system cooler than typically seen in direct sunlight. Mitigations in the cold weather become harder, as temperatures can fall into the negative °F ranges in the winters. Adding heat sources into the box can have elevated safety and reliability risks, especially for the polycarbonate enclosure's integrity and for fog accumulation on the surface of the camera's clear cover. So, for especially cold and especially hot conditions, this system will be rendered inoperable and will need to be shut down in order to protect it.
 
 ### Servos and System Power
 These servo motors have a pulse-width range of 500 ~ 2500 micro-seconds (μs), alongside a deadband width of 3 μs. In other words, these servo motors will not respond to a change in pulse-width less than or equal to 3 μs, which can limit our angle resolution in niche cases where a small adjustment is needed to center the UAS or control station in center-frame of the camera. The minimum angle change attainable by a servo motor can be found in the equation below, where $t_{max}$ is the upper limit of the pulse duty cycle time, $t_{min}$ is the lower limit, and $\tau_{DBand}$ is the deadband limit from the spec sheet:
@@ -182,13 +182,13 @@ Using EG silicon sealant will make service harder if fail-->
 
 ## References
 <!-- This is how to do footnotes for the references: FIX ME --> 
-[^1]: “IEEE 802.11-2020: Collision avoidance in wireless networks,” American National Standards Institute, [Available:](https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/) (Accessed Feb. 19, 2024).
-[^2]: “856 data security and handling policy,” Tennessee Technological University, [Available:](https://www.tntech.edu/policies/) (Accessed May 2, 2024).
-[^3]: Raspberry Pi, "raspberry-pi-4-product-brief,pdf", [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
+[^1]: [IEEE 802.11-2020](https://blog.ansi.org/ieee-802-11-collision-avoidance-wireless-networks/) (Accessed Feb. 19, 2024).
+[^2]: [TTU Data Policy 856](https://www.tntech.edu/policies/) (Accessed May 2, 2024).
+[^3]: [Raspberry Pi 4B Documentation](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf) (Accessed May 2, 2024)
 [^4]: [What is a Servo?](https://www.electrical4u.com/what-is-servo-motor/) (Accessed May 2, 2024)
 [^5]: [Hobbyist Servo Fundamentals](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
 [^6]: [What is a Stepper Motor?](https://www.princeton.edu/~mae412/TEXT/NTRAK2002/292-302.pdf) (Accessed May 2, 2024)
-[^7]: [Sony IMX477 Datasheet](https://www.sony-semicon.com/files/62/pdf/p-13_IMX317CQC_Flyer.pdf) (Accessed Sept 4, 2024)
+[^7]: [Raspberry Pi HQ IMX477 Datasheet](https://datasheets.raspberrypi.com/hq-camera/hq-camera-product-brief.pdf) (Accessed Sept 4, 2024)
 [^8]: [Arducam IMX477 Data and Information](https://www.arducam.com/sony/imx477/) (Accessed Sept 4, 2024)
 [^9]: [Servo Datasheet](https://images-na.ssl-images-amazon.com/images/I/81Lbgu+nG6L.pdf) (Accessed May 2, 2024)
 [^10]: [Desiccant FAQ Page](https://dryndry.com/pages/faqs) (Accessed Sept 13, 2024)
