@@ -123,7 +123,6 @@ $\ S_i = R_i * B_d / 8000$ [^13]
 
 Where Image Size ($\ I_s$) is equal to Image Resolution ($\ R_i$) times Bit Depth ($\ B_d$) divided by 8000. The resultant number can then be converted to the proper SI unit for the number of bytes. For the camera chosen, most images will be at a minimum size of 196.8 Kilobytes and an expected maximum size of 787.2 Kilobytes. This file size will be able to be processed, locally stored, and transmitted by the processor in a matter of milliseconds. The exact time however will be dependant on the wi-fi signal strength of the SPU, which must be determined when the install is conducted.
 
-//
 ### Processor
 The Raspberry Pi 4B selected for this design will contain a 64 bit quad core processor capable of clock speeds up to 1.5 GHz, 8 GB of LPDDR4 RAM, and the option to slot up to a 2 TB microSD card for storage with a transfer rate capped at 50 MB/s [^11]. These specs will be more than enough to process, store, and transmit the data range required for the system.
 
