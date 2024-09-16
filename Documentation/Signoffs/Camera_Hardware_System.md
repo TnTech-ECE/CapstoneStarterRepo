@@ -147,14 +147,9 @@ The system, with the servo motors and raspberry Pi pulling power directly from t
 | Digital Servo, 20 kg torque, 180 degrees Control Angle| 5| 6.8| 0.004| 2.2| 0.02| 14.96|
 | Digital Servo, 20 kg torque, 270 degrees Control Angle| 5| 6.8| 0.004| 2.2| 0.02| 14.96|
 | Raspberry Pi HQ camera| 5| 5| 0.3| 0.3| 1.5| 1.5|
-| Total     |                |                |  6.1 A         |  7.1 A         |  14.04 W        |  46.42 W     |
+| Total     |                |                |  2.81 A         |  7.1 A         |  14.04 W        |  46.42 W     |
 
 By supplying a power supply capable of delivering 50 Watts in the event of every component pulling the maximum current at 5 V, we will increase the system reliability and prevent undercurrent events with our Pi processor. One concern can be drawn from seeing the servo motor potentially drawing 6.8 volts in a 5 volt system, but this will not be a concern to worry about here, as the servo motors chosen are designed to run at 5 volts, but can run at a higher voltage if a system is capable of supplying it.
-
-
-### 
-<!--Using this variety of metal ensures that the screws will still be removeable after being exposed to the elements over an extended period, while still being conductive enough to allow strong grounding and connection points when terminating wires.
-Using EG silicon sealant will make service harder if fail-->
 
 ## BOM
 | Item     | Part Number | Quantity (pkg x ordered) | Price/Unit     | Total Cost |
