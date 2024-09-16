@@ -49,9 +49,19 @@ The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an
 ## ESP8266 WiFi Module
 The ESP8266 can be powered through VIN pin at 3.3 V. This component allows the receiver system to connect to WiFi and communicate with the database system. The decision to use this component was decided by the receiver system design team.<br />
 ## Waveshare Solar Power Management Module
+The Waveshare Solar Power Management Module is a key component for the subsystem's design, since all the other electrical components interface with it. The module uses a 14500 2500 mAh 3.7 V Li-Ion battery as the source. That battery can be recharged by solar panels ranging from 6 - 24 V and a Micro-USB port, which will be helpful for testing purposes. The module also has flexibility for output voltages with a USB-A output port, 5 V output terminal, and a 3.3 V terminal. This module's flexibility allows the design to save money, since it is capable of completing multiple functions alongside its inexpensive price. The Waveshare module also has a variety of safety features such as over-charge, over-discharge, reverse protection, over heat, and over current protections that will prevent accidents and damage to the system. It also utilizes Maximum Power Point Tracking to maximize the efficiency of the solar panel. This product was chose by the design team because of the functionality provided, because helps reduce design time and simplifies the design by serving many purposes to the system with a single component. It was also important to find a cheap product, because of the need to power nine receiver systems in different locations across campus. One downside of using this module is the complexity of the electronics makes it very hard to accurately depict its functionality in a simulation. To combat this, the design team will use values that are slightly higher than expected in our calculations to account for losses or unforseen circumstances.
 <br />
+## 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery
+The 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery was chosen for this project to interface with the Waveshare Solar Power Management Module. The Waveshare module only uses 14500 batteries, and this one was chose for its high capacity at a similar price point to competing components.
 ## ACOPOWER 5 W 12 V Solar Panel
-To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium-ion battery in the Waveshare Solar Power Management Module.
+To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium-ion battery in the Waveshare Solar Power Management Module. Dr. Austen clarified that the usefulness of this project is dependent on involving minimal maintenance to reduce the workload required for its operation. The design team addressed this issue by utilizing solar panels in the design to recharge the battery powering the receiver system. However, solar generation is not simple and many considerations must be taken to ensure that the system's battery will be sufficiently recharged. This is especially important to consider in months with low shortwave solar energy due to factors such as cloud cover and time of daylight.<br />
+![Hours of Daylight and Twilight in Cookeville](https://github.com/user-attachments/assets/cdf5ae11-bc79-4aa9-b43c-130b15b2b616)
+![Cloud Cover Categories in Cookeville](https://github.com/user-attachments/assets/385d337b-bfa9-4bda-a0d2-c1aac8dba042)
+![Average Daily Incident Shortwave Solar Energy in Cookeville](https://github.com/user-attachments/assets/54da8901-0ce2-4f99-8b62-4655a71fa84b)
+
+
+
+
 <br />
 ## Joinfworld 6x6x4 Outdoor Electrical Box
 <br />
@@ -59,6 +69,8 @@ To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7
 <br />
 ## Official 27W USB Type-C Power Supply for Raspberry Pi 5
 <br />
+
+## Caluclations
 
 
 
