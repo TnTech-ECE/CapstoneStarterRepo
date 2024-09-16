@@ -8,7 +8,7 @@ The functionality for the receiver power system is to reliably meet the power re
 
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall be able to supply enough power to the receiver system for its full functionality   |  Design Team    |
+|  1 | The system shall be able to supply enough power to the receiver system for it to acheive full functionality   |  Design Team    |
 |  2 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
 |  3 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
 |  4 | The system shall be designed to minimize future maintenance. | Broader Implications  |
@@ -18,7 +18,7 @@ The functionality for the receiver power system is to reliably meet the power re
 
 <sup>2</sup> ASTM B258-18 is a standard for the proper wire gauge for electrical conductors. It is important to adhere to this standard to ensure the system is safe by avoiding overheating, short circuits, and fires due to improper wire gauges.  <br />
 
-<sup>3</sup> The system will be located outdoors, so it is essential that the electrical components will be protected from environemental weather hazards and damage. The IP67 rating protect the system from cover rain, snow, dust, wind, and UV. This will be acheived by using a NEMA box to house the system's components. <br />
+<sup>3</sup> The system will be located outdoors, so it is essential that the electrical components will be protected from environemental weather hazards and damage. The IP67 rating protects the system from rain, snow, dust, wind, and UV. This will be acheived by using a NEMA box to house the system's components excluding the solar panel. <br />
 
 <sup>4</sup> Reducing maintenace is important to reduce the workload for the continuing function of the drone tracker system after the project is completed. For example,the system will be less useful if a worker must constantly change the discharged batteries, so solar generation will be used to recharge batteries that will last for at least two years. <br />
 
@@ -55,22 +55,26 @@ The Waveshare Solar Power Management Module is a key component for the subsystem
 The 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery was chosen for this project to interface with the Waveshare Solar Power Management Module. The Waveshare module only uses 14500 batteries, and this one was chose for its high capacity at a similar price point to competing components.
 ## ACOPOWER 5 W 12 V Solar Panel
 To reduce maintenace, the team will be utlizing solar panels to recharge the 3.7 V lithium-ion battery in the Waveshare Solar Power Management Module. Dr. Austen clarified that the usefulness of this project is dependent on involving minimal maintenance to reduce the workload required for its operation. The design team addressed this issue by utilizing solar panels in the design to recharge the battery powering the receiver system. However, solar generation is not simple and many considerations must be taken to ensure that the system's battery will be sufficiently recharged. This is especially important to consider in months with low shortwave solar energy due to factors such as cloud cover and time of daylight.<br />
-![Hours of Daylight and Twilight in Cookeville](https://github.com/user-attachments/assets/cdf5ae11-bc79-4aa9-b43c-130b15b2b616)
-![Cloud Cover Categories in Cookeville](https://github.com/user-attachments/assets/385d337b-bfa9-4bda-a0d2-c1aac8dba042)
+![Hours of Daylight and Twilight in Cookeville](https://github.com/user-attachments/assets/cdf5ae11-bc79-4aa9-b43c-130b15b2b616)<br />
+Figure 3: Hours of Daylight and Twilight in Cookeville. [3] <br />
+![Cloud Cover Categories in Cookeville](https://github.com/user-attachments/assets/385d337b-bfa9-4bda-a0d2-c1aac8dba042)<br />
+Figure 4: Cloud Cover Categories in Cookeville. [3] <br />
 ![Average Daily Incident Shortwave Solar Energy in Cookeville](https://github.com/user-attachments/assets/54da8901-0ce2-4f99-8b62-4655a71fa84b)
+Figure 5: Average Daily Incident Shortwave Solar Energy in Cookeville. [3] <br />
 
-
-
-
+Figures 3, 4, and 5 above graphically represent historical weather data. The graphs show what intuition would likely lead one to conclude that the winter months like December and January are going to be the worst case scenarios for solar generation with reduced daylight hours, increased cloud coverage, and lower solar energy, so it will be important to prove that the chosen ACOPOWER 5 W 12 V solar panel will be able to provide enough power to charge the battery during these cases in the calculations section.  It will also be an important decision by the design team to locate the receivers and its power system in a location with maximum sun exposure, minimizing shadows while also protecting the system from damage by passerbys.
 <br />
 ## Joinfworld 6x6x4 Outdoor Electrical Box
+The Joinfworld Outdoor Electrical Box will provide protection to the system from the elements. This NEMA box is rated at IP67 which protects the system from rain, snow, dust, wind, and UV. The design team chose this option to ensure the safety of the many sensitive electrical components from a variety of weather conditions. This NEMA box is also similarly priced to competiors, but this product was the closest sized options for our need at the lowest price. 
 <br />
-## CONMDEX USB A to USB C Cable
+## CONMDEX USB-A to USB-C Cable
+The CONMDEX USB-A to USB-C cable is a standard USB cable that the design team will utilize to provide power from the Waveshare module's battery to the Arduino Nano ESP32. It was chosen for its  durability and quality compared to other cables at a similar price point.
 <br />
 ## Official 27W USB Type-C Power Supply for Raspberry Pi 5
+This component is an exception for this system. It is the power supply required for the database system's Raspberry Pi 5 as specified in their design documentation. As opposed to creating a new request, it will be included in this section and the bill of materials for the receiver system. It is the power supply desinged by Raspberry Pi for their Raspberry Pi 5, so with access to a working wall outlet the power supply will sufficiently provide 27 Watts at 5V via a USB-C connection. For further justification, refer to the Database system documentation.
 <br />
 
-## Caluclations
+## Calculations
 
 
 
