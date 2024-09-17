@@ -76,7 +76,7 @@ $$
 \text{Total Memory Consumption} = \frac{\text{10 MB}}{request} \times  10 \  requests = \text{100 MB}
 $$
 
-These estimates show that our selected device, the Raspberry Pi 5 with 8GB of RAM, should have ample processing power to handle all the requests necessary from the TTU police department. Under extreme cases, the device has enough resources to handle these requests with ease, and leaves plenty of room for the database to utilize the processor and memory as well. 
+These estimates show that our selected device, the Raspberry Pi 5 with 8GB of RAM, should have ample processing power to handle all the requests necessary from the TTU police department. Under extreme cases, the device has enough resources to handle these requests with ease and leaves plenty of room for the database to utilize the processor and memory as well. 
 
 ### Testing
 
@@ -86,7 +86,7 @@ At this point in the program's execution, we can use a dummy database filled wit
 
 To be certain that our [constraints](#constraints) are met, experiments will be conducted and data will be collected to prove that the subsystem operates as we have declared it will. The first three constraints can be validated by launching a Remote ID-compliant drone and seeing how long it takes our system to detect it. Constraint four is difficult to quantify, and will instead be tested by asking someone from campus police to demo the website. Feedback received from the user will be used to adapt the website to their liking. The next constraint is more difficult to prove. One way that the team has discussed proving this constraint has been met is by asking CEROC (the Cybersecurity Education, Research, and Outreach Center) here at Tennessee Tech to try to break into our website. This activity will provide validation that a "reasonable level" of security has been met. 
 
-Constraint number six will be tested by running our website through the [Markup Validation Service](https://validator.w3.org/#validate_by_uri) provided by w3.org. This validator will display any errors that may prevent the website from operating properly on certain browsers/systems. The final two constraints can again be tested utilizing a Remote ID-compliant drone. By using a drone whose serial number is known, we can provide authorization to it and see if our system behaves as expected when an authorized drone is detected. After revoking this drone's authorization, we can then test our status elevation system by flying the drone into a designated area. If the drone is shown as having an elevated status, then the team will know that the constraint has been met and that our system functions as intended.
+Constraint number six will be tested by running our website through the [^3][Markup Validation Service](https://validator.w3.org/#validate_by_uri) provided by w3.org. This validator will display any errors that may prevent the website from operating properly on certain browsers/systems. The final two constraints can again be tested utilizing a Remote ID-compliant drone. By using a drone whose serial number is known, we can provide authorization to it and see if our system behaves as expected when an authorized drone is detected. After revoking this drone's authorization, we can then test our status elevation system by flying the drone into a designated area. If the drone is shown as having an elevated status, then the team will know that the constraint has been met and that our system functions as intended.
 
 A more detailed testing regimen will be developed as the website becomes more and more refined. This process is iterative, and functionality, while laid out amicably above, is not definite yet. There are some processes that the team is not entirely sure if they want to include, and will be more along the lines of quality-of-life features. Rigorous testing procedures for these features will be created alongside the features themselves, demonstrating the precise execution of our code.
 
@@ -94,11 +94,13 @@ A more detailed testing regimen will be developed as the website becomes more an
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
 |Domain    |            -|         1|        $30/year|         $30|
-|Google Maps API Access   |            -|         1|        $0.007/call|         $0|
-|Total     |             |          |                |            |
+|Google Maps API Access|-|         1|     $0.007/call|          $0|
+|Raspberry Pi 5  |      -|         1|          $89.99| $0 (see [Database](/Database_System.md))|
+|Total     |             |          |                |         $30|
 
 ## References
 <!-- This is how to do footnotes for the references: --> 
 [^1]: (https://mapsplatform.google.com/pricing/)
 [^2]: (https://developers.google.com/maps/documentation/javascript/usage-and-billing)
+[^3]: (https://validator.w3.org/#validate_by_uri)
 <!--etc.-->
