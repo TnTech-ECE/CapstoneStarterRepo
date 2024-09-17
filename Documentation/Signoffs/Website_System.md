@@ -66,6 +66,17 @@ $$
 \frac{500 \ \text{seconds/day}}{345,600 \ \text{seconds/day}} \times 100 = 0.14 \ \text{\%}
 $$
 
+Second, we will look at the RAM necessary to handle each of the requests the website receives. Loading the webpage will take a significant amount of memory, but most of that load will be burdened by the client's machine. This device will be the one rendering the map and loading all of the markers and such onto it. The RAM required for the server to serve our page will remain relatively low. By estimating that our static files will take up ~2 MB of RAM and assuming that the website may take up ~8 MB of space to allocate necessary data from the database for the webpage, we can see that one request will take ~10 MB of RAM. Even if we had 10 users simultaneously load the webpage, we would see that all of these requests would only take up ~100 MB of the available 8GB, leaving plenty for the rest of the device to use. 
+
+$$
+\text{Assuming : Memory per Request = 10 MB}
+$$
+
+$$
+\text{Total Memory Consumption} = \frac{\text{10 MB}}{request} \times  10 \  requests = \text{100 MB}
+$$
+
+These estimates show that our selected device, the Raspberry Pi 5 with 8GB of RAM, should have ample processing power to handle all the requests necessary from the TTU police department. Under extreme cases, the device has enough resources to handle these requests with ease, and leaves plenty of room for the database to utilize the processor and memory as well. 
 
 ### Testing
 
@@ -73,9 +84,9 @@ To ensure the website's proper operation, a wide variety of test cases will be u
 
 At this point in the program's execution, we can use a dummy database filled with data that we create to verify the correct operation of the website. Some of this data will be created to hinder the program, which will result in errors being generated and handled correctly. If the program can sufficiently handle all of the erroneous cases, then it will certainly be able to handle the data received from the database subsystem. 
 
-To be certain that our [constraints](#constraints) are met, experiments will be conducted and data will be collected to prove that the subsystem operates as we have declared it will. The first three constraints can be validated by launching a Remote ID compliant drone and seeing how long it takes our system to detect it. Constraint four is difficult to quantify, and will instead be tested by asking someone from campus police to demo the website. Feedback received from the user will be used to adapt the website to their liking. The next constraint is more difficult to prove. One way that the team has discussed proving this constraint has been met is by asking CEROC (the Cybersecurity Education, Research, and Outreach Center) here at Tennessee Tech to try to break into our website. This activity will provide validation that a "reasonable level" of security has been met. 
+To be certain that our [constraints](#constraints) are met, experiments will be conducted and data will be collected to prove that the subsystem operates as we have declared it will. The first three constraints can be validated by launching a Remote ID-compliant drone and seeing how long it takes our system to detect it. Constraint four is difficult to quantify, and will instead be tested by asking someone from campus police to demo the website. Feedback received from the user will be used to adapt the website to their liking. The next constraint is more difficult to prove. One way that the team has discussed proving this constraint has been met is by asking CEROC (the Cybersecurity Education, Research, and Outreach Center) here at Tennessee Tech to try to break into our website. This activity will provide validation that a "reasonable level" of security has been met. 
 
-Constraint number six will be tested by running our website through the [Markup Validation Service](https://validator.w3.org/#validate_by_uri) provided by w3.org. This validator will display any errors that may prevent the website from operating properly on certain browsers/systems. The final two constraints can again be tested utilizing a Remote ID compliant drone. By using a drone whose serial number is known, we can provide authorization to it and see if our system behave as expected when an authorized drone is detected. After revoking this drone's authorization, we can then test our status elevation system by flying the drone into a designated area. If the drone is shown as having an elevated status, then the team will know that the constraint has been met and that our system functions as intended.
+Constraint number six will be tested by running our website through the [Markup Validation Service](https://validator.w3.org/#validate_by_uri) provided by w3.org. This validator will display any errors that may prevent the website from operating properly on certain browsers/systems. The final two constraints can again be tested utilizing a Remote ID-compliant drone. By using a drone whose serial number is known, we can provide authorization to it and see if our system behaves as expected when an authorized drone is detected. After revoking this drone's authorization, we can then test our status elevation system by flying the drone into a designated area. If the drone is shown as having an elevated status, then the team will know that the constraint has been met and that our system functions as intended.
 
 A more detailed testing regimen will be developed as the website becomes more and more refined. This process is iterative, and functionality, while laid out amicably above, is not definite yet. There are some processes that the team is not entirely sure if they want to include, and will be more along the lines of quality-of-life features. Rigorous testing procedures for these features will be created alongside the features themselves, demonstrating the precise execution of our code.
 
