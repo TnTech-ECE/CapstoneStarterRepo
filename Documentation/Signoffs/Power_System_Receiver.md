@@ -93,9 +93,6 @@ The Joinfworld Outdoor Electrical Box will provide protection to the system from
 ## CONMDEX USB-A to USB-C Cable
 The CONMDEX USB-A to USB-C cable is a standard USB cable that the design team will utilize to provide power from the Waveshare module's battery to the Arduino Nano ESP32. It was chosen for its  durability and quality compared to other cables at a similar price point.
 <br />
-## Official 27W USB Type-C Power Supply for Raspberry Pi 5
-This component is an exception for this system. It is the power supply required for the database system's Raspberry Pi 5 as specified in their design documentation. As opposed to creating a new request, it will be included in this section and the bill of materials for the receiver system. It is the power supply desinged by Raspberry Pi for their Raspberry Pi 5, so with access to a working wall outlet the power supply will sufficiently provide 27 Watts at 5V via a USB-C connection. For further justification, refer to the Database system documentation.
-<br />
 
 
 
@@ -107,8 +104,7 @@ This component is an exception for this system. It is the power supply required 
 | USB A to USB C 2 Pack  |    ‎B09R7NPWQR       |     5     |        $10.00        |      $50.00     |
 | 14500 Rechargeable Battery 2500mAh 3.7Volt Li-ion Batteries Button Top 4 Pack | ‎B0CW1T99D1  | 3 | $15.99 | 47.97 |
 | Joinfworld 6x6x4 Outdoor Electrical Box Weatherproof Junction Box | ‎ BG595935T | 9 | $19.99 | 179.91 |
-| Official 27W USB Type-C Power Supply for Raspberry Pi 5 | B0CSMBR63K  | 1 | $20.49 | 20.49 |
-|Total     |             |          |                |      $594.38   |<br />
+|Total     |             |          |                |      $573.89  |<br />
 
 
 Table 3: Bill of Materials<br />
@@ -146,8 +142,7 @@ Amazon: https://www.amazon.com/ACOPOWER-Solar-Panel-Battery-Charging/dp/B01M0UEP
 Joinfworld 6x6x4 Outdoor Electrical Box Weatherproof Junction Box.<br />
 Amazon: https://www.amazon.com/Joinfworld-Clear-Cover-Electrical-Boxes/dp/B0CHHJ49QN?th=1 <br />
 
-Official 27W USB Type-C Power Supply for Raspberry Pi 5. <br />
-Amazon: https://www.amazon.com/Official-Type-C-Supply-Raspberry-XYGStudy/dp/B0CSMBR63K <br /> 
+
 
 
 
