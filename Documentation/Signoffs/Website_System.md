@@ -46,11 +46,26 @@ After obtaining an API key, we can implement the API call using the key in the H
 
 The program will then prompt the database for all data sets that match the search characteristic (default value is set to the current date.) These data points will then have a Google Maps marker placed on their respective locations. The dispatcher can then select a certain drone and view the related data received from the Remote ID. Drones will populate the list in the reverse order they were detected, with the most recent drones appearing first.
 
-For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website on a Raspberry Pi 5, the same machine that is hosting our database server. This will make the access of data from the database much easier. The cost of this service is to be integrated into the subsystem's budget, and is not expected to cost a significant amount of money, likely less than $30 per year that the site is hosted. 
+For the website to be accessible at all times, it will need to be hosted on a machine that doesn't turn off. We hope to host the website on a Raspberry Pi 5, the same machine that is hosting our database server. This will make the access to data from the database much easier. The cost of this service is to be integrated into the subsystem's budget and is not expected to cost a significant amount of money, likely less than $30 per year that the site is hosted. 
 
 ## Analysis
 
-The implementation of the website subsystem will require a few different processes to all work together. These processes are detailed below.
+The device our team has chosen to host the website is a Raspberry Pi 5. This same device will be utilized to host the database and, while this should make access to the database easier, means that the resources of the device are shared between our two subsystems. The device has a 64-bit ARM processor running at 2.4 GHz, and we have chosen the model that has 8 GB of RAM included. The database subsystem has also purchased a 256 GB SSD to store the data. While these resources are somewhat limited, they should be more than enough to run both the website and the database simultaneously.  
+
+First, we will assume a very high server-side processing time and page load time (let's say 500ms.) If we were to service 1000 requests per day, we would see that 500 seconds of CPU time is spent working on the webpage daily. The processor we are using has 4 cores, meaning that the total amount of CPU time available daily is 345,600 seconds per day. Using these extreme values, we can see that only 0.14% of the daily CPU time is spent on the webpage, leaving ample processing power for the database.
+
+$$
+0.5 \  \text{seconds/request} \times 1000 \ \text{requests/day} = 500 \ \text{seconds/day}
+$$
+
+$$
+86,400 \  \text{seconds/day/core} \times 4 \ \text{cores} = 345,600 \ \text{seconds/day}
+$$
+
+$$
+\frac{500 \ \text{seconds/day}}{345,600 \ \text{seconds/day}} \times 100 = 0.14 \ \text{\%}
+$$
+
 
 ### Testing
 
@@ -68,6 +83,7 @@ A more detailed testing regimen will be developed as the website becomes more an
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
 | -------- | ------------| -------- |----------------|------------|
 |Domain    |            -|         1|        $30/year|         $30|
+|Google Maps API Access   |            -|         1|        $0.007/call|         $0|
 |Total     |             |          |                |            |
 
 ## References
