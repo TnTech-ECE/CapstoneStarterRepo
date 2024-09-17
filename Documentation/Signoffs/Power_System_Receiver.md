@@ -38,11 +38,11 @@ The above figure details the electronics and circuitry found in the Waveshare Po
 ## Analysis
 
 ## Power Requirements
-| Component | Min Voltage (V)| Max Voltage (V)| Min Current (A)| Nax Current (A)| Min Power (W)| Max Power (W)|
-| --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ |
-| Arduino Nano ESP32 | 4.8| 5.5 | 0.003 | 0.25 | 0.0144 | 1.375 |
-| ESP8266 WiFi Module | 3.3 | 3.3 | 0.015 | 0.215 | 0.0495 | 0.7095 |
-| Total     |                |                |  0.018 A         |  0.465 A         |  0.0639 W        |  2.0845 W     |  <br />
+| Component | Min Voltage (V)| Max Voltage (V)| Min Current (A)| Typical Current (A) | Max Current (A)| Min Power (W)| Typical Power (W)| Max Power (W)|
+| --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ | ------------ | ------------ |
+| Arduino Nano ESP32 | 4.8| 5.5 | 0.003 | 0.0783 | 0.25 | 0.0144 | 0.3915 | 1.375 |
+| ESP8266 WiFi Module | 3.3 | 3.3 | 0.015 | 0.07 | 0.215 | 0.0495 | 0.231 | 0.7095 |
+| Total     |                |                |  0.018          |  0.0.1483         |  0.465          |  0.0639         |  0.6225     |   2.0845      |  <br />
 
 ## Arduino Nano ESP32
 The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an input voltage of 6-21 volts through the VIN pin. For this design, the team will be using the 5 V USB-C port, because this gives the microcontroller additional functionality that may be utilized in the receiver system's design by allowing the usage of the VBUS 5 V output. This will also allow the output terminals to be free power the ESP8266 WiFi module if required. Since the ESP32's output voltage is 3.3 V, it can also be used to power the ESP8266. The best design decision in this case will likely be determined during the testing period, and having two different options for connection is beneficial for design flexibility. The decision to use this component was decided by the receiver system design team.  <br />
@@ -62,8 +62,11 @@ Figure 4: Cloud Cover Categories in Cookeville. [3] <br />
 ![Average Daily Incident Shortwave Solar Energy in Cookeville](https://github.com/user-attachments/assets/54da8901-0ce2-4f99-8b62-4655a71fa84b)
 Figure 5: Average Daily Incident Shortwave Solar Energy in Cookeville. [3] <br />
 
-Figures 3, 4, and 5 above graphically represent historical weather data. The graphs show what intuition would likely lead one to conclude that the winter months like December and January are going to be the worst case scenarios for solar generation with reduced daylight hours, increased cloud coverage, and lower solar energy, so it will be important to prove that the chosen ACOPOWER 5 W 12 V solar panel will be able to provide enough power to charge the battery during these cases in the calculations section.  It will also be an important decision by the design team to locate the receivers and its power system in a location with maximum sun exposure, minimizing shadows while also protecting the system from damage by passerbys.
+Figures 3, 4, and 5 above graphically represent historical weather data. The graphs show what intuition would likely lead one to conclude that the winter months like December and January are going to be the worst case scenarios for solar generation with reduced daylight hours, increased cloud coverage, and lower solar energy, so it will be important to prove that the chosen ACOPOWER 5 W 12 V solar panel will be able to provide enough power to charge the battery during these cases in the calculations section.  It will also be an important decision by the design team to locate the receivers and its power system in a location with maximum sun exposure, minimizing shadows while also protecting the system from damage by passerbys. A monocrystalline solar panel was chosen for the design for the increased efficiency when compared to a polycrystalline solar panel. The price point and minimum wattage is only slightly higher for a monocrystalline panel than the less efficient polycrystalline panels. This increased wattage and small price increase gives much more flexibility for the design and allows more room for error at only a small price increase.
 <br />
+
+
+
 ## Joinfworld 6x6x4 Outdoor Electrical Box
 The Joinfworld Outdoor Electrical Box will provide protection to the system from the elements. This NEMA box is rated at IP67 which protects the system from rain, snow, dust, wind, and UV. The design team chose this option to ensure the safety of the many sensitive electrical components from a variety of weather conditions. This NEMA box is also similarly priced to competiors, but this product was the closest sized options for our need at the lowest price. 
 <br />
@@ -73,11 +76,6 @@ The CONMDEX USB-A to USB-C cable is a standard USB cable that the design team wi
 ## Official 27W USB Type-C Power Supply for Raspberry Pi 5
 This component is an exception for this system. It is the power supply required for the database system's Raspberry Pi 5 as specified in their design documentation. As opposed to creating a new request, it will be included in this section and the bill of materials for the receiver system. It is the power supply desinged by Raspberry Pi for their Raspberry Pi 5, so with access to a working wall outlet the power supply will sufficiently provide 27 Watts at 5V via a USB-C connection. For further justification, refer to the Database system documentation.
 <br />
-
-## Calculations
-
-
-
 
 
 
