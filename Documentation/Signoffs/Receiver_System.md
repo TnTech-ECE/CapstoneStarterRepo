@@ -59,7 +59,7 @@ The receivers will utilize a ESP8266 (WiFi module) to conect the Arduino to the 
 |Enclosure with Knockouts, (3.70" x 2.56" x 2.24") ext, (3.36" x 2.22" x 1.76") int, IP66|SK-12-03|9|$14.18|$127.62|
 |Gray Cable Glands, IP68, M20 Thread|CG-31|9|$2.23|$20.07|
 |Mounting Feet Kit for SK Series Enclosures, 4pc|SK-99|9|$3.36|$30.24|
-|Total     |             |   $45     |                |   $429.48         |
+|Total     |             |   45     |                |   $429.48         |
 
 
 ## References and Links
