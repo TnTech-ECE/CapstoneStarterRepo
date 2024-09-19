@@ -25,11 +25,11 @@ The Receiver system will be responsible for receiving and sending the packed Rem
 ### Arduino Nano ESP32
 This microcontroller has been picked due to the low receiver sensitivity of the wifi module and its ability to then program it to send the signal across the wifi to the database. Python code will be used for the receiver to know what signal to find and then relay the signal to be unpacked. Using a line to line link equation the receiver has been calculated to receive a signal from 152 m.
 
-$$ P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>fs</sub> + G<sub>Rx</sub> $$ 
+$$ P_{Rx} = P_{Tx} + G_{Tx} - L_{Fs} + G_{Rx} $$ 
 
-The P<sub>Rx</sub> is the power of the signal when it reaches the receiver. The strength of the signal when it reaches the receiver can be calculated by the strength of the signal from the transmitter, P<sub>Tx</sub>. The gain of the transmitter G<sub>Tx</sub> and the receiver G<sub>Rx</sub> can also be used to extend how far the receiver can be from the transmitter. Path loss in free space L<sub>fs</sub> is a calculated with the following equation.
+The P<sub>Rx</sub> is the power of the signal when it reaches the receiver. The strength of the signal when it reaches the receiver can be calculated by the strength of the signal from the transmitter, P<sub>Tx</sub>. The gain of the transmitter G<sub>Tx</sub> and the receiver G<sub>Rx</sub> can also be used to extend how far the receiver can be from the transmitter. Path loss in free space L<sub>Fs</sub> is a calculated with the following equation.
 
-$$ L<sub>fs</sub> = 20log<sub>10<sub>(\frac{4\pi * d}{\lambda}) $$
+$$ L_{Fs} = 20log_{10}(\frac{4\pi * d}{\lambda}) $$
 
 ### ESP8266
 This wifi module has been selected due to low cost and so it can connect to the wifi to send the RID signal packet. It would be inefficient to have the arduino use its own ESP32 module to receive signals and then try to connect to the internet to send the packet. This would create a loss in data received because of the time required to reconnect to the internet. This would affect the whole system from being able to track the drone because it will miss signals sent by the drone. 
@@ -37,11 +37,12 @@ This wifi module has been selected due to low cost and so it can connect to the 
 ## Schematic
 
 ### Circuit
-The circuit will be soldered onto perf board utilizing the following connections. 
+The circuit will be soldered onto a perforated (perf) board utilizing the following connections. 
 <img src="/Documentation/Images/Receiver/Schematics/Receiver.png" width="60%" height="60%">
 
 ### Receiver Enclosure
-<img src="/Documentation/Images/Receiver/Schematics/Enclosure.pdf" width="60%" height="60%">
+To safeguard the sensitive electronics essential for the receiver sub-system, a polycarbonate enclosure will be used. The receiver and ESP8266 will be housed in an opaque case with knockout holes for the cable glands. These boxes will be rated IP66 for dust and water protection. 
+<img src="/Documentation/Images/Receiver/Schematics/Eclosure-1.png" width="60%" height="60%">
 
 
 ## Analysis
