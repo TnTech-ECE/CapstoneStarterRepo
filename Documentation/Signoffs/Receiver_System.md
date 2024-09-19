@@ -41,7 +41,7 @@ The circuit will be soldered onto perf board utilizing the following connections
 <img src="/Documentation/Images/Receiver/Schematics/Receiver.png" width="60%" height="60%">
 
 ### Receiver Enclosure
-
+<img src="/Documentation/Images/Receiver/Schematics/Enclosure.pdf" width="60%" height="60%">
 
 
 ## Analysis
