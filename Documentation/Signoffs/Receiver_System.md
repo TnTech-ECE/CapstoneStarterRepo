@@ -29,7 +29,7 @@ $$ P<sub>Rx</sub> = P<sub>Tx</sub> + G<sub>Tx</sub> - L<sub>fs</sub> + G<sub>Rx<
 
 The P<sub>Rx</sub> is the power of the signal when it reaches the receiver. The strength of the signal when it reaches the receiver can be calculated by the strength of the signal from the transmitter, P<sub>Tx</sub>. The gain of the transmitter G<sub>Tx</sub> and the receiver G<sub>Rx</sub> can also be used to extend how far the receiver can be from the transmitter. Path loss in free space L<sub>fs</sub> is a calculated with the following equation.
 
-$$ L<sub>fs</sub> = 20log<sub>10<sub>(\frac{4\pi * d}{\lambda} $$
+$$ L<sub>fs</sub> = 20log<sub>10<sub>(\frac{4\pi * d}{\lambda}) $$
 
 ### ESP8266
 This wifi module has been selected due to low cost and so it can connect to the wifi to send the RID signal packet. It would be inefficient to have the arduino use its own ESP32 module to receive signals and then try to connect to the internet to send the packet. This would create a loss in data received because of the time required to reconnect to the internet. This would affect the whole system from being able to track the drone because it will miss signals sent by the drone. 
