@@ -46,15 +46,20 @@ The circuit will be soldered onto a perforated (perf) board utilizing the follow
 
 ### Receiver Enclosure
 To safeguard the sensitive electronics essential for the receiver sub-system, a polycarbonate enclosure will be used. The receiver and ESP8266 will be housed in an opaque case with knockout holes for the cable glands. These boxes will be rated IP66 for dust and water protection. 
+
 <img src="/Documentation/Images/Receiver/Schematics/SK-12-03.png" width="60%" height="60%">
 
 
 ## Analysis
 
 ### Receivers
-The Arduino Nano ESP32 utilizes a NORA-W106-10B Wi-Fi and Bluetooth module with a receiver sensitivy of -97 dBm and -98 dBm respectively. The antenna gain for the system is 3 dBi on average. The dBi value has been assumed based on standard specifications, reflecting common values in the industry to be 3 dBi. The RID signal must be transmitted with a minimum power of 5 dBm for Bluetooth and 15 dBm for Wi-Fi. This is a standard listed in the RID data sheet. Using the line to line link budget equation we can see that the signal strength will be stronger than the receiver sensitivity. The variable d in the line to line equation is 152 m and \lambda can be calculated dividing the speed of light by the frequency of the signal. Then we must calculate the free space loss that will occur sending RF signals.
+The Arduino Nano ESP32 utilizes a NORA-W106-10B Wi-Fi and Bluetooth module with a receiver sensitivy of -97 dBm and -98 dBm respectively. The antenna gain for the system is 3 dBi on average. The dBi value has been assumed based on standard specifications, reflecting common values in the industry to be 3 dBi. The RID signal must be transmitted with a minimum power of 5 dBm for Bluetooth and 15 dBm for Wi-Fi. This is a standard listed in the RID data sheet. Using the line to line link budget equation we can see that the signal strength will be stronger than the receiver sensitivity. The variable d in the line to line equation is 152 m and $\lambda$ can be calculated dividing the speed of light by the frequency of the signal. 
 
-$$ \lambda = \frac{3*10^8 m/s}{2.4*10^9 Hz} $$ 
+$$
+\lambda = \frac{3 \times 10^8 \, \text{m/s}}{2.4 \times 10^9 \, \text{Hz}}
+$$
+
+Then we must calculate the free space loss that will occur sending RF signals.
 
 $$ -84 = 20log_{10}(\frac{4\pi * 152 m}{0.125 m}) $$
 
