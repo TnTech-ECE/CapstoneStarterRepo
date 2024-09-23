@@ -8,18 +8,18 @@ The functionality for the receiver power system is to reliably meet the power re
 
 | No.| Contraint | Origin |
 | -- | --------- |--------|
-|  1 | The system shall be able to supply enough power to the receiver system for it to acheive full functionality   |  Design Team    |
-|  2 | The system shall comply with ASTM B258-18 [2]. | Standards and Safety |
-|  3 | The system shall be weather resitant to an IP67 rating [1].  | Standards and Safety |
+|  1 | The system shall be able to supply 1.25 W to the ESP32 and 0.7095 W to the ESP8266 for the receiever system to acheive full functionality   |  Design Team    |
+|  2 | The system shall comply with NFPA 70 [1] | Standards and Safety |
+|  3 | The system shall be weather resitant to an IP67 rating [2].  | Standards and Safety |
 |  4 | The system shall be designed to minimize future maintenance. | Broader Implications  |<br />
 
 
 Table 1: Constraints<br />
        
 
-<sup>1</sup> This constraint is essential, because the power system must supply adequate power for the receiver system to achieve full functionality. Without the data acquired by the receiver system, the other subsystems would not have the information required for operation. This makes it very important to avoid any disruptions due to insufficient power.  <br />
+<sup>1</sup> This constraint is essential, because the power system must supply adequate power for the receiver system to achieve full functionality. The maximum power numbers were used for the constraint to cover the worst case scenario; however, typically the requirements will be lower as seen in Table 2. Without the data acquired by the receiver system, the other subsystems would not have the information required for operation. This makes it very important to avoid any disruptions due to insufficient power.  <br />
 
-<sup>2</sup> ASTM B258-18 is a standard for the proper wire gauge for electrical conductors. It is important to adhere to this standard to ensure the system is safe by avoiding overheating, short circuits, and fires due to improper wire gauges.  <br />
+<sup>2</sup> NFPA 70 is a standard for ensuring safe electrical installtion. Chaper two of the code is most pertinent for this system for its inclusion of overcurrent protection; however, it is important to comply with all standards to ensure safety. Chapter two includes maximum current through a conductor ratings. It is important to adhere to this standard to ensure the system is safe and avoids overheating, short circuits, and fires.  <br />
 
 <sup>3</sup> The system will be located outdoors, so it is essential that the electrical components will be protected from environemental weather hazards and damage. The IP67 rating protects the system from rain, snow, dust, wind, and UV. This will be acheived by using a NEMA box to house the system's components excluding the solar panel. <br />
 
@@ -41,11 +41,11 @@ The above figure details the electronics and circuitry found in the Waveshare Po
 ## Analysis
 
 ## Power Requirements
-| Component | Min Voltage (V)| Max Voltage (V)| Min Current (A)| Typical Current (A) | Max Current (A)| Min Power (W)| Typical Power (W)| Max Power (W)|
-| --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ | ------------ | ------------ |
-| Arduino Nano ESP32 | 4.8| 5.5 | 0.003 | 0.0783 | 0.25 | 0.0144 | 0.3915 | 1.375 |
-| ESP8266 WiFi Module | 3.3 | 3.3 | 0.015 | 0.07 | 0.215 | 0.0495 | 0.231 | 0.7095 |
-| Total     |                |                |  0.018          |  0.01483         |  0.465          |  0.0639         |  0.6225     |   2.0845      |  <br />
+| Component | Voltage (V) | Min Current (A)| Typical Current (A) | Max Current (A)| Min Power (W)| Typical Power (W)| Max Power (W)|
+| --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ | ------------ |
+| Arduino Nano ESP32 | 5 | 0.003 | 0.0783 | 0.25 | 0.015 | 0.3915 | 1.25 |
+| ESP8266 WiFi Module | 3.3 | 0.015 | 0.07 | 0.215 | 0.0495 | 0.231 | 0.7095 |
+| Total     |                  |  0.018          |  0.01483         |  0.465          |  0.0645         |  0.6225     |   1.9595      |  <br />
 
 
 Table 2: Power Consumption Calculations<br />
@@ -57,11 +57,13 @@ The Arduino® Nano ESP32 can be powered with 5 V through a USB-C connector or an
 ## ESP8266 WiFi Module
 The ESP8266 can be powered through VIN pin at 3.3 V. This component allows the receiver system to connect to WiFi and communicate with the database system. The decision to use this component was decided by the receiver system design team.<br />
 ## Waveshare Solar Power Management Module
-The Waveshare Solar Power Management Module is a key component for the subsystem's design, since all the other electrical components interface with it. The module uses a 14500 2500 mAh 3.7 V Li-Ion battery as the source. That battery can be recharged by solar panels ranging from 6 - 24 V and a Micro-USB port, which will be helpful for testing purposes. The module also has flexibility for output voltages with a USB-A output port, 5 V output terminal, and a 3.3 V terminal. This module's flexibility allows the design to save money, since it is capable of completing multiple functions alongside its inexpensive price. The Waveshare module also has a variety of safety features such as over-charge, over-discharge, reverse protection, over heat, and over current protections that will prevent accidents and damage to the system. It also utilizes Maximum Power Point Tracking to maximize the efficiency of the solar panel. This product was chose by the design team because of the functionality provided, because helps reduce design time and simplifies the design by serving many purposes to the system with a single component. It was also important to find a cheap product, because of the need to power nine receiver systems in different locations across campus. One downside of using this module is the complexity of the electronics makes it very hard to accurately depict its functionality in a simulation. To combat this, the design team will use values that are slightly higher than expected in our calculations to account for losses or unforseen circumstances.
+The Waveshare Solar Power Management Module is a key component for the subsystem's design, since all the other electrical components interface with it. The module uses a 14500 2500 mAh 3.7 V Li-Ion battery as the source. That battery can be recharged by solar panels ranging from 6 - 24 V and a Micro-USB port, which will be helpful for testing purposes. The module also has flexibility for output voltages with a USB-A output port, 5 V output terminal, and a 3.3 V terminal. This module's flexibility allows the design to save money, since it is capable of completing multiple functions alongside its inexpensive price. The Waveshare module also has a variety of safety features such as over-charge, over-discharge, reverse protection, over heat, and over current protections that will prevent accidents and damage to the system. It also utilizes Maximum Power Point Tracking to maximize the efficiency of the solar panel. This product was chose by the design team because of the functionality provided, because helps reduce design time and simplifies the design by serving many purposes to the system with a single component. It was also important to find a inexpensive product, because of the need to power nine receiver systems in different locations across campus. One downside of using this module is the complexity of the electronics makes it very hard to accurately depict its functionality in a simulation. To combat this, the design team will use values that are slightly higher than expected in our calculations to account for losses or unforseen circumstances.
 <br />
 ## 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery
 The 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery was chosen for this project to interface with the Waveshare Solar Power Management Module. The Waveshare module only uses 14500 batteries, and this battery was chose for its high capacity at a similar price point to competing components. Calculations for the battery life is important to consider for the system. We will consider the low, typical, and high power cases to see how long the battery will last without external generation.
-<br /> <img width="578" alt="Screenshot 2024-09-16 at 9 22 25 PM" src="https://github.com/user-attachments/assets/9a4c8b51-c4b8-44f9-8ef9-9b63ab78001f"> .<br />
+<br /> 
+![Screenshot 2024-09-23 at 12 42 48 PM](https://github.com/user-attachments/assets/b426d9a5-d426-4e69-a336-cf8e58c9e87c)
+<br />
 
 The results show that the battery will last long enough for the system to perform with some issues in the unrealistic high scenario. This high power requirement is very unlikely to be seen, especially for a long period of time.The number for the typical and high power battery life could also be extended by utilizing rest mode for the ESP32 and ESP8266, which use the values shown for the low power battery requirements.
 
@@ -78,11 +80,13 @@ Figure 5: Average Daily Incident Shortwave Solar Energy in Cookeville. [3] <br /
 Figures 3, 4, and 5 above graphically represent historical weather data. The graphs show what intuition would likely lead one to conclude that the winter months like December and January are going to be the worst case scenarios for solar generation with reduced daylight hours, increased cloud coverage, and lower solar energy, so it will be important to prove that the chosen ACOPOWER 5 W 12 V solar panel will be able to provide enough power to charge the battery during these cases in the calculations section.  It will also be an important decision by the design team to locate the receivers and its power system in a location with maximum sun exposure, minimizing shadows while also protecting the system from damage by passerbys. A monocrystalline solar panel was chosen for the design for the increased efficiency when compared to a polycrystalline solar panel. The price point and minimum wattage is only slightly higher for a monocrystalline panel than the less efficient polycrystalline panels. This increased wattage and small price increase gives much more flexibility for the design and allows more room for error at only a small price increase.
 <br />
 
-Calculations are required to adequately prove that the chosen solar panel will be able to supply enough energy to meet the systems demands. First the design team calculated the power consumed for three cases based on numbers provided by the component datasheets by the system as shown in Table 2. <br />![Screenshot 2024-09-16 at 8 51 27 PM](https://github.com/user-attachments/assets/724e92da-2eef-49cc-aa0d-421e046fe112)<br />
+Calculations are required to adequately prove that the chosen solar panel will be able to supply enough energy to meet the systems demands. First the design team calculated the power consumed for three cases based on numbers provided by the component datasheets by the system as shown in Table 2. <br /> ![Screenshot 2024-09-23 at 1 00 29 PM](https://github.com/user-attachments/assets/af919417-eb46-4399-ba16-aa5e1e1ecd7c)<br />
 <br />
-Next the design team calculated the daily energy required based on the above values and an assumption that the system would be in operation for 24 hours at that rating. This is likely not realistic, and the components would be able to enter the rest mode detailed in the low values during low traffic hours such as late at night or early mornings. This would allow the system to save a large amount of energy if implemented by the receiver system. <br /> ![Screenshot 2024-09-16 at 8 51 32 PM](https://github.com/user-attachments/assets/c4db15c9-f876-416a-96f6-19bb24c80c66)<br />
+Next the design team calculated the daily energy required based on the above values and an assumption that the system would be in operation for 24 hours at that rating. This is likely not realistic, and the components would be able to enter the rest mode detailed in the low values during low traffic hours such as late at night or early mornings. This would allow the system to save a large amount of energy if implemented by the receiver system. <br />  ![Screenshot 2024-09-23 at 1 00 39 PM](https://github.com/user-attachments/assets/a97f11aa-3189-44e7-878d-233be9a5d954)
 <br />
-We then calculated the solar panel's daily energy output based off three cases with varying peak sunlight hours. The peak sunlight hours were derived from figures 3, 4, and 5 based off historical weather data. <br /> ![Screenshot 2024-09-16 at 8 52 32 PM](https://github.com/user-attachments/assets/52bc57fa-5959-40ed-98e3-9f8c2142664c) <br />
+
+We then calculated the solar panel's daily energy output based off three cases with varying peak sunlight hours. The peak sunlight hours were derived from figures 3, 4, and 5 based off historical weather data. <br />  ![Broken SS](https://github.com/user-attachments/assets/fe7b9931-5202-43e1-a531-782f3e0d3d8f)
+<br />
 
 We can see that the solar panel will be able to provide plenty of power in the typical case, but will not be able to provide enough power for the high case. This is expected, because the high case uses very unrealistic numbers. However, it is still worthwhile to calculate for fringe scenarios. Utilizing the ESP32 and ESP8266 rest modes at night and early morning would allow those numbers to be more manageable; leading to less drain of the battery. Even when considering cloud coverage, which reduces the solar panel's output by 10-25 % the solar panel will still be able to provide enough generation to keep the battery charged.
 
@@ -110,8 +114,8 @@ The CONMDEX USB-A to USB-C cable is a standard USB cable that the design team wi
 Table 3: Bill of Materials<br />
 
 ## References
-[1] “NEMA Enclosure Types,” NEMA, https://www.nema.org/. <br />
-[2] “Standard specification for standard nominal diameters and cross-sectional areas of AWG sizes of solid round wires used as electrical conductors,” ASTM International, https://www.astm.org/b0258-18.html. <br />
+[1] “NFPA 70 National Electric Code,” NFPA, https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70 <br/>
+[2] “NEMA Enclosure Types,” NEMA, https://www.nema.org/. <br />
 [3] "Climate and Average Weather Year Round in Cookeville," Weather Spark, https://weatherspark.com/y/15151/Average-Weather-in-Cookeville-Tennessee-United-States-Year-Round#:~:text=The%20length%20of%20the%20day,hours%2C%2037%20minutes%20of%20daylight. <br />
 [4] "Design and Sizing of Solar Photovoltaic Systems," CED Engineering, https://www.cedengineering.com/courses/design-and-sizing-of-solar-photovoltaic-systems. <br />
 
