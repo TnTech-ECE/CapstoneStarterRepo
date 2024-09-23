@@ -27,7 +27,7 @@ Table 1 : Constraints <br />
 <sup>5</sup> This constraint ensures safety of the system by providing a "kill switch" to immediately remove the power supplied to both power supplies in an emergency scenario.
 <br />
 
-<sup>6</sup> This constraint ensures the safety of the system's user and the location's property. Especially with the usage of wall power, safety measures must be taken to prevent hazards like shocks and fires. For shock protection, the system will need to be properly grounded for the user's safety from electric shock. For overcurrent proection, the system will need to be connected to a circuit breaker to prevent overheating and fires due to excessive current flow. 
+<sup>6</sup> This constraint ensures the safety of the system's user and the location's property. Especially with the usage of wall power, safety measures must be taken to prevent hazards like shocks and fires. For shock protection, the system will need to be properly grounded and insulated for the user's safety from electric shock. For overcurrent proection, the system will need to be connected to a circuit breaker to prevent overheating and fires due to excessive current flow. 
 <br />
 
 
