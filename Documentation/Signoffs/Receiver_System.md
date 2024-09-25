@@ -86,7 +86,7 @@ The enclosure has a IP66 rating which is more than enough. The first 6 is used t
 <img src="/Documentation/Images/Receiver/Schematics/Eclosure-1.png" width="60%" height="60%">
 
 ### Pseudo Code
-// Pseudo-code for Arduino to sift through data and find the correct packet
+// Pseudo-code for Arduino to locate and relay RID signal
 
 // Initialize necessary libraries for Wi-Fi/Bluetooth connection
 
