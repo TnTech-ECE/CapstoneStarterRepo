@@ -27,7 +27,7 @@ This microcontroller has been picked due to the low receiver sensitivity of the 
 
 $$ P_{Rx} = P_{Tx} + G_{Tx} - L_{Fs} + G_{Rx} $$ 
 
-The P<sub>Rx</sub> is the power of the signal when it reaches the receiver. The strength of the signal when it reaches the receiver can be calculated by the strength of the signal from the transmitter, P<sub>Tx</sub>. The gain of the transmitter G<sub>Tx</sub> and the receiver G<sub>Rx</sub> can also be used to extend how far the receiver can be from the transmitter. Path loss in free space L<sub>Fs</sub> is a calculated with the following equation.
+The P<sub>Rx</sub> is the power of the signal when it reaches the receiver. The strength of the signal when it reaches the receiver can be calculated by the strength of the signal from the transmitter, P<sub>Tx</sub>. The gain of the transmitter G<sub>Tx</sub> and the receiver G<sub>Rx</sub> can also be used to extend how far the receiver can be from the transmitter. Path loss in free space L<sub>Fs</sub> is a calculated with the following equation. Where d stands for distance and $\lambda$ stands for wavelength. 
 
 $$ L_{Fs} = 20log_{10}(\frac{4\pi * d}{\lambda}) $$
 
@@ -38,17 +38,16 @@ $$ Fd = P_{Rx} - R_{x} $$
 ### ESP8266
 This Wi-Fi module has been selected due to low cost and so it can connect to the Wi-Fi to send the RID signal packet. It would be inefficient to have the arduino use its own ESP32 module to receive signals and then try to connect to the internet to send the packet. This would create a loss in data received because of the time required to reconnect to the internet. This would affect the whole system from being able to track the drone because it will miss signals sent by the drone. 
 
-## Schematic
-
-### Circuit
-The circuit will be soldered onto a perforated (perf) board utilizing the following connections. 
-<img src="/Documentation/Images/Receiver/Schematics/Receiver.png" width="60%" height="60%">
-
 ### Receiver Enclosure
 To safeguard the sensitive electronics essential for the receiver sub-system, a polycarbonate enclosure will be used. The receiver and ESP8266 will be housed in an opaque case with knockout holes for the cable glands. These boxes will be rated IP66 for dust and water protection. 
 
 <img src="/Documentation/Images/Receiver/Schematics/SK-12-03.png" width="60%" height="60%">
 
+## Schematic
+
+### Circuit
+The circuit will be soldered onto a perforated (perf) board utilizing the following connections. 
+<img src="/Documentation/Images/Receiver/Schematics/Receiver.png" width="60%" height="60%">
 
 ## Analysis
 
@@ -80,6 +79,62 @@ Finally the fade margin for Wi-Fi can calculated at 34 dB.
 $$ 34 dB = -63 dBm - -97 dBm $$
 
 This is above the standard of 30 dB and this is because the system is more focused on meeting the minimum requirements of the Bluetooth signal since it's transmitted at a weaker rate. 
+
+### Enclosure
+The enclosure has a IP66 rating which is more than enough. The first 6 is used to denote that the enclosure is dust tight and will not permit an ingress of dust. Where the second 6 is used to inform that the enclosure can withstand water strong water jets from any direction with no water getting through. The image below show cases that the enclosure is big enough to fit the Arduino and ESP8266. 
+
+<img src="/Documentation/Images/Receiver/Schematics/Eclosure-1.png" width="60%" height="60%">
+
+### Pseudo Code
+// Pseudo-code for Arduino to sift through data and find the correct packet
+
+// Initialize necessary libraries for Wi-Fi/Bluetooth connection
+
+initialize_communication_libraries()
+
+// Setup Wi-Fi/Bluetooth modules
+
+setup_communication_modules()
+
+// Define the target packet characteristics (e.g., size, ID, specific byte patterns)
+
+target_packet = define_target_packet()
+
+// Loop to keep the Arduino running continuously
+while (true) {
+    
+    // Check for incoming data packets
+    incoming_packet = receive_packet()
+
+    // If a packet is detected
+    if (incoming_packet != null) {
+
+        // Check if the incoming packet matches the target packet
+        if (check_packet(incoming_packet, target_packet)) {
+            
+            // If it matches, process the packet data
+            packet_data = extract_packet_data(incoming_packet)
+
+            // Send the extracted data to the database
+            send_to_database(packet_data)
+
+            // Optionally, wait for a response from the database (acknowledgment)
+            response = wait_for_database_response()
+
+            // Log successful transmission or handle errors
+            if (response == success) {
+                log("Packet successfully transmitted")
+            } else {
+                log("Error in transmitting packet")
+            }
+        }
+    }
+    
+    // Continue looping and checking for more packets
+    delay(small_interval) // Delay to prevent CPU overload
+}
+
+
 ## BOM
 #### All prices listed are in USD
 | Item     | Part Number | Quantity | Price/Unit     | Total Cost |
