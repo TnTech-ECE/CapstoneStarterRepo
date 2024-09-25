@@ -80,6 +80,11 @@ $$ 34 dB = -63 dBm - -97 dBm $$
 
 This is above the standard of 30 dB and this is because the system is more focused on meeting the minimum requirements of the Bluetooth signal since it's transmitted at a weaker rate. 
 
+
+Below is a map showing 9 receivers with a radius of 152 m covering the TTU contiguous campus. 
+
+<img src="/Documentation/Images/Receiver/Schematics/Receivermap.png" width="60%" height="60%">
+
 ### Enclosure
 The enclosure has a IP66 rating which is more than enough. The first 6 is used to denote that the enclosure is dust tight and will not permit an ingress of dust. Where the second 6 is used to inform that the enclosure can withstand water strong water jets from any direction with no water getting through. The image below show cases that the enclosure is big enough to fit the Arduino and ESP8266. 
 
