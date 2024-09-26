@@ -91,6 +91,7 @@ The enclosure has a IP66 rating which is more than enough. The first 6 is used t
 <img src="/Documentation/Images/Receiver/Schematics/Eclosure-1.png" width="60%" height="60%">
 
 ### Pseudo Code
+```
 // Pseudo-code for Arduino to locate and relay RID signal
 
 // Initialize necessary libraries for Wi-Fi/Bluetooth connection
@@ -105,40 +106,42 @@ setup_communication_modules()
 
 target_packet = define_target_packet()
 
-// Loop to keep the Arduino running continuously
-while (true) {
-    
-    // Check for incoming data packets
-    incoming_packet = receive_packet()
+volatile bool packetReceived = false;  // Global flag to indicate packet reception
 
-    // If a packet is detected
-    if (incoming_packet != null) {
+// Interrupt Service Routine (ISR) when a signal is detected
+void IRAM_ATTR onPacketReceived() {
+    packetReceived = true;  // Set the flag when an interrupt occurs
+}
 
-        // Check if the incoming packet matches the target packet
-        if (check_packet(incoming_packet, target_packet)) {
-            
-            // If it matches, process the packet data
-            packet_data = extract_packet_data(incoming_packet)
+void setup() {
+    // Setup code for receiver and communication modules
+    // Attach an interrupt to the receiver pin (e.g., digital pin 2) to trigger on packet arrival
+    attachInterrupt(digitalPinToInterrupt(2), onPacketReceived, RISING);  // Trigger on a rising signal edge
+}
 
-            // Send the extracted data to the database
-            send_to_database(packet_data)
-
-            // Optionally, wait for a response from the database (acknowledgment)
-            response = wait_for_database_response()
-
-            // Log successful transmission or handle errors
-            if (response == success) {
-                log("Packet successfully transmitted")
-            } else {
-                log("Error in transmitting packet")
-            }
+void loop() {
+    // If the packetReceived flag is set by the ISR
+    if (packetReceived) {
+        // Process the packet
+        process_packet();
+        // Clear the flag
+        packetReceived = false;
+        
+        // Send the packet data over TCP
+        send_packet_data();
+        
+        // Wait for acknowledgment (ACK) before returning to idle
+        if (wait_for_acknowledgment() == success) {
+            // ACK received, go back to idle mode
+        } else {
+            // Handle failed transmission, resend packet
         }
     }
     
-    // Continue looping and checking for more packets
-    delay(small_interval) // Delay to prevent CPU overload
+    // Other non-polling tasks can happen here (e.g., low-power mode or other sensor tasks)
 }
 
+```
 
 ## BOM
 #### All prices listed are in USD
