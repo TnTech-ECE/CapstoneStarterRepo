@@ -45,8 +45,8 @@ The above schematic shows the component connections for the system. We will be u
 | Component | Voltage (V)| Min Current (A)| Max Current (A)| Min Power (W)| Max Power (W)|
 | --------- | ---------------| -------------- |----------------| -------------- | ------------ |
 | Raspberry Pi 4B, 8 GB Memory| 5 | 2.5| 3.0| 12.5| 15.0|
-| Digital Servo, 20 kg torque, 180 degrees Control Angle| 5 | 0.004| 1.8 | 0.02| 9 |
-| Digital Servo, 20 kg torque, 270 degrees Control Angle| 5 | 0.004| 1.8 | 0.02| 9 |
+| DS3218 Digital Servo| 5 | 0.004| 1.8 | 0.02| 9 |
+| DS3218mg Digital Servo | 5 | 0.004| 1.8 | 0.02| 9 |
 | Raspberry Pi HQ camera| 5 | 0.3| 0.3| 1.5| 1.5|
 | Total     |                |   2.81 A         |  6.9 A         |  14.04 W        |  34.5 W     |
 
