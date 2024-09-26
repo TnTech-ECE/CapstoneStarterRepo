@@ -27,16 +27,17 @@ Table 1 : Constraints <br />
 <sup>5</sup> This constraint ensures safety of the system by providing a "kill switch" to immediately remove the power supplied to both power supplies in an emergency scenario.
 <br />
 
-<sup>6</sup> This constraint ensures the safety of the system's user and the location's property. Especially with the usage of wall power, safety measures must be taken to prevent hazards like shocks and fires. For shock protection, the system will need to be properly grounded and insulated for the user's safety from electric shock. For overcurrent proection, the system will need to be connected to a circuit breaker to prevent overheating and fires due to excessive current flow. 
+<sup>6</sup> This constraint ensures the safety of the system's user and the location's property. Especially with the usage of wall power, safety measures must be taken to prevent hazards like shocks and fires. For shock protection, the system will need to be properly grounded and insulated for the user's safety from electric shock. For overcurrent proection, the system will include a fuse to prevent overheating and fires due to excessive current flow. 
 <br />
 
 
 ## Schematic
 
-![Screenshot 2024-09-23 at 9 02 50 AM](https://github.com/user-attachments/assets/f3f163ac-4551-47ce-9042-146f410d8984)
+<img width="866" alt="Screenshot 2024-09-26 at 3 02 30 PM" src="https://github.com/user-attachments/assets/e6252a6d-f2b8-4f60-a18c-c11e41bf7dba">
+
 <br />
 Figure 1: Camera Power Buildable Schematic.<br />
-The above schematic shows the component connections for the system. We will be utilizing a wall outlet for this design then using a 15 ft two way extensions cord with switching functionality. One side of the extension powers the Raspberry Pi 5 V 15 W USB-C power supply while the other powers the DC 5 V 10 A 50 W power supply. The Raspberry Pi 5 V 15 W USB-C power supply provides power to the Raspberry Pi 4B then a CSI ribbon cable is used to provide power at 5 V from the Raspberry Pi 4B to the Raspberry Pi HQ camera. To prevent damage from back EMF produced by the servo motors, a 1N5400 diode is placed across the terminals of both motors.
+The above schematic shows the component connections for the system. We will be utilizing a wall outlet for this design then using a 15 ft two way extensions cord with switching functionality. One side of the extension powers the Raspberry Pi 5 V 15 W USB-C power supply while the other powers the DC 5 V 10 A 50 W power supply. The Raspberry Pi 5 V 15 W USB-C power supply provides power to the Raspberry Pi 4B then a CSI ribbon cable is used to provide power at 5 V from the Raspberry Pi 4B to the Raspberry Pi HQ camera. To prevent damage from back EMF produced by the servo motors, a 1N5400 diode is placed across the terminals of both motors. A 1 A 250 V Time Delay fuse is also included to provide overcurrent protection to the 50 W power supply.
 <br />
 
 
@@ -56,7 +57,7 @@ Table 2: Power Requirements.<br />
 
 
 ## MEAN WELL LRS-50-5 50W 5VDC 10A Single Ouput Switching Mode Power Supply
-The maximum power requirements for the motors is 18 W at 5 V, so the 50 W power supply will easily cover that. At first glance, it may seem like overkill, but this power supply is very useful for meeting this subsystems's requirements. The power supply will be capable of powering both servo motors from the single output terminal. It also includes safety features such as short circuit, overload, and over voltage protections, and is safety compliant with IEC 60335-1 [3] and IEC 61558-1 [4]. This power supply also includes a robust datasheet and a useful user manual. An issue with design choice to use power supplies, is that it limits the design team's possible locations to house the Camera system. However, having more location flexibility with an alternate design such as a solar charged battery would be very expensive with the maximum power for the system nearing 40 W. The design team decided that the cost-benefit analysis would not be worth it to implement a solar solution for this subsystem.
+The maximum power requirements for the motors is 18 W at 5 V, so the 50 W power supply will easily cover that. At first glance, it may seem like overkill, but this power supply is very useful for meeting this subsystems's requirements. The power supply will be capable of powering both servo motors from the single output terminal. It also includes safety features such as short circuit, overload, and over voltage protections, and is safety compliant with IEC 60335-1 [3] and IEC 61558-1 [4]. This power supply also includes a robust datasheet and a useful user manual. An issue with design choice to use power supplies, is that it limits the design team's possible locations to house the Camera system. However, having more location flexibility with an alternate design such as a solar charged battery would be very expensive with the maximum power for the system nearing 40 W. The design team decided that the cost-benefit analysis would not be worth it to implement a solar solution for this subsystem. The power supply will also have overcurrent protection from a slow-burn 1 A 250 V fuse. We will also utilize a grounded power cord to provide shock protection. 
 <br />
 
 ##  Gratury Junction Box, IP67 Waterproof Plastic Enclosure
@@ -75,14 +76,15 @@ The 2 Way Extension Cord 15 ft allows the design team to power both the 50W 5VDC
 <br />
 
 ##  Raspberry Pi 15 W USB-C Power Supply
-The Raspberry Pi 15 W USB-C Power Supply is the power supply designed by Raspbery Pi for the Raspberry Pi 4 series. Since, it is designed for the component used it meets all the power requirements perfectly. The design team chose this option over cheaper power supplies for the reliability of this power supply. It also includes short circuit, overcurrent, and over temperature protections. 
+The Raspberry Pi 15 W USB-C Power Supply is the power supply designed by Raspbery Pi for the Raspberry Pi 4 series. Since, it is designed for the component used it meets all the power requirements perfectly. The design team chose this option over cheaper power supplies for the reliability of this power supply. It also includes short circuit, overcurrent, and over temperature protections. As specified by the datasheet, these protections protect the system by limiting the current or shutting down if the current exceeds the ratings of 5 V, 3 A, and 15 W.
 <br />
 
 ##  Raspberry Pi 5 27 W USB-C Power Supply
 This component is an exception for this system. It is the power supply required for the database system's Raspberry Pi 5 as specified in their design documentation. As opposed to creating a new request, it will be included in this section and the bill of materials for the Camera Power system. It is the power supply designed by Raspberry Pi for their Raspberry Pi 5, so with access to a working wall outlet the power supply will sufficiently provide 27 Watts at 5V via a USB-C connection. For further justification, refer to the Database system documentation.
 <br />
 
-
+## Bussmann MDL-1 Glass Fuse 1 Amp 250 Volt Time Delay
+This component will provide overcurrent protection to the MEAN WELL LRS-50-5 power supply. It will be connected to the AC L "hot wire" via a in-line fuse holder. The 1 A current rating will account for safety and efficieny margins of the power supply ensuring the fuse will not be blown in regular operation due to the roughly 0.6 A current. The usage of a time delay fuse will not allow inrush current to blow the fuse. This fuse will be housed in the Seachoice Waterproof in-Line Fuse Holder.
 
 
 ## BOM
@@ -95,7 +97,9 @@ This component is an exception for this system. It is the power supply required 
 |     2 Way Extension Cord 15 ft |   B0BCP6H3QQ         |     1     |       $39.99       |     $39.99     |
 |    Raspberry Pi 5 27 W USB-C Power Supply   |    B0CSMBR63K        |     1     |       $15.88       |     $15.88      |
 |    Raspberry Pi 15 W USB-C Power Supply   |    B0CSMBR63K        |     1     |       $7.99      |     $7.99      |
-|Total     |             |          |                |     $120.82     |
+|    Bussmann Time Delay Glass Fuse 5 Pack |    B00SU2I7YG       |     1     |       $10.59     |     $10.59     |
+|   Seachoice in-Line Fuse Holder    |     B000N9PI32      |     1     |       $11.13      |     $11.13      |
+|Total     |             |          |                |     $142.54     |
 
 Table 3: Bill of Materials <br />
 
@@ -108,7 +112,7 @@ Table 3: Bill of Materials <br />
 ## Parts List: <br/>
 MEAN WELL LRS-50-5 50W 5VDC 10A Single Ouput Switching Mode Power Supply  <br/>
 Amazon: https://www.amazon.com/MEAN-WELL-LRS-50-5-Single-Switching/dp/B085QKVLB6
-Datasheet: https://www.meanwellusa.com/upload/pdf/LRS-100/LRS-100-spec.pdf
+Datasheet: https://www.meanwell.com/Upload/PDF/LRS-50/LRS-50-SPEC.PDF
 
 Gratury Junction Box, IP67 Waterproof Plastic Enclosure for Electrical Project, Hinged Grey Cover, Includes Mounting Plate and Wall Bracket 220×170×110mm (8.6"×6.7"×4.3")<br/>
 Amazon: https://www.amazon.com/Gratury-Stainless-Waterproof-Electrical-290×190×140mm/dp/B08281V2RL/ <br/>
@@ -131,4 +135,12 @@ Amazon: https://www.amazon.com/Raspberry-Power-Supply-USB-C-Listed/dp/B07Z8P61DQ
 Ces 1N5400 3 Amp Diode D3A 10 Pack
 Amazon: https://www.amazon.com/AMP-DIODE-D3A-10-PACK/dp/B0071DZVDU
 Datasheet: https://media.digikey.com/pdf/Data%20Sheets/Diodes%20PDFs/RL201-207.pdf](https://www.vishay.com/docs/88516/1n5400.pdf
+<br/>
+
+Bussmann MDL-1 Glass Fuse 1 Amp 250 Volt Time Delay (Slo-blo) 3AG Set of 5
+Amazon: https://www.amazon.com/Bussmann-MDL-1-Glass-Delay-Slo-blo/dp/B00SU2I7YG
+<br/>
+
+Seachoice in-Line Fuse Holder, Waterproof
+Amazon: https://www.amazon.com/SEACHOICE-12731-Inline-Fuse-Holder/dp/B000N9PI32
 <br/>
