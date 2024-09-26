@@ -45,7 +45,7 @@ The above figure details the electronics and circuitry found in the Waveshare Po
 | --------- | ---------------| -------------- |----------------| -------------- | ------------ | ------------ | ------------ |
 | Arduino Nano ESP32 | 5 | 0.003 | 0.0783 | 0.25 | 0.015 | 0.3915 | 1.25 |
 | ESP8266 WiFi Module | 3.3 | 0.015 | 0.07 | 0.215 | 0.0495 | 0.231 | 0.7095 |
-| Total     |                  |  0.018          |  0.01483         |  0.465          |  0.0645         |  0.6225     |   1.9595      |  <br />
+| Total     |                  |            |           |            |  0.0645         |  0.6225     |   1.9595      |  <br />
 
 
 Table 2: Power Consumption Calculations<br />
