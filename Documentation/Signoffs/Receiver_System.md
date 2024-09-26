@@ -1,6 +1,6 @@
 # Receiver System 
 ## Functionality
-The Receiver system will be responsible for receiving and sending the packed Remote ID (RID) over the network to the database subsystem. This subsystem shall be composed of 9 antennas placed across the contiguous Tennessee Tech University (TTU) campus. The receivers will be placed outside to minimize the power loss that would occur due to the RF signals going through a building. 
+The Receiver system will be responsible for receiving the Remote ID (RID) signal sent by the drone, and then sending it to the database subsystem. This subsystem shall be composed of 9 receivers placed across the contiguous Tennessee Tech University (TTU) campus. The receivers will be placed outside to minimize the power loss that would occur due to the RF signals going through a building. 
 ## Constraints
 | No.| Constraint | Origin |
 | -- | --------- |--------|
@@ -8,7 +8,7 @@ The Receiver system will be responsible for receiving and sending the packed Rem
 |  2 | Shall only interact with RID signal and ignore other signals | Ethical Constraint       |                          
 |  3 | Shall receive all RID data from remote ID emitting drones    |  Design Constraint |   
 |  4 | Shall have a reception range that covers the contiguous campus and cover up to 20 m off the contiguous campus | TTU Police |
-|  5 | Each receiver shall have a reception range at a minimum of 152 m | Design Constraint|
+|  5 | Each receiver shall have a reception range at a minimum of 150 m | Design Constraint|
 
 <sup>1</sup> According to research done on drone tracking and radio frequency emission, there are three different drone detection cases. In each case, the frequency band used was either between 2.4 Ghz or 5.8 Ghz ISM bands. The 5.8 GHz frequency band can be ommitted due to it being an optional transmission. The drone must emit a 2.4 GHz WiFi signal if a WiFi signal is being emitted, so this is the frequency band we will choose to focus on. This is due to the 5.8 GHz not being transmitted as far, so more receivers would be required to cover the contiguous campus and, therefore, raise the cost of the project. [^6].   
 
@@ -18,12 +18,12 @@ The Receiver system will be responsible for receiving and sending the packed Rem
 
 <sup>4</sup> Due to a higher density of students on the contiguous campus we have been asked to keep our scope smaller. This will also be easier for maintenance purposes of the subsystem in the future. The receivers will not be able to determine the distance of a signal. To cover the entire TTU campus, the detection radius of the receivers will slightly extend beyond the campus boundaries. Placement of the receivers will be used to minimize how far off campus the receivers will be able to receive signals. 
 
-<sup>5</sup> Based on the calculations and assumptions, the receivers should be able to cover a greater range. However, to ensure an appropriate fade margin of 25 dB, the receivers need to cover a range of 152 meters to account for miscellaneous losses.
+<sup>5</sup> Based on the calculations and assumptions, the receivers should be able to cover a greater range. However, to ensure an appropriate fade margin of 25 dB, the receivers need to cover a range of 150 m to account for miscellaneous losses.
 
 ## Design
 
 ### Arduino Nano ESP32
-This microcontroller has been picked due to the low receiver sensitivity of the Wi-fi and Bluetooth module and its ability to then program it to send the signal across the W-Fi to the database. Python code will be used for the receiver to know what signal to find and then relay the signal to be unpacked. Using a line to line link equation the receiver has been calculated to receive a signal from 152 m.
+This microcontroller has been picked due to the high receiver sensitivity of the Wi-fi and Bluetooth module and its ability to then program it to send the signal across the W-Fi to the database. Python code will be used for the receiver to know what signal to find and then relay the signal to be unpacked. Using a line of sight link equation the receiver has been calculated to receive a signal from 150 m.
 
 $$ P_{Rx} = P_{Tx} + G_{Tx} - L_{Fs} + G_{Rx} $$ 
 
@@ -52,7 +52,7 @@ The circuit will be soldered onto a perforated (perf) board utilizing the follow
 ## Analysis
 
 ### Receivers
-The Arduino Nano ESP32 utilizes a NORA-W106-10B Wi-Fi and Bluetooth module with a receiver sensitivy of -97 dBm and -98 dBm respectively. The antenna gain for the system is 3 dBi on average. The dBi value has been assumed based on standard specifications, reflecting common values in the industry to be 3 dBi. The RID signal must be transmitted with a minimum power of 5 dBm for Bluetooth and 15 dBm for Wi-Fi. This is a standard listed in the RID data sheet. Using the line to line link budget equation we can see that the signal strength will be stronger than the receiver sensitivity. The variable d in the line to line equation is 152 m and $\lambda$ can be calculated dividing the speed of light by the frequency of the signal. 
+The Arduino Nano ESP32 utilizes a NORA-W106-10B Wi-Fi and Bluetooth module with a receiver sensitivy of -97 dBm and -98 dBm respectively. The antenna gain for the system is 3 dBi on average. The dBi value has been assumed based on standard specifications, reflecting common values in the industry to be 3 dBi. The RID signal must be transmitted with a minimum power of 5 dBm for Bluetooth and 15 dBm for Wi-Fi. This is a standard listed in the RID data sheet. Using the line of sight link budget equation we can see that the signal strength will be stronger than the receiver sensitivity. The variable d in the line of sight equation is 150 m and $\lambda$ can be calculated dividing the speed of light by the frequency of the signal. 
 
 $$
 \lambda = \frac{3 \times 10^8 \, \text{m/s}}{2.4 \times 10^9 \, \text{Hz}}
@@ -60,9 +60,9 @@ $$
 
 Then we must calculate the free space loss that will occur sending RF signals.
 
-$$ -84 = 20log_{10}(\frac{4\pi * 152 m}{0.125 m}) $$
+$$ -84 = 20log_{10}(\frac{4\pi * 150 m}{0.125 m}) $$
 
-This gives us the loss that will occur in free space from the minum distance needed of 152 m. Then by plugging in our values for Bluetooth to the line to line equation we can see the strength of the signal as it reaches the receiver from 152 m. 
+This gives us the loss that will occur in free space from the minum distance needed of 150 m. Then by plugging in our values for Bluetooth to the line of sight equation we can see the strength of the signal as it reaches the receiver from 150 m. 
 
 $$ -73 dBm = 5 dBm + 3 dBi + 3 dBi - 84 dB $$ 
 
@@ -81,7 +81,7 @@ $$ 34 dB = -63 dBm - -97 dBm $$
 This is above the standard of 30 dB and this is because the system is more focused on meeting the minimum requirements of the Bluetooth signal since it's transmitted at a weaker rate. 
 
 
-Below is a map showing 9 receivers with a radius of 152 m covering the TTU contiguous campus. 
+Below is a map showing 9 receivers with a radius of 150 m covering the TTU contiguous campus. 
 
 <img src="/Documentation/Images/Receiver/Schematics/Receivermap.png" width="60%" height="60%">
 
