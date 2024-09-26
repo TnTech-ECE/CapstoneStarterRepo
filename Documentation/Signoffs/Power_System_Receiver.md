@@ -62,7 +62,7 @@ The Waveshare Solar Power Management Module is a key component for the subsystem
 ## 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery
 The 14500 Rechargeable Battery 2500mAh 3.7Volt Lithium-ion Battery was chosen for this project to interface with the Waveshare Solar Power Management Module. The Waveshare module only uses 14500 batteries, and this battery was chose for its high capacity at a similar price point to competing components. Calculations for the battery life is important to consider for the system. We will consider the low, typical, and high power cases to see how long the battery will last without external generation.
 <br /> 
-![Screenshot 2024-09-23 at 12 42 48 PM](https://github.com/user-attachments/assets/b426d9a5-d426-4e69-a336-cf8e58c9e87c)
+<img width="539" alt="Screenshot 2024-09-26 at 10 00 05 AM" src="https://github.com/user-attachments/assets/dbd6aaea-7101-46a7-8fa0-ecf39bf3c510">
 <br />
 
 The results show that the battery will last long enough for the system to perform with some issues in the unrealistic high scenario. This high power requirement is very unlikely to be seen, especially for a long period of time.The number for the typical and high power battery life could also be extended by utilizing rest mode for the ESP32 and ESP8266, which use the values shown for the low power battery requirements.
