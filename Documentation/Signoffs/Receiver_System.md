@@ -156,18 +156,24 @@ void loop() {
 
 
 ## References and Links
-[^1]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019).
+[1]: "Standard specification for remote ID and tracking designation - F3411 - 19," ASTM International, (2019).
 
-[^2]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
+[2]: J. Marcel, “3 key factors that determine the range of bluetooth,” Bluetooth® Technology Website, https://www.bluetooth.com/blog/3-key-factors-that-determinethe-range-of-bluetooth/ (accessed Apr. 3, 2024). 
 
-[^4]: S. Cerwin, Radio Propagation and Antennas: A Non-Mathematical Treatment of Radio and Antennas. Bloomington, IN: AuthorHouse, 2019. 
+[4]: S. Cerwin, Radio Propagation and Antennas: A Non-Mathematical Treatment of Radio and Antennas. Bloomington, IN: AuthorHouse, 2019. 
 
-[^6]: D. Aouladhadj et al., “Drone detection and tracking using RF Identification Signals,” National Center for Biotechnology Information, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10490811/ (accessed Apr. 3, 2024). 
+[6]: D. Aouladhadj et al., “Drone detection and tracking using RF Identification Signals,” National Center for Biotechnology Information, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10490811/ (accessed Apr. 3, 2024). 
 
-[^7]: “Arduino® Nano ESP32,” Arduino Online Shop, https://store-usa.arduino.cc/products/nano-esp32?selectedStore=us (accessed Apr. 5, 2024).
+[7]: “Arduino® Nano ESP32,” Arduino Online Shop, https://store-usa.arduino.cc/products/nano-esp32?selectedStore=us (accessed Apr. 5, 2024).
 
-[^8]: ABX00083-datasheet.pdf, https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf (accessed Apr. 5, 2024). 
+[8]: ABX00083-datasheet.pdf, https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf (accessed Apr. 5, 2024). 
 
-[^9]: “Calculate area on map, Google Maps Area Calculator,” CalcMaps, https://www.calcmaps.com/map-area/ (accessed Apr. 5, 2024). 
+[9]: “Calculate area on map, Google Maps Area Calculator,” CalcMaps, https://www.calcmaps.com/map-area/ (accessed Apr. 5, 2024). 
 
-[^10]: “WIFI module - ESP8266 (4MB Flash),” WRL-17146 - SparkFun Electronics, https://www.sparkfun.com/products/17146 (accessed Apr. 10, 2024). 
+[10]: “WIFI module - ESP8266 (4MB Flash),” WRL-17146 - SparkFun Electronics, https://www.sparkfun.com/products/17146 (accessed Apr. 10, 2024). 
+
+[11] “SK-12 Plastic Outdoor Electrical Junction Box with Knockouts,” Polycase, https://www.polycase.com/sk-12#SK-12-03 (accessed Sep. 11, 2024). 
+
+[12] “CG3 cable glands: Strain relief & cord grips for enclosures,” Polycase, https://www.polycase.com/cg3-cable-glands#CG-31 (accessed Sep. 11, 2024). 
+
+[13] “SK-99 mounting kit: SK series Knockout Enclosures,” Polycase, https://www.polycase.com/sk-99 (accessed Sep. 25, 2024). 
