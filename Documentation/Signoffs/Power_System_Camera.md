@@ -42,6 +42,8 @@ The above schematic shows the component connections for the system. We will be u
 
 
 ## Analysis
+For this system, five volts is required for all components, so the five volt power supplies will be able to provide power to all the components. The worst case power draw from the system is 34.5 W, so the chosen 50 W power supply will meet the motor requirements with plenty of wattage to spare. The cost reduction from a lower wattage power supply is minimal, so we will have some extra power to account for any additional functionality or errors in the camera system. The Raspberry Pi 5 V 15 W power supply will provide power to the Raspberry Pi 4B. This is the power supply designed by Raspbery Pi for the Raspberry Pi 4B, so it perfectly matches the power requirements of 15 W. <br /> 
+
 | Component | Voltage (V)| Min Current (A)| Max Current (A)| Min Power (W)| Max Power (W)|
 | --------- | ---------------| -------------- |----------------| -------------- | ------------ |
 | Raspberry Pi 4B, 8 GB Memory| 5 | 2.5| 3.0| 12.5| 15.0|
@@ -52,7 +54,6 @@ The above schematic shows the component connections for the system. We will be u
 
 Table 2: Power Requirements.<br />
 
-For this system, five volts is required for all components, so the five volt power supplies will be able to provide power to all the components. The worst case power draw from the system is 34.5 W, so the chosen 50 W power supply will meet the motor requirements with plenty of wattage to spare. The cost reduction from a lower wattage power supply is minimal, so we will have some extra power to account for any additional functionality or errors in the camera system. The Raspberry Pi 5 V 15 W power supply will provide power to the Raspberry Pi 4B. This is the power supply designed by Raspbery Pi for the Raspberry Pi 4B, so it perfectly matches the power requirements of 15 W. <br /> 
 
 ## MEAN WELL LRS-50-5 50W 5VDC 10A Single Ouput Switching Mode Power Supply
 The maximum power requirements for the motors is 18 W at 5 V, so the 50 W power supply will easily cover that. At first glance, it may seem like overkill, but this power supply is very useful for meeting this subsystems's requirements. The power supply will be capable of powering both servo motors from the single output terminal. It also includes safety features such as short circuit, overload, and over voltage protections, and is safety compliant with IEC 60335-1 [3] and IEC 61558-1 [4]. This power supply also includes a robust datasheet and a useful user manual. An issue with design choice to use power supplies, is that it limits the design team's possible locations to house the Camera system. However, having more location flexibility with an alternate design such as a solar charged battery would be very expensive with the maximum power for the system nearing 40 W. The design team decided that the cost-benefit analysis would not be worth it to implement a solar solution for this subsystem.
