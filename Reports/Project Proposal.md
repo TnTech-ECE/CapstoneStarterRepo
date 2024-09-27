@@ -35,10 +35,10 @@ Toward the end of the introduction, include a subsection that outlines what the 
 Formulating the problem or objective involves clearly defining it through background information, specifications, and constraints. Think of it as "fencing in" the objective to make it unambiguously clear what is and is not being addressed and why.
 
 Questions to consider:
--Who does the problem affect?
--Why do we need this solution?
--What challenges necessitate a dedicated, multi-person engineering project?
--Why aren’t off-the-shelf solutions sufficient?
+- Who does the problem affect?
+- Why do we need this solution?
+- What challenges necessitate a dedicated, multi-person engineering project?
+- Why aren’t off-the-shelf solutions sufficient?
 
 #### Background
 
@@ -61,10 +61,10 @@ Specifications are requirements imposed by **stakeholders** to meet their needs.
 Constraints often stem from governing bodies, standards organizations, and broader considerations beyond the requirements set by stakeholders.
 
 Questions to consider:
--Do governing bodies regulate the solution in any way?
--Are there industrial standards that need to be considered and followed?
--What impact will the engineering, manufacturing, or final product have on public health, safety, and welfare?
--Are there global, cultural, social, environmental, or economic factors that must be considered?
+- Do governing bodies regulate the solution in any way?
+- Are there industrial standards that need to be considered and followed?
+- What impact will the engineering, manufacturing, or final product have on public health, safety, and welfare?
+- Are there global, cultural, social, environmental, or economic factors that must be considered?
 
 
 ### Survey of Existing Solutions
