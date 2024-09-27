@@ -23,7 +23,7 @@ Examples:
 
 ## General Outline
 
-### The Introduction
+### Introduction
 
 The introduction must be the opening section of the proposal. It acts as the "elevator pitch" of the project, briefly introducing the objective, its importance, and the proposed solution. Because readers may only read this section, it should effectively capture their attention and encourage them to read further.
 
@@ -72,12 +72,12 @@ Questions to consider:
 Research existing solutions, whether in literature, on the market, or within the industry. Present these findings in a coherent, organized manner. Remember to cite all information that is not common knowledge.
 
 
-### The Measures of Success
+### Measures of Success
 
 Define how the project’s success will be measured. This involves explaining the experiments and methodologies to verify that the system meets its specifications and constraints.
 
 
-### The Resources
+### Resources
 
 Each project proposal must include a comprehensive description of the necessary resources.
 
