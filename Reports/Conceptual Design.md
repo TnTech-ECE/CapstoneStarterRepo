@@ -1,11 +1,16 @@
-## This Document - Conceptual Design and Planning Documentation Specifications
+# Conceptual Design
 
-This document should not be thought of as an outline. Rather, this document explains the goal and specific things that the reader should understand. Armed with these expectations, each team is expected to design an appropriate document to accomplish the goal and appropriately educate their stakeholders. 
+This document explains the goal of the conceptual design and specific things that the reader should understand. Armed with these expectations, each team is expected to design an appropriate document to accomplish the goal and appropriately educate their stakeholders.
 
 
 ### Big Picture Goal of the document
 
-The goal of the conceptual design and planning document is to leave the reader understanding the (1) fully formulated problem, (2) fully decomposed conceptual solution, (3) the constraints and where they arise from, (4) how the constraints will be analytically (not experimentally) validated, and (5) a detail design schedule (with an explanation of why it is optimal). 
+The goal of the conceptual design and planning document is to leave the reader understanding the
+1. fully formulated problem,
+2. fully decomposed conceptual solution
+3. the constraints and where they arise from
+4. how the constraints will be analytically (not experimentally) validated, and
+5. a detail design schedule (with an explanation of why it is optimal). 
 
 The above is NOT an outline. It is the goal of the document. Consider all the requirements given herein and devise an outline that will accomplish the requirements.
 
@@ -40,13 +45,18 @@ The general purpose of conceptual design and planning is to identify a concept a
 11. Must contain a gantt chart detailing **all** tasks that will be necessary to complete the detail design and analytical verification and by whom the tasks will be completed. (this includes any skill acquisition that will be necessary)
 
 
+
+
 ### Introduction
 
-In this case, the goal of the introduction section is not to persuade. Rather, in a design document, the introduction is intended to reintroduce the fully formulated problem. 
+The introduction is intended to reintroduce the fully formulated problem. 
 
 #### Restating the Fully Formulated Problem
 
-The fully formulated problem is the overall objective and scope complete with the set of shall statements. This was part of the project proposal. However, it may be that the scope has changed. So, state the fully formulated problem in the introduction of the conceptual design and planning document. For each of the constraints, explain the origin of the constraint (customer specification, standards, ethical concern, broader implication concern, etc). The project **must** include 1 or more constraints (shall statements) originating from each of the following: broader impacts, ethical considerations, and engineering standards. 
+The fully formulated problem is the overall objective and scope complete with the set of shall statements. This was part of the project proposal. However, it may be that the scope has changed. So, state the fully formulated problem in the introduction of the conceptual design and planning document. For each of the constraints, explain the origin of the constraint (customer specification, standards, ethical concern, broader implication concern, etc).
+
+
+The project **must** include 1 or more constraints (shall statements) originating from each of the following: broader impacts, ethical considerations, and engineering standards. 
 
 
 ### Background
@@ -57,11 +67,6 @@ Background information may be needed. If significant background information must
 ### Ethical, Professional, and Standards Considerations
 
 In the project proposal, each team was required to consider what the broader impacts of the project may be to the culture, society, environment, public health, public safety, and economy. They were also required to consider the standards organizations which would inform the design. Here, each team must include a complete discussion regarding how these broader considerations have been used to inform your design (what constraints, specifications, or practices etc. are in place due to the consideration of these and how the constraints address these).
-
-
-### Expectations for the Draft
-
-The draft should show very significant progress toward completion of the design phase 1 document. There must be a complete outline in place with more than 60% of the document complete. The complete system block diagram for the conceptual solution must be in place with all constraints detailed for the sub-systems. 
 
 
 ### Block Diagram Expectations
