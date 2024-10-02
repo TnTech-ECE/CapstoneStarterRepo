@@ -76,7 +76,7 @@ Each project proposal must include a comprehensive description of the necessary 
 
 Provide a budget proposal with justifications for expenses such as software, equipment, components, testing machinery, and prototyping costs. This should be an estimate, not a detailed bill of materials.
 
-### Personnel
+### Skills
 
 Identify the skills present in the team and compare them to those required to complete the project. Address any skill gaps with a plan to acquire the necessary knowledge.
 
