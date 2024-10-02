@@ -12,16 +12,16 @@ With these guidelines, each team is expected to create a suitable document to ac
 
 
 ## General Requirements for the Document
-
-- All submissions must be composed in Markdown. Please refrain from submitting PDFs or Word documents.
-- All sources must be cited unless the information is common knowledge among the writer's audience.
-- The document must be written in the third person.
-- An introduction must be included.
-- The latest fully formulated problem must be clearly stated using "shall" statements.
-- The document must include a complete, well-specified high-level solution, including a system block diagram.
-- For each atomic subsystem, a functional description, inputs, outputs, and specifications must be provided.
-- A statement of ethical, professional, and standards considerations should be included, detailing the specific constraints they have imposed.
-- A Gantt chart must be included, detailing all tasks necessary to complete the detailed design and specifying the individual(s) responsible for each task.
+- Submissions must be composed in Markdown format. Submitting PDFs or Word documents is not permitted.
+- All information that is not considered common knowledge among the audience must be properly cited.
+- The document should be written in the third person.
+- An introduction section should be included.
+- The latest fully formulated problem must be clearly articulated using explicit "shall" statements.
+- The document must present a comprehensive, well-specified high-level solution.
+- The solution must contain a system block diagram.
+- For every atomic subsystem, a detailed functional description, inputs, outputs, and specifications must be provided.
+- The document should include an acknowledgment of ethical, professional, and standards considerations, explaining the specific constraints imposed.
+- The solution must include a refined estimate of the resources needed, including: costs, allocation of management responsibilities for each subsystem, and a Gantt chart.
 
 
 ## Introduction
@@ -36,60 +36,65 @@ The fully formulated problem is the overall objective and scope complete with th
 
 ## High-Level Solution
 
-Create a big picture solution that will satisfy specification and constrains while minimizing the costs. Identify a concept and process that will:
-
-1. Maximize attainment of stakeholder goals
-2. Conform to all constraints
-3. Minimize sources of risk
-5. Minimize consumption of resources
+This section outlines a comprehensive, high-level solution designed to efficienctly meet all specified requirements and constraints. The solution aims to maximize stakeholder goal attainment, conform to established constraints, minimize risks, and optimize resource utilization.
 
 
 ## Block Diagram
 
-Block diagrams are a great way to provide a big picture understanding of a system and the relationships of the individual components. In general, block diagrams borrow from visual modeling languages like the universal modeling language (UML). Each of the blocks represent sub-systems and each of the connections represent that the two (or more) blocks connected have a relationship. Typically, the relationship in a system diagram is that of input to output. 
+Block diagrams are an excellent way to provide an overarching understanding of a system and the relationships among its individual components. Generally, block diagrams draw from visual modeling languages like the Universal Modeling Language (UML). Each block represents a subsystem, and each connection indicates a relationship between the connected blocks. Typically, the relationship in a system diagram denotes an input-output interaction.
 
-Each sub-system should be represented by a single block. For each block in the sub-system there should be a short explanation of the functional expectations for that block and the associated constraints. For each of the connections, there should be a short description of the expectations for that relationship including what is being represented by the relationship (power, analog signal, serial comm, wireless comm, etc) and the constraints. 
+In the block diagram, each subsystem should be depicted by a single block. For each block, there should be a brief explanation of its functional expectations and associated constraints. Similarly, each connection should have a concise description of the relationship it represents, including the nature of the connection (such as power, analog signal, serial communication, or wireless communication) and any relevant constraints.
 
-The result should be a complete view of a well defined system that delegates all atomic responsibilities necessary to accomplish the project scope to subsystems and their interactions.
+The end result should present a comprehensive view of a well-defined system, delegating all atomic responsibilities necessary to accomplish the project scope to their respective subsystems.
 
 
 ## Atomic Subsystem Specifications
 
-Given the high-level design, give a detailed description of what function each subsection should perform. This should inculued a description of how subsystem helps achinve the projects goals. Also inculde a functional description of operation. Describe the interface of the subsystem to other subsystems this should inculde inputs & outputs to other subsystems. If communication protocal is used document what will be sent and what will be recieved.
+Based on the high-level design, provide a comprehensive description of the functions each subsection will perform. This description should include:
+- Functional Overview and Project Goals: Explain how the subsystem contributes to achieving the overall project goals.
+- Operational Functionality: Provide a detailed functional description of the operation.
 
-For software subsystems draw the expected user interface (if any) and give a functional flow charts that capture the major sequencial steps needed to achive the desired funcsion.
+Describe the interfaces between this subsystem and other subsystems:
+- Give the type of signal (e.g. power, analog signal, serial communication, wireless communication, etc).
+- Clearly define the direction of the signal (input or output).
+- Document the communication protocols used.
+- Specifying what data will be sent and what will be received.
 
-For all subsystmes formulate shall statments. Make the stament detailed enough that an engineer unfamillar with your project could design the subsystem based on your specifiactions (you get to pretend that you are the customer in this case).
+Detail the operation of the system:
+- Illustrate the expected user interface, if applicable.
+- Include functional flowcharts that capture the major sequential steps needed to achieve the desired functionalities.
+
+For all subsystems, formulate detailed "shall" statements. Ensure these statements are comprehensive enough so that an engineer who is unfamiliar with your project can design the subsystem based on your specifications. Assume the role of the customer in this context to provide clear and precise requirements.
 
 
 ## Ethical, Professional, and Standards Considerations
 
-In the project proposal, each team was required to consider what the broader impacts of the project may be to the culture, society, environment, public health, public safety, and economy. They were also required to consider the standards organizations which would inform the design. Here, each team must include a complete discussion regarding how these broader considerations have been used to inform your design (what constraints, specifications, or practices etc. are in place due to the consideration of these and how the constraints address these).
+In the project proposal, each team must evaluate the broader impacts of the project on culture, society, the environment, public health, public safety, and the economy. Additionally, teams must consider relevant standards organizations that will inform the design process. A comprehensive discussion should be included on how these considerations have influenced the design. This includes detailing constraints, specifications, and practices implemented as a result, and how these address the identified considerations.
 
 
 ## Resources
 
-You have already estimated the resources need to complete a solution. Now refine estimates.
+You have already estimated the resources needed to complete the solution. Now, let's refine those estimates.
 
 ### Budget
 
-Provide a budget proposal with justifications for expenses for each subsystem. Note that his buject proposal could make a greate specification for the sub system. Take the bujects for each subssytems and combine them to forma budget for the whole solution.
+Develop a budget proposal with justifications for expenses associated with each subsystem. Note that this budget proposal can also serve as a detailed specification for each subsystem. After itemizing the budgets for individual subsystems, merge them to create a comprehensive budget for the entire solution.
 
 ### Skills
 
-Identify the skills present in the team and compare them to those required to complete each subsystem. Assign each member to oversee the creation of each subsystem. If you do not have as many subsystems as team members consider breaking your solution down futher to allow everyone the opertunity to manage a subsystem.
+First, conduct a thorough analysis of the skills currently available within the team, and then compare these skills to the specific requirements of each subsystem. Based on this analysis, assign each team member to oversee the development of a particular subsystem. Additionally, appoint a different team member to take the specifications and generate a corresponding solution. Ensure that the assignments are structured in such a way that no single team member is simultaneously managing and being managed by the same person. If there are more team members than subsystems, consider further subdividing the solutions into smaller tasks or components, thereby allowing each team member the opportunity to manage and design a subsystem.
 
 ### Timeline
 
-Update the detailed timeline (Gantt chart) you created in the project proposal. Make sure to optimize the Timeline for the detail design. Address critical unknowns early and consider if a prototype needs to constructed before the final build to prove out a subsystem. Also if system $A$ places a constraint on system $B$, *in general* system $A$ should be designed first
+Revise the detailed timeline (Gantt chart) you created in the project proposal. Ensure that the timeline is optimized for detailed design. Address critical unknowns early and determine if a prototype needs to be constructed before the final build to validate a subsystem. Additionally, if subsystem $A$ imposes constraints on subsystem $B$, generally, subsystem $A$ should be designed first.
 
 
 ## References
 
-All sources used in the conceptual desing that are not common knowledge must be cited. Multiple references are required.
+All sources utilized in the conceptual design that are not considered common knowledge must be properly cited. Multiple references should be included.
 
 
 ## Statement of Contributions
 
-Each team member must contribute meaningfully to the project proposal. Clearly document each member's contributions to this proposal.
+Each team member is required to make a meaningful contribution to the project proposal. Ensure that each member's contributions are clearly documented.
 
