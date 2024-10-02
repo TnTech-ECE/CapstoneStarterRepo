@@ -17,8 +17,10 @@ With these guidelines, each team is expected to create a suitable document to ac
 - The document should be written in the third person.
 - An introduction section should be included.
 - The latest fully formulated problem must be clearly articulated using explicit "shall" statements.
+- A comparative analysis of potential solutions must be performed
 - The document must present a comprehensive, well-specified high-level solution.
-- The solution must contain a system block diagram.
+- The solution must contain a hardware block diagram.
+- The solution must contain an operational flowchart.
 - For every atomic subsystem, a detailed functional description, inputs, outputs, and specifications must be provided.
 - The document should include an acknowledgment of ethical, professional, and standards considerations, explaining the specific constraints imposed.
 - The solution must include a refined estimate of the resources needed, including: costs, allocation of responsibilities for each subsystem, and a Gantt chart.
@@ -34,18 +36,28 @@ The introduction is intended to reintroduce the fully formulated problem.
 The fully formulated problem is the overall objective and scope complete with the set of shall statements. This was part of the project proposal. However, it may be that the scope has changed. So, state the fully formulated problem in the introduction of the conceptual design and planning document. For each of the constraints, explain the origin of the constraint (customer specification, standards, ethical concern, broader implication concern, etc).
 
 
+## Comparative Analysis of Potential Solutions
+
+In this section, various potential solutions are hypothesized, design considerations are discussed, and factors influencing the selection of a solution are outlined. The chosen solution is then identified with justifications for its selection.
+
+
 ## High-Level Solution
 
 This section presents a comprehensive, high-level solution aimed at efficiently fulfilling all specified requirements and constraints. The solution is designed to maximize stakeholder goal attainment, adhere to established constraints, minimize risks, and optimize resource utilization. Please elaborate on how your design accomplishes these objectives.
 
 
-## Block Diagram
+### Hardware Block Diagram
 
 Block diagrams are an excellent way to provide an overarching understanding of a system and the relationships among its individual components. Generally, block diagrams draw from visual modeling languages like the Universal Modeling Language (UML). Each block represents a subsystem, and each connection indicates a relationship between the connected blocks. Typically, the relationship in a system diagram denotes an input-output interaction.
 
 In the block diagram, each subsystem should be depicted by a single block. For each block, there should be a brief explanation of its functional expectations and associated constraints. Similarly, each connection should have a concise description of the relationship it represents, including the nature of the connection (such as power, analog signal, serial communication, or wireless communication) and any relevant constraints.
 
 The end result should present a comprehensive view of a well-defined system, delegating all atomic responsibilities necessary to accomplish the project scope to their respective subsystems.
+
+
+### Operational Flow Chart
+
+Similar to a block diagram, the flow chart aims to specify the system, but from the user's point of view rather than illustrating the arrangement of each subsystem. It outlines the steps a user needs to perform to use the device and the screens/interfaces they will encounter. A diagram should be drawn to represent this process. Each step should be represented in the diagram to visually depict the sequence of actions and corresponding screens/interfaces the user will encounter while using the device.
 
 
 ## Atomic Subsystem Specifications
