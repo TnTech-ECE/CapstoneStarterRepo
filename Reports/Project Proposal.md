@@ -21,16 +21,12 @@ Formulating the problem or objective involves clearly defining it through backgr
 Questions to consider:
 - Who does the problem affect?
 - Why do we need this solution?
-- What challenges necessitate a dedicated, multi-person engineering project?
+- What challenges necessitate a dedicated, multi-person engineering team?
 - Why aren’t off-the-shelf solutions sufficient?
 
 ### Background
 
 Provide context and details necessary to define the problem clearly and delineate its boundaries.
-
-### Signifcance
-
-Explain the implications of solving the problem for the customer. After reading this section, the reader should understand the tangible benefits and the worthiness of the proposed work.
 
 ### Specifications and Constraints
 
@@ -78,6 +74,11 @@ Identify the skills present in the team and compare them to those required to co
 Provide a detailed timeline, including all major deadlines and tasks. This should be illustrated with a professional Gantt chart.
 
 
+## Specific Implications
+
+Explain the implications of solving the problem for the customer. After reading this section, the reader should understand the tangible benefits and the worthiness of the proposed work.
+
+
 ## Broader Implications, Ethics, and Responsibility as Engineers
 
 Consider the project’s broader impacts in global, economic, environmental, and societal contexts. Identify potential negative impacts and propose mitigation strategies. Detail the ethical considerations and responsibilities each team member bears as an engineer.
@@ -90,4 +91,4 @@ All sources used in the project proposal that are not common knowledge must be c
 
 ## Statement of Contributions
 
-Each team member must contribute meaningfully to the project proposal. Clearly document each member's contributions at the end of the document.
+Each team member must contribute meaningfully to the project proposal. Clearly document each member's contributions to this proposal.
