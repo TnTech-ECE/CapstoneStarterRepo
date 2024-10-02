@@ -21,7 +21,7 @@ With these guidelines, each team is expected to create a suitable document to ac
 - The solution must contain a system block diagram.
 - For every atomic subsystem, a detailed functional description, inputs, outputs, and specifications must be provided.
 - The document should include an acknowledgment of ethical, professional, and standards considerations, explaining the specific constraints imposed.
-- The solution must include a refined estimate of the resources needed, including: costs, allocation of management responsibilities for each subsystem, and a Gantt chart.
+- The solution must include a refined estimate of the resources needed, including: costs, allocation of responsibilities for each subsystem, and a Gantt chart.
 
 
 ## Introduction
@@ -36,7 +36,7 @@ The fully formulated problem is the overall objective and scope complete with th
 
 ## High-Level Solution
 
-This section outlines a comprehensive, high-level solution designed to efficienctly meet all specified requirements and constraints. The solution aims to maximize stakeholder goal attainment, conform to established constraints, minimize risks, and optimize resource utilization.
+This section presents a comprehensive, high-level solution aimed at efficiently fulfilling all specified requirements and constraints. The solution is designed to maximize stakeholder goal attainment, adhere to established constraints, minimize risks, and optimize resource utilization. Please elaborate on how your design accomplishes these objectives.
 
 
 ## Block Diagram
@@ -50,17 +50,15 @@ The end result should present a comprehensive view of a well-defined system, del
 
 ## Atomic Subsystem Specifications
 
-Based on the high-level design, provide a comprehensive description of the functions each subsection will perform. This description should include:
-- Functional Overview and Project Goals: Explain how the subsystem contributes to achieving the overall project goals.
-- Operational Functionality: Provide a detailed functional description of the operation.
+Based on the high-level design, provide a comprehensive description of the functions each subsection will perform.
 
-Describe the interfaces between this subsystem and other subsystems:
+Inclued a description the interfaces between this subsystem and other subsystems:
 - Give the type of signal (e.g. power, analog signal, serial communication, wireless communication, etc).
 - Clearly define the direction of the signal (input or output).
 - Document the communication protocols used.
 - Specifying what data will be sent and what will be received.
 
-Detail the operation of the system:
+Detail the operation of the subsystem:
 - Illustrate the expected user interface, if applicable.
 - Include functional flowcharts that capture the major sequential steps needed to achieve the desired functionalities.
 
@@ -78,7 +76,7 @@ You have already estimated the resources needed to complete the solution. Now, l
 
 ### Budget
 
-Develop a budget proposal with justifications for expenses associated with each subsystem. Note that this budget proposal can also serve as a detailed specification for each subsystem. After itemizing the budgets for individual subsystems, merge them to create a comprehensive budget for the entire solution.
+Develop a budget proposal with justifications for expenses associated with each subsystem. Note that the total of this budget proposal can also serve as a specification for each subsystem. After creating the budgets for individual subsystems, merge them to create a comprehensive budget for the entire solution.
 
 ### Skills
 
