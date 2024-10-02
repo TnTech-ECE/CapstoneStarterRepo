@@ -1,21 +1,31 @@
 # Conceptual Design
 
-This document explains the goal of the conceptual design and specific things that the reader should understand. Armed with these expectations, each team is expected to design an appropriate document to accomplish the goal and appropriately educate their stakeholders.
+This document outlines the objectives of a conceptual design. After reading your conceptual design, the reader should understand:
+
+- The fully formulated problem.
+- The fully decomposed conceptual solution.
+- Any additional constraints and their origins.
+- How the team will accomplish their goals given the available resources.
+
+With these guidelines, each team is expected to create a suitable document to achieve the intended objectives and effectively inform their stakeholders.
+
+## General Requirements for the Document
+
+- All submissions must be composed in markdown. Please refrain from submitting PDFs or Word documents.
+- All sources must be cited unless the information is common knowledge among the writer's audience.
+- Must be in third person.
+- Must contain an introduction.
+- Must state the up to date fully formulated problem (shall statements).
+- Must contain an explanation of how conceptual design fits into the larger process of engineering design.
+- Must contain a statement of ethical, professional, and standards considerations and the specific constraints they have imposed.
+- Must contain a complete, well specified system block diagram for the team's solution to the problem.
+- For each sub-system (block in the diagram), the complete inputs, outputs, and constraints must be given with their origin (what caused the constraint).
+- For each sub-system, the analytical method(s) which will be used to validate compliance to the constraint(s) must be stated.
+- Must contain a gantt chart detailing **all** tasks that will be necessary to complete the detail design and analytical verification and by whom the tasks will be completed. (this includes any skill acquisition that will be necessary)
 
 
-### Big Picture Goal of the document
 
-The goal of the conceptual design and planning document is to leave the reader understanding the
-1. fully formulated problem,
-2. fully decomposed conceptual solution
-3. the constraints and where they arise from
-4. how the constraints will be analytically (not experimentally) validated, and
-5. a detail design schedule (with an explanation of why it is optimal). 
-
-The above is NOT an outline. It is the goal of the document. Consider all the requirements given herein and devise an outline that will accomplish the requirements.
-
-
-### Conceptual Design and Design Planning Objectives
+## Conceptual Design and Design Planning Objectives ????????????????
 
 The general purpose of conceptual design and planning is to identify a concept and process that will:
 
@@ -30,19 +40,7 @@ The general purpose of conceptual design and planning is to identify a concept a
 	2. If system $A$ places a constraint on system $B$, *in general* system $A$ should be designed first
 
 
-### General requirements for the document
 
-1. Must conform to the latest IEEE conference format.
-2. All sources must be cited using IEEE inline citations unless the information is common knowledge among the writer's audience.
-3. Must be in third person.
-4. Must contain an introduction.
-5. Must state the up to date fully formulated problem (shall statements) in a sub-section of the introduction.
-6. Must contain an explanation of how conceptual design fits into the larger process of engineering design.
-7. Must contain a statement of ethical, professional, and standards considerations and the specific constraints they have imposed.
-8. Must contain a complete, well specified system block diagram for the team's solution to the problem.
-9. For each sub-system (block in the diagram), the complete inputs, outputs, and constraints must be given with their origin (what caused the constraint).
-10. For each sub-system, the analytical method(s) which will be used to validate compliance to the constraint(s) must be stated.
-11. Must contain a gantt chart detailing **all** tasks that will be necessary to complete the detail design and analytical verification and by whom the tasks will be completed. (this includes any skill acquisition that will be necessary)
 
 
 
