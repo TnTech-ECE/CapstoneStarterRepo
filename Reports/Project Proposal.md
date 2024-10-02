@@ -2,9 +2,20 @@
 
 This document provides a comprehensive explanation of what a project proposal should encompass. The content here is detailed and is intended to highlight the guiding principles rather than merely listing expectations. The sections that follow contain all the necessary information to understand the requirements for creating a project proposal.
 
-All submissions must be composed in markdown. Please refrain from submitting PDFs or Word documents.
 
-A professional tone is best achieved in third-person writing. However, there are situations where deviating from third person improves clarity and readability.
+## General Requirements for the Document
+- All submissions must be composed in markdown format.
+- All sources must be cited unless the information is common knowledge for the target audience.
+- The document must be written in third person.
+- The document must include an introduction.
+- The problem must be clearly defined using "shall" statements.
+- Existing solutions or technologies that enable novel solutions must be identified.
+- Success criteria must be explicitly stated.
+- An estimate of required skills, costs, and time to implement the solution must be provided.
+- The document must explain how the customer will benefit from the solution.
+- Broader implications, including ethical considerations and responsibilities as engineers, must be explored.
+- A list of references must be included.
+- A statement detailing the contributions of each team member must be provided.
 
 
 ## Introduction
