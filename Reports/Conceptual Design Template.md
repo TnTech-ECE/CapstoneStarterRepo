@@ -36,17 +36,12 @@ The fully formulated problem is the overall objective and scope complete with th
 
 ## High-Level Solution
 
-State the big picture solution that would satisfy the constrains and minimize the costs. Identify a concept and process that will:
+Create a big picture solution that will satisfy specification and constrains while minimizing the costs. Identify a concept and process that will:
 
-1. Conform to all constraints
-2. Maximize attainment of stakeholder goals
+1. Maximize attainment of stakeholder goals
+2. Conform to all constraints
 3. Minimize sources of risk
-	1. critical unknowns
-	2. delivery problems
-4. Minimize consumption of resources
-5. Optimize the Timeline for the Detail Design
-	1. Address critical unknowns early
-	2. If system $A$ places a constraint on system $B$, *in general* system $A$ should be designed first
+5. Minimize consumption of resources
 
 
 ## Block Diagram
@@ -60,7 +55,7 @@ The result should be a complete view of a well defined system that delegates all
 
 ## Atomic Subsystem Specifications
 
-Given the hi-level design, give a detailed description of what function each subsection should perform. This should inculued verabie about how the subsystem helps achinve the projects goals. Also inculde a functional description of operation. Describe the interface of the subsystem to other subsystems this should inculde inputs & outputs to other subsystems. If communication protocal is used document what will be sent and what will be recieved.
+Given the high-level design, give a detailed description of what function each subsection should perform. This should inculued a description of how subsystem helps achinve the projects goals. Also inculde a functional description of operation. Describe the interface of the subsystem to other subsystems this should inculde inputs & outputs to other subsystems. If communication protocal is used document what will be sent and what will be recieved.
 
 For software subsystems draw the expected user interface (if any) and give a functional flow charts that capture the major sequencial steps needed to achive the desired funcsion.
 
@@ -72,9 +67,26 @@ For all subsystmes formulate shall statments. Make the stament detailed enough t
 In the project proposal, each team was required to consider what the broader impacts of the project may be to the culture, society, environment, public health, public safety, and economy. They were also required to consider the standards organizations which would inform the design. Here, each team must include a complete discussion regarding how these broader considerations have been used to inform your design (what constraints, specifications, or practices etc. are in place due to the consideration of these and how the constraints address these).
 
 
+## Resources
+
+You have already estimated the resources need to complete a solution. Now refine estimates.
+
+### Budget
+
+Provide a budget proposal with justifications for expenses for each subsystem. Note that his buject proposal could make a greate specification for the sub system. Take the bujects for each subssytems and combine them to forma budget for the whole solution.
+
+### Skills
+
+Identify the skills present in the team and compare them to those required to complete each subsystem. Assign each member to oversee the creation of each subsystem. If you do not have as many subsystems as team members consider breaking your solution down futher to allow everyone the opertunity to manage a subsystem.
+
+### Timeline
+
+Update the detailed timeline (Gantt chart) you created in the project proposal. Make sure to optimize the Timeline for the detail design. Address critical unknowns early and consider if a prototype needs to constructed before the final build to prove out a subsystem. Also if system $A$ places a constraint on system $B$, *in general* system $A$ should be designed first
+
+
 ## References
 
-All sources used in the project proposal that are not common knowledge must be cited. Multiple references are required.
+All sources used in the conceptual desing that are not common knowledge must be cited. Multiple references are required.
 
 
 ## Statement of Contributions
