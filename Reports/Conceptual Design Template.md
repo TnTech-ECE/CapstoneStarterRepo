@@ -64,7 +64,7 @@ Similar to a block diagram, the flow chart aims to specify the system, but from 
 
 Based on the high-level design, provide a comprehensive description of the functions each subsection will perform.
 
-Inclued a description the interfaces between this subsystem and other subsystems:
+Inclued a description of the interfaces between this subsystem and other subsystems:
 - Give the type of signal (e.g. power, analog signal, serial communication, wireless communication, etc).
 - Clearly define the direction of the signal (input or output).
 - Document the communication protocols used.
