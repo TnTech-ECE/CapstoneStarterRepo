@@ -92,7 +92,7 @@ Develop a budget proposal with justifications for expenses associated with each 
 
 ### Skills
 
-First, conduct a thorough analysis of the skills currently available within the team, and then compare these skills to the specific requirements of each subsystem. Based on this analysis, assign each team member to oversee the development of a particular subsystem. Additionally, appoint a different team member to take the specifications and generate a corresponding solution. Ensure that the assignments are structured in such a way that no single team member is simultaneously managing and being managed by the same person. If there are more team members than subsystems, consider further subdividing the solutions into smaller tasks or components, thereby allowing each team member the opportunity to manage and design a subsystem.
+First, conduct a thorough analysis of the skills currently available within the team, and then compare these skills to the specific requirements of each subsystem. Based on this analysis, appoint a team member to take the specifications given in this proposal and generate a corresponding solution. If there are more team members than subsystems, consider further subdividing the solutions into smaller tasks or components, thereby allowing each team member the opportunity to design a subsystem.
 
 ### Timeline
 
