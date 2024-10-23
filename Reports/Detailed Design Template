@@ -2,13 +2,14 @@
 
 This document outlines the objectives of a detailed design. After reading your detailed design, the reader should understand:
 
-- How the subsystem fits into the overall solution.
-- The constraints and specifications applicable to the subsystem.
-- Why each critical design decision is theoreticaly sound.
-- How to build the product.
+- How the subsystem fits into the overall solution
+- The constraints and specifications applicable to the subsystem
+- Why each critical design decision is theoretically sound
+- How to build the solution
 
 
 ## General Requirements for the Document
+
 - How the subsystem fits into the overall solution.
 - The specifications and constraints applicable to the subsystem.
 - An analysis of critical design decisions.
@@ -18,18 +19,21 @@ This document outlines the objectives of a detailed design. After reading your d
 - A printed circuit board (PCB) layout*.
 - Flow chart of the operation*.
 - An complete bill of materials (BOM)*.
-- Plan to build
+- Plan to build and program that considers time and skills of team
+
 *Note that these items are only requiered where needed
 
 
 ## Function of the Subsystem
 
-You must explain clearly what role the subsystem will play in the first section. This should clearly explain what the system is expected to do (ie. its atomic purpose from the conceptual design).
+You must explain clearly what role the subsystem will play within the whole system. This should clearly explain what the subsystem is expected to do (ie. its atomic purpose from the conceptual design).
 
 
 ## Specifications And Constraints
 
-The second section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
+This section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
+
+The team should have given specification for each subsystem. You may find that some of the specifications need to be changed. Make sure to get approval from you team before you change specification. It might be nessasary to add contraints as you (or your teamates) discover additional information. Add these to the constraint
 
 Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
 
