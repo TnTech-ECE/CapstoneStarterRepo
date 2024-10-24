@@ -67,12 +67,12 @@ Provide a printed circuit board layout that is ready to be manufactored.
 
 ## Flow chart of the operation
 
-For subsections that have a software component, a provided a chart that show how the subsystem operate. This does not have to show exalstive detail, only that the student has put effort into considering how the device will function.
+For subsections that have a software component, a provided a chart that show how the microcontroller will make desisions. This does not have to show exalstive detail, only that the student has put effort into considering how the device will function.
 
 
 ## BOM
 
-A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table. Make to to provide the manufacteror, part number, distributor, distributor part number, and price. Also provide a url where the product can be purchased from.
+A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table. Make sure to to provide the manufacteror, part number, distributor, distributor part number, quantity, and price. Also provide a url where the product can be purchased from. If the componenet is refernced on your schematic make sure to include the component name.
 
 
 ## Analysis
