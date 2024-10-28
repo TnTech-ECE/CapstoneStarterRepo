@@ -1,85 +1,87 @@
 # Detailed Design
 
-This document outlines the objectives of a detailed design. After reading your detailed design, the reader should understand:
+This document delineates the objectives of a comprehensive system design. Upon reviewing this design, the reader should have a clear understanding of:
 
-- How the subsystem fits into the overall solution
-- The constraints and specifications applicable to the subsystem
-- Why each critical design decision is theoretically sound
-- How to build the solution
+- How the specific subsystem integrates within the broader solution
+- The constraints and specifications relevant to the subsystem
+- The rationale behind each crucial design decision
+- The procedure for constructing the solution
 
 
 ## General Requirements for the Document
 
 The document should include:
 
-- Description of how the subsystem integrates with the overall solution
-- Detailed specifications and constraints applicable to the subsystem
-- Overview of the proposed solution
-- 3D models of custom mechanical components*
-- Buildable schematics*
-- Printed Circuit Board (PCB) layout*
-- Operational flow charts*
-- Complete Bill of Materials (BOM)*
-- Analysis of critical design decisions
-- Implementation plan that considers team skills and time requirements
-
-*Note: Technical documentation items are only required where relevant to the specific subsystem.
+- Explanation of the subsystem’s integration within the overall solution
+- Detailed specifications and constraints specific to the subsystem
+- Synopsis of the suggested solution
+- Interfaces among different subsystems
+- 3D models of customized mechanical elements*
+- A buildable diagram*
+- A Printed Circuit Board (PCB) design layout*
+- An operational flowchart*
+- A comprehensive Bill of Materials (BOM)
+- Analysis of crucial design decisions
+- Execution plan considering skill sets and time requirements
+*Note: These technical documentation elements are mandatory only when relevant to the particular subsystem.
 
 
 ## Function of the Subsystem
 
-This section should clearly explain what role the subsystem will play within the whole system. It should describe what the subsystem is expected to do (ie. its atomic purpose from the conceptual design).
+This segment should elucidate the role of the subsystem within the entire system, detailing its intended function, aligned with the conceptual design.
 
 
-## Specifications And Constraints
+## Specifications and Constraints
 
-This section should contain the constraints for the subsystem. The reasoning behind the constraints must be given. As a few examples, constraints may exist due to physics based limitations or requirements, other subsystem requirements, standards, ethics, or socioeconomic reasons. 
+This section should provide a list of constraints applicable to the subsystem, along with the rationale behind these limitations. For instance, constraints can stem from physics-based limitations or requirements, subsystem prerequisites, standards, ethical considerations, or socio-economic factors.
 
-The team should give specification for each subsystem. Some of the specifications may need to be changed. The whole team must approve specification changes. It might be nessasary to add contraints as additional information is discovered.
+The team should set specifications for each subsystem. These specifications may require modifications, which must be authorized by the team. It could be necessary to impose additional constraints as further information becomes available.
 
-Also state what inputs, output and data will be pass to other subsystems.
-
-Each subsystem must have at least one constraint arising from standards, ethics, or socioeconomic well being.
+Every subsystem must incorporate at least one constraint stemming from standards, ethics, or socio-economic factors.
 
 
-## Overview of the proposed solution
+## Overview of Proposed Solution
 
-Desribe your solution and how it will meet the specification and constraints for this subsystem.
-
-
-
-## 3D model of custom mechanical componatents
-
-If the device has mechanical component Show several views of the 3D model needed to build the device. Embedded in the markdown file as a jpeg image. Make sure the image is clearly readable and appropriately sized.
+Describe the solution and how it will fulfill the specifications and constraints of this subsystem.
 
 
-## Buildable schematic 
+## Interface with Other Subsystems
 
-The third section should show the buildable schematic directly embedded in the markdown file as a jpeg image. If the schematic is not clearly readable and appropriately sized, the supervisor will reject the signoff. 
-
-The schematic must be appropriate to the design. ie. 3d model for a physical system or wiring schematic for a circuit. Further, the schematic(s) must contain every detail necessary for the design to be built by someone who has no knowledge of the design. Every relevant component value and measurement must be given.
+Provide detailed information about the inputs, outputs, and data transferred to other subsystems. Ensure specificity and thoroughness, clarifying the method of communication and the nature of the data transmitted.
 
 
-## Printed circuit board layout
+## 3D Model of Custom Mechanical Components
 
-Provide a printed circuit board layout that is ready to be manufactored.
+Should there be mechanical elements, display diverse views of the necessary 3D models within the document. Ensure the image's readability and appropriate scaling. Offer explanations as required.
 
 
-## Flow chart of the operation
+## Buildable Schematic 
 
-For subsections that have a software component, a provided a chart that show how the microcontroller will make desisions. This does not have to show exalstive detail, only that the student has put effort into considering how the device will function.
+Integrate a buildable electrical schematic directly into the document. If the diagram is unreadable or improperly scaled, the supervisor will deny approval. Divide the diagram into sections if the text and components seem too small.
+
+-------The schematic must be appropriate to the design. Further, the schematic(s) must contain every detail necessary for the design to be built by someone who has no knowledge of the design. Every relevant component value and measurement must be given.
+
+
+## Printed Circuit Board Layout
+
+Include a manufacturable printed circuit board layout.
+
+
+## Operational Flowchart
+
+For sections including a software component, produce a chart that demonstrates the decision-making process of the microcontroller. It should provide an overview of the device's function without exhaustive detail.
 
 
 ## BOM
 
 A complete list of all components needed for the design must be given with the cost of each component and the total cost of the subsystem. The BOM should be a markdown table. Make sure to to provide the manufacteror, part number, distributor, distributor part number, quantity, and price. Also provide a url where the product can be purchased from. If the componenet is refernced on your schematic make sure to include the component name.
 
+Provide a comprehensive list of all necessary components along with their prices and the total cost of the subsystem. This information should be presented in a tabular format, complete with the manufacturer, part number, distributor, distributor part number, quantity, price, and purchasing website URL. If the component is included in your schematic diagram, ensure inclusion of the component name on the BOM (i.e R1, C45, U4).
 
 ## Analysis
 
-A complete and relevant analysis of the design showing that it **should** meet the constraints and perform the desired function must be given. This analysis must be comprehensive and well explained so that it is convincing.
-
+Deliver a full and relevant analysis of the design demonstrating that it should meet the constraints and accomplish the intended function. This analysis should be comprehensive and well articulated for persuasiveness.
 
 ## References
 
-All sources utilized in the conceptual design that are not considered common knowledge must be properly cited. Multiple references should be included.
+All sources that have contributed to the detailed design and are not considered common knowledge should be duly cited, incorporating multiple references.
