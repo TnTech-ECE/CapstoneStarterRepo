@@ -1,5 +1,6 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
+#include "boost/asio.hpp"
 
 int Scan = 14;
 double MU = 0.01;
@@ -36,6 +37,21 @@ void threshold(cv::Mat &frame, int filterMatrix[640][640]) {
             }
         }
     }
+}
+void sendPacket(int x, int y){
+    io_service io_service;
+    ip::udp::socket socket(io_service);
+    ip::udp::endpoint remote_endpoint;
+
+    socket.open(ip::udp::v4());
+
+    remote_endpoint = ip::udp::endpoint(ip::address::from_string("192.168.0.4"), 9000);
+
+    boost::system::error_code err;
+    byte[] buffer = {0, x, y};
+    socket.send_to(buffer, remote_endpoint, 0, err);
+
+    socket.close();
 }
 
 // Parameters: Frame pointer, Window size
@@ -108,6 +124,8 @@ int main() {
             }
             prevX = pos[0];
             prevY = pos[1];
+            sendPacket(prevX, prevY);
+
 /*
 	        // Create a kernel for extreme sharpening
         cv::Mat sharpKern = (cv::Mat_<float>(3,3) <<
