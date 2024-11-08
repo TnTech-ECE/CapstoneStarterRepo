@@ -37,7 +37,7 @@ The Camera Hardware System is responsible for the design of a 2 degree of freedo
 
 <sup>10</sup> Sending an error status bit to the database ensures any repairs or maintainance is handled in a timely manner, increasing reliability of the system.
 
-<sup>11</sup> Attempting to operate the system in temperature ranges exceeding the devices' temperature limits may cause permanent, irreprable damages to the electronics.
+<sup>11</sup> Attempting to operate the system in temperature ranges exceeding the devices' temperature limits may cause permanent, irreparable damages to the electronics.
 
 ## Design Theory
 
