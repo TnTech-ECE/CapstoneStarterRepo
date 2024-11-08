@@ -17,10 +17,11 @@
 #define REMOTE_UDP_PORT 1337    //Probably should be the same as local
 #define PAYLOAD_LEN 1
 #define ID '0'
+const IPAddress REMOTE_IP(10, 104, 130, 255);
 
 // WiFi Credentials
-const char SSID[] = "PennyGetYourOwnWifi";
-const char PASSWORD[] = "NoSpaces";
+const char SSID[] = "EagleNet";
+const char PASSWORD[] = "cY4DoKPo";
 // Arbitrary name
 const char HOST_NAME[] = "NetworkStation1";
 IPAddress remoteIp;
@@ -82,7 +83,7 @@ bool recievedPacket(){
 
 // Do not use directly, use forwardData. Sends Packet with payload that is packetData
 void sendPacket(char packetData[]){
-    Udp.beginPacket(Udp.remoteIP(), REMOTE_UDP_PORT);
+    Udp.beginPacket(REMOTE_IP, REMOTE_UDP_PORT);
     Udp.write((const char*)packetData, PAYLOAD_LEN+1);
     Udp.endPacket();
     //Serial.printf("Sent to %s, port %d\n", Udp.remoteIP().toString().c_str(), Udp.remotePort());
@@ -92,23 +93,34 @@ void sendPacket(char packetData[]){
 inline void forwardData(char data[]){
   char payload[PAYLOAD_LEN+1];
   payload[0] = ID;
-  for(int i = 0; i < PAYLOAD_LEN; i++)
+  for(int i = 0; i < PAYLOAD_LEN; i++){
     payload[i+1] = data[i];
+  }
+  /*
+  for(int i = 0; i < PAYLOAD_LEN+1; i++){
+    Serial.print(payload[i]);
+  }
+  */
   sendPacket(payload);
 }
 
 
 void loop(){
-
+  /*
+    while(1){
+      sendPacket("Hello World!");
+      delay(500);
+    }*/
   // If serial message is availible
   if (Serial.available()) {
     String message = ""; 
 
     // Build the message
+
     while (Serial.available()) {
       char c = Serial.read();
       message += c;
-      delayMicroseconds(10);
+      delayMicroseconds(1000);
     }
 
     // Display the message on the Serial monitor
