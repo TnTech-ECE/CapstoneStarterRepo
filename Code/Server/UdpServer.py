@@ -1,5 +1,6 @@
 import socket
 import threading
+ser = serial.Serial('/dev/ttyACM0',9600)
 
 def get_computer_ip():
     # Create a dummy socket to get the computer's IP address
@@ -27,9 +28,16 @@ def send_packet(listen_port):
         msg = input("Enter message to send: ")
         sock.sendto(msg.encode(), broadcast_address)
         print(f"Sent broadcast on port {listen_port} -> {msg.encode().hex()}")
+def write_motor():
+    print('move')
+    ser.write(b'1')
+    time.sleep(5)
+    print('back')
+    ser.write(b'0')
+    time.sleep(5)
 
 # Define the port for communication
-PORT = 12345  # Port to send and listen for UDP packets
+PORT = 1337  # Port to send and listen for UDP packets
 
 if __name__ == "__main__":
     # Start the listener in a separate thread
