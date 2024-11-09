@@ -33,7 +33,7 @@ Coming soon :)
 
 ### Faculty Supervisor
 
-Dr. Jeffrey Austen is the faculty supervisor and stakeholder for the drone tracker project. He is a professor with the Electrical and Computer Engineering Department at Tennessee Technological University with specializations in signal processing and communication system.
+Dr. Jeffrey Austen is the faculty supervisor and stakeholder for the drone tracker project. He is a professor with the Electrical and Computer Engineering Department at Tennessee Technological University with specializations in signal processing and communication systems.
 
 ### Stakeholders
 
