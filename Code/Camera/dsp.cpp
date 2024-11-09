@@ -1,6 +1,6 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
-#include "boost/asio.hpp"
+#include <boost/asio.hpp>
 
 int Scan = 14;
 double MU = 0.01;
@@ -38,19 +38,32 @@ void threshold(cv::Mat &frame, int filterMatrix[640][640]) {
         }
     }
 }
-void sendPacket(int x, int y){
-    io_service io_service;
-    ip::udp::socket socket(io_service);
-    ip::udp::endpoint remote_endpoint;
 
-    socket.open(ip::udp::v4());
+void sendPacket(char x_upper, char x_lower, char y_upper, char y_lower) {
+    boost::asio::io_service io_service;
+    boost::asio::ip::udp::socket socket(io_service);
+    boost::asio::ip::udp::endpoint remote_endpoint;
 
-    remote_endpoint = ip::udp::endpoint(ip::address::from_string("192.168.0.4"), 9000);
+    socket.open(boost::asio::ip::udp::v4());
 
+    // Set up the remote endpoint with IP and port
+    remote_endpoint = boost::asio::ip::udp::endpoint(boost::asio::ip::address::from_string("10.104.133.219"), 1337);
+
+    // Create buffer with data to send (x, y values)
+    char buffer[] = {0x02, x_upper, x_lower, y_upper, y_lower};
+
+    // Create an error_code to capture any errors
     boost::system::error_code err;
-    byte[] buffer = {0, x, y};
-    socket.send_to(buffer, remote_endpoint, 0, err);
+    std::cout << "Sending packet\n";
+    // Send the packet
+    socket.send_to(boost::asio::buffer(buffer, sizeof(buffer)), remote_endpoint, 0, err);
 
+    if (err) {
+        // Handle any errors here
+        std::cerr << "Error sending packet: " << err.message() << std::endl;
+    }
+
+    // Close the socket
     socket.close();
 }
 
@@ -124,7 +137,7 @@ int main() {
             }
             prevX = pos[0];
             prevY = pos[1];
-            sendPacket(prevX, prevY);
+            sendPacket((char)(prevX/256), (char)(prevX%256), (char)(prevY/256), (char)(prevY%256));
 
 /*
 	        // Create a kernel for extreme sharpening

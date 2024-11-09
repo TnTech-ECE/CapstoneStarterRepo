@@ -1,6 +1,22 @@
 import socket
 import threading
-ser = serial.Serial('/dev/ttyACM0',9600)
+import serial
+import numpy as np
+import time
+
+ROW_PIXEL_LINE = 200
+PIXEL_X_MAX = 550
+PIXEL_X_MIN = 50
+PIXEL_Y_MAX = 360
+PIXEL_Y_MIN = 40
+DELAY_LINE_EXPIRATION = 2000        # delay in ms that points from the camera are retained\
+
+cameraPosArr = np.zeros((256,3))    # Stores a delay line of the previous points responded by the camera subsystem. Upto 256 points. [:][0] - X [:][1] - Y [:][2] - ms since restart
+cameraArrLen = 0        # Number of points in delay line
+cameraArrIndex = 0
+
+
+#ser = serial.Serial('/dev/ttyACM0',9600)
 
 def get_computer_ip():
     # Create a dummy socket to get the computer's IP address
@@ -13,11 +29,57 @@ def listen_for_packets(listen_port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(("", listen_port))
     print(f"Listening for UDP packets on {get_computer_ip()}:{listen_port}")
-
+    global cameraArrLen
     while True:
         data, addr = sock.recvfrom(1024)  # Buffer size is 1024 bytes
         hex_data = data.hex()
         print(f"Received from {addr}: {hex_data}")
+        if data[0] == 0x00:
+            # Laser Array Packet
+            # Average the Y positions from the camera delay line
+            total = 0
+            for i in range(cameraArrLen):
+                total += cameraPosArr[i][1]
+            if total > 0:
+                total = total / cameraArrLen
+                
+                lineNum = 0
+                if total > ROW_PIXEL_LINE:
+                    lineNum = data[1]
+                else:
+                    lineNum = data[1] + 16
+                write_motor(lineNum)
+        elif data[0] == 0x01:
+            # Time of Flight Sensor Packet
+            dist_cm = data[1]
+            frac_cm = data[2]
+            time_stamp = int(data[3] * 1677216 + data[4] * 65536 + data[5] * 256 + data[6])
+            
+            # TODO: Push timestamps and distance to a 3 element delay line and calculate velocity and acceleration
+            
+        elif data [0] == 0x02:
+            # Camera Packet
+            time_ms = int(time.time() * 1000)
+            
+            # Push back delay line
+            replacementDelayLine = np.zeros((256,3))
+            newIndex = 0
+            for i in range(cameraArrLen):
+                # If the data is not expired, add it to the replacementDelayLine
+                if time_ms - cameraPosArr[i][2] < DELAY_LINE_EXPIRATION:
+                    # Copy the content from cameraPosArr[i] to replacementDelayLine[newIndex]
+                    replacementDelayLine[newIndex][:] = cameraPosArr[i][:]
+                    # Move newIndex forward to the next position in replacementDelayLine
+                    newIndex += 1
+                    
+            cameraArrLen = newIndex
+            cameraPosArr[:][:] = replacementDelayLine[:][:]
+                
+            # Add new position to delay line
+            cameraPosArr[cameraArrLen][0] = int(data[1]*256 + data[2])
+            cameraPosArr[cameraArrLen][1] = int(data[3]*256 + data[4])
+            cameraPosArr[cameraArrLen][2] = time_ms
+            cameraArrLen += 1
 
 def send_packet(listen_port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -28,7 +90,7 @@ def send_packet(listen_port):
         msg = input("Enter message to send: ")
         sock.sendto(msg.encode(), broadcast_address)
         print(f"Sent broadcast on port {listen_port} -> {msg.encode().hex()}")
-def write_motor():
+def write_motor(lineNum):
     print('move')
     ser.write(b'1')
     time.sleep(5)
