@@ -61,3 +61,38 @@ To verify that the power switch is functioning properly the interceptor's power 
 ### Constraint 7 - Detect approaching objects and relay locations
 #### Projectile Path Sensor
 To verify that the Projectile Path Sensor can detect incoming projectiles from every possible line a ball will be dropped from every line to determine that the sensor can detect all possible lines for incoming projectiles. We conducted 3 trials to verify its success.
+| Trial Number |Lines Properly Detected |
+|---|---|
+| 1 |  |
+| 2 |  |
+| 3 |  |
+
+### Constraint 8 - Sensor Array Battery Power
+#### Projectile Path Sensor
+To test that the Projectile sensor will function on battery power, the system will be properly powered with a battery the system will use a 9 Volt battery and will be tested every 5 minutes to verify the system is still functioning.
+| Minutes | System Functionality |
+|---|---|
+| 0 |  |
+| 5 |  |
+| 10 |  |
+| 15 | |
+| 20 | |
+
+### Constraint 9 - Saftey Checklist
+#### Housing
+
+### Constraint 10 - Lights
+#### Housing
+
+### Constraint 11 - Camouflage
+#### Housing
+
+### Constraint 12 - Firing alert
+#### Housing
+
+### Constraint 13 - Six input Capable Network
+#### Networking
+
+### Constraint 14 - Uniform Wireing
+
+
