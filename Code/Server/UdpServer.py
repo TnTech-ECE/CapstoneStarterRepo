@@ -9,8 +9,10 @@ PIXEL_X_MAX = 550
 PIXEL_X_MIN = 50
 PIXEL_Y_MAX = 360
 PIXEL_Y_MIN = 40
-DELAY_LINE_EXPIRATION = 2000        # delay in ms that points from the camera are retained\
-
+DELAY_LINE_EXPIRATION = 2000        # delay in ms that points from the camera are retained
+TIME_TO_FIRE_MULTIPLIER =   0.85
+TIME_TO_FIRE_DELAY_MS = 250
+TIME_TO_FIRE = [1.41, 1.07, 1.38, 1.52, 1.32, 1.26, 1.41, 1.83, 1.16, 1.23, 1.18, 1.49, 1.43, 1.54, 1.64, 1.53, 1.16, 1.49, 1.64, 1.43, 1.36, 1.53, 1.98, 1.25, 1.33, 1.28, 1.61, 1.55, 1.67, 1.77]
 cameraPosArr = np.zeros((256,3))    # Stores a delay line of the previous points responded by the camera subsystem. Upto 256 points. [:][0] - X [:][1] - Y [:][2] - ms since restart
 cameraArrLen = 0        # Number of points in delay line
 cameraArrIndex = 0
@@ -23,6 +25,10 @@ def get_computer_ip():
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
         s.connect(("8.8.8.8", 80))
         return s.getsockname()[0]
+def fire(delay_ms):
+    time.sleep(delay_ms / 1000)
+    print("Firing after delay!\n")
+    
 
 def listen_for_packets(listen_port):
     # Create a UDP socket for receiving packets
@@ -33,8 +39,9 @@ def listen_for_packets(listen_port):
     while True:
         data, addr = sock.recvfrom(1024)  # Buffer size is 1024 bytes
         hex_data = data.hex()
-        print(f"Received from {addr}: {hex_data}")
-        if data[0] == 0x00:
+        print(f"Received from {addr}: {hex_data} ID: {data[0]}")
+        if data[0] == 48:
+            print("Laser Packet!\n")
             # Laser Array Packet
             # Average the Y positions from the camera delay line
             total = 0
@@ -47,8 +54,17 @@ def listen_for_packets(listen_port):
                 if total > ROW_PIXEL_LINE:
                     lineNum = data[1]
                 else:
-                    lineNum = data[1] + 16
-                write_motor(lineNum)
+                    lineNum = data[1] + 15
+                lineNum = lineNum - 64
+                print(f"Fire signal sent! {lineNum}\n")
+
+                # Create a thread object
+                thread = threading.Thread(target=fire((TIME_TO_FIRE[lineNum] * 1000 - TIME_TO_FIRE_DELAY_MS) * TIME_TO_FIRE_MULTIPLIER))
+
+                # Start the thread
+                thread.start()
+                #write_motor(lineNum)
+                
         elif data[0] == 0x01:
             # Time of Flight Sensor Packet
             dist_cm = data[1]
