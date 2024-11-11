@@ -26,3 +26,38 @@ The purpose of this report is to verify the requirements for the project and exp
 
 ### Constraint 1 - Autonomous
 In order for this constraint to be met all subsystems must be able to run autonomously. Thus each subsystem must test and verify fully functioning while autonomous.
+#### Projectile Path Sensor
+The projectile path sensor was designed to determine when a ball has been dropped, determine the projectile line the ball was dropped, and wirelessly communicate this information to the Raspberry Pi. To test that this subsystem can work without outside interaction the subsystem will be tested 5 times by powering on the device dropping a ball and verifying that this subsystem can transmit the information to the Raspberry Pi.
+| Trial Number | Determine Ball launched|
+|---|---|
+| 1 |  |
+| 2 |  |
+| 3 |  |
+| 4 |  |
+| 5 |  |
+
+### Constraint 2 - Wirelessly communicating with the sensor array
+#### Networking
+
+### Constraint 3 - Fitting in a 1x1x1 foot box
+#### Housing
+
+### Constraint 4 - No Danger to Spectators
+
+### Constraint 5 - Clearly marked power switch
+#### Housing
+To verify that the power switch is functioning properly the interceptor's power switch will be turned off and on 5 times to verify the system powers on.
+| Trial Number | Interceptor Successfully Turned On |
+|---|---|
+| 1 | yes |
+| 2 | yes |
+| 3 | yes |
+| 4 | yes |
+| 5 | yes |
+
+### Constraint 6 - Clearly marked emergency stop option
+#### Housing
+
+### Constraint 7 - Detect approaching objects and relay locations
+#### Projectile Path Sensor
+To verify that the Projectile Path Sensor can detect incoming projectiles from every possible line a ball will be dropped from every line to determine that the sensor can detect all possible lines for incoming projectiles. We conducted 3 trials to verify its success.
