@@ -3,7 +3,12 @@ import threading
 import serial
 import numpy as np
 import time
-
+from gpiozero import LED
+from gpiozero import Button
+FIRING_MOTOR = LED(6)
+BUZZER = LED(21)
+BUZZER.on()
+PROXYSENSOR = Button(11)
 ROW_PIXEL_LINE = 200
 PIXEL_X_MAX = 550
 PIXEL_X_MIN = 50
@@ -13,6 +18,8 @@ DELAY_LINE_EXPIRATION = 2000        # delay in ms that points from the camera ar
 TIME_TO_FIRE_MULTIPLIER =   0.85
 TIME_TO_FIRE_DELAY_MS = 250
 TIME_TO_FIRE = [1.41, 1.07, 1.38, 1.52, 1.32, 1.26, 1.41, 1.83, 1.16, 1.23, 1.18, 1.49, 1.43, 1.54, 1.64, 1.53, 1.16, 1.49, 1.64, 1.43, 1.36, 1.53, 1.98, 1.25, 1.33, 1.28, 1.61, 1.55, 1.67, 1.77]
+TURNTABLE_ANG = [29.12,25.89,22.39,17.54,13.64,9.61,4.20,0,-4.2,-9.61,-13.64,-17.54,-22.39,-25.89,29.12]
+VERT_ANG = [30.22,30.56,30.92,31.37,31.63,31.83,32.03,32.03,32.03,31.82,31.63,31.37,30.92,30.56,30.22,34.94,35.43,35.86,36.31,36.56,36.80,37.01,37.01,37.01,36.80,36.56,36.31,35.86,35.43,34.94]
 cameraPosArr = np.zeros((256,3))    # Stores a delay line of the previous points responded by the camera subsystem. Upto 256 points. [:][0] - X [:][1] - Y [:][2] - ms since restart
 cameraArrLen = 0        # Number of points in delay line
 cameraArrIndex = 0
@@ -28,6 +35,9 @@ def get_computer_ip():
 def fire(delay_ms):
     time.sleep(delay_ms / 1000)
     print("Firing after delay!\n")
+    FIRING_MOTOR.on()
+    PROXYSENSOR.wait_for_release()
+    BUZZER.on()
     
 
 def listen_for_packets(listen_port):
@@ -40,7 +50,7 @@ def listen_for_packets(listen_port):
         data, addr = sock.recvfrom(1024)  # Buffer size is 1024 bytes
         hex_data = data.hex()
         print(f"Received from {addr}: {hex_data} ID: {data[0]}")
-        if data[0] == 48:
+        if data[0] == 0x00:
             print("Laser Packet!\n")
             # Laser Array Packet
             # Average the Y positions from the camera delay line
@@ -49,15 +59,16 @@ def listen_for_packets(listen_port):
                 total += cameraPosArr[i][1]
             if total > 0:
                 total = total / cameraArrLen
-                
+                BUZZER.off()
                 lineNum = 0
                 if total > ROW_PIXEL_LINE:
-                    lineNum = data[1]
+                    lineNum = data[1] -1
                 else:
-                    lineNum = data[1] + 15
-                lineNum = lineNum - 64
-                print(f"Fire signal sent! {lineNum}\n")
-
+                    lineNum = data[1] + 14
+                print(f"Fire signal sent! {lineNum+1}\n")
+                print(f"Moving turntable to {TURNTABLE_ANG[lineNum%15]} deg, stepping {int(TURNTABLE_ANG[lineNum%15]/0.45)} times! \n")
+                print(f"Moving vertical motor to {VERT_ANG[lineNum]} deg, stepping {int(VERT_ANG[lineNum]/0.45)} times! \n")
+                
                 # Create a thread object
                 thread = threading.Thread(target=fire((TIME_TO_FIRE[lineNum] * 1000 - TIME_TO_FIRE_DELAY_MS) * TIME_TO_FIRE_MULTIPLIER))
 
