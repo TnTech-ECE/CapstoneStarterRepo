@@ -16,8 +16,8 @@
 #define LOCAL_UDP_PORT 1337     //Any port as long as the firewall is fine with it
 #define REMOTE_UDP_PORT 1337    //Probably should be the same as local
 #define PAYLOAD_LEN 1
-#define ID '0'
-const IPAddress REMOTE_IP(10, 104, 130, 255);
+#define ID 0x00
+const IPAddress REMOTE_IP(10, 104, 133, 219);
 
 // WiFi Credentials
 const char SSID[] = "EagleNet";
@@ -83,6 +83,8 @@ bool recievedPacket(){
 
 // Do not use directly, use forwardData. Sends Packet with payload that is packetData
 void sendPacket(char packetData[]){
+    Serial.println("Recieved serial: ");
+    Serial.println(packetData[1], HEX);
     Udp.beginPacket(REMOTE_IP, REMOTE_UDP_PORT);
     Udp.write((const char*)packetData, PAYLOAD_LEN+1);
     Udp.endPacket();
@@ -90,11 +92,11 @@ void sendPacket(char packetData[]){
 }
 
 // Sends packet and adds the ID
-inline void forwardData(char data[]){
+inline void forwardData(char data){
   char payload[PAYLOAD_LEN+1];
   payload[0] = ID;
   for(int i = 0; i < PAYLOAD_LEN; i++){
-    payload[i+1] = data[i];
+    payload[i+1] = data;
   }
   /*
   for(int i = 0; i < PAYLOAD_LEN+1; i++){
@@ -126,8 +128,8 @@ void loop(){
     // Display the message on the Serial monitor
     Serial.print("Received: ");
     Serial.println(message);
-
+    char num = (char)(message.toInt());
     // Send the packet over udp
-    forwardData((char*)message.c_str());
+    forwardData(num);
   }
 }

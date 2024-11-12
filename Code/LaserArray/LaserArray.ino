@@ -1,5 +1,5 @@
 
- char Line = 0; //initalize global varaiable to which line is tripped
+ byte Line = 0; //initalize global varaiable to which line is tripped
  char Test = 0;
 char mask = 0;
  char mask1 = 0;
@@ -43,7 +43,7 @@ void setup() {
 void loop() {
   //Serial.print(PINB);
   if(Test != Line){
-    Serial.print(Line);
+    Serial.print((char*)Line);
     //Serial.write(Line);
     Line = 0;
   }
@@ -54,31 +54,31 @@ ISR(PCINT0_vect) {
 //Serial.print(PINB);
 mask = PINB;
    if ((mask | 0b11111011) == 0b11111011 ){
-    Line = 3;
+    Line = 0x02;
   } 
  
   if ((mask | 0b11111110) == 0b11111110){
-    Line = 1;
+    Line = 0x00;
   }
   if ((mask | 0b11111101) == 0b11111101){ 
-    Line = 2;
+    Line = 0x01;
   }
   
     if ((mask | 0b11110111) == 0b11110111 ){
-    Line = 4; } 
+    Line = 0x03; } 
 
   
   if ((mask | 0b11101111) == 0b11101111 ){
-    Line = 5;
+    Line = 0x04;
   }
   if ((mask | 0b11011111) == 0b11011111){
-    Line = 6;
+    Line = 0x05;
   }
  if ((mask | 0b10111111) == 0b10111111){
-    Line = 7;
+    Line = 0x06;
   } 
   if ((mask  | 0b01111111) == 0b01111111){
-    Line = 8;
+    Line = 0x07;
   } 
 
 }
@@ -86,29 +86,29 @@ mask = PINB;
 ISR(PCINT2_vect) {
   mask1 = PINK;
   if ((mask1  | 0b11111110)  == 0b11111110){
-    Line = 9;
+    Line = 0x08;
   }
   if ((mask1 | 0b11111101)  == 0b11111101){
-    Line = 10;
+    Line = 0x09;
   }
   if ((mask1 | 0b11111011) == 0b11111011){
-    Line = 11;
+    Line = 0x0A;
   }
 if ((mask1 | 0b11110111) == 0b11110111){
-    Line = 12;
+    Line = 0x0B;
   }
 
  if ((mask1 | 0b11101111) == 0b11101111){
-    Line = 13;
+    Line = 0x0C;
   }
 
 if ((mask1 | 0b11011111) == 0b11011111){
-    Line = 14;
+    Line = 0x0D;
   }
 
   
 if( (mask1 | 0b10111111) == 0b10111111) {
-    Line = 15;
+    Line = 0x0E;
   }
 
 

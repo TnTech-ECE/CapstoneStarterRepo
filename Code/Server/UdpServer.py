@@ -65,16 +65,20 @@ def listen_for_packets(listen_port):
                     lineNum = data[1] -1
                 else:
                     lineNum = data[1] + 14
-                print(f"Fire signal sent! {lineNum+1}\n")
-                print(f"Moving turntable to {TURNTABLE_ANG[lineNum%15]} deg, stepping {int(TURNTABLE_ANG[lineNum%15]/0.45)} times! \n")
-                print(f"Moving vertical motor to {VERT_ANG[lineNum]} deg, stepping {int(VERT_ANG[lineNum]/0.45)} times! \n")
-                
-                # Create a thread object
-                thread = threading.Thread(target=fire((TIME_TO_FIRE[lineNum] * 1000 - TIME_TO_FIRE_DELAY_MS) * TIME_TO_FIRE_MULTIPLIER))
+            else:
+                lineNum = data[1] -1
+            print(f"Fire signal sent! {lineNum+1}\n")
+            print(f"Moving turntable to {TURNTABLE_ANG[lineNum%15]} deg, stepping {int(TURNTABLE_ANG[lineNum%15]/0.45)} times! \n")
+            print(f"Moving vertical motor to {VERT_ANG[lineNum]} deg, stepping {int(VERT_ANG[lineNum]/0.45)} times! \n")
+            
+            # Create a thread object
+            thread = threading.Thread(target=fire((TIME_TO_FIRE[lineNum] * 1000 - TIME_TO_FIRE_DELAY_MS) * TIME_TO_FIRE_MULTIPLIER))
 
-                # Start the thread
-                thread.start()
-                #write_motor(lineNum)
+            # Start the thread
+            thread.start()
+
+            send_packet(lineNum)
+            #write_motor(lineNum)
                 
         elif data[0] == 0x01:
             # Time of Flight Sensor Packet
@@ -108,15 +112,15 @@ def listen_for_packets(listen_port):
             cameraPosArr[cameraArrLen][2] = time_ms
             cameraArrLen += 1
 
-def send_packet(listen_port):
+def send_packet(msg):
+    msg = str(msg)
+    msg = 0x42 + "msg"
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)  # Enable broadcast mode
-    broadcast_address = ("<broadcast>", listen_port)
-
-    while True:
-        msg = input("Enter message to send: ")
-        sock.sendto(msg.encode(), broadcast_address)
-        print(f"Sent broadcast on port {listen_port} -> {msg.encode().hex()}")
+    broadcast_address = ("<broadcast>", 1337)
+    sock.sendto(msg.encode(), broadcast_address)
+    print(f"Sent broadcast on port 1337 -> {msg.encode().hex()}")
+    
 def write_motor(lineNum):
     print('move')
     ser.write(b'1')
