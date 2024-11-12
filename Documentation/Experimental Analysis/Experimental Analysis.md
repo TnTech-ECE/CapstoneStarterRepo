@@ -30,11 +30,11 @@ In order for this constraint to be met all subsystems must be able to run autono
 The projectile path sensor was designed to determine when a ball has been dropped, determine the projectile line the ball was dropped, and wirelessly communicate this information to the Raspberry Pi. To test that this subsystem can work without outside interaction the subsystem will be tested 5 times by powering on the device dropping a ball and verifying that this subsystem can transmit the information to the Raspberry Pi.
 | Trial Number | Determine Ball launched|
 |---|---|
-| 1 | Yes -Line 1-15 |
-| 2 |  |
-| 3 |  |
-| 4 |  |
-| 5 |  |
+| 1 | Yes |
+| 2 | Yes |
+| 3 | Yes |
+| 4 | Yes |
+| 5 | Yes |
 
 ### Constraint 2 - Wirelessly communicating with the sensor array
 #### Networking
