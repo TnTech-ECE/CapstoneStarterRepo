@@ -1,4 +1,4 @@
-# Experimental Analysis
+3# Experimental Analysis
 
 ## Introduction 
 The purpose of this report is to verify the requirements for the project and explain the procedures used to validate results. The results will be compared against the measures of success outlined in the project proposal to determine if the project was successful. This will also detail what the next steps are moving forward.
@@ -64,7 +64,7 @@ To verify that the Projectile Path Sensor can detect incoming projectiles from e
 | Trial Number |Lines Properly Detected |
 |---|---|
 | 1 | 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15  |
-| 2 |  |
+| 2 | 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 |
 | 3 |  |
 
 ### Constraint 8 - Sensor Array Battery Power
