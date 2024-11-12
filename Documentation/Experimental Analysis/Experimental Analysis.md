@@ -30,7 +30,7 @@ In order for this constraint to be met all subsystems must be able to run autono
 The projectile path sensor was designed to determine when a ball has been dropped, determine the projectile line the ball was dropped, and wirelessly communicate this information to the Raspberry Pi. To test that this subsystem can work without outside interaction the subsystem will be tested 5 times by powering on the device dropping a ball and verifying that this subsystem can transmit the information to the Raspberry Pi.
 | Trial Number | Determine Ball launched|
 |---|---|
-| 1 |  |
+| 1 | Yes -Line 1-15 |
 | 2 |  |
 | 3 |  |
 | 4 |  |
@@ -63,7 +63,7 @@ To verify that the power switch is functioning properly the interceptor's power 
 To verify that the Projectile Path Sensor can detect incoming projectiles from every possible line a ball will be dropped from every line to determine that the sensor can detect all possible lines for incoming projectiles. We conducted 3 trials to verify its success.
 | Trial Number |Lines Properly Detected |
 |---|---|
-| 1 |  |
+| 1 | 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15  |
 | 2 |  |
 | 3 |  |
 
