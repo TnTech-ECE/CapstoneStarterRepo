@@ -14,12 +14,12 @@ Subsystem1
 
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
+- Number of trials:
+  
 1. Step 1
 2. Step 2
 
 ## Experimental Data
-- Number of trials:
-
 <!-- data tables or graph of the results (whichever is appropriate) -->
 
 ## Conclusions
