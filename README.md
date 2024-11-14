@@ -47,7 +47,7 @@ We would like to recognize and thank Dr.Jeffrey Austen for his guidance and supp
 
 ## Repo Organization
 
-[Reports](S24-Team1-DroneTracker/main/Reports)
+[Reports](/Reports)
 
 All reports are 
 
