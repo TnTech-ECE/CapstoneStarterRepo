@@ -23,8 +23,8 @@ Subsystem1
 <!-- data tables or graph of the results (whichever is appropriate) -->
 
 ## Conclusions
-### Interpretation of Data
+#### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
 
-### Final Thoughts
+#### Final Thoughts
 <!-- Were constraints met? -->
