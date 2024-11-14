@@ -48,7 +48,7 @@ We would like to recognize and thank Dr.Jeffrey Austen for his guidance and supp
 ## Repo Organization
 
 [Reports](/Reports)
-  - [Project Proposal](/Reports/Project%Proposal%Revisions.pdf)
+  - [Project Proposal](/Reports/Project-Proposal-Revisions.pdf)
   - [Conceptual Design and Planning](/Reports/Conceptual%Design%and%Planning%Final.pdf)
 
 ### Documentation
