@@ -47,16 +47,17 @@ We would like to recognize and thank Dr.Jeffrey Austen for his guidance and supp
 
 ## Repo Organization
 
-[Reports](/Reports)
+### [Reports](/Reports)
   - [Project Proposal](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Project%20Proposal%20Revisions.pdf) :the initial document for the project where the problem is defined and the goals for the project.
   - [Conceptual Design and Planning](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Conceptual%20Design%20and%20Planning%20Final.pdf) :gives a more detailed solution to the problem as well as subsystem breakdowns and a projected timeline and budget.
 
-### Documentation
+### [Documentation](/Documentation)
 All documentation for the project is included in the above folder. Documentation includes all schematics, images, models, BOM, and designs used in the project.
 
 The [Meeting Minutes](/Documentation/Meeting-Minutes) folder contains the dated minutes from weekly meetings and allows a quick view into the progress of the team.
 
 [Signoffs](/Documentation/Signoffs) are used to finalize designs for each subsystem. This includes schematics, design decisions, BOM, and analysis.
-### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+The [Final BOM](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Final%20BOM.pdf) pdf contains all the ordered parts for the project.
+### [Software](/Software)
+
