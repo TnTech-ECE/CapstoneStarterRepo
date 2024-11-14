@@ -43,7 +43,7 @@ Tennessee Technological University Police
 
 ### Recognitions
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+We would like to recognize and thank Dr.Jeffrey Austen for his guidance and support as well as the [Spring 2024 Base Modular Robot Team](https://github.com/TnTech-ECE/Spring2024-Base-Modular-Robot) for their repository organization inspiration.
 
 ## Repo Organization
 
