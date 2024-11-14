@@ -48,8 +48,8 @@ We would like to recognize and thank Dr.Jeffrey Austen for his guidance and supp
 ## Repo Organization
 
 [Reports](/Reports)
-  - [Project Proposal](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Project%20Proposal%20Revisions.pdf)
-  - [Conceptual Design and Planning](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Conceptual%20Design%20and%20Planning%20Final.pdf)
+  - [Project Proposal](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Project%20Proposal%20Revisions.pdf) :the initial document for the project where the problem is defined and the goals for the project.
+  - [Conceptual Design and Planning](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Conceptual%20Design%20and%20Planning%20Final.pdf) :gives a more detailed solution to the problem as well as subsystem breakdowns and a projected timeline and budget.
 
 ### Documentation
 
