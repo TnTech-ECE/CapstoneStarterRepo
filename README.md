@@ -59,5 +59,5 @@ The [Meeting Minutes](/Documentation/Meeting-Minutes) folder contains the dated 
 [Signoffs](/Documentation/Signoffs) are used to finalize designs for each subsystem. This includes schematics, design decisions, BOM, and analysis.
 
 The [Final BOM](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Final%20BOM.pdf) pdf contains all the ordered parts for the project.
-### [Software](/Software)
+
 
