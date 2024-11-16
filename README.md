@@ -58,7 +58,7 @@ The [Meeting Minutes](/Documentation/Meeting-Minutes) folder contains the dated 
 
 [Signoffs](/Documentation/Signoffs) are used to finalize designs for each subsystem. This includes schematics, design decisions, BOM, and analysis.
 
-The [Minimal Functionality Prototype document](/Documentation/Minimal-Functionality-Protype-Signoffs) contains the proposed minimal functionality requirements for the protype as well as Dr.Austen's feedback on them.
+The [Minimal Functionality Prototype document](/Documentation/Minimal-Functionality-Protype-Signoffs.pdf) contains the proposed minimal functionality requirements for the protype as well as Dr.Austen's feedback on them.
 
 The [Final BOM](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Final%20BOM.pdf) pdf contains all the ordered parts for the project.
 
