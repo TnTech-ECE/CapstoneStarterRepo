@@ -23,7 +23,7 @@ Coming soon :)
 
 [Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
 
-[Sterling Sloan](www.linkedin.com)
+[Sterling Sloan](www.linkedin.com) is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
 
 [Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
 
