@@ -38,6 +38,13 @@ The projectile path sensor was designed to determine when a ball has been droppe
 
 ### Constraint 2 - Wirelessly communicating with the sensor array
 #### Networking
+To verify each sensor can communicate one could trigger each sensor to send a command to the base station of the networking subsystem and print the result to a co  nsole.
+
+| Subsystem |  Notes |Functionality |
+|---|---|---|
+| Head On Positioning |  |  |
+| Velocity Sensor |  |  |
+| Projectile Path Sensor |  |  |
 
 ### Constraint 3 - Fitting in a 1x1x1 foot box
 #### Housing
@@ -92,7 +99,38 @@ To test that the Projectile sensor will function on battery power, the system wi
 
 ### Constraint 13 - Six input Capable Network
 #### Networking
+To verify enough devices can act as inputs on the networking subsystem 6 individual networking instances can be created using different computers. Since six devices were not used in the final design it is unneccessary to test this on six standalone devices.
+| Number of Devices | Notes | Functionality |
+|---|---|---|
+| 1 |  |  |
+| 2 |  |  |
+| 3 |  |  |
+| 4 |  |  |
+| 5 |  |  |
+| 6 |  |  |
+
 
 ### Constraint 14 - Uniform Wireing
 
+### Constraint 15  - The head on position sensor shall have a maximum latency of 100ms and provide updates at least 10 times per second.
+#### Head On Sensor
 
+This constraint can be confirmed by recording the timestamps of outgoing target location predictions and ensure that it meets this time limitaiton. This will be repeated over the course of multiple ball drops where the average time of prediction is calculated and the number of predictions is counted.
+| Attempt | Time (s )| Number of Udpates | Latency (ms) |
+|---|---|---|---|
+| 1 |  |  |
+| 2 |  |  |
+| 3 |  |  |
+| 4 |  |  |
+| 5 |  |  |
+
+### Contraint 15 - The sensor apparatus shall detect approaching objects and relay the target's location to the interceptor
+#### Head On Sensor
+The functionality of the head on sensor can be verified by dropping targets repeatedly and the results of if the sensor tracked the object will be tabulated. 
+| Attempt | Functionality | Notes | 
+|---|---|---|
+| 1 |  |  |
+| 2 |  |  |
+| 3 |  |  |
+| 4 |  |  |
+| 5 |  |  |

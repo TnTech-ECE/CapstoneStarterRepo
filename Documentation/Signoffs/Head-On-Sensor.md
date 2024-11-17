@@ -32,7 +32,7 @@ The selected camera's horizontal field of view is 62.2 degrees and has a horizon
 The camera has a vertical field of view of 48.8 degrees, and at a distance of six feet this translates to 382 inches vertically. This distance divided over 480 pixles shows each pixel represents 1.25 inches meaning to comply with C24 the image processing needs to be less than three pixels off to be able to correctly report the target's location. 
 ## Electrical Schematic
 <p align="center">
-  <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Head-On-Sensor-Subsystem/Documentation/Electrical/Schematics/PI_CAM_Schematic_REV2.JPG"
+  <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Electrical/Schematics/PI_CAM_Schematic_REV2.JPG"
 >
 </p>
 The wiring schematic for this subsystem is simple as the camera's wiring is contained within its ribbon cable. Four pins from the ribbon cable do connect to the normal GPIO header. GPIO0 and GPIO1 are used for the serial connection between the camera and the Raspberry Pi; GPIO2 and GPIO 3 are used for the camera's enable and webcam activity pins. The ribbon cable provides power, ground, and data. The data interface is a camera serial interface also known as MIPI CSI. The Raspberry Pi 5 supports 15 pin 2 lane MIPI-CSI allowing the camera to send two streams of image data to the Pi simultaneously [3]. The camera draws up to 250mA at 3.3 volts [4]. The camera's ribbon cable is 610mm and can be extended with a 15-pin flex cable extender with 1mm pitch.
@@ -46,7 +46,7 @@ The image recognition algorithm works by applying a threshold filter to the came
 
 ### Algorithm Flowchart
 <p align="center">
-  <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/Head-On-Sensor-Subsystem/Documentation/Images/Flowchart.png"
+  <img src="https://github.com/JTJones73/Capstone2024-Team2/blob/main/Documentation/Images/Flowchart.png"
 >
 </p>
 
