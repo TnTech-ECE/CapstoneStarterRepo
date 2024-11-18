@@ -44,7 +44,7 @@ To verify that these constraints are met by the system, the projectile path sens
 ### Head on Sensor
 
 ### Power & Housing
-The critical constraints that are met by the power and housing system are: 
+The critical constraints that are met by the power and housing system are:
 4. The interceptor shall have a power system be capable of providing power to each component in the main housing.
 
 To verify that this constraint is met each electronic device will be powered on the interceptor at the same time. Each component will then be analyzed to verify that it is receiving power. 
