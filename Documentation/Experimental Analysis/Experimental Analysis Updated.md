@@ -1,0 +1,49 @@
+# Experimental Analysis
+
+## Introduction 
+The purpose of this report is to verify the requirements for the project and explain the procedures used to validate results. The results will be compared against the measures of success outlined in the project proposal to determine if the project was successful. This will also detail what the next steps are moving forward.
+
+### System Critical Constraints
+
+| Item # | Constraint/Specification | Subsystem Affected | 
+|-|-|-|
+| 1 | Shall Create an interceptor capable of functioning on its own without outside interaction. | All Subsystems |
+| 2 | The System is capable of sensing all 15 lines when a projectile is released.  | Projectile Path Sensor |
+| 3 | All external sensors are capable of running on battery power  | Projectile Path sensor and Velocity and Acceleration Sensor |
+
+## Analysis
+### Projectile Path Sensor
+The system critical constraints that are met by the projectile path sensor are:
+1. Shall Create an interceptor capable of functioning on its own without outside interaction.
+2. The System is capable of sensing all 15 lines when a projectile is released.
+3. All external sensors are capable of running on battery power.
+
+To verify that these constraints are met by the system, the projectile path sensor will be powered on using a 9V battery and with no external interaction a ball will be dropped from all 15 lines to verify that the system can detect and transmit this information to the interceptor.
+
+| Line Number | Projectile Detected |
+|---|---|
+| 1 | Yes |
+| 2 | Yes |
+| 3 | Yes |
+| 4 | Yes |
+| 5 | Yes |
+| 6 | Yes |
+| 7 | Yes |
+| 8 | Yes |
+| 9 | Yes |
+| 10 | Yes |
+| 11 | Yes |
+| 12 | Yes |
+| 13 | Yes |
+| 14 | Yes |
+| 15 | Yes |
+
+### Velocity and Acceleration Sensor
+
+### Head on Sensor
+
+### Housing
+
+### Aiming
+
+### Firing
