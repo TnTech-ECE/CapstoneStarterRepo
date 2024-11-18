@@ -10,6 +10,7 @@ The purpose of this report is to verify the requirements for the project and exp
 | 1 | Shall Create an interceptor capable of functioning on its own without outside interaction. | All Subsystems |
 | 2 | The System is capable of sensing all 15 lines when a projectile is released.  | Projectile Path Sensor |
 | 3 | All external sensors are capable of running on battery power  | Projectile Path sensor and Velocity and Acceleration Sensor |
+| 4 | The interceptor shall have a power system be capable of providing power to each component in the main housing. | 
 
 ## Analysis
 ### Projectile Path Sensor
@@ -42,7 +43,16 @@ To verify that these constraints are met by the system, the projectile path sens
 
 ### Head on Sensor
 
-### Housing
+### Power & Housing
+The critical constraints that are met by the power and housing system are: 
+4. The interceptor shall have a power system be capable of providing power to each component in the main housing.
+
+To verify that this constraint is met each electronic device will be powered on the interceptor at the same time. Each component will then be analyzed to verify that it is receiving power. 
+
+Results: 
+Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. 
+
+(YT Link to video test if possible) 
 
 ### Aiming
 
