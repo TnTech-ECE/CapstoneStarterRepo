@@ -16,6 +16,10 @@ The purpose of this report is to verify the requirements for the project and exp
 | 7 | The interceptor shall have an external sensor capeable of obtaining a distance measurements and time at multiple points across each path. | Velocity and Acceleration|
 | 8 | The interceptor shall move into aiming position based on input gathered from sensor data. | Aiming |
 | 9 | The interceptor shall move into aiming position before the projectile moves away from the interceptor's range | Aiming |
+| 10 | The interceptor shall be able to detect and locate targets head on. | Head on Sensor |
+| 11 | When the interceptor is sensing head on targets the maximum sensing latency shall not exceed 100ms. | Head on Sensor |
+| 12 | The interceptor shall be able to wirelessly communicate with the sensor array. | Networking |
+| 13 | The interceptor shall be able to wirelessly recieve information from no less than 6 devices at the same time. | Networking |
 
 ## Analysis
 ### Projectile Path Sensor
@@ -47,7 +51,12 @@ To verify that these constraints are met by the system, the projectile path sens
 ### Velocity and Acceleration Sensor
 
 ### Head on Sensor
+10. The interceptor shall be able to detect and locate targets head on.
+11. When the interceptor is sensing head on targets the maximum sensing latency shall not exceed 100ms.
 
+### Networking
+12. The interceptor shall be able to wirelessly communicate with the sensor array.
+13. The interceptor shall be able to wirelessly recieve information from no less than 6 devices at the same time.
 ### Power & Housing
 The critical constraints that are met by the power and housing system are: 
 
