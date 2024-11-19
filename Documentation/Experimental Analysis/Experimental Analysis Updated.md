@@ -14,6 +14,8 @@ The purpose of this report is to verify the requirements for the project and exp
 | 5 | The interceptor shall have a firing system capable of firing a projectile. | Firing | 
 | 6 | The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired. | Firing |
 | 7 | The interceptor shall have an external sensor capeable of obtaining a distance measurements and time at multiple points across each path. | Velocity and Acceleration|
+| 8 | The interceptor shall move into aiming position based on input gathered from sensor data. | Aiming |
+| 9 | The interceptor shall move into aiming position before the projectile moves away from the interceptor's range | Aiming |
 
 ## Analysis
 ### Projectile Path Sensor
@@ -60,10 +62,15 @@ Each motor turned when receiving power at the same time as the others. Additiona
 (YT Link to video test if possible) 
 
 ### Aiming
+The system critical constraints that are met by the aiming system are:
+1. Shall Create an interceptor capable of functioning on its own without outside interaction.
+8. The interceptor shall move into aiming position based on input gathered from sensor data.
+9. The interceptor shall move into aiming position before the projectile moves away from the interceptor's range
 
+To verify that these constraints are met by the system, the main aiming control unit will be powered and recieve data from the raspberry pi usb port and with no external interaction. To simulate position data being sent, the user will input the position data manually and show where the aiming system moves based on that input. This then will be timed based on the greatest number of steps that the aiming motors took to move into position and calulate the aiming duration based on the step speed of the motors. 
 ### Firing
 
-The system critical constraints that are met by the projectile path sensor are:
+The system critical constraints that are met by the firing system are:
 1. Shall Create an interceptor capable of functioning on its own without outside interaction.
 5. The interceptor shall have a firing system capable of firing a projectile.
 6. The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired.
