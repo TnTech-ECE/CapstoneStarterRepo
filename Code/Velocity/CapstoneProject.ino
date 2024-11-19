@@ -2,12 +2,16 @@
 
 void setup() {
   VL53LX_Error status;
+  ESP32PWM::allocateTimer(0);
+  ESP32PWM::allocateTimer(1);
    // Led.
    pinMode(LedPin, OUTPUT);
    pinMode(interruptPin, INPUT_PULLUP);
    attachInterrupt(interruptPin, measure, FALLING);
-   servo1.attach(servoPin1);
-   servo2.attach(servoPin2);
+   servo1.setPeriodHertz(50);
+   servo1.setPeriodHertz(50);
+   servo1.attach(servoPin1, minUs, maxUs);
+   servo2.attach(servoPin2, minUs, maxUs);
 
    // Initialize serial for output.
    SerialPort.begin(115200);
@@ -48,11 +52,11 @@ void loop() {
    serial_input();
    output_input();
    if (newData == true){
-    i = stoi(receivedChars);
-    if(i < 17){
-      if(j < 1) j++;
-      servo();
-    }
+    i = stoi(receivedChars);//Could be atoi
+    //if(i < 17){
+      //if(j < 1) j++;
+    servo();
+    //}
    }
    if (interruptCount){
       int status;
@@ -195,55 +199,15 @@ void measure()
 }
 
 void servo(){
-  if(servoPos1 > lineDegreex[i]){
-    //Up
-    SerialPort.print("Servo1 Moving to = ");
-    SerialPort.print(lineDegreex[i]);
-    SerialPort.print("\n");
-    for(servoPos1; servoPos1 <= lineDegreex[i]; servoPos1++){
-      servo1.write(servoPos1);
-      SerialPort.print("Servo1 Position Up = ");
-      SerialPort.print(servoPos1);
-      SerialPort.print("\n");
-      delay(50);
-    }
-  }
-  else if(servoPos1 < lineDegreex[i]){
-    //Down
-    SerialPort.print("Servo1 Moving to = ");
-    SerialPort.print(lineDegreex[i]);
-    SerialPort.print("\n");
-    for(servoPos1; servoPos1 >= lineDegreex[i]; servoPos1--){
-      servo1.write(servoPos1);
-      SerialPort.print("Servo1 Position Down = ");
-      SerialPort.print(servoPos1);
-      SerialPort.print("\n");
-      delay(50);
-    }
-  }
-  if(servoPos2 > lineDegreey[j]){
-    SerialPort.print("Servo1 Moving to = ");
-    SerialPort.print(lineDegreex[j]);
-    SerialPort.print("\n");
-    for(servoPos2; servoPos2 <= lineDegreex[j]; servoPos2++){
-      servo1.write(servoPos2);
-      SerialPort.print("Servo1 Position Up = ");
-      SerialPort.print(servoPos2);
-      SerialPort.print("\n");
-      delay(50);
-    }
-  }
-  else if(servoPos2 < lineDegreey[j]){
-    SerialPort.print("Servo1 Moving to = ");
-    SerialPort.print(lineDegreex[j]);
-    SerialPort.print("\n");
-    for(servoPos2; servoPos2 <= lineDegreex[j]; servoPos2--){
-      servo1.write(servoPos2);
-      SerialPort.print("Servo1 Position Up = ");
-      SerialPort.print(servoPos2);
-      SerialPort.print("\n");
-      delay(50);
-    }
-  }
+  servoPos1 = i
+  SerialPort.print("Servo1 Moving to = ");
+  //SerialPort.print(lineDegreex[i]);
+  SerialPort.print(servoPos1);
+  SerialPort.print("\n");
+  //servoPos1 = lineDegreex[i];
+  servo1.write(servoPos1);
+  SerialPort.print("Servo1 Position Up = ");
+  SerialPort.print(servoPos1);
+  SerialPort.print("\n");
   newData = false;
 }
