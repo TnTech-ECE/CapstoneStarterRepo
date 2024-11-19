@@ -62,12 +62,13 @@ The critical constraints that are met by the power and housing system are:
 
 4. The interceptor shall have a power system be capable of providing power to each component in the main housing.
 
-To verify that this constraint is met each electronic device will be powered on the interceptor at the same time. Each component will then be analyzed to verify that it is receiving power. In adition the E-Stop will be tested to ensure that it will turn off the motors when pressed. 
+To verify that this constraint is met each electronic device will be powered on the interceptor at the same time. Each component will then be analyzed to verify that it is receiving power. In addition the E-Stop will be tested to ensure that it will turn off the motors when pressed. 
 
 Results: 
 
-Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. In adition the E-Stop functioned correctly be disabling the motors when pressed. 
+Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. The E-Stop functioned correctly by disabling the motors when pressed. 
 
+Link to the video of the experiment
 https://youtu.be/wlUcXeGKP3k
 
 ### Aiming
