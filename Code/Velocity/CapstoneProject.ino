@@ -52,7 +52,7 @@ void loop() {
    serial_input();
    output_input();
    if (newData == true){
-    i = stoi(receivedChars);//Could be atoi
+    i = atoi(receivedChars);//Could be atoi
     //if(i < 17){
       //if(j < 1) j++;
     servo();
@@ -127,7 +127,6 @@ void output_input(){
   if (newData == true) {
     Serial.print("This just in ... ");
     Serial.println(receivedChars);
-    newData = false;
   }
 }
 //Checks if serial avalible and then reads chars into char array
@@ -199,7 +198,7 @@ void measure()
 }
 
 void servo(){
-  servoPos1 = i
+  servoPos1 = i;
   SerialPort.print("Servo1 Moving to = ");
   //SerialPort.print(lineDegreex[i]);
   SerialPort.print(servoPos1);
