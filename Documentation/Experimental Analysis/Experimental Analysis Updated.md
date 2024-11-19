@@ -12,7 +12,8 @@ The purpose of this report is to verify the requirements for the project and exp
 | 3 | All external sensors are capable of running on battery power  | Projectile Path sensor and Velocity and Acceleration Sensor |
 | 4 | The interceptor shall have a power system be capable of providing power to each component in the main housing. | Power & Housing | 
 | 5 | The interceptor shall have a firing system capable of firing a projectile. | Firing | 
-| 6 | The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired. | Firing | 
+| 6 | The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired. | Firing |
+| 7 | The interceptor shall have an external sensor capeable of obtaining a distance measurements and time at multiple points across each path. | Velocity and Acceleration|
 
 ## Analysis
 ### Projectile Path Sensor
