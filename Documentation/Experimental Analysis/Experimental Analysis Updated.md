@@ -9,7 +9,7 @@ The purpose of this report is to verify the requirements for the project and exp
 |-|-|-|
 | 1 | Shall Create an interceptor capable of functioning on its own without outside interaction. | All Subsystems |
 | 2 | The System is capable of sensing all 15 lines when a projectile is released.  | Projectile Path Sensor |
-| 3 | All external sensors are capable of running on battery power  | Projectile Path sensor and Velocity and Acceleration Sensor |
+| 3 | All external sensors are capable of running on battery power.  | Projectile Path sensor and Velocity and Acceleration Sensor |
 | 4 | The interceptor shall have a power system be capable of providing power to each component in the main housing. | Power & Housing | 
 | 5 | The interceptor shall have a firing system capable of firing a projectile. | Firing | 
 | 6 | The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired. | Firing |
