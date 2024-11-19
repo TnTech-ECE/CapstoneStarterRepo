@@ -68,7 +68,7 @@ Results:
 
 Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. The E-Stop functioned correctly by disabling the motors when pressed. 
 
-Link to the video of the experiment
+Link to the video of the experiment:
 https://youtu.be/wlUcXeGKP3k
 
 ### Aiming
