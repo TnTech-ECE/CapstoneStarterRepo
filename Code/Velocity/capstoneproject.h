@@ -75,14 +75,14 @@ uint32_t time_ms;
 volatile int interruptCount=0;
 
 //Servo
-int minUs = 2000;
-int maxUs = 1000;
+int minUs = 1000;
+int maxUs = 2250;
 Servo servo1;//X direction servo
 Servo servo2;//Y direction servo
 int servoPos1 = 0;//Default position
 int servoPos2 = 0;//Default position
-static const int servoPin1 = A3;//ShortWire
-static const int servoPin2 = A4;
+static const int servoPin1 = D2;//ShortWire
+static const int servoPin2 = D3;
 uint8_t distancemm = 0;
 uint8_t i,j = 0;
 uint8_t lineDegreex[16] = {0,155,146,137,128,119,110,101,92,83,74,65,56,47,38,29};
