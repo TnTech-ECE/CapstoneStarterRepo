@@ -76,7 +76,7 @@ The system critical constraints that are met by the firing system are:
 6. The interceptor shall have a firing system capable of stopping the firing motor once a round has been fired.
 
 
-To verify that these constraints are met by the system, the firing motor will be powered on using the housings 12-volt power supply. The main code will then be used to verify that when a signal is sent from the aiming subsystem, the motor turns on, releasing a single round, and will be powered off once the proximity sensor is in line with the timing bolt. 
+To verify that these constraints are met by the system, the firing motor will be powered on using the housings 12-volt power supply. The main code will then be used to verify that when a signal is sent from the aiming subsystem, the motor turns on, releasing a single round, and will be powered off once the proximity sensor is in line with the timing piece. 
 
 
 
