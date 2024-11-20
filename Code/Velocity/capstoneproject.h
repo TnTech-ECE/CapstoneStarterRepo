@@ -86,7 +86,6 @@ static const int servoPin2 = D3;
 uint8_t distancemm = 0;
 uint8_t i,j = 0;
 uint8_t lineDegreex[16] = {0,155,146,137,128,119,110,101,92,83,74,65,56,47,38,29};
-//90,29,38,47,56,65,74,83,92,101,110,119,128,137,146,155
 uint8_t lineDegreey[3] = {0,45,130};
 
 //Serial Input Data
