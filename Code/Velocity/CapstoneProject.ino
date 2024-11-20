@@ -15,13 +15,13 @@ void setup() {
    SerialPort.begin(115200);
    //SerialPort.println("Starting...");
    while(!Serial){}
-   //WiFi.hostname(HOST_NAME);
-   //WiFi.begin(SSID, PASSWORD);
-   
-  // while (WiFi.status() != WL_CONNECTED){
-      //delay(500);
-      //Serial.print(".");
-   //}
+   WiFi.hostname(HOST_NAME);
+   WiFi.begin(SSID, PASSWORD);
+   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG,0);
+   while (WiFi.status() != WL_CONNECTED){
+      delay(500);
+      Serial.print(".");
+   }
    //Serial.println(" connected");
    //Serial.printf("Now listening at IP %s, UDP port %d, remote IP: %s\n", WiFi.localIP().toString().c_str(), LOCAL_UDP_PORT, Udp.remoteIP().toString().c_str());
    // Initialize I2C bus.
@@ -36,6 +36,8 @@ void setup() {
    {
       SerialPort.println("Init sensor_vl53lx_sat failed...");
    }
+   servo1.setPeriodHertz(50);
+   servo1.setPeriodHertz(50);
    //Udp.begin(LOCAL_UDP_PORT);
    sensor_vl53lx_sat.VL53LX_StartMeasurement();
 }
@@ -47,15 +49,17 @@ void loop() {
    uint8_t NewDataReady = 0;
    int no_of_object_found = 0, j;
    char report[64];
-   serial_input();
-   output_input();
+   //serial_input();
+   //output_input();
+   /*
    if (newData == true){
     i = atoi(receivedChars);//Could be atoi
     //if(i < 17){
       //if(j < 1) j++;
     servo();
     //}
-   }
+    
+   }*/
    if (interruptCount){
       int status;
       interruptCount=0;
@@ -68,18 +72,19 @@ void loop() {
          no_of_object_found=pMultiRangingData->NumberOfObjectsFound;
          for(j=0;j<no_of_object_found;j++)
          {
-            if(j!=0)//SerialPort.print("\r\n                   ");
+            //if(j!=0)//SerialPort.print("\r\n                   ");
             distancemm = pMultiRangingData->RangeData[j].RangeMilliMeter;
             time_ms = millis();
-            /*
-            SerialPort.print("status=");
-            SerialPort.print(pMultiRangingData->RangeData[j].RangeStatus);
-            SerialPort.print(", D=");
-            SerialPort.print(distancemm);
-            SerialPort.print("mm, Time = ");
-            SerialPort.print(time_ms);
-            SerialPort.print("\n");
-            */
+            if(distancemm < 900){
+              SerialPort.print("status=");
+              SerialPort.print(pMultiRangingData->RangeData[j].RangeStatus);
+              SerialPort.print(", D=");
+              SerialPort.print(distancemm);
+              SerialPort.print("mm, Time = ");
+              SerialPort.print(time_ms);
+              SerialPort.print("\n");
+            }
+            
          }
          //SerialPort.println("debug");
          if (status==0)
