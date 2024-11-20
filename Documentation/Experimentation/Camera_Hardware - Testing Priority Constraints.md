@@ -9,7 +9,8 @@ Camera Hardware Subsystem
 #### Constraints Tested:
 - System shall capture an image of the UAS in flight or the control station.
 - Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080p x 720p.
-- Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy.<!-- - Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s). -->
+- Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy.
+- Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s).
 - Camera system shall not draw more than 50 Watts of power.
  
 #### Expected Result(s):
@@ -55,7 +56,35 @@ Camera Hardware Subsystem
 <!-- data tables or graph of the results (whichever is appropriate) -->
 #### Image Capture
 
+|  Image | Target Visible?| Operator Visible? | Acceptable?|
+|--------|----------------|-------------------|------------|
+|    1   |  xs            |  xs               |     y/n    |
+|    2   |  xs            |  xs               |     y/n    |
+|    3   |  xs            |  xs               |     y/n    |
+|    4   |  xs            |  xs               |     y/n    |
+|    5   |  xs            |  xs               |     y/n    |
+
+Image1
+Image2
+Image3
+Image4
+Image5
+
 #### Image Quality
+
+|  Image | Image Resolution| Image Datatype | Acceptable?|
+|--------|-----------------|----------------|------------|
+|    1   |  xs             |  xs            |     y/n    |
+|    2   |  xs             |  xs            |     y/n    |
+|    3   |  xs             |  xs            |     y/n    |
+|    4   |  xs             |  xs            |     y/n    |
+|    5   |  xs             |  xs            |     y/n    |
+
+Image1Properties
+Image2Properties
+Image3Properties
+Image4Properties
+Image5Properties
 
 #### Servo Accuracy
 
@@ -92,6 +121,8 @@ Camera Hardware Subsystem
 
 ##### Servo Speed
 
+*Disclaimer: These measurements, due to the difficulty of automation, are taken by hand and are therefore subject to human error.
+
 ##### Servo 1 Table
 
 |  Trials | Start Time| End Time | Difference| Acceptable?|
@@ -124,6 +155,22 @@ Camera Hardware Subsystem
 |    10   |  xs       |  xs      |    xs     |     y/n    |
 
 ##### Power Draw
+
+##### System Table
+
+|  Trials | Voltage| Current | Wattage| Acceptable?|
+|---------|-----------|----------|-----------|------------|
+|    1    |  xs       |  xs      |    xs     |     y/n    |
+|    2    |  xs       |  xs      |    xs     |     y/n    |
+|    3    |  xs       |  xs      |    xs     |     y/n    |
+|    4    |  xs       |  xs      |    xs     |     y/n    |
+|    5    |  xs       |  xs      |    xs     |     y/n    |
+|    6    |  xs       |  xs      |    xs     |     y/n    |
+|    7    |  xs       |  xs      |    xs     |     y/n    |
+|    8    |  xs       |  xs      |    xs     |     y/n    |
+|    9    |  xs       |  xs      |    xs     |     y/n    |
+|    10   |  xs       |  xs      |    xs     |     y/n    |
+
 
 ## Conclusions
 #### Interpretation of Data
