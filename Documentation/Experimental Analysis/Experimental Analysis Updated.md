@@ -100,6 +100,8 @@ Results:
 
 Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. The E-Stop functioned correctly by disabling the motors when pressed. 
 
+The test above and the results found ensure that the Power & Housing system functions as intended and without error. By powering each motor at the same time the maximum power from the interceptor was placed on the PSU at once. The result has shown that the power system can handle the load well. In addition the E-Stop is shown to effectively prevent power from flowing to the motors. This shows that the E-Stop functions as intended. 
+
 ### Aiming
 The system critical constraints that are met by the aiming system are:
 1. Shall Create an interceptor capable of functioning on its own without outside interaction.
