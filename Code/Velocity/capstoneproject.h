@@ -12,6 +12,8 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #include <SPI.h>
+#include <soc/soc.h>
+#include <soc/rtc_cntl_reg.h>
 /**********Status**********/
 #define CAPSTONEPROJECT_H
 #define  VL53LX_RANGESTATUS_RANGE_VALID       0
@@ -75,17 +77,18 @@ uint32_t time_ms;
 volatile int interruptCount=0;
 
 //Servo
-int minUs = 1000;
-int maxUs = 2250;
+int minUs = 2000;
+int maxUs = 1000;
 Servo servo1;//X direction servo
 Servo servo2;//Y direction servo
 int servoPos1 = 0;//Default position
 int servoPos2 = 0;//Default position
-static const int servoPin1 = D2;//ShortWire
-static const int servoPin2 = D3;
-uint8_t distancemm = 0;
+static const int servoPin1 = A3;//ShortWire
+static const int servoPin2 = A4;
+uint16_t distancemm = 0;
 uint8_t i,j = 0;
 uint8_t lineDegreex[16] = {0,155,146,137,128,119,110,101,92,83,74,65,56,47,38,29};
+//90,29,38,47,56,65,74,83,92,101,110,119,128,137,146,155
 uint8_t lineDegreey[3] = {0,45,130};
 
 //Serial Input Data
