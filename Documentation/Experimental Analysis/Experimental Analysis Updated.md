@@ -119,6 +119,10 @@ The system critical constraints that are met by the firing system are:
 
 To verify that these constraints are met by the system, the firing motor will be powered on using the housings 12-volt power supply. The main code will then be used to verify that when a signal is sent from the aiming subsystem, the motor turns on, releasing a single round, and will be powered off once the proximity sensor is in line with the timing piece. 
 
+Results: 
+https://youtube.com/shorts/PYR-_0FZ6-E?feature=share
+
+When the test signal was sent the motor activated autonomously and stopped when the timing piece was in line with the prox sensor. Furhter testing and tuning (such as moving the timing piece slightly) may need to be done to ensure the design works properly once we are able to have the load from the remaining pieces from the firing mechanism mounted to the rest of the design, hence changing the load put upon the motor once the ME team has completed that piece. 
 
 
 
