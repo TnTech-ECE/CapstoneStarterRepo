@@ -22,7 +22,7 @@ Camera Hardware Subsystem
 <!-- Description of what you did ideally in steps -->
 Image Capture
 - Number of trials: 5
-1. Using the program developed by the [Camera Software System](Camera_Software_System.md), create and run 5 pseudo-signals from the receiver system for the camera to "track"
+1. Using the program developed by the [Camera Software System]([Camera_Software_System.md](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Signoffs/Camera_Software_System.md)), create and run 5 pseudo-signals from the receiver system for the camera to "track"
 2. Allow Program to capture and transmit images
 3. Analyze images for drone/operator presence
 4. Run and repeat test 5 times, analyzing each for subject's presence
