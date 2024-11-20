@@ -28,25 +28,26 @@ The system critical constraints that are met by the projectile path sensor are:
 2. The System shall be capable of sensing all 15 lines when a projectile is released.
 3. All external sensors shall be capable of running on battery power.
 
-To verify that these constraints are met by the system, the projectile path sensor will be powered on using a 9V battery and with no external interaction a ball will be dropped from all 15 lines to verify that the system can detect and transmit this information to the interceptor.
+To verify that these constraints are met by the system, the projectile path sensor will be powered on using a 9V battery and with no external interaction a ball will be dropped from all 15 lines to verify that the system can detect and transmit this information to the interceptor. This test will be ran twice to verify that the system did not have any false posisitives.
 
-| Line Number | Projectile Detected |
-|---|---|
-| 1 | Yes |
-| 2 | Yes |
-| 3 | Yes |
-| 4 | Yes |
-| 5 | Yes |
-| 6 | Yes |
-| 7 | Yes |
-| 8 | Yes |
-| 9 | Yes |
-| 10 | Yes |
-| 11 | Yes |
-| 12 | Yes |
-| 13 | Yes |
-| 14 | Yes |
-| 15 | Yes |
+| Line Number | Projectile Detected Trial 1|Projectile Detected Trial 1|
+|---|---| ---|
+| 1 | Yes | Yes |
+| 2 | Yes | Yes |
+| 3 | Yes | Yes |
+| 4 | Yes | Yes |
+| 5 | Yes | Yes |
+| 6 | Yes | Yes |
+| 7 | Yes | Yes |
+| 8 | Yes | Yes |
+| 9 | Yes | Yes |
+| 10 | Yes | Yes |
+| 11 | Yes | Yes |
+| 12 | Yes | Yes |
+| 13 | Yes | Yes | 
+| 14 | Yes | Yes |
+| 15 | Yes | Yes |
+
 
 ### Velocity and Acceleration Sensor
 The system critical constraints that are met by the Velocity and Acceleration Sensor system are:
