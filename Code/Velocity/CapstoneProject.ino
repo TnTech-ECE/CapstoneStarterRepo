@@ -10,8 +10,6 @@ void setup() {
    attachInterrupt(interruptPin, measure, FALLING);
    servo1.setPeriodHertz(50);
    servo1.setPeriodHertz(50);
-   servo1.attach(servoPin1, minUs, maxUs);
-   servo2.attach(servoPin2, minUs, maxUs);
 
    // Initialize serial for output.
    SerialPort.begin(115200);
