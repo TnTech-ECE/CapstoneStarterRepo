@@ -49,7 +49,37 @@ To verify that these constraints are met by the system, the projectile path sens
 | 15 | Yes |
 
 ### Velocity and Acceleration Sensor
+The system critical constraints that are met by the Velocity and Acceleration Sensor system are:
+1. Shall Create an interceptor capable of functioning on its own without outside interaction.
+3. All external sensors are capable of running on battery power.
+7. The interceptor shall have an external sensor capeable of obtaining a distance measurements and time at multiple points across each path.
 
+To verify that the constraint 7 is met by the system, the Velocity and Acceleration sensor will be set up on the center of the second sensor post like it will be for the competition and is to be tested in that positon. To test that the system is capable of obtaining a distance measurement and time at multiple points on each path and satisfies this constraint the sensor will be aimed at each line and a ball will be be placed to verify that a distance measurement and time is able to be recorded at multiple places. Point 1 is 27 inces away from sensor, point 2 is 25 inches away from sensor, point 3 is 23 inches away from sensor.
+
+Test Results:
+
+| Line Number | Projectile Detected & Time Recorded Point 1 | Projectile Detected & Time Recorded Point 2 | Projectile Detected & Time Recorded Point 3 |
+|---|---|---|---|
+| 1  | Yes | Yes | Yes |
+| 2  | Yes | Yes | Yes |
+| 3  | Yes | Yes | Yes |
+| 4  | Yes | Yes | Yes |
+| 5  | Yes | Yes | Yes |
+| 6  | Yes | Yes | Yes |
+| 7  | Yes | Yes | Yes |
+| 8  | Yes | Yes | Yes |
+| 9  | Yes | Yes | Yes |
+| 10 | Yes | Yes | Yes |
+| 11 | Yes | Yes | Yes |
+| 12 | Yes | Yes | Yes |
+| 13 | Yes | Yes | Yes |
+| 14 | Yes | Yes | Yes |
+| 15 | Yes | Yes | Yes |
+
+To verify that the constraints 1 and 3 are met by the system, the Velocity and Acceleration sensor will be powered by a 3.7V LiPo battery and will be set up and have the same placement as in the previous test. To ensure the system is capable of operationg without outside interation and running on battery power the following test will be conducted. After the sensor is setup as previously described a ball will be dropped on line 1 to verify that the sensor will turn to the line to obtain the distance and time measurements and transmit this information to the interceptor. This will prove that the system is capable of operating without outside interaction and running on battery power.
+
+Expected Results: 
+Given that the networking subsystem has been proven to be working in the Projectile Path Sensor, the Velocity and Acceleration Sensor will meet constraints 1 and 3.
 ### Head on Sensor
 10. The interceptor shall be able to detect and locate targets head on.
 11. When the interceptor is sensing head on targets the maximum sensing latency shall not exceed 100ms.
