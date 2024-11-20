@@ -53,6 +53,18 @@ Power Draw
 
 ## Experimental Data
 <!-- data tables or graph of the results (whichever is appropriate) -->
+Image Capture
+
+|  Trial 1|  1    |  2      |  3       |
+|---------|-------|---------|----------|
+|    A    |  yes  |  yes    |  yes     |
+|    B    |  yes  |  yes    |  yes     |
+|    C    |  yes  |  yes    |  yes     |
+
+Image Quality
+Servo Accuracy
+Servo Speed
+Power Draw
 
 ## Conclusions
 #### Interpretation of Data
