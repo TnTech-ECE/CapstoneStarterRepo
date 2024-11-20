@@ -199,6 +199,8 @@ void measure()
 
 void servo(){
   servoPos1 = i;
+  servo1.attach(servoPin1, minUs, maxUs);
+  servo2.attach(servoPin2, minUs, maxUs);
   SerialPort.print("Servo1 Moving to = ");
   //SerialPort.print(lineDegreex[i]);
   SerialPort.print(servoPos1);
@@ -208,5 +210,7 @@ void servo(){
   SerialPort.print("Servo1 Position Up = ");
   SerialPort.print(servoPos1);
   SerialPort.print("\n");
+  servo1.detach();
+  servo2.detach();
   newData = false;
 }
