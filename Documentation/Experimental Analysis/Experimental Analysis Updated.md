@@ -98,9 +98,6 @@ Results:
 
 Each motor turned when receiving power at the same time as the others. Additionally the buzzer and the lighting in the housing remained on. Finally the Raspberry Pi and the Arduino continued to receive power. The E-Stop functioned correctly by disabling the motors when pressed. 
 
-Link to the video of the experiment:
-https://youtu.be/wlUcXeGKP3k
-
 ### Aiming
 The system critical constraints that are met by the aiming system are:
 1. Shall Create an interceptor capable of functioning on its own without outside interaction.
