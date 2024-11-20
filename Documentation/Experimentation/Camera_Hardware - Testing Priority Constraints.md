@@ -55,17 +55,40 @@ Power Draw
 <!-- data tables or graph of the results (whichever is appropriate) -->
 Image Capture
 
-|  Trials | Servo 1| Servo 2| Set Angle| Recorded Angle| Difference
-|---------|-------|---------|----------|--------|---------|----------|
-|    1    |  yes  |  yes    |  yes     |         
-|    2    |  yes  |  yes    |  yes     |
-|    3    |  yes  |  yes    |  yes     |
-
-<!-- 13, 62, 97, 176, 115, 16, 20, 87, 46, 67 -->
-<!-- 96, 266, 28, 162, 147, 248, 153, 198, 204, 82 -->
-
 Image Quality
+
 Servo Accuracy
+
+Servo 1 Table
+
+|  Trials | Set Angle| Recorded Angle| % Difference| Acceptable?|
+|---------|----------|---------------|-------------|------------|
+|    1    |  13°     |       x°      |      x%     |     y/n    |
+|    2    |  62°     |       x°      |      x%     |     y/n    |
+|    3    |  97°     |       x°      |      x%     |     y/n    |
+|    4    |  176°    |       x°      |      x%     |     y/n    |
+|    5    |  115°    |       x°      |      x%     |     y/n    |
+|    6    |  16°     |       x°      |      x%     |     y/n    |
+|    7    |  20°     |       x°      |      x%     |     y/n    |
+|    8    |  87°     |       x°      |      x%     |     y/n    |
+|    9    |  46°     |       x°      |      x%     |     y/n    |
+|    10   |  69°     |       x°      |      x%     |     y/n    |
+
+Servo 2 Table
+
+|  Trial  | Set Angle| Recorded Angle| % Difference| Acceptable?|
+|---------|----------|---------------|-------------|------------|
+|    1    |  96°     |       x°      |      x%     |     y/n    |
+|    2    |  266°    |       x°      |      x%     |     y/n    |
+|    3    |  28°     |       x°      |      x%     |     y/n    |
+|    4    |  162°    |       x°      |      x%     |     y/n    |
+|    5    |  147°    |       x°      |      x%     |     y/n    |
+|    6    |  248°    |       x°      |      x%     |     y/n    |
+|    7    |  153°    |       x°      |      x%     |     y/n    |
+|    8    |  198°    |       x°      |      x%     |     y/n    |
+|    9    |  204°    |       x°      |      x%     |     y/n    |
+|    10   |  82°     |       x°      |      x%     |     y/n    |
+
 Servo Speed
 Power Draw
 
