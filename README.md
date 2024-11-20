@@ -19,17 +19,22 @@ Coming soon :)
 
 ### Team
 
-[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
+<img src= "https://cdn.discordapp.com/attachments/1201722866601566270/1308644693554237592/IMG_37402.jpg?ex=673eb1d8&is=673d6058&hm=f7857571a3e89a58b0f45fc3bd33e164bada26f60cb7b51ff9e460e1ef92da41&" width="800" height="500">
 
-[Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
-
-[Sterling Sloan](www.linkedin.com) is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
-
-[Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
+From left to right:
 
 [JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
 
+[Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
+
 [Austin Williams](https://www.linkedin.com/in/austingwilliams/) is an electrical engineering major with a concentration in Power Systems. He is interested in power transmission and operations.
+
+[Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
+
+[Sterling Sloan](www.linkedin.com) is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
+
+[Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
+
 
 ### Faculty Supervisor
 
