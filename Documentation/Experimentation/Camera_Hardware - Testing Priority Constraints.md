@@ -1,7 +1,7 @@
 # Testing Priority Constraints
 ## Experiment Description
 ### Summary
-Insert Summary here
+Bingus
 
 #### Subsystem(s) Involved:
 Camera Hardware Subsystem
@@ -55,11 +55,14 @@ Power Draw
 <!-- data tables or graph of the results (whichever is appropriate) -->
 Image Capture
 
-|  Trial 1|  1    |  2      |  3       |
-|---------|-------|---------|----------|
-|    A    |  yes  |  yes    |  yes     |
-|    B    |  yes  |  yes    |  yes     |
-|    C    |  yes  |  yes    |  yes     |
+|  Trials | Servo 1| Servo 2| Set Angle| Recorded Angle| Difference
+|---------|-------|---------|----------|--------|---------|----------|
+|    1    |  yes  |  yes    |  yes     |         
+|    2    |  yes  |  yes    |  yes     |
+|    3    |  yes  |  yes    |  yes     |
+
+<!-- 13, 62, 97, 176, 115, 16, 20, 87, 46, 67 -->
+<!-- 96, 266, 28, 162, 147, 248, 153, 198, 204, 82 -->
 
 Image Quality
 Servo Accuracy
