@@ -55,6 +55,8 @@ Camera Hardware Subsystem
 
 ## Experimental Data
 <!-- data tables or graph of the results (whichever is appropriate) -->
+*All quantitative measurements are subject to human error, and will be accounted for in concluding the system performance
+
 #### Image Capture
 
 |  Image | Target Visible?| Operator Visible? | Acceptable?|
@@ -93,16 +95,16 @@ Image5Properties
 
 |  Trials | Set Angle| Recorded Angle| Angle Difference| Acceptable?|
 |---------|----------|---------------|-------------|------------|
-|    1    |  13°     |       ~11°    |      2     |     y/n    |
-|    2    |  62°     |       ~59°    |      3     |     y/n    |
-|    3    |  97°     |       ~95°    |      2     |     y/n    |
-|    4    |  176°    |       ~170°      |      6     |     y/n    |
-|    5    |  115°    |       ~110°      |      5     |     y/n    |
-|    6    |  16°     |       ~12°      |      4     |     y/n    |
-|    7    |  35°     |       ~20°      |      15     |     y/n    |
-|    8    |  87°     |       ~82°      |      5     |     y/n    |
-|    9    |  46°     |       ~42°      |      4     |     y/n    |
-|    10   |  69°     |       ~65°      |      4     |     y/n    |
+|    1    |  13°     |       ~11°    |      2°     |     Y    |
+|    2    |  62°     |       ~59°    |      3°     |     Y    |
+|    3    |  97°     |       ~95°    |      2°     |     Y    |
+|    4    |  176°    |       ~170°      |      6°     |     Y    |
+|    5    |  115°    |       ~110°      |      5°     |     Y    |
+|    6    |  16°     |       ~12°      |      4°     |     Y    |
+|    7    |  35°     |       ~20°      |      15°     |     N    |
+|    8    |  87°     |       ~82°      |      5°     |     Y    |
+|    9    |  46°     |       ~42°      |      4°     |     Y    |
+|    10   |  69°     |       ~65°      |      4°     |     Y    |
 |Average|  71.6°      |  66.6°     |  5°  |    90%    |
 
 
@@ -110,21 +112,21 @@ Image5Properties
 
 |  Trial  | Set Angle| Recorded Angle| Difference| Acceptable?|
 |---------|----------|---------------|-------------|------------|
-|    1    |  96°     |       x°      |      x%     |     y/n    |
-|    2    |  266°    |       x°      |      x%     |     y/n    |
-|    3    |  28°     |       x°      |      x%     |     y/n    |
-|    4    |  162°    |       x°      |      x%     |     y/n    |
-|    5    |  147°    |       x°      |      x%     |     y/n    |
-|    6    |  248°    |       x°      |      x%     |     y/n    |
-|    7    |  153°    |       x°      |      x%     |     y/n    |
-|    8    |  198°    |       x°      |      x%     |     y/n    |
-|    9    |  204°    |       x°      |      x%     |     y/n    |
-|    10   |  82°     |       x°      |      x%     |     y/n    |
-|Average|       |       |    |        |
+|    1    |  96°     |       95°      |      1°     |     Y    |
+|    2    |  266°    |       250°      |     16°     |     N    |
+|    3    |  28°     |       23°      |      5°     |     Y    |
+|    4    |  162°    |       149°      |      13°     |     N    |
+|    5    |  147°    |       135°      |      12°     |     N    |
+|    6    |  248°    |       230°      |      18°     |     N    |
+|    7    |  153°    |       140°      |      13°     |     N    |
+|    8    |  198°    |       180°      |      18°     |     N    |
+|    9    |  204°    |       185°      |      19°     |     N    |
+|    10   |  82°     |       79°      |      3°     |     Y    |
+|Average|    158.4   |   146.6    |  11.8  |    30    |
 
 ##### Servo Speed
 
-*Disclaimer: These measurements, due to the difficulty of automation, are taken by hand and are therefore subject to human error.
+*These measurements are taken by hand due to the difficulty of automation using video and frame-by-frame analysis
 
 ##### Servo 1 Table
 
