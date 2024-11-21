@@ -17,7 +17,7 @@ Database Subsystem
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
 ### constraints 1
-- Number of trials 1:
+- Number of trials 1 (more detail is describe in [Methods for testing constraint 1](#Methods for testing constraint 1): 
 1. Generate a packet with a maximum size of 250 bytes, plus a 9-byte header.
 2. Send the drone packet.
 3. Develop a method to calculate the total processing time once a packet is received.
@@ -34,7 +34,21 @@ Database Subsystem
 ![image](https://github.com/user-attachments/assets/9baf4e3d-ebf4-451b-8974-d45bd81dc4cc)
 ![image](https://github.com/user-attachments/assets/4cf7b2fa-40d4-4f78-b11c-7610b0900872)
 
-As outlined in the F3411-22a document, a packet can contain up to 10 messages, with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
+As outlined in the F3411-22a document, a packet can contain up to 10 message block, with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
+
+#### Methods for testing constraint 1
+- Method 1:
+1. Only Example Message 2 will be included within the 259-byte packet.
+2. Message 2 will be placed in the 10th block.
+3. f the processing time exceeds 100ms, move Message 2 to the 5th block.
+4. If the processing time is close to 100ms, move Message 2 down by one block (from block 5 to 6) until the processing time exceeds 100ms.
+
+- Method 2:
+1. Both Message 2 and Message 3 will be included within the 259-byte packet.
+2. Message 2 will be placed in the 6th block, while Message 3 will be placed in the 10th block.
+3. If the processing time exceeds 100ms, move Message 3 to the 6th block.
+4. If the processing time still exceeds 100ms, shift both Message 2 and Message 3 up by one block (from block 6 to 5), and continue shifting until the processing time is less than 100ms.
+
 
 ## Experimental Data - result
 <!-- data tables or graph of the results (whichever is appropriate) -->
