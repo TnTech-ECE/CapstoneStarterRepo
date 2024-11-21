@@ -40,7 +40,8 @@ Camera Hardware Subsystem
 1. Attach a 360° graduated circle to the moving arm of each servo motor.
 2. Attach a yellow indicator piece of plastic to show where servo arm is currently pointing.
 3. Create a program (aaronTest.cpp) to move the servos to pre-determined angles for testing.
-4. Run and repeat test 10 times for each motor, using different angles and recording each result in the data table below.
+4. Initialize program and set both servos to zero degrees.
+5. Run and repeat test 10 times for each motor, using different angles and recording each result in the data table below.
 
 #### Servo Speed
 - Number of trials: 10
@@ -90,24 +91,24 @@ Image5Properties
 
 ##### Servo 1 Table
 
-|  Trials | Set Angle| Recorded Angle| % Difference| Acceptable?|
+|  Trials | Set Angle| Recorded Angle| Angle Difference| Acceptable?|
 |---------|----------|---------------|-------------|------------|
-|    1    |  13°     |       x°      |      x%     |     y/n    |
-|    2    |  62°     |       x°      |      x%     |     y/n    |
-|    3    |  97°     |       x°      |      x%     |     y/n    |
-|    4    |  176°    |       x°      |      x%     |     y/n    |
-|    5    |  115°    |       x°      |      x%     |     y/n    |
-|    6    |  16°     |       x°      |      x%     |     y/n    |
-|    7    |  35°     |       x°      |      x%     |     y/n    |
-|    8    |  87°     |       x°      |      x%     |     y/n    |
-|    9    |  46°     |       x°      |      x%     |     y/n    |
-|    10   |  69°     |       x°      |      x%     |     y/n    |
-|Average|       |       |    |        |
+|    1    |  13°     |       ~11°    |      2     |     y/n    |
+|    2    |  62°     |       ~59°    |      3     |     y/n    |
+|    3    |  97°     |       ~95°    |      2     |     y/n    |
+|    4    |  176°    |       ~170°      |      6     |     y/n    |
+|    5    |  115°    |       ~110°      |      5     |     y/n    |
+|    6    |  16°     |       ~12°      |      4     |     y/n    |
+|    7    |  35°     |       ~20°      |      15     |     y/n    |
+|    8    |  87°     |       ~82°      |      5     |     y/n    |
+|    9    |  46°     |       ~42°      |      4     |     y/n    |
+|    10   |  69°     |       ~65°      |      4     |     y/n    |
+|Average|  71.6°      |  66.6°     |  5°  |    90%    |
 
 
 ##### Servo 2 Table
 
-|  Trial  | Set Angle| Recorded Angle| % Difference| Acceptable?|
+|  Trial  | Set Angle| Recorded Angle| Difference| Acceptable?|
 |---------|----------|---------------|-------------|------------|
 |    1    |  96°     |       x°      |      x%     |     y/n    |
 |    2    |  266°    |       x°      |      x%     |     y/n    |
