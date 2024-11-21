@@ -105,10 +105,10 @@ Message 2 is stored at block 5, and message 3 is stored at block 10.
 |  3 | 4 | | 51 ms | yes |
 |  3 | 5 | | 77 ms | yes |
 |  3 | 6 | | 86 ms | yes |
-|  3 | 6 | | 109 ms | no |
-|  3 | 6 | | 117 ms | no |
-|  3 | 6 | | 125 ms | no |
-|  3 | 6 | | 134 ms | no |
+|  3 | 7 | | 109 ms | no |
+|  3 | 8 | | 117 ms | no |
+|  3 | 9 | | 125 ms | no |
+|  3 | 10 | | 134 ms | no |
 
 ### Constraint 2 result:
 |  list | id | speed | drone_latitude | drone_longitude | drone _altitude | timestamp | Send Location | upload Speed | Recevied? |
