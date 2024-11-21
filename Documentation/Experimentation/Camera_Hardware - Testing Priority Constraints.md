@@ -46,7 +46,11 @@ Camera Hardware Subsystem
 #### Servo Speed
 - Number of trials: 10
 1. While running Servo Accuracy test, time how long it takes for the servo to reach the final angle requested
-2. Record results and rough times in the table
+2. Record results and estimate times from recorded video
+
+- Number of Trials: 4
+1. After Testing average response time of servos, find how long it takes for each motor to run from 0° position to max rotation, and then back to 0°.
+2. Record results and estimate times from recorded video.
 
 #### Power Draw
 - Number of trials: 10
@@ -93,7 +97,7 @@ Image5Properties
 
 ##### Servo 1 Table
 
-|  Trials | Set Angle| Recorded Angle| Angle Difference| Acceptable?|
+|  Trials | Set Angle (°)| Recorded Angle (°)| Angle Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
 |    1    |  13°     |       ~11°    |      2°     |     Y    |
 |    2    |  62°     |       ~59°    |      3°     |     Y    |
@@ -110,7 +114,7 @@ Image5Properties
 
 ##### Servo 2 Table
 
-|  Trial  | Set Angle| Recorded Angle| Difference| Acceptable?|
+|  Trial  | Set Angle (°)| Recorded Angle (°)| Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
 |    1    |  96°     |       95°      |      1°     |     Y    |
 |    2    |  266°    |       250°      |     16°     |     N    |
@@ -128,37 +132,38 @@ Image5Properties
 
 *These measurements are taken using video and frame-by-frame analysis/interpolation. All videos are taken at 30 frames per second.
 
-##### Servo 1 Table
+##### Servo 1 Table, Average Run Times
 
-|  Trials| Frame Count| Equivalent Time | Distance Moved| Acceptable?|
-|---------|-----------|----------|-----------|------------|
-|    1   |  5     |    xs     | deg|     y/n    |
-|    2    |  12     |    xs     | deg|     y/n    |
-|    3   |  8      |    xs     | deg|     y/n    |
-|    4     |  13      |    xs     | deg|     y/n    |
-|    5    |  12      |    xs     | deg|     y/n    |
-|    6    |  15     |    xs     | deg|     y/n    |
-|    7    |  4      |    xs     | deg|     y/n    |
-|    8    |  13      |    xs     | deg|     y/n    |
-|    9     |  8      |    xs     | deg|     y/n    |
-|    10       |  6      |    xs     | deg|     y/n    |
-|Average|       |       |    |        | deg|
+|  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
+|---------|-----------|---------------------|-------------------|------------|
+|    1    |  5        |    0.167            | 13                |     Y      |
+|    2    |  12       |    0.400            | 49                |     Y      |
+|    3    |  8        |    0.267            | 35                |     Y      |
+|    4    |  13       |    0.433            | 79                |     Y      |
+|    5    |  12       |    0.400            | 61                |     Y      |
+|    6    |  15       |    0.500            | 99                |     Y      |
+|    7    |  4        |    0.133            | 19                |     Y      |
+|    8    |  13       |    0.433            | 52                |     Y      |
+|    9    |  8        |    0.267            | 41                |     Y      |
+|    10   |  6        |    0.200            | 23                |     Y      |
+|Average  |   9.6     |     0.32            |   47.1            |   100%     |
 
-##### Servo 2 Table
+##### Servo 2 Table, Average Run Times
 
-|  Trials | Start Time| End Time | Difference| Acceptable?|
-|---------|-----------|----------|-----------|------------|
-|    1    |  xs       |  xs      |    xs     |     y/n    |
-|    2    |  xs       |  xs      |    xs     |     y/n    |
-|    3    |  xs       |  xs      |    xs     |     y/n    |
-|    4    |  xs       |  xs      |    xs     |     y/n    |
-|    5    |  xs       |  xs      |    xs     |     y/n    |
-|    6    |  xs       |  xs      |    xs     |     y/n    |
-|    7    |  xs       |  xs      |    xs     |     y/n    |
-|    8    |  xs       |  xs      |    xs     |     y/n    |
-|    9    |  xs       |  xs      |    xs     |     y/n    |
-|    10   |  xs       |  xs      |    xs     |     y/n    |
-|Average|       |       |    |        |
+|  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
+|---------|-----------|-----------------|---------------|------------|
+|    1    |  15       |    0.500           | deg           |     y/n    |
+|    2    |  25       |    0.833           | deg           |     y/n    |
+|    3    |  33       |    1.100           | deg           |     y/n    |
+|    4    |  20       |    0.667           | deg           |     y/n    |
+|    5    |  5        |    0.167           | deg           |     y/n    |
+|    6    |  17       |    xs           | deg           |     y/n    |
+|    7    |  15       |    xs           | deg           |     y/n    |
+|    8    |  9        |    xs           | deg           |     y/n    |
+|    9    |  5        |    xs           | deg           |     y/n    |
+|    10   |  16       |    xs           | deg           |     y/n    |
+|Average  |           |                 |               |            |
+
 
 ##### Power Draw
 
