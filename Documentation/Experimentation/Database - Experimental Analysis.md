@@ -128,6 +128,8 @@ Based on Constraint 1, three different methods were employed to test a maximum-b
 
 Upon reviewing the main code, the issue appears to stem from how the system interacts with the database. Whenever a drone is detected within the priority zone, the system attempts to connect to the database, retrieve the required data, and then close the connection. If the system could maintain an active connection for a specified timeframe after the initial connection, it would likely reduce the processing time to below 100ms.
 
+In Constraint 2, two locations were selected for testing. Both locations demonstrated upload speeds significantly higher than the size of the maximum-byte packet. As long as there is a stable Wi-Fi connection with an upload speed exceeding 259 bps, the database should be capable of receiving and unpacking the packet in under a second. This is supported by the fact that the Raspberry Pi hosting the database in the Capstone Lab achieves a download speed of approximately 39 Mbps.
+
 #### Final Thoughts
 <!-- Were constraints met? -->
 Both constraints were met, except for Constraint 1 when using Method 3. However, upon reviewing and analyzing the issue, there is certainly room for improvement.
