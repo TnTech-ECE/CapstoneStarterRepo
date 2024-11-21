@@ -4,7 +4,9 @@
 Taking potential interference into account, the database must reliably receive drone packets from the receiver system regardless of its location on campus. Furthermore, when handling a drone packet of maximum byte size, the system's processing time must remain within the defined time limit.
 
 #### Subsystem(s) Involved:
-Database Subsystem
+- Database Subsystem
+  
+- Camera Subsystem
 
 #### Constraints Tested:
 - Constraints 1 - If a drone enter a pre-marked geographical locations, then the drone location, drone speed and control station location will be sent to the camera subsystem.
@@ -26,7 +28,7 @@ Database Subsystem
 ### Constraints 2
 - Number of trials: 2
 1. Relocate to a site different from where the database is installed.
-2. Transmit the drone packet.
+2. Transmit the drone packet to the database installed in the Capstone Lab.
 3. Use [upload speed tester](https://www.speedtest.net/result/17036840573) to check for upload speed, ideally we want the upload speed to be low as possible
 4. Monitor and analyze the database to check for any missing data.
 
@@ -36,7 +38,7 @@ Database Subsystem
 ![image](https://github.com/user-attachments/assets/6e9f0fb3-fb5d-4cff-a5e2-eb9b090221ab)
 
 
-As outlined in the F3411-22a document, a packet can contain up to 10 message block, with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
+As outlined in the F3411-22a document, a packet can contain up to 10 message block (one block used for id), with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
 
 #### Methods for testing constraint 1
 - Method 1:
@@ -57,11 +59,13 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 ### Data Recored Example (method 1)
 ![20241120_23h44m05s_grim](https://github.com/user-attachments/assets/42294710-e2f3-4cc9-a73a-31c25a926a77)
 ![20241121_00h25m49s_grimexampel2](https://github.com/user-attachments/assets/aba9ffc2-9d39-44ef-b7cf-4d1f93b6d3a8)
+
 Message 2 information is stored at the very end.
 
 #### Data Recored Example (method 2)
 ![20241120_23h44m05s_grim](https://github.com/user-attachments/assets/42294710-e2f3-4cc9-a73a-31c25a926a77)
 ![20241121_01h10m35s_grimexample3](https://github.com/user-attachments/assets/ae215d3d-b036-4c27-b112-e2d1f6becfa1)
+
 Message 2 is stored at block 5, and message 3 is stored at block 10.
 
 #### Data Recored Example (Method 3)
@@ -116,6 +120,10 @@ Message 2 is stored at block 5, and message 3 is stored at block 10.
 ## Conclusions
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
+Looking at constraint 1, three different method  are used for testing a maximum bytes packet, when the drone is detected within the priority zone, if the drone detected is in the last block, it took the longest process time for sending the drone location data to the carmea system. However, in method 3, when the drone is detected within all 9 block, in the first run, it was above achieve the proces time of below 100ms, but in the second run, after 6 block, process time exceed the 100ms, going through the main code, there probably is a problem with the way it is trying to acess its database, whenever a drone is detected in side the priority zone, the system will try to connect to the database and pull the database, then close the connection backdown, if the system is able to stay connected within a certain timeframe upon the system making that first connection, it should be able to reduce the process time back down to <100ms.
+
+In constraint 2, two different location are test, both the location choosed have a upload speed much greater than 259 bytes, long as there is a wifi connection and the upload speed is greater 260 byte/sec the database should be able receive the drone packet in less than 1s. Sicne the Raspberry pi is able to download at 46.89
 
 #### Final Thoughts
 <!-- Were constraints met? -->
+Both of constraints was met, with exception on constraint 1 using method 3, however, looking over and analysising the issuse, there is definetly improvement could be made.
