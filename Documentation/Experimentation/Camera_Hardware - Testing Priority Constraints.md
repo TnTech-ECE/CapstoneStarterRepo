@@ -190,6 +190,8 @@ Numbers acquired from the Power Camera Experiment Results in the [Power Systems]
 <!-- Were constraints met? -->
 Overall, the contraints being tested were/were not met for the following reasons. THE REASONS. Overall however, this subsystem shows strong promise, and with a bit of refinement and tuning, can be a strong prototype for a future permanent detection system for the TTU Campus.
 
+N/A Constraints were not tested due to being untestable (denoted with an *) at current subsystem progress or irrelevance on current system performance
+
 | No.| Constraint | Constraint Met? |
 | -- | --------- |--------|
 |  1| System shall capture an image of the UAS in flight or the control station| N|
@@ -198,10 +200,8 @@ Overall, the contraints being tested were/were not met for the following reasons
 |  4| Camera zoom, focus, and light sensitivity (ISO) are not required to be controlled by system software|N/A|
 |  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y/N|
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Y/N|
-|  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| N/A|
+|  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| N/A*|
 |  8| Camera system shall not draw more than 50 Watts of power| Y|
-|  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| N/A|
-| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit|N/A|
+|  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| N/A*|
+| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit|N/A*|
 | 11| Camera system shall not operate in environmental conditions exceeding a temperature range of (0 - 50)° C| N/A|
-
-(N/A Constraints were not tested due to being untestable at current subsystem progress or irrelevance on current system performance)
