@@ -126,23 +126,23 @@ Image5Properties
 
 ##### Servo Speed
 
-*These measurements are taken by hand due to the difficulty of automation using video and frame-by-frame analysis
+*These measurements are taken using video and frame-by-frame analysis/interpolation. All videos are taken at 30 frames per second.
 
 ##### Servo 1 Table
 
-|  Trials | Start Time| End Time | Difference| Acceptable?|
+|  Trials| Frame Count| Equivalent Time | Distance Moved| Acceptable?|
 |---------|-----------|----------|-----------|------------|
-|    1    |  xs       |  xs      |    xs     |     y/n    |
-|    2    |  xs       |  xs      |    xs     |     y/n    |
-|    3    |  xs       |  xs      |    xs     |     y/n    |
-|    4    |  xs       |  xs      |    xs     |     y/n    |
-|    5    |  xs       |  xs      |    xs     |     y/n    |
-|    6    |  xs       |  xs      |    xs     |     y/n    |
-|    7    |  xs       |  xs      |    xs     |     y/n    |
-|    8    |  xs       |  xs      |    xs     |     y/n    |
-|    9    |  xs       |  xs      |    xs     |     y/n    |
-|    10   |  xs       |  xs      |    xs     |     y/n    |
-|Average|       |       |    |        |
+|    1   |  5     |    xs     | deg|     y/n    |
+|    2    |  12     |    xs     | deg|     y/n    |
+|    3   |  8      |    xs     | deg|     y/n    |
+|    4     |  13      |    xs     | deg|     y/n    |
+|    5    |  12      |    xs     | deg|     y/n    |
+|    6    |  15     |    xs     | deg|     y/n    |
+|    7    |  4      |    xs     | deg|     y/n    |
+|    8    |  13      |    xs     | deg|     y/n    |
+|    9     |  8      |    xs     | deg|     y/n    |
+|    10       |  6      |    xs     | deg|     y/n    |
+|Average|       |       |    |        | deg|
 
 ##### Servo 2 Table
 
