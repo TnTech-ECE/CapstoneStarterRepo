@@ -28,7 +28,7 @@ Taking potential interference into account, the database must reliably receive d
 ### Constraints 2
 - Number of trials: 2
 1. Relocate to a site different from where the database is installed.
-2. Transmit the drone packet to the database installed in the Capstone Lab.
+2. Send the drone packet to the database located in the Capstone Lab
 3. Use [upload speed tester](https://www.speedtest.net/result/17036840573) to check for upload speed, ideally we want the upload speed to be low as possible
 4. Monitor and analyze the database to check for any missing data.
 
@@ -120,10 +120,10 @@ Message 2 is stored at block 5, and message 3 is stored at block 10.
 ## Conclusions
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
-Looking at constraint 1, three different method  are used for testing a maximum bytes packet, when the drone is detected within the priority zone, if the drone detected is in the last block, it took the longest process time for sending the drone location data to the carmea system. However, in method 3, when the drone is detected within all 9 block, in the first run, it was above achieve the proces time of below 100ms, but in the second run, after 6 block, process time exceed the 100ms, going through the main code, there probably is a problem with the way it is trying to acess its database, whenever a drone is detected in side the priority zone, the system will try to connect to the database and pull the database, then close the connection backdown, if the system is able to stay connected within a certain timeframe upon the system making that first connection, it should be able to reduce the process time back down to <100ms.
+Based on Constraint 1, three different methods were employed to test a maximum-byte packet when a drone is detected within the priority zone. If the drone is detected in the last block, it results in the longest processing time for transmitting the drone's location data to the camera system. However, in Method 3, when the drone was detected across all nine blocks during the first run, the processing time remained below 100ms. In the second run, after reaching the sixth block, the processing time exceeded 100ms.
 
-In constraint 2, two different location are test, both the location choosed have a upload speed much greater than 259 bytes, long as there is a wifi connection and the upload speed is greater 260 byte/sec the database should be able receive the drone packet in less than 1s. Sicne the Raspberry pi is able to download at 46.89
+Upon reviewing the main code, the issue appears to stem from how the system interacts with the database. Whenever a drone is detected within the priority zone, the system attempts to connect to the database, retrieve the required data, and then close the connection. If the system could maintain an active connection for a specified timeframe after the initial connection, it would likely reduce the processing time to below 100ms.
 
 #### Final Thoughts
 <!-- Were constraints met? -->
-Both of constraints was met, with exception on constraint 1 using method 3, however, looking over and analysising the issuse, there is definetly improvement could be made.
+Both constraints were met, except for Constraint 1 when using Method 3. However, upon reviewing and analyzing the issue, there is certainly room for improvement.
