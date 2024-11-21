@@ -8,20 +8,20 @@ to ensure that the power systems will supply adequate power for the Camera and R
 without limitations due to insufficient power. The maximum power was already tested in the minimal function prototype testing, so the team did not deem it necessary to modify the system trying to obtain those maximum load values.
 
 
-For the Power Camera system, a voltmeter and ammeter were connected while the Camera Hardware system interfaced with the Camera Software,
+For the Power Camera system, a voltmeter and ammeter were connected while the Camera Hardware system which interfaced with the Camera Software,
 Website, and Database systems to make various movements with both motors. We measured 20 individual turns of the motor to gather a
 sufficient amount of data. 
 
 
 For the Power Receiver system, the team used a USB test meter to measure the voltage and current supplied from the Waveshare module
-while the receiver system ran the CHANGE THIS program.
+while the receiver system ran the program used to transmit data to the database.
 
 
 ### Summary
 <!-- Short summary of the experiment written after completing it -->
 The team tested both the Power Camera and Power Receiver systems to find the voltage and current during typical functionality to ensure that the Camera and Receiver systems were able to acheieve full functionality without any limitations due to voltage drop. With 20 data points for both experiments, no voltage drop or functionality limtations were observed, so the team would consider both of the constraints met. 
 
-#### Subsystem(s) Involved:
+#### Subsystems Involved:
 - Power Camera System
 
 - Power Receiver System
@@ -31,7 +31,7 @@ The team tested both the Power Camera and Power Receiver systems to find the vol
 - The system shall be able to supply 1.25 W to the ESP32 and 0.7095 W to the ESP8266 for the receiever system to acheive full functionality.
  
 #### Expected Result(s):
-- The team expects the actual total wattage to be lower than 19.5 W for the servo motors and camera and 1.96 W for the ESP32 and ESP8266 proposed in detail design. This is due to designing the Power systems for the max ratings in the worst case scenario to ensure that the systems would not be out of specification. This was done, because the team was not sure of what the actual load would be during the design process, and the cost difference of reducing the system's power output to the exact specification would be minimal.
+- The team expects the actual total wattage to be lower than 19.5 W for the servo motors and camera and lower than the 1.96 W for the ESP32 receiver and ESP8266 Wi-Fi module that were proposed in detail design. This is due to designing the Power systems for the max ratings in the worst case scenario to ensure that the systems would not be out of specification. This was done, because the team was not sure of what the actual load would be during the design process, and the cost difference of reducing the system's power output to the exact specification would be minimal while increasing the risk of functionality limitations in edge cases. 
 
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
@@ -42,7 +42,7 @@ Power Camera Experiment
 1. Connect the Power Camera system to the Camera Hardware system.
 2. Connect two Rigol DM3058E Digital Multimeters to the system with one multimeter acting as a voltmeter and the other acting as a ammeter to measure the voltage and current.
 3. Run a test that moves the motors at various angles and takes pictures with the camera.
-4. Record the voltage and current readings for each movement.
+4. Record the voltage and current readings for each movement and picture taken.
 
 Power Receiver Experiment
 
@@ -50,7 +50,7 @@ Power Receiver Experiment
 
 1. Connect the Power Receiver system to the USB meter.
 2. Connect the USB meter to the Receiver system.
-3. Run the program for the ESP32 and ESP8266 to transmit data to the database.
+3. Run the program for the ESP32 receiver and ESP8266 Wi-Fi module to transmit data to the database.
 4. Record the voltage and current readings.
 
 ## Experimental Data
@@ -109,8 +109,8 @@ Table 2: Power Receiver Experiment Results <br/>
 ## Conclusions
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
-For both experiments, the wattages were much lower than what was specified in the constraint for detailed design. This was expected due to the constraint wattage numbers being derived from maximum load values, which is not going to be achieved during standard operation. 
+For both experiments, the wattages were much lower than what was specified in the constraint for detailed design. This was expected due to the constraint wattage numbers being derived from maximum load values, which is realistically not going to be achieved during standard operation of the systems. 
 
 #### Final Thoughts
 <!-- Were constraints met? -->
-Yes, both constraints were met. The constraints were primarly about achieiving full functionality of the Camera and Receiver systems instead of the wattage numbers that were calculated using a maximum load. During both tests, the systems achieved full functionality, and the minimum function prototype testing used a simulated load to ensure that the power systems could maintain the rated voltages at the maximum load values. Since both aspects of the constraints were confirmed through testing, the team would consider both of these constraints met.
+Yes, both constraints were met. The constraints were primarly about achieiving full functionality of the Camera and Receiver systems instead of the wattage numbers that were calculated using maximum load values. During both tests, the systems achieved full functionality. Also, the minimum function prototype testing used a simulated load to ensure that the power systems could maintain the rated voltages at the maximum load values used during detailed design. Since both aspects of the constraints were confirmed through testing, the team would consider both of these constraints met.
