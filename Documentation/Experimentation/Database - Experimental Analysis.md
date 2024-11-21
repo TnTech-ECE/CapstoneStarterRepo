@@ -54,7 +54,8 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 
 
 #### Data recored
-![image](https://github.com/user-attachments/assets/a8e043a0-249d-47b2-af41-4085b9eb6a8e)
+![20241120_23h44m05s_grim](https://github.com/user-attachments/assets/42294710-e2f3-4cc9-a73a-31c25a926a77)
+
 
 
 
