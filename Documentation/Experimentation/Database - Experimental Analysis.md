@@ -17,9 +17,11 @@ Database Subsystem
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
 ### constraints 1
-- Number of trials:
-1. Step 1
-2. Step 2
+- Number of trials 1:
+1. Generate a packet with a maximum size of 250 bytes, plus a 9-byte header.
+2. Send the drone packet.
+3. Develop a method to calculate the total processing time once a packet is received.
+4. Monitor and evaluate the overall time taken to process the data.
 
 ### Constraints 2
 - Number of trials: 2
@@ -32,14 +34,17 @@ Database Subsystem
 ![image](https://github.com/user-attachments/assets/9baf4e3d-ebf4-451b-8974-d45bd81dc4cc)
 ![image](https://github.com/user-attachments/assets/4cf7b2fa-40d4-4f78-b11c-7610b0900872)
 
-As specified in the F3411-22a document, a package can hold a maximum of 10 messages, totaling 250 bytes (rest of the package fill with filler data). The example message above will be utilized to test both constraints, with message 2 and 3 within the package designated for verifying the priority zone.
+As outlined in the F3411-22a document, a packet can contain up to 10 messages, with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
 
 ## Experimental Data - result
 <!-- data tables or graph of the results (whichever is appropriate) -->
+### Constraint 1 result:
+
+### Constraint 2 result:
 |  list | id | speed | drone_latitude | drone_longitude | drone _altitude | timestamp | Send Location | upload Speed | Recevied? |
 |--------|----------------|-------------------|------------|------------|------------|------------|------------|------------|----|
-|    6   |  ABC   |  63.75 m/s|     13.5323056    | -70.4707824 | 500 meter | 2024-11-20 21:07:46 | Basement of Prescott Hall | 84.19 Mbps | Yes |
-|    7   |  ABC   |  63.75 m/s|     45.0143984    | -128.5120208 | 500 meter | 2024-11-20 21:08:46 | Tennis Court behind the Library | 26.75 Mbps | Yes |
+|    6   |  ABC   |  63.75 m/s |     13.5323056    | -70.4707824 | 500 meter | 2024-11-20 21:07:46 | Basement of Prescott Hall | 84.19 Mbps | Yes |
+|    7   |  ABC   |  63.75 m/s|     45.0143984    | -128.5120208 | 500 meter | 2024-11-20 21:07:46 | Tennis Court behind the Library | 26.75 Mbps | Yes |
 
 
 ## Conclusions
