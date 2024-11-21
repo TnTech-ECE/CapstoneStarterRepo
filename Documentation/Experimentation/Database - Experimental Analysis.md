@@ -38,8 +38,8 @@ As specified in the F3411-22a document, a package can hold a maximum of 10 messa
 <!-- data tables or graph of the results (whichever is appropriate) -->
 |  list | id | speed | drone_latitude | drone_longitude | drone _altitude | timestamp | Send Location | upload Speed | Recevied? |
 |--------|----------------|-------------------|------------|------------|------------|------------|------------|------------|----|
-|    6   |  ABC   |  63.75 m/s|     13.5323056    | -70.4707824 | 500 | 2024-11-20 21:07:46 | Basement of Prescott Hall | 84.19 Mbps | Yes |
-|    7   |  ABC   |  63.75 m/s|     45.0143984    | -128.5120208 | 500 | 2024-11-20 21:08:46 | Tennis Court behind the Library | 26.75 Mbps | Yes |
+|    6   |  ABC   |  63.75 m/s|     13.5323056    | -70.4707824 | 500 meter | 2024-11-20 21:07:46 | Basement of Prescott Hall | 84.19 Mbps | Yes |
+|    7   |  ABC   |  63.75 m/s|     45.0143984    | -128.5120208 | 500 meter | 2024-11-20 21:08:46 | Tennis Court behind the Library | 26.75 Mbps | Yes |
 
 
 ## Conclusions
