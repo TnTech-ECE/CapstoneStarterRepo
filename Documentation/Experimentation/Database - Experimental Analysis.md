@@ -44,7 +44,7 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 - Method 1:
 1. Only Example Message 2 will be included within the 259-byte packet.
 2. Message 2 will be placed in the 10th block.
-3. f the processing time exceeds 100ms, move Message 2 to the 5th block.
+3. If the processing time exceeds 100ms, move Message 2 to the 5th block.
 4. If the processing time is close to 100ms, move Message 2 down by one block (from block 5 to 6) until the processing time exceeds 100ms.
 
 - Method 2:
