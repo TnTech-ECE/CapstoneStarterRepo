@@ -58,11 +58,11 @@ Camera Hardware Subsystem
 
 |  Image | Target Visible?| Operator Visible? | Acceptable?|
 |--------|----------------|-------------------|------------|
-|    1   |  xs            |  xs               |     y/n    |
-|    2   |  xs            |  xs               |     y/n    |
-|    3   |  xs            |  xs               |     y/n    |
-|    4   |  xs            |  xs               |     y/n    |
-|    5   |  xs            |  xs               |     y/n    |
+|    1   |  N             |  N                |     N      |
+|    2   |  N             |  N                |     N      |
+|    3   |  N             |  N                |     N      |
+|    4   |  N             |  N                |     N      |
+|    5   |  N             |  N                |     N      |
 
 Image1
 Image2
@@ -74,11 +74,11 @@ Image5
 
 |  Image | Image Resolution| Image Datatype | Acceptable?|
 |--------|-----------------|----------------|------------|
-|    1   |  xs             |  xs            |     y/n    |
-|    2   |  xs             |  xs            |     y/n    |
-|    3   |  xs             |  xs            |     y/n    |
-|    4   |  xs             |  xs            |     y/n    |
-|    5   |  xs             |  xs            |     y/n    |
+|    1   |   4056 x 3040   |      PNG       |      Y     |
+|    2   |   4056 x 3040   |      PNG       |      Y     |
+|    3   |   4056 x 3040   |      PNG       |      Y     |
+|    4   |   4056 x 3040   |      PNG       |      Y     |
+|    5   |   4056 x 3040   |      PNG       |      Y     |
 
 Image1Properties
 Image2Properties
