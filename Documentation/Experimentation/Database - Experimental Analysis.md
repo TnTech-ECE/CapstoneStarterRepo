@@ -25,7 +25,7 @@ Database Subsystem
 - Number of trials: 2
 1. Relocate to a site different from where the database is installed.
 2. Transmit the drone packet.
-3. Use (upload speed tester)https://www.speedtest.net/result/17036840573 to check for upload speed, ideally we want the upload speed to be low as possible
+3. Use [upload speed tester](https://www.speedtest.net/result/17036840573) to check for upload speed, ideally we want the upload speed to be low as possible
 4. Monitor and analyze the database to check for any missing data.
 
 ## Experimental Data - used for testing
