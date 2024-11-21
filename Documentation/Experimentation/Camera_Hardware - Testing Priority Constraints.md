@@ -176,5 +176,26 @@ Image5Properties
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
 
+#### Improvements and Future Work
+
+- Finish the full system build, fully deploying and running camera system.
+- Camera Module Improvements: connection method, auto-focusing, image recognition, etc.
+- Add in methods to verify motor movement and enclosure conditions (humidity, temperature, pressure, etc.) for error-testing.
+- Make system all-in-one instead of two seperate enclosures
 #### Final Thoughts
 <!-- Were constraints met? -->
+Overall, the contraints being tested were/were not met for the following reasons. THE REASONS. Overall however, this subsystem shows strong promise, and with a bit of refinement and tuning, can be a strong prototype for a future permanent detection system for the TTU Campus.
+
+| No.| Constraint | Constraint Met? |
+| -- | --------- |--------|
+|  1| System shall capture an image of the UAS in flight or the control station| Y/N|
+|  2| System shall not take into consideration light levels or physical obstructions when capturing images|N/A|
+|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Y/N|
+|  4| Camera zoom, focus, and light sensitivity (ISO) are not required to be controlled by system software|N/A|
+|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y/N)|
+|  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Y/N|
+|  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| N/A|
+|  8| Camera system shall not draw more than 50 Watts of power| Y/N|
+|  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| N/A|
+| 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit|N/A|
+| 11| Camera system shall not operate in environmental conditions exceeding a temperature range of (0 - 50)° C| N/A|
