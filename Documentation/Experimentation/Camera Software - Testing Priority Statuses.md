@@ -44,7 +44,7 @@ Data has been read
 Location of the camera:
 
 
-<img src= "" width="700" height="500">
+<img src= "https://d82.camscanner.com/sync/download_resize_jpg?folder_name=CamScanner_Page&file_name=3aP0PVJ2V86dMFfBg4y2f4TL.jpg&pixel=200&_t=1732168295&token=73B9AC11302949C27K70D8rY02" width="700" height="500">
 
 Terminal Output:
 
