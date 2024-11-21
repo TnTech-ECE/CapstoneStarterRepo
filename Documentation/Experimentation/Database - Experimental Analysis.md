@@ -52,18 +52,44 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 - Method 3:
 1. fill a full pecket with with every drone location detecetd inside the priority zone.
 
+### Data Recored Example (method 1)
+![20241120_23h44m05s_grim](https://github.com/user-attachments/assets/42294710-e2f3-4cc9-a73a-31c25a926a77)
+![20241121_00h25m49s_grimexampel2](https://github.com/user-attachments/assets/aba9ffc2-9d39-44ef-b7cf-4d1f93b6d3a8)
 
-#### Data recored
+
+#### Data Recored Example (method 2)
+
+#### Data Recored Example (Method 3)
 ![20241120_23h44m05s_grim](https://github.com/user-attachments/assets/42294710-e2f3-4cc9-a73a-31c25a926a77)
 ![20241120_23h48m28sss_grim](https://github.com/user-attachments/assets/0db99c64-44ad-4b03-888d-0d5e3418b2eb)
 
-
 ## Experimental Data - result
 <!-- data tables or graph of the results (whichever is appropriate) -->
-### Constraint 1 result:
-|  Method used | Process time | <100ms |
-|--------------|--------------|--------|
-|  3 | Process time | <100ms |
+### Constraint 1 result(first run):
+|  Method used | block location | Process time | <100ms |
+|--------------|----------------|--------------|--------|
+|  3 | Process time | 2 | 10 ms |
+|  3 | Process time | 3 | 18 ms |
+|  3 | Process time | 4 | 29 ms |
+|  3 | Process time | 5 | 44 ms |
+|  3 | Process time | 6 | 58 ms |
+|  3 | Process time | 6 | 69 ms |
+|  3 | Process time | 6 | 78 ms |
+|  3 | Process time | 6 | 85 ms |
+|  3 | Process time | 6 | 91 ms |
+
+### Constraint 1 result(second run):
+|  Method used | block location | Process time | <100ms |
+|--------------|----------------|--------------|--------|
+|  3 | Process time | 2 | 14 ms |
+|  3 | Process time | 3 | 25 ms |
+|  3 | Process time | 4 | 51 ms |
+|  3 | Process time | 5 | 77 ms |
+|  3 | Process time | 6 | 86 ms |
+|  3 | Process time | 6 | 109 ms |
+|  3 | Process time | 6 | 117 ms |
+|  3 | Process time | 6 | 125 ms |
+|  3 | Process time | 6 | 134 ms |
 
 ### Constraint 2 result:
 |  list | id | speed | drone_latitude | drone_longitude | drone _altitude | timestamp | Send Location | upload Speed | Recevied? |
