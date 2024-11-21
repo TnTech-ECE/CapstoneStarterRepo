@@ -102,6 +102,7 @@ Image5Properties
 |    8    |  87°     |       x°      |      x%     |     y/n    |
 |    9    |  46°     |       x°      |      x%     |     y/n    |
 |    10   |  69°     |       x°      |      x%     |     y/n    |
+|Average|       |       |    |        |
 
 
 ##### Servo 2 Table
@@ -118,6 +119,7 @@ Image5Properties
 |    8    |  198°    |       x°      |      x%     |     y/n    |
 |    9    |  204°    |       x°      |      x%     |     y/n    |
 |    10   |  82°     |       x°      |      x%     |     y/n    |
+|Average|       |       |    |        |
 
 ##### Servo Speed
 
@@ -137,7 +139,7 @@ Image5Properties
 |    8    |  xs       |  xs      |    xs     |     y/n    |
 |    9    |  xs       |  xs      |    xs     |     y/n    |
 |    10   |  xs       |  xs      |    xs     |     y/n    |
-
+|Average|       |       |    |        |
 
 ##### Servo 2 Table
 
@@ -153,24 +155,26 @@ Image5Properties
 |    8    |  xs       |  xs      |    xs     |     y/n    |
 |    9    |  xs       |  xs      |    xs     |     y/n    |
 |    10   |  xs       |  xs      |    xs     |     y/n    |
+|Average|       |       |    |        |
 
 ##### Power Draw
 
+Numbers acquired from the Power Camera Experiment Results in the [Power Systems](Documentation/Experimentation/Power Systems - Experimental Analysis.md) results.
+
 ##### System Table
-
-|  Trials | Voltage| Current | Wattage| Acceptable?|
-|---------|-----------|----------|-----------|------------|
-|    1    |  xs       |  xs      |    xs     |     y/n    |
-|    2    |  xs       |  xs      |    xs     |     y/n    |
-|    3    |  xs       |  xs      |    xs     |     y/n    |
-|    4    |  xs       |  xs      |    xs     |     y/n    |
-|    5    |  xs       |  xs      |    xs     |     y/n    |
-|    6    |  xs       |  xs      |    xs     |     y/n    |
-|    7    |  xs       |  xs      |    xs     |     y/n    |
-|    8    |  xs       |  xs      |    xs     |     y/n    |
-|    9    |  xs       |  xs      |    xs     |     y/n    |
-|    10   |  xs       |  xs      |    xs     |     y/n    |
-
+|Trials | Voltage (V) | Current (mA) | Power (W) | Acceptable?|
+|-------|-------------|--------------|-----------|------------- 
+|    1  |    5.073    |    44.057    |   0.224   |     Y   |
+|    2  |    5.074    |    15.531    |   0.079   |     Y   |
+|    3  |    5.073    |    68.914    |   0.350   |     Y   |
+|    4  |    5.073    |    75.358    |   0.382   |     Y   |
+|    5  |    5.073    |    47.821    |   0.243   |     Y   |
+|    6  |    5.073    |    49.369    |   0.250   |     Y   |
+|    7  |    5.073    |    43.420    |   0.220   |     Y   |
+|    8  |    5.073    |    83.461    |   0.423   |     Y   |
+|    9  |    5.073    |    42.641    |   0.216   |     Y   |
+|   10  |    5.073    |    48.107    |   0.244   |     Y   |
+|Average|    5.0731   |    51.8679   |   0.2631  |     Y   |
 
 ## Conclusions
 #### Interpretation of Data
@@ -188,14 +192,16 @@ Overall, the contraints being tested were/were not met for the following reasons
 
 | No.| Constraint | Constraint Met? |
 | -- | --------- |--------|
-|  1| System shall capture an image of the UAS in flight or the control station| Y/N|
+|  1| System shall capture an image of the UAS in flight or the control station| N|
 |  2| System shall not take into consideration light levels or physical obstructions when capturing images|N/A|
-|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Y/N|
+|  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Y|
 |  4| Camera zoom, focus, and light sensitivity (ISO) are not required to be controlled by system software|N/A|
-|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y/N)|
+|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y/N|
 |  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Y/N|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| N/A|
-|  8| Camera system shall not draw more than 50 Watts of power| Y/N|
+|  8| Camera system shall not draw more than 50 Watts of power| Y|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| N/A|
 | 10| Camera system shall send a notification to the database if an error state persists beyond an acceptable limit|N/A|
 | 11| Camera system shall not operate in environmental conditions exceeding a temperature range of (0 - 50)° C| N/A|
+
+(N/A Constraints were not tested due to being untestable at current subsystem progress or irrelevance on current system performance)
