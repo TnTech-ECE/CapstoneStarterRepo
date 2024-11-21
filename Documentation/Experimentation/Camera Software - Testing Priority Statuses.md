@@ -18,11 +18,11 @@ Camera Software Subsystem
 - Number of trials: 2 trials each
   
 1. Set up the testing environment (consists of a sheet of paper underneath the camera to indicate sudo locations of the UAS and the control station)
-2. Set up the database to output a constant UAS location and a constant control station location.
+2. Set up the database to output a constant UAS location and a constant control station location. The UAS location and control station locations sent through the database are equivalent to the sudo locations in the testing environment.
 3. Set the priority status low.
-4. Record the location of the camera.
+4. Record the location of the camera and the terminal output.
 5. Set the priority status high.
-6. Record the location of the camera.
+6. Record the location of the camera and the terminal output.
 
 
 ## Experimental Data
