@@ -17,7 +17,7 @@ Database Subsystem
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
 ### constraints 1
-- Number of trials 1 (more detail is describe in [Methods for testing constraint 1](#Methods-for-testing-constraint-1): 
+- (more detail is describe in [Methods for testing constraint 1](#Methods-for-testing-constraint-1): 
 1. Generate a packet with a maximum size of 250 bytes, plus a 9-byte header.
 2. Send the drone packet.
 3. Develop a method to calculate the total processing time once a packet is received.
@@ -49,10 +49,16 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 3. If the processing time exceeds 100ms, move Message 3 to the 6th block.
 4. If the processing time still exceeds 100ms, shift both Message 2 and Message 3 up by one block (from block 6 to 5), and continue shifting until the processing time is less than 100ms.
 
+- Method 3:
+1. fill a full pecket with with every drone location inside the priority zone.
+
 
 ## Experimental Data - result
 <!-- data tables or graph of the results (whichever is appropriate) -->
 ### Constraint 1 result:
+|  Method used | Process time | <100ms |
+|--------------|--------------|--------|
+|  3 | Process time | <100ms |
 
 ### Constraint 2 result:
 |  list | id | speed | drone_latitude | drone_longitude | drone _altitude | timestamp | Send Location | upload Speed | Recevied? |
