@@ -40,6 +40,10 @@ Taking potential interference into account, the database must reliably receive d
 
 As outlined in the F3411-22a document, a packet can contain up to 10 message block (one block used for id), with a total size of 250 bytes (the remaining space filled with filler data). The example message above will be used to test both constraints, with messages 2 and 3 in the packet designated for validating the priority zone.
 
+![20241121_10h50m24s_grimpriozone](https://github.com/user-attachments/assets/99cae3e7-d503-4ca5-bbf6-71894755c439)
+
+The figure above show the priority zone area selected.
+
 #### Methods for testing constraint 1
 - Method 1:
 1. Only Example Message 2 will be included within the 259-byte packet.
