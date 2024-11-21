@@ -17,7 +17,7 @@ Database Subsystem
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
 ### constraints 1
-- Number of trials 1 (more detail is describe in [Methods for testing constraint 1](#Methods for testing constraint 1): 
+- Number of trials 1 (more detail is describe in [Methods for testing constraint 1](#Methods-for-testing-constraint-1): 
 1. Generate a packet with a maximum size of 250 bytes, plus a 9-byte header.
 2. Send the drone packet.
 3. Develop a method to calculate the total processing time once a packet is received.
