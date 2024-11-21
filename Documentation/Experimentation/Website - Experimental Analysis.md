@@ -49,6 +49,8 @@ The experiment designed to test the final constraint was simple. We let people c
 
 ## Experimental Data
 <!-- data tables or graph of the results (whichever is appropriate) -->
+![image](https://github.com/user-attachments/assets/98833b71-5b41-4c4a-b082-975f3211b7d9)
+![image](https://github.com/user-attachments/assets/71b1288b-ba61-4527-8496-2b656ef5ab93)
 
 ## Conclusions
 #### Interpretation of Data
