@@ -50,7 +50,12 @@ As outlined in the F3411-22a document, a packet can contain up to 10 message blo
 4. If the processing time still exceeds 100ms, shift both Message 2 and Message 3 up by one block (from block 6 to 5), and continue shifting until the processing time is less than 100ms.
 
 - Method 3:
-1. fill a full pecket with with every drone location inside the priority zone.
+1. fill a full pecket with with every drone location detecetd inside the priority zone.
+
+
+#### Data recored
+![image](https://github.com/user-attachments/assets/b5653568-fc10-4f81-995c-a90f936a4062)
+
 
 
 ## Experimental Data - result
