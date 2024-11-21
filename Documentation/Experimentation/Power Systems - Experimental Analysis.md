@@ -19,6 +19,7 @@ while the receiver system ran the CHANGE THIS program.
 
 ### Summary
 <!-- Short summary of the experiment written after completing it -->
+The team tested both the Power Camera and Power Receiver systems to find the voltage and current during typical functionality to ensure that the Camera and Receiver systems were able to acheieve full functionality without any limitations due to voltage drop. With 20 data points for both experiments, no voltage drop or functionality limtations were observed, so the team would consider both of the constraints met. 
 
 #### Subsystem(s) Involved:
 - Power Camera System
@@ -108,6 +109,8 @@ Table 2: Power Receiver Experiment Results <br/>
 ## Conclusions
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
+For both experiments, the wattages were much lower than what was specified in the constraint for detailed design. This was expected due to the constraint wattage numbers being derived from maximum load values, which is not going to be achieved during standard operation. 
 
 #### Final Thoughts
 <!-- Were constraints met? -->
+Yes, both constraints were met. The constraints were primarly about achieiving full functionality of the Camera and Receiver systems instead of the wattage numbers that were calculated using a maximum load. During both tests, the systems achieved full functionality, and the minimum function prototype testing used a simulated load to ensure that the power systems could maintain the rated voltages at the maximum load values. Since both aspects of the constraints were confirmed through testing, the team would consider both of these constraints met.
