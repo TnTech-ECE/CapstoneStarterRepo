@@ -31,7 +31,8 @@ Database Subsystem
 4. Monitor and analyze the database to check for any missing data.
 
 ## Experimental Data - used for testing
-![image](https://github.com/user-attachments/assets/678cca68-6d78-431d-940e-1003809799d6)
+![image](https://github.com/user-attachments/assets/c0b2b018-2962-4469-b7c9-dcfd86310da4)
+
 ![image](https://github.com/user-attachments/assets/6e9f0fb3-fb5d-4cff-a5e2-eb9b090221ab)
 
 
