@@ -44,7 +44,7 @@ Data has been read
 Location of the camera:
 
 
-<img src= "https://d82.camscanner.com/sync/download_resize_jpg?folder_name=CamScanner_Page&file_name=3aP0PVJ2V86dMFfBg4y2f4TL.jpg&pixel=200&_t=1732168295&token=73B9AC11302949C27K70D8rY02" width="700" height="500">
+<img src= "/Documentation/Experimentation/Images/camerapointinguas.jpg" width="700" height="500">
 
 Terminal Output:
 
@@ -59,10 +59,7 @@ Generated square wave on GPIO pin 19 with pulse width 2.5 ms and duty cycle 21%
 
 Location of the camera:
 
-
-<img src= "https://d82.intsig.net/sync/share/download_resize_jpg?folder_name=CamScanner_Page&_t=1732167595&encrypt_id=MHgyZTkzZDU1ZTk1&device_id=&sid=AABFFE3613694B49YL9A8AA2US&pixel=1000&file_name=22dXNW4XSg8WP7Eh1Sd74P4V.jpg" width="700" height="500">
-
-
+<img src= "/Documentation/Experimentation/Images/camerapointingatuasreal.jpg" width="700" height="500">
 
 ## Conclusions
 #### Interpretation of Data
