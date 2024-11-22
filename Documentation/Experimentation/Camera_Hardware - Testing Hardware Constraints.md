@@ -207,8 +207,8 @@ N/A Constraints were not tested due to being untestable (denoted with an *) at c
 |  2| System shall not take into consideration light levels or physical obstructions when capturing images|N/A|
 |  3| Images captured by the system shall be transmitted to the database in either a RAW or PNG format with a minimum resolution of 1080px720p| Y|
 |  4| Camera zoom, focus, and light sensitivity (ISO) are not required to be controlled by system software|N/A|
-|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y/N|
-|  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Y/N|
+|  5| Servo motors shall be capable of reaching and maintaining angles required for image capture with a ± 10° range of accuracy | Y and N|
+|  6| Servo motors shall be capable of reaching required angles in a minimum time of 500 milliseconds after recieving the appropriate signal(s)| Y and N|
 |  7| Camera system enclosure will meet minimum water resistance standard requirements of IP65 or greater to protect sensitive electronics| N/A*|
 |  8| Camera system shall not draw more than 50 Watts of power| Y|
 |  9| Camera system shall utilize IEEE Standard 802.11[^1] and Tennessee Tech Policy 856 [^2]| N/A*|
