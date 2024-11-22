@@ -71,16 +71,25 @@ Camera Hardware Subsystem
 |    4   |  N             |  N                |     N      |
 |    5   |  N             |  N                |     N      |
 
-<img src= "/Documentation/Experimentation/Images/Camera_image1.png" width="640" height="480">
 Image1
-<img src= "/Documentation/Experimentation/Images/Camera_image2.png" width="640" height="480">
+
+<img src= "/Documentation/Experimentation/Images/Camera_image1.png" width="320" height="240">
+
 Image2
-<img src= "/Documentation/Experimentation/Images/Camera_image3.png" width="640" height="480">
+
+<img src= "/Documentation/Experimentation/Images/Camera_image2.png" width="320" height="240">
+
 Image3
-<img src= "/Documentation/Experimentation/Images/Camera_image4.png" width="640" height="480">
+
+<img src= "/Documentation/Experimentation/Images/Camera_image3.png" width="320" height="240">
+
 Image4
-<img src= "/Documentation/Experimentation/Images/Camera_image5.png" width="640" height="480">
+
+<img src= "/Documentation/Experimentation/Images/Camera_image4.png" width="320" height="240">
+
 Image5
+
+<img src= "/Documentation/Experimentation/Images/Camera_image5.png" width="320" height="240">
 
 #### Image Quality
 
@@ -92,9 +101,15 @@ Image5
 |    4   |   4056 x 3040   |      PNG       |      Y     |
 |    5   |   4056 x 3040   |      PNG       |      Y     |
 
+File Property of each camera image
+
 <img src= "/Documentation/Experimentation/Images/Camera_Image_Properties.png" width="640" height="167">
 
 #### Servo Accuracy
+
+Testing set-up for Testing angles of 180° Servo
+
+<img src= "/Documentation/Experimentation/Images/Tilt_Home.jpg" width="320" height="427">
 
 ##### Servo 1 Table
 
@@ -112,6 +127,10 @@ Image5
 |    10   |  69°     |       ~65°      |      4°     |     Y    |
 |Average|  71.6°      |  66.6°     |  5°  |    90%    |
 
+
+Testing set-up for Testing angles of 270° Servo
+
+<img src= "/Documentation/Experimentation/Images/Pan_Home.jpg" width="320" height="427">
 
 ##### Servo 2 Table
 
@@ -166,9 +185,9 @@ Image5
 |Average  |  15.8     |    0.527           | 102.2        |    50%   |
 
 
-##### Power Draw
+##### Power Draw/Consumption
 
-Numbers acquired from the Power Camera Experiment Results in the [Power Systems](Documentation/Experimentation/Power Systems - Experimental Analysis.md) results.
+Numbers acquired from the Power Camera Experiment Results in the [Power Systems](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Experimentation/Power%20Systems%20-%20Experimental%20Analysis.md) experimental results.
 
 ##### System Table
 |Trials | Voltage (V) | Current (mA) | Power (W) | Acceptable?|
