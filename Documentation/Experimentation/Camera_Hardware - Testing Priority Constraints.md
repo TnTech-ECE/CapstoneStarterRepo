@@ -48,9 +48,9 @@ Camera Hardware Subsystem
 1. While running Servo Accuracy test, time how long it takes for the servo to reach the final angle requested
 2. Record results and estimate times from recorded video
 
-- Number of Trials: 4
+<!--- Number of Trials: 4
 1. After Testing average response time of servos, find how long it takes for each motor to run from 0° position to max rotation, and then back to 0°.
-2. Record results and estimate times from recorded video.
+2. Record results and estimate times from recorded video.-->
 
 #### Power Draw
 - Number of trials: 10
@@ -152,17 +152,17 @@ Image5Properties
 
 |  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
 |---------|-----------|-----------------|---------------|------------|
-|    1    |  15       |    0.500           | deg           |     y/n    |
-|    2    |  25       |    0.833           | deg           |     y/n    |
-|    3    |  33       |    1.100           | deg           |     y/n    |
-|    4    |  20       |    0.667           | deg           |     y/n    |
-|    5    |  5        |    0.167           | deg           |     y/n    |
-|    6    |  17       |    xs           | deg           |     y/n    |
-|    7    |  15       |    xs           | deg           |     y/n    |
-|    8    |  9        |    xs           | deg           |     y/n    |
-|    9    |  5        |    xs           | deg           |     y/n    |
-|    10   |  16       |    xs           | deg           |     y/n    |
-|Average  |           |                 |               |            |
+|    1    |  15       |    0.500           | 96           |     Y    |
+|    2    |  25       |    0.833           | 170          |     N    |
+|    3    |  33       |    1.100           | 238          |     N    |
+|    4    |  20       |    0.667           | 134          |     N    |
+|    5    |  5        |    0.167           | 15           |     Y    |
+|    6    |  17       |    0.567           | 101          |     N    |
+|    7    |  15       |    0.500           | 95           |     Y    |
+|    8    |  9        |    0.300           | 45           |     Y    |
+|    9    |  3        |    0.100           | 6            |     Y    |
+|    10   |  16       |    0.533           | 122          |     N    |
+|Average  |  15.8     |    0.527           | 102.2        |    50%   |
 
 
 ##### Power Draw
