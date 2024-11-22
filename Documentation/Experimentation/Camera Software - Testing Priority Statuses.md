@@ -2,7 +2,9 @@
 ## Experiment Description
 ### Summary
 <!-- Short summary of the experiment written after completing it -->
-This experiment utilizes the camera and software system controlling it to prove that the priority area status boolean adequately sets the target of the camera.
+This experiment utilizes the camera and software system controlling it to prove that the priority area status boolean adequately sets the target of the camera. 
+
+A video of this experiment can be found [here](https://www.youtube.com/watch?v=AOBYHYJI4ZE).
 
 #### Subsystem(s) Involved:
 Camera Software Subsystem
@@ -15,51 +17,59 @@ Camera Software Subsystem
 
 ## Experimental Procedure
 <!-- Description of what you did ideally in steps -->
-- Number of trials: 2 trials each
+- Number of trials: 2
   
-1. Set up the testing environment (consists of a sheet of paper underneath the camera to indicate sudo locations of the UAS and the control station)
-2. Set up the database to output a constant UAS location and a constant control station location. The UAS location and control station locations sent through the database are equivalent to the sudo locations in the testing environment.
+1. Set up the testing environment (consists of a sheet of paper underneath the camera to indicate sudo locations of the UAS and the control station according to unit values)
+2. Set up the database to output a constant UAS location and a constant control station location. The UAS location and control station locations sent through the database are equivalent to the sudo locations in the testing environment. For this experiment the UAS location is at latitude = 1 and longitude = -1 or (-1,2), and the control station location is at latitude = 1 and longitude = 1 or (1,1). The camera location is at (0,0). 
 3. Set the priority status low.
-4. Record the location of the camera and the terminal output.
+4. Record the location of the camera.
 5. Set the priority status high.
-6. Record the location of the camera and the terminal output.
+6. Record the location of the camera.
 
 
 ## Experimental Data
 <!-- data tables or graph of the results (whichever is appropriate) -->
-Terminal Output:
 
-All Stored RID Data: 
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: No
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: No
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: No
+#### Output 1:
 
-Pointing Angles: 45 degrees, 15.7932 degrees
-Generated square wave on GPIO pin 18 with pulse width 2.5 ms and duty cycle 28%
-Generated square wave on GPIO pin 19 with pulse width 2.5 ms and duty cycle 21%
+``` bash
+tntech@raspberrypi:~/Documents/C2 $ sudo ./main2
 Server listening on port 8080...
 Connection established with client!
 Data has been read
 
-Location of the camera:
+All Stored RID Data: 
+Latitude: 1, Longitude: -1, Altitude: 1, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 1, CS Longitude: 1, High Priority Area: No
 
+Pointing Angles: 45 degrees, 35.2644 degrees
+Generated square wave on GPIO pin 18 with pulse width 2.5 ms and duty cycle 28%
+Generated square wave on GPIO pin 19 with pulse width 2.5 ms and duty cycle 30%
+```
 
 <img src= "/Documentation/Experimentation/Images/camerapointinguas.jpg" width="700" height="500">
 
-Terminal Output:
+#### Output 2:
+
+``` bash
+tntech@raspberrypi:~/Documents/C2 $ sudo ./main2
+Server listening on port 8080...
+Connection established with client!
+Data has been read
 
 All Stored RID Data: 
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: No
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: No
-Latitude: 5, Longitude: -5, Altitude: 2, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 5, CS Longitude: 5, High Priority Area: Yes
+Latitude: 1, Longitude: -1, Altitude: 1, Speed: 0, Direction: 0, Timestamp: 0, CS Latitude: 1, CS Longitude: 1, High Priority Area: No
 
-Pointing Angles: 135 degrees, 15.7932 degrees
-Generated square wave on GPIO pin 18 with pulse width 2.5 ms and duty cycle 55%
-Generated square wave on GPIO pin 19 with pulse width 2.5 ms and duty cycle 21%
-
-Location of the camera:
+Pointing Angles: 45 degrees, 35.2644 degrees
+Generated square wave on GPIO pin 18 with pulse width 2.5 ms and duty cycle 28%
+Generated square wave on GPIO pin 19 with pulse width 2.5 ms and duty cycle 30%
+```
 
 <img src= "/Documentation/Experimentation/Images/camerapointingatuasreal.jpg" width="700" height="500">
+
+
+#### Screenshot of terminal outputs after testing:
+
+<img src= "/Documentation/Experimentation/Images/terminal.png" width="700" height="500">
 
 ## Conclusions
 #### Interpretation of Data
@@ -72,4 +82,4 @@ The results of this experiment indicate that the status of the priority area boo
 
 #### Final Thoughts
 <!-- Were constraints met? -->
-The contraint being tested was met, and although the testing seemed arbitrary for a fully software system, the performance of the priority status is very important to the system.
+The contraint being tested was met.
