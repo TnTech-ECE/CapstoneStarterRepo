@@ -1,7 +1,7 @@
 # Testing Hardware Constraints
 ## Experiment Description
 ### Summary
-Bingus
+Testing Procedures, Results, and Introspection of five Camera System constraints.
 
 #### Subsystem(s) Involved:
 Camera Hardware Subsystem
@@ -152,9 +152,9 @@ Testing set-up for Testing angles of 270° Servo
 
 *These measurements are taken using video and frame-by-frame analysis/interpolation. Both videos were taken at 30 frames per second.
 
-180° Servo Experimental [Video](). Currently void hyperlink
+180° Servo Experimental [Video](/Documentation/Experimentation/Videos/Tilt_Motion_Test.mp4).
 
-270° Servo Experimental [Video](). Currently void hyperlink
+270° Servo Experimental [Video](/Documentation/Experimentation/Videos/Pan_Motion_Test.mp4).
 
 ##### 180° Servo Table, Average Run Times
 
@@ -191,7 +191,7 @@ Testing set-up for Testing angles of 270° Servo
 
 ##### Power Draw/Consumption
 
-Numbers acquired from the Power Camera Experiment Results in the [Power Systems](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Experimentation/Power%20Systems%20-%20Experimental%20Analysis.md) markdown file.
+Numbers acquired from the [Power Camera Experiment Results](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Experimentation/Power%20Systems%20-%20Experimental%20Analysis.md) markdown file.
 
 ##### System Table
 |Trials | Voltage (V) | Current (mA) | Power (W) | Acceptable?|
