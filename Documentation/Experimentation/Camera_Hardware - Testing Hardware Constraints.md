@@ -211,6 +211,24 @@ Numbers acquired from the Power Camera Experiment Results in the [Power Systems]
 ## Conclusions
 #### Interpretation of Data
 <!-- explain what the results of the experiments mean and what conclusions you draw -->
+##### Image Capture and Quality
+For these constraints, capturing an image of the drone or operator was not physically possible due to our receiver system being unable to detect and process the drone data at the time of testing. This portion of the system is working properly however, being capable of capturing and storing images when signaled with a simulated Remote ID Package. In theory, this system will be more than capable of capturing the drone or operator once pointed in the correct direction. Therefore, the image capture system currently does meet the constraint as defined.
+
+The image quality constraint passes flawlessly however, with all captured images retaining a resolution of 4056 x 3040 pixels in a .png form factor. This constraint has been met and exceeded.
+
+##### Servo Accuracy and Speed
+For these two constraints, both servo motors performed differently. 
+
+The 180° servo performed excellently with a 90% success rate of keeping a ±10° tolerance of the specified angle. This, with an average deviance of roughly 5°, is a reliable component and will perform excellently in the field. The second test showed a 100% success rate of keeping the travel time equal to or under 500 milliseconds, with an average travel time of 320 milliseconds over 10 tests.
+
+On the other hand, the 270° servo motor performed slightly worse than desired by the constraints. With an average deviance of 11.8° across 10 tests, this motor is slightly less accurate than the ±10° specification. In long range setups, this tolerance gap can be greatly exacerbated, causing less precision as the target increases in distance from the system. The second test showed a similar deficit, with an average 527 millisecond time period required to travel from the previous point to the newly specified one. While a delay of 27 milliseconds is very minimal and relatively negligible, is it still out of our specified range.
+
+For both constraints, we have met half of the desired requirements and tolerances.
+
+##### Power Draw
+For this system, a vast over-estimate of the system power requirements was developed due to concerns of locked or stalled rotor overcurrent. With a specified power supply capable of delivering 50 Watts, this system only draws an average of 263 milliwatts when both motors are turning at the maximum speed capable of a 5 volt system.
+
+This constraint has been met and exceeded.
 
 #### Improvements and Future Work
 
@@ -220,7 +238,7 @@ Numbers acquired from the Power Camera Experiment Results in the [Power Systems]
 - Make system all-in-one instead of two seperate enclosures
 #### Final Thoughts
 <!-- Were constraints met? -->
-Overall, the contraints being tested were/were not met for the following reasons. THE REASONS. Overall however, this subsystem shows strong promise, and with a bit of refinement and tuning, can be a strong prototype for a future permanent detection system for the TTU Campus.
+Overall, the contraints being tested were and were not met for the reasons denoted above. Overall however, this subsystem shows strong promise, and with a bit of refinement and tuning, can be a strong prototype for a future permanent detection system for the TTU Campus.
 
 N/A Constraints were not tested due to being untestable (denoted with an *) at current subsystem progress or irrelevance on current system performance
 
