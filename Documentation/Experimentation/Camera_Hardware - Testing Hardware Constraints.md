@@ -111,20 +111,20 @@ Testing set-up for Testing angles of 180° Servo
 
 <img src= "/Documentation/Experimentation/Images/Tilt_Home.jpg" width="320" height="427">
 
-##### Tilt Servo Table
+##### 180° Servo Table
 
 |  Trials | Set Angle (°)| Recorded Angle (°)| Angle Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
-|    1    |  13°     |       ~11°    |      2°     |     Y    |
-|    2    |  62°     |       ~59°    |      3°     |     Y    |
-|    3    |  97°     |       ~95°    |      2°     |     Y    |
-|    4    |  176°    |       ~170°      |      6°     |     Y    |
-|    5    |  115°    |       ~110°      |      5°     |     Y    |
-|    6    |  16°     |       ~12°      |      4°     |     Y    |
-|    7    |  35°     |       ~20°      |      15°     |     N    |
-|    8    |  87°     |       ~82°      |      5°     |     Y    |
-|    9    |  46°     |       ~42°      |      4°     |     Y    |
-|    10   |  69°     |       ~65°      |      4°     |     Y    |
+|    1    |  13°     |       11      |      2     |     Y    |
+|    2    |  62°     |       59      |      3     |     Y    |
+|    3    |  97°     |       95      |      2     |     Y    |
+|    4    |  176°    |       170     |      6     |     Y    |
+|    5    |  115°    |       110     |      5     |     Y    |
+|    6    |  16°     |       12      |      4     |     Y    |
+|    7    |  35°     |       20      |      15     |     N    |
+|    8    |  87°     |       82      |      5     |     Y    |
+|    9    |  46°     |       42      |      4     |     Y    |
+|    10   |  69°     |       65      |      4     |     Y    |
 |Average|  71.6°      |  66.6°     |  5°  |    90%    |
 
 
@@ -132,13 +132,13 @@ Testing set-up for Testing angles of 270° Servo
 
 <img src= "/Documentation/Experimentation/Images/Pan_Home.jpg" width="320" height="427">
 
-##### Pan Servo Table
+##### 270° Servo Table
 
 |  Trial  | Set Angle (°)| Recorded Angle (°)| Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
-|    1    |  96°     |       95°      |      1°     |     Y    |
-|    2    |  266°    |       250°      |     16°     |     N    |
-|    3    |  28°     |       23°      |      5°     |     Y    |
+|    1    |  96°     |       95°     |      1°     |     Y    |
+|    2    |  266°    |       250°    |     16°     |     N    |
+|    3    |  28°     |       23°     |      5°     |     Y    |
 |    4    |  162°    |       149°      |      13°     |     N    |
 |    5    |  147°    |       135°      |      12°     |     N    |
 |    6    |  248°    |       230°      |      18°     |     N    |
@@ -152,11 +152,11 @@ Testing set-up for Testing angles of 270° Servo
 
 *These measurements are taken using video and frame-by-frame analysis/interpolation. Both videos were taken at 30 frames per second.
 
-Tilt Servo Experimental [Video]().
+180° Servo Experimental [Video](). Currently void hyperlink
 
-Pan Servo Experimental [Video]().
+270° Servo Experimental [Video](). Currently void hyperlink
 
-##### Tilt Servo Table, Average Run Times
+##### 180° Servo Table, Average Run Times
 
 |  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
 |---------|-----------|---------------------|-------------------|------------|
@@ -172,7 +172,7 @@ Pan Servo Experimental [Video]().
 |    10   |  6        |    0.200            | 23                |     Y      |
 |Average  |   9.6     |     0.32            |   47.1            |   100%     |
 
-##### Pan Servo Table, Average Run Times
+##### 270° Servo Table, Average Run Times
 
 |  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
 |---------|-----------|-----------------|---------------|------------|
