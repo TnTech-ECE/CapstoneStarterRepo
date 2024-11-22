@@ -45,8 +45,8 @@ Camera Hardware Subsystem
 
 #### Servo Speed
 - Number of trials: 10
-1. While running Servo Accuracy test, time how long it takes for the servo to reach the final angle requested
-2. Record results and estimate times from recorded video
+1. While running Servo Accuracy test, record video to time how long it takes for the servo to reach the final angle requested.
+2. Step through video frame-by-frame, record number of frames from beginning of motion to end of motion, and estimate times from recorded video.
 
 <!--- Number of Trials: 4
 1. After Testing average response time of servos, find how long it takes for each motor to run from 0° position to max rotation, and then back to 0°.
