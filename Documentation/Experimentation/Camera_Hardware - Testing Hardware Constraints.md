@@ -23,11 +23,11 @@ Camera Hardware Subsystem
 <!-- Description of what you did ideally in steps -->
 #### Image Capture
 - Number of trials: 5
-1. Using the program developed by the [Camera Software System](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Signoffs/Camera_Software_System.md), create and run 5 pseudo-signals from the receiver system for the camera to "track"
-2. Allow Program to capture and transmit images
-3. Analyze images for drone/operator presence
-4. Run and repeat test 5 times, analyzing each for subject's presence
-5. Record success in table below
+1. Using the program developed by the [Camera Software System](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Signoffs/Camera_Software_System.md), create and run 5 pseudo-signals from the receiver system for the camera to "track".
+2. Allow Program to capture and transmit images.
+3. Analyze images for drone/operator presence.
+4. Run and repeat test 5 times, analyzing each for subject's presence.
+5. Record success in table below.
 
 #### Image Quality
 - Number of trials: 5
@@ -37,7 +37,7 @@ Camera Hardware Subsystem
    
 #### Servo Accuracy
 - Number of trials: 10
-1. Attach a 360° graduated circle to the moving arm of each servo motor.
+1. Attach a marked 360° graduated circle to the moving arm of each servo motor.
 2. Attach a yellow indicator piece of plastic to show where servo arm is currently pointing.
 3. Create a program (aaronTest.cpp) to move the servos to pre-determined angles for testing.
 4. Initialize program and set both servos to zero degrees.
@@ -111,7 +111,7 @@ Testing set-up for Testing angles of 180° Servo
 
 <img src= "/Documentation/Experimentation/Images/Tilt_Home.jpg" width="320" height="427">
 
-##### Servo 1 Table
+##### Tilt Servo Table
 
 |  Trials | Set Angle (°)| Recorded Angle (°)| Angle Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
@@ -132,7 +132,7 @@ Testing set-up for Testing angles of 270° Servo
 
 <img src= "/Documentation/Experimentation/Images/Pan_Home.jpg" width="320" height="427">
 
-##### Servo 2 Table
+##### Pan Servo Table
 
 |  Trial  | Set Angle (°)| Recorded Angle (°)| Difference (°)| Acceptable?|
 |---------|----------|---------------|-------------|------------|
@@ -146,13 +146,17 @@ Testing set-up for Testing angles of 270° Servo
 |    8    |  198°    |       180°      |      18°     |     N    |
 |    9    |  204°    |       185°      |      19°     |     N    |
 |    10   |  82°     |       79°      |      3°     |     Y    |
-|Average|    158.4   |   146.6    |  11.8  |    30    |
+|Average|    158.4   |   146.6    |  11.8  |    30%    |
 
 ##### Servo Speed
 
-*These measurements are taken using video and frame-by-frame analysis/interpolation. All videos are taken at 30 frames per second.
+*These measurements are taken using video and frame-by-frame analysis/interpolation. Both videos were taken at 30 frames per second.
 
-##### Servo 1 Table, Average Run Times
+Tilt Servo Experimental [Video]().
+
+Pan Servo Experimental [Video]().
+
+##### Tilt Servo Table, Average Run Times
 
 |  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
 |---------|-----------|---------------------|-------------------|------------|
@@ -168,7 +172,7 @@ Testing set-up for Testing angles of 270° Servo
 |    10   |  6        |    0.200            | 23                |     Y      |
 |Average  |   9.6     |     0.32            |   47.1            |   100%     |
 
-##### Servo 2 Table, Average Run Times
+##### Pan Servo Table, Average Run Times
 
 |  Trials| Frame Count| Equivalent Time (s) | Distance Moved (°)| Acceptable?|
 |---------|-----------|-----------------|---------------|------------|
@@ -187,7 +191,7 @@ Testing set-up for Testing angles of 270° Servo
 
 ##### Power Draw/Consumption
 
-Numbers acquired from the Power Camera Experiment Results in the [Power Systems](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Experimentation/Power%20Systems%20-%20Experimental%20Analysis.md) experimental results.
+Numbers acquired from the Power Camera Experiment Results in the [Power Systems](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/Experiments/Documentation/Experimentation/Power%20Systems%20-%20Experimental%20Analysis.md) markdown file.
 
 ##### System Table
 |Trials | Voltage (V) | Current (mA) | Power (W) | Acceptable?|
