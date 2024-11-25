@@ -5,14 +5,12 @@ Your final presentation is a pivotal opportunity to showcase the technical prowe
 Given the professional nature of your audience, it is imperative to uphold the highest standards of professionalism throughout your presentation. However, infusing humor and creativity can significantly enhance engagement and make your presentation memorable. We encourage each team to express their unique personalities and creativity, provided they complement a professional demeanor. Remember, there is no singular "right" way to deliver this presentation—innovative approaches are welcome.
 
 ## Presentation Details
-
 - Should be 20–25 minutes in length
 - Given by the team to the Industrial Advisory Board
 - PowerPoint is required
 - All team members must participate
 
 ## Recommended Presentation Content
-
 - Problem background and stakeholder identification
 - Problem formulation
 - Standards and regulations
