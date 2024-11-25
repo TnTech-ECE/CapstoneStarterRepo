@@ -1,15 +1,17 @@
 # Final Report
 
-The final report should capture the technical aspects of the design (identification, formulation, conceptual design, deetail design, analysis, implementation, and validation). The report should go into as much detail as needed so that if another team was to read this document they would be able to understand your design desisions and add aditional imporments. 
+Your final report should comprehensively capture the technical aspects of your design—including identification, formulation, conceptual design, detailed design, analysis, implementation, and validation. The report should provide sufficient detail so that if another team were to read this document, they would be able to understand your design decisions and contribute additional improvements.
 
-## Report Content
+## Recomended Report Content
 
-1. Problem background
-2. Formulation of the problem
-3. Standards and regulations
-4. Conceptual overview of the solution
-5. Detail designs and analysis
-6. Implementation details & challenges
-8. Experimentation and validation
-9. Final bill of materials
-10. Demonstration pictures/videos
+- Problem background and stakeholder identification
+- Problem formulation
+- Standards and regulations
+- Broader impacts (What implications does this have for public health, safety, and welfare? What global, cultural, social, environmental, and economic factors did you consider?)
+- Conceptual solution overview (Include block diagrams or flowcharts where appropriate)
+- Full detailed design, constraints, and analysis
+- Implementation (include pictures of what you built)
+- Experimentation and validation (How well did you meet the measures of success?)
+- Final Bill of Materials
+- References
+- Statement of contributions (Who did what to make this report possible?)
