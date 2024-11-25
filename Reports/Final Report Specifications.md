@@ -3,7 +3,6 @@
 Your final report should comprehensively capture the technical aspects of your design—including identification, formulation, conceptual design, detailed design, analysis, implementation, and validation. The report should provide sufficient detail so that if another team were to read this document, they would be able to understand your design decisions and contribute additional improvements.
 
 ## Recomended Report Content
-
 - Problem background and stakeholder identification
 - Problem formulation
 - Standards and regulations
