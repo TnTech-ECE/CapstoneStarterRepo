@@ -15,8 +15,8 @@
 
 #define LOCAL_UDP_PORT 1337     //Any port as long as the firewall is fine with it
 #define REMOTE_UDP_PORT 1337    //Probably should be the same as local
-#define PAYLOAD_LEN 1
-#define ID 0x00
+#define PAYLOAD_LEN 6
+#define ID 0x42
 const IPAddress REMOTE_IP(10, 104, 133, 219);
 
 // WiFi Credentials
@@ -47,7 +47,7 @@ void setup(){
 
   while (WiFi.status() != WL_CONNECTED){
     delay(500);
-    Serial.print(".");
+  Serial.print(".");
   }
 
   Serial.println(" connected");
@@ -63,7 +63,7 @@ bool recievedPacket(){
   //if packetSize is null then no packet has been recieved
   if (packetSize){
     // receive incoming UDP packets
-    Serial.printf("Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(), Udp.remotePort());
+    //Serial.printf("Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(), Udp.remotePort());
     remoteIp = Udp.remoteIP();
     
     int len = Udp.read(incomingPacket, 255);
@@ -73,7 +73,7 @@ bool recievedPacket(){
     }
 
     // Display contents to serial
-    Serial.printf("UDP packet contents: %s\n", incomingPacket);
+    Serial.printf(incomingPacket);
     // send back a reply by repeating the packet back
     //sendPacket(incomingPacket);
     return true;
@@ -83,8 +83,8 @@ bool recievedPacket(){
 
 // Do not use directly, use forwardData. Sends Packet with payload that is packetData
 void sendPacket(char packetData[]){
-    Serial.println("Recieved serial: ");
-    Serial.println(packetData[1], HEX);
+    //Serial.println("Recieved serial: ");
+  //  Serial.println(packetData[1], HEX);     //DEBUG
     Udp.beginPacket(REMOTE_IP, REMOTE_UDP_PORT);
     Udp.write((const char*)packetData, PAYLOAD_LEN+1);
     Udp.endPacket();
@@ -92,11 +92,11 @@ void sendPacket(char packetData[]){
 }
 
 // Sends packet and adds the ID
-inline void forwardData(char data){
+inline void forwardData(const char data[]){
   char payload[PAYLOAD_LEN+1];
   payload[0] = ID;
   for(int i = 0; i < PAYLOAD_LEN; i++){
-    payload[i+1] = data;
+    payload[i+1] = data[i];
   }
   /*
   for(int i = 0; i < PAYLOAD_LEN+1; i++){
@@ -126,10 +126,14 @@ void loop(){
     }
 
     // Display the message on the Serial monitor
-    Serial.print("Received: ");
-    Serial.println(message);
-    char num = (char)(message.toInt());
+    //Serial.print("Received: ");   //VERBOSE
+    //Serial.println(message);      //VERBOSE
+    uint64_t num = (uint64_t)(atoi(message.c_str()));
     // Send the packet over udp
-    forwardData(num);
+    //Serial.print(num);          //VERBOSE
+    forwardData(message.c_str());
+  }
+  else{
+    recievedPacket();
   }
 }
