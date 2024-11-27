@@ -79,49 +79,50 @@ void serial_input() {
   }
   //Hard coding conversion to line number
   if(rs.length()>0){
-    if(rs = "1"){
+    Serial.print(rs);
+    if(rs == "1"){
       i = 1;
     }
-    else if (rs = "2"){
+    else if (rs == "2"){
       i = 2;
     }
-    else if (rs = "3"){
+    else if (rs == "3"){
       i = 3;
     }
-    else if (rs = "4"){
+    else if (rs == "4"){
       i = 4;
     }
-    else if (rs = "5"){
+    else if (rs == "5"){
       i = 5;
     }
-    else if (rs = "6"){
+    else if (rs == "6"){
       i = 6;
     }
-    else if (rs = "7"){
+    else if (rs == "7"){
       i = 7;
     }
-    else if (rs = "8"){
+    else if (rs == "8"){
       i = 8;
     }
-    else if (rs = "9"){
+    else if (rs == "9"){
       i = 9;
     }
-    else if (rs = "A"){
+    else if (rs == "A"){
       i = 10;
     }
-    else if (rs = "B"){
+    else if (rs == "B"){
       i = 11;
     }
-    else if (rs = "C"){
+    else if (rs == "C"){
       i = 12;
     }
-    else if (rs = "D"){
+    else if (rs == "D"){
       i = 13;
     }
-    else if (rs = "E"){
+    else if (rs == "E"){
       i = 14;
     }
-    else if (rs = "F"){
+    else if (rs == "F"){
       i = 15;
     }
     rs = "\0";
