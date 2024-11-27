@@ -2,14 +2,13 @@
 
 void setup() {
   VL53LX_Error status;
-  ESP32PWM::allocateTimer(0);
-  ESP32PWM::allocateTimer(1);
    // Led.
    pinMode(LedPin, OUTPUT);
    pinMode(interruptPin, INPUT_PULLUP);
    attachInterrupt(interruptPin, measure, FALLING);
    servo1.setPeriodHertz(50);
    servo1.setPeriodHertz(50);
+   servo1.attach(servoPin1, minUs, maxUs);
    // Initialize serial for output.
    Serial.begin(9200);
    //SerialPort.println("Starting...");
@@ -135,12 +134,12 @@ void measure() {
 }
 
 void servo() {
-  Serial.print(lineDegreex[i]);
-  servo1.attach(servoPin1, minUs, maxUs);
-  servo2.attach(servoPin2, minUs, maxUs);
-  servo1.write(lineDegreex[i]);
-  servo2.write(lineDegreey[i]);
-  servo1.detach();
-  servo2.detach();
+  servoP1 = lineDegreex[i];
+  Serial.print(servoP1);
+  Serial.print("\n");
+  //servo2.attach(servoPin2, minUs, maxUs);
+  servo1.write(servoP1);
+  //servo2.write(lineDegreey[i]);
+  //servo2.detach();
   newData = false;
 }
