@@ -58,13 +58,13 @@ uint16_t distancemm = 0;
 volatile int interruptCount = 0;
 
 //Servo
-int minUs = 2000;
-int maxUs = 1000;
+int minUs = 1000;
+int maxUs = 2000;
 Servo servo1;//X direction servo
 Servo servo2;//Y direction servo
 int servoP1 = 0;//Default position
 int servoP2 = 0;//Default position
-static const int servoPin1 = A4;//ShortWire
+static const int servoPin1 = D2;//ShortWire
 static const int servoPin2 = A3;
 uint8_t i = 0;
 uint8_t lineDegreex[16] = {90,155,146,137,128,119,110,101,92,83,74,65,56,47,38,29};
