@@ -64,7 +64,7 @@ Servo servo1;//X direction servo
 Servo servo2;//Y direction servo
 int servoP1 = 0;//Default position
 int servoP2 = 0;//Default position
-static const int servoPin1 = A0;//ShortWire
+static const int servoPin1 = A4;//ShortWire
 static const int servoPin2 = A3;
 uint8_t i = 0;
 uint8_t lineDegreex[16] = {90,155,146,137,128,119,110,101,92,83,74,65,56,47,38,29};
