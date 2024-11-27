@@ -36,9 +36,7 @@ void loop() {
    char report[64];
    serial_input();
    if (newData == true){
-    i = atoi(receivedChars);
     //Serial.print(i);
-    
     if(i < 17){
       servo();
     }
@@ -72,26 +70,63 @@ void loop() {
 }
 
 void serial_input() {
-  static byte ndx = 0;
-  char endMarker = '\n';
   char rc;
-  while (Serial.available() > 0 && newData == false) {
+  String rs;
+  //Allows for junk over serial since there is no endmarker 
+  while (Serial.available()) {
     rc = Serial.read();
-    if (rc != endMarker) {
-        receivedChars[ndx] = rc;
-        ndx++;
-        if (ndx >= numChars) {
-            ndx = numChars - 1;
-        } 
-    }
-    else {
-        receivedChars[ndx] = '\0'; // terminate the string
-        ndx = 0;
-        newData = true;
-        Serial.print(receivedChars);
-    }
+    rs += rc;
   }
-
+  //Hard coding conversion to line number
+  if(rs.length()>0){
+    if(rs = "1"){
+      i = 1;
+    }
+    else if (rs = "2"){
+      i = 2;
+    }
+    else if (rs = "3"){
+      i = 3;
+    }
+    else if (rs = "4"){
+      i = 4;
+    }
+    else if (rs = "5"){
+      i = 5;
+    }
+    else if (rs = "6"){
+      i = 6;
+    }
+    else if (rs = "7"){
+      i = 7;
+    }
+    else if (rs = "8"){
+      i = 8;
+    }
+    else if (rs = "9"){
+      i = 9;
+    }
+    else if (rs = "A"){
+      i = 10;
+    }
+    else if (rs = "B"){
+      i = 11;
+    }
+    else if (rs = "C"){
+      i = 12;
+    }
+    else if (rs = "D"){
+      i = 13;
+    }
+    else if (rs = "E"){
+      i = 14;
+    }
+    else if (rs = "F"){
+      i = 15;
+    }
+    rs = "\0";
+    newData = true;
+  }
 }
 
 void measure() {
@@ -99,11 +134,10 @@ void measure() {
 }
 
 void servo() {
-  servoP1 = lineDegreex[i];
-  Serial.print(servoP1);
+  Serial.print(lineDegreex[i]);
   servo1.attach(servoPin1, minUs, maxUs);
   servo2.attach(servoPin2, minUs, maxUs);
-  servo1.write(servoP1);
+  servo1.write(lineDegreex[i]);
   servo2.write(lineDegreey[i]);
   servo1.detach();
   servo2.detach();
