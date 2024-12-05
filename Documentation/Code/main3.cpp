@@ -434,7 +434,7 @@ void check_and_launch_rpicam() {
     }
 }
 
-
+// Takes the picture
 void capture_image(int picture_counter) {
     // Form the picture filename with the new path and format
     string filename = "/home/tntech/Documents/C2/Pictures/Picture_" + to_string(picture_counter);
