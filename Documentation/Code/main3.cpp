@@ -531,6 +531,10 @@ int main() {
 
             analyze_data();
 
+            determine_slm();
+
+            predict_location();
+
             determine_angles();
              cout << "\nPointing Angles: " << theta_h << " degrees" << ", " << theta_v << " degrees" << endl;
 
