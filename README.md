@@ -23,7 +23,7 @@ Coming soon :)
 
 From left to right:
 
-[JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
+[JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132/) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
 
 [Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
 
@@ -31,7 +31,7 @@ From left to right:
 
 [Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
 
-[Sterling Sloan](www.linkedin.com) is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
+Sterling Sloan is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
 
 [Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
 
