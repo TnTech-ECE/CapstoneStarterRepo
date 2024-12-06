@@ -12,6 +12,15 @@ Project Demonstration Video
 
 https://github.com/user-attachments/assets/e732b90d-667f-4436-8810-12add2868be1
 
+https://github.com/user-attachments/assets/4852f584-2c88-4b63-8bfe-9ffbe9ff3a57
+
+https://github.com/user-attachments/assets/bf1db036-6065-4abe-843b-16f495730f5c
+
+<img src= "/Documentation/Project Photos/Camerapiconscreen.PNG" width="400" height="400">
+<img src= "/Documentation/Project Photos/camerasetup.PNG" width="650" height="500">
+<img src= "/Documentation/Project Photos/database.PNG" width="800" height="500">
+<img src= "/Documentation/Project Photos/teamworkspace.PNG" width="600" height="300">
+
 
 
 
@@ -19,6 +28,8 @@ https://github.com/user-attachments/assets/e732b90d-667f-4436-8810-12add2868be1
 [Camera Software System minimal functional prototype](https://www.youtube.com/shorts/UNsuytf4N7U)
 
 [Website system](https://www.youtube.com/watch?v=dnVWmRdjKF0)
+
+
 
 ## About Us
 
