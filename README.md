@@ -31,7 +31,7 @@ From left to right:
 
 [Aaron Stewart](https://www.linkedin.com/in/aaronjs124) is an electrical engineering major with a concentration in Control Systems. He is interested in industrial production systems, mechatronics, and additive manufacturing methods.
 
-Sterling Sloan is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
+[Sterling Sloan](https://www.linkedin.com/in/sterling-sloan-a848642a0/) is an electrical engineering major at Tennessee Technological University. He has interests in signal processing and optoelectronics.
 
 [Meredith Nye](https://www.linkedin.com/in/meredith-nye-89455a1b5) is an electrical engineering major, mechatronics concentration and student-athlete at Tennessee Technological University with minors in math and biology. She is interested in prosthetics design, biomechanical engineering, and robotics.
 
