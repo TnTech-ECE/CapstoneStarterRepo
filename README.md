@@ -8,10 +8,14 @@ Drones have grown exceedingly popular in recent years due to both their novelty 
 The Drone tracker system is capable of storing RID information into a database. The database can send the required RID data to the camera where the camera uses it to point at a target. The camera then takes a picture and sends the image back to the database. The website will display the RID data from the database as well as a map of the target locations.
 
 ## Project Demonstration & Images
-[![Project demonstration](https://img.youtube.com/vi/FysjEsHIlvY/0.jpg)](https://www.youtube.com/watch?v=vi/FysjEsHIlvY)
+Project Demonstration Video
 
-LINKS:
+https://github.com/user-attachments/assets/e732b90d-667f-4436-8810-12add2868be1
 
+
+
+
+#### Other video links:
 [Camera Software System minimal functional prototype](https://www.youtube.com/shorts/UNsuytf4N7U)
 
 [Website system](https://www.youtube.com/watch?v=dnVWmRdjKF0)
