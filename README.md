@@ -23,7 +23,7 @@ Coming soon :)
 
 From left to right:
 
-[JieJun Stowell](www.linkedin.com/in/jiejun-s-4b34a8132/) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
+[JieJun Stowell](https://www.linkedin.com/in/jiejun-s-4b34a8132/) is an computer engineering major student at Tennessee Technological University. He is intrestested in embedded system design development.
 
 [Abe Perkins](https://www.linkedin.com/in/abraham-perkins-7436a6204/) is a student at Tennessee Technological University with major in computer engineering and a minor in math. His interests include hardware security, computer architecture, and machine learning. 
 
