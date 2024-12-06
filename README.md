@@ -5,15 +5,16 @@ Drones have grown exceedingly popular in recent years due to both their novelty 
 
 ## Capabilities
 
-Coming soon :)
-
-## Salient Outcomes
-
-Coming soon :)
+The Drone tracker system is capable of storing RID information into a database. The database can send the required RID data to the camera where the camera uses it to point at a target. The camera then takes a picture and sends the image back to the database. The website will display the RID data from the database as well as a map of the target locations.
 
 ## Project Demonstration & Images
+[![Project demonstration](https://img.youtube.com/vi/FysjEsHIlvY/0.jpg)](https://www.youtube.com/watch?v=vi/FysjEsHIlvY)
 
-Coming soon :)
+LINKS:
+
+[Camera Software System minimal functional prototype](https://www.youtube.com/shorts/UNsuytf4N7U)
+
+[Website system](https://www.youtube.com/watch?v=dnVWmRdjKF0)
 
 ## About Us
 
@@ -72,7 +73,7 @@ The [Minimal Functionality Prototype document](https://github.com/mrnye42/S24_Te
 
 The [Final BOM](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Final%20BOM.pdf) pdf contains all the ordered parts for the project.
 
-The [Project Photos](/Documentation/Project-Photos) folder contains any photos (not technical images) from the project.
+The [Project Photos](/Documentation/Project-Photos) folder contains any photos (not technical images) from the project. Includes addtional pictures of the team.
 
 
 
