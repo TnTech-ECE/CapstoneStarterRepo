@@ -19,7 +19,7 @@ Coming soon :)
 
 ### Team
 
-<img src= "https://cdn.discordapp.com/attachments/1201722866601566270/1308644693554237592/IMG_37402.jpg?ex=673eb1d8&is=673d6058&hm=f7857571a3e89a58b0f45fc3bd33e164bada26f60cb7b51ff9e460e1ef92da41&" width="800" height="500">
+<img src= "/Documentation/Project Photos/teampicture.PNG" width="800" height="500">
 
 From left to right:
 
