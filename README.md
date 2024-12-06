@@ -55,6 +55,9 @@ We would like to recognize and thank Dr.Jeffrey Austen for his guidance and supp
 ### [Reports](/Reports)
   - [Project Proposal](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Project%20Proposal%20Revisions.pdf) :the initial document for the project where the problem is defined and the goals for the project.
   - [Conceptual Design and Planning](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Conceptual%20Design%20and%20Planning%20Final.pdf) :gives a more detailed solution to the problem as well as subsystem breakdowns and a projected timeline and budget.
+  - [Final Presentation](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Drone%20Tracker%20IAB%20Presentation%20Final.pdf) :a pdf version of the PowerPoint presentation given to the Advisory Board that showcases the entire project and contains video links to project demonstrations. 
+  - [Poster](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Reports/Poster.pdf) :showcases the entire project. Was displayed at the senior design expo and will be framed in Brown Hall.
+  - [Lessons Learned Presentations](/Reports/Lessons-Learned-Presentations) :folder contains a few of the team's individual lessons learned PowerPoint presentations and contain things that went wrong and advice for future students.
 
 ### [Documentation](/Documentation)
 All documentation for the project is included in the above folder. Documentation includes all schematics, images, models, BOM, and designs used in the project.
@@ -63,8 +66,14 @@ The [Meeting Minutes](/Documentation/Meeting-Minutes) folder contains the dated 
 
 [Signoffs](/Documentation/Signoffs) are used to finalize designs for each subsystem. This includes schematics, design decisions, BOM, and analysis.
 
+The [Experimentation](/Documentation/Experimentation/) folder contains individual markdown files detailing experiments done by the team in order to prove the adherence to different system constraints.
+
 The [Minimal Functionality Prototype document](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Minimal%20Functionality%20Prototype%20Signoffs.pdf) contains the proposed minimal functionality requirements for the protype as well as Dr.Austen's feedback on them.
 
 The [Final BOM](https://github.com/mrnye42/S24_Team1_DroneTracker/blob/main/Documentation/Final%20BOM.pdf) pdf contains all the ordered parts for the project.
+
+The [Project Photos](/Documentation/Project-Photos) folder contains any photos (not technical images) from the project.
+
+
 
 
