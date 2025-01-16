@@ -1,6 +1,6 @@
 # Experimental Analysis
 
-The goal of experimental analysis is to measure the conformance to critical specs and constraints and the attainment of all measures of success. Each team must be able to evaluate, in a non-trivial manner ($N>1$), attainment of all measures of success and critical constraints enumerated in the signoffs.
+The goal of experimental analysis is to measure the conformance to critical specs and constraints and the attainment of all measures of success. Each team must be able to evaluate, in a non-trivial manner ($N>1$), attainment of all measures of success and critical constraints enumerated previous design documents.
 
 There may be different opinions about what constrains are critical. For this reason, it might be advisable to develope a list and get it preapprove by your instructor/supervisor. 
 
