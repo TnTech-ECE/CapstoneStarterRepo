@@ -1,6 +1,6 @@
 ## Poster size expectations
 
-The poster should be 42 by 24. 
+The poster should be 42 by 24 inches. 
 
 ## Power point instructions
 
