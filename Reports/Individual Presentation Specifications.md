@@ -1,21 +1,23 @@
 # Individual Presentation
 
-The purpose of the individual presentation is to provide students with practice in public speaking. Effective communication is crucial to success in the industry. Each team member is responsible for effectively communicating their challenges & insights to others.
+The purpose of the individual presentation is to provide students with practice in public speaking. Effective communication is crucial to success in the industry. Each team member is responsible for effectively communicating their challenges and insights to others.
 
-To give students practice, each student is required to deliver a 5-10-minute presentation. Other students and the instructor will evaluate the student's performance. The presentation should focus on the lessons the student has learned during the course of the capstone project. These lessons could be related to technical skills or soft skills.
+To give students practice, each student is required to deliver a 5 to 10 minute presentation. Other students and the instructor will evaluate the student's performance. The presentation should focus on a technical issue of interest to the student. The topic may or may not be related to the student's detailed design but should be something in the electrical engineering area.
 
-Each engineer should address the following points:
-- Reflect on the project from both a technical and organizational perspective. What went well? What didn’t go well?
-- What unanticipated problems arose, and how did you address them?
-- If you could redo the project, what would you do differently?
-- What "best practices" have you identified that could be applied to future projects?
-- What advice or words of wisdom would you offer to future students embarking on similar projects?
-- What new knowledge or skills did you acquire throughout the capstone?
-- How have these newly acquired skills or insights influenced your approach to engineering or your career aspirations?
-- Provide specific examples or case studies from the project to illustrate the lessons learned.
-- Discuss the impact of collaboration and teamwork on your project and the role you played.
+Each engineer should reflect on the following questions:
+- What background information is necessary to understand the problem (assuming basic engineering knowledge)?
+- How does this problem fit within the broader context of your field or industry?
+- Why is this technical issue challenging or difficult to solve?
+- Are there specific technical requirements or constraints that might not be immediately apparent?
+- What solutions or approaches have been attempted to address the problem so far?
+- Have these solutions been successful? Why or why not?
+- Provide examples of where the solution is used in the real world, or how it could be utilized if developed.
+- What impact has the solution made or could it make on the world?
+- What ethical, environmental, or societal considerations are associated with this problem and its potential solutions?
+- What future developments or research could further address this problem?
+- What lessons have you learned from studying this problem, and how can these insights help you solve other problems in the future?
 
-The presentor should strive to:
+The presenter should strive to:
 - Present content clearly and ensure it is suitable for the audience.
 - Organize key objectives or main topics logically.
 - Maintain audience engagement with eye contact and appropriate gestures throughout the presentation.
