@@ -1,11 +1,11 @@
 # **Teamwork Contract**
 
 **Team X**  
-**Team Members:** [List all student names here]  
+**Team Members:** [List all student names here]
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
 
-The following is are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that what ever you generate, must be approved by your instructor.
+The following are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that your final contract, must be approved by your instructor.
 
 ## **Introduction**
 
@@ -42,7 +42,7 @@ In this section, the team will discuss and clearly define their collective expec
 - **Expectation:** Regarding team meetings:
   - **Frequency:** The team will meet [specify frequency, e.g., twice a week on Mondays and Thursdays at 4 PM].
   - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
-  - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or readings.
+  - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
   - **Conduct:** Meetings will have a set agenda, and minutes will be recorded and shared.
 
 ### **5. Conduct**
@@ -112,11 +112,11 @@ Assigning specific roles can help streamline team operations. Below, define any 
 
 ## **Additional Agreements**
 
-Include any other important agreements the team decides upon. Below are some suggestions:
+Include any other important agreements the team decides upon.
 
 
 ## **Team Member Signatures**
 
-By typing out names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
+By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-Team Member Names
+[List all student names here]
