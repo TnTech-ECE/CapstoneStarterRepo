@@ -73,7 +73,7 @@ In this section, the team will discuss and clearly define their collective expec
 
 Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-### **1. Role Assignments**
+### **Role Assignments**
 
 **a. Team Leader/Coordinator**
 
