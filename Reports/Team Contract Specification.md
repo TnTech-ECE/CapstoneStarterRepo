@@ -1,197 +1,122 @@
-# Teamwork Contract
+# **Teamwork Contract**
 
 **Team X**  
-**Student Names**  
+**Team Members:** [List all student names here]  
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
 
----
+The following is are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that what ever you generate, must be approved by your instructor.
 
-## Introduction *(Optional Addition)*
+## **Introduction**
 
-*Suggestion*: Begin with an introduction that outlines the purpose of the contract. This sets the tone and ensures everyone understands the importance of the agreement.
+*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team X. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
 
-**Example**:
-> *This teamwork contract outlines the expectations, roles, responsibilities, and guidelines for effective collaboration among members of Team X. By adhering to this contract, we aim to foster a productive and respectful team environment that will contribute to the success of our project.*
 
----
+## **Team Expectations**
 
-## Team Expectations
+In this section, the team will discuss and clearly define their collective expectations in various key areas. Be specific to ensure mutual understanding.
 
-Discuss and describe the team’s expectations regarding:
+### **1. Participation** *(Engagement and Effort in the Project)*
 
-### Participation *(Engagement and Effort in the Project)*
+- **Expectation:** Each team member is expected to:
+  - Actively participate in all team meetings and discussions.
+  - Engage fully in project activities and contribute ideas.
+  - Notify the team in advance if unable to attend a meeting or meet an obligation.
 
-**Explanation**: This section defines how each team member is expected to engage with the project, including attendance, active involvement, and overall commitment.
+### **2. Contribution** *(Progress on the Project)*
 
-**Suggestions for Improvement**:
+- **Expectation:** Each team member is expected to:
+  - Complete assigned tasks diligently and on time.
+  - Contribute equal effort to the project's progress.
+  - Share expertise and assist others when needed.
 
-- Be specific about attendance expectations.
-  - *"All team members are expected to attend all scheduled meetings unless prior notice is given."*
-- Define engagement levels.
-  - *"Members should actively participate in discussions and contribute ideas during brainstorming sessions."*
+### **3. Communication**
 
-### Contribution *(Progress on the Project)*
+- **Expectation:** Team communication should be:
+  - Professional, respectful, and considerate.
+  - Conducted through agreed-upon channels (e.g., email, Slack, Microsoft Teams).
+  - Responsive, with replies to inquiries within 24 hours on weekdays.
 
-**Explanation**: Outlines how each member will contribute to the project work, including task completion and equitable distribution of workload.
+### **4. Meetings**
 
-**Suggestions for Improvement**:
+- **Expectation:** Regarding team meetings:
+  - **Frequency:** The team will meet [specify frequency, e.g., twice a week on Mondays and Thursdays at 4 PM].
+  - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
+  - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or readings.
+  - **Conduct:** Meetings will have a set agenda, and minutes will be recorded and shared.
 
-- Specify how tasks will be assigned.
-  - *"Tasks will be assigned based on individual strengths and interests, ensuring an equitable distribution of work."*
-- Set expectations for task completion.
-  - *"Members are expected to complete their assigned tasks by the agreed-upon deadlines."*
+### **5. Conduct**
 
-### Communication
+- **Expectation:** Team members will:
+  - Treat each other with respect and courtesy.
+  - Listen actively and allow others to express their ideas without interruption.
+  - Address disagreements professionally and constructively.
 
-**Explanation**: Establishes the methods and expectations for team communication.
+### **6. Conflict Resolution**
 
-**Suggestions for Improvement**:
+- **Expectation:** The team will:
+  - Address conflicts promptly through open dialogue.
+  - Use a step-by-step approach to resolve issues:
+    1. Discuss the issue privately between involved parties.
+    2. If unresolved, bring the issue to the team for discussion.
+    3. Seek input from the instructor or a mediator if necessary.
+  - Focus on finding mutually acceptable solutions.
 
-- Define communication channels.
-  - *"We will use Slack for daily communication and email for formal updates."*
-- Set response time expectations.
-  - *"Team members should respond to messages within 24 hours on weekdays."*
+### **7. Deadlines**
 
-### Meetings
+- **Expectation:** Regarding deadlines:
+  - All team-set and instructor-set deadlines are to be met.
+  - If a member anticipates difficulty meeting a deadline, they must inform the team as soon as possible.
+  - The team will collaboratively adjust workloads to ensure project timelines are maintained.
 
-**Explanation**: Determines the frequency, scheduling, and conduct of team meetings.
 
-**Suggestions for Improvement**:
+## **Unique Roles (Optional)**
 
-- Set a regular meeting schedule.
-  - *"The team will meet every Tuesday and Thursday at 4 PM in Room 123."*
-- Outline meeting procedures.
-  - *"An agenda will be shared before each meeting, and minutes will be documented and distributed afterward."*
+Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-### Conduct
+### **1. Role Assignments**
 
-**Explanation**: Describes the expected behavior of team members to maintain a professional and respectful environment.
+**a. Team Leader/Coordinator**
 
-**Suggestions for Improvement**:
+- **Responsibilities:**
+  - Schedule and coordinate team meetings.
+  - Facilitate meetings to ensure all voices are heard.
+  - Monitor project timelines and milestones.
+- **Powers Granted:**
+  - Authority to make minor decisions to keep the project on track after team consultation.
+- **Expectation Changes:**
+  - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-- Emphasize respect and professionalism.
-  - *"All team members will treat each other with respect, listen actively, and consider diverse perspectives."*
-- Address punctuality and preparedness.
-  - *"Members should arrive on time to meetings and come prepared with any required materials or updates."*
+**b. Recorder/Secretary**
 
-### Conflict
+- **Responsibilities:**
+  - Take detailed notes during meetings.
+  - Distribute meeting minutes to all team members within 24 hours.
+- **Powers Granted:**
+  - May request clarifications during meetings to ensure accurate record-keeping.
+- **Expectation Changes:**
+  - Ensures documentation is maintained without reducing their responsibility in other project areas.
 
-**Explanation**: Provides a plan for addressing and resolving conflicts within the team.
+**c. Research Lead**
 
-**Suggestions for Improvement**:
+- **Responsibilities:**
+  - Coordinate research activities and ensure information accuracy.
+  - Assign research tasks and manage resource compilation.
+- **Powers Granted:**
+  - Can delegate research-related tasks to team members.
+- **Expectation Changes:**
+  - Special focus on research aspects but otherwise contributes equally to other tasks.
 
-- Outline conflict resolution steps.
-  - *"Conflicts will be addressed openly and respectfully among the involved parties."*
-  - *"If an issue remains unresolved, the team will seek mediation from the instructor or a neutral third party."*
+*(Add or modify roles based on your team's needs.)*
 
-### Deadlines
 
-**Explanation**: Sets clear expectations for meeting project deadlines and handling delays.
+## **Additional Agreements**
 
-**Suggestions for Improvement**:
+Include any other important agreements the team decides upon. Below are some suggestions:
 
-- Define the importance of deadlines.
-  - *"All deadlines are to be met unless an extension is agreed upon by the team in advance."*
-- Address consequences of missed deadlines.
-  - *"Repeated failure to meet deadlines may result in reassignment of tasks or discussion with the instructor."*
 
----
+## **Team Member Signatures**
 
-## Unique Roles
+By typing out names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-Discuss and describe any unique member roles the team has agreed upon (leader, etc).
-
-### Responsibility of Role
-
-**Explanation**: Clearly defines the duties and responsibilities associated with any assigned roles.
-
-**Suggestions for Improvement**:
-
-- Detail specific roles and responsibilities.
-  - *"Team Leader: Coordinates meetings, facilitates discussions, and ensures project milestones are met."*
-  - *"Recorder: Takes detailed notes during meetings and distributes minutes to the team."*
-  - *"Research Coordinator: Oversees research activities and ensures sources are properly cited."*
-
-### Powers Granted to the Role by the Team
-
-**Explanation**: Describes the authority or decision-making power given to individuals in specific roles.
-
-**Suggestions for Improvement**:
-
-- Clarify the extent of authority.
-  - *"The Team Leader has the authority to call additional meetings if necessary and make executive decisions in time-sensitive situations after consulting team members."*
-
-### Does the Role Change the Expectations Outlined Previously? If So, How?
-
-**Explanation**: Addresses any adjustments to the general expectations due to assigned roles.
-
-**Suggestions for Improvement**:
-
-- Note any additional expectations.
-  - *"While the Team Leader has additional administrative duties, all team members, including the leader, are expected to contribute equally to project tasks."*
-
----
-
-## Anything Else
-
-*Maybe there are other things that you think should be agreed upon. Put them here.*
-
-**Suggestions for Additional Items**:
-
-### Decision-Making Process
-
-- **Explanation**: Establishes how decisions will be made within the team.
-- **Suggestion**:
-  - *"Decisions will be made by consensus whenever possible. If consensus cannot be reached, a majority vote will decide."*
-
-### Accountability
-
-- **Explanation**: Addresses how the team will handle instances when expectations are not met.
-- **Suggestion**:
-  - *"Team members who cannot fulfill their commitments should notify the team as soon as possible to redistribute tasks."*
-
-### Peer Feedback and Evaluation
-
-- **Explanation**: Provides a mechanism for constructive feedback among team members.
-- **Suggestion**:
-  - *"Periodic peer evaluations will be conducted to promote continuous improvement and address any concerns promptly."*
-
-### Resource Sharing
-
-- **Explanation**: Outlines how resources (files, research, tools) will be shared.
-- **Suggestion**:
-  - *"All project-related documents will be stored in a shared Google Drive folder accessible to all team members."*
-
-### Amendment of Contract
-
-- **Explanation**: Describes how the contract can be modified if necessary.
-- **Suggestion**:
-  - *"Any amendments to this contract must be agreed upon by all team members."*
-
-### Confidentiality
-
-- **Explanation**: Ensures that sensitive information is kept within the team.
-- **Suggestion**:
-  - *"Team members agree to keep project details confidential and not share proprietary information outside the team without consent."*
-
----
-
-## Team Member Signatures
-
-Every team member must put their name here to signify that they agree to abide by this contract.
-
-**Suggestions for Improvement**:
-
-- Provide space for signatures and dates to formalize the agreement.
-
-**Example**:
-
----
-
-**Team Member Signatures**
-
-- **Name:** ______________________  **Signature:** ______________________  **Date:** __________
-- **Name:** ______________________  **Signature:** ______________________  **Date:** __________
-- **Name:** ______________________  **Signature:** ______________________  **Date:** __________
-- **Name:** ______________________  **Signature:** ______________________  **Date:** __________
+Team Member Names
