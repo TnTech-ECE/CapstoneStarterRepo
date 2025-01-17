@@ -43,7 +43,6 @@ In this section, the team will discuss and clearly define their collective expec
   - **Frequency:** The team will meet [specify frequency, e.g., twice a week on Mondays and Thursdays at 4 PM].
   - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
-  - **Conduct:** Meetings will have a set agenda, and minutes will be recorded and shared.
 
 ### **5. Conduct**
 
@@ -59,7 +58,7 @@ In this section, the team will discuss and clearly define their collective expec
   - Use a step-by-step approach to resolve issues:
     1. Discuss the issue privately between involved parties.
     2. If unresolved, bring the issue to the team for discussion.
-    3. Seek input from the instructor or a mediator if necessary.
+    3. Seek input from the instructor if necessary.
   - Focus on finding mutually acceptable solutions.
 
 ### **7. Deadlines**
@@ -96,16 +95,6 @@ Assigning specific roles can help streamline team operations. Below, define any 
   - May request clarifications during meetings to ensure accurate record-keeping.
 - **Expectation Changes:**
   - Ensures documentation is maintained without reducing their responsibility in other project areas.
-
-**c. Research Lead**
-
-- **Responsibilities:**
-  - Coordinate research activities and ensure information accuracy.
-  - Assign research tasks and manage resource compilation.
-- **Powers Granted:**
-  - Can delegate research-related tasks to team members.
-- **Expectation Changes:**
-  - Special focus on research aspects but otherwise contributes equally to other tasks.
 
 *(Add or modify roles based on your team's needs.)*
 
