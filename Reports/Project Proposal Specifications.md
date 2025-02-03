@@ -7,7 +7,7 @@ This document provides a comprehensive explanation of what a project proposal sh
 - All submissions must be composed in markdown format.
 - All sources must be cited unless the information is common knowledge for the target audience.
 - The document must be written in third person.
-- The document must include an introduction.
+- The document must identify all stakeholders including the instuctor, supervisor, and cusotmer.
 - The problem must be clearly defined using "shall" statements.
 - Existing solutions or technologies that enable novel solutions must be identified.
 - Success criteria must be explicitly stated.
@@ -30,7 +30,7 @@ Toward the end of the introduction, include a subsection that outlines what the 
 Formulating the problem or objective involves clearly defining it through background information, specifications, and constraints. Think of it as "fencing in" the objective to make it unambiguously clear what is and is not being addressed and why.
 
 Questions to consider:
-- Who does the problem affect?
+- Who does the problem affect (i.e. who is your customer)?
 - Why do we need this solution?
 - What challenges necessitate a dedicated, multi-person engineering team?
 - Why aren’t off-the-shelf solutions sufficient?
@@ -76,9 +76,13 @@ Each project proposal must include a comprehensive description of the necessary 
 
 Provide a budget proposal with justifications for expenses such as software, equipment, components, testing machinery, and prototyping costs. This should be an estimate, not a detailed bill of materials.
 
-### Skills
+### Personel
 
 Identify the skills present in the team and compare them to those required to complete the project. Address any skill gaps with a plan to acquire the necessary knowledge.
+
+Besides the team, also state who you choose to be you supervisor and why.
+
+State who your instrucotr is and what role you expect them to play in the project.
 
 ### Timeline
 
