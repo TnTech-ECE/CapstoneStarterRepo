@@ -25,7 +25,7 @@ You may instead choose to use overleaf to make the poster. A template is include
 
 ## Other poster resources
 
-[University Logos](https://www.tntech.edu/ocm/marketingtoolkit/logos.php)
+[University Logos](https://www.tntech.edu/ocm/assets.php)
 
 [Poster Making Guide (INCORRECT SIZE for ECE - still a good resource)](https://www.tntech.edu/library/poster.php)
 
