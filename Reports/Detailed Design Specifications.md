@@ -23,6 +23,7 @@ The document should include:
 - A comprehensive Bill of Materials (BOM)
 - Analysis of crucial design decisions
 - Execution plan considering skill sets and time requirements
+
 *Note: These technical documentation elements are mandatory only when relevant to the particular subsystem.
 
 
