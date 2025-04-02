@@ -67,7 +67,7 @@ The schematic should be relevant to the design and provide ample details necessa
 Include a manufacturable printed circuit board layout.
 
 
-## Operational Flowchart
+## Flowchart
 
 For sections including a software component, produce a chart that demonstrates the decision-making process of the microcontroller. It should provide an overview of the device's function without exhaustive detail.
 
