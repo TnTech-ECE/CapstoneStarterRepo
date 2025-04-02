@@ -15,7 +15,7 @@ The document should include:
 - Explanation of the subsystem’s integration within the overall solution
 - Detailed specifications and constraints specific to the subsystem
 - Synopsis of the suggested solution
-- Interfaces among different subsystems
+- Interfaces to other subsystems
 - 3D models of customized mechanical elements*
 - A buildable diagram*
 - A Printed Circuit Board (PCB) design layout*
