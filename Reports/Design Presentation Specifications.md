@@ -5,7 +5,7 @@ Your design presentation is an opportunity to summarize your design work and pre
 Given the professional nature of your audience, it is imperative to uphold the highest standards of professionalism throughout your presentation. However, infusing appropriate humor and creativity can significantly enhance engagement and make your presentation memorable. We encourage each team to express their unique personalities and creativity, provided they maintain a professional demeanor. Remember, there is no singular "right" way to deliver this presentation—innovative approaches are welcome.
 
 ## Presentation Details
-- Should be 10–15 minutes in length
+- Should be 10–25 minutes in length
 - PowerPoint is required
 - All team members must participate
 
