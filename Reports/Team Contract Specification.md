@@ -69,11 +69,11 @@ In this section, the team will discuss and clearly define their collective expec
   - The team will collaboratively adjust workloads to ensure project timelines are maintained.
 
 
-## **Unique Roles (Optional)**
+## **Unique Roles**
 
 Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-**a. Team Leader/Coordinator:** [Name of student who will fill this role]
+**a. Team Leader/Coordinator: (Required)** [Name of student who will fill this role]
 
 - **Responsibilities:**
   - Schedule and coordinate team meetings.
@@ -84,7 +84,7 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-**b. Recorder/Secretary:** [Name of student who will fill this role]
+**b. Recorder/Secretary: (Optional)** [Name of student who will fill this role]
 
 - **Responsibilities:**
   - Take detailed notes during meetings.
