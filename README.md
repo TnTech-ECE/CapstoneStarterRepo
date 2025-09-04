@@ -34,7 +34,7 @@ Give a brief bio for each team member and their broad contribution to the projec
 - Aaron Neuharth:
   
 - Cole Wilson:
-  
+  Electrical Engineering Student with Mechatronics Concentration. Knowledgable about Controls. 
 - Dow Cox:  
   Electrical and Computer Engineering Student with Industrial Control Systems Specialisation. Knowledgeable in microcontrollers and software design concepts. 
 - John Donnell:
@@ -73,4 +73,4 @@ In the software directory of the repo information regarding how each team is exp
  - SharePoint
  - Github
  - Git
- - \<Insert 3d modleing software\>
+ - Inventor 
