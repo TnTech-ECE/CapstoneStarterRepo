@@ -42,7 +42,7 @@ Give a brief bio for each team member and their broad contribution to the projec
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Aaron Neuharth
 
 ### Stakeholders
 
