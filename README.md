@@ -9,9 +9,13 @@ Our team is tasked by Lockinvar to create an induction heater controller to [WE 
 [what chat said](https://chatgpt.com/share/68b9fbc4-37d0-8004-9c48-8bbef7e20826)
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+Our team expects to provide our customer with a ready-to-use design solution to the problem we were tasked with solving. The outcomes we expect to meet are provided as such below:
 
-[what chat said](https://chatgpt.com/share/68b9fbc4-37d0-8004-9c48-8bbef7e20826)
+- Precision temperature and power control
+- Optimization of efficiency for the heating system in regards to previous heating solutions
+- Reliable protection and safety for the design
+- Easy-to-use and user-friendly interface for technical support 
+
 ## Project Demonstration & Images
 
 Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
@@ -24,14 +28,14 @@ Below the video link show some well-taken, appropriately sized images of the pro
 ### Team
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
-- Austin DuCrest:
+- Austin DuCrest: Electrical Engineering Student with Power Concentration. Knowledgeable in Power systems and Power system P&C (Protection and Controls)
   
 - Aaron Neuharth:
   
 - Cole Wilson:
   Electrical Engineering Student with Mechatronics Concentration. Knowledgable about Controls. 
 - Dow Cox:  
-  Electrical and Computer Engineering Student with Industrial Control Systems Specialisation. Knowledgeable in microcontrollers and software design concepts. 
+  Electrical and Computer Engineering Student with Industrial Control Systems Specialization. Knowledgeable in microcontrollers and software design concepts. 
 - John Donnell:
   
 
