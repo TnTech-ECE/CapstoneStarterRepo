@@ -43,6 +43,8 @@ Tell who the faculty supervisor was for the project
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+- **Lockinvar**
+For over 80 years, Lochinvar, an American company, has been a leader of innovation and high-efficiency water heating. Through Lochinvar's pride in leadership and commitment to excellence, the company has continually improved year after year. Today, Lochinvar touts the broadest line of high-efficiency water heating solutions, a world-class research & development department, comprehensive service with every sale and industry-leading training through Lochinvar University.
 
 ### Recognitions
 
