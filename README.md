@@ -30,11 +30,15 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 - Austin DuCrest:
+  
 - Aaron Neuharth:
+  
 - Cole Wilson:
-- Dow Cox:
+  
+- Dow Cox:  
   Electrical and Computer Engineering Student with Industrial Control Systems Specialisation. Knowledgeable in microcontrollers and software design concepts. 
 - John Donnell:
+  
 
 ### Faculty Supervisor
 
