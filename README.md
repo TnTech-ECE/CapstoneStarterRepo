@@ -1,4 +1,4 @@
-# {Name of the Project} - Your project should have a catchy and functional name
+# Induction Heater Regulation
 
 The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
@@ -29,6 +29,12 @@ Below the video link show some well-taken, appropriately sized images of the pro
 ### Team
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+- Austin DuCrest:
+- Aaron Neuharth:
+- Cole Wilson:
+- Dow Cox:
+  Electrical and Computer Engineering Student. Knowldgeable in micro Controllesr and software based concepts.
+- John Donnell:
 
 ### Faculty Supervisor
 
@@ -58,3 +64,9 @@ In the documentaion section information regarding the documentation that is requ
 ### Software
 
 In the software directory of the repo information regarding how each team is expected to document software can be found.
+ - Visual Studio Code
+ - Github Desktop
+ - SharePoint
+ - Github
+ - Git
+ - \<Insert 3d modleing software\>
