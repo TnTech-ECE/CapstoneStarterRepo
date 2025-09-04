@@ -1,15 +1,13 @@
 # **Teamwork Contract**
 
 **Team X**  
-**Team Members:** [List all student names here]   
+**Team Members:** Jackson Taylor, Blake Hudson, Jack Bender, Kenneth Creamer, Nolan Magee   
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
 
-The following are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that your final contract, must be approved by your instructor.
-
 ## **Introduction**
 
-*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team X. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
+*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team 6. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
 
 
 ## **Team Expectations**
@@ -34,14 +32,15 @@ In this section, the team will discuss and clearly define their collective expec
 
 - **Expectation:** Team communication should be:
   - Professional, respectful, and considerate.
-  - Conducted through agreed-upon channels (e.g., email, Slack, Microsoft Teams).
+  - Conducted through agreed-upon channels (General communication via text. File sharing via OneDrive).
   - Responsive, with replies to inquiries within 24 hours on weekdays.
 
 ### **4. Meetings**
 
 - **Expectation:** Regarding team meetings:
-  - **Frequency:** The team will meet [specify frequency, e.g., twice a week on Mondays and Thursdays at 4 PM].
+  - **Frequency:** The team will meet twice a week during the class period specified for ECE-4961.
   - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
+  -                 Excessive absences will result in severe spanking by the entire group.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
 
 ### **5. Conduct**
@@ -59,7 +58,8 @@ In this section, the team will discuss and clearly define their collective expec
     1. Discuss the issue privately between involved parties.
     2. If unresolved, bring the issue to the team for discussion.
     3. Seek input from the instructor if necessary.
-  - Focus on finding mutually acceptable solutions.
+  - Focus on finding mutually acceptable solutions and restoration of group cohesion.
+  - Contradicting opinions will be decided by majority vote and immediately accepted in order to move forward with unity.
 
 ### **7. Deadlines**
 
@@ -73,7 +73,7 @@ In this section, the team will discuss and clearly define their collective expec
 
 Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-**a. Team Leader/Coordinator: (Required)** [Name of student who will fill this role]
+**a. Team Leader/Coordinator: ** Nolan Magee
 
 - **Responsibilities:**
   - Schedule and coordinate team meetings.
@@ -84,7 +84,7 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-**b. Recorder/Secretary: (Optional)** [Name of student who will fill this role]
+**b. Recorder/Secretary: Nolan Magee
 
 - **Responsibilities:**
   - Take detailed notes during meetings.
@@ -94,7 +94,6 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - Ensures documentation is maintained without reducing their responsibility in other project areas.
 
-*(Add or modify roles based on your team's needs.)*
 
 
 ## **Additional Agreements**
@@ -106,4 +105,8 @@ Include any other important agreements the team decides upon.
 
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-[List all student names here]
+Nolan Magee
+Blake Hudson
+Jack Bender
+Kenneth Creamer
+Jackson Taylor
