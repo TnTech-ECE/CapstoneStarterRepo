@@ -110,11 +110,11 @@ In the event the individual in a specific role cannot complete a task, another g
  
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-𝓐𝓪𝓻𝓸𝓷 𝓝𝓮𝓾𝓱𝓪𝓻𝓽𝓱
-𝓐𝓾𝓼𝓽𝓲𝓷 𝓓𝓾𝓒𝓻𝓮𝓼𝓽
-𝓒𝓸𝓵𝓮 𝓦𝓲𝓵𝓼𝓸𝓷 
-𝓓𝓸𝔀 𝓒𝓸𝔁
-𝓙𝓸𝓱𝓷 𝓓𝓸𝓷𝓷𝓮𝓵𝓵
+𝓐𝓪𝓻𝓸𝓷 𝓝𝓮𝓾𝓱𝓪𝓻𝓽𝓱  
+𝓐𝓾𝓼𝓽𝓲𝓷 𝓓𝓾𝓒𝓻𝓮𝓼𝓽  
+𝓒𝓸𝓵𝓮 𝓦𝓲𝓵𝓼𝓸𝓷  
+𝓓𝓸𝔀 𝓒𝓸𝔁  
+𝓙𝓸𝓱𝓷 𝓓𝓸𝓷𝓷𝓮𝓵𝓵  
 
 
 
