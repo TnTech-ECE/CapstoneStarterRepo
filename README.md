@@ -1,15 +1,13 @@
 # Induction Heater Controller
 
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
-
+Our team is tasked by Lockinvar to create an induction heater controller to regulate the power delivered to an induction heater. The purpose of this controller is to improve the energy efficiency and life expectancy of the heater. We plan to have safety systems in place to ensure that nothing gets overlooked 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+Here, explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
 
 ## Salient Outcomes
