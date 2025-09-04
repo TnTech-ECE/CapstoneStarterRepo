@@ -33,7 +33,7 @@ Give a brief bio for each team member and their broad contribution to the projec
 - Aaron Neuharth:
 - Cole Wilson:
 - Dow Cox:
-  Electrical and Computer Engineering Student. Knowldgeable in micro Controllesr and software based concepts.
+  Electrical and Computer Engineering Student. Knowldgeable in microcontrollers and software design concepts.
 - John Donnell:
 
 ### Faculty Supervisor
