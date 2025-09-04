@@ -6,7 +6,6 @@ Our team is tasked by Lockinvar to create an induction heater controller to [WE 
 
 [WE DO NOT KNOW THIS YET] Lochivar has a smart touch control system we might look at more. 
 
-[what chat said](https://chatgpt.com/share/68b9fbc4-37d0-8004-9c48-8bbef7e20826)
 ## Salient Outcomes
 
 Our team expects to provide our customer with a ready-to-use design solution to the problem we were tasked with solving. The outcomes we expect to meet are provided as such below:
@@ -28,20 +27,20 @@ Below the video link show some well-taken, appropriately sized images of the pro
 ### Team
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
-- Austin DuCrest: Electrical Engineering Student with Power Concentration. Knowledgeable in Power systems and Power system P&C (Protection and Controls)
-  
-- Aaron Neuharth:
-  
+- Austin DuCrest:
+  Electrical Engineering Student with Power Concentration. Knowledgeable in Power systems and Power system P&C (Protection and Controls)
+- Aaron Neuharth (Team Leader):
+  Electrical Engineering with a Controls Concentration. Knowledgeable in controls systems and PLC logic.
 - Cole Wilson:
   Electrical Engineering Student with Mechatronics Concentration. Knowledgable about Controls. 
 - Dow Cox:  
   Electrical and Computer Engineering Student with Industrial Control Systems Specialization. Knowledgeable in microcontrollers and software design concepts. 
-- John Donnell:
+- John Donnell (Reporter):
   
 
 ### Faculty Supervisor
 
-Aaron Neuharth
+Dr. Ali Alouani
 
 ### Stakeholders
 
@@ -75,4 +74,5 @@ In the software directory of the repo information regarding how each team is exp
  - SharePoint
  - Github
  - Git
+ - AutoCAD Electrical
  - Inventor 
