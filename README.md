@@ -6,7 +6,7 @@ Our team is tasked by Lockinvar to create an induction heater controller to [WE 
 
 [WE DO NOT KNOW THIS YET] Lochivar has a smart touch control system we might look at more. 
 
-
+[what chat said](https://chatgpt.com/share/68b9fbc4-37d0-8004-9c48-8bbef7e20826)
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
