@@ -1,6 +1,3 @@
-<img width="1273" height="962" alt="image" src="https://github.com/user-attachments/assets/43198204-ed7e-462a-951b-250437c2d313" /><img width="1273" height="962" alt="image" src="https://github.com/user-attachments/assets/75ad1d22-eebc-403a-be57-436cf5db184a" /># Induction Heater Controller
-
-
 ## Executive Summary
 
 Our team is tasked by Lockinvar to create an induction heater controller to [WE DO NOT KNOW THIS YET] regulate the power delivered to an induction heater. The purpose of this controller is to improve the energy efficiency and life expectancy of the heater. We plan to have safety systems in place to ensure that nothing gets overheated.
