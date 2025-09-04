@@ -1,4 +1,4 @@
-# Induction Heater Controller
+<img width="1273" height="962" alt="image" src="https://github.com/user-attachments/assets/43198204-ed7e-462a-951b-250437c2d313" /><img width="1273" height="962" alt="image" src="https://github.com/user-attachments/assets/75ad1d22-eebc-403a-be57-436cf5db184a" /># Induction Heater Controller
 
 
 ## Executive Summary
@@ -14,7 +14,7 @@ Our team is tasked by Lockinvar to create an induction heater controller to [WE 
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
 
-
+[what chat said](https://chatgpt.com/share/68b9fbc4-37d0-8004-9c48-8bbef7e20826)
 ## Project Demonstration & Images
 
 Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
