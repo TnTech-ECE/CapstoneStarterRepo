@@ -1,4 +1,4 @@
-# Induction Heater Regulation
+# Induction Heater Controller
 
 The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
 
@@ -30,15 +30,19 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 - Austin DuCrest:
+  
 - Aaron Neuharth:
+  
 - Cole Wilson:
-- Dow Cox:
-  Electrical and Computer Engineering Student. Knowledgeable in microcontrollers and software design concepts.
+  Electrical Engineering Student with Mechatronics Concentration. Knowledgable about Controls. 
+- Dow Cox:  
+  Electrical and Computer Engineering Student with Industrial Control Systems Specialisation. Knowledgeable in microcontrollers and software design concepts. 
 - John Donnell:
+  
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Aaron Neuharth
 
 ### Stakeholders
 
@@ -71,4 +75,4 @@ In the software directory of the repo information regarding how each team is exp
  - SharePoint
  - Github
  - Git
- - \<Insert 3d modleing software\>
+ - Inventor 
