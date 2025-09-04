@@ -3,11 +3,11 @@
 
 ## Executive Summary
 
-Our team is tasked by Lockinvar to create an induction heater controller to regulate the power delivered to an induction heater. The purpose of this controller is to improve the energy efficiency and life expectancy of the heater. We plan to have safety systems in place to ensure that nothing gets overheated.
+Our team is tasked by Lockinvar to create an induction heater controller to [WE DO NOT KNOW THIS YET] regulate the power delivered to an induction heater. The purpose of this controller is to improve the energy efficiency and life expectancy of the heater. We plan to have safety systems in place to ensure that nothing gets overheated.
 
 ## Capabilities
 
-Here, explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+[WE DO NOT KNOW THIS YET] Lochivar has a smart touch control system we might look at more. 
 
 
 ## Salient Outcomes
