@@ -2,7 +2,8 @@
 
 **Team 2**  
 **Team Members: Noah Beaty nabeaty42@tntech.edu, Jack Tolleson jmtolleson42@tntech.edu, 
-                Nathan MacPherson nomacphers42@tntech.edu, Allison Givens amgivens42@tntech.edu**  
+                Nathan MacPherson nomacphers42@tntech.edu, Allison Givens amgivens42@tntech.edu,
+                Lewis Bates lfbates42@tntech.edu**  
 
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
