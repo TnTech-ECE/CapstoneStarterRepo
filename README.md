@@ -36,7 +36,7 @@ Give a brief bio for each team member and their broad contribution to the projec
 - Dow Cox:  
   Electrical and Computer Engineering Student with Industrial Control Systems Specialization. Knowledgeable in microcontrollers and software design concepts. 
 - John Donnell (Reporter):
-  
+  Computer Engineering Student with experience in PCB Design, debugging, and testing. knowledgeable with coding.
 
 ### Faculty Supervisor
 
