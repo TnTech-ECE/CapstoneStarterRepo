@@ -153,5 +153,5 @@ Listed below are some additional agreements our team felt were important to incl
 Nathan MacPherson <br>
 _________________ <br>
 _________________ <br>
-_________________ <br>
+Allison Givens <br>
 _________________ <br>
