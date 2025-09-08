@@ -1,14 +1,15 @@
 # **Teamwork Contract**
 
 **Team 2**  
-**Team Members: Noah Beaty nabeaty42@tntech.edu, Jack Tolleson jmtolleson42@tntech.edu, 
-                Nathan MacPherson nomacphers42@tntech.edu, Allison Givens amgivens42@tntech.edu,
-                Lewis Bates lfbates42@tntech.edu**  
+**Team Members:** 
+- Noah Beaty (nabeaty42@tntech.edu) <br>
+- Jack Tolleson (jmtolleson42@tntech.edu) <br>
+- Nathan MacPherson (nomacphers42@tntech.edu) <br>
+- Allison Givens (amgivens42@tntech.edu) <br>
+- Lewis Bates (lfbates42@tntech.edu) 
 
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
-
-The following are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that your final contract, must be approved by your instructor.
 
 ## **Introduction**
 
@@ -17,14 +18,12 @@ The following are suggestions for items to include in your team contract. You ge
 
 ## **Team Expectations**
 
-In this section, the team will discuss and clearly define their collective expectations in various key areas. Be specific to ensure mutual understanding.
-
 ### **1. Participation** *(Engagement and Effort in the Project)*
 
 - **Expectation:** Each team member is expected to:
   - Actively participate in all team meetings and discussions.
   - Engage fully in project activities and contribute ideas.
-  - Notify the team in advance if unable to attend a meeting, meet an obligation, or are going to be late.
+  - Notify the team in advance if unable to meet an obligation.
 
 ### **2. Contribution** *(Progress on the Project)*
 
@@ -37,17 +36,17 @@ In this section, the team will discuss and clearly define their collective expec
 
 - **Expectation:** Team communication should be:
   - Professional, respectful, and considerate.
-  - Conducted through agreed-upon channels of: Microsoft Teams or Group Text SMS messages.
+  - Conducted through Discord or group text messages.
   - Responsive, with replies to inquiries within 48 hours on weekdays.
 
 ### **4. Meetings**
 
 - **Expectation:** Regarding team meetings:
-  - **Frequency:** The team will meet at least 2 times, not including the Faculty Advisor Meeting.
-  - 1 meeting can be cancelled, a vote of 4 out of 5 is the voting majority to cancel.
-  - Meeting Days: Monday and Wednesday @ 3 PM.
-  - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
+  - **Frequency:** The team will meet twice a week, excluding meetings with its advisor.
+  - **Meeting Days:** Monday and Wednesday @ 3 PM.
+  - **Attendance:** Members are expected to attend all meetings; absences and tardiness should be communicated in advance.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
+  - **Cancellation:** If agreed upon by at least four members of the team, one non-advisor meeting per week may be cancelled.
 
 ### **5. Conduct**
 
@@ -55,20 +54,19 @@ In this section, the team will discuss and clearly define their collective expec
   - Treat each other with respect and courtesy.
   - Listen actively and allow others to express their ideas without interruption.
   - Address disagreements professionally and constructively.
-  - Be trusted to have the best intentions for all of the team.
+  - Trust each other to have the team's best interests in mind.
 
 ### **6. Conflict Resolution**
 
 - **Expectation:** The team will:
   - Address conflicts promptly through open dialogue.
-  - Use a step-by-step approach to resolve issues:
-    0. De-CHESS-elate!!1
-    1. Discuss the issue privately between involved parties.
-    2. If unresolved, bring the issue to the team for discussion.
-    3. If unresolved from the team discussion, the issue should be brought to the instructor/ Faculty Advisor.
-    4. Seek input from the instructor/ Faculty Advisor if necessary.
   - Focus on finding mutually acceptable solutions.
-
+  - Use a step-by-step approach to resolve issues: <br>
+    1. De-CHESS-calate the situation! 
+    2. Discuss the issue privately between involved parties.
+    3. If unresolved, bring the issue to the team for discussion.
+    4. If unresolved from the team discussion, the issue should be brought to the instructor/ Faculty Advisor.
+    5. Seek input from the instructor/ Faculty Advisor if necessary.
 
 ### **7. Deadlines**
 
@@ -82,7 +80,7 @@ In this section, the team will discuss and clearly define their collective expec
 
 Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-**A. (Team Leader) Grand Master / Knight: ** Nathan MacPherson 
+### A. (Team Leader) Grand Master / Knight: Nathan MacPherson 
 
 - **Responsibilities:**
   - Schedule and coordinate team meetings.
@@ -91,9 +89,9 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Powers Granted:**
   - Authority to make minor decisions to keep the project on track after team consultation.
 - **Expectation Changes:**
-  - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
+  - The Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-**B. (Recorder/Secretary) Bishop: ** Noah Beaty
+### B. (Recorder/Secretary) Bishop: Noah Beaty
 - **Responsibilities:**
   - Take detailed notes during meetings.
   - Distribute meeting minutes to all team members within 24 hours.
@@ -102,58 +100,58 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - Ensures documentation is maintained without reducing their responsibility in other project areas.
 
-**C. (Treasurer/Equipment Manager) (Rook) (Bishop Jr.) Bishop Jr.: ** Jack Tolleson 
+### C. (Treasurer/Equipment Manager) (Rook): Jack Tolleson 
 
 - **Responsibilities:**
-  - Keeping Track of the products/equipment and their cost.
+  - Keeps track of team funds, spending, and potential costs.
 - **Powers Granted:**
-  - In the case of Monetary decisions, Has the authority to defer the decision to the instructor/ Faculty Advisor.
+  - May request that the team consults its advisor before making a spending related decision.
 - **Expectation Changes:**
-  - Can not abuse the role in order to neglect other assigned work/tasks.
+  - The Treasurer will handle financial tasks, remaining equally responsible for project work.
 
-**D. (Bishop Jr.) Bishop Jr.: ** Allison Givens
+### D. (Bishop Jr.) Bishop Jr.: Allison Givens
 
 - **Responsibilities:**
-  - NONE
+  - Unchanged
 - **Powers Granted:**
-  - NONE
+  - Unchanged
 - **Expectation Changes:**
   - NONE
-  - You complete tasks out of the sole goodness of your heart.
-  - This power cannot be abused.
 
-**E. (QUEEN) qUEEN/Bishop Sr.: ** Lewis Bates
+### E. (QUEEN) qUEEN/Bishop Sr.: Lewis Bates
 
 - **Responsibilities:**
-  - You are the Public Scapegoat.
+  - Unchanged
 - **Powers Granted:**
-  - NONE
+  - Unchanged
 - **Expectation Changes:**
   - NONE
 
 
 ## **Additional Agreements**
-
-### **A. Decision-Making Process**
-  ### **AA. Voting and Representation**
+Listed below are some additional agreements our team felt were important to include.
+### **Decision-Making Process**
+  ### **1. Voting and Representation**
   - One Person, One Vote.
-  - For agreements, 4 out of 5 is the majority line
-  - All members have to vote
+  - For agreements, 4 out of 5 is the majority line.
+  - All members must vote.
   
-  ### **AA. Voting Timeframe** 
-  - If there are member(s) that are absent from a decision, there is a voting baseline of 24 hrs.
+  ### **2. Voting Timeframe** 
+  - If a team member is absent from the vote or the team cannot come to an agreement, up to 24 hours will be given to decide on a vote.
   - This can be altered to up to a maximum of 48 hrs, subject matter depending.    
   
-  ### **AB. Specific Knowledge Case**
-  - If Someone is the Minority party, and they are adamant about their decision, Resolution should be to take it to the Faculty Advisor.
-  -
+  ### **3. Specific Knowledge Case**
+  - If a 4-1 vote is cast where the decision majorly affects the sole dissenter, they may request that the team consults its advisor before coming to their decision
+  - If the decision is upheld, the majority must help the minority with their task.
 
-### **B. Contract Amendments**
-- Any time throughout the semester, Team Member(s) can make amendments.
-- For amendments, 5 out of 5 is the majority line
+### **Contract Amendments**
+- Our team reserves the right to amend this contract any time throughout the semester.
+- Amendments must be agreed upon unanimously.
 
 ## **Team Member Signatures**
 
-By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
-
-[List all student names here]
+Nathan MacPherson <br>
+_________________ <br>
+_________________ <br>
+_________________ <br>
+_________________ <br>
