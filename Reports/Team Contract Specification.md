@@ -151,7 +151,7 @@ Listed below are some additional agreements our team felt were important to incl
 ## **Team Member Signatures**
 
 Nathan MacPherson <br>
+Noah Beaty <br>
 Jack Tolleson <br>
-_________________ <br>
 Allison Givens <br>
 _________________ <br>
