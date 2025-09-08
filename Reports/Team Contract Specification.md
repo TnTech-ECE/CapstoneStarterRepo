@@ -40,7 +40,6 @@ In this section, the team will discuss and clearly define their collective expec
 - **Expectation:** Regarding team meetings:
   - **Frequency:** The team will meet twice a week during the class period specified for ECE-4961.
   - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
-  -                 Excessive absences will result in severe spanking by the entire group.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
 
 ### **5. Conduct**
