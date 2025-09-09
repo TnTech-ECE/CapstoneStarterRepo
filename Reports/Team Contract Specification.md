@@ -1,29 +1,25 @@
 # **Teamwork Contract**
 
-**Team X**  
-**Team Members:** [List all student names here]   
-*Electrical and Computer Engineering Department*  
+**Team 8**  
+**Team Members:** Kasey Dyess, Job Flores, Wyatt Wheeler, Gideon Befekadu, Zenkline Elle, Brody Smith   
+*Electrical and Computer Engineering Department*   
 *Tennessee Technological University*
-
-The following are suggestions for items to include in your team contract. You get to customize this document as you see fit. Note that your final contract, must be approved by your instructor.
 
 ## **Introduction**
 
-*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team X. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our project.*
+*This teamwork contract outlines the agreed-upon expectations, responsibilities, and guidelines for effective collaboration among the members of Team 8. By adhering to this contract, we aim to foster a productive, respectful, and supportive team environment conducive to the success of our DARPA Triage Drone project.*
 
 
 ## **Team Expectations**
 
-In this section, the team will discuss and clearly define their collective expectations in various key areas. Be specific to ensure mutual understanding.
-
-### **1. Participation** *(Engagement and Effort in the Project)*
+### **1. Participation**
 
 - **Expectation:** Each team member is expected to:
   - Actively participate in all team meetings and discussions.
   - Engage fully in project activities and contribute ideas.
   - Notify the team in advance if unable to attend a meeting or meet an obligation.
 
-### **2. Contribution** *(Progress on the Project)*
+### **2. Contribution** 
 
 - **Expectation:** Each team member is expected to:
   - Complete assigned tasks diligently and on time.
@@ -34,14 +30,14 @@ In this section, the team will discuss and clearly define their collective expec
 
 - **Expectation:** Team communication should be:
   - Professional, respectful, and considerate.
-  - Conducted through agreed-upon channels (e.g., email, Slack, Microsoft Teams).
-  - Responsive, with replies to inquiries within 24 hours on weekdays.
+  - Conducted through agreed-upon channels (Discord / Text).
+  - Responsive.
 
 ### **4. Meetings**
 
 - **Expectation:** Regarding team meetings:
-  - **Frequency:** The team will meet [specify frequency, e.g., twice a week on Mondays and Thursdays at 4 PM].
-  - **Attendance:** Members are expected to attend all meetings; absences should be communicated in advance.
+  - **Frequency:** The team will meet at least 1-2 times a week.
+  - **Attendance:** Members are expected to attend most meetings; absences should be communicated in advance.
   - **Preparation:** Members should come prepared, having completed any agreed-upon tasks or research.
 
 ### **5. Conduct**
@@ -55,10 +51,11 @@ In this section, the team will discuss and clearly define their collective expec
 
 - **Expectation:** The team will:
   - Address conflicts promptly through open dialogue.
-  - Use a step-by-step approach to resolve issues:
+  - Follow a step-by-step approach to resolve issues:
     1. Discuss the issue privately between involved parties.
-    2. If unresolved, bring the issue to the team for discussion.
-    3. Seek input from the instructor if necessary.
+    2. If unresolved, bring the issue to the team for discussion and vote.
+    3. If the vote results in a tie, seek input from the instructor.
+    4. If still unresolved, the team may consult an AI chatbot to help clear up any confusion in resolving the issue.
   - Focus on finding mutually acceptable solutions.
 
 ### **7. Deadlines**
@@ -71,9 +68,7 @@ In this section, the team will discuss and clearly define their collective expec
 
 ## **Unique Roles**
 
-Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
-
-**a. Team Leader/Coordinator: (Required)** [Name of student who will fill this role]
+### **a. Team Leader/Coordinator:** Kasey Dyess
 
 - **Responsibilities:**
   - Schedule and coordinate team meetings.
@@ -84,7 +79,7 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-**b. Recorder/Secretary: (Optional)** [Name of student who will fill this role]
+### **b. Recorder/Secretary:** Gideon Befekadu
 
 - **Responsibilities:**
   - Take detailed notes during meetings.
@@ -94,16 +89,13 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - Ensures documentation is maintained without reducing their responsibility in other project areas.
 
-*(Add or modify roles based on your team's needs.)*
-
-
-## **Additional Agreements**
-
-Include any other important agreements the team decides upon.
-
-
 ## **Team Member Signatures**
 
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
 
-[List all student names here]
+- **Kasey Dyess**
+- **Job Flores**
+- **Wyatt Wheeler**
+- **Gideon Befekadu**
+- **Zenkline Elle**
+- **Brody Smith**
