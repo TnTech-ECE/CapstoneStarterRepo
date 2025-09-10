@@ -1,6 +1,6 @@
 # **Teamwork Contract**
 
-**Team X**  
+**Team 6**  
 **Team Members:** Jackson Taylor, Blake Hudson, Jack Bender, Kenneth Creamer, Nolan Magee   
 *Electrical and Computer Engineering Department*  
 *Tennessee Technological University*
@@ -72,7 +72,7 @@ In this section, the team will discuss and clearly define their collective expec
 
 Assigning specific roles can help streamline team operations. Below, define any unique roles, their responsibilities, the powers granted, and any changes to expectations.
 
-**a. Team Leader/Coordinator: ** Nolan Magee
+a. Team Leader/Coordinator: Nolan Magee
 
 - **Responsibilities:**
   - Schedule and coordinate team meetings.
@@ -83,7 +83,7 @@ Assigning specific roles can help streamline team operations. Below, define any 
 - **Expectation Changes:**
   - In addition to regular duties, the Team Leader will handle organizational tasks but remains equally responsible for project work.
 
-**b. Recorder/Secretary: Nolan Magee
+b. Recorder/Secretary: Nolan Magee
 
 - **Responsibilities:**
   - Take detailed notes during meetings.
