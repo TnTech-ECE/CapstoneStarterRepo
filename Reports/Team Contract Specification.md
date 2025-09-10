@@ -94,12 +94,6 @@ b. Recorder/Secretary: Nolan Magee
   - Ensures documentation is maintained without reducing their responsibility in other project areas.
 
 
-
-## **Additional Agreements**
-
-Include any other important agreements the team decides upon.
-
-
 ## **Team Member Signatures**
 
 By typing our names below, we acknowledge that we have read, understand, and agree to abide by the terms of this Teamwork Contract.
