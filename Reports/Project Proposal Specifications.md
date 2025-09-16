@@ -60,7 +60,11 @@ Questions to consider:
 
 ## Survey of Existing Solutions
 
-............
+Existing solutions for automated chessboards range from DIY projects to commercially-produced boards:
+
+* **DIY Solutions**: ...............
+* **Industrial Solutions**: Several companies offer high-end automated boards with AI opponents and online connectivity. These solutions, however, are often too expensive for the average user, making them impractical for this application.
+
 Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
 
 ChessUp 2 Smart Chess Board [1]: A WiFi-enabled smart chessboard featuring chip recognition technology and direct integration with Chess.com, offered at a relatively lower cost of $399.99.
@@ -77,6 +81,23 @@ Cons:
 * The robotic arm cannot make moves for the first player except when removing pieces from the board.
 * Does not include voice recognition functionality.
 
+Chessnut Move [3]: An advanced robotic chessboard featuring integrated voice command support, offline AI gameplay, and connectivity with Chess.com. Priced at $899.99, it provides one of the most interactive experiences currently available.
+
+Cons:
+* Pieces occasionally collide during automated movement.
+* The design relies on each piece containing its own robotic base, which significantly increases cost.
+* Oversized piece bases reduce aesthetic appeal and make the board feel crowded.
+
+GoChess Mini [4]: A compact and lightweight smart chessboard featuring illuminated path indicators for piece movement, Bluetooth connectivity, adjustable AI difficulty, and Chess.com integration. Priced at $249.95 and weighing 6.6 pounds, it offers an affordable entry point into smart chessboards.
+
+Cons:
+* Battery-powered system requires two hours to fully charge, supporting up to 100 hours of playtime (reduced to about five hours when lights are enabled).
+* Does not support automated piece movement, requiring players to manually move all pieces.
+* Lacks an automated reset function for returning pieces to their starting positions.
+
+Despite the availability of existing smart chessboard solutions, challenges such as high cost, limited offline functionality, lack of voice recognition, and frequent piece collisions remain key barriers for the average user. The development of a new system should prioritize affordability, lightweight design, seamless voice integration, and reliable automated piece movement with full reset functionality for both players.
+
+This project aims to bridge the gap between current offerings by delivering a cost-effective, user-friendly, and offline-capable automated chessboard that eliminates common frustrations while enhancing accessibility for everyday players.
 
 ## Measures of Success
 
@@ -119,6 +140,10 @@ Consider the project’s broader impacts in global, economic, environmental, and
 [1] ChessUp 2 Smart Chess Board. Bryght Labs. (n.d.). https://playchessup.com/products/chessup-2
 
 [2] Miko Chess Grand. Miko. (n.d.). https://miko.ai/pages/miko-chess-grand 
+
+[3] Chessnutech. (n.d.). Chessnut move - advanced robotic chessboard with Plastic Pieces. Chessnut. https://www.chessnutech.com/products/chessnut-move-advanced-robotic-chessboard-with-plastic-pieces 
+
+[4] GoChess Mini. Particula. (n.d.). https://particula-tech.com/products/gochess-mini?variant=45806634402040&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooAY445sOW--M7GA0T4jbNkHE609yl_YKlFLR9iyhF7eX9KFsd9ubc 
 
 
 ## Statement of Contributions
