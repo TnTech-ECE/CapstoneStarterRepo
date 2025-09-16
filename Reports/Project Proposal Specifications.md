@@ -60,7 +60,22 @@ Questions to consider:
 
 ## Survey of Existing Solutions
 
-Research existing solutions, whether in literature, on the market, or within the industry. Present these findings in a coherent, organized manner. Remember to cite all information that is not common knowledge.
+............
+Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
+
+ChessUp 2 Smart Chess Board [1]: A WiFi-enabled smart chessboard featuring chip recognition technology and direct integration with Chess.com, offered at a relatively lower cost of $399.99.
+
+Cons:
+* Cannot move pieces autonomously.
+* Requires a stable WiFi connection to Chess.com for AI functionality.
+
+Miko Chess Grand [2]: A premium wooden smart chessboard equipped with a magnetic robotic arm beneath the surface for automated piece movement. It includes wooden pieces, a high-quality 12-pound wooden board, and dedicated storage space for captured pieces, priced at $549.99.
+
+Cons:
+* The board’s weight makes it less portable.
+* High-quality materials increase overall cost.
+* The robotic arm cannot make moves for the first player except when removing pieces from the board.
+* Does not include voice recognition functionality.
 
 
 ## Measures of Success
@@ -101,7 +116,9 @@ Consider the project’s broader impacts in global, economic, environmental, and
 
 ## References
 
-All sources used in the project proposal that are not common knowledge must be cited. Multiple references are required.
+[1] ChessUp 2 Smart Chess Board. Bryght Labs. (n.d.). https://playchessup.com/products/chessup-2
+
+[2] Miko Chess Grand. Miko. (n.d.). https://miko.ai/pages/miko-chess-grand 
 
 
 ## Statement of Contributions
