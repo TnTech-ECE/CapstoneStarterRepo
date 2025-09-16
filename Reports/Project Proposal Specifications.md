@@ -67,13 +67,13 @@ Existing solutions for automated chessboards range from DIY projects to commerci
 
 Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
 
-1. ChessUp 2 Smart Chess Board [1]: A WiFi-enabled smart chessboard featuring chip recognition technology and direct integration with Chess.com, offered at a relatively lower cost of $399.99.
+*ChessUp 2 Smart Chess Board [1]: A WiFi-enabled smart chessboard featuring chip recognition technology and direct integration with Chess.com, offered at a relatively lower cost of $399.99.
 
 Cons:
 * Cannot move pieces autonomously.
 * Requires a stable WiFi connection to Chess.com for AI functionality.
 
-2. Miko Chess Grand [2]: A premium wooden smart chessboard equipped with a magnetic robotic arm beneath the surface for automated piece movement. It includes wooden pieces, a high-quality 12-pound wooden board, and dedicated storage space for captured pieces, priced at $549.99.
+*Miko Chess Grand [2]: A premium wooden smart chessboard equipped with a magnetic robotic arm beneath the surface for automated piece movement. It includes wooden pieces, a high-quality 12-pound wooden board, and dedicated storage space for captured pieces, priced at $549.99.
 
 Cons:
 * The board’s weight makes it less portable.
@@ -81,14 +81,14 @@ Cons:
 * The robotic arm cannot make moves for the first player except when removing pieces from the board.
 * Does not include voice recognition functionality.
 
-3. Chessnut Move [3]: An advanced robotic chessboard featuring integrated voice command support, offline AI gameplay, and connectivity with Chess.com. Priced at $899.99, it provides one of the most interactive experiences currently available.
+*Chessnut Move [3]: An advanced robotic chessboard featuring integrated voice command support, offline AI gameplay, and connectivity with Chess.com. Priced at $899.99, it provides one of the most interactive experiences currently available.
 
 Cons:
 * Pieces occasionally collide during automated movement.
 * The design relies on each piece containing its own robotic base, which significantly increases cost.
 * Oversized piece bases reduce aesthetic appeal and make the board feel crowded.
 
-4. GoChess Mini [4]: A compact and lightweight smart chessboard featuring illuminated path indicators for piece movement, Bluetooth connectivity, adjustable AI difficulty, and Chess.com integration. Priced at $249.95 and weighing 6.6 pounds, it offers an affordable entry point into smart chessboards.
+*GoChess Mini [4]: A compact and lightweight smart chessboard featuring illuminated path indicators for piece movement, Bluetooth connectivity, adjustable AI difficulty, and Chess.com integration. Priced at $249.95 and weighing 6.6 pounds, it offers an affordable entry point into smart chessboards.
 
 Cons:
 * Battery-powered system requires two hours to fully charge, supporting up to 100 hours of playtime (reduced to about five hours when lights are enabled).
