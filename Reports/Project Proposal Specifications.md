@@ -27,7 +27,7 @@ Toward the end of the introduction, include a subsection that outlines what the 
 
 ## Formulating the Problem
 
-Current automated chess boards are expensive and lack features such as online functionality, voice recognition, and unobstructed movement. The goal of this implementation is to improve these features, reduce cost, use accessible parts for easy hobbyist replication, and to make the game more accessible for players with disabilities. Challenges of this project include digital signal processing for voice controls, artificial intelligence (AI) implementation for solo-play, and automating piece movement. 
+Current automated chess boards are expensive and lack features such as online functionality, voice recognition, and unobstructed movement. The goal of this implementation is to improve these features, reduce cost, use accessible parts for easy hobbyist replication, and to make the game more accessible for players with disabilities. Beyond individual use, this new technology could attract new customers to businesses related to board games or leisure locations through its novelty and fascination. Challenges of this project include digital signal processing for voice controls, artificial intelligence (AI) implementation for solo-play, and automating piece movement. 
 
 ### Background
 
@@ -37,7 +37,12 @@ AI has had a major impact in the world of chess, especially in the context of on
 
 Many efforts have been made to ensure that chess tournaments are accommodating to those with disabilities [7]. These accommodations still could be improved upon for player autonomy and ease in preparing. For those with Alzheimer’s, other dementias, dyslexia, dysgraphia, fine/gross motor needs, who are blind, or those with a temporary disability such as a broken hand, an accommodation that can be made is the assignment of a Game Assistant (GA) [7]. In cases such as these, the GA may be needed for piece movement, clock pressing, and/or scoring [7]. An automated board could help as an alternative to a GA by helping with piece movement, automatically keeping time, and automating scoring. This would allow players more independence, as they would not have to rely on the assistance of a GA, and fewer volunteers would be needed for tournaments.
 
-<!-- TODO: add more about hobbyists which will be easier when the diy section is complete -->
+<!-- can maybe talk about what the chess club or the table wants in paragraph below if we get them as a customer -->
+In recent years, the rise of board game cafés has demonstrated the strong appeal of face-to-face interaction and social gaming [8]. An automated chessboard with a visually engaging design could build on this trend by drawing curiosity and encouraging participation. Its novelty and interactive features would provide a memorable experience for customers, enhancing the atmosphere of businesses and leisure spaces that adopt the technology.
+
+One of the major ways a technology can become widespread is through low cost and easy manufacturability. The current automated chess boards available on the market are often prohibitively expensive for the average consumer [1][2][3][4]. By focusing on affordability and providing open documentation, this project lowers barriers for hobbyists and educators who wish to replicate or modify the design. Reduced costs also make it possible to introduce the technology to a wider audience, including students and lifelong learners, while still preserving the appeal of a physical, interactive product.
+
+
 ### Specifications and Constraints
 
 Specifications and constraints define the system's requirements. They can be positive (do this) or negative (don't do that). They can be mandatory (shall or must) or optional (may). They can cover performance, accuracy, interfaces, or limitations. Regardless of their origin, they must be unambiguous and impose measurable requirements.
@@ -107,6 +112,8 @@ Consider the project’s broader impacts in global, economic, environmental, and
 [6] D. M. D. Iliescu, "The Impact of Artificial Intelligence on the Chess World," *JMIR Serious Games*, vol. 8, no. 4, p. e24049, Dec. 2020. https://pmc.ncbi.nlm.nih.gov/articles/PMC7759436/.
 
 [7] US Chess, "US Chess Guidelines for Accessible Chess Events," Apr. 2020. https://new.uschess.org/sites/default/files/wp-thumbnails/2020/04/Accessibility-Guidelines-April-2020.pdf.
+
+[8] Davis, E. (2023, November 12). The Rise of Board Game Cafes: Socializing through Analog Entertainment. Medium. https://ethan-davis.medium.com/the-rise-of-board-game-cafes-socializing-through-analog-entertainment-51857183f856
 
 
 ## Statement of Contributions
