@@ -62,7 +62,7 @@ Questions to consider:
 
 Existing solutions for automated chessboards range from DIY projects to commercially-produced boards:
 
-* **DIY Solutions**: ...............
+* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 * **Industrial Solutions**: Several companies offer high-end automated boards with AI opponents and online connectivity. These solutions, however, are often too expensive for the average user, making them impractical for this application.
 
 Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
@@ -94,6 +94,32 @@ Cons:
 * Battery-powered system requires two hours to fully charge, supporting up to 100 hours of playtime (reduced to about five hours when lights are enabled).
 * Does not support automated piece movement, requiring players to manually move all pieces.
 * Lacks an automated reset function for returning pieces to their starting positions.
+
+*8x8 Smart Chess Board [5]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane.
+
+Cons:
+* The stepper motor system has experienced notable failures.
+* The bill of materials (BOM) is incomplete.
+
+*Techievince 8.0 – Electronics Club IITG Project [6]: An Arduino-based system programmed in Embedded C that integrates the Micro Max chess engine using Minimax and Alpha-Beta algorithms. It employs an XY trolley system with stepper motors, magnetized pieces, and an electromagnetic head, along with multiplexed reed switch sensors for piece displacement detection.
+
+Cons:
+* Visually less appealing compared to other designs.
+* Requires specialized magnetic chess pieces, increasing overall cost.
+* Does not include voice recognition functionality.
+
+*Chess Automation Using Computer Vision [7]: A computer vision–driven approach that uses a camera, OpenCV, and NumPy to detect the chessboard, track pieces in real time, and record game history. The system identifies moves directly from image or video input without requiring embedded magnets or sensors.
+
+Cons:
+* Lacks integrated AI functionality.
+* Cannot move pieces autonomously.
+* Lacks an automated reset function for returning pieces to their starting positions.
+
+
+
+
+
+
 
 Despite the availability of existing smart chessboard solutions, challenges such as high cost, limited offline functionality, lack of voice recognition, and frequent piece collisions remain key barriers for the average user. The development of a new system should prioritize affordability, lightweight design, seamless voice integration, and reliable automated piece movement with full reset functionality for both players.
 
@@ -143,7 +169,13 @@ Consider the project’s broader impacts in global, economic, environmental, and
 
 [3] Chessnutech. (n.d.). Chessnut move - advanced robotic chessboard with Plastic Pieces. Chessnut. https://www.chessnutech.com/products/chessnut-move-advanced-robotic-chessboard-with-plastic-pieces 
 
-[4] GoChess Mini. Particula. (n.d.). https://particula-tech.com/products/gochess-mini?variant=45806634402040&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooAY445sOW--M7GA0T4jbNkHE609yl_YKlFLR9iyhF7eX9KFsd9ubc 
+[4] GoChess Mini. Particula. (n.d.). https://particula-tech.com/products/gochess-mini?variant=45806634402040&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooAY445sOW--M7GA0T4jbNkHE609yl_YKlFLR9iyhF7eX9KFsd9ubc
+
+[5] MFOSSociety. (n.d.). MFOSSociety/8-8: 8/8: Smart Chess Board: An Automated Ai Chess Board. GitHub. https://github.com/MFOSSociety/8-8 
+
+[6] sumit11899. (n.d.). SUMIT11899/automated-chessboard. GitHub. https://github.com/sumit11899/Automated-ChessBoard 
+
+[7] Simarmehta. (n.d.). Simarmehta/CHESSAUTOMATION_CV. GitHub. https://github.com/simarmehta/chessAutomation_CV 
 
 
 ## Statement of Contributions
