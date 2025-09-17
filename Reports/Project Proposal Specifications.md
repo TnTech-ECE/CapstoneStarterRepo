@@ -20,6 +20,13 @@ This document provides a comprehensive explanation of what a project proposal sh
 
 ## Introduction
 
+As chess continues to grow in popularity, the demand for new, more interesting chess technology has become increasingly apparent. One of the newest innovations made to meet this demand is the automated chess board. Automated chess boards are capable of moving each piece around the board without human intervention, allowing users to play over the board against computers, people with disabilities, and friends across the world. Although this advancement has provided many new and exciting opportunities in the world of chess, automated boards prove to be too expensive for widespread use by average consumers. This project aims to design an automated chess board at a cheaper price, providing its benefits to more people around the world.
+
+#TODO: HELP!!!
+
+By allowing the autonomous movement of pieces upon receiving a spoken command at a cheaper price, this product will allow a larger audience to enjoy the experience and impact of automated chess boards.
+
+
 The introduction must be the opening section of the proposal. It acts as the "elevator pitch" of the project, briefly introducing the objective, its importance, and the proposed solution. Because readers may only read this section, it should effectively capture their attention and encourage them to read further.
 
 Toward the end of the introduction, include a subsection that outlines what the proposal will cover. This helps set reader expectations for the ensuing sections.
@@ -27,17 +34,21 @@ Toward the end of the introduction, include a subsection that outlines what the 
 
 ## Formulating the Problem
 
-Formulating the problem or objective involves clearly defining it through background information, specifications, and constraints. Think of it as "fencing in" the objective to make it unambiguously clear what is and is not being addressed and why.
-
-Questions to consider:
-- Who does the problem affect (i.e. who is your customer)?
-- Why do we need this solution?
-- What challenges necessitate a dedicated, multi-person engineering team?
-- Why aren’t off-the-shelf solutions sufficient?
+Current automated chess boards are expensive and lack features such as online functionality, voice recognition, and unobstructed movement. The goal of this implementation is to improve these features, reduce cost, use accessible parts for easy hobbyist replication, and to make the game more accessible for players with disabilities. Beyond individual use, this new technology could attract new customers to businesses related to board games or leisure locations through its novelty and fascination. Challenges of this project include digital signal processing for voice controls, artificial intelligence (AI) implementation for solo-play, and automating piece movement. 
 
 ### Background
 
-Provide context and details necessary to define the problem clearly and delineate its boundaries.
+During the pandemic, chess increased in popularity [5]. Online chess specifically had a major influx of activity, with Chess.com adding 1 million accounts from March to November 2020, and a 2.8 million member increase in November alone [5]. This newfound popularity opens up opportunities for innovation on this classic game. An automated chess board would support primarily online chess players who want to improve their over-the-board (OTB) game.
+
+AI has had a major impact in the world of chess, especially in the context of online play [6]. It provides learning opportunities, as certain AI can beat any human player. Chess games played OTB do not usually have this capability except for automated boards. AI in OTB implementations will allow players to improve by progressively increasing the strength of their opponent. This function would aid online players transitioning to OTB play, as they could play against AI before a human opponent. This feature also supports those who want to play OTB chess but cannot do so alone.
+
+Many efforts have been made to ensure that chess tournaments are accommodating to those with disabilities [7]. These accommodations still could be improved upon for player autonomy and ease in preparing. For those with Alzheimer’s, other dementias, dyslexia, dysgraphia, fine/gross motor needs, who are blind, or those with a temporary disability such as a broken hand, an accommodation that can be made is the assignment of a Game Assistant (GA) [7]. In cases such as these, the GA may be needed for piece movement, clock pressing, and/or scoring [7]. An automated board could help as an alternative to a GA by helping with piece movement, automatically keeping time, and automating scoring. This would allow players more independence, as they would not have to rely on the assistance of a GA, and fewer volunteers would be needed for tournaments.
+
+<!-- can maybe talk about what the chess club or the table wants in paragraph below if we get them as a customer -->
+In recent years, the rise of board game cafés has demonstrated the strong appeal of face-to-face interaction and social gaming [8]. An automated chessboard with a visually engaging design could build on this trend by drawing curiosity and encouraging participation. Its novelty and interactive features would provide a memorable experience for customers, enhancing the atmosphere of businesses and leisure spaces that adopt the technology.
+
+One of the major ways a technology can become widespread is through low cost and easy manufacturability. The current automated chess boards available on the market are often prohibitively expensive for the average consumer [1][2][3][4]. By focusing on affordability and providing open documentation, this project lowers barriers for hobbyists and educators who wish to replicate or modify the design. Reduced costs also make it possible to introduce the technology to a wider audience, including students and lifelong learners, while still preserving the appeal of a physical, interactive product.
+
 
 ### Specifications and Constraints
 
@@ -95,30 +106,25 @@ Cons:
 * Does not support automated piece movement, requiring players to manually move all pieces.
 * Lacks an automated reset function for returning pieces to their starting positions.
 
-*8x8 Smart Chess Board [5]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane.
+*8x8 Smart Chess Board [9]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane.
 
 Cons:
 * The stepper motor system has experienced notable failures.
 * The bill of materials (BOM) is incomplete.
 
-*Techievince 8.0 – Electronics Club IITG Project [6]: An Arduino-based system programmed in Embedded C that integrates the Micro Max chess engine using Minimax and Alpha-Beta algorithms. It employs an XY trolley system with stepper motors, magnetized pieces, and an electromagnetic head, along with multiplexed reed switch sensors for piece displacement detection.
+*Techievince 8.0 – Electronics Club IITG Project [10]: An Arduino-based system programmed in Embedded C that integrates the Micro Max chess engine using Minimax and Alpha-Beta algorithms. It employs an XY trolley system with stepper motors, magnetized pieces, and an electromagnetic head, along with multiplexed reed switch sensors for piece displacement detection.
 
 Cons:
 * Visually less appealing compared to other designs.
 * Requires specialized magnetic chess pieces, increasing overall cost.
 * Does not include voice recognition functionality.
 
-*Chess Automation Using Computer Vision [7]: A computer vision–driven approach that uses a camera, OpenCV, and NumPy to detect the chessboard, track pieces in real time, and record game history. The system identifies moves directly from image or video input without requiring embedded magnets or sensors.
+*Chess Automation Using Computer Vision [11]: A computer vision–driven approach that uses a camera, OpenCV, and NumPy to detect the chessboard, track pieces in real time, and record game history. The system identifies moves directly from image or video input without requiring embedded magnets or sensors.
 
 Cons:
 * Lacks integrated AI functionality.
 * Cannot move pieces autonomously.
 * Lacks an automated reset function for returning pieces to their starting positions.
-
-
-
-
-
 
 
 Despite the availability of existing smart chessboard solutions, challenges such as high cost, limited offline functionality, lack of voice recognition, and frequent piece collisions remain key barriers for the average user. The development of a new system should prioritize affordability, lightweight design, seamless voice integration, and reliable automated piece movement with full reset functionality for both players.
@@ -171,11 +177,19 @@ Consider the project’s broader impacts in global, economic, environmental, and
 
 [4] GoChess Mini. Particula. (n.d.). https://particula-tech.com/products/gochess-mini?variant=45806634402040&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooAY445sOW--M7GA0T4jbNkHE609yl_YKlFLR9iyhF7eX9KFsd9ubc
 
-[5] MFOSSociety. (n.d.). MFOSSociety/8-8: 8/8: Smart Chess Board: An Automated Ai Chess Board. GitHub. https://github.com/MFOSSociety/8-8 
+[5] R. Lahood, "The Queen’s Gambit, the Chess Boom, and the Future of Chess," Michigan Journal of Economics, Apr. 5, 2021. https://sites.lsa.umich.edu/mje/2021/04/05/the-queens-gambit-the-chess-boom-and-the-future-of-chess/.
 
-[6] sumit11899. (n.d.). SUMIT11899/automated-chessboard. GitHub. https://github.com/sumit11899/Automated-ChessBoard 
+[6] D. M. D. Iliescu, "The Impact of Artificial Intelligence on the Chess World," *JMIR Serious Games*, vol. 8, no. 4, p. e24049, Dec. 2020. https://pmc.ncbi.nlm.nih.gov/articles/PMC7759436/.
 
-[7] Simarmehta. (n.d.). Simarmehta/CHESSAUTOMATION_CV. GitHub. https://github.com/simarmehta/chessAutomation_CV 
+[7] US Chess, "US Chess Guidelines for Accessible Chess Events," Apr. 2020. https://new.uschess.org/sites/default/files/wp-thumbnails/2020/04/Accessibility-Guidelines-April-2020.pdf.
+
+[8] Davis, E. (2023, November 12). The Rise of Board Game Cafes: Socializing through Analog Entertainment. Medium. https://ethan-davis.medium.com/the-rise-of-board-game-cafes-socializing-through-analog-entertainment-51857183f856
+
+[9] MFOSSociety. (n.d.). MFOSSociety/8-8: 8/8: Smart Chess Board: An Automated Ai Chess Board. GitHub. https://github.com/MFOSSociety/8-8 
+
+[10] sumit11899. (n.d.). SUMIT11899/automated-chessboard. GitHub. https://github.com/sumit11899/Automated-ChessBoard 
+
+[11] Simarmehta. (n.d.). Simarmehta/CHESSAUTOMATION_CV. GitHub. https://github.com/simarmehta/chessAutomation_CV 
 
 
 ## Statement of Contributions
