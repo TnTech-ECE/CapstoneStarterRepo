@@ -38,7 +38,7 @@ Current automated chess boards are expensive and lack features such as online fu
 
 ### Background
 
-During the pandemic, chess increased in popularity [5]. Online chess specifically had a major influx of activity, with Chess.com adding 1 million accounts from March to November 2020, and a 2.8 million member increase in November alone [5]. This newfound popularity opens up opportunities for innovation on this classic game. An automated chess board would support primarily online chess players who want to improve their on-the-board (OTB) game.
+During the pandemic, chess increased in popularity [5]. Online chess specifically had a major influx of activity, with Chess.com adding 1 million accounts from March to November 2020, and a 2.8 million member increase in November alone [5]. This newfound popularity opens up opportunities for innovation on this classic game. An automated chess board would support primarily online chess players who want to improve their over-the-board (OTB) game.
 
 AI has had a major impact in the world of chess, especially in the context of online play [6]. It provides learning opportunities, as certain AI can beat any human player. Chess games played OTB do not usually have this capability except for automated boards. AI in OTB implementations will allow players to improve by progressively increasing the strength of their opponent. This function would aid online players transitioning to OTB play, as they could play against AI before a human opponent. This feature also supports those who want to play OTB chess but cannot do so alone.
 
