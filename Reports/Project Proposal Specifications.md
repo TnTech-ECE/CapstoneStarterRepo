@@ -73,8 +73,8 @@ Questions to consider:
 
 Existing solutions for automated chessboards range from DIY projects to commercially-produced boards:
 
-* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 * **Industrial Solutions**: Several companies offer high-end automated boards with AI opponents and online connectivity. These solutions, however, are often too expensive for the average user, making them impractical for this application.
+* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 
 Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
 
