@@ -135,43 +135,55 @@ This project aims to bridge the gap between current offerings by delivering a co
 
 Define how the project’s success will be measured. This involves explaining the experiments and methodologies to verify that the system meets its specifications and constraints.
 
-**1. Input Consistency and Reliability**
+## **1. Input Consistency and Reliability**
+
+
 **Objective**: Verify that voice commands are consistently recognized across varying conditions and accurately synchronized with expected chessboard inputs.
+
 **Methodology**:
 
-* Volume Variation: Conduct recognition trials at different decibel levels and distances from the microphone to ensure consistent accuracy.
-* Speaker Variability: Evaluate system performance in regard to varying players with different tones, accents, and pronunciations.
-* Command Completion: Verify that the system consistently processes entire commands before producing an output, ensuring no premature or truncated recognition.
-* Integration Validation: Confirm that correctly recognized commands result in accurate and legal piece movements on the automated chessboard.
+* **Volume Variation**: Conduct recognition trials at different decibel levels and distances from the microphone to ensure consistent accuracy.
+* **Speaker Variability**: Evaluate system performance in regard to varying players with different tones, accents, and pronunciations.
+* **Command Completion**: Verify that the system consistently processes entire commands before producing an output, ensuring no premature or truncated recognition.
+* **Integration Validation**: Confirm that correctly recognized commands result in accurate and legal piece movements on the automated chessboard.
 
-**2. Mechanical Accuracy and Responsiveness**
+## **2. Mechanical Accuracy and Responsiveness**
+
+
 **Objective**: Verify that chess pieces move accurately, reliably, and within acceptable response times in accordance with input commands.
+
 **Methodology**:
 
-* Movement Consistency: Conduct repeated trials across multiple games to confirm that piece movements occur in a uniform manner and within predictable timeframes.
-* Localization Accuracy: Verify that pieces consistently align to the center of their designated destination squares after each move.
-* Stability Evaluation: Ensure that pieces remain upright throughout movement and are not displaced or knocked over by adjacent moving pieces.
-* Response Time Measurement: Record the interval between input recognition and movement initiation to confirm timely execution.
-* Captured Piece Handling: Verify that captured pieces are consistently removed from play and stored without interfering with ongoing gameplay.
-* Board Reset Testing: Ensure that the system reliably returns to the initial configuration within a defined time limit.
+* **Movement Consistency**: Conduct repeated trials across multiple games to confirm that piece movements occur in a uniform manner and within predictable timeframes.
+* **Localization Accuracy**: Verify that pieces consistently align to the center of their designated destination squares after each move.
+* **Stability Evaluation**: Ensure that pieces remain upright throughout movement and are not displaced or knocked over by adjacent moving pieces.
+* **Response Time Measurement**: Record the interval between input recognition and movement initiation to confirm timely execution.
+* **Captured Piece Handling**: Verify that captured pieces are consistently removed from play and stored without interfering with ongoing gameplay.
+* **Board Reset Testing**: Ensure that the system reliably returns to the initial configuration within a defined time limit.
 
-**3. Portability and Ergonomic Design**
+## **3. Portability and Ergonomic Design**
+
+
 **Objective**: Ensure that the chessboard is lightweight, easy to transport, and designed with a form factor that supports comfortable play without hindrance in various environments.
+
 **Methodology**:
 
-* Weight Benchmarking: Measure total system weight and verify that it remains within the team’s portability threshold for single-person transport.
-* Form Factor Assessment: Evaluate board dimensions and height to confirm they do not interfere with gameplay or piece movement.
-* User Testing: Conduct trials with target users to gather feedback on size, shape, and portability in public settings.
-* Transport Simulation: Test relocation scenarios (e.g., carrying, packing, setup/teardown) to ensure ease of handling and minimal risk of damage.
+* **Weight Benchmarking**: Measure total system weight and verify that it remains within the team’s portability threshold for single-person transport.
+* **Form Factor Assessment**: Evaluate board dimensions and height to confirm they do not interfere with gameplay or piece movement.
+* **User Testing**: Conduct trials with target users to gather feedback on size, shape, and portability in public settings.
+* **Transport Simulation**: Test relocation scenarios (e.g., carrying, packing, setup/teardown) to ensure ease of handling and minimal risk of damage.
 
-**4. Power Efficiency and Safety**
+## **4. Power Efficiency and Safety**
+
+
 **Objective**: Verify that the chessboard operates for extended periods with minimal power consumption, maintains safe operating conditions, and uses a power connection that is practical and safe in typical play environments.
+
 **Methodology**:
 
-* Low-Power Evaluation: Assess the effectiveness of energy-saving modes or optimizations in reducing overall consumption.
-* Thermal Safety: Monitor operating temperatures under normal and extended use to confirm the system does not overheat or damage surfaces.
-* Electrical Safety Verification: Ensure that power circuitry does not overload the supply or pose risks of short-circuiting.
-* Power Supply Assessment: Confirm that the power connection is safe, unobtrusive, and appropriate for public and home settings (e.g., no excessive cord length or tripping hazards).
+* **Low-Power Evaluation**: Assess the effectiveness of energy-saving modes or optimizations in reducing overall consumption.
+* **Thermal Safety**: Monitor operating temperatures under normal and extended use to confirm the system does not overheat or damage surfaces.
+* **Electrical Safety Verification**: Ensure that power circuitry does not overload the supply or pose risks of short-circuiting.
+* **Power Supply Assessment**: Confirm that the power connection is safe, unobtrusive, and appropriate for public and home settings (e.g., no excessive cord length or tripping hazards).
 
 
 
