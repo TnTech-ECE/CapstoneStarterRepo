@@ -106,7 +106,7 @@ Cons:
 * Does not support automated piece movement, requiring players to manually move all pieces.
 * Lacks an automated reset function for returning pieces to their starting positions.
 
-*8x8 Smart Chess Board [9]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane.
+*8x8 Smart Chess Board [9]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane. The design utilizes a min-max algorithm to generate the best move predictions.
 
 Cons:
 * The stepper motor system has experienced notable failures.
