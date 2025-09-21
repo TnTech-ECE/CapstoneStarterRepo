@@ -37,7 +37,6 @@ AI has had a major impact in the world of chess, especially in the context of on
 
 Many efforts have been made to ensure that chess tournaments are accommodating to those with disabilities [7]. These accommodations still could be improved upon for player autonomy and ease in preparing. For those with Alzheimer’s, other dementias, dyslexia, dysgraphia, fine/gross motor needs, who are blind, or those with a temporary disability such as a broken hand, an accommodation that can be made is the assignment of a Game Assistant (GA) [7]. In cases such as these, the GA may be needed for piece movement, clock pressing, and/or scoring [7]. An automated board could help as an alternative to a GA by helping with piece movement, automatically keeping time, and automating scoring. This would allow players more independence, as they would not have to rely on the assistance of a GA, and fewer volunteers would be needed for tournaments.
 
-<!-- TODO: add more about hobbyists which will be easier when the diy section is complete -->
 ### Specifications and Constraints
 
 Specifications and constraints define the system's requirements. They can be positive (do this) or negative (don't do that). They can be mandatory (shall or must) or optional (may). They can cover performance, accuracy, interfaces, or limitations. Regardless of their origin, they must be unambiguous and impose measurable requirements.
@@ -75,13 +74,99 @@ Each project proposal must include a comprehensive description of the necessary 
 
 Provide a budget proposal with justifications for expenses such as software, equipment, components, testing machinery, and prototyping costs. This should be an estimate, not a detailed bill of materials.
 
-### Personel
+### Personnel
 
-Identify the skills present in the team and compare them to those required to complete the project. Address any skill gaps with a plan to acquire the necessary knowledge.
+#### Required Skills  
 
-Besides the team, also state who you choose to be you supervisor and why.
+##### Software & Programming  
+- Programming  
+- AI knowledge / Application Program Interfacing (API) / Networking  
+- MATLAB  
+- R  
 
-State who your instrucotr is and what role you expect them to play in the project.
+##### Hardware & Systems  
+- Microcontroller knowledge  
+- Embedded Systems / Digital Systems  
+- Magnetics  
+- Power Electronics 
+- Mechanical Systems  
+
+##### Design & Simulation Tools  
+- LTspice  
+- Computer Aided Design (CAD) / 3D Printing  
+
+##### Theory & Analysis  
+- Signal Processing  
+
+#### Current Skills and Assigned Skills to learn
+
+##### Nathan MacPherson
+###### Current Skills
+- Digital Systems
+- Programming
+- Networks
+- Electrical CAD
+###### Skills to Learn
+- Magnetics
+- Mechanical Systems
+- CAD / 3D Printing
+
+##### Noah Beaty
+###### Current Skills
+- Digital Systems
+- Programming
+- Microcontroller knowledge
+- R
+###### Skills to Learn
+- Signal Processing
+- MATLAB
+- Mechanical Systems
+
+##### Jack Tolleston
+###### Current Skills
+- Digital Systems
+- Programming
+- Microcontroller knowledge
+- R
+- API / Networking
+###### Skills to Learn
+- AI
+- Embedded Systems
+- Magnetics
+
+##### Allison Givens
+###### Current Skills
+- Microcontroller knowledge
+- Programming
+- CAD / 3D Printing
+###### Skills to Learn
+- MATLAB
+- Magnetics
+- Power Electronics
+- LTspice
+
+##### Lewis Bates
+###### Current Skills
+- Digital Systems
+- Embedded Systems
+- Microcontroller knowledge
+- Power Electronics
+- R
+###### Skills to Learn
+- Signal Processing
+- AI
+- Magnetics
+
+Note: This list is not exhaustive of each team member’s skills; it highlights the areas they are most comfortable with. Depending on the proposed project solution, required skills may change, and skill assignments may be rearranged if necessary.
+
+### Supervisor
+- **Selected Supervisor:** Student Success  
+- **Reason for Choice:** We selected Student Success because they may want the project as a presentation for Tech, which aligns with our goals for visibility and feedback.
+
+### Instructor
+- **Instructor:** Van Neste  
+- **Expected Role:** We feel confident in our programming skills but anticipate needing additional guidance on the mechanical implementation. Van Neste’s role will be to provide support and expertise in that area.
+
 
 ### Timeline
 
