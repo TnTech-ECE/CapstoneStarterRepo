@@ -159,12 +159,12 @@ Provide a budget proposal with justifications for expenses such as software, equ
 
 Note: This list is not exhaustive of each team member’s skills; it highlights the areas they are most comfortable with. Depending on the proposed project solution, required skills may change, and skill assignments may be rearranged if necessary.
 
-### Supervisor
+#### Supervisor
 - **Selected Supervisor:** Student Success  
 - **Reason for Choice:** We selected Student Success because they may want the project as a presentation for Tech, which aligns with our goals for visibility and feedback.
 
-### Instructor
-- **Instructor:** Van Neste  
+#### Instructor
+- **Instructor:** Professor Van Neste  
 - **Expected Role:** We feel confident in our programming skills but anticipate needing additional guidance on the mechanical implementation. Van Neste’s role will be to provide support and expertise in that area.
 
 
