@@ -78,95 +78,40 @@ Provide a budget proposal with justifications for expenses such as software, equ
 
 #### Required Skills  
 
-##### Software & Programming  
-- Programming  
-- AI knowledge / Application Program Interfacing (API) / Networking  
-- MATLAB  
-- R  
+**Software & Programming:** Programming, AI / API / Networking, MATLAB, R  
+**Hardware & Systems:** Microcontroller knowledge, Embedded Systems / Digital Systems, Magnetics, Power Electronics, Mechanical Systems  
+**Design & Simulation Tools:** LTspice, CAD / 3D Printing  
+**Theory & Analysis:** Signal Processing  
 
-##### Hardware & Systems  
-- Microcontroller knowledge  
-- Embedded Systems / Digital Systems  
-- Magnetics  
-- Power Electronics 
-- Mechanical Systems  
+#### Team Skills
 
-##### Design & Simulation Tools  
-- LTspice  
-- Computer Aided Design (CAD) / 3D Printing  
+**Nathan MacPherson**  
+- *Current Skills:* Digital Systems, Programming, Networks, Electrical CAD  
+- *Skills to Learn:* Magnetics, Mechanical Systems, CAD / 3D Printing  
 
-##### Theory & Analysis  
-- Signal Processing  
+**Noah Beaty**  
+- *Current Skills:* Digital Systems, Programming, Microcontroller knowledge, R  
+- *Skills to Learn:* Signal Processing, MATLAB, Mechanical Systems  
 
-#### Current Skills and Assigned Skills to learn
+**Jack Tolleston**  
+- *Current Skills:* Digital Systems, Programming, Microcontroller knowledge, R, API / Networking  
+- *Skills to Learn:* AI, Embedded Systems, Magnetics  
 
-##### Nathan MacPherson
-###### Current Skills
-- Digital Systems
-- Programming
-- Networks
-- Electrical CAD
-###### Skills to Learn
-- Magnetics
-- Mechanical Systems
-- CAD / 3D Printing
+**Allison Givens**  
+- *Current Skills:* Microcontroller knowledge, Programming, CAD / 3D Printing  
+- *Skills to Learn:* MATLAB, Magnetics, Power Electronics, LTspice  
 
-##### Noah Beaty
-###### Current Skills
-- Digital Systems
-- Programming
-- Microcontroller knowledge
-- R
-###### Skills to Learn
-- Signal Processing
-- MATLAB
-- Mechanical Systems
+**Lewis Bates**  
+- *Current Skills:* Digital Systems, Embedded Systems, Microcontroller knowledge, Power Electronics, R  
+- *Skills to Learn:* Signal Processing, AI, Magnetics  
 
-##### Jack Tolleston
-###### Current Skills
-- Digital Systems
-- Programming
-- Microcontroller knowledge
-- R
-- API / Networking
-###### Skills to Learn
-- AI
-- Embedded Systems
-- Magnetics
-
-##### Allison Givens
-###### Current Skills
-- Microcontroller knowledge
-- Programming
-- CAD / 3D Printing
-###### Skills to Learn
-- MATLAB
-- Magnetics
-- Power Electronics
-- LTspice
-
-##### Lewis Bates
-###### Current Skills
-- Digital Systems
-- Embedded Systems
-- Microcontroller knowledge
-- Power Electronics
-- R
-###### Skills to Learn
-- Signal Processing
-- AI
-- Magnetics
-
-Note: This list is not exhaustive of each team member’s skills; it highlights the areas they are most comfortable with. Depending on the proposed project solution, required skills may change, and skill assignments may be rearranged if necessary.
+*Note:* This list highlights each member’s strongest skills. Depending on the project, required skills or assignments may change.  
 
 #### Supervisor
-- **Selected Supervisor:** Student Success  
-- **Reason for Choice:** We selected Student Success because they may want the project as a presentation for Tech, which aligns with our goals for visibility and feedback.
+- **Student Success:** Chosen for potential project presentation opportunities at Tech.  
 
 #### Instructor
-- **Instructor:** Professor Van Neste  
-- **Expected Role:** We feel confident in our programming skills but anticipate needing additional guidance on the mechanical implementation. Van Neste’s role will be to provide support and expertise in that area.
-
+- **Professor Van Neste:** Chosen to provide guidance on physical implementation.
 
 ### Timeline
 
