@@ -198,7 +198,7 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 ### Timeline
 
 #### Gantt Chart (Note that it could be subject to modification)
-<img width="1817" height="403" alt="image" src="https://github.com/user-attachments/assets/63c91eea-4e48-4255-aa9e-86ea99886951" />
+<img width="1818" height="402" alt="image" src="https://github.com/user-attachments/assets/7daa43c2-79c0-436d-80c0-422cf459c35f" />
 
 ## Specific Implications
 
