@@ -71,7 +71,7 @@ The chess board will meet the following requirements to ensure reliability and o
     - Board shall be powered by a 12V DC adapter or rechargeable battery supporting at least 2 hours of active gameplay.
 5. **Affordability and Modifications**
 
-    - Board shall cost no more than $300 USD in materials
+    - Board shall cost no more than $350 USD in materials
     - Board shall have a modular design allowing for upgrades to individual systems.
 ## Constraints
 The chess board will be designed to operate efficiently while adhering to the following safety and regulatory requirements:
