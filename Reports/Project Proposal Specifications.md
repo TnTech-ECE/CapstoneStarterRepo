@@ -189,6 +189,8 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 *Note:* This list highlights each member’s strongest skills. Depending on the project, required skills or assignments may change.  
 
+#TODO: This last part might be totally wrong we should probably discuss it a bit
+
 #### Supervisor
 - **Student Success:** Chosen for potential project presentation opportunities at Tech.  
 
@@ -197,8 +199,8 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 ### Timeline
 
-#### Gantt Chart (Note that it could be subject to modification)
-<img width="1818" height="402" alt="image" src="https://github.com/user-attachments/assets/7daa43c2-79c0-436d-80c0-422cf459c35f" />
+#### Gantt Chart (Note that the chart may be subject to modification)
+<img width="1859" height="448" alt="image" src="https://github.com/user-attachments/assets/3e08497c-e6ba-4d33-8ce2-c45ce52de7fd" />
 
 ## Specific Implications
 
