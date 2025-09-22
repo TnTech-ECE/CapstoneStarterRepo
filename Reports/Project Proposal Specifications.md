@@ -169,12 +169,48 @@ Define how the project’s success will be measured. This involves explaining th
 
 
 ## Resources
+This project will include various hardware components, software, and mechanical parts in order to effectively move the chess pieces autonomously, integrate AI, process voice recognition, and present everything in a professional-looking chessboard. 
 
-Each project proposal must include a comprehensive description of the necessary resources.
+#### Hardware Components
+1. Processing Unit: A Raspberry Pi 4 will handle Stockfish chess AI, voice recognition software, and communication with the Arduino [14].
+2. Control Unit: An Arduino Uno or Mega will directly control the stepper drivers and coordinate motor movement [18].
+3. Microphone: A USB microphone will capture player voice commands for the Vosk speech recognition engine [17].
+4. Power Supply: Provides regulated 12V for the stepper motors and 5V for the Raspberry Pi and control electronics [15] [16].
+   
+#### Software 
+
+Stockfish: Open-source chess engine that will handle AI decision-making and gameplay logic [12].
+
+Vosk: Lightweight offline speech recognition engine for translating spoken commands into text for system input [13].
+
+#### CoreXY 
+The CoreXY mechanism uses two stepper motors and a system of belts and pulleys arranged so that coordinated motor movements move a single carriage in both X and Y directions [14]. The carriage will hold a strong neodymium magnet, which moves underneath the board to drag metal-based chess pieces across the surface. This setup allows smooth, precise, and fast motion across the entire 8×8 chess grid.
 
 ### Budget
+<!-- This will increase/change over time not 100% sure about materials -->
+This is an estimate of the cost for the major materials needed:
+| Item                      | Description / Notes                      | Quantity | Approx Cost (USD) |
+|---------------------------|------------------------------------------|----------|-------------------|
+| Raspberry Pi 4 Model B    | 4GB RAM, runs Stockfish + voice software | 1        | $55–$65           |
+| MicroSD Card              | 32 GB, Class 10, holds OS + software     | 1        | $8–$12            |
+| Microphone                | USB for voice recognition                | 1        | $10–$20           |
+| NEMA 17 Stepper Motors    | Moves the pulley system                  | 2        | $12–$15 each      |
+| GT2 Belt + Pulleys        | 6mm width, 2m length + 2 pulleys         | 1 set    | $8–$12            |
+| CoreXY / XY Framework     | Rails, idlers, frame                     | 1        | $40–$80           |
+| Arduino Uno / Mega        | Controls stepper drivers (from Pi input) | 1        | $10–$20           |
+| Stepper Driver Boards     | Big Easy Driver / A4988 / DRV8825        | 2        | $5–$20 each       |
+| Neodymium Magnet          | 20–30 mm diameter, strong grade (N42+)   | 1–2      | $5–$10            |
+| Power Supply              | 12V (for motors) + 5V 3A (for Pi)        | 1        | $15–$25           |
+| Chessboard Frame          | Wooden or 3D printed                     | 1        | $20–$40           |
+| Chess Piece Set           | With metal washers in bases              | 1        | $15–$30           |
 
-Provide a budget proposal with justifications for expenses such as software, equipment, components, testing machinery, and prototyping costs. This should be an estimate, not a detailed bill of materials.
+Primary Costs: The largest expenses will be the Raspberry Pi (for AI + speech recognition) and the CoreXY mechanical framework (belts, rails, and frame) [14] [15].
+
+Cost-Saving Options: The chessboard and pieces could be 3D printed to reduce costs. Drawer slides or DIY wood rails could possibly replace linear rails for a cheaper CoreXY build.
+
+Total Estimated Cost: The project should fall within $250 on average, with a maximum of $350 if higher-quality parts are chosen.
+
+
 
 ### Personel
 
@@ -291,6 +327,19 @@ In summary, this project holds promise for positive, broader impacts by advancin
 
 [11] Simarmehta. (n.d.). Simarmehta/CHESSAUTOMATION_CV. GitHub. https://github.com/simarmehta/chessAutomation_CV 
 
+[12] Stockfish. (n.d.). Stockfish. https://stockfishchess.org/
+
+[13] VOSK Offline Speech Recognition API. (n.d.). VOSK Offline Speech Recognition API. https://alphacephei.com/vosk/
+
+[14] Instructables. (2019, September 13). CoreXY CNC Plotter. Instructables. https://www.instructables.com/CoreXY-CNC-Plotter/
+
+[15] PiShop. (n.d.). Raspberry Pi 4 Model B/4GB. PiShop.us. https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/
+
+[16] Industries, A. (n.d.). Stepper motor - NEMA-17 size - 200 steps/rev, 12V 350mA. https://www.adafruit.com/product/324
+
+[17] (Amazon.com: NowTH USB Microphone Lavalier Lapel Clip on Mic With 6.56ft Cable for Laptop, Computer, PC, Streaming Conferencing,Interviews, Online Singing, Skype, MSN, Audio Video Recording : Electronics, n.d.)
+
+[18] Amazon.com: ELEGOO UNO R3 Board ATmega328P with USB Cable(Arduino-Compatible) for Arduino : Electronics. (n.d.). https://www.amazon.com/ELEGOO-Board-ATmega328P-ATMEGA16U2-Compliant/dp/B01EWOE0UU
 
 ## Statement of Contributions
 
