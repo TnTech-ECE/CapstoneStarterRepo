@@ -49,25 +49,57 @@ In recent years, the rise of board game cafés has demonstrated the strong appea
 
 One of the major ways a technology can become widespread is through low cost and easy manufacturability. The current automated chess boards available on the market are often prohibitively expensive for the average consumer [1][2][3][4]. By focusing on affordability and providing open documentation, this project lowers barriers for hobbyists and educators who wish to replicate or modify the design. Reduced costs also make it possible to introduce the technology to a wider audience, including students and lifelong learners, while still preserving the appeal of a physical, interactive product.
 
+## Specifications
 
-### Specifications and Constraints
+The chess board will meet the following requirements to ensure reliability and operability:
 
-Specifications and constraints define the system's requirements. They can be positive (do this) or negative (don't do that). They can be mandatory (shall or must) or optional (may). They can cover performance, accuracy, interfaces, or limitations. Regardless of their origin, they must be unambiguous and impose measurable requirements.
+1. **Voice Input**
+   
+    - Board shall recognize voice input with an accuracy of at least 80%.
+    - Board shall listen for input while a button is pressed to avoid accidental moves.
+    - Board shall recognize commands in algebraic chess notation and other common variations (Knight to e5, Bishop a4, etc.).
+    - Board shall process commands within 2 seconds of button release.
+2. **Automated Piece Movement**
+   
+    - Board shall move pieces within half an inch of the center of each square.
+    - Board shall ensure that all pieces remain upright and stable while moving.
+    - Board shall finish any single piece move within 5 seconds of beginning the movement.
+    - Board shall notice and remove 95% of captured pieces without piece collision.
+3. **Portability and Accessibility**
+   
+    - Board shall weigh less than 30 pounds such that it can be moved by one person.
+    - Board shall have labels on each file and rank to assist users in locating each square.
+    - Board may have a carrying case or handle.
+4. **Power and Safety**
+   
+    - Board shall have a sleep mode to reduce power consumption when not in immediate use.
+    - Board shall be powered by a 12V DC adapter or rechargeable battery supporting at least 2 hours of active gameplay.
+5. **Affordability and Modifications**
+    
+    - Board shall cost no more than $300 USD in materials
+    - Board shall have a modular design allowing for upgrades to individual systems.
+## Constraints
+The chess board will be designed to operate efficiently while adhering to the following safety and regulatory requirements:
 
-#### Specifications
+1. **Regulatory and Compliance Constraints**
 
-Specifications are requirements imposed by **stakeholders** to meet their needs. If a specification seems unattainable, it is necessary to discuss and negotiate with the stakeholders.
+    - Board shall comply with FCC Part 15, Subpart B (Class B) regulations, ensuring that electromagnetic interference is within acceptable limits for residential and public environments.
+    - Board shall operate below 50V DC in accordance with UL low-voltage safety thresholds, removing the need for additional electrical insulation and protection.
+    - Board shall meet applicable requirements of the National Electrical Code (NEC NFPA 70) for low-voltage consumer electronic systems intended for indoor use.
+    - Board shall avoid materials or component configurations that would violate CPSC (Consumer Product Safety Commission) regulations regarding consumer electronics used in public settings.
 
-#### Constraints
+2. **Electrical and Safety Constraints**
 
-Constraints often stem from governing bodies, standards organizations, and broader considerations beyond the requirements set by stakeholders.
+    - Board shall prevent hazardous surface temperatures, maintaining an external temperature of no more than 104°F (40°C) under continuous operation, per UL 94 and general consumer safety guidelines.
+    - Board shall utilize standard cord sets and connectors compliant with NEC Article 400 to ensure safe installation and minimal tripping or disconnection hazards in public spaces.
+    - Board shall ensure proper grounding and protection of all power connections to conform to OSHA 1910 Subpart S electrical safety practices for general-use electronic systems.
+    - Board shall display clear warning labels for user-facing hazards (e.g., moving parts, power status) in accordance with ANSI Z535.4 standards for safety signage and communication.
 
-Questions to consider:
-- Do governing bodies regulate the solution in any way?
-- Are there industrial standards that need to be considered and followed?
-- What impact will the engineering, manufacturing, or final product have on public health, safety, and welfare?
-- Are there global, cultural, social, environmental, or economic factors that must be considered?
+3. **Accessibility and Ergonomic Constraints**
 
+    - Board shall conform to the Section 508 of the Rehabilitation Act for electronic systems, ensuring digital interfaces (e.g., voice command, status indicators) are accessible to users with disabilities.
+    - Board shall follow ergonomic interface design principles from ANSI/HFES 100-2007, including appropriate control placement, spacing, and feedback mechanisms.
+    - Board shall avoid design elements that may cause confusion or usability issues for individuals with cognitive or motor impairments, adhering to universal design principles where possible.
 
 ## Survey of Existing Solutions
 
