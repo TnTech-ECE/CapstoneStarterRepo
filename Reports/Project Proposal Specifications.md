@@ -140,10 +140,10 @@ Define how the project’s success will be measured. This involves explaining th
 This project will include various hardware components, software, and mechanical parts in order to effectively move the chess pieces autonomously, integrate AI, process voice recognition, and present everything in a professional-looking chessboard. 
 
 #### Hardware Components
-1. Processing Unit:A Raspberry Pi 4 will handle Stockfish chess AI, voice recognition software, and communication with the Arduino.
-2. Control Unit: An Arduino Uno or Mega will directly control the stepper drivers and coordinate motor movement.
-3. Microphone: A USB microphone will capture player voice commands for the Vosk speech recognition engine.
-4. Power Supply: Provides regulated 12V for the stepper motors and 5V for the Raspberry Pi and control electronics.
+1. Processing Unit: A Raspberry Pi 4 will handle Stockfish chess AI, voice recognition software, and communication with the Arduino [14].
+2. Control Unit: An Arduino Uno or Mega will directly control the stepper drivers and coordinate motor movement [18].
+3. Microphone: A USB microphone will capture player voice commands for the Vosk speech recognition engine [17].
+4. Power Supply: Provides regulated 12V for the stepper motors and 5V for the Raspberry Pi and control electronics [15] [16].
    
 #### Software 
 
@@ -303,6 +303,9 @@ In summary, this project holds promise for positive, broader impacts by advancin
 
 [16] Industries, A. (n.d.). Stepper motor - NEMA-17 size - 200 steps/rev, 12V 350mA. https://www.adafruit.com/product/324
 
+[17] (Amazon.com: NowTH USB Microphone Lavalier Lapel Clip on Mic With 6.56ft Cable for Laptop, Computer, PC, Streaming Conferencing,Interviews, Online Singing, Skype, MSN, Audio Video Recording : Electronics, n.d.)
+
+[18] Amazon.com: ELEGOO UNO R3 Board ATmega328P with USB Cable(Arduino-Compatible) for Arduino : Electronics. (n.d.). https://www.amazon.com/ELEGOO-Board-ATmega328P-ATMEGA16U2-Compliant/dp/B01EWOE0UU
 
 ## Statement of Contributions
 
