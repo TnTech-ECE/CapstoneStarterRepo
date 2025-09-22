@@ -100,8 +100,8 @@ The chess board will be designed to operate efficiently while adhering to the fo
 
 Existing solutions for automated chessboards range from DIY projects to commercially-produced boards:
 
-* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 * **Industrial Solutions**: Several companies offer high-end automated boards with AI opponents and online connectivity. These solutions, however, are often too expensive for the average user, making them impractical for this application.
+* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 
 Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
 
@@ -160,7 +160,69 @@ This project aims to bridge the gap between current offerings by delivering a co
 
 ## Measures of Success
 
-Define how the project’s success will be measured. This involves explaining the experiments and methodologies to verify that the system meets its specifications and constraints.
+The success of this project will be evaluated based on its ability to meet functional, technical, and usability requirements during hands-on, public use of the automated chessboard. The following key performance indicators (KPIs) and verification methodologies will be used to ensure the system meets its specifications and constraints.
+
+### **1. Input Consistency and Reliability**
+
+
+**Objective**: Verify that voice commands are consistently recognized across varying conditions and accurately synchronized with expected chessboard inputs.
+
+**Methodology**:
+
+* **Volume Variation**: Conduct recognition trials at different decibel levels and distances from the microphone to ensure consistent accuracy.
+* **Speaker Variability**: Evaluate system performance in regard to varying players with different tones, accents, and pronunciations.
+* **Command Completion**: Verify that the system consistently processes entire commands before producing an output, ensuring no premature or truncated recognition.
+* **Integration Validation**: Confirm that correctly recognized commands result in accurate and legal piece movements on the automated chessboard.
+
+### **2. Mechanical Accuracy and Responsiveness**
+
+
+**Objective**: Verify that chess pieces move accurately, reliably, and within acceptable response times in accordance with input commands.
+
+**Methodology**:
+
+* **Movement Consistency**: Conduct repeated trials across multiple games to confirm that piece movements occur in a uniform manner and within predictable timeframes.
+* **Localization Accuracy**: Verify that pieces consistently align to the center of their designated destination squares after each move.
+* **Stability Evaluation**: Ensure that pieces remain upright throughout movement and are not displaced or knocked over by adjacent moving pieces.
+* **Response Time Measurement**: Record the interval between input recognition and movement initiation to confirm timely execution.
+* **Captured Piece Handling**: Verify that captured pieces are consistently removed from play and stored without interfering with ongoing gameplay.
+* **Board Reset Testing**: Ensure that the system reliably returns to the initial configuration within a defined time limit.
+
+### **3. Portability and Ergonomic Design**
+
+
+**Objective**: Ensure that the chessboard is lightweight, easy to transport, and designed with a form factor that supports comfortable play without hindrance in various environments.
+
+**Methodology**:
+
+* **Weight Benchmarking**: Measure total system weight and verify that it remains within the team’s portability threshold for single-person transport.
+* **Form Factor Assessment**: Evaluate board dimensions and height to confirm they do not interfere with gameplay or piece movement.
+* **User Testing**: Conduct trials with target users to gather feedback on size, shape, and portability in public settings.
+* **Transport Simulation**: Test relocation scenarios (e.g., carrying, packing, setup/teardown) to ensure ease of handling and minimal risk of damage.
+
+### **4. Power Efficiency and Safety**
+
+
+**Objective**: Verify that the chessboard operates for extended periods with minimal power consumption, maintains safe operating conditions, and uses a power connection that is practical and safe in typical play environments.
+
+**Methodology**:
+
+* **Low-Power Evaluation**: Assess the effectiveness of energy-saving modes or optimizations in reducing overall consumption.
+* **Thermal Safety**: Monitor operating temperatures under normal and extended use to confirm the system does not overheat or damage surfaces.
+* **Electrical Safety Verification**: Ensure that power circuitry does not overload the supply or pose risks of short-circuiting.
+* **Power Supply Assessment**: Confirm that the power connection is safe, unobtrusive, and appropriate for public and home settings (e.g., no excessive cord length or tripping hazards).
+
+### **5. Affordability and Future Expansion**
+
+
+**Objective**: Demonstrate that the system offers a cost-efficient alternative to existing commercial solutions while maintaining the ability to expand for future requirements.
+
+**Methodology**:
+
+* **Cost Evaluation**: Assess the total project cost and compare it against comparable commercial automated chessboard systems.
+* **Maintenance and Longevity Review**: Track required upkeep, component replacement frequency, and overall durability to determine long-term affordability.
+
+By meeting these success criteria, the project will demonstrate its effectiveness in bridging the gap between low-cost DIY solutions and expensive, commercially manufactured chessboards.
 
 
 ## Resources
