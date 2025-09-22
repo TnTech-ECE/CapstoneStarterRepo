@@ -44,62 +44,6 @@ AI has had a major impact in the world of chess, especially in the context of on
 
 Many efforts have been made to ensure that chess tournaments are accommodating to those with disabilities [7]. These accommodations still could be improved upon for player autonomy and ease in preparing. For those with Alzheimer’s, other dementias, dyslexia, dysgraphia, fine/gross motor needs, who are blind, or those with a temporary disability such as a broken hand, an accommodation that can be made is the assignment of a Game Assistant (GA) [7]. In cases such as these, the GA may be needed for piece movement, clock pressing, and/or scoring [7]. An automated board could help as an alternative to a GA by helping with piece movement, automatically keeping time, and automating scoring. This would allow players more independence, as they would not have to rely on the assistance of a GA, and fewer volunteers would be needed for tournaments.
 
-<!-- can maybe talk about what the chess club or the table wants in paragraph below if we get them as a customer -->
-In recent years, the rise of board game cafés has demonstrated the strong appeal of face-to-face interaction and social gaming [8]. An automated chessboard with a visually engaging design could build on this trend by drawing curiosity and encouraging participation. Its novelty and interactive features would provide a memorable experience for customers, enhancing the atmosphere of businesses and leisure spaces that adopt the technology.
-
-One of the major ways a technology can become widespread is through low cost and easy manufacturability. The current automated chess boards available on the market are often prohibitively expensive for the average consumer [1][2][3][4]. By focusing on affordability and providing open documentation, this project lowers barriers for hobbyists and educators who wish to replicate or modify the design. Reduced costs also make it possible to introduce the technology to a wider audience, including students and lifelong learners, while still preserving the appeal of a physical, interactive product.
-
-## Specifications
-
-The chess board will meet the following requirements to ensure reliability and operability:
-
-1. **Voice Input**
-   
-    - Board shall recognize voice input with an accuracy of at least 80%.
-    - Board shall listen for input while a button is pressed to avoid accidental moves.
-    - Board shall recognize commands in algebraic chess notation and other common variations (Knight to e5, Bishop a4, etc.).
-    - Board shall process commands within 2 seconds of button release.
-2. **Automated Piece Movement**
-   
-    - Board shall move pieces within half an inch of the center of each square.
-    - Board shall ensure that all pieces remain upright and stable while moving.
-    - Board shall finish any single piece move within 5 seconds of beginning the movement.
-    - Board shall notice and remove 95% of captured pieces without piece collision.
-3. **Portability and Accessibility**
-   
-    - Board shall weigh less than 30 pounds such that it can be moved by one person.
-    - Board shall have labels on each file and rank to assist users in locating each square.
-    - Board may have a carrying case or handle.
-4. **Power and Safety**
-   
-    - Board shall have a sleep mode to reduce power consumption when not in immediate use.
-    - Board shall be powered by a 12V DC adapter or rechargeable battery supporting at least 2 hours of active gameplay.
-5. **Affordability and Modifications**
-    
-    - Board shall cost no more than $300 USD in materials
-    - Board shall have a modular design allowing for upgrades to individual systems.
-## Constraints
-The chess board will be designed to operate efficiently while adhering to the following safety and regulatory requirements:
-
-1. **Regulatory and Compliance Constraints**
-
-    - Board shall comply with FCC Part 15, Subpart B (Class B) regulations, ensuring that electromagnetic interference is within acceptable limits for residential and public environments.
-    - Board shall operate below 50V DC in accordance with UL low-voltage safety thresholds, removing the need for additional electrical insulation and protection.
-    - Board shall meet applicable requirements of the National Electrical Code (NEC NFPA 70) for low-voltage consumer electronic systems intended for indoor use.
-    - Board shall avoid materials or component configurations that would violate CPSC (Consumer Product Safety Commission) regulations regarding consumer electronics used in public settings.
-
-2. **Electrical and Safety Constraints**
-
-    - Board shall prevent hazardous surface temperatures, maintaining an external temperature of no more than 104°F (40°C) under continuous operation, per UL 94 and general consumer safety guidelines.
-    - Board shall utilize standard cord sets and connectors compliant with NEC Article 400 to ensure safe installation and minimal tripping or disconnection hazards in public spaces.
-    - Board shall ensure proper grounding and protection of all power connections to conform to OSHA 1910 Subpart S electrical safety practices for general-use electronic systems.
-    - Board shall display clear warning labels for user-facing hazards (e.g., moving parts, power status) in accordance with ANSI Z535.4 standards for safety signage and communication.
-
-3. **Accessibility and Ergonomic Constraints**
-
-    - Board shall conform to the Section 508 of the Rehabilitation Act for electronic systems, ensuring digital interfaces (e.g., voice command, status indicators) are accessible to users with disabilities.
-    - Board shall follow ergonomic interface design principles from ANSI/HFES 100-2007, including appropriate control placement, spacing, and feedback mechanisms.
-    - Board shall avoid design elements that may cause confusion or usability issues for individuals with cognitive or motor impairments, adhering to universal design principles where possible.
 
 ## Survey of Existing Solutions
 
@@ -212,18 +156,49 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 
 
-### Personel
+### Personnel
 
-Identify the skills present in the team and compare them to those required to complete the project. Address any skill gaps with a plan to acquire the necessary knowledge.
+#### Required Skills  
 
-Besides the team, also state who you choose to be you supervisor and why.
+**Software & Programming:** Programming, AI / API / Networking, MATLAB, R  
+**Hardware & Systems:** Microcontroller knowledge, Embedded Systems / Digital Systems, Magnetics, Power Electronics, Mechanical Systems  
+**Design & Simulation Tools:** LTspice, CAD / 3D Printing  
+**Theory & Analysis:** Signal Processing  
 
-State who your instrucotr is and what role you expect them to play in the project.
+#### Team Skills
+
+**Nathan MacPherson**  
+- *Current Skills:* Digital Systems, Programming, Networks, Electrical CAD  
+- *Skills to Learn:* Magnetics, Mechanical Systems, CAD / 3D Printing  
+
+**Noah Beaty**  
+- *Current Skills:* Digital Systems, Programming, Microcontroller knowledge, R  
+- *Skills to Learn:* Signal Processing, MATLAB, Mechanical Systems  
+
+**Jack Tolleston**  
+- *Current Skills:* Digital Systems, Programming, Microcontroller knowledge, R, API / Networking  
+- *Skills to Learn:* AI, Embedded Systems, Magnetics  
+
+**Allison Givens**  
+- *Current Skills:* Microcontroller knowledge, Programming, CAD / 3D Printing  
+- *Skills to Learn:* MATLAB, Magnetics, Power Electronics, LTspice  
+
+**Lewis Bates**  
+- *Current Skills:* Digital Systems, Embedded Systems, Microcontroller knowledge, Power Electronics, R  
+- *Skills to Learn:* Signal Processing, AI, Magnetics  
+
+*Note:* This list highlights each member’s strongest skills. Depending on the project, required skills or assignments may change.  
+
+#### Supervisor
+- **Student Success:** Chosen for potential project presentation opportunities at Tech.  
+
+#### Instructor
+- **Professor Van Neste:** Chosen to provide guidance on physical implementation.
 
 ### Timeline
 
-Provide a detailed timeline, including all major deadlines and tasks. This should be illustrated with a professional Gantt chart.
-
+#### Gantt Chart (Note that it could be subject to modification)
+<img width="1817" height="403" alt="image" src="https://github.com/user-attachments/assets/63c91eea-4e48-4255-aa9e-86ea99886951" />
 
 ## Specific Implications
 
