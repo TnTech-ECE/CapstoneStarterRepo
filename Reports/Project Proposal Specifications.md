@@ -115,76 +115,8 @@ Provide a budget proposal with justifications for expenses such as software, equ
 
 ### Timeline
 
-<h2>Project Name: idk</h2>
-<p>Project Start Date: 9/1/2025</p>
-
-<table>
-  <tr>
-    <th>Task</th>
-    <th>Owner</th>
-    <th>Progress</th>
-    <th>Status</th>
-    <th>Start</th>
-    <th>Finish</th>
-  </tr>
-  <tr>
-    <td>Team Contract</td>
-    <td>Group</td>
-    <td>100%</td>
-    <td style="background-color: green;">Completed</td>
-    <td>9/5/2025</td>
-    <td>9/5/2025</td>
-  </tr>
-  <tr>
-    <td>Project Proposal</td>
-    <td>Group</td>
-    <td>50%</td>
-    <td style="background-color: yellow;">In Progress</td>
-    <td>9/15/2025</td>
-    <td>9/24/2025</td>
-  </tr>
-  <tr>
-    <td>Conceptual Design</td>
-    <td>Group</td>
-    <td>0%</td>
-    <td style="background-color: red;">Planned</td>
-    <td>9/24/2025</td>
-    <td>10/15/2025</td>
-  </tr>
-  <tr>
-    <td>Fall Break</td>
-    <td>Group</td>
-    <td>0%</td>
-    <td style="background-color: cyan;">Break</td>
-    <td>10/16/2025</td>
-    <td>10/17/2025</td>
-  </tr>
-  <tr>
-    <td>Detailed Design</td>
-    <td>Group</td>
-    <td>0%</td>
-    <td style="background-color: red;">Planned</td>
-    <td>10/22/2025</td>
-    <td>12/3/2025</td>
-  </tr>
-  <tr>
-    <td>Design Presentation</td>
-    <td>Group</td>
-    <td>0%</td>
-    <td style="background-color: red;">Planned</td>
-    <td>11/26/2025</td>
-    <td>12/3/2025</td>
-  </tr>
-</table>
-
-<h3>Legend</h3>
-<table>
-  <tr><td style="background-color: red; width:30px;"></td><td>Planned</td></tr>
-  <tr><td style="background-color: yellow; width:30px;"></td><td>In Progress</td></tr>
-  <tr><td style="background-color: green; width:30px;"></td><td>Completed</td></tr>
-  <tr><td style="background-color: cyan; width:30px;"></td><td>Break</td></tr>
-  <tr><td style="border:2px solid black; width:30px;"></td><td>Due Date</td></tr>
-</table>
+#### Gantt Chart (Note that it could be subject to modification)
+<img width="1817" height="403" alt="image" src="https://github.com/user-attachments/assets/63c91eea-4e48-4255-aa9e-86ea99886951" />
 
 ## Specific Implications
 
