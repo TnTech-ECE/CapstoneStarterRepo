@@ -173,7 +173,9 @@ This is an estimate of the cost for the major materials needed:
 | Chess Piece Set           | With metal washers in bases              | 1        | $15–$30           |
 
 Primary Costs: The largest expenses will be the Raspberry Pi (for AI + speech recognition) and the CoreXY mechanical framework (belts, rails, and frame) [14] [15].
+
 Cost-Saving Options: The chessboard and pieces could be 3D printed to reduce costs. Drawer slides or DIY wood rails could possibly replace linear rails for a cheaper CoreXY build.
+
 Total Estimated Cost: The project should fall within $250 on average, with a maximum of $350 if higher-quality parts are chosen.
 
 
