@@ -162,14 +162,14 @@ This is an estimate of the cost for the major materials needed:
 | Raspberry Pi 4 Model B    | 4GB RAM, runs Stockfish + voice software | 1        | $55–$65           |
 | MicroSD Card              | 32 GB, Class 10, holds OS + software     | 1        | $8–$12            |
 | Microphone                | USB for voice recognition                | 1        | $10–$20           |
-| NEMA 17 Stepper Motors    | Standard 1.8° step angle, ~40 N·cm       | 2        | $12–$15 each      |
+| NEMA 17 Stepper Motors    | Moves the pulley system                  | 2        | $12–$15 each      |
 | GT2 Belt + Pulleys        | 6mm width, 2m length + 2 pulleys         | 1 set    | $8–$12            |
-| CoreXY / XY Framework     | Rails, idlers, frame (can DIY cheaper)   | 1        | $40–$80           |
+| CoreXY / XY Framework     | Rails, idlers, frame                     | 1        | $40–$80           |
 | Arduino Uno / Mega        | Controls stepper drivers (from Pi input) | 1        | $10–$20           |
 | Stepper Driver Boards     | Big Easy Driver / A4988 / DRV8825        | 2        | $5–$20 each       |
 | Neodymium Magnet          | 20–30 mm diameter, strong grade (N42+)   | 1–2      | $5–$10            |
-| Power Supply              | 12V 5A (for motors) + 5V 3A (for Pi)     | 1        | $15–$25           |
-| Chessboard Frame          | Wooden or acrylic, thin top for magnet   | 1        | $20–$40           |
+| Power Supply              | 12V (for motors) + 5V 3A (for Pi)        | 1        | $15–$25           |
+| Chessboard Frame          | Wooden or 3D printed                     | 1        | $20–$40           |
 | Chess Piece Set           | With metal washers in bases              | 1        | $15–$30           |
 
 Primary Costs: The largest expenses will be the Raspberry Pi (for AI + speech recognition) and the CoreXY mechanical framework (belts, rails, and frame) [14] [15].
@@ -300,6 +300,8 @@ In summary, this project holds promise for positive, broader impacts by advancin
 [14] Instructables. (2019, September 13). CoreXY CNC Plotter. Instructables. https://www.instructables.com/CoreXY-CNC-Plotter/
 
 [15] PiShop. (n.d.). Raspberry Pi 4 Model B/4GB. PiShop.us. https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/
+
+[16] Industries, A. (n.d.). Stepper motor - NEMA-17 size - 200 steps/rev, 12V 350mA. https://www.adafruit.com/product/324
 
 
 ## Statement of Contributions
