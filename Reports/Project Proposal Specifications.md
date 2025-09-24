@@ -380,7 +380,7 @@ The audio-actuated automated chessboard project extends beyond enhancing a local
   -  Over-Reliance on Tech: System failures could disrupt lounge activities. Mitigation: Include manual override modes and robust testing for reliability, with redundancy in power sources.
 
 6. Ethical Considerations and Responsibilities:
-    As engineers, we adhere to codes like the NSPE (National Society of Professional Engineers) principles, emphasizing public welfare, competence, and honesty. Ethical considerations include ensuring equitable access (avoiding bias in voice recognition algorithms), protecting user data integrity, and transparently communicating limitations (e.g., accuracy rates). We must avoid overhyping benefits to prevent misleading the customer.
+    As engineers, we adhere to codes like the National Society of Professional Engineers (NSPE) principles, emphasizing public welfare, competence, and honesty. Ethical considerations include ensuring equitable access (avoiding bias in voice recognition algorithms), protecting user data integrity, and transparently communicating limitations (e.g., accuracy rates). We must avoid overhyping benefits to prevent misleading the customer.
 
 
 In summary, this project holds promise for positive, broader impacts by advancing inclusive, sustainable technology in entertainment. By proactively addressing negatives and upholding ethical standards, our team fulfills its engineering duty to create solutions that benefit society without undue harm, demonstrating responsible innovation in our senior design work.
