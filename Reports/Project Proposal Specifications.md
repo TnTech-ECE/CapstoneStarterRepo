@@ -1,35 +1,24 @@
 # Project Proposal
 
-This document provides a comprehensive explanation of what a project proposal should encompass. The content here is detailed and is intended to highlight the guiding principles rather than merely listing expectations. The sections that follow contain all the necessary information to understand the requirements for creating a project proposal.
-
-
-## General Requirements for the Document
-- All submissions must be composed in markdown format.
-- All sources must be cited unless the information is common knowledge for the target audience.
-- The document must be written in third person.
-- The document must identify all stakeholders including the instuctor, supervisor, and cusotmer.
-- The problem must be clearly defined using "shall" statements.
-- Existing solutions or technologies that enable novel solutions must be identified.
-- Success criteria must be explicitly stated.
-- An estimate of required skills, costs, and time to implement the solution must be provided.
-- The document must explain how the customer will benefit from the solution.
-- Broader implications, including ethical considerations and responsibilities as engineers, must be explored.
-- A list of references must be included.
-- A statement detailing the contributions of each team member must be provided.
-
-
 ## Introduction
 
 As chess continues to grow in popularity, the demand for new, more interesting chess technology has become increasingly apparent. One of the newest innovations made to meet this demand is the automated chess board. Automated chess boards are capable of moving each piece around the board without human intervention, allowing users to play over the board against computers, people with disabilities, and friends across the world. Although this advancement has provided many new and exciting opportunities in the world of chess, automated boards prove to be too expensive for widespread use by average consumers. This project aims to design an automated chess board at a cheaper price, providing its benefits to more people around the world.
 
-By allowing the autonomous movement of pieces upon receiving a spoken command at a cheaper price, this product will allow a larger audience to enjoy the experience and impact of automated chess boards.
 
+This project will serve two main purposes:
+
+1. **Moving chess pieces automatically:** Automated chess board movement allows people with disabilities or vision issues to enjoy the game of chess more, while also being an interesting and new experience for a general audience. This chess board will individually grab, move and capture pieces to provide a clean user experience.
+   
+2. **Making automatic chess more accessible:** Most existing automated chess boards are extremely expensive, preventing a wide audience from being able to enjoy it. By not operating for profit and keeping detailed notes on the creation and assembly of the board, this chess board will be dramatically cheaper than existing solutions.
+
+By allowing the autonomous movement of pieces upon receiving a spoken command at a cheaper price, this product will allow a larger audience to enjoy the experience and impact of automated chess boards.
 
 ## Formulating the Problem
 
 Current automated chess boards are expensive and lack features such as online functionality, voice recognition, and unobstructed movement. The goal of this implementation is to improve these features, reduce cost, use accessible parts for easy hobbyist replication, and to make the game more accessible for players with disabilities. Beyond individual use, this new technology could attract new customers to businesses related to board games or leisure locations through its novelty and fascination. Challenges of this project include digital signal processing for voice controls, artificial intelligence (AI) implementation for solo-play, and automating piece movement. 
 
 ### Background
+
 
 During the pandemic, chess increased in popularity [5]. Online chess specifically had a major influx of activity, with Chess.com adding 1 million accounts from March to November 2020, and a 2.8 million member increase in November alone [5]. This newfound popularity opens up opportunities for innovation on this classic game. An automated chess board would support primarily online chess players who want to improve their over-the-board (OTB) game.
 
