@@ -420,7 +420,7 @@ Nathan MacPherson - Introduction, Specifications and Constraints
 
 Jack Tolleson - Resources, Budget, Introduction of Formulating the Problem, Background
 
-Noah Beaty - 
+Noah Beaty - Measures of Success, half of Survey of Existing Solutions
 
 Allison Givens - 
 
