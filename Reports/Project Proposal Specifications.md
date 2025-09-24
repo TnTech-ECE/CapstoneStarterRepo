@@ -420,10 +420,10 @@ Nathan MacPherson - Introduction, Specifications and Constraints
 
 Jack Tolleson - Resources, Budget, Formulating the Problem, Background
 
-Noah Beaty - Measures of Success, Industrial Solutions of the  Survey of Existing Solutions
+Noah Beaty - Measures of Success, Survey of Existing Solutions
 
 Allison Givens - Formulating the Problem, Background, Personnel, Timeline
 
-Lewis Forrest Bates - Specific Implications, Broader Implications, Ethics, and Responsibility as Engineers, DIY Solutions of the Survey of Existing Solutions
+Lewis Forrest Bates - Specific Implications, Broader Implications, Ethics, and Responsibility as Engineers, Survey of Existing Solutions
 
 All - Proofreading and Editing
