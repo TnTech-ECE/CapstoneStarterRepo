@@ -289,7 +289,6 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 *Note:* This list highlights each member’s strongest skills. Depending on the project, required skills or assignments may change.  
 
-#TODO: This last part might be totally wrong we should probably discuss it a bit
 
 #### Supervisor
 - **Professor Van Neste:** Chosen to provide guidance on physical implementation.
@@ -299,8 +298,9 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 ### Timeline
 
-#### Gantt Chart (Note that the chart may be subject to modification)
-<img width="1803" height="596" alt="image" src="https://github.com/user-attachments/assets/3b467d5e-913e-4abd-b546-331dadaef89f" />
+#### Gantt Chart (Note that the chart will be subject to modification)
+<img width="1802" height="596" alt="image" src="https://github.com/user-attachments/assets/55324b80-8e8f-4788-8511-b92a371fea24" />
+
 
 ## Specific Implications
 
@@ -422,7 +422,7 @@ Jack Tolleson - Resources, Budget, Introduction of Formulating the Problem, Back
 
 Noah Beaty - Measures of Success, half of Survey of Existing Solutions
 
-Allison Givens - 
+Allison Givens - Formulating the Problem, Background, Personnel, Timeline
 
 Lewis Forrest Bates - 
 
