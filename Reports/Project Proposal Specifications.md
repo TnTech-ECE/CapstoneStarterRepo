@@ -1,4 +1,4 @@
-# Project Proposal
+# Chess 2 Impress
 
 ## Introduction
 
@@ -415,3 +415,10 @@ In summary, this project holds promise for positive, broader impacts by advancin
 ## Statement of Contributions
 
 Each team member must contribute meaningfully to the project proposal. In this section, each team member is required to document their individual contributions to the report. One team member may not record another member's contributions on their behalf. By submitting, the team certifies that each member's statement of contributions is accurate.
+
+Nathan MacPherson - Introduction, Specifications and Constraints
+Jack Tolleson - 
+Noah Beaty - 
+Allison Givens - 
+Lewis Forrest Bates - 
+All - Proofreading and Editing
