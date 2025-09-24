@@ -22,14 +22,7 @@ This document provides a comprehensive explanation of what a project proposal sh
 
 As chess continues to grow in popularity, the demand for new, more interesting chess technology has become increasingly apparent. One of the newest innovations made to meet this demand is the automated chess board. Automated chess boards are capable of moving each piece around the board without human intervention, allowing users to play over the board against computers, people with disabilities, and friends across the world. Although this advancement has provided many new and exciting opportunities in the world of chess, automated boards prove to be too expensive for widespread use by average consumers. This project aims to design an automated chess board at a cheaper price, providing its benefits to more people around the world.
 
-#TODO: HELP!!!
-
 By allowing the autonomous movement of pieces upon receiving a spoken command at a cheaper price, this product will allow a larger audience to enjoy the experience and impact of automated chess boards.
-
-
-The introduction must be the opening section of the proposal. It acts as the "elevator pitch" of the project, briefly introducing the objective, its importance, and the proposed solution. Because readers may only read this section, it should effectively capture their attention and encourage them to read further.
-
-Toward the end of the introduction, include a subsection that outlines what the proposal will cover. This helps set reader expectations for the ensuing sections.
 
 
 ## Formulating the Problem
@@ -74,7 +67,7 @@ The chess board will meet the following requirements to ensure reliability and o
     - Board shall cost no more than $350 USD in materials
     - Board shall have a modular design allowing for upgrades to individual systems.
 ## Constraints
-The chess board will be designed to operate efficiently while adhering to the following safety and regulatory requirements:
+The chessboard will be designed to operate efficiently while adhering to the following safety and regulatory requirements:
 
 1. **Regulatory and Compliance Constraints**
 
@@ -101,9 +94,8 @@ The chess board will be designed to operate efficiently while adhering to the fo
 Existing solutions for automated chessboards range from DIY projects to commercially-produced boards:
 
 * **Industrial Solutions**: Several companies offer high-end automated boards with AI opponents and online connectivity. These solutions, however, are often too expensive for the average user, making them impractical for this application.
-* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
 
-Below are multiple current solutions, complete with lists of reasons as to why any particular solution would not work for solving this problem.
+Below are multiple Industrial solutions that have implications for our project:
 
 *ChessUp 2 Smart Chess Board [1]: A WiFi-enabled smart chessboard featuring chip recognition technology and direct integration with Chess.com, offered at a relatively lower cost of $399.99.
 
@@ -133,6 +125,12 @@ Cons:
 * Does not support automated piece movement, requiring players to manually move all pieces.
 * Lacks an automated reset function for returning pieces to their starting positions.
 
+
+* **DIY Solutions**: Several open-source projects present designs of varying complexity. Some rely on stepper motors and Arduinos for piece movement, while others incorporate Raspberry Pis and computer vision to track pieces and issue precise directions via microcontrollers.
+
+Below are multiple DIY solutions that have implications for our project:
+
+
 *8x8 Smart Chess Board [9]: A Raspberry Pi–controlled prototype that uses stepper motors, lead screw mechanisms, and an electromagnetic head to move magnetized chess pieces. The design mimics the motion of a 3D printer to achieve movement across the XY plane. The design utilizes a min-max algorithm to generate the best move predictions.
 
 Cons:
@@ -154,7 +152,7 @@ Cons:
 * Lacks an automated reset function for returning pieces to their starting positions.
 
 
-Despite the availability of existing smart chessboard solutions, challenges such as high cost, limited offline functionality, lack of voice recognition, and frequent piece collisions remain key barriers for the average user. The development of a new system should prioritize affordability, lightweight design, seamless voice integration, and reliable automated piece movement with full reset functionality for both players.
+Despite the availability of existing affordable smart chessboard solutions, challenges such as high cost, limited offline functionality, lack of voice recognition, and frequent piece collisions remain key barriers for the average user. The development of a new system should prioritize affordability, lightweight design, seamless voice integration, and reliable automated piece movement with full reset functionality for both players.
 
 This project aims to bridge the gap between current offerings by delivering a cost-effective, user-friendly, and offline-capable automated chessboard that eliminates common frustrations while enhancing accessibility for everyday players.
 
@@ -317,8 +315,6 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 
 ## Specific Implications
 
-"Explain the implications of solving the problem for the customer. After reading this section, the reader should understand the tangible benefits and the worthiness of the proposed work."
-
 By developing an audio-actuated automated chessboard, this project aims to address key challenges faced by local board game lounges, including limited space, high maintenance costs associated with physical games, and the need to attract a diverse range of patrons in a competitive entertainment market. The solution enables voice-controlled gameplay, where players verbally announce moves, and the board automates piece movements via integrated robotics, magnets, and speech recognition technology. Outlined below are the tangible benefits for the lounge owner (our customer), demonstrating the project's value in enhancing operations, customer satisfaction, and revenue potential.
 
 1. Increased Customer Engagement and Retention:
@@ -342,14 +338,10 @@ By developing an audio-actuated automated chessboard, this project aims to addre
     Worthiness: For small businesses like local lounges operating on thin margins, these efficiencies directly improve profitability.
 
 
-
 Overall, solving this problem not only streamlines daily operations but transforms the lounge into a forward-thinking space that combines nostalgia with modern technology. The worthiness lies in its potential to revitalize local businesses, promote social interaction, and inspire similar adaptations for other games, ultimately contributing to the sustainability of community-oriented entertainment venues. This senior design project thus delivers real-world value, bridging engineering innovation with practical business needs.
 
 
-
 ## Broader Implications, Ethics, and Responsibility as Engineers
-
-"Consider the project’s broader impacts in global, economic, environmental, and societal contexts. Identify potential negative impacts and propose mitigation strategies. Detail the ethical considerations and responsibilities each team member bears as an engineer."
 
 The audio-actuated automated chessboard project extends beyond enhancing a local board game lounge's operations, influencing broader contexts through technological innovation in recreational gaming. By integrating voice recognition, robotics, and user-friendly interfaces, it promotes accessible entertainment while raising considerations in global scalability, economic viability, environmental sustainability, and societal equity. This section explores these impacts, identifies potential negatives with mitigation strategies, and outlines the ethical responsibilities our engineering team will be faced with throughout the project.
 
