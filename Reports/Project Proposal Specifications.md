@@ -418,12 +418,12 @@ Each team member must contribute meaningfully to the project proposal. In this s
 
 Nathan MacPherson - Introduction, Specifications and Constraints
 
-Jack Tolleson - Resources, Budget, Introduction of Formulating the Problem, Background
+Jack Tolleson - Resources, Budget, Formulating the Problem, Background
 
-Noah Beaty - Measures of Success, half of Survey of Existing Solutions
+Noah Beaty - Measures of Success, Industrial Solutions of the  Survey of Existing Solutions
 
 Allison Givens - Formulating the Problem, Background, Personnel, Timeline
 
-Lewis Forrest Bates - 
+Lewis Forrest Bates - Specific Implications, Broader Implications, Ethics, and Responsibility as Engineers, DIY Solutions of the Survey of Existing Solutions
 
 All - Proofreading and Editing
