@@ -6,9 +6,9 @@ As chess continues to grow in popularity, the demand for new, more interesting c
 
 This project will serve two main purposes:
 
-1. Moving chess pieces automatically: Automated chess board movement allows people with disabilities or vision issues to enjoy the game of chess more, while also being an interesting and new experience for a general audience. This chess board will individually grab, move and capture pieces to provide a clean user experience.
+1. **Moving chess pieces automatically:** Automated chess board movement allows people with disabilities or vision issues to enjoy the game of chess more, while also being an interesting and new experience for a general audience. This chess board will individually grab, move and capture pieces to provide a clean user experience.
    
-2. Making automatic chess more accessible: Most existing automated chess boards are extremely expensive, preventing a wide audience from being able to enjoy it. By not operating for profit and keeping detailed notes on the creation and assembly of the board, this chess board will be dramatically cheaper than existing solutions.
+2. **Making automatic chess more accessible:** Most existing automated chess boards are extremely expensive, preventing a wide audience from being able to enjoy it. By not operating for profit and keeping detailed notes on the creation and assembly of the board, this chess board will be dramatically cheaper than existing solutions.
 
 By allowing the autonomous movement of pieces upon receiving a spoken command at a cheaper price, this product will allow a larger audience to enjoy the experience and impact of automated chess boards.
 
