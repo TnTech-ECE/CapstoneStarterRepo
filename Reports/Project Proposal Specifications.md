@@ -292,15 +292,15 @@ Total Estimated Cost: The project should fall within $250 on average, with a max
 #TODO: This last part might be totally wrong we should probably discuss it a bit
 
 #### Supervisor
-- **Student Success:** Chosen for potential project presentation opportunities at Tech.  
+- **Professor Van Neste:** Chosen to provide guidance on physical implementation.
 
 #### Instructor
-- **Professor Van Neste:** Chosen to provide guidance on physical implementation.
+- **Professor Storm:** Will approve pieces of the project before finalization.
 
 ### Timeline
 
 #### Gantt Chart (Note that the chart may be subject to modification)
-<img width="1859" height="448" alt="image" src="https://github.com/user-attachments/assets/3e08497c-e6ba-4d33-8ce2-c45ce52de7fd" />
+<img width="1803" height="596" alt="image" src="https://github.com/user-attachments/assets/3b467d5e-913e-4abd-b546-331dadaef89f" />
 
 ## Specific Implications
 
