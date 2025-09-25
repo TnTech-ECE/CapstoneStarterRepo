@@ -425,4 +425,4 @@ Allison Givens - Formulating the Problem, Background, Personnel, Timeline
 
 Lewis Forrest Bates - Specific Implications, Broader Implications, Ethics, and Responsibility as Engineers, Survey of Existing Solutions
 
-All - Proofreading and Editing
+All - Proofreading and Editing        
